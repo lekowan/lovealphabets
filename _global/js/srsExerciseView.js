@@ -15,21 +15,24 @@ class View {
         this.header = this.createElement("div", "header");
         this.header.classList.add("pink-background");
 
+        // Create generic close button
+        let closeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        closeSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+        closeSvg.setAttribute("height", "24px");
+        closeSvg.setAttribute("viewBox", "0 0 24 24");
+        closeSvg.setAttribute("width", "24px");
+        closeSvg.setAttribute("fill", "#2a2142");
+        let closeSvgPath1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        closeSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
+        closeSvgPath1.setAttribute("fill", "none");
+        let closeSvgPath2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        let closePath2d = "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+        closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
+        closeSvg.append(closeSvgPath1, closeSvgPath2);
+
+        this.closeSvg = closeSvg.cloneNode(true);
         // Create close button
         this.closeButton = this.createElement("div", "close-button");
-        this.closeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        this.closeSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-        this.closeSvg.setAttribute("height", "24px");
-        this.closeSvg.setAttribute("viewBox", "0 0 24 24");
-        this.closeSvg.setAttribute("width", "24px");
-        this.closeSvg.setAttribute("fill", "#2a2142");
-        this.closeSvgPath1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        this.closeSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
-        this.closeSvgPath1.setAttribute("fill", "none");
-        this.closeSvgPath2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        let closePath2d = "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
-        this.closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
-        this.closeSvg.append(this.closeSvgPath1, this.closeSvgPath2);
         this.closeButton.append(this.closeSvg);
 
         this.closeButton.addEventListener('click', event => {
@@ -136,8 +139,12 @@ class View {
         this.welcomeContinueButton.classList.add("pink-background");
         this.welcomeContinueButton.textContent = "CONTINUE";
         this.welcomeContinueContainer.append(this.welcomeContinueButton);
+       
+        this.welcomeCloseButtonSvg = closeSvg.cloneNode(true);;
+        // Create close button
         this.welcomeCloseButton = this.createElement("div", "popover-close");
-        this.welcomeCloseButton.textContent = "x";
+        this.welcomeCloseButton.append(this.welcomeCloseButtonSvg);
+
         this.welcomeContainer.append(this.welcomeTitle, this.welcomeContent, this.welcomeContinueContainer, this.welcomeCloseButton);
 
         // New Items Popover
@@ -154,8 +161,11 @@ class View {
         this.newItemsContinueButton.classList.add("pink-background");
         this.newItemsContinueButton.textContent = "CONTINUE";
         this.newItemsContinueContainer.append(this.newItemsContinueButton);
+        
+        this.newItemsCloseButtonSvg = closeSvg.cloneNode(true);;
+         // Create close button
         this.newItemsCloseButton = this.createElement("div", "popover-close");
-        this.newItemsCloseButton.textContent = "x";
+        this.newItemsCloseButton.append(this.newItemsCloseButtonSvg);
 
         // The form, with a [type="text"] input, and a submit button
         this.newItemsForm = this.createElement("form", "new-items-form");
@@ -190,7 +200,12 @@ class View {
         this.todayContinueButton.textContent = "CONTINUE";
         this.todayContinueContainer.append(this.todayContinueButton);
         this.todayCloseButton = this.createElement("div", "popover-close");
-        this.todayCloseButton.textContent = "x";
+
+        this.todayCloseButtonSvg = closeSvg.cloneNode(true);;
+         // Create close button
+        this.todayCloseButton = this.createElement("div", "popover-close");
+        this.todayCloseButton.append(this.todayCloseButtonSvg);
+
 
         // Append containes
         this.todayContent.append(this.todayWelcomeCharacter);
