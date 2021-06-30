@@ -1,0 +1,41 @@
+const georgianMap = {
+  "ა": { "letter" : "a" },
+  "ბ": { "letter" : "b" },
+  "გ": { "letter" : "g" },
+  "დ": { "letter" : "d" },
+  "ე": { "letter" : "e" },
+  "ვ": { "letter" : "v" },
+  "ზ": { "letter" : "z" },
+  "თ": { "letter" : "t" },
+  "ი": { "letter" : "i" },
+  "კ": { "letter" : "k'" },
+  "ლ": { "letter" : "l" },
+  "მ": { "letter" : "m" },
+  "ნ": { "letter" : "n" },
+  "ო": { "letter" : "o" },
+  "პ": { "letter" : "p'" },
+  "ჟ": { "letter" : "zh" },
+  "რ": { "letter" : "r" },
+  "ს": { "letter" : "s" },
+  "ტ": { "letter" : "t'" },
+  "უ": { "letter" : "u" },
+  "ფ": { "letter" : "p" },
+  "ქ": { "letter" : "k" },
+  "ღ": { "letter" : "gh" },
+  "ყ": { "letter" : "q'" },
+  "შ": { "letter" : "sh" },
+  "ჩ": { "letter" : "ch" },
+  "ც": { "letter" : "ts" },
+  "ძ": { "letter" : "dz" },
+  "წ": { "letter" : "ts'" },
+  "ჭ": { "letter" : "ch'" },
+  "ხ": { "letter" : "kh" },
+  "ჯ": { "letter" : "j" },
+  "ჰ": { "letter" : "h" },
+}
+
+const georgianDataArray = Object.keys(georgianMap);
+
+const georgianChartData = {
+   "1": { "subtitle": "All characters", "content": georgianDataArray }, 
+}

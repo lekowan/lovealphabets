@@ -1,0 +1,7 @@
+const languageTitle = "Hindi";
+const languageSub = "मानक हिन्दी";
+
+const languageContent = [
+    { "title": "Devanagari \n \n (vowels + basic consonants)", "icon": "অ", "url": "vowels-consonants", "localStorageKey": "hindi" + "VowelsConsonants" + "Srs" },
+    { "title": "Devanagari (all characters)", "icon": "খী", "url": "all-characters", "localStorageKey": "hindi" + "AllCharacters" + "Srs"},
+]
