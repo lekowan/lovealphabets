@@ -197,7 +197,7 @@ class View {
             } else {
 
                 // Add event listener on tap
-                item.addEventListener('click', event => {
+                item.addEventListener('touchstart', event => {
 
                     // Fade out all open overlays
                     let cardOverlayCollection = document.querySelectorAll(".card-overlay");
@@ -210,18 +210,18 @@ class View {
 
                     // Add event listener to top CTA
 
-                    item.querySelector(".top-cta").addEventListener('click', event => {
+                    item.querySelector(".top-cta").addEventListener('touchstart', event => {
                         // trigger popover
                     });
 
                     // Add event listener to bottom CTA
-                    setTimeout(function() {
-                        item.querySelector(".bottom-cta").addEventListener('click', event => {
+                    //setTimeout(function() {
+                        item.querySelector(".bottom-cta").addEventListener('touchstart', event => {
 
                             // Get URL from languaeContent object
                             window.location.href = languageContent[number].url;
                         })
-                    }, 5000);
+                    //}, 500);
 
                 })
             }
