@@ -166,7 +166,7 @@ class View {
         this._cards.forEach((item, number) => {
 
             // If device is desktop
-            if (this.isMobileTablet == false) {
+            if (!this.isMobileTablet == false) {
 
                 // Add event listener on hover
                 item.addEventListener('mouseover', event => {
