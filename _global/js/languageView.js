@@ -166,7 +166,7 @@ class View {
         this._cards.forEach((item, number) => {
 
             // If device is desktop
-            if (!this.isMobileTablet == false) {
+            if (this.isMobileTablet == false) {
 
                 // Add event listener on hover
                 item.addEventListener('mouseover', event => {
@@ -192,8 +192,8 @@ class View {
                     item.querySelector(".card-overlay").style.opacity = 0;
                     // handler(); 
                 })
-            
-            // If device is mobile       
+
+                // If device is mobile       
             } else {
 
                 // Add event listener on tap
@@ -209,16 +209,19 @@ class View {
                     item.querySelector(".card-overlay").style.opacity = 1;
 
                     // Add event listener to top CTA
+
                     item.querySelector(".top-cta").addEventListener('click', event => {
                         // trigger popover
                     });
 
                     // Add event listener to bottom CTA
-                    item.querySelector(".bottom-cta").addEventListener('click', event => {
-                        
-                        // Get URL from languaeContent object
-                        window.location.href = languageContent[number].url;
-                    })
+                    setTimeout(function() {
+                        item.querySelector(".bottom-cta").addEventListener('click', event => {
+
+                            // Get URL from languaeContent object
+                            window.location.href = languageContent[number].url;
+                        })
+                    }, 500);
 
                 })
             }
