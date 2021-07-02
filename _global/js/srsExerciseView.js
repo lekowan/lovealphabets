@@ -197,42 +197,35 @@ class View {
     this.settingsMenu = this.createElement("div", "settings-menu");
 
     // // Add settings heading
-    this.settingsHeading = this.createElement("div", "settings-heading");
-    this.settingsHeadingLeft = this.createElement(
-      "div",
-      "settings-heading__left"
-    );
-    this.settingsHeadingLeft.textContent = "Settings";
-    this.settingsHeading.append(this.settingsHeadingLeft);
-    this.settingsHeadingRight = this.createElement(
-      "div",
-      "settings-heading__right"
-    );
+    this.settingsHeading = this.createElement("div", "settings-menu__heading");
+    this.settingsHeadingText = this.createElement("div", "settings-menu__text");
+    this.settingsHeadingText.textContent = "Settings";
+    this.settingsHeading.append(this.settingsHeadingText);
+    this.settingsHeadingIcon = this.createElement("div", "settings-menu__icon");
     this.settingsClose = closeSvg.cloneNode(true);
     this.settingsClose.setAttribute("fill", "white");
-    this.settingsHeadingRight.append(this.settingsClose);
-    this.settingsHeading.append(this.settingsHeadingRight);
+    this.settingsHeadingIcon.append(this.settingsClose);
+    this.settingsHeading.append(this.settingsHeadingIcon);
     this.settingsMenu.append(this.settingsHeading);
 
     // // Add change item number
-    this.newItemsNum = this.createElement("div", "new-items-num");
-    this.newItemsNumLeft = this.createElement("div", "new-items-num__left");
-    this.newItemsNumLeft.textContent = "New character settings";
-    this.newItemsNum.append(this.newItemsNumLeft);
-    this.newItemsNumRight = this.createElement("div", "new-items-num__right");
-    this.newItemsNumRight.append(this.svgEdit);
-    this.newItemsNum.append(this.newItemsNumRight);
+    this.newItemsNum = this.createElement("div", "settings-menu__item");
+    this.newItemsNumText = this.createElement("div", "settings-menu__text");
+    this.newItemsNumText.textContent = "New character settings";
+    this.newItemsNum.append(this.newItemsNumText);
+    this.newItemsNumIcon = this.createElement("div", "settings-menu__icon");
+    this.newItemsNumIcon.append(this.svgEdit);
+    this.newItemsNum.append(this.newItemsNumIcon);
     this.settingsMenu.append(this.newItemsNum);
 
     // // Add reset SRS
-    this.resetSrs = this.createElement("div", "reset-srs");
-    this.resetSrsLeft = this.createElement("div", "reset-srs__left");
-    this.resetSrsLeft.textContent = "Reset SRS data";
-    this.resetSrs.append(this.resetSrsLeft);
-    this.resetSrsRight = this.createElement("div", "reset-srs__right");
-    this.resetSrsRight.append(this.svgClear);
-
-    this.resetSrs.append(this.resetSrsRight);
+    this.resetSrs = this.createElement("div", "settings-menu__item");
+    this.resetSrsText = this.createElement("div", "settings-menu__text");
+    this.resetSrsText.textContent = "Reset SRS data";
+    this.resetSrs.append(this.resetSrsText);
+    this.resetSrsIcon = this.createElement("div", "settings-menu__icon");
+    this.resetSrsIcon.append(this.svgClear);
+    this.resetSrs.append(this.resetSrsIcon);
     this.settingsMenu.append(this.resetSrs);
 
     this.app.append(this.settingsMenu);
