@@ -19,17 +19,20 @@ class Controller {
         this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
         */
 
+        // Display New items popover         
+        //this.model.bindOnShowNewItemsPopoverChanged(this.onShowNewItemsPopoverChanged);
+        this.view.bindDisplayCtas();
 
 
     } // End of constructor
 
  
-     /*
     // Handle Congratulations Popover visibility
     handleDisplayCongratulationsPopover = (boolean) => {
-        this.model.showCongratulationsPopover(boolean);
+        //this.model.showCongratulationsPopover(boolean);
     }
 
+    /*
     onShowCongratulationsPopoverChanged = boolean => {
         console.log('fucking function', boolean);
         this.view.displayCongratulationsPopover(boolean);

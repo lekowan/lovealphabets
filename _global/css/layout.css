@@ -2364,6 +2364,7 @@ p.learn-how {
 }
 
 
+
 /*///////////////////////////////////////////////////////////////////////////// FOOTER ////////////////////////////////////////////////////////////////////////////*/
 
 .footer {
@@ -2402,9 +2403,14 @@ p.learn-how {
 }
 
 .footer-content {
-    display: flex;
-    width: 780px;
-    justify-content: flex-end;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, auto));
+    max-width: 900px;
+    width: 66%;
+    justify-content: space-between;
+
+
 }
 
 .footer-column-item {
@@ -2419,8 +2425,7 @@ p.learn-how {
     font-weight: 700;
 }
 
-
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 700px) {
     .footer-content {
         padding: 0 41px;
         width: 100%;
@@ -2430,6 +2435,9 @@ p.learn-how {
 
 @media only screen and (max-width: 500px) {
     .footer-content {
+        grid-gap: 30px;
+        grid-template-columns: repeat(1, minmax(0, auto));
+        justify-content: flex-start;
         width: 100%;
         padding: 0 21px;
     }
