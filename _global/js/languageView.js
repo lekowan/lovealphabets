@@ -197,7 +197,7 @@ class View {
             } else {
 
                 // Add event listener on tap
-                item.addEventListener('touchstart', event => {
+                item.addEventListener('click', event => {
 
                     // Fade out all open overlays
                     let cardOverlayCollection = document.querySelectorAll(".card-overlay");
@@ -210,13 +210,13 @@ class View {
 
                     // Add event listener to top CTA
 
-                    item.querySelector(".top-cta").addEventListener('touchstart', event => {
+                    item.querySelector(".top-cta").addEventListener('click', topEvent => {
                         // trigger popover
                     });
 
                     // Add event listener to bottom CTA
                     //setTimeout(function() {
-                        item.querySelector(".bottom-cta").addEventListener('touchstart', event => {
+                        item.querySelector(".bottom-cta").addEventListener('click', bottomEvent => {
 
                             // Get URL from languaeContent object
                             window.location.href = languageContent[number].url;
