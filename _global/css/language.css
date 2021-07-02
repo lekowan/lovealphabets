@@ -20,9 +20,11 @@ input:after {
     user-select: initial;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: red;
-  opacity: 1; /* Firefox */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1;
+    /* Firefox */
 }
 
 *,
@@ -1648,7 +1650,7 @@ p.learn-how {
 .card-overlay {
     width: 100%;
     height: 100%;
-   /* opacity: 0; */
+    opacity: 0;
     top: 0;
     left: 0;
     position: absolute;
@@ -1667,6 +1669,7 @@ p.learn-how {
     box-sizing: border-box;
 }
 
+
 .home-cta {
     color: white;
     text-transform: uppercase;
@@ -1677,7 +1680,7 @@ p.learn-how {
     align-items: center;
     justify-content: center;
     width: 100%;
-
+    padding-top: 9px;
 }
 
 .separator {
@@ -1722,41 +1725,41 @@ p.learn-how {
 }
 
 
-article.home-language:nth-child(7n+1) {
+article.home-language:nth-child(7n+1) .home-language-card {
     /* Pink */
     background: -webkit-gradient(20deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
     background: -o-linear-gradient(20deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
     background: linear-gradient(70deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
 }
 
-article.home-language:nth-child(7n+2) {
+article.home-language:nth-child(7n+2) .home-language-card {
     /* Blue */
     background: -o-linear-gradient(20deg, rgba(153, 191, 251, 1) 0%, rgba(224, 236, 255, 1) 100%);
     background: linear-gradient(70deg, rgba(153, 191, 251, 1) 0%, rgba(224, 236, 255, 1) 100%);
 }
 
-article.home-language:nth-child(7n+3) {
+article.home-language:nth-child(7n+3) .home-language-card {
     /* Green */
     background: linear-gradient(70deg, rgb(138, 226, 223) 0%, rgb(211, 255, 253) 100%);
 }
 
-article.home-language:nth-child(7n+4) {
+article.home-language:nth-child(7n+4) .home-language-card {
     /* Light Orange */
     background: -o-linear-gradient(20deg, #ffc59b 0%, rgb(255, 231, 216) 100%);
     background: linear-gradient(70deg, #ffc59b 0%, rgb(255, 231, 216) 100%);
 }
 
-article.home-language:nth-child(7n+5) {
+article.home-language:nth-child(7n+5) .home-language-card {
     /* Light blue */
     background: linear-gradient(70deg, #9BDDFD 0%, rgb(214, 239, 251) 100%);
 }
 
-article.home-language:nth-child(7n+6) {
+article.home-language:nth-child(7n+6) .home-language-card {
     /* Orange */
     background: linear-gradient(70deg, rgb(253, 155, 155) 0%, rgb(255, 216, 216) 100%);
 }
 
-article.home-language:nth-child(7n+7) {
+article.home-language:nth-child(7n+7) .home-language-card {
     /* Purple */
     background: linear-gradient(70deg, #cebdff 0%, rgb(235, 229, 255) 100%);
 }
