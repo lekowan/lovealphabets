@@ -208,8 +208,9 @@ class View {
                     // Fade in this overlay
                     item.querySelector(".card-overlay").style.opacity = 1;
 
-                    // Add event listener to top CTA
+                    event.stopPropagation();
 
+                    // Add event listener to top CTA
                     item.querySelector(".top-cta").addEventListener('click', topEvent => {
                         // trigger popover
                     });
