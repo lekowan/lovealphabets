@@ -166,7 +166,7 @@ class View {
         this._cards.forEach((item, number) => {
 
             // If device is desktop
-            if (!this.isMobileTablet == false) {
+            if (this.isMobileTablet == false) {
 
                 // Add event listener on hover
                 item.addEventListener('mouseover', event => {
@@ -193,7 +193,7 @@ class View {
                     // handler(); 
                 })
 
-                // If device is mobile       
+            // If device is mobile       
             } else {
 
                 // Add event listener on tap
@@ -221,7 +221,7 @@ class View {
                             // Get URL from languaeContent object
                             window.location.href = languageContent[number].url;
                         })
-                    }, 500);
+                    }, 5000);
 
                 })
             }
