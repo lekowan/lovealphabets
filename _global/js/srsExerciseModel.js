@@ -260,37 +260,57 @@ class Model {
     changeNumber(number) {
 
         console.log(number);
-        let firstTime = true;
 
         // Fetch number from localStorage
         let _number = JSON.parse(localStorage.getItem(localStorageKey + 'Number'));
         let _progress = JSON.parse(localStorage.getItem(localStorageKey + 'Progress'));
 
-        if (!_number) {
-            let firstTime = false;
+        // If the number passed is greater than the array
+        if (number > this.newItemsArray.length) {
+            number = this.newItemsArray.length
         }
 
-        // Create exercise array 
-        this.allNewCards = this.newItemsArray.slice(0, number)
-            .concat(this.dueTodayItemsArray)
-            .filter(item => item != null);
+        // If this is the first session ever
+        if (!_number) {
+
+            // Create exercise array 
+            this.allNewCards = this.newItemsArray.slice(0, number)
+                .concat(this.dueTodayItemsArray)
+                .filter(item => item != null);
 
 
-        _progress.allNewCards = this.allNewCards;
-        _number = number;
+            // Save new array and new number
+            _progress.allNewCards = this.allNewCards;
+            _number = number;
 
-        this._commitNumber(_number);
-        this._commitProgress(_progress);
+            this._commitNumber(_number);
+            this._commitProgress(_progress);
 
-        if (firstTime == false) {
+            // Reset tracker
+            this.newItemsTracker = number;
+
+            // Update the view
+            this.onNumberChanged(this.newItemsArray.slice(0, number), number);
+
+        }
+
+        // If this is not the first session ever, start a fresh new session
+        else {
+
+            // Reset today's timestamp
+            _progress.timeStamp = "";
+            this._commitProgress(_progress);            
+
+            // Save the number
+            _number = number;
+            this._commitNumber(_number);
+
+            // Reload the app
             setTimeout(function() {
-                return window.location.reload();
+                window.location.reload();
             }, 500);
         }
 
-        this.newItemsTracker = number;
-
-        this.onNumberChanged(this.newItemsArray.slice(0, number), number);
     }
 
     bindOnCardsChanged(callback) {
@@ -370,6 +390,8 @@ class Model {
     // Play audio
     sayIt() {
         let word = this.allNewCards[this.tracker];
+        console.log(this.allNewCards);
+        console.log(this.tracker);
 
         // If speechSynthesis in user's browser and activateSpeech is true
         if (activateSpeech && ('speechSynthesis' in window)) {

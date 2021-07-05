@@ -322,9 +322,7 @@ class View {
         this.newItemsContinueButton.addEventListener('click', event => {
             event.preventDefault();
 
-
             if (this._number) {
-    
                 handler(this._number);
                 // this._resetInput;
                 console.log(this._number);
@@ -552,13 +550,7 @@ class View {
 
        this.newItemsContinueButton.addEventListener('click', event => {
             let boolean = false;
-            console.log("clicked");
             
-            let newNum = this._number;
-            console.log(newNum);
-            this.displayNewItemsCount(newNum);
-
-
             if(this._number){
                 handler(boolean);
             }
