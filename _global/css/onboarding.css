@@ -313,10 +313,16 @@
     background-color: #fff;
 }
 
+.popover-content-welcome {
+    padding: 31px 35px;
+    overflow-y: auto;
+    height: calc(100% - 137px);
+    margin-top: 55px;
+}
 
 
 .popover-content {
-    padding: 31px 35px;
+    padding: 0 35px;
     overflow-y: auto;
     height: calc(100% - 137px);
     margin-top: 55px;

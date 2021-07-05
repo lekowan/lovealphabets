@@ -131,7 +131,7 @@ class View {
         //this.welcomeContainer.style.display = "block";
         this.welcomeTitle = this.createElement("div", "shortcut-title");
         this.welcomeTitle.textContent = "Welcome!";
-        this.welcomeContent = this.createElement("div", "popover-content");
+        this.welcomeContent = this.createElement("div", "popover-content-welcome");
         this.welcomeContent.innerText = welcomeIntro;
         this.welcomeContinueContainer = this.createElement("div", "continue-popover-container");
         this.welcomeContinueButton = this.createElement("div", "continue-popover");
