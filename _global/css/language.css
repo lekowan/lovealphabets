@@ -1718,6 +1718,7 @@ p.learn-how {
     font-size: 13px;
     color: #14e38c;
     text-decoration: line-through;
+    padding: 5px 6px;
 }
 
 .favourited {

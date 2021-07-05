@@ -86,10 +86,10 @@ class View {
             if (!nextDate) {
                 languageStatus.innerHTML = "";
             } else if (nextDate <= endOfDay) {
-                languageStatus.innerHTML = "due";
+                languageStatus.innerHTML = "• due";
                 languageStatus.classList.add("due");
             } else {
-                languageStatus.innerHTML = "done";
+                languageStatus.innerHTML = "• done";
                 languageStatus.classList.add("done");
             }
 
