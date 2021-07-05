@@ -77,7 +77,7 @@ class View {
             languageCta.innerHTML = "LAUNCH SRS";
 
             let languageViewChart = this.createElement("button", "language-view-chart-cta");
-            languageViewChart.innerHTML = item.view;
+            languageViewChart.innerHTML = "PREVIEW";
 
             let languageStatus = this.createElement("span", "language-status");
 
