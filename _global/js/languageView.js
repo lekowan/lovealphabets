@@ -79,7 +79,7 @@ class View {
             let languageViewChart = this.createElement("button", "language-view-chart-cta");
             languageViewChart.innerHTML = item.view;
 
-            let languageStatus = this.createElement("div", "language-status");
+            let languageStatus = this.createElement("span", "language-status");
 
             let nextDate = JSON.parse(localStorage.getItem(item.localStorageKey + 'NextDate'));
 
@@ -94,8 +94,9 @@ class View {
             }
 
 
+            languageHeading.append(languageStatus);
             homeLanguageCard.append(homeLanguageIcon);
-            languageButtonsBar.append(languageCta,languageViewChart, languageInfo, languageStatus);
+            languageButtonsBar.append(languageCta,languageViewChart, languageInfo);
             homeLanguage.append(homeLanguageCard, languageHeading,languageSubHeading, languageButtonsBar);
             this.home.append(homeLanguage);
 
