@@ -702,7 +702,7 @@ h2 {}
 
 article.home-language:nth-child(1) {
     border-top: 1px #e6e3ee solid;   
-    padding-top:  21px; 
+    padding-top:  31px; 
 }
 
 .home-language {
@@ -712,7 +712,8 @@ article.home-language:nth-child(1) {
     grid-gap: 0 21px;
     grid-template-columns: 100px 1fr;
     grid-template-rows: auto;
-    padding-bottom: 21px;
+    padding-bottom: 31px;
+    padding-top: 10px;
 }
 
 .home-language-card {
@@ -1824,9 +1825,16 @@ article.home-language:nth-child(7n+7) .language-cta {
 
 @media only screen and (max-width: 590px) {
 
+
+    article.home-language:nth-child(1) {
+        padding-top: 21px;
+    }
+
     .home-language {
         grid-template-columns: 50px 1fr;
         grid-gap: 0 10px;
+        padding-bottom: 21px;
+        padding-top: 0;
     }
 
     .home-language-icon {
