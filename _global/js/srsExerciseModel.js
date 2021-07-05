@@ -6,9 +6,9 @@ class Model {
 
         // Declare today's date, start of day and end of day
         let now = new Date();
-        //now = new Date('2021/06/29'); /* for testing only */
+        //now = new Date('2021/07/06'); /* for testing only */
         let todaysDate = now.toJSON().slice(0, 10).replace(/-/g, '/');
-        //todaysDate = "2021/06/29" /* for testing only */
+        //todaysDate = "2021/07/06" /* for testing only */
         let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
         let endOfDay = startOfDay + (24 * 60 * 60 * 1000) - 1;
 
@@ -259,6 +259,7 @@ class Model {
 
     changeNumber(number) {
 
+        console.log(number);
         let firstTime = true;
 
         // Fetch number from localStorage
@@ -287,7 +288,9 @@ class Model {
             }, 500);
         }
 
-        this.onNumberChanged(this.newItemsArray.slice(0, number));
+        this.newItemsTracker = number;
+
+        this.onNumberChanged(this.newItemsArray.slice(0, number), number);
     }
 
     bindOnCardsChanged(callback) {

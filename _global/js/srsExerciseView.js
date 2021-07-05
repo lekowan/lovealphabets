@@ -322,9 +322,12 @@ class View {
         this.newItemsContinueButton.addEventListener('click', event => {
             event.preventDefault();
 
+
             if (this._number) {
+    
                 handler(this._number);
                 // this._resetInput;
+                console.log(this._number);
             }
         })
     }
@@ -547,7 +550,7 @@ class View {
             }
         })
 
-        this.newItemsContinueButton.addEventListener('click', event => {
+       this.newItemsContinueButton.addEventListener('click', event => {
             let boolean = false;
             console.log("clicked");
             
@@ -555,10 +558,11 @@ class View {
             console.log(newNum);
             this.displayNewItemsCount(newNum);
 
+
             if(this._number){
-                handler(boolean, newNum);
+                handler(boolean);
             }
-        })
+        }) 
 
         this.settings.addEventListener('click', event => {
             let boolean = true;

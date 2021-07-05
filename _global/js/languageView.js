@@ -100,7 +100,7 @@ class View {
             homeLanguage.append(homeLanguageCard, languageHeading,languageSubHeading, languageButtonsBar);
             this.home.append(homeLanguage);
 
-            homeLanguage.addEventListener("click", function() { 
+            languageCta.addEventListener("click", function() { 
                 window.location.href = item.url 
             });
         });

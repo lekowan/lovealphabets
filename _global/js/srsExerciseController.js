@@ -76,11 +76,14 @@ class Controller {
 
     // Change number in array handlers
     handleChangeNumber = (number) => {
+        console.log(number);
         this.model.changeNumber(number);
     }
 
-    onNumberChanged = (array) => {
+    onNumberChanged = (array, number) => {
+        console.log("on Number Changed" + number);
         this.view.addTodaysCards(array);
+       // this.view.displayNewItemsCount(number)
     };
 
     // Change slide handlers
@@ -118,7 +121,7 @@ class Controller {
     onGoodPressed = () => {
         this.view.bindProcessGoodAnswer();
     }
-
+ƒ
     // Add card
     handleAddCard = () => {
         this.model.addCard();
