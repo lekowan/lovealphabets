@@ -61,7 +61,6 @@ class View {
             
             let homeLanguageIcon = this.createElement("span", "home-language-icon");
             homeLanguageIcon.innerHTML = item.icon;
-            let headingContent = this.createElement("div", "heading-content");
             
             let languageHeading = this.createElement("div", "language-heading");
             languageHeading.innerHTML = item.title;
@@ -69,8 +68,13 @@ class View {
             let languageSubHeading = this.createElement("div", "language-subheading");
             languageSubHeading.innerHTML = item.sub;
 
+            let languageButtonsBar = this.createElement("div", "language-button-bar");
+           
             let languageCta = this.createElement("button", "language-cta");
             languageCta.innerHTML = "LAUNCH SRS";
+
+            let languageViewChart = this.createElement("button", "language-view-chart-cta");
+            languageViewChart.innerHTML = item.view;
 
             let languageStatus = this.createElement("div", "language-status");
 
@@ -88,8 +92,8 @@ class View {
 
 
             homeLanguageCard.append(homeLanguageIcon);
-            headingContent.append(languageStatus);
-            homeLanguage.append(homeLanguageCard, languageHeading,languageSubHeading, languageCta, headingContent);
+            languageButtonsBar.append(languageCta,languageViewChart, languageStatus);
+            homeLanguage.append(homeLanguageCard, languageHeading,languageSubHeading, languageButtonsBar);
             this.home.append(homeLanguage);
 
             homeLanguage.addEventListener("click", function() { 
