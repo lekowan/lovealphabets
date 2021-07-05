@@ -1582,10 +1582,9 @@ p.learn-how {
 .language-cta {
     font-size: 10px;
     font-weight: 900;
-    padding: 5px 0;
+    padding: 5px 12px;
     align-items: flex-start;
     display: flex;
-    width: 91px;
     justify-content: center;
     /* border-radius: 25px; */
     background: #210c57 !important;
@@ -1610,10 +1609,13 @@ p.learn-how {
 }
 
 .language-view-chart-cta {
-    text-transform: none;
-    font-size: 12px;
+    text-transform: uppercase;
+    font-size: 11px;
     margin-left: 10px;
-    color: #2b0686;
+    color: #210c57;
+    background: #e6ddf9;
+    padding: 5px 12px;
+    font-weight: 700;
 }
 
 .footer {
