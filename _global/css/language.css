@@ -1573,6 +1573,7 @@ p.learn-how {
     padding: 0;
     display: flex;
     line-height: 1.1;
+    align-items: first baseline;
 }
 
 .language-subheading {
@@ -1719,7 +1720,7 @@ p.learn-how {
     font-size: 13px;
     color: #14e38c;
     text-decoration: line-through;
-    padding: 5px 6px;
+    padding: 0 6px;
 }
 
 .favourited {
