@@ -112,13 +112,16 @@ class Model {
                     .filter(item => item != null);
 
                 /*
-                                 this.allNewCards = this.shuffle(this.newItemsArray.slice(0, this.number))
+                this.allNewCards = this.shuffle(this.newItemsArray.slice(0, this.number))
                     .concat(this.shuffle(this.newItemsFromPreviousSession))
                     .concat(this.shuffle(this.dueTodayItemsArray))
                     .filter(item => item != null);
                 */
 
-                console.log(this.allNewCards);
+                // If new items array is empty, hide today's items popover
+                if (this.newItemsArray.slice(0, this.number).length == 0) {
+                    this.showNewItems = false;
+                }
 
                 // Save today's time stamp in Local Storage
                 _progress.timeStamp = todaysDate;
@@ -199,7 +202,7 @@ class Model {
     }
 
     get initialAnswer() {
-        if(this.allNewCards[0] != undefined){
+        if (this.allNewCards[0] != undefined) {
             let word = this.allNewCards[0];
             return word.romanize();
         }
@@ -295,7 +298,7 @@ class Model {
 
             // Reset today's timestamp
             _progress.timeStamp = "";
-            this._commitProgress(_progress);            
+            this._commitProgress(_progress);
 
             // Save the number
             _number = number;
@@ -559,7 +562,7 @@ class Model {
     }
 
     bindOnShowCongratulationsPopoverChanged(callback) {
-       this.onShowCongratulationsPopoverChanged = callback;
+        this.onShowCongratulationsPopoverChanged = callback;
     }
 
 
