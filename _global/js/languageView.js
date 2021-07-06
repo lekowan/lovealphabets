@@ -62,7 +62,8 @@ class View {
             homeLanguageIcon.innerHTML = item.icon;
 
             let languageHeading = this.createElement("div", "language-heading");
-            languageHeading.innerHTML = item.title;
+            let languageHeadingTitle =this.createElement("span", "language-heading-title");
+            languageHeadingTitle.innerHTML = item.title;
 
             let languageSubHeading = this.createElement("div", "language-subheading");
             languageSubHeading.innerHTML = item.sub;
@@ -93,7 +94,8 @@ class View {
                 languageStatus.classList.add("done");
             }
 
-            languageHeading.append(languageStatus);
+
+            languageHeading.append(languageHeadingTitle, languageStatus);
             homeLanguageCard.append(homeLanguageIcon);
             languageButtonsBar.append(languageCta, languageViewChart, languageInfo);
             homeLanguage.append(homeLanguageCard, languageHeading, languageSubHeading, languageButtonsBar);
