@@ -177,6 +177,7 @@ class View {
 
         // The form, with a [type="text"] input, and a submit button
         this.newItemsForm = this.createElement("form", "new-items-form");
+        this.newItemsForm.setAttribute("onSubmit", "return false");
 
         // Input
         this.input = this.createElement("input", "new-items-input");
