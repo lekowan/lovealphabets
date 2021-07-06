@@ -45,7 +45,7 @@ class SpacedRepetition {
         this.state = 'bad';
     }
     this.date = new Date().getTime() + getNextTime();
-    //this.date = new Date('2021/06/25').getTime() + getNextTime();
+    //this.date = new Date('2021/07/06').getTime() + getNextTime();
     return this;
   }
 

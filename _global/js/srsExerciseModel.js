@@ -6,9 +6,9 @@ class Model {
 
         // Declare today's date, start of day and end of day
         let now = new Date();
-        //now = new Date('2021/06/29'); /* for testing only */
+        //now = new Date('2021/07/06'); /* for testing only */
         let todaysDate = now.toJSON().slice(0, 10).replace(/-/g, '/');
-        //todaysDate = "2021/06/29" /* for testing only */
+        //todaysDate = "2021/07/06" /* for testing only */
         let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
         let endOfDay = startOfDay + (24 * 60 * 60 * 1000) - 1;
 
@@ -152,9 +152,6 @@ class Model {
                     this.showWelcome = false;
                     this.showCongratulations = true;
 
-                    // Open Congratulations Popover
-                    this.onShowCongratulationsPopoverChanged(this.initialCongratulationsPopover);
-
                 }
             }
 
@@ -182,7 +179,6 @@ class Model {
     }
 
     get initialCongratulationsPopover() {
-        console.log(this.showCongratulations);
         return this.showCongratulations;
     }
 
@@ -191,7 +187,6 @@ class Model {
     }
 
     get newItemsCounter() {
-        console.log('newItemCounter', this.newItemsTracker)
         return this.newItemsTracker;
     }
 
@@ -204,8 +199,10 @@ class Model {
     }
 
     get initialAnswer() {
-        let word = this.allNewCards[0];
-        return word.romanize();
+        if(this.allNewCards[0] != undefined){
+            let word = this.allNewCards[0];
+            return word.romanize();
+        }
     }
 
 
@@ -231,7 +228,6 @@ class Model {
     }
 
     get showCongratulationsPopover() {
-        console.log(this.showCongratulations);
         return this.showCongratulations;
     }
 
@@ -259,35 +255,58 @@ class Model {
 
     changeNumber(number) {
 
-        let firstTime = true;
+        console.log(number);
 
         // Fetch number from localStorage
         let _number = JSON.parse(localStorage.getItem(localStorageKey + 'Number'));
         let _progress = JSON.parse(localStorage.getItem(localStorageKey + 'Progress'));
 
-        if (!_number) {
-            let firstTime = false;
+        // If the number passed is greater than the array
+        if (number > this.newItemsArray.length) {
+            number = this.newItemsArray.length
         }
 
-        // Create exercise array 
-        this.allNewCards = this.newItemsArray.slice(0, number)
-            .concat(this.dueTodayItemsArray)
-            .filter(item => item != null);
+        // If this is the first session ever
+        if (!_number) {
+
+            // Create exercise array 
+            this.allNewCards = this.newItemsArray.slice(0, number)
+                .concat(this.dueTodayItemsArray)
+                .filter(item => item != null);
 
 
-        _progress.allNewCards = this.allNewCards;
-        _number = number;
+            // Save new array and new number
+            _progress.allNewCards = this.allNewCards;
+            _number = number;
 
-        this._commitNumber(_number);
-        this._commitProgress(_progress);
+            this._commitNumber(_number);
+            this._commitProgress(_progress);
 
-        if (firstTime == false) {
+            // Reset tracker
+            this.newItemsTracker = number;
+
+            // Update the view
+            this.onNumberChanged(this.newItemsArray.slice(0, number), number);
+
+        }
+
+        // If this is not the first session ever, start a fresh new session
+        else {
+
+            // Reset today's timestamp
+            _progress.timeStamp = "";
+            this._commitProgress(_progress);            
+
+            // Save the number
+            _number = number;
+            this._commitNumber(_number);
+
+            // Reload the app
             setTimeout(function() {
-                return window.location.reload();
+                window.location.reload();
             }, 500);
         }
 
-        this.onNumberChanged(this.newItemsArray.slice(0, number));
     }
 
     bindOnCardsChanged(callback) {
@@ -340,10 +359,8 @@ class Model {
                 // Save closest date in localStorage
                 this._commitNextDate(nextDate);
 
-
                 // Open Congratulations Popover
                 this.onShowCongratulationsPopoverChanged(this.showCongratulationsPopover);
-
 
             }
 
@@ -367,6 +384,8 @@ class Model {
     // Play audio
     sayIt() {
         let word = this.allNewCards[this.tracker];
+        console.log(this.allNewCards);
+        console.log(this.tracker);
 
         // If speechSynthesis in user's browser and activateSpeech is true
         if (activateSpeech && ('speechSynthesis' in window)) {
@@ -540,7 +559,7 @@ class Model {
     }
 
     bindOnShowCongratulationsPopoverChanged(callback) {
-        this.onShowCongratulationsPopoverChanged = callback;
+       this.onShowCongratulationsPopoverChanged = callback;
     }
 
 
