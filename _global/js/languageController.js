@@ -19,20 +19,33 @@ class Controller {
         this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
         */
 
+        // Display New items popover        
+        //this.model.bindOnShowChartChanged(this.onShowNewItemsPopoverChanged);
+        this.view.bindShowChart(this.handleDisplayChart);
 
 
     } // End of constructor
 
  
-     /*
+
     // Handle Congratulations Popover visibility
-    handleDisplayCongratulationsPopover = (boolean) => {
-        this.model.showCongratulationsPopover(boolean);
+    handleDisplayChart = (boolean) => {
+        this.model.showChart(boolean);
     }
 
-    onShowCongratulationsPopoverChanged = boolean => {
-        console.log('fucking function', boolean);
-        this.view.displayCongratulationsPopover(boolean);
+    onShowChartChanged = boolean => {
+        this.view.displayChart(boolean);
+    }
+
+
+    /*
+    // Handle Today's Items Popover visibility
+    handleDisplayTodaysItemsPopover = (boolean) => {
+        this.model.showTodaysItemsPopover(boolean);
+    }
+
+    onShowTodaysItemsPopoverChanged = boolean => {
+        this.view.displayTodaysItemsPopover(boolean);
     }
     */
 
