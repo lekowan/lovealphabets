@@ -216,7 +216,7 @@ class View {
         this.congratulationsContainer.style.display = "none";
         this.congratulationsTitle = this.createElement("div", "shortcut-title");
         this.congratulationsTitle.textContent = "Congratulations!";
-        this.congratulationsContent = this.createElement("div", "popover-content");
+        this.congratulationsContent = this.createElement("div", "welcome-popover-content");
         this.congratulationsContent.innerText = "Congratulations! You've completed all items for today.";
         this.congratulationsContinueContainer = this.createElement("div", "continue-popover-container");
         this.congratulationsContinueButton = this.createElement("div", "continue-popover");

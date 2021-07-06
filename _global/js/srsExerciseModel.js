@@ -152,9 +152,6 @@ class Model {
                     this.showWelcome = false;
                     this.showCongratulations = true;
 
-                    // Open Congratulations Popover
-                    this.onShowCongratulationsPopoverChanged(this.initialCongratulationsPopover);
-
                 }
             }
 
@@ -182,7 +179,6 @@ class Model {
     }
 
     get initialCongratulationsPopover() {
-        console.log(this.showCongratulations);
         return this.showCongratulations;
     }
 
@@ -191,7 +187,6 @@ class Model {
     }
 
     get newItemsCounter() {
-        console.log('newItemCounter', this.newItemsTracker)
         return this.newItemsTracker;
     }
 
@@ -204,8 +199,10 @@ class Model {
     }
 
     get initialAnswer() {
-        let word = this.allNewCards[0];
-        return word.romanize();
+        if(this.allNewCards[0] != undefined){
+            let word = this.allNewCards[0];
+            return word.romanize();
+        }
     }
 
 
@@ -231,7 +228,6 @@ class Model {
     }
 
     get showCongratulationsPopover() {
-        console.log(this.showCongratulations);
         return this.showCongratulations;
     }
 
@@ -363,10 +359,8 @@ class Model {
                 // Save closest date in localStorage
                 this._commitNextDate(nextDate);
 
-
                 // Open Congratulations Popover
                 this.onShowCongratulationsPopoverChanged(this.showCongratulationsPopover);
-
 
             }
 
@@ -565,7 +559,7 @@ class Model {
     }
 
     bindOnShowCongratulationsPopoverChanged(callback) {
-        this.onShowCongratulationsPopoverChanged = callback;
+       this.onShowCongratulationsPopoverChanged = callback;
     }
 
 
