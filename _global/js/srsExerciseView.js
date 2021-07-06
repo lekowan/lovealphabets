@@ -30,7 +30,9 @@ class View {
         closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
         closeSvg.append(closeSvgPath1, closeSvgPath2);
 
+        // Clone generic SVG button
         this.closeSvg = closeSvg.cloneNode(true);
+        
         // Create close button
         this.closeButton = this.createElement("div", "close-button");
         this.closeButton.append(this.closeSvg);
@@ -140,7 +142,9 @@ class View {
         this.welcomeContinueButton.textContent = "CONTINUE";
         this.welcomeContinueContainer.append(this.welcomeContinueButton);
        
+        // Clone original SVG button
         this.welcomeCloseButtonSvg = closeSvg.cloneNode(true);;
+        
         // Create close button
         this.welcomeCloseButton = this.createElement("div", "popover-close");
         this.welcomeCloseButton.append(this.welcomeCloseButtonSvg);
@@ -162,10 +166,14 @@ class View {
         this.newItemsContinueButton.textContent = "CONTINUE";
         this.newItemsContinueContainer.append(this.newItemsContinueButton);
         
+        /*
+        // Clone original SVG button
         this.newItemsCloseButtonSvg = closeSvg.cloneNode(true);;
-         // Create close button
+        
+        // Create close button
         this.newItemsCloseButton = this.createElement("div", "popover-close");
         this.newItemsCloseButton.append(this.newItemsCloseButtonSvg);
+        */
 
         // The form, with a [type="text"] input, and a submit button
         this.newItemsForm = this.createElement("form", "new-items-form");
@@ -199,13 +207,13 @@ class View {
         this.todayContinueButton.classList.add("pink-background");
         this.todayContinueButton.textContent = "CONTINUE";
         this.todayContinueContainer.append(this.todayContinueButton);
-        this.todayCloseButton = this.createElement("div", "popover-close");
 
-        this.todayCloseButtonSvg = closeSvg.cloneNode(true);;
+        // Clone original SVG button
+        this.todayCloseButtonSvg = closeSvg.cloneNode(true);
+
          // Create close button
         this.todayCloseButton = this.createElement("div", "popover-close");
         this.todayCloseButton.append(this.todayCloseButtonSvg);
-
 
         // Append containes
         this.todayContent.append(this.todayWelcomeCharacter);
@@ -217,15 +225,22 @@ class View {
         this.congratulationsTitle = this.createElement("div", "shortcut-title");
         this.congratulationsTitle.textContent = "Congratulations!";
         this.congratulationsContent = this.createElement("div", "welcome-popover-content");
-        this.congratulationsContent.innerText = "Congratulations! You've completed all items for today.";
+        this.congratulationsContent.innerText = "You've completed all of the items that were due today.";
         this.congratulationsContinueContainer = this.createElement("div", "continue-popover-container");
         this.congratulationsContinueButton = this.createElement("div", "continue-popover");
         this.congratulationsContinueButton.id = "continue-congratulations";
         this.congratulationsContinueButton.classList.add("pink-background");
         this.congratulationsContinueButton.textContent = "FINISH";
         this.congratulationsContinueContainer.append(this.congratulationsContinueButton);
+        
+        // Clone original SVG button
+        this.congratulationsCloseButtonSVg = closeSvg.cloneNode(true);;
+        
+         // Create close button
         this.congratulationsCloseButton = this.createElement("div", "popover-close");
-        this.congratulationsCloseButton.textContent = "x";
+        this.congratulationsCloseButton.append(this.congratulationsCloseButtonSVg);
+
+
         this.congratulationsContainer.append(this.congratulationsTitle, this.congratulationsContent, this.congratulationsContinueContainer, this.congratulationsCloseButton);
 
 
@@ -518,6 +533,7 @@ class View {
             handler(boolean);
         })
 
+
         this.todayContinueButton.addEventListener('click', event => {
             let boolean = false;
             console.log("clicked");
@@ -541,12 +557,14 @@ class View {
     }
 
     bindDisplayNewItemsPopover(handler) {
+        /*
         this.newItemsCloseButton.addEventListener('click', event => {
             let boolean = false;
             if(this._number){
                 handler(boolean);
             }
         })
+        */
 
        this.newItemsContinueButton.addEventListener('click', event => {
             let boolean = false;
