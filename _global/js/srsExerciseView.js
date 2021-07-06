@@ -704,29 +704,23 @@ class View {
   }
 
   bindDisplayNewItemsPopover(handler) {
-    this.newItemsCloseButton.addEventListener("click", (event) => {
-      let boolean = false;
+    this.newItemsCloseButton.addEventListener("click", () => {
       if (this._number) {
-        handler(boolean);
+        handler(false);
       }
     });
 
-    this.newItemsContinueButton.addEventListener("click", (event) => {
-      let boolean = false;
-      console.log("clicked");
-
-      let newNum = this._number;
-      console.log(newNum);
+    this.newItemsContinueButton.addEventListener("click", () => {
+      const newNum = this._number;
       this.displayNewItemsCount(newNum);
 
       if (this._number) {
-        handler(boolean, newNum);
+        handler(false, newNum);
       }
     });
 
-    this.settings.addEventListener("click", (event) => {
-      let boolean = true;
-      handler(boolean);
+    this.newItemsNum.addEventListener("click", () => {
+      handler(true);
     });
   }
 }
