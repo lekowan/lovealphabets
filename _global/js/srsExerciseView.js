@@ -662,6 +662,10 @@ class View {
     }
   }
 
+  displaySettingsMenu(boolean) {
+    this.settingsMenu.style.right = boolean ? "0" : "";
+  }
+
   bindDisplayWelcomePopover(handler) {
     this.welcomeCloseButton.addEventListener("click", (event) => {
       let boolean = false;
@@ -721,6 +725,16 @@ class View {
 
     this.newItemsNum.addEventListener("click", () => {
       handler(true);
+    });
+  }
+
+  bindDisplaySettingsMenu(handler) {
+    this.settings.addEventListener("click", () => {
+      handler();
+    });
+
+    this.settingsClose.addEventListener("click", () => {
+      handler();
     });
   }
 }

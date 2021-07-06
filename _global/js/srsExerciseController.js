@@ -1,184 +1,205 @@
 class Controller {
+  constructor(model, view) {
+    this.model = model;
+    this.view = view;
 
+    ////////////////////
+    // Function bindings
 
-    constructor(model, view) {
-        this.model = model;
-        this.view = view;
+    // Change number in array
+    this.model.bindOnNumberChanged(this.onNumberChanged);
+    this.view.bindChangeNumber(this.handleChangeNumber);
 
-        ////////////////////
-        // Function bindings
+    // Change slide
+    this.model.bindOnTrackerChanged(this.onTrackerChanged);
+    this.view.bindIncrementTracker(this.handleIncrementTracker);
 
-        // Change number in array
-        this.model.bindOnNumberChanged(this.onNumberChanged);
-        this.view.bindChangeNumber(this.handleChangeNumber);
-
-        // Change slide
-        this.model.bindOnTrackerChanged(this.onTrackerChanged);
-        this.view.bindIncrementTracker(this.handleIncrementTracker);
-
-        // Toggle button visbility
-        this.model.bindOnVisibilityChanged(this.onVisibilityChanged);
-        this.view.bindToggleVisibility(this.handleToggleVisibility);
-
-        // Process bad answer
-        this.model.bindOnBadAnswerProcessed(this.onBadPressed);
-        this.view.bindProcessBadAnswer(this.handleProcessBadAnswer);
-
-        // Process good answer
-        this.model.bindOnGoodAnswerProcessed(this.onGoodPressed);
-        this.view.bindProcessGoodAnswer(this.handleProcessGoodAnswer);
-
-        // Display initial word + answer
-        this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
-
-        // Display next card
-        this.model.bindOnNextCardAdded(this.onNextCardAdded);
-        this.view.bindDisplayNextCard(this.handleAddCard);
-
-        // Display Today's items popover 
-        this.onShowTodaysItemsPopoverChanged(this.model.initialTodaysItemsPopover);        
-        this.model.bindOnShowTodaysItemsPopoverChanged(this.onShowTodaysItemsPopoverChanged);
-        this.view.bindDisplayTodaysItemsPopover(this.handleDisplayTodaysItemsPopover);
-
-        // Display New items popover 
-        this.onShowNewItemsPopoverChanged(this.model.initialNewItemsPopover);        
-        this.model.bindOnShowNewItemsPopoverChanged(this.onShowNewItemsPopoverChanged);
-        this.view.bindDisplayNewItemsPopover(this.handleDisplayNewItemsPopover);
-
-        // Display Welcome popover 
-        this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
-        this.model.bindOnShowWelcomePopoverChanged(this.onShowWelcomePopoverChanged);
-        this.view.bindDisplayWelcomePopover(this.handleDisplayWelcomePopover);
-
-        // Display Congratulations popover 
-        this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
-        this.model.bindOnShowCongratulationsPopoverChanged(this.onShowCongratulationsPopoverChanged);
-        this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
-
-        // Display initial new items counter
-        this.onNewItemRemoved(this.model.newItemsCounter);
-
-        // Decrement new items counter
-        this.model.bindOnNewItemsCounterChanged(this.onNewItemRemoved);
-
-        // Display initial revision items counter
-        this.onRevisionItemRemoved(this.model.revisionItemsCounter);
-
-        // Decrement revision items counter
-        this.model.bindOnRevisionItemsCounterChanged(this.onRevisionItemRemoved);
-
-        // Display Today's Items popover
-        let _number = JSON.parse(localStorage.getItem(localStorageKey + 'Number'));
-        this.view.addTodaysCards(this.model.newItemsArray.slice(0, _number));
-
-
-    } // End of constructor
-
-    // Change number in array handlers
-    handleChangeNumber = (number) => {
-        this.model.changeNumber(number);
-    }
-
-    onNumberChanged = (array) => {
-        this.view.addTodaysCards(array);
-    };
-
-    // Change slide handlers
-    handleIncrementTracker = () => {
-        this.model.incrementTracker();
-    }
-
-    onTrackerChanged = (number) => {
-        this.view.animateSlider(number)
-    };
-
-    // Toggle button visibility handlers
-    handleToggleVisibility = (boolean) => {
-        this.model.toggleVisibility(boolean);
-    }
-
-    onVisibilityChanged = (boolean) => {
-        this.view.displayButtons(boolean);
-    };
+    // Toggle button visbility
+    this.model.bindOnVisibilityChanged(this.onVisibilityChanged);
+    this.view.bindToggleVisibility(this.handleToggleVisibility);
 
     // Process bad answer
-    handleProcessBadAnswer = () => {
-        this.model.processBadAnswer();
-    }
-
-    onBadPressed = () => {
-        this.view.bindProcessBadAnswer();
-    }
+    this.model.bindOnBadAnswerProcessed(this.onBadPressed);
+    this.view.bindProcessBadAnswer(this.handleProcessBadAnswer);
 
     // Process good answer
-    handleProcessGoodAnswer = () => {
-        this.model.processGoodAnswer();
-    }
+    this.model.bindOnGoodAnswerProcessed(this.onGoodPressed);
+    this.view.bindProcessGoodAnswer(this.handleProcessGoodAnswer);
 
-    onGoodPressed = () => {
-        this.view.bindProcessGoodAnswer();
-    }
+    // Display initial word + answer
+    this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
 
-    // Add card
-    handleAddCard = () => {
-        this.model.addCard();
-    }
+    // Display next card
+    this.model.bindOnNextCardAdded(this.onNextCardAdded);
+    this.view.bindDisplayNextCard(this.handleAddCard);
 
-    onNextCardAdded = (card, answer) => {
-        this.view.addNextCard(card);
-        this.view.displayAnswer(answer);
-    }
+    // Display Today's items popover
+    this.onShowTodaysItemsPopoverChanged(this.model.initialTodaysItemsPopover);
+    this.model.bindOnShowTodaysItemsPopoverChanged(
+      this.onShowTodaysItemsPopoverChanged
+    );
+    this.view.bindDisplayTodaysItemsPopover(
+      this.handleDisplayTodaysItemsPopover
+    );
 
-    // Handle Welcome Popover visibility
-    handleDisplayWelcomePopover = (boolean) => {
-        this.model.showWelcomePopover(boolean);
-    }
+    // Display New items popover
+    this.onShowNewItemsPopoverChanged(this.model.initialNewItemsPopover);
+    this.model.bindOnShowNewItemsPopoverChanged(
+      this.onShowNewItemsPopoverChanged
+    );
+    this.view.bindDisplayNewItemsPopover(this.handleDisplayNewItemsPopover);
 
-    onShowWelcomePopoverChanged = boolean => {
-        this.view.displayWelcomePopover(boolean);
-    }
+    // Display Welcome popover
+    this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
+    this.model.bindOnShowWelcomePopoverChanged(
+      this.onShowWelcomePopoverChanged
+    );
+    this.view.bindDisplayWelcomePopover(this.handleDisplayWelcomePopover);
 
-    // Handle New Items Popover visibility
-    handleDisplayNewItemsPopover = (boolean) => {
-        this.model.showNewItemsPopover(boolean);
-    }
+    // Display Congratulations popover
+    this.onShowCongratulationsPopoverChanged(
+      this.model.initialCongratulationsPopover
+    );
+    this.model.bindOnShowCongratulationsPopoverChanged(
+      this.onShowCongratulationsPopoverChanged
+    );
+    this.view.bindDisplayCongratulationsPopover(
+      this.handleDisplayCongratulationsPopover
+    );
 
-    onShowNewItemsPopoverChanged = boolean => {
-        this.view.displayNewItemsPopover(boolean);
-    }
+    // Display settings sliding menu
+    this.model.bindOnShowSettingsMenuChanged(this.onShowSettingsMenuChanged);
+    this.view.bindDisplaySettingsMenu(this.handleDisplaySettingsMenu);
 
-    // Handle Today's Items Popover visibility
-    handleDisplayTodaysItemsPopover = (boolean) => {
-        this.model.showTodaysItemsPopover(boolean);
-    }
+    // Display initial new items counter
+    this.onNewItemRemoved(this.model.newItemsCounter);
 
-    onShowTodaysItemsPopoverChanged = boolean => {
-        this.view.displayTodaysItemsPopover(boolean);
-    }
+    // Decrement new items counter
+    this.model.bindOnNewItemsCounterChanged(this.onNewItemRemoved);
 
-    // Handle Congratulations Popover visibility
-    handleDisplayCongratulationsPopover = (boolean) => {
-        this.model.showCongratulationsPopover(boolean);
-    }
+    // Display initial revision items counter
+    this.onRevisionItemRemoved(this.model.revisionItemsCounter);
 
-    onShowCongratulationsPopoverChanged = boolean => {
-        this.view.displayCongratulationsPopover(boolean);
-    }
+    // Decrement revision items counter
+    this.model.bindOnRevisionItemsCounterChanged(this.onRevisionItemRemoved);
 
-    // Remove items from counters
-    onNewItemRemoved = (number) => {
-        this.view.displayNewItemsCount(number);
-    }
+    // Display Today's Items popover
+    let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
+    this.view.addTodaysCards(this.model.newItemsArray.slice(0, _number));
+  } // End of constructor
 
-    onRevisionItemRemoved = (number) => {
-        this.view.displayRevisionItemsCount(number);
-    }
+  // Change number in array handlers
+  handleChangeNumber = (number) => {
+    this.model.changeNumber(number);
+  };
 
-    populateTodaysPopover = (array) => {
-        this.view.addTodaysCards(array);
-    }
+  onNumberChanged = (array) => {
+    this.view.addTodaysCards(array);
+  };
 
+  // Change slide handlers
+  handleIncrementTracker = () => {
+    this.model.incrementTracker();
+  };
 
+  onTrackerChanged = (number) => {
+    this.view.animateSlider(number);
+  };
+
+  // Toggle button visibility handlers
+  handleToggleVisibility = (boolean) => {
+    this.model.toggleVisibility(boolean);
+  };
+
+  onVisibilityChanged = (boolean) => {
+    this.view.displayButtons(boolean);
+  };
+
+  // Process bad answer
+  handleProcessBadAnswer = () => {
+    this.model.processBadAnswer();
+  };
+
+  onBadPressed = () => {
+    this.view.bindProcessBadAnswer();
+  };
+
+  // Process good answer
+  handleProcessGoodAnswer = () => {
+    this.model.processGoodAnswer();
+  };
+
+  onGoodPressed = () => {
+    this.view.bindProcessGoodAnswer();
+  };
+
+  // Add card
+  handleAddCard = () => {
+    this.model.addCard();
+  };
+
+  onNextCardAdded = (card, answer) => {
+    this.view.addNextCard(card);
+    this.view.displayAnswer(answer);
+  };
+
+  // Handle Welcome Popover visibility
+  handleDisplayWelcomePopover = (boolean) => {
+    this.model.showWelcomePopover(boolean);
+  };
+
+  onShowWelcomePopoverChanged = (boolean) => {
+    this.view.displayWelcomePopover(boolean);
+  };
+
+  // Handle New Items Popover visibility
+  handleDisplayNewItemsPopover = (boolean) => {
+    this.model.showNewItemsPopover(boolean);
+  };
+
+  onShowNewItemsPopoverChanged = (boolean) => {
+    this.view.displayNewItemsPopover(boolean);
+  };
+
+  // Handle Today's Items Popover visibility
+  handleDisplayTodaysItemsPopover = (boolean) => {
+    this.model.showTodaysItemsPopover(boolean);
+  };
+
+  onShowTodaysItemsPopoverChanged = (boolean) => {
+    this.view.displayTodaysItemsPopover(boolean);
+  };
+
+  // Handle Congratulations Popover visibility
+  handleDisplayCongratulationsPopover = (boolean) => {
+    this.model.showCongratulationsPopover(boolean);
+  };
+
+  onShowCongratulationsPopoverChanged = (boolean) => {
+    this.view.displayCongratulationsPopover(boolean);
+  };
+
+  // Handle settings sliding menu visibility
+  handleDisplaySettingsMenu = (boolean) => {
+    this.model.showSettingsMenu(boolean);
+  };
+
+  onShowSettingsMenuChanged = (boolean) => {
+    this.view.displaySettingsMenu(boolean);
+  };
+
+  // Remove items from counters
+  onNewItemRemoved = (number) => {
+    this.view.displayNewItemsCount(number);
+  };
+
+  onRevisionItemRemoved = (number) => {
+    this.view.displayRevisionItemsCount(number);
+  };
+
+  populateTodaysPopover = (array) => {
+    this.view.addTodaysCards(array);
+  };
 }
 
 const app = new Controller(new Model(), new View());
