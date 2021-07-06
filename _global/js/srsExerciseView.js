@@ -338,9 +338,8 @@ class View {
         this.newItemsContinueButton.addEventListener('click', event => {
             event.preventDefault();
 
-            if (this._number) {
+            if (this._number && this._number > 0 && typeof +this._number == "number") {
                 handler(this._number);
-                // this._resetInput;
                 console.log(this._number);
             }
         })
@@ -558,19 +557,12 @@ class View {
     }
 
     bindDisplayNewItemsPopover(handler) {
-        /*
-        this.newItemsCloseButton.addEventListener('click', event => {
-            let boolean = false;
-            if(this._number){
-                handler(boolean);
-            }
-        })
-        */
+
 
        this.newItemsContinueButton.addEventListener('click', event => {
             let boolean = false;
             
-            if(this._number){
+            if(this._number && this._number > 0 && typeof +this._number == "number"){
                 handler(boolean);
             }
         }) 
