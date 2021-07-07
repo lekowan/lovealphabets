@@ -92,43 +92,45 @@
   border-radius: 14px;
 }
 
-#reset-confirmation {
+.reset-popover {
+  text-align: center;
+  width: 400px;
+  height: 200px;
   position: absolute;
   top: calc(50% - 100px);
   left: calc(50% - 200px);
-  width: 400px;
   background-color: white;
-  height: 200px;
   border-radius: 14px;
-  display: none;
-  padding: 39px 33px;
-}
-
-.reset-confirmation-content {
+  padding: 0 35px;
   display: flex;
-  justify-content: space-around;
-  font-size: 10px;
-  padding: 0 60px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-#reset-confirmation-content-title {
-  margin: 9px 0 26px 0;
-  text-align: center;
+.reset-popover__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
 }
 
-#reset-confirmation-content-yes {
+.reset-popover__yes,
+.reset-popover__no {
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.reset-popover__yes {
   background-color: rgb(251, 196, 254);
-  padding: 7px 30px;
-  border-radius: 50px;
 }
 
-#reset-confirmation-content-no {
-  padding: 7px 30px;
+.reset-popover__no {
   color: white;
   background-color: #18093e;
-  border-radius: 50px;
 }
 
 .settings-menu {
@@ -519,24 +521,23 @@
     width: 62%;
   }
 
-  #reset-confirmation {
+  .reset-popover {
     left: calc(50% - 100px);
     width: 200px;
-    padding: 33px 33px;
+    padding: 0 25px;
   }
 
-  #reset-confirmation-content-title {
-    margin: 0 0 16px 0;
+  .reset-popover__content {
     font-size: 14px;
   }
 
-  .reset-confirmation-content {
-    padding: 0;
+  .reset-popover__buttons {
+    justify-content: space-between;
   }
 
-  #reset-confirmation-content-yes,
-  #reset-confirmation-content-no {
-    padding: 7px 20px;
+  .reset-popover__yes,
+  .reset-popover__no {
+    width: 65px;
   }
 }
 
