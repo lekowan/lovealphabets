@@ -185,7 +185,7 @@ class Controller {
     this.view.displayCongratulationsPopover(boolean);
   };
 
-  // Handle settings sliding menu visibility
+  // Handle SRS reset popover visibility
   handleDisplaySrsResetPopover = () => {
     this.model.showSrsResetPopover();
   };
@@ -195,8 +195,8 @@ class Controller {
   };
 
   // Handle settings sliding menu visibility
-  handleDisplaySettingsMenu = (boolean) => {
-    this.model.showSettingsMenu(boolean);
+  handleDisplaySettingsMenu = () => {
+    this.model.showSettingsMenu();
   };
 
   onShowSettingsMenuChanged = (boolean) => {
