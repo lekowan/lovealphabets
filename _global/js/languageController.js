@@ -9,8 +9,8 @@ class Controller {
         // Function bindings
 
 
-        // Display New items popover        
-        //this.model.bindOnShowChartChanged(this.onShowNewItemsPopoverChanged);
+        // Display Chart        
+        this.model.bindOnShowChartChanged(this.onShowChartChanged);
         this.view.bindShowChart(this.handleDisplayChart);
 
 
@@ -18,8 +18,13 @@ class Controller {
 
 
     // Handle Congratulations Popover visibility
-    handleDisplayCongratulationsPopover = (boolean) => {
-        //this.model.showCongratulationsPopover(boolean);
+    handleDisplayChart = (boolean, chart) => {
+        this.model.showChart(boolean, chart);
+    }
+
+    onShowChartChanged = (boolean, chart) => {
+        this.view.displayChart(boolean);
+        this.view.addCharacterChart(chart);
     }
 
 

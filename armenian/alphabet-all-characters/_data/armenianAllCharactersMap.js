@@ -1,3 +1,5 @@
+/*
+
 const armenianMap = {
    "Ա": { "letter": "a", "audio": "../_audio/1.mp3" },
     "Բ": { "letter": "b", "audio": "../_audio/2.mp3" },
@@ -80,8 +82,9 @@ const armenianMap = {
 }
 
 const armenianDataArray = Object.keys(armenianMap);
+*/
 
-const armenianChartData = {
-   "1": { "subtitle": "Upper case letters", "content": armenianDataArray.slice(0,39) }, 
-   "2": { "subtitle": "Lower case letters", "content": armenianDataArray.slice(39)  }, 
-}
+const armenianChartData = [ 
+   { "subtitle": "Uppercase letters", "content": armenianUpperCaseMap }, 
+   { "subtitle": "Lowercase letters", "content": armenianLowerCaseMap }, 
+]

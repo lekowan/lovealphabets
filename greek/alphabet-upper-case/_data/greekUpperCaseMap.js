@@ -27,6 +27,6 @@ const greekUpperCaseMap = {
 
 const greekUpperCaseDataArray = Object.keys(greekUpperCaseMap);
 
-const greekLowerCaseChartData = {
-   "1": { "subtitle": "Uppercase letters", "content": greekUpperCaseDataArray }, 
-}
+const greekLowerCaseChartData = [
+   { "subtitle": "Uppercase letters", "content": greekUpperCaseDataArray }, 
+]

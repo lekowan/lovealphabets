@@ -107,7 +107,7 @@ const tibetanVowelsConsonantsDataArray = Object.keys(tibetanVowelsConsonantsMap)
 const tibetanVowelsArray = tibetanVowelsConsonantsDataArray.slice(0, 4);
 
 
-const tibetanChartData = {
-    "1": { "subtitle": "Vowels", "content": tibetanVowelsArray },
-    "2": { "subtitle": "Consonants", "content": tibetanVowelsConsonantsDataArray.slice(4, 34) },
-}
+const tibetanChartData = [
+    { "subtitle": "Vowels", "content": tibetanVowelsArray },
+    { "subtitle": "Consonants", "content": tibetanVowelsConsonantsDataArray.slice(4, 34) },
+]

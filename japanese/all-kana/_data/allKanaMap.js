@@ -239,11 +239,11 @@ var katakanaDiagraphMap = {
 const japaneseKatakanaMap = Object.assign({}, katakanaMonographMap, katakanaDiacriticMap, katakanaDiagraphMap);
 const japaneseHiraganaMap = Object.assign({}, hiraganaMonographMap, hiraganaDiacriticMap, hiraganaDiagraphMap);
 
-const japaneseAllKanaChartData = {
-    "1": { "subtitle": "Hiragana Monograph", "content": Object.keys(hiraganaMonographMap), "column": "character-content-5-column" },
-    "2": { "subtitle": "Hiragana Diacritic", "content": Object.keys(hiraganaDiacriticMap), "column": "character-content-5-column" },
-    "3": { "subtitle": "Hiragana Diagraph", "content": Object.keys(hiraganaDiagraphMap), "column": "character-content-3-column" },
-    "4": { "subtitle": "Katakana Monograph", "content": Object.keys(katakanaMonographMap), "column": "character-content-5-column" },
-    "5": { "subtitle": "Katakana Diacritic", "content": Object.keys(katakanaDiacriticMap), "column": "character-content-5-column" },
-    "6": { "subtitle": "Katakana Diagraph", "content": Object.keys(katakanaDiagraphMap), "column": "character-content-3-column" },
-}
+const japaneseAllKanaChartData = [
+    { "subtitle": "Hiragana Monograph", "content": Object.keys(hiraganaMonographMap), "column": "character-content-5-column" },
+    { "subtitle": "Hiragana Diacritic", "content": Object.keys(hiraganaDiacriticMap), "column": "character-content-5-column" },
+    { "subtitle": "Hiragana Diagraph", "content": Object.keys(hiraganaDiagraphMap), "column": "character-content-3-column" },
+    { "subtitle": "Katakana Monograph", "content": Object.keys(katakanaMonographMap), "column": "character-content-5-column" },
+    { "subtitle": "Katakana Diacritic", "content": Object.keys(katakanaDiacriticMap), "column": "character-content-5-column" },
+    { "subtitle": "Katakana Diagraph", "content": Object.keys(katakanaDiagraphMap), "column": "character-content-3-column" },
+]

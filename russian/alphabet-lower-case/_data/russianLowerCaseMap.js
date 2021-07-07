@@ -36,6 +36,6 @@ const russianLowerCaseMap = {
 
 const russianLowerCaseDataArray = Object.keys(russianLowerCaseMap);
 
-const russianLowerCaseChartData = {
-   "1": { "subtitle": "Lowercase letters", "content": russianLowerCaseDataArray }, 
-}
+const russianLowerCaseChartData = [
+   { "subtitle": "Lowercase letters", "content": russianLowerCaseDataArray },
+]

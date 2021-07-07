@@ -177,7 +177,7 @@ const bengaliVowelsConsonantsMap = {
 const bengaliVowelsConsonantsDataArray = Object.keys(bengaliVowelsConsonantsMap);
 
 
-const bengaliVowelsConsonantsChartData = {
-  "1": {"subtitle":"Vowels", "content": bengaliVowelsConsonantsDataArray.slice(0, 11) },
-  "2": {"subtitle":"Consonants", "content": bengaliVowelsConsonantsDataArray.slice(11) },
-}
+const bengaliVowelsConsonantsChartData = [
+    {"subtitle":"Vowels", "content": bengaliVowelsConsonantsDataArray.slice(0, 11) },
+    {"subtitle":"Consonants", "content": bengaliVowelsConsonantsDataArray.slice(11) },
+]

@@ -1230,8 +1230,8 @@ const bengaliConsonants = [
 ]
 
 
-const bengaliChartData = {
-  "1": {"subtitle":"Vowels", "content": bengaliAllDataArray.slice(0, 11) },
-  "2": {"subtitle":"Consonants", "content": bengaliConsonants },
-  "3": {"subtitle":"All Vowels + Consonants", "content": bengaliAllDataArray.slice(11)},
-}
+const bengaliChartData = [
+  {"subtitle":"Vowels", "content": bengaliAllDataArray.slice(0, 11) },
+  {"subtitle":"Consonants", "content": bengaliConsonants },
+  {"subtitle":"All Vowels + Consonants", "content": bengaliAllDataArray.slice(11)},
+]

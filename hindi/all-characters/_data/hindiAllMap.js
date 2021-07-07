@@ -1207,8 +1207,8 @@ const hindiAllConsonants = hindiAllConsonants1.concat(hindiAllConsonants2).conca
 const all = hindiAllVowels.concat(hindiAllConsonants);
 
 
-const hindiAllChartData = {
-  "1": {"subtitle":"Vowels", "content": hindiAllVowels },
-  "2": {"subtitle":"Consonants", "content": hindiAllConsonants },
-  "3": {"subtitle":"All Vowels + Consonants", "content": hindiAllDataArray.slice(11)},
-}
+const hindiAllChartData = [
+  {"subtitle":"Vowels", "content": hindiAllVowels },
+  {"subtitle":"Consonants", "content": hindiAllConsonants },
+  {"subtitle":"All Vowels + Consonants", "content": hindiAllDataArray.slice(11)},
+]

@@ -69,7 +69,7 @@ const russianMap = {
 
 const russianDataArray = Object.keys(russianMap);
 
-const russianChartData = {
-   "1": { "subtitle": "Uppercase letters", "content": russianDataArray.slice(0,25) }, 
-   "2": { "subtitle": "Lowercase letters", "content": russianDataArray.slice(25,50)  }, 
-
+const russianChartData = [
+    { "subtitle": "Uppercase letters", "content": russianDataArray.slice(0,25) }, 
+    { "subtitle": "Lowercase letters", "content": russianDataArray.slice(25,50)  }, 
+]

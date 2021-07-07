@@ -52,6 +52,8 @@ class View {
         this.homeWrapper = this.createElement("section", "home-wrapper");
         this.home = this.createElement("div", "home");
 
+        this.languageViewCtaArray = [];
+
         // Go through languageContent array and display content
         languageContent.forEach((item, number) => {
 
@@ -62,7 +64,7 @@ class View {
             homeLanguageIcon.innerHTML = item.icon;
 
             let languageHeading = this.createElement("div", "language-heading");
-            let languageHeadingTitle =this.createElement("span", "language-heading-title");
+            let languageHeadingTitle = this.createElement("span", "language-heading-title");
             languageHeadingTitle.innerHTML = item.title;
 
             let languageSubHeading = this.createElement("div", "language-subheading");
@@ -78,7 +80,10 @@ class View {
 
             let languageViewChart = this.createElement("button", "language-view-chart-cta");
             languageViewChart.innerHTML = "PREVIEW";
-            languageViewChart.id = item.chart;
+            languageViewChart.id = item.chartName;
+
+            // Push View Chart CTAs into array so they can be accessed later
+            this.languageViewCtaArray.push(languageViewChart);
 
             let languageStatus = this.createElement("span", "language-status");
 
@@ -105,7 +110,6 @@ class View {
                 window.location.href = item.url;
             });
 
-
         });
 
         // Popover background
@@ -115,8 +119,8 @@ class View {
         // Characters chart popover
         this.chartContainer = this.createElement("div", "chart-popover");
         this.chartContainer.style.display = "none";
-        this.chartTitle = this.createElement("div", "chart-title");
-        this.chartTitle.innerHTML = "Citronopipo";
+
+        
 
         // Create generic close button
         let closeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -135,12 +139,7 @@ class View {
 
         // Clone generic SVG button
         this.closeSvg = closeSvg.cloneNode(true);
-
-        // Create close button
         this.closeButton = this.createElement("div", "chart-close");
-        this.closeButton.append(this.closeSvg);
-
-        this.chartContainer.append(this.chartTitle, this.closeButton);
 
         this.homeWrapper.append(this.home)
 
@@ -160,8 +159,53 @@ class View {
     $ = (n) => document.querySelector(n);
 
     // Generate character chart items
-    addCharacterChart(array) {
+    addCharacterChart(chart) {
 
+        this.chartContainer.innerHTML = "";
+        // Create close button
+
+        this.closeButton.append(this.closeSvg);
+        this.chartTitle = this.createElement("div", "chart-title");
+        console.log(chart);
+        this.chartTitle.innerHTML = "Characters list";
+
+        this.chartContainer.append(this.chartTitle, this.closeButton);
+
+        this.chartPopoverContent = this.createElement("div", "chart-popover-content"); 
+        this.chartWrapper = this.createElement("div", "chart-wrapper"); 
+        this.category = this.createElement("div", "category"); 
+
+        chart.forEach(subChart => {
+            let subChartTitle = this.createElement("div", "character-title"); 
+            console.log(subChart.subtitle);
+            subChartTitle.innerHTML = subChart.subtitle;
+            this.category.append(subChartTitle);
+
+            let characterColumn = this.createElement("div", "character-content-11-column");
+            console.log(subChart.content);
+
+            let charMap = subChart.content;
+            console.log(charMap);
+            for(let item in charMap){
+
+                let charCard = this.createElement("div", "character-card");
+                let top = this.createElement("div", "top");
+                top.innerHTML = item;
+                let bottom = this.createElement("div", "bottom");
+                bottom.innerHTML = charMap[item].letter;
+
+                charCard.append(top, bottom);
+                characterColumn.append(charCard);
+            }
+
+            this.category.append(characterColumn);
+        })
+
+        this.chartWrapper.append(this.category);
+        this.chartPopoverContent.append(this.chartWrapper);
+        this.chartContainer.append(this.chartPopoverContent);
+
+        /*
         let popover = this.createElement("div", "chart-popover");
         let popoverTitle = this.createElement("div", "chart-title");
         popoverTitle.innerHTML = "title";
@@ -171,19 +215,46 @@ class View {
         })
 
         popover.append(popoverTitle);
+        */
+    }
 
+    displayChart(boolean) {
+        if (boolean == false) {
+            this.popoverBackground.style.display = "none";
+            this.chartContainer.style.display = "none";
+
+        } else {
+            console.log("show chart");
+            this.popoverBackground.style.display = "block";
+            this.chartContainer.style.display = "block";        }
     }
 
     bindShowChart(handler) {
 
-        /*
-        languageContent.forEach(item => {
-            item.chart.addEventListener('click', event => {
-                let boolean = true;
-                handler(boolean);
+        console.log(this.languageViewCtaArray);
+        let boolean;
+
+        this.languageViewCtaArray.forEach(cta => {
+
+            console.log(cta);
+
+            cta.addEventListener('click', event => {
+
+                boolean = true;
+                console.log(boolean);
+
+                if (event.target.id == cta.id) {
+                    console.log(cta.id)
+                    let chart = cta.id
+                    handler(boolean, chart);
+                }
             });
         })
-        */
+
+        this.closeButton.addEventListener('click', event => {
+            boolean = false;
+            handler(boolean, "");
+        })
 
     }
 

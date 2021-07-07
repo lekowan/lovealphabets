@@ -56,9 +56,9 @@ const complexkoreanVowels = complexkoreanVowels1.concat(complexkoreanVowels2);
 const koreanConsonants = koreanConsonants1.concat(koreanConsonants2)
 
 
-const koreanChartData = {
-  "1": {"subtitle":"Vowels","icon": koreanVowels[0], "content": koreanVowels },
-  "2": {"subtitle":"Consonants","icon": koreanConsonants[0], "content": koreanConsonants },
-  "3": {"subtitle":"Complex Vowels","icon": complexkoreanVowels[0], "content": complexkoreanVowels},
-  "4": {"subtitle":"Tense Consonants","icon": tensekoreanConsonants[0], "content": tensekoreanConsonants},
-}
+const koreanChartData = [
+  {"subtitle":"Vowels","icon": koreanVowels[0], "content": koreanVowels },
+  {"subtitle":"Consonants","icon": koreanConsonants[0], "content": koreanConsonants },
+  {"subtitle":"Complex Vowels","icon": complexkoreanVowels[0], "content": complexkoreanVowels},
+  {"subtitle":"Tense Consonants","icon": tensekoreanConsonants[0], "content": tensekoreanConsonants},
+]

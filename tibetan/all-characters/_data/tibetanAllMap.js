@@ -472,11 +472,11 @@ const tibetanConsonants4 = tibetanDataArray.slice(19, 24);
 const tibetanConsonants5 = tibetanDataArray.slice(24, 29);
 const tibetanConsonants6 = tibetanDataArray.slice(29, 34);
 
-const tibetanChartData = {
-    "1": { "subtitle": "Vowels", "content": tibetanVowels },
-    "2": { "subtitle": "Consonants", "content": tibetanDataArray.slice(4, 34) },
-    "3": { "subtitle": "All Consonant + Vowel combinations", "content": tibetanDataArray.slice(34, 64) },
-    "4": { "subtitle": "", "content": tibetanDataArray.slice(64, 94) },
-    "5": { "subtitle": "", "content": tibetanDataArray.slice(94, 124) },
-    "6": { "subtitle": "", "content": tibetanDataArray.slice(124, 154) },
-}
+const tibetanChartData = [
+    { "subtitle": "Vowels", "content": tibetanVowels },
+    { "subtitle": "Consonants", "content": tibetanDataArray.slice(4, 34) },
+    { "subtitle": "All Consonant + Vowel combinations", "content": tibetanDataArray.slice(34, 64) },
+    { "subtitle": "", "content": tibetanDataArray.slice(64, 94) },
+    { "subtitle": "", "content": tibetanDataArray.slice(94, 124) },
+    { "subtitle": "", "content": tibetanDataArray.slice(124, 154) },
+]

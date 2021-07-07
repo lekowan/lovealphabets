@@ -119,8 +119,8 @@ var katakanaDiagraphMap = {
 
 const japaneseKatakanaMap = Object.assign({}, katakanaMonographMap, katakanaDiacriticMap, katakanaDiagraphMap);
 
-const japaneseKatakanaChartData = {
-    "1": { "subtitle": "Monograph", "content": Object.keys(katakanaMonographMap), "column": "character-content-5-column" },
-    "2": { "subtitle": "Diacritic", "content": Object.keys(katakanaDiacriticMap), "column": "character-content-5-column" },
-    "3": { "subtitle": "Diagraph", "content": Object.keys(katakanaDiagraphMap), "column": "character-content-3-column" },
-}
+const japaneseKatakanaChartData = [    
+    { "subtitle": "Monograph", "content": Object.keys(katakanaMonographMap), "column": "character-content-5-column" },
+    { "subtitle": "Diacritic", "content": Object.keys(katakanaDiacriticMap), "column": "character-content-5-column" },
+    { "subtitle": "Diagraph", "content": Object.keys(katakanaDiagraphMap), "column": "character-content-3-column" },
+]
