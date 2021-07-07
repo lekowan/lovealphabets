@@ -4,9 +4,9 @@ class Model {
   constructor() {
     // Declare today's date, start of day and end of day
     let now = new Date();
-    //now = new Date('2021/06/29'); /* for testing only */
+    //now = new Date('2021/07/9'); /* for testing only */
     let todaysDate = now.toJSON().slice(0, 10).replace(/-/g, "/");
-    //todaysDate = "2021/06/29" /* for testing only */
+    //todaysDate = "2021/07/09" /* for testing only */
     let startOfDay = new Date(
       now.getFullYear(),
       now.getMonth(),
@@ -61,8 +61,8 @@ class Model {
     this.show = false;
     this.incorrectArray = [];
     this.showNewItems = true;
-    this.showWelcome = true;
-    this.newSession = true;
+    this.showWelcome = false;
+    this.showTodaysItems = true;
     this.showCongratulations = false;
     this.showSrsReset = false;
     this.showSettings = false;
@@ -74,6 +74,8 @@ class Model {
 
     // If progress data not in local storage, create it
     if (!_progress) {
+      this.showWelcome = true;
+
       _progress = {};
       _progress.timeStamp = todaysDate;
       _progress.newItemsArray = this.newItemsArray;
@@ -85,8 +87,6 @@ class Model {
       this.allNewCards = this.newItemsArray.slice(0, this.number);
       //this.shuffle(newItemsArray.slice(0, this.number))
       //    .concat(this.dueTodayItemsArray);
-
-      console.log(this.allNewCards);
 
       _progress.allNewCards = this.allNewCards;
 
@@ -117,7 +117,10 @@ class Model {
                     .filter(item => item != null);
                 */
 
-        console.log(this.allNewCards);
+        // If new items array is empty, hide today's items popover
+        if (this.newItemsArray.slice(0, this.number).length == 0) {
+          this.showTodaysItems = false;
+        }
 
         // Save today's time stamp in Local Storage
         _progress.timeStamp = todaysDate;
@@ -142,18 +145,12 @@ class Model {
           (item) => !_progress.completedItemsArray.includes(item)
         );
 
-        this.newSession = false;
+        this.showTodaysItems = false;
 
         // If all cards have been completed - go to Congratulations
         if (this.allNewCards.length == 0) {
           this.showNewItems = false;
-          this.showWelcome = false;
           this.showCongratulations = true;
-
-          // Open Congratulations Popover
-          this.onShowCongratulationsPopoverChanged(
-            this.initialCongratulationsPopover
-          );
         }
       }
     }
@@ -169,8 +166,7 @@ class Model {
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
   get initialWelcomePopover() {
-    let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
-    return _number ? false : true;
+    return this.showWelcome;
   }
 
   get initialNewItemsPopover() {
@@ -179,16 +175,14 @@ class Model {
   }
 
   get initialCongratulationsPopover() {
-    console.log(this.showCongratulations);
     return this.showCongratulations;
   }
 
   get initialTodaysItemsPopover() {
-    return this.newSession;
+    return this.showTodaysItems;
   }
 
   get newItemsCounter() {
-    console.log("newItemCounter", this.newItemsTracker);
     return this.newItemsTracker;
   }
 
@@ -201,8 +195,10 @@ class Model {
   }
 
   get initialAnswer() {
-    let word = this.allNewCards[0];
-    return word.romanize();
+    if (this.allNewCards[0] != undefined) {
+      let word = this.allNewCards[0];
+      return word.romanize();
+    }
   }
 
   get newAnswer() {
@@ -218,18 +214,20 @@ class Model {
     return this.tracker;
   }
 
-  get showNewItemsPopover() {
-    return this.showNewItems;
-  }
+  /*
+    get showNewItemsPopoverValue() {
+        return this.showNewItems;
+    }
 
-  get showWelcomePopover() {
-    return this.showWelcome;
-  }
+    get showWelcomePopoverValue() {
+        return this.showWelcome;
+    } 
 
-  get showCongratulationsPopover() {
-    console.log(this.showCongratulations);
-    return this.showCongratulations;
-  }
+    get showCongratulationsPopoverValue() {
+        return this.showCongratulations;
+    }
+
+    */
 
   // Shuffle Array Function
   shuffle(array) {
@@ -253,7 +251,7 @@ class Model {
   }
 
   changeNumber(number) {
-    let firstTime = true;
+    console.log(number);
 
     // Fetch number from localStorage
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
@@ -261,29 +259,48 @@ class Model {
       localStorage.getItem(localStorageKey + "Progress")
     );
 
-    if (!_number) {
-      let firstTime = false;
+    // If the number passed is greater than the array
+    if (number > this.newItemsArray.length) {
+      number = this.newItemsArray.length;
     }
 
-    // Create exercise array
-    this.allNewCards = this.newItemsArray
-      .slice(0, number)
-      .concat(this.dueTodayItemsArray)
-      .filter((item) => item != null);
+    // If this is the first session ever
+    if (!_number) {
+      // Create exercise array
+      this.allNewCards = this.newItemsArray
+        .slice(0, number)
+        .concat(this.dueTodayItemsArray)
+        .filter((item) => item != null);
 
-    _progress.allNewCards = this.allNewCards;
-    _number = number;
+      // Save new array and new number
+      _progress.allNewCards = this.allNewCards;
+      _number = number;
 
-    this._commitNumber(_number);
-    this._commitProgress(_progress);
+      this._commitNumber(_number);
+      this._commitProgress(_progress);
 
-    if (firstTime == false) {
+      // Reset tracker
+      this.newItemsTracker = number;
+
+      // Update the view
+      this.onNumberChanged(this.newItemsArray.slice(0, number), number);
+    }
+
+    // If this is not the first session ever, start a fresh new session
+    else {
+      // Reset today's timestamp
+      _progress.timeStamp = "";
+      this._commitProgress(_progress);
+
+      // Save the number
+      _number = number;
+      this._commitNumber(_number);
+
+      // Reload the app
       setTimeout(function () {
-        return window.location.reload();
+        window.location.reload();
       }, 500);
     }
-
-    this.onNumberChanged(this.newItemsArray.slice(0, number));
   }
 
   bindOnCardsChanged(callback) {
@@ -384,7 +401,6 @@ class Model {
   }
 
   removeNewItem() {
-    console.log(this.newItemsTracker);
     this.newItemsTracker--;
     this.onNewItemsCounterChanged(this.newItemsTracker);
   }

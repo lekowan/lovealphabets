@@ -99,8 +99,9 @@ class Controller {
     this.model.changeNumber(number);
   };
 
-  onNumberChanged = (array) => {
+  onNumberChanged = (array, number) => {
     this.view.addTodaysCards(array);
+    this.view.displayNewItemsCount(number);
   };
 
   // Change slide handlers

@@ -27,7 +27,6 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    
     <style>
     .home-language-icon {
         font-size: 61px;
@@ -152,45 +151,45 @@
         transition: 0.2s ease-in-out;
     }
 
+article.home-language:nth-child(7n+1) .home-language-card {
+    /* Pink */
+    background: -webkit-gradient(20deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
+    background: -o-linear-gradient(20deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
+    background: linear-gradient(70deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
+}
 
-    article.home-language:nth-child(7n+1) {
-        /* Pink */
-        background: -webkit-gradient(20deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
-        background: -o-linear-gradient(20deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
-        background: linear-gradient(70deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
-    }
+article.home-language:nth-child(7n+2) .home-language-card  {
+    /* Blue */
+    background: -o-linear-gradient(20deg, rgba(153, 191, 251, 1) 0%, rgba(224, 236, 255, 1) 100%);
+    background: linear-gradient(70deg, rgba(153, 191, 251, 1) 0%, rgba(224, 236, 255, 1) 100%);
+}
 
-    article.home-language:nth-child(7n+2) {
-        /* Blue */
-        background: -o-linear-gradient(20deg, rgba(153, 191, 251, 1) 0%, rgba(224, 236, 255, 1) 100%);
-        background: linear-gradient(70deg, rgba(153, 191, 251, 1) 0%, rgba(224, 236, 255, 1) 100%);
-    }
+article.home-language:nth-child(7n+3) .home-language-card  {
+    /* Green */
+    background: linear-gradient(70deg, rgb(138, 226, 223) 0%, rgb(211, 255, 253) 100%);
+}
 
-    article.home-language:nth-child(7n+3) {
-        /* Green */
-        background: linear-gradient(70deg, rgb(138, 226, 223) 0%, rgb(211, 255, 253) 100%);
-    }
+article.home-language:nth-child(7n+4) .home-language-card  {
+    /* Light Orange */
+    background: -o-linear-gradient(20deg, #ffc59b 0%, rgb(255, 231, 216) 100%);
+    background: linear-gradient(70deg, #ffc59b 0%, rgb(255, 231, 216) 100%);
+}
 
-    article.home-language:nth-child(7n+4) {
-        /* Light Orange */
-        background: -o-linear-gradient(20deg, #ffc59b 0%, rgb(255, 231, 216) 100%);
-        background: linear-gradient(70deg, #ffc59b 0%, rgb(255, 231, 216) 100%);
-    }
+article.home-language:nth-child(7n+5) .home-language-card  {
+    /* Light blue */
+    background: linear-gradient(70deg, #9BDDFD 0%, rgb(214, 239, 251) 100%);
+}
 
-    article.home-language:nth-child(7n+5) {
-        /* Light blue */
-        background: linear-gradient(70deg, #9BDDFD 0%, rgb(214, 239, 251) 100%);
-    }
+article.home-language:nth-child(7n+6) .home-language-card  {
+    /* Orange */
+    background: linear-gradient(70deg, rgb(253, 155, 155) 0%, rgb(255, 216, 216) 100%);
+}
 
-    article.home-language:nth-child(7n+6) {
-        /* Orange */
-        background: linear-gradient(70deg, rgb(253, 155, 155) 0%, rgb(255, 216, 216) 100%);
-    }
+article.home-language:nth-child(7n+7) .home-language-card  {
+    /* Purple */
+    background: linear-gradient(70deg, #cebdff 0%, rgb(235, 229, 255) 100%);
+}
 
-    article.home-language:nth-child(7n+7) {
-        /* Purple */
-        background: linear-gradient(70deg, #cebdff 0%, rgb(235, 229, 255) 100%);
-    }
     </style>
 </head>
 
@@ -288,7 +287,7 @@
                         </div>
                     </a>
                 </article>
-               <!-- <article class="home-language">
+                <!-- <article class="home-language">
                     <a href="chinese/">
                         <div class="home-language-card">
                             <span class="home-language-icon">我</span>
@@ -305,7 +304,6 @@
                         </div>
                     </a>
                 </article> -->
-               
                 <article class="home-language">
                     <a href="georgian/">
                         <div class="home-language-card">
@@ -340,7 +338,7 @@
                         </div>
                     </a>
                 </article>
-                 <article class="home-language">
+                <article class="home-language">
                     <a href="hindi/">
                         <div class="home-language-card">
                             <span class="home-language-icon" style="margin-top: 10px">ई</span>
@@ -447,23 +445,14 @@
         </div> -->
             </div>
         </section>
+
         <footer class="footer">
             <div class="footer-content">
-                <div class="footer-column-right">
-                    © 2021 <span class="logo-style">love alphabets</span>
-                </div>
-                <!--
-        <div class="footer-column-left">
-          <p class="footer-column-item">Read Korean Hangul</p>
-          <p class="footer-column-item">Read Japanese Kana</p>
-          <p class="footer-column-item">Read Devanagari (Hindi))</p>
-          <p class="footer-column-item">Read Inuktitut (Nunavik)</p>
-          <p class="footer-column-item">Read Amharic</p>
-          <p class="footer-column-item">Read Modern Georgian</p>
-          <p class="footer-column-item">Read Cherokee</p>
-        </div> -->
+                © 2021 Love Alphabets. All rights reserved.        
             </div>
         </footer>
+
+
         <script>
         function playAudio(url) {
             new Audio(url).play();

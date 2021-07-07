@@ -8,33 +8,19 @@ class Controller {
         ////////////////////
         // Function bindings
 
-       /*
-        // Display initial word + answer
-        this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
 
-       
-        // Display Congratulations popover 
-        this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
-        this.model.bindOnShowCongratulationsPopoverChanged(this.onShowCongratulationsPopoverChanged);
-        this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
-        */
-
+        // Display New items popover        
+        //this.model.bindOnShowChartChanged(this.onShowNewItemsPopoverChanged);
+        this.view.bindShowChart(this.handleDisplayChart);
 
 
     } // End of constructor
 
- 
-     /*
+
     // Handle Congratulations Popover visibility
     handleDisplayCongratulationsPopover = (boolean) => {
-        this.model.showCongratulationsPopover(boolean);
+        //this.model.showCongratulationsPopover(boolean);
     }
-
-    onShowCongratulationsPopoverChanged = boolean => {
-        console.log('fucking function', boolean);
-        this.view.displayCongratulationsPopover(boolean);
-    }
-    */
 
 
 }

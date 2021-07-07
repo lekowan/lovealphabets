@@ -1,6 +1,7 @@
 class View {
     constructor() {
 
+
         // Get today's date and end of day timestamp
         let now = new Date();
         let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
@@ -27,7 +28,6 @@ class View {
             window.location.href = "../";
         });
 
-
         this.header.append(this.logo);
 
         // Create language header
@@ -36,11 +36,10 @@ class View {
         this.languageTitle = this.createElement("h1", "language-title");
         this.languageTitle.innerText = languageTitle;
         this.languageGeoTitle = this.createElement("span", "language-geo-title");
-        
-        if(typeof languageGeo == 'undefined' ){
+
+        if (typeof languageGeo == 'undefined') {
             this.languageGeoTitle.innerText = "";
-        }
-        else {
+        } else {
             this.languageGeoTitle.innerText = languageGeo;
         }
 
@@ -58,23 +57,30 @@ class View {
 
             let homeLanguage = this.createElement("article", "home-language");
             let homeLanguageCard = this.createElement("div", "home-language-card");
-            let cardOverlay = this.createElement("div", "card-overlay");
-            cardOverlay.style.display = "none";
-
-            // Hover/tap overlay
-            let chartCta = this.createElement("div", "home-cta");
-            chartCta.classList.add("top-cta");
-            chartCta.innerHTML = "See the character chart →";
-            let srsCta = this.createElement("div", "home-cta");
-            srsCta.innerHTML = "Launch SRS practice →";
-            cardOverlay.append(chartCta, srsCta);
 
             let homeLanguageIcon = this.createElement("span", "home-language-icon");
             homeLanguageIcon.innerHTML = item.icon;
-            let headingContent = this.createElement("div", "heading-content");
+
             let languageHeading = this.createElement("div", "language-heading");
-            languageHeading.innerHTML = item.title;
-            let languageStatus = this.createElement("div", "language-status");
+            let languageHeadingTitle =this.createElement("span", "language-heading-title");
+            languageHeadingTitle.innerHTML = item.title;
+
+            let languageSubHeading = this.createElement("div", "language-subheading");
+            languageSubHeading.innerHTML = item.sub;
+
+            let languageInfo = this.createElement("div", "language-info");
+            languageInfo.innerHTML = item.info;
+
+            let languageButtonsBar = this.createElement("div", "language-button-bar");
+
+            let languageCta = this.createElement("button", "language-cta");
+            languageCta.innerHTML = "LAUNCH SRS";
+
+            let languageViewChart = this.createElement("button", "language-view-chart-cta");
+            languageViewChart.innerHTML = "PREVIEW";
+            languageViewChart.id = item.chart;
+
+            let languageStatus = this.createElement("span", "language-status");
 
             let nextDate = JSON.parse(localStorage.getItem(item.localStorageKey + 'NextDate'));
 
@@ -89,37 +95,58 @@ class View {
             }
 
 
-            homeLanguageCard.append(cardOverlay,homeLanguageIcon);
-            headingContent.append(languageHeading, languageStatus);
-            homeLanguage.append(homeLanguageCard, headingContent);
+            languageHeading.append(languageHeadingTitle, languageStatus);
+            homeLanguageCard.append(homeLanguageIcon);
+            languageButtonsBar.append(languageCta, languageViewChart, languageInfo);
+            homeLanguage.append(homeLanguageCard, languageHeading, languageSubHeading, languageButtonsBar);
             this.home.append(homeLanguage);
 
-            homeLanguage.addEventListener("click", function() { 
-                window.location.href = item.url 
+            languageCta.addEventListener("click", function() {
+                window.location.href = item.url;
             });
+
+
         });
-
-        this.homeWrapper.append(this.home)
-
-        // Append All Popovers
-        this.homeContainer.append(this.header, this.languageHeader, this.homeWrapper);
-        this.app.append(this.homeContainer);
-
-        /*
-        // Loader
-        this.overlay = this.createElement("div")
-        this.overlay.id = "overlay";
-        this.overlay.style.top = 0;
-        this.overlay.style.height = "100%";
-        this.loader = this.createElement("div", "loader");
-        this.loader.id = "loader";
-        this.loader.classList.add(loadergradientBackground);
-        this.overlay.append(this.loader);
-        this.app.append(this.overlay);
 
         // Popover background
         this.popoverBackground = this.createElement("div", "popover-background");
-        */
+        this.popoverBackground.style.display = "none";
+
+        // Characters chart popover
+        this.chartContainer = this.createElement("div", "chart-popover");
+        this.chartContainer.style.display = "none";
+        this.chartTitle = this.createElement("div", "chart-title");
+        this.chartTitle.innerHTML = "Citronopipo";
+
+        // Create generic close button
+        let closeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        closeSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+        closeSvg.setAttribute("height", "24px");
+        closeSvg.setAttribute("viewBox", "0 0 24 24");
+        closeSvg.setAttribute("width", "24px");
+        closeSvg.setAttribute("fill", "#2a2142");
+        let closeSvgPath1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        closeSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
+        closeSvgPath1.setAttribute("fill", "none");
+        let closeSvgPath2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        let closePath2d = "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+        closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
+        closeSvg.append(closeSvgPath1, closeSvgPath2);
+
+        // Clone generic SVG button
+        this.closeSvg = closeSvg.cloneNode(true);
+
+        // Create close button
+        this.closeButton = this.createElement("div", "chart-close");
+        this.closeButton.append(this.closeSvg);
+
+        this.chartContainer.append(this.chartTitle, this.closeButton);
+
+        this.homeWrapper.append(this.home)
+
+        // Append all elements
+        this.homeContainer.append(this.header, this.languageHeader, this.homeWrapper, this.popoverBackground, this.chartContainer);
+        this.app.append(this.homeContainer);
 
     } // End of constructor
 
@@ -132,8 +159,32 @@ class View {
 
     $ = (n) => document.querySelector(n);
 
+    // Generate character chart items
+    addCharacterChart(array) {
 
+        let popover = this.createElement("div", "chart-popover");
+        let popoverTitle = this.createElement("div", "chart-title");
+        popoverTitle.innerHTML = "title";
 
+        array.forEach(item => {
+            console.log(item);
+        })
 
+        popover.append(popoverTitle);
+
+    }
+
+    bindShowChart(handler) {
+
+        /*
+        languageContent.forEach(item => {
+            item.chart.addEventListener('click', event => {
+                let boolean = true;
+                handler(boolean);
+            });
+        })
+        */
+
+    }
 
 }

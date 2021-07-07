@@ -235,7 +235,7 @@
   width: 90px;
   border-bottom: 1px solid #fbc8fe;
   text-align: center;
-  font-size: 90px;
+  font-size: 35px;
 }
 
 .popover-content-center {
@@ -299,8 +299,15 @@
   background-color: #fff;
 }
 
-.popover-content {
+.popover-content-welcome {
   padding: 31px 35px;
+  overflow-y: auto;
+  height: calc(100% - 137px);
+  margin-top: 55px;
+}
+
+.popover-content {
+  padding: 0 35px;
   overflow-y: auto;
   height: calc(100% - 137px);
   margin-top: 55px;

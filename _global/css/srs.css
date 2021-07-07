@@ -112,11 +112,92 @@ input {
 }
 
 
+/* Dark Blue */
+.dark-blue-background {
+    background: rgb(32,3,105);
+    background: linear-gradient(70deg, rgba(32,3,105,1) 0%, rgba(24,9,62,1) 100%); 
+}
+
 /* Grey */
 
 .grey-background {
     background-color: rgb(221, 221, 221);
 }
+
+/* Purple */
+.purple-background {
+    background: #cebdff;
+    /* background: -o-linear-gradient(20deg, rgba(253,155,155,1) 0%, rgba(252,202,202,1) 100%);
+  background: linear-gradient(70deg, rgba(253,155,155,1) 0%, rgba(252,202,202,1) 100%); */
+}
+
+.purple-cta {
+    color: #18093e;
+    background: #ebe3fd;
+    background: linear-gradient(70deg, #bba4ff 0%, #ebe3fd 100%);
+}
+
+.purple-loader-background {
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #cebdff), color-stop(42%, #fff));
+    background: -o-linear-gradient(left, #cebdff 10%, #fff 42%);
+    background: linear-gradient(to right, #cebdff 10%, #fff 42%);
+}
+
+.purple-underline-4px {
+    -webkit-text-decoration: #cebdff underline 4px;
+    text-decoration: #cebdff underline 4px;
+}
+
+.purple-underline-3px {
+    -webkit-text-decoration: #cebdff underline 3px;
+    text-decoration: #cebdff underline 3px;
+}
+
+.purple-underline-2px {
+    -webkit-text-decoration: #cebdff underline 2px;
+    text-decoration: #cebdff underline 2px;
+}
+
+.purple-border-bottom-2px {
+    border-bottom: 2px solid #cebdff;
+}
+
+/* Dark purple */
+.dark-purple-background {
+    background: #B8AAE1;
+    /* background: -o-linear-gradient(20deg, rgba(253,155,155,1) 0%, rgba(252,202,202,1) 100%);
+  background: linear-gradient(70deg, rgba(253,155,155,1) 0%, rgba(252,202,202,1) 100%); */
+}
+
+.dark-purple-cta {
+    color: #18093e;
+    background: #B8AAE1;
+    /*   background: linear-gradient(70deg, rgba(138,226,223,1) 0%, rgba(190,251,249,1) 100%); */
+}
+
+.dark-purple-loader-background {
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #B8AAE1), color-stop(42%, #fff));
+    background: -o-linear-gradient(left, #B8AAE1 10%, #fff 42%);
+    background: linear-gradient(to right, #B8AAE1 10%, #fff 42%);
+}
+
+.dark-purple-underline-4px {
+    -webkit-text-decoration: #B8AAE1 underline 4px;
+    text-decoration: #B8AAE1 underline 4px;
+}
+
+.dark-purple-underline-3px {
+    -webkit-text-decoration: #B8AAE1 underline 3px;
+    text-decoration: #B8AAE1 underline 3px;
+}
+
+.dark-purple-underline-2px {
+    -webkit-text-decoration: #B8AAE1 underline 2px;
+    text-decoration: #B8AAE1 underline 2px;
+}
+
 
 
 /* //////////////////////////////////////////////////////////////////////////////////// GLOBAL /////////////////////////////////////////////////////////////////////////*/

@@ -40,7 +40,9 @@ class View {
     closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
     closeSvg.append(closeSvgPath1, closeSvgPath2);
 
+    // Clone generic SVG button
     this.closeSvg = closeSvg.cloneNode(true);
+
     // Create close button
     this.closeButton = this.createElement("div", "close-button");
     this.closeButton.append(this.closeSvg);
@@ -77,7 +79,7 @@ class View {
     this.badButton.style.display = "none";
 
     // Create Show button
-    this.showButton = this.createElement("button", "pink-background");
+    this.showButton = this.createElement("button", "purple-background");
     this.showButton.id = "show-button";
     this.showButton.innerHTML = "SHOW";
 
@@ -258,7 +260,7 @@ class View {
     //this.welcomeContainer.style.display = "block";
     this.welcomeTitle = this.createElement("div", "shortcut-title");
     this.welcomeTitle.textContent = "Welcome!";
-    this.welcomeContent = this.createElement("div", "popover-content");
+    this.welcomeContent = this.createElement("div", "popover-content-welcome");
     this.welcomeContent.innerText = welcomeIntro;
     this.welcomeContinueContainer = this.createElement(
       "div",
@@ -270,7 +272,9 @@ class View {
     this.welcomeContinueButton.textContent = "CONTINUE";
     this.welcomeContinueContainer.append(this.welcomeContinueButton);
 
+    // Clone original SVG button
     this.welcomeCloseButtonSvg = closeSvg.cloneNode(true);
+
     // Create close button
     this.welcomeCloseButton = this.createElement("div", "popover-close");
     this.welcomeCloseButton.append(this.welcomeCloseButtonSvg);
@@ -304,23 +308,15 @@ class View {
     this.newItemsContinueButton.textContent = "CONTINUE";
     this.newItemsContinueContainer.append(this.newItemsContinueButton);
 
-    this.newItemsCloseButtonSvg = closeSvg.cloneNode(true);
-    // Create close button
-    this.newItemsCloseButton = this.createElement("div", "popover-close");
-    this.newItemsCloseButton.append(this.newItemsCloseButtonSvg);
-
     // The form, with a [type="text"] input, and a submit button
     this.newItemsForm = this.createElement("form", "new-items-form");
+    this.newItemsForm.setAttribute("onSubmit", "return false");
 
     // Input
     this.input = this.createElement("input", "new-items-input");
     this.input.type = "text";
     this.input.placeholder = "5";
     this.input.name = "todo";
-
-    // Submit button
-    //this.submitButton = this.createElement("button");
-    //this.submitButton.textContent = "Submit";
 
     // Append the input and submit button to the form
     this.newItemsForm.append(this.input);
@@ -335,7 +331,6 @@ class View {
 
     // Today's Items Popover
     this.todayContainer = this.createElement("div", "popover");
-    //this.todayContainer.style.display = "block";
     this.todayTitle = this.createElement("div", "shortcut-title");
     this.todayTitle.textContent = "Today's items";
     this.todayContent = this.createElement("div", "popover-content");
@@ -349,9 +344,10 @@ class View {
     this.todayContinueButton.classList.add("pink-background");
     this.todayContinueButton.textContent = "CONTINUE";
     this.todayContinueContainer.append(this.todayContinueButton);
-    this.todayCloseButton = this.createElement("div", "popover-close");
 
+    // Clone original SVG button
     this.todayCloseButtonSvg = closeSvg.cloneNode(true);
+
     // Create close button
     this.todayCloseButton = this.createElement("div", "popover-close");
     this.todayCloseButton.append(this.todayCloseButtonSvg);
@@ -370,9 +366,12 @@ class View {
     this.congratulationsContainer.style.display = "none";
     this.congratulationsTitle = this.createElement("div", "shortcut-title");
     this.congratulationsTitle.textContent = "Congratulations!";
-    this.congratulationsContent = this.createElement("div", "popover-content");
+    this.congratulationsContent = this.createElement(
+      "div",
+      "welcome-popover-content"
+    );
     this.congratulationsContent.innerText =
-      "Congratulations! You've completed all items for today.";
+      "You've completed all of the items that were due today.";
     this.congratulationsContinueContainer = this.createElement(
       "div",
       "continue-popover-container"
@@ -387,11 +386,17 @@ class View {
     this.congratulationsContinueContainer.append(
       this.congratulationsContinueButton
     );
+
+    // Clone original SVG button
+    this.congratulationsCloseButtonSVg = closeSvg.cloneNode(true);
+
+    // Create close button
     this.congratulationsCloseButton = this.createElement(
       "div",
       "popover-close"
     );
-    this.congratulationsCloseButton.textContent = "x";
+    this.congratulationsCloseButton.append(this.congratulationsCloseButtonSVg);
+
     this.congratulationsContainer.append(
       this.congratulationsTitle,
       this.congratulationsContent,
@@ -425,10 +430,9 @@ class View {
       this.todayContainer,
       this.newItemsContainer,
       this.welcomeContainer,
+      this.congratulationsContainer,
       this.srsResetContainer
     );
-
-    console.log(this._isLastPopover);
   } // End of constructor
 
   //
@@ -456,8 +460,6 @@ class View {
   }
 
   addNextCard(card) {
-    console.log(exerciseType);
-
     let nextCard;
 
     if (exerciseType == "character") {
@@ -503,7 +505,6 @@ class View {
       .filter((display) => display == "block");
 
     // If popoverArray only has 1 block state, then there is only one popover left on the DOM
-    console.log(popoverArray);
     return popoverArray.length;
   }
 
@@ -515,15 +516,17 @@ class View {
     this.newItemsContinueButton.addEventListener("click", (event) => {
       event.preventDefault();
 
-      if (this._number) {
+      if (
+        this._number &&
+        this._number > 0 &&
+        typeof +this._number == "number"
+      ) {
         handler(this._number);
-        // this._resetInput;
       }
     });
   }
 
   displayNewItemsCount(item) {
-    console.log(item);
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
     if (_number) {
       this.newItemsCounter.style.display = "block";
@@ -638,8 +641,6 @@ class View {
       if (this._isLastPopover == 1) {
         this.popoverBackground.style.display = "block";
       }
-
-      //console.log(this._isLastPopover);
     }
   }
 
@@ -662,8 +663,6 @@ class View {
       );
       this.input.value = _number || "";
     }
-
-    //console.log(this._isLastPopover);
   }
 
   displayTodaysItemsPopover(boolean) {
@@ -695,13 +694,11 @@ class View {
   bindDisplayWelcomePopover(handler) {
     this.welcomeCloseButton.addEventListener("click", (event) => {
       let boolean = false;
-      console.log("clicked");
       handler(boolean);
     });
 
     this.welcomeContinueButton.addEventListener("click", (event) => {
       let boolean = false;
-      console.log("clicked");
       handler(boolean);
     });
   }
@@ -709,13 +706,11 @@ class View {
   bindDisplayTodaysItemsPopover(handler) {
     this.todayCloseButton.addEventListener("click", (event) => {
       let boolean = false;
-      console.log("clicked");
       handler(boolean);
     });
 
     this.todayContinueButton.addEventListener("click", (event) => {
       let boolean = false;
-      console.log("clicked");
       handler(boolean);
     });
   }
@@ -727,15 +722,17 @@ class View {
     });
 
     this.congratulationsContinueButton.addEventListener("click", (event) => {
-      //let boolean = false;
-      //handler(boolean);
       return (window.location.href = "../");
     });
   }
 
   bindDisplayNewItemsPopover(handler) {
     this.newItemsCloseButton.addEventListener("click", () => {
-      if (this._number) {
+      if (
+        this._number &&
+        this._number > 0 &&
+        typeof +this._number == "number"
+      ) {
         handler(false);
       }
     });
