@@ -325,8 +325,7 @@ class View {
     this.newItemsContainer.append(
       this.newItemsTitle,
       this.newItemsContent,
-      this.newItemsContinueContainer,
-      this.newItemsCloseButton
+      this.newItemsContinueContainer
     );
 
     // Today's Items Popover
@@ -727,22 +726,13 @@ class View {
   }
 
   bindDisplayNewItemsPopover(handler) {
-    this.newItemsCloseButton.addEventListener("click", () => {
+    this.newItemsContinueButton.addEventListener("click", (event) => {
       if (
         this._number &&
         this._number > 0 &&
         typeof +this._number == "number"
       ) {
         handler(false);
-      }
-    });
-
-    this.newItemsContinueButton.addEventListener("click", () => {
-      const newNum = this._number;
-      this.displayNewItemsCount(newNum);
-
-      if (this._number) {
-        handler(false, newNum);
       }
     });
 
