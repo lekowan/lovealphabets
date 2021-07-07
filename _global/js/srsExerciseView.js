@@ -166,15 +166,6 @@ class View {
         this.newItemsContinueButton.textContent = "CONTINUE";
         this.newItemsContinueContainer.append(this.newItemsContinueButton);
         
-        /*
-        // Clone original SVG button
-        this.newItemsCloseButtonSvg = closeSvg.cloneNode(true);;
-        
-        // Create close button
-        this.newItemsCloseButton = this.createElement("div", "popover-close");
-        this.newItemsCloseButton.append(this.newItemsCloseButtonSvg);
-        */
-
         // The form, with a [type="text"] input, and a submit button
         this.newItemsForm = this.createElement("form", "new-items-form");
         this.newItemsForm.setAttribute("onSubmit", "return false");
@@ -185,10 +176,6 @@ class View {
         this.input.placeholder = "5";
         this.input.name = "todo";
 
-        // Submit button
-        //this.submitButton = this.createElement("button");
-        //this.submitButton.textContent = "Submit";
-
         // Append the input and submit button to the form
         this.newItemsForm.append(this.input);
         this.newItemsContent.append(this.newItemsContentText, this.newItemsForm );
@@ -197,7 +184,6 @@ class View {
 
         // Today's Items Popover
         this.todayContainer = this.createElement("div", "popover");
-        //this.todayContainer.style.display = "block";
         this.todayTitle = this.createElement("div", "shortcut-title");
         this.todayTitle.textContent = "Today's items";
         this.todayContent = this.createElement("div", "popover-content");
@@ -241,14 +227,10 @@ class View {
         this.congratulationsCloseButton = this.createElement("div", "popover-close");
         this.congratulationsCloseButton.append(this.congratulationsCloseButtonSVg);
 
-
         this.congratulationsContainer.append(this.congratulationsTitle, this.congratulationsContent, this.congratulationsContinueContainer, this.congratulationsCloseButton);
-
 
         // Append All Popovers
         this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer);
-
-        console.log(this._isLastPopover);
 
     } // End of constructor
 
@@ -279,8 +261,6 @@ class View {
     }
 
     addNextCard(card) {
-
-        console.log(exerciseType);
 
         let nextCard;
 
@@ -326,7 +306,6 @@ class View {
             .filter(display => display == "block");
 
         // If popoverArray only has 1 block state, then there is only one popover left on the DOM
-        console.log(popoverArray);
         return popoverArray.length;
     }
 
@@ -340,13 +319,12 @@ class View {
 
             if (this._number && this._number > 0 && typeof +this._number == "number") {
                 handler(this._number);
-                console.log(this._number);
             }
         })
     }
 
     displayNewItemsCount(item) {
-        console.log(item);
+
         let _number = JSON.parse(localStorage.getItem(localStorageKey + 'Number'));
         if (_number) {
             this.newItemsCounter.style.display = "block";
@@ -466,7 +444,6 @@ class View {
                 this.popoverBackground.style.display = "block";
             }
 
-            //console.log(this._isLastPopover);
         }
     }
 
@@ -490,7 +467,6 @@ class View {
 
         }
 
-        //console.log(this._isLastPopover);
     }
 
     displayTodaysItemsPopover(boolean) {
@@ -514,13 +490,11 @@ class View {
     bindDisplayWelcomePopover(handler) {
         this.welcomeCloseButton.addEventListener('click', event => {
             let boolean = false;
-            console.log("clicked");
             handler(boolean);
         })
 
         this.welcomeContinueButton.addEventListener('click', event => {
             let boolean = false;
-            console.log("clicked");
             handler(boolean);
         })
 
@@ -529,14 +503,12 @@ class View {
     bindDisplayTodaysItemsPopover(handler) {
         this.todayCloseButton.addEventListener('click', event => {
             let boolean = false;
-            console.log("clicked");
             handler(boolean);
         })
 
 
         this.todayContinueButton.addEventListener('click', event => {
             let boolean = false;
-            console.log("clicked");
             handler(boolean);
         })
 
@@ -549,8 +521,6 @@ class View {
         })
 
         this.congratulationsContinueButton.addEventListener('click', event => {
-            //let boolean = false;
-            //handler(boolean);
             return window.location.href = "../";
         })
 

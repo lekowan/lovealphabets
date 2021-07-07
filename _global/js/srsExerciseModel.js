@@ -62,7 +62,7 @@ class Model {
         this.show = false;
         this.incorrectArray = [];
         this.showNewItems = true;
-        this.showWelcome = true;
+        this.showWelcome = false;
         this.showTodaysItems = true;
         this.showCongratulations = false;
 
@@ -73,6 +73,8 @@ class Model {
 
         // If progress data not in local storage, create it
         if (!_progress) {
+
+            this.showWelcome = true;
 
             _progress = {};
             _progress.timeStamp = todaysDate;
@@ -153,7 +155,6 @@ class Model {
                 if (this.allNewCards.length == 0) {
 
                     this.showNewItems = false;
-                    this.showWelcome = false;
                     this.showCongratulations = true;
 
                 }
@@ -173,8 +174,7 @@ class Model {
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
     get initialWelcomePopover() {
-        let _number = JSON.parse(localStorage.getItem(localStorageKey + 'Number'));
-        return _number ? false : true;
+        return this.showWelcome;
     }
 
     get initialNewItemsPopover() {

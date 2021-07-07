@@ -76,7 +76,6 @@ class Controller {
 
     // Change number in array handlers
     handleChangeNumber = (number) => {
-        console.log(number);
         this.model.changeNumber(number);
     }
 
