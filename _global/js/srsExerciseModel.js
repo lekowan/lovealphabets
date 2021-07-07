@@ -6,9 +6,9 @@ class Model {
 
         // Declare today's date, start of day and end of day
         let now = new Date();
-        now = new Date('2021/07/9'); /* for testing only */
+        //now = new Date('2021/07/9'); /* for testing only */
         let todaysDate = now.toJSON().slice(0, 10).replace(/-/g, '/');
-        todaysDate = "2021/07/09" /* for testing only */
+        //todaysDate = "2021/07/09" /* for testing only */
         let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
         let endOfDay = startOfDay + (24 * 60 * 60 * 1000) - 1;
 
