@@ -6,9 +6,9 @@ class Model {
 
         // Declare today's date, start of day and end of day
         let now = new Date();
-        //now = new Date('2021/07/06'); /* for testing only */
+        now = new Date('2021/07/9'); /* for testing only */
         let todaysDate = now.toJSON().slice(0, 10).replace(/-/g, '/');
-        //todaysDate = "2021/07/06" /* for testing only */
+        todaysDate = "2021/07/09" /* for testing only */
         let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
         let endOfDay = startOfDay + (24 * 60 * 60 * 1000) - 1;
 
@@ -63,7 +63,7 @@ class Model {
         this.incorrectArray = [];
         this.showNewItems = true;
         this.showWelcome = true;
-        this.newSession = true;
+        this.showTodaysItems = true;
         this.showCongratulations = false;
 
         // Local storage Progress
@@ -118,9 +118,10 @@ class Model {
                     .filter(item => item != null);
                 */
 
+
                 // If new items array is empty, hide today's items popover
                 if (this.newItemsArray.slice(0, this.number).length == 0) {
-                    this.showNewItems = false;
+                    this.showTodaysItems = false;
                 }
 
                 // Save today's time stamp in Local Storage
@@ -146,7 +147,7 @@ class Model {
                 timeStamp = _progress.timeStamp;
                 this.allNewCards = _progress.allNewCards.filter(item => !_progress.completedItemsArray.includes(item));
 
-                this.newSession = false;
+                this.showTodaysItems = false;
 
                 // If all cards have been completed - go to Congratulations
                 if (this.allNewCards.length == 0) {
@@ -186,7 +187,7 @@ class Model {
     }
 
     get initialTodaysItemsPopover() {
-        return this.newSession;
+        return this.showTodaysItems;
     }
 
     get newItemsCounter() {
@@ -208,7 +209,6 @@ class Model {
         }
     }
 
-
     get newAnswer() {
         let word = this.allNewCards[this.tracker];
         return word.romanize();
@@ -222,17 +222,20 @@ class Model {
         return this.tracker;
     }
 
-    get showNewItemsPopover() {
+    /*
+    get showNewItemsPopoverValue() {
         return this.showNewItems;
     }
 
-    get showWelcomePopover() {
+    get showWelcomePopoverValue() {
         return this.showWelcome;
-    }
+    } 
 
-    get showCongratulationsPopover() {
+    get showCongratulationsPopoverValue() {
         return this.showCongratulations;
     }
+
+    */
 
     // Shuffle Array Function
     shuffle(array) {
