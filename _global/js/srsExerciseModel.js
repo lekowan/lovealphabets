@@ -88,7 +88,6 @@ class Model {
             //this.shuffle(newItemsArray.slice(0, this.number))
             //    .concat(this.dueTodayItemsArray);
 
-            console.log(this.allNewCards);
 
             _progress.allNewCards = this.allNewCards;
 
@@ -390,9 +389,7 @@ class Model {
     // Play audio
     sayIt() {
         let word = this.allNewCards[this.tracker];
-        console.log(this.allNewCards);
-        console.log(this.tracker);
-
+    
         // If speechSynthesis in user's browser and activateSpeech is true
         if (activateSpeech && ('speechSynthesis' in window)) {
             let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
@@ -417,7 +414,6 @@ class Model {
     }
 
     removeNewItem() {
-        console.log(this.newItemsTracker);
         this.newItemsTracker--;
         this.onNewItemsCounterChanged(this.newItemsTracker);
     }
