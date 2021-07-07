@@ -399,13 +399,33 @@ class View {
       this.congratulationsCloseButton
     );
 
+    // Create SRS reset popover
+    this.srsResetContainer = this.createElement("div", "reset-popover");
+    this.srsResetContainer.style.display = "none";
+    this.srsResetContent = this.createElement("div", "reset-popover__content");
+    this.srsResetContent.textContent =
+      "Are you sure you want to delete your SRS data and reset your progress?";
+    this.srsResetButtonContainer = this.createElement(
+      "div",
+      "reset-popover__buttons"
+    );
+    this.srsResetYes = this.createElement("div", "reset-popover__yes");
+    this.srsResetYes.textContent = "YES";
+    this.srsResetNo = this.createElement("div", "reset-popover__no");
+    this.srsResetNo.textContent = "NO";
+    this.srsResetButtonContainer.append(this.srsResetYes, this.srsResetNo);
+    this.srsResetContainer.append(
+      this.srsResetContent,
+      this.srsResetButtonContainer
+    );
+
     // Append All Popovers
     this.app.append(
       this.popoverBackground,
       this.todayContainer,
       this.newItemsContainer,
       this.welcomeContainer,
-      this.congratulationsContainer
+      this.srsResetContainer
     );
 
     console.log(this._isLastPopover);
