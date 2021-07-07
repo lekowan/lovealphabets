@@ -67,6 +67,12 @@ class Controller {
       this.handleDisplayCongratulationsPopover
     );
 
+    // Display SRS reset popover
+    this.model.bindOnShowSrsResetPopoverChanged(
+      this.onShowSrsResetPopoverChanged
+    );
+    this.view.bindDisplaySrsResetPopover(this.handleDisplaySrsResetPopover);
+
     // Display settings sliding menu
     this.model.bindOnShowSettingsMenuChanged(this.onShowSettingsMenuChanged);
     this.view.bindDisplaySettingsMenu(this.handleDisplaySettingsMenu);
@@ -177,6 +183,15 @@ class Controller {
 
   onShowCongratulationsPopoverChanged = (boolean) => {
     this.view.displayCongratulationsPopover(boolean);
+  };
+
+  // Handle settings sliding menu visibility
+  handleDisplaySrsResetPopover = () => {
+    this.model.showSrsResetPopover();
+  };
+
+  onShowSrsResetPopoverChanged = (boolean) => {
+    this.view.displaySrsResetPopover(boolean);
   };
 
   // Handle settings sliding menu visibility

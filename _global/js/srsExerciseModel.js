@@ -64,6 +64,7 @@ class Model {
     this.showWelcome = true;
     this.newSession = true;
     this.showCongratulations = false;
+    this.showSrsReset = false;
     this.showSettings = false;
 
     // Local storage Progress
@@ -527,6 +528,16 @@ class Model {
 
   bindOnShowCongratulationsPopoverChanged(callback) {
     this.onShowCongratulationsPopoverChanged = callback;
+  }
+
+  // SRS reset popover
+  showSrsResetPopover() {
+    this.showSrsReset = !this.showSrsReset;
+    this.onShowSrsResetPopoverChanged(this.showSrsReset);
+  }
+
+  bindOnShowSrsResetPopoverChanged(callback) {
+    this.onShowSrsResetPopoverChanged = callback;
   }
 
   // Settings sliding menu

@@ -682,6 +682,12 @@ class View {
     }
   }
 
+  displaySrsResetPopover(boolean) {
+    this.srsResetContainer.style.display = boolean ? "flex" : "none";
+
+    this.popoverBackground.style.display = boolean ? "block" : "none";
+  }
+
   displaySettingsMenu(boolean) {
     this.settingsMenu.style.right = boolean ? "0" : "";
   }
@@ -745,6 +751,25 @@ class View {
 
     this.newItemsNum.addEventListener("click", () => {
       handler(true);
+    });
+  }
+
+  bindDisplaySrsResetPopover(handler) {
+    this.resetSrs.addEventListener("click", () => {
+      handler();
+    });
+
+    this.srsResetNo.addEventListener("click", () => {
+      handler();
+    });
+
+    this.srsResetYes.addEventListener("click", () => {
+      handler();
+
+      localStorage.removeItem(localStorageKey + "Number");
+      localStorage.removeItem(localStorageKey + "Data");
+      localStorage.removeItem(localStorageKey + "Progress");
+      location.reload();
     });
   }
 
