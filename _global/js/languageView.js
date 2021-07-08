@@ -159,15 +159,14 @@ class View {
     $ = (n) => document.querySelector(n);
 
     // Generate character chart items
-    addCharacterChart(chart) {
+    addCharacterChart(chart,chartTitle) {
 
         this.chartContainer.innerHTML = "";
         // Create close button
 
         this.closeButton.append(this.closeSvg);
         this.chartTitle = this.createElement("div", "chart-title");
-        console.log(chart);
-        this.chartTitle.innerHTML = "Characters list";
+        this.chartTitle.innerHTML = chartTitle;
 
         this.chartContainer.append(this.chartTitle, this.closeButton);
 

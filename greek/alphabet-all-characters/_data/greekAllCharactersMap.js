@@ -1,3 +1,4 @@
+/*
 const greekMap = {
     "Α": { "letter" :  "a" },
     "Β": { "letter" :  "v" },
@@ -51,10 +52,11 @@ const greekMap = {
 }
 
 const greekDataArray = Object.keys(greekMap);
+*/
 
 const greekChartData = [
-   { "subtitle": "Uppercase letters", "content": greekDataArray.slice(0,25) }, 
-   { "subtitle": "Lowercase letters", "content": greekDataArray.slice(25,50)  }, 
+   { "subtitle": "Uppercase letters", "content": greekUpperCaseMap }, 
+   { "subtitle": "Lowercase letters", "content": greekLowerCaseMap  }, 
 ]
 
 console.log(greekChartData);

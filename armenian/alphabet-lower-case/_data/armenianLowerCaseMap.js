@@ -43,5 +43,5 @@ const armenianLowerCaseMap = {
 const armenianLowerCaseDataArray = Object.keys(armenianLowerCaseMap);
 
 const armenianLowerCaseChartData = [
-   { "subtitle": "Lowercase letters", "content": armenianLowerCaseMap }, 
+   { "subtitle": "", "content": armenianLowerCaseMap }, 
 ]

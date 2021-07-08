@@ -1,4 +1,4 @@
-const bengaliVowelsConsonantsMap = {
+const bengaliVowelsMap = {
     "অ": {
         "letter": "ô"
     },
@@ -32,6 +32,9 @@ const bengaliVowelsConsonantsMap = {
     "ঔ": {
         "letter": "ou"
     },
+}
+
+const bengaliConsonantsMap = {
     "ক": {
         "letter": "kô"
     },
@@ -174,10 +177,8 @@ const bengaliVowelsConsonantsMap = {
    
 }
 
-const bengaliVowelsConsonantsDataArray = Object.keys(bengaliVowelsConsonantsMap);
-
 
 const bengaliVowelsConsonantsChartData = [
-    {"subtitle":"Vowels", "content": bengaliVowelsConsonantsDataArray.slice(0, 11) },
-    {"subtitle":"Consonants", "content": bengaliVowelsConsonantsDataArray.slice(11) },
+    { "subtitle":"Vowels", "content": bengaliVowelsMap },
+    { "subtitle":"Consonants", "content": bengaliConsonantsMap },
 ]

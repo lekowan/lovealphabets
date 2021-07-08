@@ -37,5 +37,5 @@ const georgianMap = {
 const georgianDataArray = Object.keys(georgianMap);
 
 const georgianChartData = [
-  { "subtitle": "All characters", "content": georgianDataArray }, 
+  { "subtitle": "", "content": georgianMap }, 
 ]

@@ -1977,6 +1977,10 @@ article.home-language:nth-child(7n+7) .language-cta {
     text-align: center;
     width: 100%;
     background-color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 60px;
 }
 
 .chart-close {

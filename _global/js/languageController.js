@@ -22,9 +22,9 @@ class Controller {
         this.model.showChart(boolean, chart);
     }
 
-    onShowChartChanged = (boolean, chart) => {
+    onShowChartChanged = (boolean, chart, chartTitle) => {
         this.view.displayChart(boolean);
-        this.view.addCharacterChart(chart);
+        this.view.addCharacterChart(chart, chartTitle);
     }
 
 

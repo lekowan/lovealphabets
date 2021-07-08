@@ -15,15 +15,16 @@ class Model {
     // Chart Popover
     showChart(boolean, chart) {
         console.log(boolean, chart);
-        let chartData;
+        let chartData, chartTitle;
 
         languageContent.forEach(item => {
             if(item.chartName == chart){
                 chartData = item.chartData 
+                chartTitle = item.chartTitle;
             }
         })
 
-        this.onShowChartChanged(boolean, chartData);
+        this.onShowChartChanged(boolean, chartData,chartTitle);
     }
 
     bindOnShowChartChanged(callback) {

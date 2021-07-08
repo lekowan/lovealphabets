@@ -117,10 +117,9 @@ const hiraganaDiagraphMap = {
     "ぴょ": { "letter":  "pyo"},
 }
 
-const japaneseHiraganaMap = Object.assign({}, hiraganaMonographMap, hiraganaDiacriticMap, hiraganaDiagraphMap);
 
 const japaneseHiraganaChartData = [
-    {"subtitle":"Monograph", "content": Object.keys(hiraganaMonographMap), "column": "character-content-5-column" },
-    {"subtitle":"Diacritic", "content": Object.keys(hiraganaDiacriticMap), "column": "character-content-5-column" },
-    {"subtitle":"Diagraph", "content": Object.keys(hiraganaDiagraphMap), "column": "character-content-3-column" },
+    {"subtitle":"Monograph", "content": hiraganaMonographMap, "column": "character-content-5-column" },
+    {"subtitle":"Diacritic", "content": hiraganaDiacriticMap, "column": "character-content-5-column" },
+    {"subtitle":"Diagraph", "content": hiraganaDiagraphMap, "column": "character-content-3-column" },
 ]
