@@ -112,8 +112,6 @@ const inuktitutMap = {
   "ᖕ": { "letter" :  "ng" },
 }
 
-const inuktitutDataArray = Object.keys(inuktitutMap);
-
-const inuktitutChartData = {
-   "1": { "subtitle": "Syllabary", "content": inuktitutDataArray }, 
-}
+const inuktitutChartData = [
+  { "subtitle": "", "content": inuktitutMap }, 
+]

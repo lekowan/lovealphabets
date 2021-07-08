@@ -1,4 +1,4 @@
-const hindiVowelsConsonantslMap = {
+const hindiVowelMap = {
   "अ": {
     "letter": "a"
   },
@@ -32,7 +32,9 @@ const hindiVowelsConsonantslMap = {
   "औ": {
     "letter": "au"
   },
+}
 
+const hindiConsonantMap = {
   "क": {
     "letter": "ka"
   },
@@ -177,11 +179,9 @@ const hindiVowelsConsonantslMap = {
   },
 }
 
-const hindiVowelsConsonantsDataArray = Object.keys(hindiVowelsConsonantsMap);
 
-const hindiVowelsConsonantsChartData = {
-  "1": {"subtitle":"Vowels", "content": hindiVowelsConsonantsVowelsDataArray.slice(0,11) },
-  "2": {"subtitle":"Consonants", "content": hindiVowelsConsonantsConsonants.slice(11) },
-  "3": {"subtitle":"All Vowels + Consonants", "content": hindiVowelsConsonantsDataArray},
-}
+const hindiVowelsConsonantsChartData = [
+  {"subtitle":"Vowels", "content": hindiVowelMap},
+  {"subtitle":"Consonants", "content": hindiConsonantMap },
+]
 

@@ -1,4 +1,5 @@
 class View {
+
   constructor() {
     this.app = this.$("#root");
 

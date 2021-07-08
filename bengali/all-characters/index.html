@@ -9,38 +9,38 @@
 
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-6E7RJD8L6J');
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="../_global/css/normalize.css">
-    <link rel="stylesheet" href="../_global/css/language.css">
-    <title>Learn Bengali SRS | lovealphabets</title>
+    <link rel="stylesheet" href="../../_global/css/normalize.css">
+    <link rel="stylesheet" href="../../_global/css/srs.css">
+    <link rel="stylesheet" href="../../_global/css/onboarding.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Rochester&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- favicon -->
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="_data/srsData.js"></script>
+    <script src="../../_global/js/srsEngine.js"></script>
+    
+    <title>Learn Bengali consonant + vowel combinations SRS Practice | lovealphabets</title>
 </head>
 
 <body id="root">
-    <script src="_data/languageData.js"></script>
-    <script src="../_global/js/languageModel.js"></script>
-    <script src="../_global/js/languageView.js"></script>
-    <script src="../_global/js/languageController.js"></script>
-    <!--
-    <script>
-    // On load, display loader
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(function() {
-            overlay.style.display = "none";
-        }, 500);
-    })
-    -->
-    </script>
+
+<script src="../../_global/js/srsExerciseModel.js"></script>
+<script src="../../_global/js/srsExerciseView.js"></script>
+<script src="../../_global/js/srsExerciseController.js"></script>
+<script>
+    
+// On load, display loader
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        overlay.style.display = "none";
+    }, 750);
+})
+</script>
+
 </body>
+
 
 </html>

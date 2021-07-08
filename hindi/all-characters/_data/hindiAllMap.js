@@ -1189,26 +1189,9 @@ const hindiAllMap = {
   }
 }
 
-const hindiAllDataArray = Object.keys(hindiAllMap);
 
-const hindiAllConsonants1 = ["क","ख","ग","घ","ङ"];
-const hindiAllConsonants2 = ["च", "छ", "ज", "झ","ञ"];
-const hindiAllConsonants3 = ["ट", "ठ", "ड", "ढ","ण"];
-const hindiAllConsonants4 = ["त", "थ", "द", "ध","न"];
-const hindiAllConsonants5 = ["प", "फ", "ब", "भ","म"];
-const hindiAllConsonants6 = ["य", "र", "ल", "व"]; 
-const hindiAllConsonants7 = ["श", "ष", "स","ह"];
-
-const hindiAllVowels1 = hindiAllDataArray.slice(0,6);
-const hindiAllVowels2 = hindiAllDataArray.slice(6,11);
-const hindiAllVowels = hindiAllVowels1.concat(hindiAllVowels2);
-
-const hindiAllConsonants = hindiAllConsonants1.concat(hindiAllConsonants2).concat(hindiAllConsonants3).concat(hindiAllConsonants4).concat(hindiAllConsonants5).concat(hindiAllConsonants6).concat(hindiAllConsonants7);
-const all = hindiAllVowels.concat(hindiAllConsonants);
-
-
-const hindiAllChartData = {
-  "1": {"subtitle":"Vowels", "content": hindiAllVowels },
-  "2": {"subtitle":"Consonants", "content": hindiAllConsonants },
-  "3": {"subtitle":"All Vowels + Consonants", "content": hindiAllDataArray.slice(11)},
-}
+const hindiAllChartData = [
+  {"subtitle":"Vowels", "content": hindiVowelMap },
+  {"subtitle":"Consonants (with inherent a vowel)", "content": hindiConsonantMap },
+  {"subtitle":"All vowel + consonant combinations", "content": hindiAllMap},
+]

@@ -1,4 +1,4 @@
-const tibetanVowelsConsonantsMap = {
+const tibetanVowels = {
     "ི": {
         "letter": "i"
     },
@@ -11,6 +11,10 @@ const tibetanVowelsConsonantsMap = {
     "ོ": {
         "letter": "o"
     },
+}
+
+
+const tibetanConsonants = {
     "ཀ": {
         "letter": "ka"
     },
@@ -103,11 +107,7 @@ const tibetanVowelsConsonantsMap = {
     },
 }
 
-const tibetanVowelsConsonantsDataArray = Object.keys(tibetanVowelsConsonantsMap);
-const tibetanVowelsArray = tibetanVowelsConsonantsDataArray.slice(0, 4);
-
-
-const tibetanChartData = {
-    "1": { "subtitle": "Vowels", "content": tibetanVowelsArray },
-    "2": { "subtitle": "Consonants", "content": tibetanVowelsConsonantsDataArray.slice(4, 34) },
-}
+const tibetanVowelsConsonantsChartData = [
+    { "subtitle": "Vowels", "content": tibetanVowels },
+    { "subtitle": "Consonants", "content": tibetanConsonants },
+]

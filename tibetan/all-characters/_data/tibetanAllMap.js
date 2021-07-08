@@ -1,16 +1,4 @@
 const tibetanMap = {
-    "ི": {
-        "letter": "i"
-    },
-    "ུ": {
-        "letter": "u"
-    },
-    "ེ": {
-        "letter": "e"
-    },
-    "ོ": {
-        "letter": "o"
-    },
     "ཀ": {
         "letter": "ka"
     },
@@ -463,20 +451,6 @@ const tibetanMap = {
     }
 }
 
-const tibetanDataArray = Object.keys(tibetanMap);
-const tibetanVowels = tibetanDataArray.slice(0, 4);
-const tibetanConsonants1 = tibetanDataArray.slice(4, 9);
-const tibetanConsonants2 = tibetanDataArray.slice(9, 14);
-const tibetanConsonants3 = tibetanDataArray.slice(14, 19);
-const tibetanConsonants4 = tibetanDataArray.slice(19, 24);
-const tibetanConsonants5 = tibetanDataArray.slice(24, 29);
-const tibetanConsonants6 = tibetanDataArray.slice(29, 34);
-
-const tibetanChartData = {
-    "1": { "subtitle": "Vowels", "content": tibetanVowels },
-    "2": { "subtitle": "Consonants", "content": tibetanDataArray.slice(4, 34) },
-    "3": { "subtitle": "All Consonant + Vowel combinations", "content": tibetanDataArray.slice(34, 64) },
-    "4": { "subtitle": "", "content": tibetanDataArray.slice(64, 94) },
-    "5": { "subtitle": "", "content": tibetanDataArray.slice(94, 124) },
-    "6": { "subtitle": "", "content": tibetanDataArray.slice(124, 154) },
-}
+const tibetanChartData = [
+    { "subtitle": "", "content": tibetanMap }
+]

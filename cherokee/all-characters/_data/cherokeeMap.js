@@ -86,8 +86,7 @@ const cherokeeMap = {
     "Ᏼ": { "letter": "yv" },
 }
 
-const cherokeeDataArray = Object.keys(cherokeeMap);
 
-const cherokeeChartData = {
-   "1": { "subtitle": "Syllabary", "content": cherokeeDataArray }, 
-}
+const cherokeeChartData = [
+   { "subtitle": "", "content": cherokeeMap }, 
+]

@@ -85,8 +85,6 @@ const arabicFinalMap = {
   }
 }
 
-const arabicFinalDataArray = Object.keys(arabicMap);
+const arabicFinalDataArray = Object.keys(arabicFinalMap);
 
-const arabicFinalChartData = {
-   "1": { "subtitle": "Consonants", "content": arabicDataArray }, 
-}
+const arabicFinalChartData = [ { "subtitle": "Consonants", "content": arabicFinalMap } ]

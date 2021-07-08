@@ -42,6 +42,6 @@ const armenianUpperCaseMap = {
 
 const armenianUpperCaseDataArray = Object.keys(armenianUpperCaseMap);
 
-const armenianLowerCaseChartData = {
-   "1": { "subtitle": "Upper case letters", "content": armenianUpperCaseDataArray }, 
-}
+const armenianUpperCaseChartData = [
+   { "subtitle": "", "content": armenianUpperCaseMap }, 
+]

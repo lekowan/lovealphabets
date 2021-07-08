@@ -1,37 +1,4 @@
 const bengaliAllMap = {
-    "অ": {
-        "letter": "ô"
-    },
-    "আ": {
-        "letter": "a"
-    },
-    "ই": {
-        "letter": "i"
-    },
-    "ঈ": {
-        "letter": "ī"
-    },
-    "উ": {
-        "letter": "u"
-    },
-    "ঊ": {
-        "letter": "ū"
-    },
-    "ঋ": {
-        "letter": "ṛ"
-    },
-    "এ": {
-        "letter": "e"
-    },
-    "ঐ": {
-        "letter": "oi"
-    },
-    "ও": {
-        "letter": "o"
-    },
-    "ঔ": {
-        "letter": "ou"
-    },
     "ক": {
         "letter": "kô"
     },
@@ -1189,49 +1156,9 @@ const bengaliAllMap = {
     }
 }
 
-const bengaliAllDataArray = Object.keys(bengaliAllMap);
 
-const bengaliConsonants = [
-    "ক",
-    "খ",
-    "গ",
-    "ঘ",
-    "ঙ",
-    "চ",
-    "ছ",
-    "জ",
-    "ঝ",
-    "ঞ",
-    "ট",
-    "ঠ",
-    "ড",
-    "ঢ",
-    "ণ",
-    "ত",
-    "থ",
-    "দ",
-    "ধ",
-    "ন",
-    "প",
-    "ফ",
-    "ব",
-    "ভ",
-    "ম",
-    "য",
-    "র",
-    "ল",
-    "শ",
-    "ষ",
-    "স",
-    "হ",
-    "য়",
-    "ড়",
-    "ঢ়",
+const bengaliChartData = [
+  {"subtitle":"Vowels", "content": bengaliVowelsMap },
+  {"subtitle":"Consonants (with inherent a vowel)", "content": bengaliConsonantsMap },
+  {"subtitle":"All consonants + vowel combinations", "content": bengaliAllMap },
 ]
-
-
-const bengaliChartData = {
-  "1": {"subtitle":"Vowels", "content": bengaliAllDataArray.slice(0, 11) },
-  "2": {"subtitle":"Consonants", "content": bengaliConsonants },
-  "3": {"subtitle":"All Vowels + Consonants", "content": bengaliAllDataArray.slice(11)},
-}

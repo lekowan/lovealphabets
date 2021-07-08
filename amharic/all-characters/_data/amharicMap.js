@@ -861,6 +861,4 @@ const amharicMap = {
 
 const amharicDataArray = Object.keys(amharicMap);
 
-const amharicChartData = {
-   "1": { "subtitle": "All characters", "content": amharicDataArray }, 
-}
+const amharicChartData = [ { "subtitle": "All characters", "content": amharicMap } ]
