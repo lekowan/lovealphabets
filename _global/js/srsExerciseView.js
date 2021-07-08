@@ -1,5 +1,4 @@
 class View {
-
   constructor() {
     this.app = this.$("#root");
 
@@ -80,7 +79,7 @@ class View {
     this.badButton.style.display = "none";
 
     // Create Show button
-    this.showButton = this.createElement("button", "purple-background");
+    this.showButton = this.createElement("button", "pink-background");
     this.showButton.id = "show-button";
     this.showButton.innerHTML = "SHOW";
 
