@@ -247,7 +247,8 @@
 
 .popover-content-text {
   text-align: center;
-  width: 230px;
+  width: 250px;
+  margin-bottom: 10px;
 }
 
 #popover {
