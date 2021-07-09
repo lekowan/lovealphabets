@@ -3,23 +3,17 @@
 class Model {
   constructor() {
     // Declare today's date, start of day and end of day
-    let now = new Date();
-    //now = new Date('2021/07/9'); /* for testing only */
-    let todaysDate = now.toJSON().slice(0, 10).replace(/-/g, "/");
-    //todaysDate = "2021/07/09" /* for testing only */
-    let startOfDay = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate()
-    ).getTime();
+    const now = new Date();
+    // const now = new Date("2021/07/11"); /* for testing only - replaces previous line */
+    const todaysDate = now.toLocaleDateString("en-GB");
+
+    let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
     let endOfDay = startOfDay + 24 * 60 * 60 * 1000 - 1;
 
     // Get data from  localStorage
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
     let _data = JSON.parse(localStorage.getItem(localStorageKey + "Data"));
-    let _progress = JSON.parse(
-      localStorage.getItem(localStorageKey + "Progress")
-    );
+    let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
 
     this.newItemsArray = [];
     this.dueTodayItemsArray = [];
@@ -99,9 +93,7 @@ class Model {
       // If this is a new session
       if (_progress.timeStamp != todaysDate) {
         // Create a new array including new Items that have NOT been completed in previous session
-        this.newItemsFromPreviousSession = this.newItemsArray.filter((item) =>
-          _progress.completedItemsArray.includes(item)
-        );
+        this.newItemsFromPreviousSession = this.newItemsArray.filter((item) => _progress.completedItemsArray.includes(item));
 
         // Create exercise array
         this.allNewCards = this.newItemsArray
@@ -141,9 +133,7 @@ class Model {
         // If the session was started ealier on today
       } else {
         timeStamp = _progress.timeStamp;
-        this.allNewCards = _progress.allNewCards.filter(
-          (item) => !_progress.completedItemsArray.includes(item)
-        );
+        this.allNewCards = _progress.allNewCards.filter((item) => !_progress.completedItemsArray.includes(item));
 
         this.showTodaysItems = false;
 
@@ -159,8 +149,7 @@ class Model {
     this.word = this.allNewCards[0];
 
     // Create counter variables
-    this.newItemsTracker =
-      this.allNewCards.length - this.dueTodayItemsArray.length;
+    this.newItemsTracker = this.allNewCards.length - this.dueTodayItemsArray.length;
     this.revisionItemsTracker = this.dueTodayItemsArray.length;
   } // End of constructor ////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -255,9 +244,7 @@ class Model {
 
     // Fetch number from localStorage
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
-    let _progress = JSON.parse(
-      localStorage.getItem(localStorageKey + "Progress")
-    );
+    let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
 
     // If the number passed is greater than the array
     if (number > this.newItemsArray.length) {
@@ -351,9 +338,7 @@ class Model {
         this._commitNextDate(nextDate);
 
         // Open Congratulations Popover
-        this.onShowCongratulationsPopoverChanged(
-          this.showCongratulationsPopover
-        );
+        this.onShowCongratulationsPopoverChanged(this.showCongratulationsPopover);
       }
 
       // If incorrect array is not empty, carry on looping through incorrect items
@@ -461,9 +446,7 @@ class Model {
 
     // Get data from local Storage
     let _data = JSON.parse(localStorage.getItem(localStorageKey + "Data"));
-    let _progress = JSON.parse(
-      localStorage.getItem(localStorageKey + "Progress")
-    );
+    let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
 
     let wordData = _data[word];
     let lastShown, lastState;
@@ -576,16 +559,10 @@ class Model {
   }
 
   _commitProgress(progress) {
-    localStorage.setItem(
-      localStorageKey + "Progress",
-      JSON.stringify(progress)
-    );
+    localStorage.setItem(localStorageKey + "Progress", JSON.stringify(progress));
   }
 
   _commitNextDate(nextDate) {
-    localStorage.setItem(
-      localStorageKey + "NextDate",
-      JSON.stringify(nextDate)
-    );
+    localStorage.setItem(localStorageKey + "NextDate", JSON.stringify(nextDate));
   }
 }
