@@ -149,7 +149,7 @@ class View {
 
     // Append all elements
     this.homeWrapper.append(this.home);
-    this.homeContainer.append(this.header, this.languageHeader, this.homeWrapper, this.footer);
+    this.homeContainer.append(this.header, this.languageHeader, this.homeWrapper, this.footer, this.popoverBackground, this.chartContainer);
     this.app.append(this.homeContainer);
   } // End of constructor
 
