@@ -1493,14 +1493,14 @@ p.learn-how {
 
 .language-cta {
     font-size: 10px;
-    font-weight: 900;
+    font-weight: 600;
     padding: 5px 12px;
     align-items: flex-start;
     display: flex;
     justify-content: center;
-    /* border-radius: 25px; */
-    background: #210c57 !important;
-    color: white;
+    color: #18093e;
+    border: 1px solid #e6e3ee;
+    background: white !important;
 }
 
 .language-header {
@@ -1525,11 +1525,10 @@ p.learn-how {
     font-size: 11px;
     margin-left: 10px;
     color: #210c57;
-    background: #e6ddf9;
     padding: 5px 12px;
-    font-weight: 700;
+    font-weight: 500;
+    border: 1px solid #e6e3ee;
 }
-
 
 .heading-content {
     display: flex;
@@ -1651,8 +1650,8 @@ p.learn-how {
 .language-info {
     text-transform: uppercase;
     font-size: 11px;
-    font-weight: 600;
-    color: #59575e;
+    font-weight: 500;
+    color: #18093e;
     padding: 5px 12px;
     letter-spacing: 0px;
 }
