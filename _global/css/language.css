@@ -677,7 +677,7 @@ h2 {}
 .home-wrapper {
     display: flex;
     justify-content: center;
-    padding: 30px 41px 70px 41px;
+    padding: 30px 41px 200px 41px;
 }
 
 .content {
@@ -1476,7 +1476,7 @@ p.learn-how {
 
 
 .language-heading {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     padding: 0;
     display: flex;
@@ -1492,8 +1492,8 @@ p.learn-how {
 }
 
 .language-cta {
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 500;
     padding: 5px 12px;
     align-items: flex-start;
     display: flex;
@@ -1501,6 +1501,7 @@ p.learn-how {
     color: #18093e;
     border: 1px solid #e6e3ee;
     background: white !important;
+    border-radius: 5px;
 }
 
 .language-header {
@@ -1528,6 +1529,7 @@ p.learn-how {
     padding: 5px 12px;
     font-weight: 500;
     border: 1px solid #e6e3ee;
+    border-radius: 5px;
 }
 
 .heading-content {
@@ -1654,6 +1656,7 @@ p.learn-how {
     color: #18093e;
     padding: 5px 12px;
     letter-spacing: 0px;
+    display: none;
 }
 
 
@@ -1739,7 +1742,7 @@ article.home-language:nth-child(7n+7) .language-cta {
     }
 
     .home-wrapper {
-        padding: 30px 21px 70px 21px;
+        padding: 30px 21px 200px 21px;
     }
 
 
