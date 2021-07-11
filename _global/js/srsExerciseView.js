@@ -16,27 +16,17 @@ class View {
     this.header.classList.add("pink-background");
 
     // Create generic close button
-    let closeSvg = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "svg"
-    );
+    let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     closeSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
     closeSvg.setAttribute("height", "24px");
     closeSvg.setAttribute("viewBox", "0 0 24 24");
     closeSvg.setAttribute("width", "24px");
     closeSvg.setAttribute("fill", "#2a2142");
-    let closeSvgPath1 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
+    let closeSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     closeSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
     closeSvgPath1.setAttribute("fill", "none");
-    let closeSvgPath2 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
-    let closePath2d =
-      "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z";
+    let closeSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    let closePath2d = "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z";
     closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
     closeSvg.append(closeSvgPath1, closeSvgPath2);
 
@@ -93,22 +83,14 @@ class View {
     this.answer.style.display = "none";
 
     // Append the title, form, and todo list to the content div
-    this.content.append(
-      this.header,
-      this.bodyContent,
-      this.buttonArea,
-      this.answer
-    );
+    this.content.append(this.header, this.bodyContent, this.buttonArea, this.answer);
 
     // Append content div to app
     this.app.append(this.content);
 
     // Create settings button
     this.settings = this.createElement("div", "settings");
-    this.svgSettings = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "svg"
-    );
+    this.svgSettings = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     this.svgSettings.style.overflow = "visible";
     this.svgSettings.setAttribute("xmlns", "https://www.w3.org/2000/svg");
     this.svgSettings.setAttribute("height", "16px");
@@ -116,17 +98,11 @@ class View {
     this.svgSettings.setAttribute("width", "16px");
     this.svgSettings.setAttribute("fill", "#2a2142");
 
-    this.svgSettingsPath1 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
+    this.svgSettingsPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     this.svgSettingsPath1.setAttribute("d", "M0 0h24v24H0V0z");
     this.svgSettingsPath1.setAttribute("fill", "none");
 
-    this.svgSettingsPath2 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
+    this.svgSettingsPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     this.svgSettingsPath2.setAttribute(
       "d",
       "M7.429 1.525a6.593 6.593 0 011.142 0c.036.003.108.036.137.146l.289 1.105c.147.56.55.967.997 1.189.174.086.341.183.501.29.417.278.97.423 1.53.27l1.102-.303c.11-.03.175.016.195.046.219.31.41.641.573.989.014.031.022.11-.059.19l-.815.806c-.411.406-.562.957-.53 1.456a4.588 4.588 0 010 .582c-.032.499.119 1.05.53 1.456l.815.806c.08.08.073.159.059.19a6.494 6.494 0 01-.573.99c-.02.029-.086.074-.195.045l-1.103-.303c-.559-.153-1.112-.008-1.529.27-.16.107-.327.204-.5.29-.449.222-.851.628-.998 1.189l-.289 1.105c-.029.11-.101.143-.137.146a6.613 6.613 0 01-1.142 0c-.036-.003-.108-.037-.137-.146l-.289-1.105c-.147-.56-.55-.967-.997-1.189a4.502 4.502 0 01-.501-.29c-.417-.278-.97-.423-1.53-.27l-1.102.303c-.11.03-.175-.016-.195-.046a6.492 6.492 0 01-.573-.989c-.014-.031-.022-.11.059-.19l.815-.806c.411-.406.562-.957.53-1.456a4.587 4.587 0 010-.582c.032-.499-.119-1.05-.53-1.456l-.815-.806c-.08-.08-.073-.159-.059-.19a6.44 6.44 0 01.573-.99c.02-.029.086-.075.195-.045l1.103.303c.559.153 1.112.008 1.529-.27.16-.107.327-.204.5-.29.449-.222.851-.628.998-1.189l.289-1.105c.029-.11.101-.143.137-.146zM8 0c-.236 0-.47.01-.701.03-.743.065-1.29.615-1.458 1.261l-.29 1.106c-.017.066-.078.158-.211.224a5.994 5.994 0 00-.668.386c-.123.082-.233.09-.3.071L3.27 2.776c-.644-.177-1.392.02-1.82.63a7.977 7.977 0 00-.704 1.217c-.315.675-.111 1.422.363 1.891l.815.806c.05.048.098.147.088.294a6.084 6.084 0 000 .772c.01.147-.038.246-.088.294l-.815.806c-.474.469-.678 1.216-.363 1.891.2.428.436.835.704 1.218.428.609 1.176.806 1.82.63l1.103-.303c.066-.019.176-.011.299.071.213.143.436.272.668.386.133.066.194.158.212.224l.289 1.106c.169.646.715 1.196 1.458 1.26a8.094 8.094 0 001.402 0c.743-.064 1.29-.614 1.458-1.26l.29-1.106c.017-.066.078-.158.211-.224a5.98 5.98 0 00.668-.386c.123-.082.233-.09.3-.071l1.102.302c.644.177 1.392-.02 1.82-.63.268-.382.505-.789.704-1.217.315-.675.111-1.422-.364-1.891l-.814-.806c-.05-.048-.098-.147-.088-.294a6.1 6.1 0 000-.772c-.01-.147.039-.246.088-.294l.814-.806c.475-.469.679-1.216.364-1.891a7.992 7.992 0 00-.704-1.218c-.428-.609-1.176-.806-1.82-.63l-1.103.303c-.066.019-.176.011-.299-.071a5.991 5.991 0 00-.668-.386c-.133-.066-.194-.158-.212-.224L10.16 1.29C9.99.645 9.444.095 8.701.031A8.094 8.094 0 008 0zm1.5 8a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM11 8a3 3 0 11-6 0 3 3 0 016 0z"
@@ -138,60 +114,36 @@ class View {
     this.app.append(this.settings);
 
     // Create "new character settings" icon
-    this.svgEdit = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "svg"
-    );
+    this.svgEdit = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     this.svgEdit.setAttribute("xmlns", "https://www.w3.org/2000/svg");
     this.svgEdit.setAttribute("height", "24px");
     this.svgEdit.setAttribute("viewBox", "0 0 24 24");
     this.svgEdit.setAttribute("width", "24px");
     this.svgEdit.setAttribute("fill", "white");
 
-    this.svgEditPath1 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
+    this.svgEditPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     this.svgEditPath1.setAttribute("d", "M0 0h24v24H0V0z");
     this.svgEditPath1.setAttribute("fill", "none");
 
-    this.svgEditPath2 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
-    this.svgEditPath2.setAttribute(
-      "d",
-      "M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"
-    );
+    this.svgEditPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgEditPath2.setAttribute("d", "M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z");
 
     this.svgEdit.append(this.svgEditPath1, this.svgEditPath2);
 
     // Create "reset SRS data" icon
-    this.svgClear = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "svg"
-    );
+    this.svgClear = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     this.svgClear.setAttribute("xmlns", "https://www.w3.org/2000/svg");
     this.svgClear.setAttribute("height", "24px");
     this.svgClear.setAttribute("viewBox", "0 0 24 24");
     this.svgClear.setAttribute("width", "24px");
     this.svgClear.setAttribute("fill", "white");
 
-    this.svgClearPath1 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
+    this.svgClearPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     this.svgClearPath1.setAttribute("d", "M0 0h24v24H0V0z");
     this.svgClearPath1.setAttribute("fill", "none");
 
-    this.svgClearPath2 = document.createElementNS(
-      "http://www.w3.org/2000/svg",
-      "path"
-    );
-    this.svgClearPath2.setAttribute(
-      "d",
-      "M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z"
-    );
+    this.svgClearPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgClearPath2.setAttribute("d", "M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z");
 
     this.svgClear.append(this.svgClearPath1, this.svgClearPath2);
 
@@ -213,7 +165,7 @@ class View {
     // // Add change item number
     this.newItemsNum = this.createElement("div", "settings-menu__item");
     this.newItemsNumText = this.createElement("div", "settings-menu__text");
-    this.newItemsNumText.textContent = "New character settings";
+    this.newItemsNumText.textContent = "New characters settings";
     this.newItemsNum.append(this.newItemsNumText);
     this.newItemsNumIcon = this.createElement("div", "settings-menu__icon");
     this.newItemsNumIcon.append(this.svgEdit);
@@ -262,10 +214,7 @@ class View {
     this.welcomeTitle.textContent = "Welcome!";
     this.welcomeContent = this.createElement("div", "popover-content-welcome");
     this.welcomeContent.innerText = welcomeIntro;
-    this.welcomeContinueContainer = this.createElement(
-      "div",
-      "continue-popover-container"
-    );
+    this.welcomeContinueContainer = this.createElement("div", "continue-popover-container");
     this.welcomeContinueButton = this.createElement("div", "continue-popover");
     this.welcomeContinueButton.id = "continue-welcome";
     this.welcomeContinueButton.classList.add("pink-background");
@@ -279,12 +228,7 @@ class View {
     this.welcomeCloseButton = this.createElement("div", "popover-close");
     this.welcomeCloseButton.append(this.welcomeCloseButtonSvg);
 
-    this.welcomeContainer.append(
-      this.welcomeTitle,
-      this.welcomeContent,
-      this.welcomeContinueContainer,
-      this.welcomeCloseButton
-    );
+    this.welcomeContainer.append(this.welcomeTitle, this.welcomeContent, this.welcomeContinueContainer, this.welcomeCloseButton);
 
     // New Items Popover
     this.newItemsContainer = this.createElement("div", "popover");
@@ -292,16 +236,9 @@ class View {
     this.newItemsTitle.textContent = "New characters settings";
     this.newItemsContent = this.createElement("div", "popover-content");
     this.newItemsContent.classList.add("popover-content-center");
-    this.newItemsContentText = this.createElement(
-      "div",
-      "popover-content-text"
-    );
-    this.newItemsContentText.innerHTML =
-      "How many new characters do you want to learn everyday?";
-    this.newItemsContinueContainer = this.createElement(
-      "div",
-      "continue-popover-container"
-    );
+    this.newItemsContentText = this.createElement("div", "popover-content-text");
+    this.newItemsContentText.innerHTML = "How many new characters do you want to learn everyday?";
+    this.newItemsContinueContainer = this.createElement("div", "continue-popover-container");
     this.newItemsContinueButton = this.createElement("div", "continue-popover");
     this.newItemsContinueButton.id = "continue-new-items";
     this.newItemsContinueButton.classList.add("pink-background");
@@ -322,11 +259,7 @@ class View {
     this.newItemsForm.append(this.input);
     this.newItemsContent.append(this.newItemsContentText, this.newItemsForm);
 
-    this.newItemsContainer.append(
-      this.newItemsTitle,
-      this.newItemsContent,
-      this.newItemsContinueContainer
-    );
+    this.newItemsContainer.append(this.newItemsTitle, this.newItemsContent, this.newItemsContinueContainer);
 
     // Today's Items Popover
     this.todayContainer = this.createElement("div", "popover");
@@ -334,10 +267,7 @@ class View {
     this.todayTitle.textContent = "Today's items";
     this.todayContent = this.createElement("div", "popover-content");
     this.todayWelcomeCharacter = this.createElement("div", "welcome-character");
-    this.todayContinueContainer = this.createElement(
-      "div",
-      "continue-popover-container"
-    );
+    this.todayContinueContainer = this.createElement("div", "continue-popover-container");
     this.todayContinueButton = this.createElement("div", "continue-popover");
     this.todayContinueButton.id = "continue-new-items";
     this.todayContinueButton.classList.add("pink-background");
@@ -353,85 +283,46 @@ class View {
 
     // Append containes
     this.todayContent.append(this.todayWelcomeCharacter);
-    this.todayContainer.append(
-      this.todayTitle,
-      this.todayContent,
-      this.todayContinueContainer,
-      this.todayCloseButton
-    );
+    this.todayContainer.append(this.todayTitle, this.todayContent, this.todayContinueContainer, this.todayCloseButton);
 
     // Congratulations Popover
     this.congratulationsContainer = this.createElement("div", "popover");
     this.congratulationsContainer.style.display = "none";
     this.congratulationsTitle = this.createElement("div", "shortcut-title");
     this.congratulationsTitle.textContent = "Congratulations!";
-    this.congratulationsContent = this.createElement(
-      "div",
-      "welcome-popover-content"
-    );
-    this.congratulationsContent.innerText =
-      "You've completed all of the items that were due today.";
-    this.congratulationsContinueContainer = this.createElement(
-      "div",
-      "continue-popover-container"
-    );
-    this.congratulationsContinueButton = this.createElement(
-      "div",
-      "continue-popover"
-    );
+    this.congratulationsContent = this.createElement("div", "welcome-popover-content");
+    this.congratulationsContent.innerText = "You've completed all of the items that were due today.";
+    this.congratulationsContinueContainer = this.createElement("div", "continue-popover-container");
+    this.congratulationsContinueButton = this.createElement("div", "continue-popover");
     this.congratulationsContinueButton.id = "continue-congratulations";
     this.congratulationsContinueButton.classList.add("pink-background");
     this.congratulationsContinueButton.textContent = "FINISH";
-    this.congratulationsContinueContainer.append(
-      this.congratulationsContinueButton
-    );
+    this.congratulationsContinueContainer.append(this.congratulationsContinueButton);
 
     // Clone original SVG button
     this.congratulationsCloseButtonSVg = closeSvg.cloneNode(true);
 
     // Create close button
-    this.congratulationsCloseButton = this.createElement(
-      "div",
-      "popover-close"
-    );
+    this.congratulationsCloseButton = this.createElement("div", "popover-close");
     this.congratulationsCloseButton.append(this.congratulationsCloseButtonSVg);
 
-    this.congratulationsContainer.append(
-      this.congratulationsTitle,
-      this.congratulationsContent,
-      this.congratulationsContinueContainer,
-      this.congratulationsCloseButton
-    );
+    this.congratulationsContainer.append(this.congratulationsTitle, this.congratulationsContent, this.congratulationsContinueContainer, this.congratulationsCloseButton);
 
     // Create SRS reset popover
     this.srsResetContainer = this.createElement("div", "reset-popover");
     this.srsResetContainer.style.display = "none";
     this.srsResetContent = this.createElement("div", "reset-popover__content");
-    this.srsResetContent.textContent =
-      "Are you sure you want to delete your SRS data and reset your progress?";
-    this.srsResetButtonContainer = this.createElement(
-      "div",
-      "reset-popover__buttons"
-    );
+    this.srsResetContent.textContent = "Are you sure you want to delete your SRS data and reset your progress?";
+    this.srsResetButtonContainer = this.createElement("div", "reset-popover__buttons");
     this.srsResetYes = this.createElement("div", "reset-popover__yes");
     this.srsResetYes.textContent = "YES";
     this.srsResetNo = this.createElement("div", "reset-popover__no");
     this.srsResetNo.textContent = "NO";
     this.srsResetButtonContainer.append(this.srsResetYes, this.srsResetNo);
-    this.srsResetContainer.append(
-      this.srsResetContent,
-      this.srsResetButtonContainer
-    );
+    this.srsResetContainer.append(this.srsResetContent, this.srsResetButtonContainer);
 
     // Append All Popovers
-    this.app.append(
-      this.popoverBackground,
-      this.todayContainer,
-      this.newItemsContainer,
-      this.welcomeContainer,
-      this.congratulationsContainer,
-      this.srsResetContainer
-    );
+    this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
   } // End of constructor
 
   //
@@ -499,9 +390,7 @@ class View {
     // Convert collection into node
     // Convert nodes into display block/none state
     // Filter out block states
-    let popoverArray = [...popoverCollection]
-      .map((popover) => popover.style.display)
-      .filter((display) => display == "block");
+    let popoverArray = [...popoverCollection].map((popover) => popover.style.display).filter((display) => display == "block");
 
     // If popoverArray only has 1 block state, then there is only one popover left on the DOM
     return popoverArray.length;
@@ -515,11 +404,7 @@ class View {
     this.newItemsContinueButton.addEventListener("click", (event) => {
       event.preventDefault();
 
-      if (
-        this._number &&
-        this._number > 0 &&
-        typeof +this._number == "number"
-      ) {
+      if (this._number && this._number > 0 && typeof +this._number == "number") {
         handler(this._number);
       }
     });
@@ -657,9 +542,7 @@ class View {
         this.popoverBackground.style.display = "block";
       }
 
-      let _number = JSON.parse(
-        localStorage.getItem(localStorageKey + "Number")
-      );
+      let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
       this.input.value = _number || "";
     }
   }
@@ -727,11 +610,7 @@ class View {
 
   bindDisplayNewItemsPopover(handler) {
     this.newItemsContinueButton.addEventListener("click", (event) => {
-      if (
-        this._number &&
-        this._number > 0 &&
-        typeof +this._number == "number"
-      ) {
+      if (this._number && this._number > 0 && typeof +this._number == "number") {
         handler(false);
       }
     });
