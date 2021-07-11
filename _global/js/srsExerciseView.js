@@ -251,8 +251,8 @@ class View {
 
     // Input
     this.input = this.createElement("input", "new-items-input");
-    this.input.type = "text";
-    this.input.placeholder = "5";
+    this.input.type = "number";
+    this.input.value = this._number || 5;
     this.input.name = "todo";
 
     // Append the input and submit button to the form
@@ -543,7 +543,7 @@ class View {
       }
 
       let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
-      this.input.value = _number || "";
+      this.input.value = _number || 5;
     }
   }
 
