@@ -402,10 +402,6 @@ class View {
     return popoverArray.length;
   }
 
-  _resetInput() {
-    this.input.value = "";
-  }
-
   bindChangeNumber(handler) {
     this.newItemsForm.addEventListener("submit", () => {
       if (this._number && this._number > 0) {
