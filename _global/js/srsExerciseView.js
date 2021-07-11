@@ -253,6 +253,7 @@ class View {
     this.input = this.createElement("input", "new-items-input");
     this.input.type = "number";
     this.input.value = this._number || 5;
+    this.input.min = 1;
     this.input.name = "todo";
 
     // Append the input and submit button to the form
@@ -404,7 +405,7 @@ class View {
     this.newItemsContinueButton.addEventListener("click", (event) => {
       event.preventDefault();
 
-      if (this._number && this._number > 0 && typeof +this._number == "number") {
+      if (this._number && this._number > 0) {
         handler(this._number);
       }
     });
