@@ -10,6 +10,13 @@ class Controller {
     this.model.bindOnNumberChanged(this.onNumberChanged);
     this.view.bindChangeNumber(this.handleChangeNumber);
 
+    // Change previous input number
+    this.view.bindChangePreviousInputNumber(this.handleChangePreviousInputNumber);
+
+    // Restore previous number
+    this.model.bindOnRestorePreviousInputNumber(this.onRestorePreviousInputNumber);
+    this.view.bindDisplayPreviousInputNumber(this.handleDisplayPreviousInputNumber);
+
     // Change slide
     this.model.bindOnTrackerChanged(this.onTrackerChanged);
     this.view.bindIncrementTracker(this.handleIncrementTracker);
@@ -35,42 +42,26 @@ class Controller {
 
     // Display Today's items popover
     this.onShowTodaysItemsPopoverChanged(this.model.initialTodaysItemsPopover);
-    this.model.bindOnShowTodaysItemsPopoverChanged(
-      this.onShowTodaysItemsPopoverChanged
-    );
-    this.view.bindDisplayTodaysItemsPopover(
-      this.handleDisplayTodaysItemsPopover
-    );
+    this.model.bindOnShowTodaysItemsPopoverChanged(this.onShowTodaysItemsPopoverChanged);
+    this.view.bindDisplayTodaysItemsPopover(this.handleDisplayTodaysItemsPopover);
 
     // Display New items popover
     this.onShowNewItemsPopoverChanged(this.model.initialNewItemsPopover);
-    this.model.bindOnShowNewItemsPopoverChanged(
-      this.onShowNewItemsPopoverChanged
-    );
+    this.model.bindOnShowNewItemsPopoverChanged(this.onShowNewItemsPopoverChanged);
     this.view.bindDisplayNewItemsPopover(this.handleDisplayNewItemsPopover);
 
     // Display Welcome popover
     this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
-    this.model.bindOnShowWelcomePopoverChanged(
-      this.onShowWelcomePopoverChanged
-    );
+    this.model.bindOnShowWelcomePopoverChanged(this.onShowWelcomePopoverChanged);
     this.view.bindDisplayWelcomePopover(this.handleDisplayWelcomePopover);
 
     // Display Congratulations popover
-    this.onShowCongratulationsPopoverChanged(
-      this.model.initialCongratulationsPopover
-    );
-    this.model.bindOnShowCongratulationsPopoverChanged(
-      this.onShowCongratulationsPopoverChanged
-    );
-    this.view.bindDisplayCongratulationsPopover(
-      this.handleDisplayCongratulationsPopover
-    );
+    this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
+    this.model.bindOnShowCongratulationsPopoverChanged(this.onShowCongratulationsPopoverChanged);
+    this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
 
     // Display SRS reset popover
-    this.model.bindOnShowSrsResetPopoverChanged(
-      this.onShowSrsResetPopoverChanged
-    );
+    this.model.bindOnShowSrsResetPopoverChanged(this.onShowSrsResetPopoverChanged);
     this.view.bindDisplaySrsResetPopover(this.handleDisplaySrsResetPopover);
 
     // Display settings sliding menu
@@ -102,6 +93,20 @@ class Controller {
   onNumberChanged = (array, number) => {
     this.view.addTodaysCards(array);
     this.view.displayNewItemsCount(number);
+  };
+
+  // Change previous input number
+  handleChangePreviousInputNumber = (number) => {
+    this.model.changePreviousInputNumber(number);
+  };
+
+  // Restore previous input number
+  handleDisplayPreviousInputNumber = () => {
+    this.model.restorePreviousInputNumber();
+  };
+
+  onRestorePreviousInputNumber = (previousInputNumber) => {
+    this.view.displayPreviousInputNumber(previousInputNumber);
   };
 
   // Change slide handlers

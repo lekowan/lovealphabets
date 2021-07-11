@@ -51,6 +51,7 @@ class Model {
     }
 
     this.number = _number ? _number : this.newItemsArray.length;
+    this.previousInputNumber;
     this.tracker = 0;
     this.show = false;
     this.incorrectArray = [];
@@ -300,6 +301,20 @@ class Model {
 
   bindOnNumberChanged(callback) {
     this.onNumberChanged = callback;
+  }
+
+  // Change previous input number
+  changePreviousInputNumber(currentInputNumber) {
+    this.previousInputNumber = currentInputNumber;
+  }
+
+  // Restore previous input number
+  restorePreviousInputNumber() {
+    this.onRestorePreviousInputNumber(this.previousInputNumber);
+  }
+
+  bindOnRestorePreviousInputNumber(callback) {
+    this.onRestorePreviousInputNumber = callback;
   }
 
   toggleVisibility(boolean) {

@@ -420,6 +420,18 @@ class View {
     });
   }
 
+  bindChangePreviousInputNumber(handler) {
+    this.input.addEventListener("focus", () => {
+      handler(this._number);
+    });
+  }
+
+  displayPreviousInputNumber(previousInputNumber) {
+    if (!this._number) {
+      this.input.value = previousInputNumber;
+    }
+  }
+
   displayNewItemsCount(item) {
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
     if (_number) {
@@ -604,6 +616,12 @@ class View {
     this.todayContinueButton.addEventListener("click", (event) => {
       let boolean = false;
       handler(boolean);
+    });
+  }
+
+  bindDisplayPreviousInputNumber(handler) {
+    this.input.addEventListener("blur", () => {
+      handler();
     });
   }
 
