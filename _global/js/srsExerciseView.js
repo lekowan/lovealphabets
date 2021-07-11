@@ -413,9 +413,7 @@ class View {
       }
     });
 
-    this.newItemsContinueButton.addEventListener("click", (event) => {
-      event.preventDefault();
-
+    this.newItemsContinueButton.addEventListener("click", () => {
       if (this._number && this._number > 0) {
         handler(this._number);
       }
@@ -627,8 +625,8 @@ class View {
       }
     });
 
-    this.newItemsContinueButton.addEventListener("click", (event) => {
-      if (this._number && this._number > 0 && typeof +this._number == "number") {
+    this.newItemsContinueButton.addEventListener("click", () => {
+      if (this._number && this._number > 0) {
         handler(false);
       }
     });
