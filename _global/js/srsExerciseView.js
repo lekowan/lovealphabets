@@ -256,8 +256,13 @@ class View {
     this.input.min = 1;
     this.input.name = "todo";
 
-    // Append the input and submit button to the form
-    this.newItemsForm.append(this.input);
+    // Hidden form submit
+    this.inputSubmit = this.createElement("input");
+    this.inputSubmit.type = "submit";
+    this.inputSubmit.hidden = true;
+
+    // Append the input and hidden submit to the form
+    this.newItemsForm.append(this.input, this.inputSubmit);
     this.newItemsContent.append(this.newItemsContentText, this.newItemsForm);
 
     this.newItemsContainer.append(this.newItemsTitle, this.newItemsContent, this.newItemsContinueContainer);
@@ -402,6 +407,12 @@ class View {
   }
 
   bindChangeNumber(handler) {
+    this.newItemsForm.addEventListener("submit", () => {
+      if (this._number && this._number > 0) {
+        handler(this._number);
+      }
+    });
+
     this.newItemsContinueButton.addEventListener("click", (event) => {
       event.preventDefault();
 
@@ -610,6 +621,12 @@ class View {
   }
 
   bindDisplayNewItemsPopover(handler) {
+    this.newItemsForm.addEventListener("submit", () => {
+      if (this._number && this._number > 0) {
+        handler(false);
+      }
+    });
+
     this.newItemsContinueButton.addEventListener("click", (event) => {
       if (this._number && this._number > 0 && typeof +this._number == "number") {
         handler(false);
