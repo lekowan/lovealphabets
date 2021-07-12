@@ -241,13 +241,10 @@ class Model {
   }
 
   changeNumber(number) {
+    console.log(number);
+
     // Fetch number from localStorage
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
-
-    // If the number hasn't changed, do nothing
-    if (number === _number) return;
-
-    // Fetch progress from localStorage
     let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
 
     // If the number passed is greater than the array
