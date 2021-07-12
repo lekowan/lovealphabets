@@ -329,6 +329,8 @@ class View {
 
     // Append All Popovers
     this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
+
+    this.preventInvalidInputCharacters();
   } // End of constructor
 
   //
@@ -426,6 +428,16 @@ class View {
     if (!this._number) {
       this.input.value = previousInputNumber;
     }
+  }
+
+  preventInvalidInputCharacters() {
+    const invalidCharacters = [".", "-", "+", "e", "E"];
+
+    this.input.addEventListener("keydown", (event) => {
+      if (invalidCharacters.includes(event.key)) {
+        event.preventDefault();
+      }
+    });
   }
 
   displayNewItemsCount(item) {
