@@ -13,6 +13,9 @@ class Controller {
         this.model.bindOnShowChartChanged(this.onShowChartChanged);
         this.view.bindShowChart(this.handleDisplayChart);
 
+        // Display Menu        
+        this.view.bindShowMenu(this.handleDisplayMenu);
+
 
     } // End of constructor
 
@@ -27,6 +30,10 @@ class Controller {
         this.view.addCharacterChart(chart, chartTitle);
     }
 
+    // Handle Congratulations Popover visibility
+    handleDisplayMenu = (boolean) => {
+        this.view.displayMenu(boolean);
+    }
 
 }
 

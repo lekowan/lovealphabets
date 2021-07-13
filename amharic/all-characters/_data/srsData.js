@@ -20,871 +20,888 @@ const exerciseType = "character";
 const welcomeIntro = "In this spaced-repetition practice (SRS), you will study a number of new Amharic characters every day. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 const allSyllableMap = {
-  "ሀ": {
-    "letter": "hä"
+  ሀ: {
+    letter: "hä"
   },
-  "ሁ": {
-    "letter": "hu"
+  ሁ: {
+    letter: "hu"
   },
-  "ሂ": {
-    "letter": "hi"
+  ሂ: {
+    letter: "hi"
   },
-  "ሃ": {
-    "letter": "ha"
+
+  ሃ: {
+    letter: "ha"
   },
-  "ሄ": {
-    "letter": "hē"
+  ሄ: {
+    letter: "hē"
   },
-  "ህ": {
-    "letter": "hə"
+  ህ: {
+    letter: "hə"
   },
-  "ሆ": {
-    "letter": "ho"
+  ሆ: {
+    letter: "ho"
   },
-  "ለ": {
-    "letter": "lä"
+  ለ: {
+    letter: "lä"
   },
-  "ሉ": {
-    "letter": "lu"
+  ሉ: {
+    letter: "lu"
   },
-  "ሊ": {
-    "letter": "li"
+  ሊ: {
+    letter: "li"
   },
-  "ላ": {
-    "letter": "la"
+  ላ: {
+    letter: "la"
   },
-  "ሌ": {
-    "letter": "lē"
+  ሌ: {
+    letter: "lē"
   },
-  "ል": {
-    "letter": "lə"
+  ል: {
+    letter: "lə"
   },
-  "ሎ": {
-    "letter": "lo"
+  ሎ: {
+    letter: "lo"
   },
-  "ሏ": {
-    "letter": "lua"
+  ሏ: {
+    letter: "lua"
   },
-  "ሐ": {
-    "letter": "ḥä"
+  ሐ: {
+    letter: "ḥä"
   },
-  "ሑ": {
-    "letter": "ḥu"
+  ሑ: {
+    letter: "ḥu"
   },
-  "ሒ": {
-    "letter": "ḥi"
+  ሒ: {
+    letter: "ḥi"
   },
-  "ሓ": {
-    "letter": "ḥa"
+  ሓ: {
+    letter: "ḥa"
   },
-  "ሔ": {
-    "letter": "ḥē"
+  ሔ: {
+    letter: "ḥē"
   },
-  "ሕ": {
-    "letter": "ḥə"
+  ሕ: {
+    letter: "ḥə"
   },
-  "ሖ": {
-    "letter": "ḥo"
+  ሖ: {
+    letter: "ḥo"
   },
-  "ሗ": {
-    "letter": "ḥua"
+  ሗ: {
+    letter: "ḥua"
   },
-  "መ": {
-    "letter": "mä"
+  መ: {
+    letter: "mä"
   },
-  "ሙ": {
-    "letter": "mu"
+  ሙ: {
+    letter: "mu"
   },
-  "ሚ": {
-    "letter": "mi"
+  ሚ: {
+    letter: "mi"
   },
-  "ማ": {
-    "letter": "ma"
+  ማ: {
+    letter: "ma"
   },
-  "ሜ": {
-    "letter": "mē"
+  ሜ: {
+    letter: "mē"
   },
-  "ም": {
-    "letter": "mə"
+  ም: {
+    letter: "mə"
   },
-  "ሞ": {
-    "letter": "mo"
+  ሞ: {
+    letter: "mo"
   },
-  "ሟ": {
-    "letter": "mua"
+  ሟ: {
+    letter: "mua"
   },
-  "ሠ": {
-    "letter": "śä"
+  ሠ: {
+    letter: "śä"
   },
-  "ሡ": {
-    "letter": "śu"
+  ሡ: {
+    letter: "śu"
   },
-  "ሢ": {
-    "letter": "śi"
+  ሢ: {
+    letter: "śi"
   },
-  "ሣ": {
-    "letter": "śa"
+  ሣ: {
+    letter: "śa"
   },
-  "ሤ": {
-    "letter": "śē"
+  ሤ: {
+    letter: "śē"
   },
-  "ሥ": {
-    "letter": "śə"
+  ሥ: {
+    letter: "śə"
   },
-  "ሦ": {
-    "letter": "śo"
+  ሦ: {
+    letter: "śo"
   },
-  "ሧ": {
-    "letter": "śua"
+  ሧ: {
+    letter: "śua"
   },
-  "ረ": {
-    "letter": "rä"
+  ረ: {
+    letter: "rä"
   },
-  "ሩ": {
-    "letter": "ru"
+  ሩ: {
+    letter: "ru"
   },
-  "ሪ": {
-    "letter": "ri"
+  ሪ: {
+    letter: "ri"
   },
-  "ራ": {
-    "letter": "ra"
+  ራ: {
+    letter: "ra"
   },
-  "ሬ": {
-    "letter": "rē"
+  ሬ: {
+    letter: "rē"
   },
-  "ር": {
-    "letter": "rə"
+  ር: {
+    letter: "rə"
   },
-  "ሮ": {
-    "letter": "ro"
+  ሮ: {
+    letter: "ro"
   },
-  "ሯ": {
-    "letter": "rua"
+  ሯ: {
+    letter: "rua"
   },
-  "ሰ": {
-    "letter": "sä"
+  ሰ: {
+    letter: "sä"
   },
-  "ሱ": {
-    "letter": "su"
+  ሱ: {
+    letter: "su"
   },
-  "ሲ": {
-    "letter": "si"
+  ሲ: {
+    letter: "si"
   },
-  "ሳ": {
-    "letter": "sa"
+  ሳ: {
+    letter: "sa"
   },
-  "ሴ": {
-    "letter": "sē"
+  ሴ: {
+    letter: "sē"
   },
-  "ስ": {
-    "letter": "sə"
+  ስ: {
+    letter: "sə"
   },
-  "ሶ": {
-    "letter": "so"
+  ሶ: {
+    letter: "so"
   },
-  "ሷ": {
-    "letter": "sua"
+  ሷ: {
+    letter: "sua"
   },
-  "ሸ": {
-    "letter": "šä"
+  ሸ: {
+    letter: "šä"
   },
-  "ሹ": {
-    "letter": "šu"
+  ሹ: {
+    letter: "šu"
   },
-  "ሺ": {
-    "letter": "ši"
+  ሺ: {
+    letter: "ši"
   },
-  "ሻ": {
-    "letter": "ša"
+  ሻ: {
+    letter: "ša"
   },
-  "ሼ": {
-    "letter": "šē"
+  ሼ: {
+    letter: "šē"
   },
-  "ሽ": {
-    "letter": "šə"
+  ሽ: {
+    letter: "šə"
   },
-  "ሾ": {
-    "letter": "šo"
+  ሾ: {
+    letter: "šo"
   },
-  "ሿ": {
-    "letter": "šua"
+  ሿ: {
+    letter: "šua"
   },
-  "ቀ": {
-    "letter": "qä"
+  ቀ: {
+    letter: "qä"
   },
-  "ቁ": {
-    "letter": "qu"
+  ቁ: {
+    letter: "qu"
   },
-  "ቂ": {
-    "letter": "qi"
+  ቂ: {
+    letter: "qi"
   },
-  "ቃ": {
-    "letter": "qa"
+  ቃ: {
+    letter: "qa"
   },
-  "ቄ": {
-    "letter": "qē"
+  ቄ: {
+    letter: "qē"
   },
-  "ቅ": {
-    "letter": "qə"
+  ቅ: {
+    letter: "qə"
   },
-  "ቆ": {
-    "letter": "qo"
+  ቆ: {
+    letter: "qo"
   },
-  "ቈ": {
-    "letter": "que"
+  ቈ: {
+    letter: "que"
   },
-  "ቌ": {
-    "letter": "quē"
+  ቌ: {
+    letter: "quē"
   },
-  "ቊ": {
-    "letter": "qui"
+  ቊ: {
+    letter: "qui"
   },
-  "ቍ": {
-    "letter": "qʷə"
+  ቍ: {
+    letter: "qʷə"
   },
-  "ቋ": {
-    "letter": "qua"
+  ቋ: {
+    letter: "qua"
   },
-  "በ": {
-    "letter": "bä"
+  በ: {
+    letter: "bä"
   },
-  "ቡ": {
-    "letter": "bu"
+  ቡ: {
+    letter: "bu"
   },
-  "ቢ": {
-    "letter": "bi"
+  ቢ: {
+    letter: "bi"
   },
-  "ባ": {
-    "letter": "ba"
+  ባ: {
+    letter: "ba"
   },
-  "ቤ": {
-    "letter": "bē"
+  ቤ: {
+    letter: "bē"
   },
-  "ብ": {
-    "letter": "bə"
+  ብ: {
+    letter: "bə"
   },
-  "ቦ": {
-    "letter": "bo"
+  ቦ: {
+    letter: "bo"
   },
-  "ቧ": {
-    "letter": "bua"
+  ቧ: {
+    letter: "bua"
   },
-  "ቨ": {
-    "letter": "vä"
+  ቨ: {
+    letter: "vä"
   },
-  "ቩ": {
-    "letter": "vu"
+  ቩ: {
+    letter: "vu"
   },
-  "ቪ": {
-    "letter": "vi"
+  ቪ: {
+    letter: "vi"
   },
-  "ቫ": {
-    "letter": "va"
+  ቫ: {
+    letter: "va"
   },
-  "ቬ": {
-    "letter": "vē"
+  ቬ: {
+    letter: "vē"
   },
-  "ቭ": {
-    "letter": "və"
+  ቭ: {
+    letter: "və"
   },
-  "ቮ": {
-    "letter": "vo"
+  ቮ: {
+    letter: "vo"
   },
-  "ቯ": {
-    "letter": "vua"
+  ቯ: {
+    letter: "vua"
   },
-  "ተ": {
-    "letter": "tä"
+  ተ: {
+    letter: "tä"
   },
-  "ቱ": {
-    "letter": "tu"
+  ቱ: {
+    letter: "tu"
   },
-  "ቲ": {
-    "letter": "ti"
+  ቲ: {
+    letter: "ti"
   },
-  "ታ": {
-    "letter": "ta"
+  ታ: {
+    letter: "ta"
   },
-  "ቴ": {
-    "letter": "tē"
+  ቴ: {
+    letter: "tē"
   },
-  "ት": {
-    "letter": "tə"
+  ት: {
+    letter: "tə"
   },
-  "ቶ": {
-    "letter": "to"
+  ቶ: {
+    letter: "to"
   },
-  "ቷ": {
-    "letter": "tua"
+  ቷ: {
+    letter: "tua"
   },
-  "ቸ": {
-    "letter": "čä"
+  ቸ: {
+    letter: "čä"
   },
-  "ቹ": {
-    "letter": "ču"
+  ቹ: {
+    letter: "ču"
   },
-  "ቺ": {
-    "letter": "či"
+  ቺ: {
+    letter: "či"
   },
-  "ቻ": {
-    "letter": "ča"
+  ቻ: {
+    letter: "ča"
   },
-  "ቼ": {
-    "letter": "čē"
+  ቼ: {
+    letter: "čē"
   },
-  "ች": {
-    "letter": "čə"
+  ች: {
+    letter: "čə"
   },
-  "ቾ": {
-    "letter": "čo"
+  ቾ: {
+    letter: "čo"
   },
-  "ቿ": {
-    "letter": "čua"
+  ቿ: {
+    letter: "čua"
   },
-  "ኀ": {
-    "letter": "ḫä"
+  ኀ: {
+    letter: "ḫä"
   },
-  "ኁ": {
-    "letter": "ḫu"
+  ኁ: {
+    letter: "ḫu"
   },
-  "ኂ": {
-    "letter": "ḫi"
+  ኂ: {
+    letter: "ḫi"
   },
-  "ኃ": {
-    "letter": "ḫa"
+  ኃ: {
+    letter: "ḫa"
   },
-  "ኄ": {
-    "letter": "ḫē"
+  ኄ: {
+    letter: "ḫē"
   },
-  "ኅ": {
-    "letter": "ḫə"
+  ኅ: {
+    letter: "ḫə"
   },
-  "ኆ": {
-    "letter": "ḫo"
+  ኆ: {
+    letter: "ḫo"
   },
-  "ኈ": {
-    "letter": "ḫue"
+  ኈ: {
+    letter: "ḫue"
   },
-  "ኌ": {
-    "letter": "ḫuē"
+  ኌ: {
+    letter: "ḫuē"
   },
-  "ኊ": {
-    "letter": "ḫui"
+  ኊ: {
+    letter: "ḫui"
   },
-  "ኍ": {
-    "letter": "ḫʷə"
+  ኍ: {
+    letter: "ḫʷə"
   },
-  "ኋ": {
-    "letter": "ḫua"
+  ኋ: {
+    letter: "ḫua"
   },
-  "ነ": {
-    "letter": "nä"
+  ነ: {
+    letter: "nä"
   },
-  "ኑ": {
-    "letter": "nu"
+  ኑ: {
+    letter: "nu"
   },
-  "ኒ": {
-    "letter": "ni"
+  ኒ: {
+    letter: "ni"
   },
-  "ና": {
-    "letter": "na"
+  ና: {
+    letter: "na"
   },
-  "ኔ": {
-    "letter": "nē"
+  ኔ: {
+    letter: "nē"
   },
-  "ን": {
-    "letter": "nə"
+  ን: {
+    letter: "nə"
   },
-  "ኖ": {
-    "letter": "no"
+  ኖ: {
+    letter: "no"
   },
-  "ኗ": {
-    "letter": "nua"
+  ኗ: {
+    letter: "nua"
   },
-  "ኘ": {
-    "letter": "ñä"
+  ኘ: {
+    letter: "ñä"
   },
-  "ኙ": {
-    "letter": "ñu"
+  ኙ: {
+    letter: "ñu"
   },
-  "ኚ": {
-    "letter": "ñi"
+  ኚ: {
+    letter: "ñi"
   },
-  "ኛ": {
-    "letter": "ña"
+  ኛ: {
+    letter: "ña"
   },
-  "ኜ": {
-    "letter": "ñē"
+  ኜ: {
+    letter: "ñē"
   },
-  "ኝ": {
-    "letter": "ñə"
+  ኝ: {
+    letter: "ñə"
   },
-  "ኞ": {
-    "letter": "ño"
+  ኞ: {
+    letter: "ño"
   },
-  "ኟ": {
-    "letter": "ñua"
+  ኟ: {
+    letter: "ñua"
   },
-  "አ": {
-    "letter": "'ä"
+  አ: {
+    letter: "'ä"
   },
-  "ኡ": {
-    "letter": "'u"
+  ኡ: {
+    letter: "'u"
   },
-  "ኢ": {
-    "letter": "'i"
+  ኢ: {
+    letter: "'i"
   },
-  "ኣ": {
-    "letter": "'a"
+  ኣ: {
+    letter: "'a"
   },
-  "ኤ": {
-    "letter": "'ē"
+  ኤ: {
+    letter: "'ē"
   },
-  "እ": {
-    "letter": "'ə"
+  እ: {
+    letter: "'ə"
   },
-  "ኦ": {
-    "letter": "'o"
+  ኦ: {
+    letter: "'o"
   },
-  "ኧ": {
-    "letter": "'ua"
+  ኧ: {
+    letter: "'ua"
   },
-  "ከ": {
-    "letter": "kä"
+  ከ: {
+    letter: "kä"
   },
-  "ኩ": {
-    "letter": "ku"
+  ኩ: {
+    letter: "ku"
   },
-  "ኪ": {
-    "letter": "ki"
+  ኪ: {
+    letter: "ki"
   },
-  "ካ": {
-    "letter": "ka"
+  ካ: {
+    letter: "ka"
   },
-  "ኬ": {
-    "letter": "kē"
+  ኬ: {
+    letter: "kē"
   },
-  "ክ": {
-    "letter": "kə"
+  ክ: {
+    letter: "kə"
   },
-  "ኮ": {
-    "letter": "ko"
+  ኮ: {
+    letter: "ko"
   },
-  "ኰ": {
-    "letter": "kue"
+  ኰ: {
+    letter: "kue"
   },
-  "ኴ": {
-    "letter": "kuē"
+  ኴ: {
+    letter: "kuē"
   },
-  "ኲ": {
-    "letter": "kui"
+  ኲ: {
+    letter: "kui"
   },
-  "ኵ": {
-    "letter": "kʷə"
+  ኵ: {
+    letter: "kʷə"
   },
-  "ኳ": {
-    "letter": "kua"
+  ኳ: {
+    letter: "kua"
   },
-  "ኸ": {
-    "letter": "xä"
+  ኸ: {
+    letter: "xä"
   },
-  "ኹ": {
-    "letter": "xu"
+  ኹ: {
+    letter: "xu"
   },
-  "ኺ": {
-    "letter": "xi"
+  ኺ: {
+    letter: "xi"
   },
-  "ኻ": {
-    "letter": "xa"
+  ኻ: {
+    letter: "xa"
   },
-  "ኼ": {
-    "letter": "xē"
+  ኼ: {
+    letter: "xē"
   },
-  "ኽ": {
-    "letter": "xə"
+  ኽ: {
+    letter: "xə"
   },
-  "ኾ": {
-    "letter": "xo"
+  ኾ: {
+    letter: "xo"
   },
-  "ዀ": {
-    "letter": "xue"
+  ዀ: {
+    letter: "xue"
   },
-  "ዄ": {
-    "letter": "xuē"
+  ዄ: {
+    letter: "xuē"
   },
-  "ዂ": {
-    "letter": "xui"
+  ዂ: {
+    letter: "xui"
   },
-  "ዅ": {
-    "letter": "xʷə"
+  ዅ: {
+    letter: "xʷə"
   },
-  "ዃ": {
-    "letter": "xua"
+  ዃ: {
+    letter: "xua"
   },
-  "ወ": {
-    "letter": "wä"
+  ወ: {
+    letter: "wä"
   },
-  "ዉ": {
-    "letter": "wu"
+  ዉ: {
+    letter: "wu"
   },
-  "ዊ": {
-    "letter": "wi"
+  ዊ: {
+    letter: "wi"
   },
-  "ዋ": {
-    "letter": "wa"
+  ዋ: {
+    letter: "wa"
   },
-  "ዌ": {
-    "letter": "wē"
+  ዌ: {
+    letter: "wē"
   },
-  "ው": {
-    "letter": "wə"
+  ው: {
+    letter: "wə"
   },
-  "ዎ": {
-    "letter": "wo"
+  ዎ: {
+    letter: "wo"
   },
-  "ዐ": {
-    "letter": "?ä"
+  ዐ: {
+    letter: "?ä"
   },
-  "ዑ": {
-    "letter": "?u"
+  ዑ: {
+    letter: "?u"
   },
-  "ዒ": {
-    "letter": "?i"
+  ዒ: {
+    letter: "?i"
   },
-  "ዓ": {
-    "letter": "?a"
+  ዓ: {
+    letter: "?a"
   },
-  "ዔ": {
-    "letter": "?ē"
+  ዔ: {
+    letter: "?ē"
   },
-  "ዕ": {
-    "letter": "?ə"
+  ዕ: {
+    letter: "?ə"
   },
-  "ዖ": {
-    "letter": "?o"
+  ዖ: {
+    letter: "?o"
   },
-  "ዘ": {
-    "letter": "zä"
+  ዘ: {
+    letter: "zä"
   },
-  "ዙ": {
-    "letter": "zu"
+  ዙ: {
+    letter: "zu"
   },
-  "ዚ": {
-    "letter": "zi"
+  ዚ: {
+    letter: "zi"
   },
-  "ዛ": {
-    "letter": "za"
+  ዛ: {
+    letter: "za"
   },
-  "ዜ": {
-    "letter": "zē"
+  ዜ: {
+    letter: "zē"
   },
-  "ዝ": {
-    "letter": "zə"
+  ዝ: {
+    letter: "zə"
   },
-  "ዞ": {
-    "letter": "zo"
+  ዞ: {
+    letter: "zo"
   },
-  "ዟ": {
-    "letter": "zua"
+  ዟ: {
+    letter: "zua"
   },
-  "ዠ": {
-    "letter": "žä"
+  ዠ: {
+    letter: "žä"
   },
-  "ዡ": {
-    "letter": "žu"
+  ዡ: {
+    letter: "žu"
   },
-  "ዢ": {
-    "letter": "ži"
+  ዢ: {
+    letter: "ži"
   },
-  "ዣ": {
-    "letter": "ža"
+  ዣ: {
+    letter: "ža"
   },
-  "ዤ": {
-    "letter": "žē"
+  ዤ: {
+    letter: "žē"
   },
-  "ዥ": {
-    "letter": "žə"
+  ዥ: {
+    letter: "žə"
   },
-  "ዦ": {
-    "letter": "žo"
+  ዦ: {
+    letter: "žo"
   },
-  "ዧ": {
-    "letter": "žua"
+  ዧ: {
+    letter: "žua"
   },
-  "የ": {
-    "letter": "yä"
+  የ: {
+    letter: "yä"
   },
-  "ዩ": {
-    "letter": "yu"
+  ዩ: {
+    letter: "yu"
   },
-  "ዪ": {
-    "letter": "yi"
+  ዪ: {
+    letter: "yi"
   },
-  "ያ": {
-    "letter": "ya"
+  ያ: {
+    letter: "ya"
   },
-  "ዬ": {
-    "letter": "yē"
+  ዬ: {
+    letter: "yē"
   },
-  "ይ": {
-    "letter": "yə"
+  ይ: {
+    letter: "yə"
   },
-  "ዮ": {
-    "letter": "yo"
+  ዮ: {
+    letter: "yo"
   },
-  "ደ": {
-    "letter": "dä"
+  ደ: {
+    letter: "dä"
   },
-  "ዱ": {
-    "letter": "du"
+  ዱ: {
+    letter: "du"
   },
-  "ዲ": {
-    "letter": "di"
+  ዲ: {
+    letter: "di"
   },
-  "ዳ": {
-    "letter": "da"
+  ዳ: {
+    letter: "da"
   },
-  "ዴ": {
-    "letter": "dē"
+  ዴ: {
+    letter: "dē"
   },
-  "ድ": {
-    "letter": "də"
+  ድ: {
+    letter: "də"
   },
-  "ዶ": {
-    "letter": "do"
+  ዶ: {
+    letter: "do"
   },
-  "ዷ": {
-    "letter": "dua"
+  ዷ: {
+    letter: "dua"
   },
-  "ጀ": {
-    "letter": "ǧä"
+  ጀ: {
+    letter: "ǧä"
   },
-  "ጁ": {
-    "letter": "ǧu"
+  ጁ: {
+    letter: "ǧu"
   },
-  "ጂ": {
-    "letter": "ǧi"
+  ጂ: {
+    letter: "ǧi"
   },
-  "ጃ": {
-    "letter": "ǧa"
+  ጃ: {
+    letter: "ǧa"
   },
-  "ጄ": {
-    "letter": "ǧē"
+  ጄ: {
+    letter: "ǧē"
   },
-  "ጅ": {
-    "letter": "ǧə"
+  ጅ: {
+    letter: "ǧə"
   },
-  "ጆ": {
-    "letter": "ǧo"
+  ጆ: {
+    letter: "ǧo"
   },
-  "ጇ": {
-    "letter": "ǧua"
+  ጇ: {
+    letter: "ǧua"
   },
-  "ገ": {
-    "letter": "gä"
+  ገ: {
+    letter: "gä"
   },
-  "ጉ": {
-    "letter": "gu"
+  ጉ: {
+    letter: "gu"
   },
-  "ጊ": {
-    "letter": "gi"
+  ጊ: {
+    letter: "gi"
   },
-  "ጋ": {
-    "letter": "ga"
+  ጋ: {
+    letter: "ga"
   },
-  "ጌ": {
-    "letter": "gē"
+  ጌ: {
+    letter: "gē"
   },
-  "ግ": {
-    "letter": "gə"
+  ግ: {
+    letter: "gə"
   },
-  "ጎ": {
-    "letter": "go"
+  ጎ: {
+    letter: "go"
   },
-  "ጓ": {
-    "letter": "gua"
+  ጓ: {
+    letter: "gua"
   },
-  "ጔ": {
-    "letter": "guē"
+  ጔ: {
+    letter: "guē"
   },
-  "ጒ": {
-    "letter": "gui"
+  ጒ: {
+    letter: "gui"
   },
-  "ጕ": {
-    "letter": "gʷə"
+  ጕ: {
+    letter: "gʷə"
   },
-  "ጠ": {
-    "letter": "ṭä"
+  ጠ: {
+    letter: "ṭä"
   },
-  "ጡ": {
-    "letter": "ṭu"
+  ጡ: {
+    letter: "ṭu"
   },
-  "ጢ": {
-    "letter": "ṭi"
+  ጢ: {
+    letter: "ṭi"
   },
-  "ጣ": {
-    "letter": "ṭa"
+  ጣ: {
+    letter: "ṭa"
   },
-  "ጤ": {
-    "letter": "ṭē"
+  ጤ: {
+    letter: "ṭē"
   },
-  "ጥ": {
-    "letter": "ṭə"
+  ጥ: {
+    letter: "ṭə"
   },
-  "ጦ": {
-    "letter": "ṭo"
+  ጦ: {
+    letter: "ṭo"
   },
-  "ጧ": {
-    "letter": "ṭua"
+  ጧ: {
+    letter: "ṭua"
   },
-  "ጨ": {
-    "letter": "č̣ä"
+  ጨ: {
+    letter: "č̣ä"
   },
-  "ጩ": {
-    "letter": "č̣u"
+  ጩ: {
+    letter: "č̣u"
   },
-  "ጪ": {
-    "letter": "č̣i"
+  ጪ: {
+    letter: "č̣i"
   },
-  "ጫ": {
-    "letter": "č̣a"
+  ጫ: {
+    letter: "č̣a"
   },
-  "ጬ": {
-    "letter": "č̣ē"
+  ጬ: {
+    letter: "č̣ē"
   },
-  "ጭ": {
-    "letter": "č̣ə"
+  ጭ: {
+    letter: "č̣ə"
   },
-  "ጮ": {
-    "letter": "č̣o"
+  ጮ: {
+    letter: "č̣o"
   },
-  "ጯ": {
-    "letter": "č̣ua"
+  ጯ: {
+    letter: "č̣ua"
   },
-  "ጰ": {
-    "letter": "p̣ä"
+  ጰ: {
+    letter: "p̣ä"
   },
-  "ጱ": {
-    "letter": "p̣u"
+  ጱ: {
+    letter: "p̣u"
   },
-  "ጲ": {
-    "letter": "p̣i"
+  ጲ: {
+    letter: "p̣i"
   },
-  "ጳ": {
-    "letter": "p̣a"
+  ጳ: {
+    letter: "p̣a"
   },
-  "ጴ": {
-    "letter": "p̣ē"
+  ጴ: {
+    letter: "p̣ē"
   },
-  "ጵ": {
-    "letter": "p̣ə"
+  ጵ: {
+    letter: "p̣ə"
   },
-  "ጶ": {
-    "letter": "p̣o"
+  ጶ: {
+    letter: "p̣o"
   },
-  "ጷ": {
-    "letter": "p̣ua"
+  ጷ: {
+    letter: "p̣ua"
   },
-  "ጸ": {
-    "letter": "ṣä"
+  ጸ: {
+    letter: "ṣä"
   },
-  "ጹ": {
-    "letter": "ṣu"
+  ጹ: {
+    letter: "ṣu"
   },
-  "ጺ": {
-    "letter": "ṣi"
+  ጺ: {
+    letter: "ṣi"
   },
-  "ጻ": {
-    "letter": "ṣa"
+  ጻ: {
+    letter: "ṣa"
   },
-  "ጼ": {
-    "letter": "ṣē"
+  ጼ: {
+    letter: "ṣē"
   },
-  "ጽ": {
-    "letter": "ṣə"
+  ጽ: {
+    letter: "ṣə"
   },
-  "ጾ": {
-    "letter": "ṣo"
+  ጾ: {
+    letter: "ṣo"
   },
-  "ጿ": {
-    "letter": "ṣua"
+  ጿ: {
+    letter: "ṣua"
   },
-  "ፀ": {
-    "letter": "ṣ́ä"
+  ፀ: {
+    letter: "ṣ́ä"
   },
-  "ፁ": {
-    "letter": "ṣ́u"
+  ፁ: {
+    letter: "ṣ́u"
   },
-  "ፂ": {
-    "letter": "ṣ́i"
+  ፂ: {
+    letter: "ṣ́i"
   },
-  "ፃ": {
-    "letter": "ṣ́a"
+  ፃ: {
+    letter: "ṣ́a"
   },
-  "ፄ": {
-    "letter": "ṣ́ē"
+  ፄ: {
+    letter: "ṣ́ē"
   },
-  "ፅ": {
-    "letter": "ṣ́ə"
+  ፅ: {
+    letter: "ṣ́ə"
   },
-  "ፆ": {
-    "letter": "ṣ́o"
+  ፆ: {
+    letter: "ṣ́o"
   },
-  "ፈ": {
-    "letter": "fä"
+  ፈ: {
+    letter: "fä"
   },
-  "ፉ": {
-    "letter": "fu"
+  ፉ: {
+    letter: "fu"
   },
-  "ፊ": {
-    "letter": "fi"
+  ፊ: {
+    letter: "fi"
   },
-  "ፋ": {
-    "letter": "fa"
+  ፋ: {
+    letter: "fa"
   },
-  "ፌ": {
-    "letter": "fē"
+  ፌ: {
+    letter: "fē"
   },
-  "ፍ": {
-    "letter": "fə"
+  ፍ: {
+    letter: "fə"
   },
-  "ፎ": {
-    "letter": "fo"
+  ፎ: {
+    letter: "fo"
   },
-  "ፏ": {
-    "letter": "fua"
+  ፏ: {
+    letter: "fua"
   },
-  "ፐ": {
-    "letter": "pä"
+  ፐ: {
+    letter: "pä"
   },
-  "ፑ": {
-    "letter": "pu"
+  ፑ: {
+    letter: "pu"
   },
-  "ፒ": {
-    "letter": "pi"
+  ፒ: {
+    letter: "pi"
   },
-  "ፓ": {
-    "letter": "pa"
+  ፓ: {
+    letter: "pa"
   },
-  "ፔ": {
-    "letter": "pē"
+  ፔ: {
+    letter: "pē"
   },
-  "ፕ": {
-    "letter": "pə"
+  ፕ: {
+    letter: "pə"
   },
-  "ፖ": {
-    "letter": "po"
+  ፖ: {
+    letter: "po"
   },
-  "ፗ": {
-    "letter": "pua"
+  ፗ: {
+    letter: "pua"
   }
-}
+
+};
+
+const reverseMap = {}
+
+const reverseAllSyllableMap = () => {
+
+  for (let item in allSyllableMap) {
+    let letter = allSyllableMap[item].letter;
+    let newLetterObj = { "letter": item };
+    reverseMap[letter] = newLetterObj;
+  }
+};
+
+reverseAllSyllableMap();
 
 
 function translation(n) {
-    if (!n) { n = this; }
-    let letterObj = allSyllableMap[n];
-    return letterObj.letter;
+  if (!n) {
+    n = this;
+  }
+  let letterObj = allSyllableMap[n] || reverseMap[n];
+  return letterObj.letter;
 }
 
 String.prototype.romanize = translation;
