@@ -6,6 +6,7 @@ const inuktitutMap = {
   "ᐆ": { "letter" :  "uu" },
   "ᐊ": { "letter" :  "a" },
   "ᐋ": { "letter" :  "aa" },
+  " ": { "letter" :  " " },
   "ᐯ": { "letter" :  "pai" },
   "ᐱ": { "letter" :  "pi" },
   "ᐲ": { "letter" :  "pii" },
@@ -113,5 +114,5 @@ const inuktitutMap = {
 }
 
 const inuktitutChartData = [
-  { "subtitle": "", "content": inuktitutMap }, 
+  { "subtitle": "", "content": inuktitutMap, "chartColumn": "character-content-8-column"}, 
 ]

@@ -227,8 +227,16 @@ class View {
       subChartTitle.innerHTML = subChart.subtitle;
       this.category.append(subChartTitle);
 
-      let characterColumn = this.createElement("div", "character-content-11-column");
-      console.log(subChart.content);
+      let characterColumn;
+      console.log("fuck", subChart.chartColumn)
+      
+      if(subChart.chartColumn){
+        console.log(subChart.chartColumn)
+        characterColumn = this.createElement("div", subChart.chartColumn);
+      }
+      else {
+        characterColumn = this.createElement("div", "character-content-11-column");  
+      }
 
       let charMap = subChart.content;
       console.log(charMap);

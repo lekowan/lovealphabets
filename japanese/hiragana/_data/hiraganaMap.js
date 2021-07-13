@@ -119,7 +119,7 @@ const hiraganaDiagraphMap = {
 
 
 const japaneseHiraganaChartData = [
-    {"subtitle":"Monograph", "content": hiraganaMonographMap, "column": "character-content-5-column" },
-    {"subtitle":"Diacritic", "content": hiraganaDiacriticMap, "column": "character-content-5-column" },
-    {"subtitle":"Diagraph", "content": hiraganaDiagraphMap, "column": "character-content-3-column" },
+    {"subtitle":"Monograph", "content": hiraganaMonographMap, "chartColumn": "character-content-5-column" },
+    {"subtitle":"Diacritic", "content": hiraganaDiacriticMap, "chartColumn": "character-content-5-column" },
+    {"subtitle":"Diagraph", "content": hiraganaDiagraphMap, "chartColumn": "character-content-3-column" },
 ]

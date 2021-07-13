@@ -119,7 +119,7 @@ var katakanaDiagraphMap = {
 
 
 const japaneseKatakanaChartData = [    
-    { "subtitle": "Monograph", "content": katakanaMonographMap, "column": "character-content-5-column" },
-    { "subtitle": "Diacritic", "content": katakanaDiacriticMap, "column": "character-content-5-column" },
-    { "subtitle": "Diagraph", "content": katakanaDiagraphMap, "column": "character-content-3-column" },
+    { "subtitle": "Monograph", "content": katakanaMonographMap, "chartColumn": "character-content-5-column" },
+    { "subtitle": "Diacritic", "content": katakanaDiacriticMap, "chartColumn": "character-content-5-column" },
+    { "subtitle": "Diagraph", "content": katakanaDiagraphMap, "chartColumn": "character-content-3-column" },
 ]
