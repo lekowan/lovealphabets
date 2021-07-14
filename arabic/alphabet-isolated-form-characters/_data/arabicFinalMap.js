@@ -1,5 +1,5 @@
 const arabicFinalMap = {
-  "أ": {
+  "ا": {
     "letter": "ʾ"
   },
   "ب": {
@@ -87,4 +87,4 @@ const arabicFinalMap = {
 
 const arabicFinalDataArray = Object.keys(arabicFinalMap);
 
-const arabicFinalChartData = [ { "subtitle": "Consonants", "content": arabicFinalMap } ]
+const arabicFinalChartData = [ { "subtitle": "", "content": arabicFinalMap } ]

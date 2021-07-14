@@ -20,7 +20,7 @@ const exerciseType = "character";
 const welcomeIntro = "In this spaced-repetition practice (SRS), you will study a number of new Arabic characters (isolated form only) every day. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 const allSyllableMap = {
-  "أ": {
+  "ا": {
     "letter": "ʾ"
   },
   "ب": {
