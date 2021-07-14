@@ -34,7 +34,7 @@ class Controller {
     this.view.bindProcessGoodAnswer(this.handleProcessGoodAnswer);
 
     // Display initial word + answer
-    this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
+    if (!this.model.showWelcome) this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
 
     // Display next card
     this.model.bindOnNextCardAdded(this.onNextCardAdded);
