@@ -80,8 +80,6 @@ class Model {
       timeStamp = todaysDate;
 
       this.allNewCards = this.newItemsArray.slice(0, this.number);
-      //this.shuffle(newItemsArray.slice(0, this.number))
-      //    .concat(this.dueTodayItemsArray);
 
       _progress.allNewCards = this.allNewCards;
 
@@ -97,18 +95,10 @@ class Model {
         this.newItemsFromPreviousSession = this.newItemsArray.filter((item) => _progress.completedItemsArray.includes(item));
 
         // Create exercise array
-        this.allNewCards = this.newItemsArray
-          .slice(0, this.number)
-          .concat(this.newItemsFromPreviousSession)
-          .concat(this.dueTodayItemsArray)
+        this.allNewCards = this.shuffle(this.newItemsArray.slice(0, this.number))
+          .concat(this.shuffle(this.newItemsFromPreviousSession))
+          .concat(this.shuffle(this.dueTodayItemsArray))
           .filter((item) => item != null);
-
-        /*
-                                 this.allNewCards = this.shuffle(this.newItemsArray.slice(0, this.number))
-                    .concat(this.shuffle(this.newItemsFromPreviousSession))
-                    .concat(this.shuffle(this.dueTodayItemsArray))
-                    .filter(item => item != null);
-                */
 
         // If new items array is empty, hide today's items popover
         if (this.newItemsArray.slice(0, this.number).length == 0) {
@@ -221,23 +211,13 @@ class Model {
 
   // Shuffle Array Function
   shuffle(array) {
-    let currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
+    const shuffledArray = [...array];
 
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const randIndex = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[randIndex]] = [shuffledArray[randIndex], shuffledArray[i]];
     }
-
-    return array;
+    return shuffledArray;
   }
 
   changeNumber(number) {
@@ -254,11 +234,16 @@ class Model {
 
     // If this is the first session ever
     if (!_number) {
-      // Create exercise array
-      this.allNewCards = this.newItemsArray
-        .slice(0, number)
-        .concat(this.dueTodayItemsArray)
-        .filter((item) => item != null);
+      // Create shuffled exercise array
+      this.allNewCards = this.shuffle(
+        this.newItemsArray
+          .slice(0, number)
+          .concat(this.dueTodayItemsArray)
+          .filter((item) => item != null)
+      );
+
+      // Add the first card to the DOM
+      this.addCard();
 
       // Save new array and new number
       _progress.allNewCards = this.allNewCards;
