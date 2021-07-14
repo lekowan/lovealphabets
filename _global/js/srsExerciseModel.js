@@ -221,11 +221,13 @@ class Model {
 
   // Shuffle Array Function
   shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
+    const shuffledArray = [...array];
+
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
       const randIndex = Math.floor(Math.random() * (i + 1));
-      [array[i], array[randIndex]] = [array[randIndex], array[i]];
+      [shuffledArray[i], shuffledArray[randIndex]] = [shuffledArray[randIndex], shuffledArray[i]];
     }
-    return array;
+    return shuffledArray;
   }
 
   changeNumber(number) {
