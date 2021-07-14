@@ -242,6 +242,9 @@ class Model {
           .filter((item) => item != null)
       );
 
+      // Add the first card to the DOM
+      this.addCard();
+
       // Save new array and new number
       _progress.allNewCards = this.allNewCards;
       _number = number;
