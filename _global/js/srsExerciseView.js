@@ -296,8 +296,9 @@ class View {
     this.congratulationsContainer.style.display = "none";
     this.congratulationsTitle = this.createElement("div", "shortcut-title");
     this.congratulationsTitle.textContent = "Congratulations!";
-    this.congratulationsContent = this.createElement("div", "welcome-popover-content");
-    this.congratulationsContent.innerText = "You've completed all of the items that were due today.";
+    this.congratulationsComplete = this.createElement("div", "congratulations-items-complete");
+    this.congratulationsComplete.innerText = "You've completed all of the items that were due today.";
+    this.congratulationsDue = this.createElement("div", "congratulations-revision-due");
     this.congratulationsContinueContainer = this.createElement("div", "continue-popover-container");
     this.congratulationsContinueButton = this.createElement("div", "continue-popover");
     this.congratulationsContinueButton.id = "continue-congratulations";
@@ -312,7 +313,7 @@ class View {
     this.congratulationsCloseButton = this.createElement("div", "popover-close");
     this.congratulationsCloseButton.append(this.congratulationsCloseButtonSVg);
 
-    this.congratulationsContainer.append(this.congratulationsTitle, this.congratulationsContent, this.congratulationsContinueContainer, this.congratulationsCloseButton);
+    this.congratulationsContainer.append(this.congratulationsTitle, this.congratulationsComplete, this.congratulationsDue, this.congratulationsContinueContainer, this.congratulationsCloseButton);
 
     // Create SRS reset popover
     this.srsResetContainer = this.createElement("div", "reset-popover");
@@ -534,6 +535,8 @@ class View {
         this.popoverBackground.style.display = "none";
       }
     } else {
+      this.congratulationsDue.innerText = `Your next revision is due [date].`;
+
       this.congratulationsContainer.style.display = "block";
 
       if (this._isLastPopover == 1) {
