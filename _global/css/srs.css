@@ -1235,6 +1235,31 @@ transform: scale(1.2);
     margin-bottom: 10px;
 }
 
+.welcome-vocab {
+    margin: 24px 0 34px 0;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.today-vocab-card {
+    display: flex;
+    font-size: 15px;
+    padding: 10px 20px;
+    flex-direction: column;
+}
+
+.top-vocab {
+    width: 100%;
+    font-size: 19px;
+}
+
+.bottom-vocab {
+    width: 100%;
+    font-size: 15px;
+}
+
+
 .today-popover-content {
     padding: 0px 35px;
     overflow-y: auto;

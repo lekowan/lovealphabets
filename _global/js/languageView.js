@@ -34,7 +34,7 @@ class View {
     this.languageToolTip = this.createElement("span", "tooltiptext");
     this.languageMenuList = this.createElement("ul", "menu-list");
 
-    const languageList = ["amharic", "arabic", "armenian", "bengali", "cherokee", "georgian", "greek", "hindi", "inuktitut", "japanese", "korean", "russian", "tibetan" ];
+    const languageList = ["amharic", "arabic", "armenian", "bengali", "cherokee", "georgian", "greek", "hindi", "inuktitut", "japanese", "korean", "russian", "tibetan"];
 
     languageList.forEach((item) => {
       let menuItem = this.createElement("li", "menu-list-item");
@@ -207,9 +207,11 @@ class View {
   }
 
   // Generate character chart items
-  addCharacterChart(chart, chartTitle) {
+  addCharacterChart(chart, chartTitle, chartType) {
     this.chartContainer.innerHTML = "";
     // Create close button
+
+    console.log(chart);
 
     this.closeButton.append(this.closeSvg);
     this.chartTitle = this.createElement("div", "chart-title");
@@ -223,35 +225,55 @@ class View {
 
     chart.forEach((subChart) => {
       let subChartTitle = this.createElement("div", "character-title");
-      console.log(subChart.subtitle);
       subChartTitle.innerHTML = subChart.subtitle;
       this.category.append(subChartTitle);
 
       let characterColumn;
-      console.log("fuck", subChart.chartColumn)
-      
-      if(subChart.chartColumn){
-        console.log(subChart.chartColumn)
-        characterColumn = this.createElement("div", subChart.chartColumn);
-      }
-      else {
-        characterColumn = this.createElement("div", "character-content-11-column");  
-      }
-
       let charMap = subChart.content;
-      console.log(charMap);
-      for (let item in charMap) {
-        let charCard = this.createElement("div", "character-card");
-        let top = this.createElement("div", "top");
-        top.innerHTML = item;
-        let bottom = this.createElement("div", "bottom");
-        bottom.innerHTML = charMap[item].letter;
 
-        charCard.append(top, bottom);
-        characterColumn.append(charCard);
+      // If type of exercise is character
+      if (chartType == "character" || chartType == undefined) {
+        // If number of column is set in data file
+        if (subChart.chartColumn) {
+          characterColumn = this.createElement("div", subChart.chartColumn);
+        }
+
+        // If number of column is not set
+        else {
+          characterColumn = this.createElement("div", "character-content-11-column");
+        }
+
+        for (let item in charMap) {
+          let charCard = this.createElement("div", "character-card");
+          let top = this.createElement("div", "top");
+          top.innerHTML = item;
+          let bottom = this.createElement("div", "bottom");
+          bottom.innerHTML = charMap[item].letter;
+
+          charCard.append(top, bottom);
+          characterColumn.append(charCard);
+        }
+
+        this.category.append(characterColumn);
       }
 
-      this.category.append(characterColumn);
+      if (chartType == "vocabulary") {
+
+        characterColumn = this.createElement("div", "character-content-1-column");
+
+        for (let item in charMap) {
+          let charCard = this.createElement("div", "character-card-vocab");
+          let top = this.createElement("div", "top-vocab");
+          top.innerHTML = item;
+          let bottom = this.createElement("div", "bottom-vocab");
+          bottom.innerHTML = charMap[item].letter;
+
+          charCard.append(top, bottom);
+          characterColumn.append(charCard);
+        }
+
+        this.category.append(characterColumn);
+      }
     });
 
     this.chartWrapper.append(this.category);

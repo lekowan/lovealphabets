@@ -272,7 +272,6 @@ class View {
     this.todayTitle = this.createElement("div", "shortcut-title");
     this.todayTitle.textContent = "Today's items";
     this.todayContent = this.createElement("div", "popover-content");
-    this.todayWelcomeCharacter = this.createElement("div", "welcome-character");
     this.todayContinueContainer = this.createElement("div", "continue-popover-container");
     this.todayContinueButton = this.createElement("div", "continue-popover");
     this.todayContinueButton.id = "continue-new-items";
@@ -287,8 +286,7 @@ class View {
     this.todayCloseButton = this.createElement("div", "popover-close");
     this.todayCloseButton.append(this.todayCloseButtonSvg);
 
-    // Append containes
-    this.todayContent.append(this.todayWelcomeCharacter);
+    // Append container
     this.todayContainer.append(this.todayTitle, this.todayContent, this.todayContinueContainer, this.todayCloseButton);
 
     // Congratulations Popover
@@ -344,17 +342,46 @@ class View {
 
   // Generate Today's Items cards and add into Today's Item popover
   addTodaysCards(array) {
-    this.todayWelcomeCharacter.innerHTML = "";
 
-    array.forEach((item) => {
-      let card = this.createElement("div", "today-character-card");
-      let cardTop = this.createElement("div", "top");
-      cardTop.innerHTML = item;
-      let cardBottom = this.createElement("div", "bottom");
-      cardBottom.innerHTML = item.romanize();
-      card.append(cardTop, cardBottom);
-      this.todayWelcomeCharacter.append(card);
-    });
+    this.todayContent.innerHTML = "";
+    
+    if (exerciseType == "character" || exerciseType == undefined ) {
+      this.todayWelcomeCharacter = this.createElement("div", "welcome-character");
+
+      array.forEach((item) => {
+
+        let card = this.createElement("div", "today-character-card");
+        let cardTop = this.createElement("div", "top");
+        cardTop.innerHTML = item;
+        let cardBottom = this.createElement("div", "bottom");
+        cardBottom.innerHTML = item.romanize();
+        card.append(cardTop, cardBottom);
+        this.todayWelcomeCharacter.append(card);
+        
+      });
+
+    this.todayContent.append(this.todayWelcomeCharacter);
+
+    }
+
+    else if (exerciseType == "vocabulary") {
+     this.todayWelcomeVocab = this.createElement("div", "welcome-vocab");
+
+      array.forEach((item) => {
+
+        let card = this.createElement("div", "today-vocab-card");
+        let cardTop = this.createElement("div", "top-vocab");
+        cardTop.innerHTML = item;
+        let cardBottom = this.createElement("div", "bottom-vocab");
+        cardBottom.innerHTML = item.romanize();
+        card.append(cardTop, cardBottom);
+        this.todayWelcomeVocab.append(card);
+
+      });
+
+    this.todayContent.append(this.todayWelcomeVocab);
+    }
+
   }
 
   addNextCard(card) {

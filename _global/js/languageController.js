@@ -25,9 +25,9 @@ class Controller {
         this.model.showChart(boolean, chart);
     }
 
-    onShowChartChanged = (boolean, chart, chartTitle) => {
+    onShowChartChanged = (boolean, chart, chartTitle, chartType) => {
         this.view.displayChart(boolean);
-        this.view.addCharacterChart(chart, chartTitle);
+        this.view.addCharacterChart(chart, chartTitle, chartType);
     }
 
     // Handle Congratulations Popover visibility

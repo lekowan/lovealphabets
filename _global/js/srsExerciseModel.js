@@ -95,10 +95,17 @@ class Model {
         this.newItemsFromPreviousSession = this.newItemsArray.filter((item) => _progress.completedItemsArray.includes(item));
 
         // Create exercise array
+        this.allNewCards = this.newItemsArray.slice(0, this.number)
+          .concat(this.shuffle(this.newItemsFromPreviousSession))
+          .concat(this.shuffle(this.dueTodayItemsArray))
+          .filter((item) => item != null);
+
+        /*
         this.allNewCards = this.shuffle(this.newItemsArray.slice(0, this.number))
           .concat(this.shuffle(this.newItemsFromPreviousSession))
           .concat(this.shuffle(this.dueTodayItemsArray))
           .filter((item) => item != null);
+        */
 
         // If new items array is empty, hide today's items popover
         if (this.newItemsArray.slice(0, this.number).length == 0) {
@@ -235,12 +242,19 @@ class Model {
     // If this is the first session ever
     if (!_number) {
       // Create shuffled exercise array
+      this.allNewCards = this.newItemsArray
+          .slice(0, number)
+          .concat(this.dueTodayItemsArray)
+          .filter((item) => item != null);
+
+      /*
       this.allNewCards = this.shuffle(
         this.newItemsArray
           .slice(0, number)
           .concat(this.dueTodayItemsArray)
           .filter((item) => item != null)
       );
+      */
 
       // Add the first card to the DOM
       this.addCard();
