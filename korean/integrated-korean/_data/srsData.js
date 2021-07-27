@@ -19,7 +19,7 @@ const ctaClass = "pink-cta";
 const exerciseType = "vocabulary";
 
 // Welcome Popover Content
-const welcomeIntro = "In this spaced-repetition practice (SRS), you will study a number of new Korean characters every day. \n \n After your first session, you will also revise learned characters from previous sessions";
+const welcomeIntro = "In this spaced-repetition practice (SRS), you will study new words and expressions from the Integrated Korean (Beginning 1) textbook. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 const allSyllableMap = {
   "1학년": {

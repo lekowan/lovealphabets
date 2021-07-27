@@ -18,7 +18,7 @@ const ctaClass = "pink-cta";
 // Exercise Type (character, vocabulary )
 const exerciseType = "vocabulary";
 
-const welcomeIntro = "In this spaced-repetition practice (SRS), you will study a number of new Cyrillic letters every day. \n \n After your first session, you will also revise learned characters from previous sessions";
+const welcomeIntro = "In this spaced-repetition practice (SRS), you will study new words and expressions from the New Penguin Russian textbook everyday. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 const allSyllableMap = {
   "англичанка": {
