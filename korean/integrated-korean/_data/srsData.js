@@ -131,7 +131,7 @@ const allSyllableMap = {
     "letter": "teacher"
   },
   "씨": {
-    "letter": "(attached to a person's name for courtesy)"
+    "letter": "attached to a person's name for courtesy"
   },
   "영국": {
     "letter": "United Kingdom"

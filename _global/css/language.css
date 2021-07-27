@@ -1364,9 +1364,6 @@ p.learn-how {
 
 .character-content-1-column {
     margin: 24px 0 34px 0;
-    display: grid;
-    grid-gap: 0px;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 
