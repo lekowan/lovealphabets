@@ -15,7 +15,10 @@ const loadergradientBackground = "pink-loader-background";
 // CTA Background
 const ctaClass = "pink-cta";
 
-const koreanIntro = "In this spaced-repetition practice (SRS), you will study the Native-Korean numerals. \n \n After your first session, you will also revise learned characters from previous sessions";
+// Exercise Type (character, vocabulary )
+const exerciseType = "vocabulary";
+
+const welcomeIntro = "In this spaced-repetition practice (SRS), you will study the Native-Korean numerals. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 const allSyllableMap = {
     "하나": {
