@@ -15,112 +15,89 @@ const loadergradientBackground = "pink-loader-background";
 // CTA Background
 const ctaClass = "pink-cta";
 
-// Exercise Type (character, vocabulary )
-const exerciseType = "vocabulary";
-
-// Welcome Popover Content
-const welcomeIntro = "In this spaced-repetition practice (SRS), you will study new words and expressions from the Integrated Korean (Beginning 1) textbook. \n \n After your first session, you will also revise learned characters from previous sessions";
-
+const koreanIntro = "In this spaced-repetition practice (SRS), you will study the Sino-Korean numerals.";
 
 const allSyllableMap = {
- "영, 령, 공": {
-    "letter": "0"
-  },
-  "일": {
+    "하나": {
     "letter": "1"
   },
-  "이": {
+  "둘": {
     "letter": "2"
   },
-  "삼": {
+  "셋": {
     "letter": "3"
   },
-  "사": {
+  "넷": {
     "letter": "4"
   },
-  "오": {
+  "다섯": {
     "letter": "5"
   },
-  "육, 륙": {
+  "여섯": {
     "letter": "6"
   },
-  "칠": {
+  "일곱": {
     "letter": "7"
   },
-  "팔": {
+  "여덟": {
     "letter": "8"
   },
-  "구": {
+  "아홉": {
     "letter": "9"
   },
-  "십": {
+  "열": {
     "letter": "10"
   },
-  "십일": {
+  "열하나": {
     "letter": "11"
   },
-  "십이": {
+  "열둘": {
     "letter": "12"
   },
-  "십삼": {
+  "열셋": {
     "letter": "13"
   },
-  "십사": {
+  "열넷": {
     "letter": "14"
   },
-  "십오": {
+  "열다섯": {
     "letter": "15"
   },
-  "십육, 십륙": {
+  "열여섯": {
     "letter": "16"
   },
-  "십칠": {
+  "열일곱": {
     "letter": "17"
   },
-  "십팔": {
+  "열여덟": {
     "letter": "18"
   },
-  "십구": {
+  "열아홉": {
     "letter": "19"
   },
-  "이십": {
+  "스물": {
     "letter": "20"
   },
-  "삼십": {
+  "서른": {
     "letter": "30"
   },
-  "사십": {
+  "마흔": {
     "letter": "40"
   },
-  "오십": {
+  "쉰": {
     "letter": "50"
   },
-  "육십": {
+  "예순": {
     "letter": "60"
   },
-  "륙십": {
-    "letter": "60"
-  },
-  "칠십": {
+  "일흔": {
     "letter": "70"
   },
-  "팔십": {
+  "여든": {
     "letter": "80"
   },
-  "구십": {
+  "아흔": {
     "letter": "90"
-  },
-  "백": {
-    "letter": "100"
-  },
-  "천": {
-    "letter": "1,000"
-  },
-  "만": {
-    "letter": "10,000"
-  },
-  "억": {
-    "letter": "100,000,000"
   }
 }
 

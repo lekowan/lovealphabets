@@ -1,103 +1,108 @@
+// Exercise Type (character, vocabulary )
+const sinoKoreanChartType = "vocabulary";
+
 const sinoKoreanMap =  {
- "0": {
-   "letter":"영, 령, 공"
+  "영, 령, 공": {
+    "letter": "0"
   },
- "1": {
-   "letter":"일"
+  "일": {
+    "letter": "1"
   },
- "2": {
-   "letter":"이"
+  "이": {
+    "letter": "2"
   },
- "3": {
-   "letter":"삼"
+  "삼": {
+    "letter": "3"
   },
- "4": {
-   "letter":"사"
+  "사": {
+    "letter": "4"
   },
- "5": {
-   "letter":"오"
+  "오": {
+    "letter": "5"
   },
- "6": {
-   "letter":"육, 륙"
+  "육, 륙": {
+    "letter": "6"
   },
- "7": {
-   "letter":"칠"
+  "칠": {
+    "letter": "7"
   },
- "8": {
-   "letter":"팔"
+  "팔": {
+    "letter": "8"
   },
- "9": {
-   "letter":"구"
+  "구": {
+    "letter": "9"
   },
- "10": {
-   "letter":"십"
+  "십": {
+    "letter": "10"
   },
- "11": {
-   "letter":"십일"
+  "십일": {
+    "letter": "11"
   },
- "12": {
-   "letter":"십이"
+  "십이": {
+    "letter": "12"
   },
- "13": {
-   "letter":"십삼"
+  "십삼": {
+    "letter": "13"
   },
- "14": {
-   "letter":"십사"
+  "십사": {
+    "letter": "14"
   },
- "15": {
-   "letter":"십오"
+  "십오": {
+    "letter": "15"
   },
- "16": {
-   "letter":"십육, 십륙"
+  "십육, 십륙": {
+    "letter": "16"
   },
- "17": {
-   "letter":"십칠"
+  "십칠": {
+    "letter": "17"
   },
- "18": {
-   "letter":"십팔"
+  "십팔": {
+    "letter": "18"
   },
- "19": {
-   "letter":"십구"
+  "십구": {
+    "letter": "19"
   },
- "20": {
-   "letter":"이십"
+  "이십": {
+    "letter": "20"
   },
- "30": {
-   "letter":"삼십"
+  "삼십": {
+    "letter": "30"
   },
- "40": {
-   "letter":"사십"
+  "사십": {
+    "letter": "40"
   },
- "50": {
-   "letter":"오십"
+  "오십": {
+    "letter": "50"
   },
- "60": {
-   "letter":"륙십"
+  "육십": {
+    "letter": "60"
   },
- "70": {
-   "letter":"칠십"
+  "륙십": {
+    "letter": "60"
   },
- "80": {
-   "letter":"팔십"
+  "칠십": {
+    "letter": "70"
   },
- "90": {
-   "letter":"구십"
+  "팔십": {
+    "letter": "80"
   },
- "100": {
-   "letter":"백"
+  "구십": {
+    "letter": "90"
   },
- "1,000": {
-   "letter":"천"
+  "백": {
+    "letter": "100"
   },
- "10,000": {
-   "letter":"만"
+  "천": {
+    "letter": "1,000"
   },
- "100,000,000": {
-   "letter":"억"
+  "만": {
+    "letter": "10,000"
+  },
+  "억": {
+    "letter": "100,000,000"
   }
 }
-const sinoKoreanDataArray = Object.keys(sinoKoreanMap);
 
-const sinoKoreanChartData = {
- "1": {"content": sinoKoreanDataArray },
-}
+const sinoKoreanChartData = [
+ {subtitle: "", content: sinoKoreanMap },
+]

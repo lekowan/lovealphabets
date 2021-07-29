@@ -23,220 +23,187 @@ const welcomeIntro = "In this spaced-repetition practice (SRS), you will study n
 
 const allSyllableMap = {
   "1학년": {
-    "letter": "freshman"
+    letter: "freshman"
   },
   "2학년": {
-    "letter": "sophomore"
+    letter: "sophomore"
   },
   "3학년": {
-    "letter": "junior"
+    letter: "junior"
   },
   "4학년": {
-    "letter": "senior"
+    letter: "senior"
   },
-  "과": {
-    "letter": "lesson, chapter"
+  과: {
+    letter: "lesson, chapter"
   },
-  "대학생": {
-    "letter": "college student"
+  대학생: {
+    letter: "college student"
   },
-  "미국": {
-    "letter": "the United States"
+  미국: {
+    letter: "the United States"
   },
-  "사람": {
-    "letter": "person, people"
+  사람: {
+    letter: "person, people"
   },
-  "인사": {
-    "letter": "greeting"
+  인사: {
+    letter: "greeting"
   },
-  "학년": {
-    "letter": "school year"
+  학년: {
+    letter: "school year"
   },
-  "학생": {
-    "letter": "student"
+  학생: {
+    letter: "student"
   },
-  "한국": {
-    "letter": "Korea"
+  한국: {
+    letter: "Korea"
   },
-  "나": {
-    "letter": "I (plain)"
+  나: {
+    letter: "I (plain)"
   },
-  "저": {
-    "letter": "that (over there)"
+  저: {
+    letter: "that (over there)"
   },
-  "나는": {
-    "letter": "as for me (plain)"
+  나는: {
+    letter: "as for me (plain)"
   },
-  "저는": {
-    "letter": "as for me (humble)"
+  저는: {
+    letter: "as for me (humble)"
   },
-  "나도": {
-    "letter": "I also (plain)"
+  나도: {
+    letter: "I also (plain)"
   },
-  "저도": {
-    "letter": "I also (humble)"
+  저도: {
+    letter: "I also (humble)"
   },
-  "영": {
-    "letter": "0 (Sino-Korean)"
+  일: {
+    letter: "day"
   },
-  "공": {
-    "letter": "0 (Sino-Korean)"
-  },
-  "일": {
-    "letter": "day"
-  },
-  "이": {
-    "letter": "this"
-  },
-  "삼": {
-    "letter": "3 (Sino-Korean)"
-  },
-  "사": {
-    "letter": "4 (Sino-Korean)"
-  },
-  "오": {
-    "letter": "5 (Sino-Korean)"
-  },
-  "육": {
-    "letter": "6 (Sino-Korean)"
-  },
-  "칠": {
-    "letter": "7 (Sino-Korean)"
-  },
-  "팔": {
-    "letter": "8 (Sino-Korean)"
-  },
-  "구": {
-    "letter": "9 (Sino-Korean)"
-  },
-  "심": {
-    "letter": "10 (Sino-Korean)"
+  이: {
+    letter: "this"
   },
   "안녕하다 (안녕하세요)": {
-    "letter": "to be well ('Hi', 'Hello', 'How are you?')"
+    letter: "to be well ('Hi', 'Hello', 'How are you?')"
   },
   "이다 (이에요, 여요)": {
-    "letter": "to be (equation)"
+    letter: "to be (equation)"
   },
-  "도": {
-    "letter": "also, too"
+  도: {
+    letter: "also, too"
   },
-  "은": {
-    "letter": "topic particle ('as for')"
+  은: {
+    letter: "topic particle ('as for')"
   },
-  "는": {
-    "letter": "topic particle ('as for')"
+  는: {
+    letter: "topic particle ('as for')"
   },
-  "선생님": {
-    "letter": "teacher"
+  선생님: {
+    letter: "teacher"
   },
-  "씨": {
-    "letter": "attached to a person's name for courtesy"
+  씨: {
+    letter: "(attached to a person's name for courtesy)"
   },
-  "영국": {
-    "letter": "United Kingdom"
+  영국: {
+    letter: "United Kingdom"
   },
-  "영어": {
-    "letter": "the English language"
+  영어: {
+    letter: "the English language"
   },
-  "이름": {
-    "letter": "name"
+  이름: {
+    letter: "name"
   },
-  "일본": {
-    "letter": "Japan"
+  일본: {
+    letter: "Japan"
   },
-  "중국": {
-    "letter": "China"
+  중국: {
+    letter: "China"
   },
-  "클래스": {
-    "letter": "class"
+  클래스: {
+    letter: "class"
   },
-  "한국어": {
-    "letter": "the Korean language"
+  한국어: {
+    letter: "the Korean language"
   },
-  "한국말": {
-    "letter": "the Korean language"
+  한국말: {
+    letter: "the Korean language"
   },
-  "네": {
-    "letter": "yes, I see, okay"
+  네: {
+    letter: "yes, I see, okay"
   },
-  "아니요": {
-    "letter": "no"
+  아니요: {
+    letter: "no"
   },
-  "가": {
-    "letter": "(subject particle)"
+  가: {
+    letter: "(subject particle)"
   },
   "그렇다 (그래요)": {
-    "letter": "to be so ('Is that right?')"
+    letter: "to be so ('Is that right?')"
   },
   "반갑다 (반갑습니다)": {
-    "letter": "to be glad ('Glad to meet you')"
+    letter: "to be glad ('Glad to meet you')"
   },
   "아니다 (아니에요)": {
-    "letter": "to not be (negative equation)"
+    letter: "to not be (negative equation)"
   },
-  "뭐": {
-    "letter": "what"
+  뭐: {
+    letter: "what"
   },
-  "무넛": {
-    "letter": "what"
+  무넛: {
+    letter: "what"
   },
-  "아": {
-    "letter": "oh"
+  아: {
+    letter: "oh"
   },
-  "프랑스": {
-    "letter": "France"
+  프랑스: {
+    letter: "France"
   },
-  "스페인": {
-    "letter": "Spain"
+  스페인: {
+    letter: "Spain"
   },
-  "러시아": {
-    "letter": "Russia"
+  러시아: {
+    letter: "Russia"
   },
-  "일본어": {
-    "letter": "Japanese (language)"
+  일본어: {
+    letter: "Japanese (language)"
   },
-  "일어": {
-    "letter": "Japanese (language)"
+  일어: {
+    letter: "Japanese (language)"
   },
-  "중국어": {
-    "letter": "Chinese (language)"
+  중국어: {
+    letter: "Chinese (language)"
   },
-  "프랑스어": {
-    "letter": "French (language)"
+  프랑스어: {
+    letter: "French (language)"
   },
-  "스페인어": {
-    "letter": "Spanish (language)"
+  스페인어: {
+    letter: "Spanish (language)"
   },
-  "러시아어": {
-    "letter": "Russian (language)"
+  러시아어: {
+    letter: "Russian (language)"
   },
-  "한국사람": {
-    "letter": "Korean (person)"
+  한국사람: {
+    letter: "Korean (person)"
   },
-  "미국사람": {
-    "letter": "American (person)"
+  미국사람: {
+    letter: "American (person)"
   },
-  "영국사람": {
-    "letter": "British (person)"
+  영국사람: {
+    letter: "British (person)"
   },
-  "일본사람": {
-    "letter": "Japanese (person)"
+  일본사람: {
+    letter: "Japanese (person)"
   },
-  "중국사람": {
-    "letter": "Chinese (person)"
+  중국사람: {
+    letter: "Chinese (person)"
   },
-  "프랑스사람": {
-    "letter": "French (person)"
+  프랑스사람: {
+    letter: "French (person)"
   },
-  "스페인사람": {
-    "letter": "Spanish (person)"
+  스페인사람: {
+    letter: "Spanish (person)"
   },
-  "러시아사람": {
-    "letter": "Russian (person)"
-  },
-  "": {
-    "letter": ""
+  러시아사람: {
+    letter: "Russian (person)"
   },
   "가방": {
     "letter": "bag"
