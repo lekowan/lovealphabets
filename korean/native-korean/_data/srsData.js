@@ -1,5 +1,5 @@
 // Configuration
-const localStorageKey = "korean" + "SinoKorean" + "Srs";
+const localStorageKey = "korean" + "NativeKorean" + "Srs";
 
 // Display level
 const displayLevel = "SRS Practice";
@@ -15,7 +15,7 @@ const loadergradientBackground = "pink-loader-background";
 // CTA Background
 const ctaClass = "pink-cta";
 
-const koreanIntro = "In this spaced-repetition practice (SRS), you will study the Sino-Korean numerals.";
+const koreanIntro = "In this spaced-repetition practice (SRS), you will study the Native-Korean numerals. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 const allSyllableMap = {
     "하나": {
