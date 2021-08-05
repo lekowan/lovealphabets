@@ -56,41 +56,11 @@ const integratedKorean1 = {
   저도: {
     letter: "I also (humble)"
   },
-  영: {
-    letter: "0 (Sino-Korean)"
-  },
-  공: {
-    letter: "0 (Sino-Korean)"
-  },
   일: {
     letter: "day"
   },
   이: {
     letter: "this"
-  },
-  삼: {
-    letter: "3 (Sino-Korean)"
-  },
-  사: {
-    letter: "4 (Sino-Korean)"
-  },
-  오: {
-    letter: "5 (Sino-Korean)"
-  },
-  육: {
-    letter: "6 (Sino-Korean)"
-  },
-  칠: {
-    letter: "7 (Sino-Korean)"
-  },
-  팔: {
-    letter: "8 (Sino-Korean)"
-  },
-  구: {
-    letter: "9 (Sino-Korean)"
-  },
-  심: {
-    letter: "10 (Sino-Korean)"
   },
   "안녕하다 (안녕하세요)": {
     letter: "to be well ('Hi', 'Hello', 'How are you?')"
@@ -215,9 +185,6 @@ const integratedKorean1 = {
   러시아사람: {
     letter: "Russian (person)"
   },
-  "": {
-    letter: ""
-  }
 };
 
 const integratedKorean2 = {
