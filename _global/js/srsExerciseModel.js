@@ -377,7 +377,14 @@ class Model {
     let word = this.allNewCards[this.tracker];
 
     // If speechSynthesis in user's browser and activateSpeech is true
-    if (activateSpeech && "speechSynthesis" in window) {
+    if (activateSpeech && "speechSynthesis" in window && language == "zh-CN") {
+      let audioWord = new SpeechSynthesisUtterance(word.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
+      audioWord.lang = language;
+      window.speechSynthesis.speak(audioWord);
+    }
+
+    // If speechSynthesis in user's browser and activateSpeech is true
+    if (activateSpeech && "speechSynthesis" in window && language != "zh-CN") {
       let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
       audioWord.lang = language;
       window.speechSynthesis.speak(audioWord);
