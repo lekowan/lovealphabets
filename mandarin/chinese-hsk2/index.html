@@ -19,17 +19,74 @@
     <link rel="stylesheet" href="../../_global/css/onboarding.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     
     <script src="_data/srsData.js"></script>
     <script src="../../_global/js/srsEngine.js"></script>
     
     <title>Mandarin Chinese HSK2 SRS Practice | lovealphabets</title>
+
+     <style>
+    .word {
+        font-size: 55px;  
+        height: 200px;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        border: none;
+        box-shadow: none;
+    }
+
+    .pinyin {
+        font-size: 16px;
+        font-family: 'Noto Serif', serif !important;
+        margin-top: 5px;
+        font-family: 300;
+    }
+
+    .word-item {
+        margin: 0;
+        font-family: 'Noto Sans SC', sans-serif !important;
+        font-weight: 500;
+    }
+
+    .show-answer {
+        position: inherit;
+        bottom: 0;
+        font-size: 18px;
+        margin-top: 30px;
+        font-weight: 400;
+        font-family: 'Noto Serif', serif !important;
+    }
+    .counter {
+        font-size: 10px;
+    }
+    #show-button {
+        background: #18093e;
+        color: #fff;
+    }
+
+    .bad {
+        background: rgb(255, 189, 226);
+        color: #4f213a;
+    }
+
+    .good {
+        background: rgb(189, 255, 240);
+        color: #32574f;
+    }
+
+    </style>
+
 </head>
 
 <body id="root">
 
 <script src="../../_global/js/srsExerciseModel.js"></script>
-<script src="../../_global/js/srsExerciseView.js"></script>
+<script src="../../_global/js/srsExerciseViewChinese.js"></script>
 <script src="../../_global/js/srsExerciseController.js"></script>
 <script>
     

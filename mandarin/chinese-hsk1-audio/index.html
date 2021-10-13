@@ -19,11 +19,14 @@
     <link rel="stylesheet" href="../../_global/css/onboarding.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     
     <script src="_data/srsData.js"></script>
     <script src="../../_global/js/srsEngine.js"></script>
     
-    <title>Korean Declarative Present (Informal High) Verbs SRS Practice | lovealphabets</title>
+    <title>Mandarin Chinese HSK1 SRS Practice | lovealphabets</title>
 
     <style>
     .word {
@@ -39,28 +42,32 @@
 
     .pinyin {
         font-size: 16px;
+        font-family: 'Noto Serif', serif !important;
         margin-top: 5px;
+        font-family: 300;
     }
 
     .word-item {
         margin: 0;
+        font-family: 'Noto Sans SC', sans-serif !important;
         font-weight: 500;
     }
 
     .show-answer {
         position: inherit;
         bottom: 0;
-        font-size: 34px;
+        font-size: 18px;
         margin-top: 30px;
+        font-weight: 400;
+        font-family: 'Noto Serif', serif !important;
     }
-
     .counter {
         font-size: 10px;
     }
-    
     #show-button {
         background: #18093e;
         color: #fff;
+        background: linear-gradient(70deg, #18093e 0%, #321679 100%);
     }
 
     .bad {
@@ -74,12 +81,13 @@
     }
 
     </style>
+
 </head>
 
 <body id="root">
 
-<script src="../../_global/js/srsExerciseModel.js"></script>
-<script src="../../_global/js/srsExerciseViewChinese.js"></script>
+<script src="../../_global/js/srsExerciseModelChineseAudio.js"></script>
+<script src="../../_global/js/srsExerciseViewChineseAudio.js"></script>
 <script src="../../_global/js/srsExerciseController.js"></script>
 <script>
     
@@ -89,6 +97,8 @@ document.addEventListener("DOMContentLoaded", function() {
         overlay.style.display = "none";
     }, 750);
 })
+
+
 </script>
 
 </body>

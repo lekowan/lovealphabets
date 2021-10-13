@@ -13,7 +13,7 @@ class View {
 
     // Create header
     this.header = this.createElement("div", "header");
-    this.header.classList.add("pink-background");
+    this.header.classList.add("purple-background");
 
     // Create generic close button
     let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -47,7 +47,7 @@ class View {
 
     // Append close button + title to header
     this.header.append(this.languagePractice, this.closeButton);
-
+    
     // Create slider container
     this.slider = this.createElement("div", "slider");
 
@@ -55,6 +55,10 @@ class View {
     this.slides = this.createElement("div", "slides");
     this.slider.append(this.slides);
 
+    // Create answer div but don't append it
+    this.answer = this.createElement("div", "show-answer");
+    this.answer.style.display = "none";
+    
     // Create button area
     this.buttonArea = this.createElement("div", "button-area");
 
@@ -69,7 +73,7 @@ class View {
     this.badButton.style.display = "none";
 
     // Create Show button
-    this.showButton = this.createElement("button", "pink-background");
+    this.showButton = this.createElement("button");
     this.showButton.id = "show-button";
     this.showButton.innerHTML = "SHOW";
 
@@ -78,12 +82,8 @@ class View {
     this.container.append(this.slider);
     this.bodyContent.append(this.container);
 
-    // Create word div
-    this.answer = this.createElement("div", "show-answer");
-    this.answer.style.display = "none";
-
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.bodyContent, this.buttonArea, this.answer);
+    this.content.append(this.header, this.bodyContent, this.buttonArea);
 
     // Append content div to app
     this.app.append(this.content);
@@ -217,7 +217,7 @@ class View {
     this.welcomeContinueContainer = this.createElement("div", "continue-popover-container");
     this.welcomeContinueButton = this.createElement("div", "continue-popover");
     this.welcomeContinueButton.id = "continue-welcome";
-    this.welcomeContinueButton.classList.add("pink-background");
+    this.welcomeContinueButton.classList.add("purple-background");
     this.welcomeContinueButton.textContent = "CONTINUE";
     this.welcomeContinueContainer.append(this.welcomeContinueButton);
 
@@ -241,7 +241,7 @@ class View {
     this.newItemsContinueContainer = this.createElement("div", "continue-popover-container");
     this.newItemsContinueButton = this.createElement("div", "continue-popover");
     this.newItemsContinueButton.id = "continue-new-items";
-    this.newItemsContinueButton.classList.add("pink-background");
+    this.newItemsContinueButton.classList.add("purple-background");
     this.newItemsContinueButton.textContent = "CONTINUE";
     this.newItemsContinueContainer.append(this.newItemsContinueButton);
 
@@ -275,7 +275,7 @@ class View {
     this.todayContinueContainer = this.createElement("div", "continue-popover-container");
     this.todayContinueButton = this.createElement("div", "continue-popover");
     this.todayContinueButton.id = "continue-new-items";
-    this.todayContinueButton.classList.add("pink-background");
+    this.todayContinueButton.classList.add("purple-background");
     this.todayContinueButton.textContent = "CONTINUE";
     this.todayContinueContainer.append(this.todayContinueButton);
 
@@ -299,7 +299,7 @@ class View {
     this.congratulationsContinueContainer = this.createElement("div", "continue-popover-container");
     this.congratulationsContinueButton = this.createElement("div", "continue-popover");
     this.congratulationsContinueButton.id = "continue-congratulations";
-    this.congratulationsContinueButton.classList.add("pink-background");
+    this.congratulationsContinueButton.classList.add("purple-background");
     this.congratulationsContinueButton.textContent = "FINISH";
     this.congratulationsContinueContainer.append(this.congratulationsContinueButton);
 
@@ -329,6 +329,9 @@ class View {
     this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
 
     this.preventInvalidInputCharacters();
+
+  
+
   } // End of constructor
 
   //
@@ -399,7 +402,20 @@ class View {
         //nextCard.append(grammarInfo);
       }
 
-      nextCard.textContent = card;
+      let nextCardPItem = this.createElement("p", "word-item");
+      nextCardPItem.textContent = card;
+
+      let nextCardPTrans = this.createElement("p", "pinyin");
+
+      if(typeof transliteration === "function"){
+        nextCardPTrans.textContent = "[" + card.transliterate() + "]";
+      }
+
+      /*let nextCardPTrans = this.createElement("p", "pinyin");
+      nextCardPTrans.textContent = card.transliterate();*/
+      this.answer.innerHTML = card.romanize();
+
+      nextCard.append(nextCardPItem, nextCardPTrans, this.answer);
       let nextCardSlide = this.createElement("div", "slide");
 
       nextCardSlide.append(nextCard);
@@ -491,11 +507,12 @@ class View {
   }
 
   displayInitialWord(item) {
-    this.word.innerHTML = item;
+   //alert('test');
   }
 
   displayAnswer(item) {
     this.answer.innerHTML = item;
+
   }
 
   bindIncrementTracker(handler) {
@@ -518,12 +535,16 @@ class View {
       this.goodButton.style.display = "block";
       this.answer.style.display = "block";
       this.showButton.style.display = "none";
+
+      // Reveal answer
+      this.slider.style.display = "block";
     }
   }
 
   animateSlider(number) {
     // Slide next slide in
     this.slider.style.transform = "translate(" + number * -100 + "vw)";
+    this.slider.style.display = "none";
   }
 
   bindToggleVisibility(handler) {
