@@ -371,7 +371,7 @@ class View {
 
         let card = this.createElement("div", "today-vocab-card");
         let cardTop = this.createElement("div", "top-vocab");
-        cardTop.innerHTML = item;
+        cardTop.innerHTML = item.original();
         let cardBottom = this.createElement("div", "bottom-vocab");
         cardBottom.innerHTML = item.romanize();
         card.append(cardTop, cardBottom);
