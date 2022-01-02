@@ -1372,22 +1372,45 @@ p.learn-how {
 
 
 .character-card-vocab {
-    display: flex;
+    display: grid;
     font-size: 15px;
     padding: 10px 0;
     cursor: pointer;
     border-top: 1px #f4f4f4 solid;
-    justify-content: flex-start;
+    grid-template-columns: 20% 40% 40%;
 }
 
 .top-vocab {
-    width: 30%;
+
     overflow-wrap: break-word;
     padding-right: 20px;
 }
 
+.middle-vocab {
+}
+
 .bottom-vocab {
-  font-size: 14px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 400px) {
+  .character-card-vocab {
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 20% 80%;
+  }
+
+  .top-vocab {
+    grid-row: span 2;
+  }
+
+  .middle-vocab {
+    grid-row: span 1;
+  }
+
+  .bottom-vocab {
+    grid-row: span 1;
+    font-size: 14px;
+  }
 }
 
 /*///////////////////////////////////////////////////////////////////////////// CHARACTER CHART ////////////////////////////////////////////////////////////////////////////*/

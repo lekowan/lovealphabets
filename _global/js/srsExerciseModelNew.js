@@ -177,9 +177,13 @@ class Model {
     return this.revisionItemsTracker;
   }
 
+
   get initialWord() {
-    return this.allNewCards[0];
+    if(this.allNewCards.length > 0){
+      return this.allNewCards[0].original();
+   }
   }
+
 
   get initialAnswer() {
     if (this.allNewCards[0] != undefined) {
@@ -194,27 +198,13 @@ class Model {
   }
 
   get nextCard() {
-    return this.allNewCards[this.tracker];
+    return this.allNewCards[this.tracker].original();
   }
 
   get trackerValue() {
     return this.tracker;
   }
 
-  /*
-    get showNewItemsPopoverValue() {
-        return this.showNewItems;
-    }
-
-    get showWelcomePopoverValue() {
-        return this.showWelcome;
-    } 
-
-    get showCongratulationsPopoverValue() {
-        return this.showCongratulations;
-    }
-
-    */
 
   // Shuffle Array Function
   shuffle(array) {
@@ -367,24 +357,35 @@ class Model {
     }
     // If end of array is NOT reached
     else {
-  // add next card
+      // add next card
       this.onCardAdded(this.nextCard, this.newAnswer);
-      this.sayIt();
     }
   }
 
   // Play audio
   sayIt() {
-    let word = this.allNewCards[this.tracker];
+    let word = this.allNewCards[this.tracker].original();
 
-    // If speechSynthesis in user's browser and activateSpeech is true
+    // If speechSynthesis in user's browser and activateSpeech is zh-CN
     if (activateSpeech && "speechSynthesis" in window && language == "zh-CN") {
-      let audioWord = new SpeechSynthesisUtterance(word.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
-      audioWord.lang = language;
-      window.speechSynthesis.speak(audioWord);
+      if(exerciseType == "vocabularyEnglish"){
+        let newWord = word.romanize()
+                          .split("")
+                          .filter(char => /\p{Script=Han}/u.test(char))
+                          .join("")
+        let audioWord = new SpeechSynthesisUtterance(newWord.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
+        audioWord.lang = language;
+        window.speechSynthesis.speak(audioWord);
+      }
+      else {
+        let audioWord = new SpeechSynthesisUtterance(word.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
+        audioWord.lang = language;
+        window.speechSynthesis.speak(audioWord);
+       }
+
     }
 
-    // If speechSynthesis in user's browser and activateSpeech is true
+    // If speechSynthesis in user's browser and activateSpeech is not zh-CN
     if (activateSpeech && "speechSynthesis" in window && language != "zh-CN") {
       let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
       audioWord.lang = language;

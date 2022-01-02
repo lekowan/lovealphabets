@@ -374,16 +374,28 @@ class Model {
 
   // Play audio
   sayIt() {
-    let word = this.allNewCards[this.tracker];
+    let word = this.allNewCards[this.tracker]
 
-    // If speechSynthesis in user's browser and activateSpeech is true
+    // If speechSynthesis in user's browser and activateSpeech is zh-CN
     if (activateSpeech && "speechSynthesis" in window && language == "zh-CN") {
-      let audioWord = new SpeechSynthesisUtterance(word.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
-      audioWord.lang = language;
-      window.speechSynthesis.speak(audioWord);
+      if(exerciseType == "vocabularyEnglish"){
+        let newWord = word.romanize()
+                          .split("")
+                          .filter(char => /\p{Script=Han}/u.test(char))
+                          .join("")
+        let audioWord = new SpeechSynthesisUtterance(newWord.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
+        audioWord.lang = language;
+        window.speechSynthesis.speak(audioWord);
+      }
+      else {
+        let audioWord = new SpeechSynthesisUtterance(word.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
+        audioWord.lang = language;
+        window.speechSynthesis.speak(audioWord);
+       }
+
     }
 
-    // If speechSynthesis in user's browser and activateSpeech is true
+    // If speechSynthesis in user's browser and activateSpeech is not zh-CN
     if (activateSpeech && "speechSynthesis" in window && language != "zh-CN") {
       let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
       audioWord.lang = language;

@@ -13,7 +13,7 @@ class View {
 
     // Create header
     this.header = this.createElement("div", "header");
-    this.header.classList.add("purple-background");
+    //this.header.classList.add("pink-background");
 
     // Create generic close button
     let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -73,7 +73,7 @@ class View {
     this.badButton.style.display = "none";
 
     // Create Show button
-    this.showButton = this.createElement("button");
+    this.showButton = this.createElement("button", "pink-background");
     this.showButton.id = "show-button";
     this.showButton.innerHTML = "SHOW";
 
@@ -388,7 +388,7 @@ class View {
   }
 
   addNextCard(card) {
-    if(card != "undefined"){
+    if(card != undefined){
       let nextCard;
 
       if (exerciseType == "character") {

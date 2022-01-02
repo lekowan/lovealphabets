@@ -257,23 +257,27 @@ class View {
         this.category.append(characterColumn);
       }
 
-      if (chartType == "vocabulary") {
+      if (chartType == "vocabulary" || chartType == "vocabularyEnglish") {
 
         characterColumn = this.createElement("div", "character-content-1-column");
+        let n = 1;
 
         for (let item in charMap) {
           let charCard = this.createElement("div", "character-card-vocab");
           let top = this.createElement("div", "top-vocab");
-          top.innerHTML = item;
+          top.innerHTML = n;
+          let middle = this.createElement("div", "middle-vocab");
+          middle.innerHTML = item;
           let bottom = this.createElement("div", "bottom-vocab");
           bottom.innerHTML = charMap[item].letter;
-
-          charCard.append(top, bottom);
+          charCard.append(top, middle, bottom);
           characterColumn.append(charCard);
+          n++;
         }
 
         this.category.append(characterColumn);
       }
+
     });
 
     this.chartWrapper.append(this.category);

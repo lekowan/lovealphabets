@@ -13,7 +13,7 @@ class View {
 
     // Create header
     this.header = this.createElement("div", "header");
-    this.header.classList.add("pink-background");
+    //this.header.classList.add("pink-background");
 
     // Create generic close button
     let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -70,7 +70,7 @@ class View {
 
     // Create Show button
     this.showButton = this.createElement("button", "pink-background");
-    this.showButton.id = "show-button";
+    this.showButton.id = "show";
     this.showButton.innerHTML = "SHOW";
 
     // Append buttons to button area
@@ -352,7 +352,7 @@ class View {
 
         let card = this.createElement("div", "today-character-card");
         let cardTop = this.createElement("div", "top");
-        cardTop.innerHTML = item;
+        cardTop.innerHTML = item.original();
         let cardBottom = this.createElement("div", "bottom");
         cardBottom.innerHTML = item.romanize();
         card.append(cardTop, cardBottom);

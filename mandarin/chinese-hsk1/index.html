@@ -20,17 +20,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-    
     <script src="_data/srsData.js"></script>
     <script src="../../_global/js/srsEngine.js"></script>
-    
     <title>Mandarin Chinese HSK1 SRS Practice | lovealphabets</title>
-
     <style>
     .word {
-        font-size: 55px;  
+        font-size: 45px;
         height: 200px;
         width: 100%;
         text-align: center;
@@ -41,7 +38,7 @@
     }
 
     .pinyin {
-        font-size: 16px;
+        font-size: 15px;
         font-family: 'Noto Serif', serif !important;
         margin-top: 5px;
         font-family: 300;
@@ -61,47 +58,47 @@
         font-weight: 400;
         font-family: 'Noto Serif', serif !important;
     }
+
     .counter {
         font-size: 10px;
     }
+
     #show-button {
-        background: #18093e;
-        color: #fff;
-        background: linear-gradient(70deg, #18093e 0%, #321679 100%);
+        border-radius: 50px;
     }
 
     .bad {
         background: rgb(255, 189, 226);
         color: #4f213a;
+        border-radius: 50px 0 0 50px;
     }
 
     .good {
         background: rgb(189, 255, 240);
         color: #32574f;
+        border-radius: 0 50px 50px 0;
     }
 
-    </style>
+    .button-area {
+        width: 90%;
+        margin-bottom: 20px;
 
+    }
+    </style>
 </head>
 
 <body id="root">
-
-<script src="../../_global/js/srsExerciseModel.js"></script>
-<script src="../../_global/js/srsExerciseViewChinese.js"></script>
-<script src="../../_global/js/srsExerciseController.js"></script>
-<script>
-    
-// On load, display loader
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        overlay.style.display = "none";
-    }, 750);
-})
-
-
-</script>
-
+    <script src="../../_global/js/srsExerciseModel.js"></script>
+    <script src="../../_global/js/srsExerciseViewChinese.js"></script>
+    <script src="../../_global/js/srsExerciseController.js"></script>
+    <script>
+    // On load, display loader
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            overlay.style.display = "none";
+        }, 750);
+    })
+    </script>
 </body>
-
 
 </html>
