@@ -27,6 +27,8 @@
 </head>
 
 <body id="root">
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
 
 <script src="../../_global/js/srsExerciseModelNew.js"></script>
 <script src="../../_global/js/srsExerciseViewNew.js"></script>
@@ -40,9 +42,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 750);
 })
 
+const el = document.createElement('div');
+document.body.appendChild(el);
+
+eruda.init({
+    container: el,
+    tool: ['console', 'elements'],
+    useShadowDom: true,
+    autoScale: true,
+    defaults: {
+        displaySize: 50,
+        transparency: 0.9,
+        theme: 'Monokai Pro'
+    }
+});
 
 </script>
 
+
+
 </body>
+
 
 </html>
