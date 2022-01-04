@@ -127,7 +127,7 @@ class Model {
 
             }
 
-            else if (localStorageKey = "korean" + "IntegratedKorean" + "Srs") {
+            else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = koreanIntegratedKoreanSrsProgress.newItemsArray;
                 _progress.completedItemsArray = [];
