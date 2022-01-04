@@ -46,7 +46,7 @@ class Model {
                 // save data in local storage
                 this._commitData(koreanIntegratedKoreanSrsData);
 
-            } else if (localStorageKey = "mandarin" + "Hsk1Vocabulary" + "Srs") {
+            } else if (localStorageKey == "mandarin" + "Hsk1Vocabulary" + "Srs") {
 
                 // transform object into array
                 this.newItemsArray = Object.keys(mandarinHsk1VocabularySrsData);
