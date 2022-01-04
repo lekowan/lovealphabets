@@ -31,12 +31,24 @@ class Model {
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
-                console.log("SRS data imported?")
+       
                 // transform object into array
                 this.newItemsArray = Object.keys(norwegianMysteryOfNilsVocabularySrsData);
 
                 // save data in local storage
                 this._commitData(norwegianMysteryOfNilsVocabularySrsData);
+
+            }
+
+            else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
+          
+                // transform object into array
+                this.newItemsArray = Object.keys(koreanIntegratedKoreanSrsData);
+
+                // save data in local storage
+                this._commitData(koreanIntegratedKoreanSrsData);
+               
+                
             } else {
                 // transform object into array
                 this.newItemsArray = Object.keys(allSyllableMap);
@@ -112,7 +124,19 @@ class Model {
 
                 timeStamp = todaysDate;
 
+
+            }
+
+            else if (localStorageKey = "korean" + "IntegratedKorean" + "Srs") {
+                _progress.timeStamp = todaysDate;
+                _progress.newItemsArray = koreanIntegratedKoreanSrsProgress.newItemsArray;
+                _progress.completedItemsArray = [];
+                _progress.dueTodayItemsArray = koreanIntegratedKoreanSrsProgress.newItemsArray;
+
+                timeStamp = todaysDate;
+
                 
+
             } else {
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = this.newItemsArray;
