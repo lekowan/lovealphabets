@@ -31,24 +31,32 @@ class Model {
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
-       
+
                 // transform object into array
                 this.newItemsArray = Object.keys(norwegianMysteryOfNilsVocabularySrsData);
 
                 // save data in local storage
                 this._commitData(norwegianMysteryOfNilsVocabularySrsData);
 
-            }
+            } else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
 
-            else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
-          
                 // transform object into array
                 this.newItemsArray = Object.keys(koreanIntegratedKoreanSrsData);
 
                 // save data in local storage
                 this._commitData(koreanIntegratedKoreanSrsData);
-               
-                
+
+            } else if (localStorageKey = "mandarin" + "Hsk1Vocabulary" + "Srs") {
+
+                // transform object into array
+                this.newItemsArray = Object.keys(mandarinHsk1VocabularySrsData);
+
+                // save data in local storage
+                this._commitData(mandarinHsk1VocabularySrsData);
+
+                ///////////////////////////////////////////////////////////////////////////////////////////
+
+
             } else {
                 // transform object into array
                 this.newItemsArray = Object.keys(allSyllableMap);
@@ -125,9 +133,7 @@ class Model {
                 timeStamp = todaysDate;
 
 
-            }
-
-            else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
+            } else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = koreanIntegratedKoreanSrsProgress.newItemsArray;
                 _progress.completedItemsArray = [];
@@ -135,7 +141,14 @@ class Model {
 
                 timeStamp = todaysDate;
 
-                
+            } else if (localStorageKey == "mandarin" + "Hsk1Vocabulary" + "Srs") {
+                _progress.timeStamp = todaysDate;
+                _progress.newItemsArray = mandarinHsk1VocabularySrsProgress.newItemsArray;
+                _progress.completedItemsArray = [];
+                _progress.dueTodayItemsArray = mandarinHsk1VocabularySrsProgress.newItemsArray;
+
+                timeStamp = todaysDate;
+
 
             } else {
                 _progress.timeStamp = todaysDate;
