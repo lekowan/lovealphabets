@@ -22,11 +22,17 @@
     
     <script src="_data/srsData.js"></script>
     <script src="../../_global/js/srsEngine.js"></script>
-    
+    <script src="_data/localStorageData.js"></script>
+
     <title>Norwegian Mystery of Nils SRS Practice | lovealphabets</title>
 </head>
 
 <body id="root">
+
+<!--
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+-->
 
 <script src="../../_global/js/srsExerciseModel.js"></script>
 <script src="../../_global/js/srsExerciseView.js"></script>
@@ -39,6 +45,28 @@ document.addEventListener("DOMContentLoaded", function() {
         overlay.style.display = "none";
     }, 750);
 })
+
+/*
+const el = document.createElement('div');
+document.body.appendChild(el);
+
+eruda.init({
+    container: el,
+    tool: ['console', 'elements'],
+    useShadowDom: true,
+    autoScale: true,
+    defaults: {
+        displaySize: 50,
+        transparency: 0.9,
+        theme: 'Monokai Pro'
+    }
+});
+
+console.log(localStorage)
+*/
+
+
+
 </script>
 
 </body>
