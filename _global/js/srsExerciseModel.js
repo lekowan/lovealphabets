@@ -30,6 +30,8 @@ class Model {
 
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
+
+            /*
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
 
                 // transform object into array
@@ -58,12 +60,13 @@ class Model {
 
 
             } else {
+            */
                 // transform object into array
                 this.newItemsArray = Object.keys(allSyllableMap);
 
                 // save data in local storage
                 this._commitData(allSyllableMap);
-            }
+            // }
         }
 
         // If data exist, filter out new items and due items
@@ -124,6 +127,7 @@ class Model {
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
 
+            /*
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = norwegianMysteryOfNilsVocabularySrsProgress.newItemsArray;
@@ -149,15 +153,17 @@ class Model {
 
                 timeStamp = todaysDate;
 
-
+            
             } else {
+                
+            */
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = this.newItemsArray;
                 _progress.completedItemsArray = [];
                 _progress.dueTodayItemsArray = this.dueTodayItemsArray;
 
                 timeStamp = todaysDate;
-            }
+            // }
 
             this.allNewCards = this.newItemsArray.slice(0, this.number);
 
