@@ -79,8 +79,8 @@ class View {
     this.bodyContent.append(this.container);
 
     // Create word div
-    this.answer = this.createElement("p", "word-translation");
-    this.answer.style.display = "none";
+    //this.answer = this.createElement("p", "word-translation");
+    //this.answer.style.opacity = 0;
  
     // Append the title, form, and todo list to the content div
     this.content.append(this.header, this.bodyContent, this.buttonArea);
@@ -389,7 +389,9 @@ class View {
       let nextCard;
       let nextCardWordOriginal;
       //let nextCardWordTranslation;
-      let nextCardWordSeparator
+      let nextCardWordSeparator;
+
+      //let nextAnswer = this.answer;
 
       if (exerciseType == "character") {
         nextCard = this.createElement("div", "character");
@@ -399,7 +401,9 @@ class View {
         nextCard = this.createElement("div", "word");
         nextCardWordOriginal = this.createElement("p", "word-original");
         nextCardWordSeparator = this.createElement("p", "word-separator");
-
+        this.answer = this.createElement("p", "word-translation");
+        this.answer.style.opacity = 0;
+ 
         //grammarInfo = this.createElement("div", "grammar");
         //grammarInfo.textContent = grammar;
         //nextCard.append(grammarInfo);
@@ -520,7 +524,7 @@ class View {
     if (boolean == false) {
       this.badButton.style.display = "none";
       this.goodButton.style.display = "none";
-      this.answer.style.display = "none";
+      //this.answer.style.opacity = 0;
       this.showButton.style.display = "block";
     } else {
       this.badButton.style.display = "block";
