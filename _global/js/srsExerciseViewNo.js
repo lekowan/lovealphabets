@@ -79,11 +79,11 @@ class View {
     this.bodyContent.append(this.container);
 
     // Create word div
-    this.answer = this.createElement("div", "show-answer");
+    this.answer = this.createElement("p", "show-translation");
     this.answer.style.display = "none";
-
+ 
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.bodyContent, this.buttonArea, this.answer);
+    this.content.append(this.header, this.bodyContent, this.buttonArea);
 
     // Append content div to app
     this.app.append(this.content);
@@ -399,7 +399,7 @@ class View {
         nextCard = this.createElement("div", "word");
         nextCardWordOriginal = this.createElement("p", "word-original");
         nextCardWordSeparator = this.createElement("p", "word-separator");
-        this.nextCardWordTranslation = this.createElement("p", "word-translation");
+
         //grammarInfo = this.createElement("div", "grammar");
         //grammarInfo.textContent = grammar;
         //nextCard.append(grammarInfo);
@@ -407,7 +407,7 @@ class View {
 
 
       nextCardWordOriginal.textContent = card;
-      nextCard.append(nextCardWordOriginal, nextCardWordSeparator, this.nextCardWordTranslation);
+      nextCard.append(nextCardWordOriginal, nextCardWordSeparator, this.answer);
       let nextCardSlide = this.createElement("div", "slide");
 
       nextCardSlide.append(nextCard);
@@ -503,8 +503,8 @@ class View {
   }
 
   displayAnswer(item) {
-    // this.answer.innerHTML = item;
-    this.nextCardWordTranslation.innerHTML = item;
+    this.answer.innerHTML = item;
+    //this.nextCardWordTranslation.innerHTML = item;
   }
 
   bindIncrementTracker(handler) {
