@@ -79,7 +79,7 @@ class View {
     this.bodyContent.append(this.container);
 
     // Create word div
-    this.answer = this.createElement("p", "show-translation");
+    this.answer = this.createElement("p", "word-translation");
     this.answer.style.display = "none";
  
     // Append the title, form, and todo list to the content div
