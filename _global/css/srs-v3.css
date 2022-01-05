@@ -818,7 +818,8 @@ p.word-translation {
   height: 80px;
   width: 100%;
   background-color: white;
-  border-top: 1px #f0f0f0 solid;
+  border-top: 1px #f0f0f0 solid; 
+  /* box-shadow: 2px 2px rgb(241 240 244);*/
   position: absolute;
   transition: 0.1s ease-in;
   justify-content: center;
