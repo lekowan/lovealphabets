@@ -579,20 +579,21 @@ h2 {
 }
 
 .word {
-  font-size: 25px;
-  font-weight: 500;
-  height: 200px;
-  border: 1px solid rgb(241, 240, 244);
-  box-shadow: 2px 2px rgb(241, 240, 244);
-  background-color: white;
-  width: 320px;
-  color: #18093e;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  padding: 30px;
-  border-radius: 13px;
+    font-size: 25px;
+    font-weight: 500;
+    height: 200px;
+    border: 1px solid rgb(241, 240, 244);
+    box-shadow: 2px 2px rgb(241 240 244);
+    background-color: white;
+    width: 320px;
+    color: #18093e;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px;
+    border-radius: 13px;
+    flex-direction: column;
 }
 
 p.word-original {
