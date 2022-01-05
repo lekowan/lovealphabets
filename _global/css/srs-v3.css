@@ -592,7 +592,7 @@ h2 {
   align-items: flex-start;
   text-align: left;
   padding: 30px;
-  border-radius: 17px;
+  border-radius: 13px;
 }
 
 p.word-original {
@@ -610,7 +610,7 @@ p.word-separator {
 
 p.word-translation {
     padding: 0;
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
     font-size: 19px;
     color: #939393;
 }
