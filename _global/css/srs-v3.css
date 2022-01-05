@@ -586,6 +586,7 @@ h2 {
     box-shadow: 2px 2px rgb(241 240 244);
     background-color: white;
     width: calc(100% - 42px);
+    max-width:  400px;
     color: #18093e;
     display: flex;
     justify-content: center;
