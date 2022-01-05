@@ -387,6 +387,8 @@ class View {
   addNextCard(card) {
     if(card != undefined){
       let nextCard;
+      let nextCardWordSub;
+      let nextCardWordContent;
 
       if (exerciseType == "character") {
         nextCard = this.createElement("div", "character");
