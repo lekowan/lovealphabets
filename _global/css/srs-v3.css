@@ -721,7 +721,6 @@ p.word-translation {
 }
 
 .body-content {
-  height: 100%;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -788,6 +787,8 @@ p.word-translation {
   font-weight: 600;
   width: calc(100% - 42px);
   margin-bottom: 30px;
+  top: 15px;
+  position: absolute;
 }
 
 #show-button {
@@ -806,13 +807,30 @@ p.word-translation {
   justify-content: center;
   font-size: 11px;
   font-weight: 600;
-  height: 95px;
+  height: 80px;
+  position: relative;
+  overflow:  hidden;
 }
+
+.good-bad {
+  bottom: -80px;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  border-top: 1px #c3c3c3 solid;
+  position: absolute;
+  transition: 0.1s ease-in;
+  justify-content: center;
+  padding-top: 20px;
+  display: flex;
+}
+
 
 .bad {
   background-color: #ffacd3;
-  width: 50%;
-  padding: 14px 0;
+  width: 30%;
+  height: 41px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -820,12 +838,14 @@ p.word-translation {
   font-size: 11px;
   letter-spacing: 1.5px;
   font-weight: 600;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 .good {
   background-color: #a0fbd5;
-  width: 50%;
-  padding: 14px 0;
+  width: 30%;
+  height: 41px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -833,6 +853,8 @@ p.word-translation {
   font-size: 11px;
   letter-spacing: 1.5px;
   font-weight: 600;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
 #current-level {

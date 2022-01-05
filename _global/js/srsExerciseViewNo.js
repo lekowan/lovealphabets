@@ -58,15 +58,18 @@ class View {
     // Create button area
     this.buttonArea = this.createElement("div", "button-area");
 
+    // Create Good / Bad button area
+    this.goodBadButton = this.createElement("div", "good-bad");
+
     // Create Good button
     this.goodButton = this.createElement("button", "good");
     this.goodButton.innerHTML = "GOOD";
-    this.goodButton.style.display = "none";
+    //this.goodButton.style.display = "none";
 
     // Create Bad button
     this.badButton = this.createElement("button", "bad");
     this.badButton.innerHTML = "BAD";
-    this.badButton.style.display = "none";
+    //this.badButton.style.display = "none";
 
     // Create Show button
     this.showButton = this.createElement("button", "pink-background");
@@ -74,7 +77,8 @@ class View {
     this.showButton.innerHTML = "SHOW";
 
     // Append buttons to button area
-    this.buttonArea.append(this.badButton, this.goodButton, this.showButton);
+    this.goodBadButton.append(this.badButton, this.goodButton);
+    this.buttonArea.append(this.showButton, this.goodBadButton);
     this.container.append(this.slider);
     this.bodyContent.append(this.container);
 
@@ -522,15 +526,16 @@ class View {
 
   displayButtons(boolean) {
     if (boolean == false) {
-      this.badButton.style.display = "none";
-      this.goodButton.style.display = "none";
+      //this.badButton.style.display = "none";
+      //this.goodButton.style.display = "none";
       //this.answer.style.opacity = 0;
-      this.showButton.style.display = "block";
+      this.goodBadButton.style.bottom = "-80px";
     } else {
-      this.badButton.style.display = "block";
-      this.goodButton.style.display = "block";
-      this.answer.style.opacity = 1;
-      this.showButton.style.display = "none";
+      //this.badButton.style.display = "block";
+      //this.goodButton.style.display = "block";
+      //this.answer.style.opacity = 1;
+      //this.showButton.style.display = "none";
+      this.goodBadButton.style.bottom = 0;
     }
   }
 
