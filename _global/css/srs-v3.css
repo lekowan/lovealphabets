@@ -499,7 +499,7 @@ h2 {
   transition: all 0.5s;
   width: 100%;
   animation: --fade-in 1s 0.5s ease-in;
-  background-color: #f8f4f8;
+  background-color: #fafafa;
 }
 
 @keyframes --fade-in {
@@ -743,7 +743,7 @@ p.word-translation {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  background-color: #f8f4f8;
+  background-color: #fafafa;
 }
 
 .settings {
