@@ -525,7 +525,7 @@ class View {
     } else {
       this.badButton.style.display = "block";
       this.goodButton.style.display = "block";
-      this.answer.style.display = "block";
+      this.answer.style.opacity = 1;
       this.showButton.style.display = "none";
     }
   }
