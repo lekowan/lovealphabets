@@ -387,8 +387,9 @@ class View {
   addNextCard(card) {
     if(card != undefined){
       let nextCard;
-      let nextCardWordSub;
-      let nextCardWordContent;
+      let nextCardWordOriginal;
+      //let nextCardWordTranslation;
+      let nextCardWordSeparator
 
       if (exerciseType == "character") {
         nextCard = this.createElement("div", "character");
@@ -396,17 +397,17 @@ class View {
 
       if (exerciseType == "vocabulary" || exerciseType == "vocabularyEnglish") {
         nextCard = this.createElement("div", "word");
-        nextCardWordSub = this.createElement("div", "word-sub");
-        nextCardWordSub.textContent = "Norwegian";
-        nextCardWordContent = this.createElement("div", "word-content");
+        nextCardWordOriginal = this.createElement("p", "word-original");
+        nextCardWordSeparator = this.createElement("p", "word-separator");
+        this.nextCardWordTranslation = this.createElement("p", "word-translation");
         //grammarInfo = this.createElement("div", "grammar");
         //grammarInfo.textContent = grammar;
         //nextCard.append(grammarInfo);
       }
 
 
-      nextCardWordContent.textContent = card;
-      nextCard.append(nextCardWordSub, nextCardWordContent);
+      nextCardWordOriginal.textContent = card;
+      nextCard.append(nextCardWordOriginal, nextCardWordSeparator, this.nextCardWordTranslation);
       let nextCardSlide = this.createElement("div", "slide");
 
       nextCardSlide.append(nextCard);
@@ -502,7 +503,8 @@ class View {
   }
 
   displayAnswer(item) {
-    this.answer.innerHTML = item;
+    // this.answer.innerHTML = item;
+    this.nextCardWordTranslation.innerHTML = item;
   }
 
   bindIncrementTracker(handler) {
