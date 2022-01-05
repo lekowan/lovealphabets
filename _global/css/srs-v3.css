@@ -234,7 +234,7 @@ body {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 p,
@@ -585,7 +585,7 @@ h2 {
     border: 1px solid rgb(241, 240, 244);
     box-shadow: 2px 2px rgb(241 240 244);
     background-color: white;
-    width: 320px;
+    width: calc(100% - 42px);
     color: #18093e;
     display: flex;
     justify-content: center;
@@ -781,7 +781,7 @@ p.word-translation {
   font-size: 11px;
   letter-spacing: 1.5px;
   font-weight: 600;
-  width: 80%;
+  width: calc(100% - 42px);
   margin-bottom: 30px;
 }
 
