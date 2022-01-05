@@ -528,12 +528,12 @@ class View {
     if (boolean == false) {
       //this.badButton.style.display = "none";
       //this.goodButton.style.display = "none";
-      //this.answer.style.opacity = 0;
+      this.answer.style.opacity = 0;
       this.goodBadButton.style.bottom = "-80px";
     } else {
       //this.badButton.style.display = "block";
       //this.goodButton.style.display = "block";
-      //this.answer.style.opacity = 1;
+      this.answer.style.opacity = 1;
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
     }

@@ -818,7 +818,7 @@ p.word-translation {
   height: 80px;
   width: 100%;
   background-color: white;
-  border-top: 1px #c3c3c3 solid;
+  border-top: 1px #f0f0f0 solid;
   position: absolute;
   transition: 0.1s ease-in;
   justify-content: center;
@@ -829,7 +829,7 @@ p.word-translation {
 
 .bad {
   background-color: #ffacd3;
-  width: 30%;
+  width: 40%;
   height: 41px;
   text-align: center;
   text-decoration: none;
@@ -844,7 +844,7 @@ p.word-translation {
 
 .good {
   background-color: #a0fbd5;
-  width: 30%;
+  width: 40%;
   height: 41px;
   text-align: center;
   text-decoration: none;
