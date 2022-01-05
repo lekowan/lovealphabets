@@ -488,6 +488,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #f8f4f8;
 }
 
 .slider {
