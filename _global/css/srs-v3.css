@@ -545,7 +545,8 @@ h2 {
 
 
 
-//////////////////////////////////////////////////////////
+/* ////////////////////////////////////////////////////////// */
+
 .slider {
   text-align: center;
   position: absolute;
@@ -886,7 +887,7 @@ p.word-translation {
 
 
 .bad {
-  background-color: #ffacd3;
+  background: linear-gradient(70deg, rgba(251, 196, 254, 1) 0%, rgba(254, 239, 255, 1) 100%);
   width: 40%;
   height: 41px;
   text-align: center;
@@ -896,12 +897,14 @@ p.word-translation {
   font-size: 11px;
   letter-spacing: 1.5px;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 50px;
   margin-right: 10px;
 }
 
 .good {
-  background-color: #a0fbd5;
+  background: linear-gradient(
+70deg, rgb(138, 226, 223) 0%, rgb(211, 255, 253) 100%);
+  
   width: 40%;
   height: 41px;
   text-align: center;
@@ -911,7 +914,7 @@ p.word-translation {
   font-size: 11px;
   letter-spacing: 1.5px;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 50px;
   margin-left: 10px;
 }
 

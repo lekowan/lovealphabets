@@ -235,6 +235,7 @@ class Model {
         // Create counter variables
         this.newItemsTracker = this.allNewCards.length - this.dueTodayItemsArray.length;
         this.revisionItemsTracker = this.dueTodayItemsArray.length;
+        
     } // End of constructor ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////
 

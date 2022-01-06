@@ -33,7 +33,6 @@ class View {
     this.end = this.createElement("div", "end");
     this.end.id = "end";
 
-
     this.progressBar.append(this.start, this.inner, this.end);
 
     // Create generic close button
@@ -537,8 +536,6 @@ class View {
     this.bar.style.width = progressVal + "%";
   }
 
-
-
   displayInitialWord(item) {
     this.word.innerHTML = item;
   }
@@ -567,6 +564,7 @@ class View {
       //this.badButton.style.display = "block";
       //this.goodButton.style.display = "block";
       this.answer.style.opacity = 1;
+      console.log(this.answer.style.opacity);
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
     }

@@ -37,8 +37,7 @@ class Controller {
     if (!this.model.showWelcome) this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
 
     // Display total card count = progress end value
-    this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer)
-
+    //this.onProgressIncremented(this.model.initialWord, this.model.initialAnswer)
 
     // Display next card
     this.model.bindOnNextCardAdded(this.onNextCardAdded);
