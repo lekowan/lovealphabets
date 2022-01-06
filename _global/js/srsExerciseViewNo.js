@@ -15,6 +15,27 @@ class View {
     this.header = this.createElement("div", "header");
     // this.header.classList.add("pink-background");
 
+    // Create progress bar
+    this.progressBar = this.createElement("div", "progress-bar");
+    this.progressBar.id = "progress-bar";
+    this.start = this.createElement("div", "start");
+    this.start.id = "start";
+
+    this.start.innerHTML = "0";
+    this.inner = this.createElement("div", "inner");
+    this.bar = this.createElement("span", "bar")
+    this.bar.classList.add("purple");
+    this.bar.classList.add("purple-cta");
+    this.bar.id = "bar";
+    this.bar.style.width = "0%";
+
+    this.inner.append(this.bar);
+    this.end = this.createElement("div", "end");
+    this.end.id = "end";
+
+
+    this.progressBar.append(this.start, this.inner, this.end);
+
     // Create generic close button
     let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     closeSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
@@ -46,7 +67,7 @@ class View {
     this.languagePractice.textContent = "SRS Practice";
 
     // Append close button + title to header
-    this.header.append(this.languagePractice, this.closeButton);
+    this.header.append(this.progressBar, this.closeButton);
 
     // Create slider container
     this.slider = this.createElement("div", "slider");
@@ -72,7 +93,7 @@ class View {
     //this.badButton.style.display = "none";
 
     // Create Show button
-    this.showButton = this.createElement("button", "pink-background");
+    this.showButton = this.createElement("button", "purple-cta");
     this.showButton.id = "show-button";
     this.showButton.innerHTML = "SHOW";
 
@@ -505,6 +526,18 @@ class View {
     }
     this.revisionItemsCounter.innerHTML = "REVISION: " + item;
   }
+
+
+  displayProgressBarStart(start, total) {
+    this.start.innerHTML = start;
+    this.end.innerHTML = total;
+
+    // Update progress bar value and animate (via CSS transition)
+    let progressVal = Math.floor((start * 100) / total);
+    this.bar.style.width = progressVal + "%";
+  }
+
+
 
   displayInitialWord(item) {
     this.word.innerHTML = item;
