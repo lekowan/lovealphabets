@@ -103,6 +103,8 @@ class Model {
         this.showCongratulations = false;
         this.showSrsReset = false;
         this.showSettings = false;
+        this.goodAnswer = 0;
+        this.totalItems = 0;
 
         // Local storage Progress
         let timeStamp = "";
@@ -236,7 +238,8 @@ class Model {
         this.newItemsTracker = this.allNewCards.length - this.dueTodayItemsArray.length;
         this.revisionItemsTracker = this.dueTodayItemsArray.length;
 
-        console.log(this.allNewCards.length);
+        this.totalItems = this.allNewCards.length; 
+        console.log(this.totalItems);
 
     } // End of constructor ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -259,6 +262,7 @@ class Model {
     }
 
     get totalCounter() {
+        console.log(this.allNewCards.length);
         return this.allNewCards.length;
     }
 
@@ -382,6 +386,10 @@ class Model {
                 window.location.reload();
             }, 500);
         }
+
+        // Update progress tracker
+        this.totalItems = this.allNewCards.length 
+        this.incrementProgressStart()
     }
 
     bindOnCardsChanged(callback) {
@@ -522,7 +530,7 @@ class Model {
 
     // Update progress start value
     incrementProgressStart() {
-        this.onProgressStartChanged(this.tracker, this.allNewCards.length);
+        this.onProgressStartChanged(this.goodAnswer, this.totalItems);
     }
 
     bindOnProgressIncremented(callback) {
@@ -617,6 +625,7 @@ class Model {
         _progress.completedItemsArray.push(word);
 
         // increment progress start value
+        this.goodAnswer++;        
         this.incrementProgressStart();
 
         // save data in local storage

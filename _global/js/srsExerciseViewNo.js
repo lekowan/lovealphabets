@@ -528,7 +528,9 @@ class View {
 
 
   displayProgressBarStart(start, total) {
+    console.log("total", total);
     this.start.innerHTML = start;
+    this.end.innerHTML = total;
 
     // Update progress bar value and animate (via CSS transition)
     let progressVal = Math.floor((start * 100) / total);
@@ -544,7 +546,9 @@ class View {
   }
 
   displayAnswer(item) {
-    this.answer.innerHTML = item;
+    if(item != undefined){
+      this.answer.innerHTML = item;
+    }
     //this.nextCardWordTranslation.innerHTML = item;
   }
 
