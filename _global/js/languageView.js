@@ -34,7 +34,9 @@ class View {
     this.languageToolTip = this.createElement("span", "tooltiptext");
     this.languageMenuList = this.createElement("ul", "menu-list");
 
-    const languageList = ["amharic", "arabic", "armenian", "bengali", "cherokee", "georgian", "greek", "hindi", "inuktitut", "japanese", "korean", "mandarin", "russian", "tibetan"];
+    //const languageList = ["amharic", "arabic", "armenian", "bengali", "cherokee", "georgian", "greek", "hindi", "inuktitut", "japanese", "korean", "mandarin", "russian", "tibetan"];
+    const languageList = ["amharic", "arabic", "armenian", "bengali", "cherokee", "georgian", "greek", "hindi", "inuktitut", "japanese", "korean", "mandarin", "norwegian","russian", "tibetan"];
+
 
     languageList.forEach((item) => {
       let menuItem = this.createElement("li", "menu-list-item");

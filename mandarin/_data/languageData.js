@@ -17,6 +17,7 @@ const languageContent = [{
     localStorageKey: "mandarin" + "Hsk1Vocabulary" + "Srs",
     chartType: chineseHsk1ChartType
   },
+  /*
   {
     chartName: "hsk1-english-map",
     chartData: chineseHsk1EnglishChartData,
@@ -30,6 +31,7 @@ const languageContent = [{
     localStorageKey: "mandarin" + "Hsk1VocabularyEnglish" + "Srs",
     chartType: chineseHsk1EnglishChartType
   },
+  */
   {
     chartName: "hsk2-map",
     chartData: chineseHsk2ChartData,
@@ -43,6 +45,7 @@ const languageContent = [{
     localStorageKey: "mandarin" + "Hsk2Vocabulary" + "Srs",
     chartType: chineseHsk2ChartType
   },
+  /*
   {
     chartName: "hsk2-english-map",
     chartData: chineseHsk2EnglishChartData,
@@ -56,6 +59,7 @@ const languageContent = [{
     localStorageKey: "mandarin" + "Hsk2VocabularyEnglish" + "Srs",
     chartType: chineseHsk2EnglishChartType
   },
+  */
   {
     chartName: "hsk3-map",
     chartData: chineseHsk3ChartData,
@@ -68,7 +72,8 @@ const languageContent = [{
     url: "chinese-hsk3",
     localStorageKey: "mandarin" + "Hsk3Vocabulary" + "Srs",
     chartType: chineseHsk3ChartType
-  }, 
+  },
+  /* 
   {
     chartName: "hsk3-english-map",
     chartData: chineseHsk3EnglishChartData,
@@ -82,4 +87,5 @@ const languageContent = [{
     localStorageKey: "mandarin" + "Hsk3VocabularyEnglish" + "Srs",
     chartType: chineseHsk2EnglishChartType
   },
+  */
 ];
