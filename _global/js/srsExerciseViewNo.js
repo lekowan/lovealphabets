@@ -417,11 +417,13 @@ class View {
 
       //let nextAnswer = this.answer;
 
+      /*
       if (exerciseType == "character") {
         nextCard = this.createElement("div", "character");
       }
 
       if (exerciseType == "vocabulary" || exerciseType == "vocabularyEnglish") {
+      */
         nextCard = this.createElement("div", "word");
         nextCardWordOriginal = this.createElement("p", "word-original");
         nextCardWordSeparator = this.createElement("p", "word-separator");
@@ -431,9 +433,10 @@ class View {
         //grammarInfo = this.createElement("div", "grammar");
         //grammarInfo.textContent = grammar;
         //nextCard.append(grammarInfo);
-      }
+      
+      // }
 
-      console.log(allSyllableMap[card].pinyin)
+
 
       if(allSyllableMap[card].pinyin == undefined){
         nextCardWordOriginal.textContent = card    
