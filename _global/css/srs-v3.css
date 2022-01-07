@@ -655,6 +655,8 @@ h2 {
 p.word-original {
     padding: 0;
     margin: 0 0 10px 0;
+    flex-direction: column;
+    display: flex;
 }
 
 p.word-separator {

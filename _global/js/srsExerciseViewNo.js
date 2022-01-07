@@ -241,7 +241,7 @@ class View {
     this.welcomeContinueContainer = this.createElement("div", "continue-popover-container");
     this.welcomeContinueButton = this.createElement("div", "continue-popover");
     this.welcomeContinueButton.id = "continue-welcome";
-    this.welcomeContinueButton.classList.add("pink-background");
+    this.welcomeContinueButton.classList.add("purple-background");
     this.welcomeContinueButton.textContent = "CONTINUE";
     this.welcomeContinueContainer.append(this.welcomeContinueButton);
 
@@ -265,7 +265,7 @@ class View {
     this.newItemsContinueContainer = this.createElement("div", "continue-popover-container");
     this.newItemsContinueButton = this.createElement("div", "continue-popover");
     this.newItemsContinueButton.id = "continue-new-items";
-    this.newItemsContinueButton.classList.add("pink-background");
+    this.newItemsContinueButton.classList.add("purple-background");
     this.newItemsContinueButton.textContent = "CONTINUE";
     this.newItemsContinueContainer.append(this.newItemsContinueButton);
 
@@ -299,7 +299,7 @@ class View {
     this.todayContinueContainer = this.createElement("div", "continue-popover-container");
     this.todayContinueButton = this.createElement("div", "continue-popover");
     this.todayContinueButton.id = "continue-new-items";
-    this.todayContinueButton.classList.add("pink-background");
+    this.todayContinueButton.classList.add("purple-background");
     this.todayContinueButton.textContent = "CONTINUE";
     this.todayContinueContainer.append(this.todayContinueButton);
 
@@ -323,7 +323,7 @@ class View {
     this.congratulationsContinueContainer = this.createElement("div", "continue-popover-container");
     this.congratulationsContinueButton = this.createElement("div", "continue-popover");
     this.congratulationsContinueButton.id = "continue-congratulations";
-    this.congratulationsContinueButton.classList.add("pink-background");
+    this.congratulationsContinueButton.classList.add("purple-background");
     this.congratulationsContinueButton.textContent = "FINISH";
     this.congratulationsContinueContainer.append(this.congratulationsContinueButton);
 
@@ -433,8 +433,20 @@ class View {
         //nextCard.append(grammarInfo);
       }
 
+      console.log(allSyllableMap[card].pinyin)
 
-      nextCardWordOriginal.textContent = card;
+      if(allSyllableMap[card].pinyin == undefined){
+        nextCardWordOriginal.textContent = card    
+      }
+
+      else {
+        this.pinyin = this.createElement("span", "pinyin");
+        this.pinyin.textContent = '[' + allSyllableMap[card].pinyin + ']';
+        nextCardWordOriginal.textContent = card;
+
+        nextCardWordOriginal.append(this.pinyin);
+      }
+      
       nextCard.append(nextCardWordOriginal, nextCardWordSeparator, this.answer);
       let nextCardSlide = this.createElement("div", "slide");
 
