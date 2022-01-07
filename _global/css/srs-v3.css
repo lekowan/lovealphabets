@@ -655,8 +655,16 @@ h2 {
 p.word-original {
     padding: 0;
     margin: 0 0 10px 0;
-    flex-direction: column;
+    /* flex-direction: column;
     display: flex;
+    */
+}
+
+.pinyin {
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif !important;
+    font-weight: 500;
+    margin-left: 6px;
 }
 
 p.word-separator {
