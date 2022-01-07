@@ -258,6 +258,10 @@ class Model {
         return this.showTodaysItems;
     }
 
+    get totalCounter() {
+        return this.allNewCards.length;
+    }
+
     get newItemsCounter() {
         return this.newItemsTracker;
     }

@@ -529,11 +529,14 @@ class View {
 
   displayProgressBarStart(start, total) {
     this.start.innerHTML = start;
-    this.end.innerHTML = total;
 
     // Update progress bar value and animate (via CSS transition)
     let progressVal = Math.floor((start * 100) / total);
     this.bar.style.width = progressVal + "%";
+  }
+
+  displayProgressBarEnd(total){
+      this.end.innerHTML = total;
   }
 
   displayInitialWord(item) {

@@ -83,6 +83,9 @@ class Controller {
     // Decrement revision items counter
     this.model.bindOnRevisionItemsCounterChanged(this.onRevisionItemRemoved);
 
+    // Display total number of items counter = progress end value
+    this.onProgressBarLoaded(this.model.totalCounter);
+
     // Increment progress start
     this.model.bindOnProgressIncremented(this.onProgressIncremented);
 
@@ -159,6 +162,12 @@ class Controller {
   onNextCardAdded = (card, answer) => {
     this.view.addNextCard(card);
     this.view.displayAnswer(answer);
+  };
+
+
+  // Display total number of items = progress end value
+  onProgressBarLoaded = (number) => {
+    this.view.displayProgressBarEnd(number);
   };
 
   // Handle Welcome Popover visibility
