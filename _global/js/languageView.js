@@ -109,6 +109,29 @@ class View {
       // Push View Chart CTAs into array so they can be accessed later
       this.languageViewCtaArray.push(languageViewChart);
 
+      // Create "reset SRS data" icon
+      this.svgClear = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      this.svgClear.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+      this.svgClear.setAttribute("height", "24px");
+      this.svgClear.setAttribute("viewBox", "0 0 24 24");
+      this.svgClear.setAttribute("width", "24px");
+      this.svgClear.setAttribute("fill", "#18093e");
+
+      this.svgClearPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgClearPath1.setAttribute("d", "M0 0h24v24H0V0z");
+      this.svgClearPath1.setAttribute("fill", "none");
+
+      this.svgClearPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgClearPath2.setAttribute("d", "M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z");
+
+      this.svgClear.append(this.svgClearPath1, this.svgClearPath2);
+      this.languageReset = this.createElement("div", "settings-menu__icon");
+      this.languageReset.append(this.svgClear);
+      let languageReset = this.languageReset;
+
+      // End of SVG 
+
+
       let languageStatus = this.createElement("span", "language-status");
 
       let nextDate = JSON.parse(localStorage.getItem(item.localStorageKey + "NextDate"));
@@ -125,13 +148,23 @@ class View {
 
       languageHeading.append(languageHeadingTitle, languageStatus);
       homeLanguageCard.append(homeLanguageIcon);
-      languageButtonsBar.append(languageCta, languageViewChart, languageInfo);
+      languageButtonsBar.append(languageCta, languageViewChart, languageInfo, languageReset);
       homeLanguage.append(homeLanguageCard, languageHeading, languageSubHeading, languageButtonsBar);
       this.home.append(homeLanguage);
 
       languageCta.addEventListener("click", function () {
         window.location.href = item.url;
       });
+
+      languageReset.addEventListener("click", function () {  
+        localStorage.removeItem(item.localStorageKey + "Number");
+        localStorage.removeItem(item.localStorageKey + "Data");
+        localStorage.removeItem(itemlocalStorageKey + "Progress");
+        localStorage.removeItem(itemlocalStorageKey + "NextDate");
+        location.reload();
+        console.log(localStorage);
+      });
+
     });
 
     // Popover background

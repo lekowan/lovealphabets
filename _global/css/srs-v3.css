@@ -654,10 +654,22 @@ h2 {
 
 p.word-original {
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     /* flex-direction: column;
     display: flex;
     */
+}
+
+.original-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+
+.audio-icon {
+  margin-bottom: 7px;
+  cursor: pointer;
 }
 
 .pinyin {
