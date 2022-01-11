@@ -1,19 +1,12 @@
 // Configuration
 const localStorageKey = "norwegian" + "MysteryOfNilsVocabulary" + "Srs";
 
-// Display level
-const displayLevel = "SRS Practice";
-
 // Speech Synthesis
 const language = "nb-NO";
 const activateSpeech = true;
 
 // Gradient
-const gradientBackground = "pink-background";
-const loadergradientBackground = "pink-loader-background";
-
-// CTA Background
-const ctaClass = "pink-cta";
+const loadergradientBackground = "purple-loader-background";
 
 // Exercise Type (character, vocabulary )
 const exerciseType = "vocabulary";
