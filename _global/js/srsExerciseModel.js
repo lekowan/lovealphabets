@@ -31,15 +31,16 @@ class Model {
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
 
-            
+            /*
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
 
+                alert('initial srs data saved');
                 // transform object into array
                 this.newItemsArray = Object.keys(norwegianMysteryOfNilsVocabularySrsData);
 
                 // save data in local storage
                 this._commitData(norwegianMysteryOfNilsVocabularySrsData);
-            /*
+            
             } else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
 
                 // transform object into array
@@ -60,14 +61,14 @@ class Model {
                 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-            } else {
+            //} else {
             
                 // transform object into array
                 this.newItemsArray = Object.keys(allSyllableMap);
 
                 // save data in local storage
                 this._commitData(allSyllableMap);
-            }
+            // }
         }
 
         // If data exist, filter out new items and due items
