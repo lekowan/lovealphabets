@@ -656,7 +656,7 @@ h2 {
 .new-icon {
     position: absolute;
     top: 23px;
-    right: 26px;
+    left: 26px;
     font-size: 15px;
     font-size: 9px;
     padding: 3px 6px;
