@@ -5795,3 +5795,5 @@ function translation(n) {
 }
 
 String.prototype.romanize = translation;
+
+console.log(localStorage[norwegianMysteryOfNilsVocabularySrs])
