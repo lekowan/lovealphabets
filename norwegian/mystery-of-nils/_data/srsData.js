@@ -7688,6 +7688,5 @@ function translation(n) {
   return obj["letter"];
 }
 
-
 String.prototype.romanize = translation;
 String.prototype.original = getCharacter;

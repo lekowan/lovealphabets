@@ -130,7 +130,7 @@ class Model {
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
 
-            
+            /*
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = norwegianMysteryOfNilsVocabularySrsProgress.newItemsArray;
@@ -140,14 +140,14 @@ class Model {
                 timeStamp = todaysDate;
 
            } else {
-                
+            */  
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = this.newItemsArray;
                 _progress.completedItemsArray = [];
                 _progress.dueTodayItemsArray = this.dueTodayItemsArray;
 
                 timeStamp = todaysDate;
-            }
+            //}
 
             this.allNewCards = this.newItemsArray.slice(0, this.number);
 
