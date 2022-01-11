@@ -92,6 +92,11 @@ class Controller {
     // Display Today's Items popover
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
     this.view.addTodaysCards(this.model.newItemsArray.slice(0, _number));
+
+    // Process SayIt
+    this.model.bindOnSayItPressed(this.onSayItPressed);
+    this.view.bindPlayAudio(this.handleProcessSayIt);
+
   } // End of constructor
 
   // Change number in array handlers
@@ -154,6 +159,16 @@ class Controller {
     this.view.bindProcessGoodAnswer();
   };
 
+  // Handle Say it
+  handleProcessSayIt = () => {
+    this.model.sayIt();
+  };
+
+  onSayItPressed = () => {
+    this.view.bindPlayAudio();
+    //this.view.addNextCard();
+  };
+
   // Add card
   handleAddCard = () => {
     this.model.addCard();
@@ -162,6 +177,7 @@ class Controller {
   onNextCardAdded = (card, answer) => {
     this.view.addNextCard(card);
     this.view.displayAnswer(answer);
+    //this.view.bindPlayAudio();
   };
 
 

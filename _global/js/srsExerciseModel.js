@@ -239,8 +239,7 @@ class Model {
         this.revisionItemsTracker = this.dueTodayItemsArray.length;
 
         this.totalItems = this.allNewCards.length; 
-        console.log(this.totalItems);
-
+        
     } // End of constructor ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -262,7 +261,6 @@ class Model {
     }
 
     get totalCounter() {
-        console.log(this.allNewCards.length);
         return this.allNewCards.length;
     }
 
@@ -293,7 +291,6 @@ class Model {
     }
 
     get nextCard() {
-        console.log('next card', this.allNewCards[this.tracker])
         return this.allNewCards[this.tracker];
     }
 
@@ -422,7 +419,7 @@ class Model {
     }
 
     toggleVisibility(boolean) {
-        if (boolean == true) this.sayIt();
+    //    if (boolean == true) this.sayIt();
         this.onVisibilityChanged(boolean);
     }
 
@@ -479,6 +476,7 @@ class Model {
 
     // Play audio
     sayIt() {
+        console.log('say it');
         let word = this.allNewCards[this.tracker].original();
 
         // If speechSynthesis in user's browser and activateSpeech is zh-CN
@@ -510,6 +508,12 @@ class Model {
         if (!activateSpeech && allSyllableMap[word].audio) {
             this.playAudio(allSyllableMap[word].audio);
         }
+
+        this.onSayItPressed();
+    }
+
+    bindOnSayItPressed(callback) {
+        this.onSayItPressed = callback;
     }
 
     // Initiate audio

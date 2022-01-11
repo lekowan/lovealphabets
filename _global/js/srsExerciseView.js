@@ -353,6 +353,10 @@ class View {
     this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
 
     this.preventInvalidInputCharacters();
+
+    this.svgAudioCtaArray = [];
+    this.count = 1;
+
   } // End of constructor
 
   //
@@ -393,8 +397,6 @@ class View {
 
       array.forEach((item) => {
 
-        console.log('item', item);
-
         let card = this.createElement("div", "today-vocab-card");
         let cardTop = this.createElement("div", "top-vocab");
         cardTop.innerHTML = item.original();
@@ -416,6 +418,7 @@ class View {
       let nextCardWordOriginal;
       //let nextCardWordTranslation;
       let nextCardWordSeparator;
+      let cardIcon;
 
       //let nextAnswer = this.answer;
 
@@ -432,8 +435,15 @@ class View {
       this.answer = this.createElement("p", "word-translation");
       this.answer.style.opacity = 0;
 
+      /*
+      this.cardIcon = this.createElement("div", "audio-icon");
+      this.cardIcon.textContent = "icon";
+      this.cardIcon.id = this.count;
+      */  
+    
       // Create audio icon
       this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      this.svgAudio.id = this.count;
       this.svgAudio.classList.add("audio-icon");
       this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
       this.svgAudio.setAttribute("height", "20px");
@@ -459,6 +469,10 @@ class View {
 
       this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
 
+      // Push View Chart CTAs into array so they can be accessed later
+      this.svgAudioCtaArray.push(this.svgAudio);
+      console.log(this.svgAudioCtaArray);
+      console.log(this.svgAudioCtaArray.length);
 
       if(allSyllableMap[card].pinyin){
         this.pinyin = this.createElement("span", "pinyin");
@@ -472,16 +486,24 @@ class View {
         nextCardWordOriginal.textContent = allSyllableMap[card].character; 
       }
       
-      
       let nextCardOriginalContainer = this.createElement("div", "original-container");
       nextCardOriginalContainer.append(nextCardWordOriginal, this.svgAudio)
+      //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
       nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
       let nextCardSlide = this.createElement("div", "slide");
 
       nextCardSlide.append(nextCard);
       this.slides.append(nextCardSlide);
+
+      /*this.cardIcon.addEventListener("click", (event) => {
+          console.log('clicked!')
+          this.bindPlayAudio()
+          //handler();
+      })*/
     }
+
+    this.count++;
   }
 
   bindDisplayNextCard(handler) {
@@ -569,7 +591,6 @@ class View {
 
 
   displayProgressBarStart(start, total) {
-    console.log("total", total);
     this.start.innerHTML = start;
     this.end.innerHTML = total;
 
@@ -612,7 +633,6 @@ class View {
       //this.badButton.style.display = "block";
       //this.goodButton.style.display = "block";
       this.answer.style.opacity = 1;
-      console.log(this.answer.style.opacity);
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
     }
@@ -816,4 +836,26 @@ class View {
       handler();
     });
   }
+
+  bindPlayAudio(handler) {
+   
+    /*
+    console.log(this.svgAudioCtaArray.length);
+    console.log('bound');
+
+    this.svgAudioCtaArray.forEach((cta) => {
+
+      cta.addEventListener("click", (event) => {
+          console.log('cta clicked!')
+          console.log(event.target.id)
+          if (event.target.id == cta.id) {
+            console.log('dealt with!')
+            handler();
+        }
+      });
+    });
+    */ 
+    
+  }
+    
 }

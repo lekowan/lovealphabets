@@ -344,7 +344,7 @@ class View {
   }
 
   bindShowChart(handler) {
-    console.log(this.languageViewCtaArray);
+    console.log('view', this.languageViewCtaArray);
     let boolean;
 
     this.languageViewCtaArray.forEach((cta) => {

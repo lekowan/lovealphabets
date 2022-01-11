@@ -9,6 +9,7 @@ const language = "ko-KR";
 const activateSpeech = true;
 
 // Gradient
+const gradientBackground = "pink-background";
 const loadergradientBackground = "pink-loader-background";
 
 // CTA Background
@@ -187,7 +188,9 @@ function getCharacter(n){
   if (!n) {
     n = this;
   }
+  console.log(n);
   let obj = allSyllableMap[n];
+  console.log('char', obj);
   return obj["character"];   
 }
 
@@ -195,7 +198,9 @@ function translation(n) {
   if (!n) {
     n = this;
   }
+  console.log(n);
   let obj = allSyllableMap[n];
+  console.log(obj);
   return obj["letter"];
 }
 
