@@ -31,7 +31,7 @@ class Model {
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
 
-            /*
+            
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
 
                 // transform object into array
@@ -39,7 +39,7 @@ class Model {
 
                 // save data in local storage
                 this._commitData(norwegianMysteryOfNilsVocabularySrsData);
-
+            /*
             } else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
 
                 // transform object into array
@@ -56,17 +56,18 @@ class Model {
                 // save data in local storage
                 this._commitData(mandarinHsk1VocabularySrsData);
 
+            */
                 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
             } else {
-            */
+            
                 // transform object into array
                 this.newItemsArray = Object.keys(allSyllableMap);
 
                 // save data in local storage
                 this._commitData(allSyllableMap);
-            // }
+            }
         }
 
         // If data exist, filter out new items and due items
@@ -129,7 +130,7 @@ class Model {
             ///////////////////////////////////////////////////////////////////////////////////////////
             /////////////////// TO BE DELETED
 
-            /*
+            
             if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = norwegianMysteryOfNilsVocabularySrsProgress.newItemsArray;
@@ -138,34 +139,15 @@ class Model {
 
                 timeStamp = todaysDate;
 
-
-            } else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
-                _progress.timeStamp = todaysDate;
-                _progress.newItemsArray = koreanIntegratedKoreanSrsProgress.newItemsArray;
-                _progress.completedItemsArray = [];
-                _progress.dueTodayItemsArray = koreanIntegratedKoreanSrsProgress.newItemsArray;
-
-                timeStamp = todaysDate;
-
-            } else if (localStorageKey == "mandarin" + "Hsk1Vocabulary" + "Srs") {
-                _progress.timeStamp = todaysDate;
-                _progress.newItemsArray = mandarinHsk1VocabularySrsProgress.newItemsArray;
-                _progress.completedItemsArray = [];
-                _progress.dueTodayItemsArray = mandarinHsk1VocabularySrsProgress.newItemsArray;
-
-                timeStamp = todaysDate;
-
-            
-            } else {
+           } else {
                 
-            */
                 _progress.timeStamp = todaysDate;
                 _progress.newItemsArray = this.newItemsArray;
                 _progress.completedItemsArray = [];
                 _progress.dueTodayItemsArray = this.dueTodayItemsArray;
 
                 timeStamp = todaysDate;
-            // }
+            }
 
             this.allNewCards = this.newItemsArray.slice(0, this.number);
 
