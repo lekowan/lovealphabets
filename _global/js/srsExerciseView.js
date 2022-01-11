@@ -476,7 +476,7 @@ class View {
 
       if(allSyllableMap[card].pinyin){
         this.pinyin = this.createElement("span", "pinyin");
-        this.pinyin.textContent = '[' + allSyllableMap[card].pinyin + ']';
+        this.pinyin.textContent = '(' + allSyllableMap[card].pinyin + ')';
         nextCardWordOriginal.textContent = allSyllableMap[card].character;
 
         nextCardWordOriginal.append(this.pinyin);
