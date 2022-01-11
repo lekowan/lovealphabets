@@ -174,8 +174,8 @@ class Controller {
     this.model.addCard();
   };
 
-  onNextCardAdded = (card, answer) => {
-    this.view.addNextCard(card);
+  onNextCardAdded = (card, answer, isNew) => {
+    this.view.addNextCard(card, isNew);
     this.view.displayAnswer(answer);
     //this.view.bindPlayAudio();
   };

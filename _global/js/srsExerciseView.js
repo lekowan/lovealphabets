@@ -412,13 +412,13 @@ class View {
 
   }
 
-  addNextCard(card) {
+  addNextCard(card, isNew) {
     if(card != undefined){
       let nextCard;
       let nextCardWordOriginal;
       //let nextCardWordTranslation;
       let nextCardWordSeparator;
-      let cardIcon;
+      let newIcon;
 
       //let nextAnswer = this.answer;
 
@@ -435,12 +435,12 @@ class View {
       this.answer = this.createElement("p", "word-translation");
       this.answer.style.opacity = 0;
 
-      /*
-      this.cardIcon = this.createElement("div", "audio-icon");
-      this.cardIcon.textContent = "icon";
-      this.cardIcon.id = this.count;
-      */  
-    
+      if(isNew){
+        newIcon = this.createElement("div", "new-icon");
+        newIcon.textContent = "new";
+        nextCard.append(newIcon);
+      } 
+
       // Create audio icon
       this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       this.svgAudio.id = this.count;
@@ -473,6 +473,7 @@ class View {
       this.svgAudioCtaArray.push(this.svgAudio);
       console.log(this.svgAudioCtaArray);
       console.log(this.svgAudioCtaArray.length);
+
 
       if(allSyllableMap[card].pinyin){
         this.pinyin = this.createElement("span", "pinyin");

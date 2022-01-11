@@ -277,6 +277,11 @@ class Model {
         return this.allNewCards[this.tracker];
     }
 
+    get isWordNew() {
+        //console('is new', this.newItemsArray.includes(this.allNewCards[this.tracker]));
+        return this.newItemsArray.includes(this.allNewCards[this.tracker]);
+    }
+
     get trackerValue() {
         return this.tracker;
     }
@@ -420,7 +425,7 @@ class Model {
                 let _data = JSON.parse(localStorage.getItem(localStorageKey + "Data"));
                 let dateArray = [];
 
-                // Push SRS data from local Storage into Date Array
+                // Push SRS data from local Storage into Data Array
                 if (_data) {
                     for (let item in _data) {
                         let wordData = _data[item];
@@ -447,13 +452,13 @@ class Model {
                 this.incorrectArray = [];
 
                 // add next card
-                this.onCardAdded(this.nextCard, this.newAnswer);
+                this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
             }
         }
         // If end of array is NOT reached
         else {
             // add next card
-            this.onCardAdded(this.nextCard, this.newAnswer);
+            this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
         }
     }
 

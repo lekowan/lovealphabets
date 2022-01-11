@@ -1528,9 +1528,7 @@ function getCharacter(n){
   if (!n) {
     n = this;
   }
-  console.log(n);
   let obj = allSyllableMap[n];
-  console.log('char', obj);
   return obj["character"];   
 }
 
@@ -1538,9 +1536,7 @@ function translation(n) {
   if (!n) {
     n = this;
   }
-  console.log(n);
   let obj = allSyllableMap[n];
-  console.log(obj);
   return obj["letter"];
 }
 

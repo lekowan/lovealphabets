@@ -1536,11 +1536,12 @@ p.learn-how {
 }
 
 .settings-menu__icon {
-    display: flex;
-    margin-top: 1px;
-    margin-left: auto;
-    opacity: 0.6;
-    cursor: pointer;
+  display: flex;
+  margin-top: 1px;
+  margin-left: auto;
+  opacity: 0.1;
+  cursor: pointer;
+  transform: scale(.75);
 }
 
 .home-language-icon {

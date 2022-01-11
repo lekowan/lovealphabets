@@ -650,6 +650,23 @@ h2 {
     padding: 30px;
     border-radius: 13px;
     flex-direction: column;
+    position: relative;
+}
+
+.new-icon {
+    position: absolute;
+    top: 23px;
+    right: 26px;
+    font-size: 15px;
+    font-size: 9px;
+    padding: 3px 6px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    /*border: 1px #14e38c solid;
+    color: #14e38c;*/
+    border: 1px #c1abff solid;
+    color: #bda7ff;
 }
 
 p.word-original {
