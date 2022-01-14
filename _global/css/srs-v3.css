@@ -689,12 +689,14 @@ p.example-target {
     font-size: 18px;
     margin: 10px 0 0 0;
     padding: 0;
+    font-weight: 400 !important;
 }
 
 p.example-english {
     font-size:14px;
     margin: 0;
     padding: 0;
+    font-weight: 400 !important;
 }
 
 .original-container {
@@ -719,10 +721,11 @@ p.example-english {
 p.word-separator {
     width: 100%;
     height: 1px;
-    background-color:#18093e; 
-    /*#c4c4c4;*/
+    /*background-color:#18093e; 
+    #c4c4c4;*/
     padding: 0;
     margin: 0;
+    border-top: solid #18093e 1px;
     opacity: .1;
 }
 
