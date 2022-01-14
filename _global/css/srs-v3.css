@@ -578,7 +578,7 @@ h2 {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100vw;
-  height: 190px;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -588,7 +588,7 @@ h2 {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: 100px;
 }
 
@@ -644,13 +644,15 @@ h2 {
     max-width:  400px;
     color: #18093e;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
     padding: 30px;
     border-radius: 13px;
     flex-direction: column;
     position: relative;
+    padding-top: 66px;
+    transition: height 0.1s ease-in;
 }
 
 .new-icon {
@@ -675,6 +677,24 @@ p.word-original {
     /* flex-direction: column;
     display: flex;
     */
+}
+
+.examples-container {
+    opacity: 0;
+    transition: 0.2s ease-in;
+    margin-top: 40px;
+}
+
+p.example-target {
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+p.example-english {
+    font-size:14px;
+    margin: 0;
+    padding: 0;
 }
 
 .original-container {
@@ -825,6 +845,8 @@ p.word-translation {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  top: 20%;
+  position: absolute;
 }
 
 .content {
@@ -909,6 +931,7 @@ p.word-translation {
   height: 80px;
   position: relative;
   overflow:  hidden;
+  margin-top: auto;
 }
 
 .good-bad {
@@ -997,6 +1020,7 @@ p.word-translation {
     margin-top: 20px;
   }
 
+/*
   .container {
     height: 120px;
   }
@@ -1004,6 +1028,8 @@ p.word-translation {
   .slide {
     height: 120px;
   }
+
+*/
 
   .character {
     font-size: 60px;

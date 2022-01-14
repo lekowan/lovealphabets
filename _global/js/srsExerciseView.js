@@ -429,7 +429,7 @@ class View {
 
       if (exerciseType == "vocabulary" || exerciseType == "vocabularyEnglish") {
       */
-      nextCard = this.createElement("div", "word");
+      this.nextCard = this.createElement("div", "word");
       nextCardWordOriginal = this.createElement("p", "word-original");
       nextCardWordSeparator = this.createElement("p", "word-separator");
       this.answer = this.createElement("p", "word-translation");
@@ -438,7 +438,7 @@ class View {
       if(isNew){
         newIcon = this.createElement("div", "new-icon");
         newIcon.textContent = "new";
-        nextCard.append(newIcon);
+        this.nextCard.append(newIcon);
       } 
 
       // Create audio icon
@@ -491,10 +491,33 @@ class View {
       nextCardOriginalContainer.append(nextCardWordOriginal, this.svgAudio)
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
-      nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
-      let nextCardSlide = this.createElement("div", "slide");
+      this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
+      
+      if(srsDataExamples[card]){
 
-      nextCardSlide.append(nextCard);
+        this.nextCardExamples = this.createElement("div", "examples-container");
+        console.log(srsDataExamples[card].examples.slice(0,2))
+        let wordExampleArray = srsDataExamples[card].examples.slice(0,2);
+        for(let example of wordExampleArray){
+
+          let exampleTarget = this.createElement("p", "example-target");
+          exampleTarget.textContent = example.target;
+          console.log(example.target);
+          this.nextCardExamples.append(exampleTarget);
+
+          let exampleEnglish = this.createElement("p", "example-english");
+          exampleEnglish.textContent = example.english;
+          console.log(example.english);
+          this.nextCardExamples.append(exampleEnglish);
+        }
+
+        this.nextCard.append(this.nextCardExamples);
+      }
+
+
+
+      let nextCardSlide = this.createElement("div", "slide");
+      nextCardSlide.append(this.nextCard);
       this.slides.append(nextCardSlide);
 
       /*this.cardIcon.addEventListener("click", (event) => {
@@ -630,10 +653,15 @@ class View {
       //this.goodButton.style.display = "none";
       this.answer.style.opacity = 0;
       this.goodBadButton.style.bottom = "-80px";
+      this.nextCardExamples.style.opacity = 0;
+      //this.nextCard.style.height = "200px";
+
     } else {
       //this.badButton.style.display = "block";
       //this.goodButton.style.display = "block";
       this.answer.style.opacity = 1;
+      this.nextCard.style.height = "auto";
+      this.nextCardExamples.style.opacity = 1;
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
     }
