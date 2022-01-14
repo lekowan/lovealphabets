@@ -527,15 +527,28 @@ class View {
       nextCardSlide.append(this.nextCard);
       this.slides.append(nextCardSlide);
 
-      /*this.cardIcon.addEventListener("click", (event) => {
-          console.log('clicked!')
-          this.bindPlayAudio()
-          //handler();
-      })*/
+      this.svgAudio.addEventListener("click", (event) => {
+          console.log('clicked!') ;
+          this.playSpeech (allSyllableMap[card].character);        
+      })
     }
 
     this.count++;
   }
+
+
+    // Play audio
+    playSpeech(string) {
+        let word = string;
+
+        // If speechSynthesis in user's browser
+        if (activateSpeech && "speechSynthesis" in window) {
+            let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
+            audioWord.lang = language;
+            window.speechSynthesis.speak(audioWord);
+        }
+    }
+
 
   bindDisplayNextCard(handler) {
     this.badButton.addEventListener("click", (event) => {
