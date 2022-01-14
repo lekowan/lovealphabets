@@ -719,17 +719,18 @@ p.example-english {
 }
 
 p.pinyin-icon {
-    font-size: 9px;
-    margin: 0 7px 5px auto;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 18px;
+    margin: 0 7px 6px auto;
     padding: 0;
-    /* border: 1px solid blue; */
-    font-weight: 900;
-    border-radius: 50px;
-    width: 25px;
+    border-bottom: 2px solid #baa3ff;
+    /* font-weight: 900; */
+    /* border-radius: 50px; */
+    width: 18px;
     text-align: center;
-    height: 25px;
-    line-height: 25px;
-    background-color: #bca5ff;
+    height: 18px;
+    line-height: 18px;
+    /* background-color: #bca5ff; */
     color: #27184d;
 }
 
