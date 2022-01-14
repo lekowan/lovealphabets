@@ -469,12 +469,6 @@ class View {
 
       this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
 
-      // Push View Chart CTAs into array so they can be accessed later
-      this.svgAudioCtaArray.push(this.svgAudio);
-      console.log(this.svgAudioCtaArray);
-      console.log(this.svgAudioCtaArray.length);
-
-
       let nextCardOriginalContainer = this.createElement("div", "original-container");
 
       if(allSyllableMap[card].pinyin){
@@ -499,28 +493,75 @@ class View {
 
       this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
       
+      let svgAudioCtaArray = [];
+
       if(typeof srsDataExamples !== 'undefined'){
 
         this.nextCardExamples = this.createElement("div", "examples-container");
         let wordExampleArray = srsDataExamples[card].examples.sort((a,b) => a.target.length - b.target.length)
                                                              .slice(0,2);
+        
+        
+
         console.log(wordExampleArray)
         for(let example of wordExampleArray){
+
+          let exampleTargetContainer = this.createElement("div", "example-target-container");
 
           let exampleTarget = this.createElement("p", "example-target");
           exampleTarget.textContent = example.target;
           console.log(example.target);
-          this.nextCardExamples.append(exampleTarget);
+
+          exampleTargetContainer.append(exampleTarget);
+
 
           let exampleEnglish = this.createElement("p", "example-english");
           exampleEnglish.textContent = example.english;
           console.log(example.english);
-          this.nextCardExamples.append(exampleEnglish);
+
+
+          let i = 1;
+
+          // Create audio icon
+          let svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          svgAudio.id = i;
+          svgAudio.classList.add("audio-icon-small");
+          svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+          svgAudio.setAttribute("height", "20px");
+          svgAudio.setAttribute("viewBox", "0 0 24 24");
+          svgAudio.setAttribute("width", "20px");
+          svgAudio.setAttribute("fill", "none");
+          svgAudio.setAttribute("stroke", "#18093e");
+          svgAudio.setAttribute("stroke-width", "2");
+
+          let svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
+          svgAudioPath1.setAttribute("fill", "none");
+          svgAudioPath1.setAttribute("stroke", "none");
+
+          let svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
+
+          let svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
+
+          let svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
+
+          svgAudio.append(svgAudioPath1, svgAudioPath2, svgAudioPath3, svgAudioPath4);
+
+          // Push View Chart CTAs into array so they can be accessed later
+          svgAudioCtaArray.push({'element': svgAudio, 'word': example.target});
+          //console.log(this.svgAudioCtaArray);
+          //console.log(this.svgAudioCtaArray.length);
+          
+          exampleTargetContainer.append(svgAudio);
+          this.nextCardExamples.append(exampleTargetContainer, exampleEnglish);
+
         }
 
         this.nextCard.append(this.nextCardExamples);
       }
-
 
 
       let nextCardSlide = this.createElement("div", "slide");
@@ -531,6 +572,18 @@ class View {
           console.log('clicked!') ;
           this.playSpeech (allSyllableMap[card].character);        
       })
+
+      console.log(svgAudioCtaArray);
+      
+      for(let audio of svgAudioCtaArray){
+        console.log(audio.word);
+        audio.element.addEventListener("click", (event) => {
+            console.log(audio.word);
+            this.playSpeech(audio.word);        
+        })
+      }
+      
+
     }
 
     this.count++;
@@ -539,7 +592,10 @@ class View {
 
     // Play audio
     playSpeech(string) {
+        console.log(string);
         let word = string;
+
+        //let word = string.replace('。', '');
 
         // If speechSynthesis in user's browser
         if (activateSpeech && "speechSynthesis" in window) {

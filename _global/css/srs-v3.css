@@ -685,11 +685,12 @@ p.word-original {
     opacity: 0;
     transition: 0.2s ease-in;
     margin-top: 20px;
+    width: 100%;
 }
 
 p.example-target {
     font-size: 18px;
-    margin: 10px 0 0 0;
+    margin: 0;
     padding: 0;
     font-weight: 600 !important;
 }
@@ -708,9 +709,22 @@ p.example-english {
     width: 100%;
 }
 
+.example-target-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+}
+
 .audio-icon {
   margin-bottom: 7px;
   cursor: pointer;
+}
+
+
+.audio-icon-small {
+  margin-bottom: 7px;
+  cursor: pointer;
+  transform: scale(.8);
 }
 
 .pinyin {
