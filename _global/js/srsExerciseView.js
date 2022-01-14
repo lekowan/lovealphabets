@@ -483,10 +483,10 @@ class View {
         nextCardWordOriginal.textContent = allSyllableMap[card].character;
 
         this.pinyinIcon = this.createElement("p", "pinyin-icon");
-        this.pinyinIcon.textContent = "拼";
+        this.pinyinIcon.textContent = "show pinyin";
 
         nextCardWordOriginal.append(this.pinyin);
-        nextCardOriginalContainer.append(nextCardWordOriginal,this.pinyinIcon, this.svgAudio)
+        nextCardOriginalContainer.append(nextCardWordOriginal, this.svgAudio)
       }
 
       else {
@@ -499,7 +499,7 @@ class View {
 
       this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
       
-      if(srsDataExamples[card]){
+      if(typeof srsDataExamples !== 'undefined'){
 
         this.nextCardExamples = this.createElement("div", "examples-container");
         let wordExampleArray = srsDataExamples[card].examples.sort((a,b) => a.target.length - b.target.length)
@@ -660,7 +660,7 @@ class View {
       //this.goodButton.style.display = "none";
       this.answer.style.opacity = 0;
       this.goodBadButton.style.bottom = "-80px";
-      this.nextCardExamples.style.opacity = 0;
+      if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 0;
       //this.nextCard.style.height = "200px";
 
     } else {
@@ -668,7 +668,7 @@ class View {
       //this.goodButton.style.display = "block";
       this.answer.style.opacity = 1;
       this.nextCard.style.height = "auto";
-      this.nextCardExamples.style.opacity = 1;
+      if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
     }

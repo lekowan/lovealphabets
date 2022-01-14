@@ -637,6 +637,7 @@ h2 {
     font-size: 20px;
     font-weight: 500;
     height: 200px;
+    min-height: 200px;
     border: 1px solid rgb(241, 240, 244);
     box-shadow: 2px 2px rgb(241 240 244);
     background-color: white;
@@ -656,6 +657,7 @@ h2 {
 }
 
 .new-icon {
+    display: none;
     position: absolute;
     top: 23px;
     left: 26px;
@@ -682,7 +684,7 @@ p.word-original {
 .examples-container {
     opacity: 0;
     transition: 0.2s ease-in;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 p.example-target {
@@ -714,7 +716,7 @@ p.example-english {
 .pinyin {
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif !important;
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 6px;
 }
 
