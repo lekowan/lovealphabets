@@ -475,20 +475,26 @@ class View {
       console.log(this.svgAudioCtaArray.length);
 
 
+      let nextCardOriginalContainer = this.createElement("div", "original-container");
+
       if(allSyllableMap[card].pinyin){
         this.pinyin = this.createElement("span", "pinyin");
         this.pinyin.textContent = '(' + allSyllableMap[card].pinyin + ')';
         nextCardWordOriginal.textContent = allSyllableMap[card].character;
 
+        this.pinyinIcon = this.createElement("p", "pinyin-icon");
+        this.pinyinIcon.textContent = "拼";
+
         nextCardWordOriginal.append(this.pinyin);
+        nextCardOriginalContainer.append(nextCardWordOriginal,this.pinyinIcon, this.svgAudio)
       }
 
       else {
         nextCardWordOriginal.textContent = allSyllableMap[card].character; 
+        nextCardOriginalContainer.append(nextCardWordOriginal, this.svgAudio)
       }
       
-      let nextCardOriginalContainer = this.createElement("div", "original-container");
-      nextCardOriginalContainer.append(nextCardWordOriginal, this.svgAudio)
+  
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
       this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
