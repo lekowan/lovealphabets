@@ -712,7 +712,8 @@ p.example-english {
 .example-target-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 7px;
+    margin-top: 15px;
+    align-items: end;
 }
 
 .audio-icon {
@@ -722,7 +723,6 @@ p.example-english {
 
 
 .audio-icon-small {
-  margin-bottom: 7px;
   cursor: pointer;
   transform: scale(.8);
 }
