@@ -14,9 +14,9 @@ let arr = [...new Set(newArr)]
 let examples = {}
 let count = 1;
 
-for(item in corpus){
-  let wordMandarin = corpus[item].mandarin
-  let wordEnglish = corpus[item].english
+for(item in corpusObj){
+  let wordMandarin = corpusObj[item].mandarin
+  let wordEnglish = corpusObj[item].english
 
   if(wordMandarin.split(' ').filter(i => i != " " && i != "。" && i != "!" && i != "?").every(char => arr.includes(char))){
     examples[count] = { english: wordEnglish, target: wordMandarin} 
