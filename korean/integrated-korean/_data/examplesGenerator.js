@@ -1,16 +1,16 @@
 let newArr = []
 
-// Loop through HSK object and create an array of unique characters
+// Loop through Integrated object and create an array of unique characters
 let initialArr = Object.keys(allSyllableMap).map(i => allSyllableMap[i].character)
 initialArr.forEach(item => {
-  let a = item.split('');
+  let a = item.split(' ');
   a.forEach(char => newArr.push(char))
 })
 
 // Remove duplicates from array
 let arr = [...new Set(newArr)]
               
-// Loop through corpus and build a new object that includes character from HSK array only
+// Loop through corpus and build a new object (examples.js) that includes character from HSK array only
 let examples = {}
 let count = 1;
 
@@ -18,14 +18,16 @@ for(item in corpus){
   let wordMandarin = corpus[item].mandarin
   let wordEnglish = corpus[item].english
 
-  if(wordMandarin.split('').filter(i => i != " " && i != "。" && i != "!" && i != "?").every(char => arr.includes(char))){
-    examples[count] = { english: wordEnglish, mandarin: wordMandarin} 
+  if(wordMandarin.split(' ').filter(i => i != " " && i != "。" && i != "!" && i != "?").every(char => arr.includes(char))){
+    examples[count] = { english: wordEnglish, target: wordMandarin} 
     count++
   }
    
 }
 
+console.log(examples);
 
+/*
 // Build a srsDataExamples array that include original SRS data plus examples 
 for(item in allSyllableMap){
     let examplesArray = []
@@ -41,6 +43,7 @@ for(item in allSyllableMap){
 }
 
 console.log(allSyllableMap);
+*/
 
 
 
