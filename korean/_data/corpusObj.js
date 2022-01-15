@@ -1,6 +1,4 @@
 const corpusObj = { 
-
-{
     "1": {
         "mandarin": "뭔가 해보자!",
         "english": "Let's try something."
