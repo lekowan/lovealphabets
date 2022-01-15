@@ -1704,12 +1704,21 @@ const allSyllableMap = {
     }
 }
 
+function getCharacter(n){
+  if (!n) {
+    n = this;
+  }
+  let obj = allSyllableMap[n];
+  return obj["character"];   
+}
+
 function translation(n) {
-    if (!n) { n = this; }
-    console.log(n);
-    let letterObj = allSyllableMap[n];
-    console.log(letterObj);
-    return letterObj.letter;
+  if (!n) {
+    n = this;
+  }
+  let obj = allSyllableMap[n];
+  return obj["letter"];
 }
 
 String.prototype.romanize = translation;
+String.prototype.original = getCharacter;
