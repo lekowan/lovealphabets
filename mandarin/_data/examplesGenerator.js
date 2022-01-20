@@ -19,7 +19,7 @@ for(item in corpus){
   let wordEnglish = corpus[item].english
 
   if(wordMandarin.split('').filter(i => i != " " && i != "。" && i != "!" && i != "?").every(char => arr.includes(char))){
-    examples[count] = { english: wordEnglish, mandarin: wordMandarin} 
+    examples[count] = { english: wordEnglish, target: wordMandarin} 
     count++
   }
    

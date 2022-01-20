@@ -498,6 +498,7 @@ class View {
       if(typeof srsDataExamples !== 'undefined'){
 
         this.nextCardExamples = this.createElement("div", "examples-container");
+        console.log(srsDataExamples[card].examples);
         let wordExampleArray = srsDataExamples[card].examples.sort((a,b) => a.target.length - b.target.length)
                                                              .slice(0,2);
         

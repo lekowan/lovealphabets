@@ -3,12 +3,14 @@ let newArr = []
 // Loop through Integrated object and create an array of unique characters
 let initialArr = Object.keys(allSyllableMap).map(i => allSyllableMap[i].character)
 initialArr.forEach(item => {
-  let a = item.split(' ');
+  let a = item.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(' ');
   a.forEach(char => newArr.push(char))
 })
 
 // Remove duplicates from array
 let arr = [...new Set(newArr)]
+
+console.log(arr);
               
 // Loop through corpus and build a new object (examples.js) that includes character from HSK array only
 let examples = {}
@@ -18,7 +20,11 @@ for(item in corpusObj){
   let wordMandarin = corpusObj[item].mandarin
   let wordEnglish = corpusObj[item].english
 
-  if(wordMandarin.split(' ').filter(i => i != " " && i != "。" && i != "!" && i != "?").every(char => arr.includes(char))){
+  if(wordMandarin.split(' ')
+                 .filter(i => i != " " && i != "。" && i != "!" && i != "?")
+                 .some(char => arr.includes(char))
+                 )
+  {
     examples[count] = { english: wordEnglish, target: wordMandarin} 
     count++
   }
