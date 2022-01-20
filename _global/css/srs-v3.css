@@ -681,6 +681,25 @@ p.word-original {
     */
 }
 
+.pinyin-button {
+    position: absolute;
+    left: 21px;
+    top: 76px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    padding: 4px 9px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    background: #7e7989;
+}
+
+.hidden {
+    color: #14053b !important;
+    background: #cac8cd !important;
+}
+
+
 .examples-container {
     opacity: 0;
     transition: 0.2s ease-in;

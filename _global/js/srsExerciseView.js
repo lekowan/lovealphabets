@@ -61,6 +61,17 @@ class View {
       return (window.location.href = "../");
     });
 
+    // Create close button
+    this.pinyinButton = this.createElement("div", "pinyin-button");
+    this.pinyinButton.textContent = "pinyin ✓";
+
+    this.showPinyin = true;
+
+    this.pinyinButton.addEventListener("click", (event) => {
+      this.displayPinyin();
+    });
+
+
     // Create SRS practice header title
     this.languagePractice = this.createElement("p", "language-practice");
     this.languagePractice.textContent = "SRS Practice";
@@ -110,7 +121,7 @@ class View {
     this.content.append(this.header, this.bodyContent, this.buttonArea);
 
     // Append content div to app
-    this.app.append(this.content);
+    this.app.append(this.content, this.pinyinButton);
 
     // Create settings button
     this.settings = this.createElement("div", "settings");
@@ -368,6 +379,23 @@ class View {
 
   $ = (n) => document.querySelector(n);
 
+
+  // Display Pinyin
+
+  displayPinyin(){
+    if(this.showPinyin){
+      this.pinyin.style.display = "none";
+      this.pinyinButton.classList.add("hidden");
+      this.pinyinButton.textContent = "pinyin";
+    }
+    else {
+      this.pinyin.style.display = "inline";
+      this.pinyinButton.classList.remove("hidden");
+      this.pinyinButton.textContent = "pinyin ✓";
+    }
+    this.showPinyin = !this.showPinyin;
+  }
+
   // Generate Today's Items cards and add into Today's Item popover
   addTodaysCards(array) {
 
@@ -475,6 +503,14 @@ class View {
         this.pinyin = this.createElement("span", "pinyin");
         this.pinyin.textContent = '(' + allSyllableMap[card].pinyin + ')';
         nextCardWordOriginal.textContent = allSyllableMap[card].character;
+
+        if(this.showPinyin){
+          this.pinyin.style.display = "inline";
+        }
+
+        else {
+         this.pinyin.style.display = "none"; 
+        }
 
         this.pinyinIcon = this.createElement("p", "pinyin-icon");
         this.pinyinIcon.textContent = "show pinyin";
