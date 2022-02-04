@@ -23,7 +23,7 @@ const welcomeIntro = "In this spaced-repetition practice (SRS), you will study n
 const allSyllableMap = {
     "1": {
         "character": "我",
-        "letter": "I or me",
+        "letter": "I or I",
         "pinyin": "wǒ"
     },
     "2": {
