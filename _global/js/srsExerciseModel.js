@@ -20,54 +20,16 @@ class Model {
 
         // If data not in local storage, create and save the data object
         if (!_data) {
-
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////
-
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            /////////////////// TO BE DELETED
-
-            /*
-            if (localStorageKey == "norwegian" + "MysteryOfNilsVocabulary" + "Srs") {
-
-                alert('initial srs data saved');
-                // transform object into array
-                this.newItemsArray = Object.keys(norwegianMysteryOfNilsVocabularySrsData);
-
-                // save data in local storage
-                this._commitData(norwegianMysteryOfNilsVocabularySrsData);
-            
-            } else if (localStorageKey == "korean" + "IntegratedKorean" + "Srs") {
-
-                // transform object into array
-                this.newItemsArray = Object.keys(koreanIntegratedKoreanSrsData);
-
-                // save data in local storage
-                this._commitData(koreanIntegratedKoreanSrsData);
-
-            } else if (localStorageKey == "mandarin" + "Hsk1Vocabulary" + "Srs") {
-
-                // transform object into array
-                this.newItemsArray = Object.keys(mandarinHsk1VocabularySrsData);
-
-                // save data in local storage
-                this._commitData(mandarinHsk1VocabularySrsData);
-
-            */
-                ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-            //} else {
             
                 // transform object into array
                 this.newItemsArray = Object.keys(allSyllableMap);
 
+                let obj = {}
+                this.newItemsArray.forEach(item => obj[item] = {})
+                console.log(obj);
+
                 // save data in local storage
-                this._commitData(allSyllableMap);
+                this._commitData(obj);
             // }
         }
 
