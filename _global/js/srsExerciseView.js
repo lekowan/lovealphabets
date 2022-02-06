@@ -61,15 +61,18 @@ class View {
       return (window.location.href = "../");
     });
 
-    // Create close button
-    this.pinyinButton = this.createElement("div", "pinyin-button");
-    this.pinyinButton.textContent = "pinyin ✓";
+    // If language is Mandarin
+      if(language == "zh-CN"){
+      // Create pinyin button
+      this.pinyinButton = this.createElement("div", "pinyin-button");
+      this.pinyinButton.textContent = "pinyin ✓";
 
-    this.showPinyin = true;
+      this.showPinyin = true;
 
-    this.pinyinButton.addEventListener("click", (event) => {
-      this.displayPinyin();
-    });
+      this.pinyinButton.addEventListener("click", (event) => {
+        this.displayPinyin();
+      });
+    }
 
 
     // Create SRS practice header title
@@ -121,7 +124,12 @@ class View {
     this.content.append(this.header, this.bodyContent, this.buttonArea);
 
     // Append content div to app
-    this.app.append(this.content, this.pinyinButton);
+    this.app.append(this.content);
+
+    // If language is Mandarin, append pinyin button
+    if(language == "zh-CN"){
+      this.app.append(this.pinyinButton);
+    }
 
     // Create settings button
     this.settings = this.createElement("div", "settings");
