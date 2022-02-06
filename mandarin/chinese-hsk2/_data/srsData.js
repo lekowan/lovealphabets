@@ -53,7 +53,7 @@ const allSyllableMap = {
     },
     "7": {
         "character": "我们",
-        "letter": "we or me",
+        "letter": "we or us",
         "pinyin": "wǒmen"
     },
     "8": {
