@@ -15,7 +15,7 @@ const chineseHsk1Map = {
     "letter": "she or her"
   },
   "我们  (wǒmen)": {
-    "letter": "we or me"
+    "letter": "we or us"
   },
   "人  (rén)": {
     "letter": "person or people"

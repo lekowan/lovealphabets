@@ -3,8 +3,8 @@
 class Model {
     constructor() {
         // Declare today's date, start of day and end of day
-        //const now = new Date();
-        const now = new Date("2022/02/07"); /* for testing only - replaces previous line */
+        const now = new Date();
+        //const now = new Date("2022/02/07"); /* for testing only - replaces previous line */
         const todaysDate = now.toLocaleDateString("en-GB");
 
         let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();

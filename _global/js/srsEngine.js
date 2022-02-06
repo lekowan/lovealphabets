@@ -45,8 +45,8 @@ class SpacedRepetition {
     else {
         this.state = 'bad';
     }
-    //this.date = new Date().getTime() + getNextTime();
-    this.date = new Date('2022/02/07').getTime() + getNextTime();
+    this.date = new Date().getTime() + getNextTime();
+    //this.date = new Date('2022/02/07').getTime() + getNextTime();
     return this;
   }
 

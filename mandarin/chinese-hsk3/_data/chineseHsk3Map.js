@@ -21,7 +21,7 @@ const chineseHsk3Map = {
     "letter": "it"
   },
   "我们  (wǒmen)": {
-    "letter": "we or me"
+    "letter": "we or us"
   },
   "自己  (zìjǐ)": {
     "letter": "oneself"

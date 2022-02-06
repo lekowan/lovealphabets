@@ -21,7 +21,7 @@ const chineseHsk2Map = {
     "letter": "it"
   },
   "我们  (wǒmen)": {
-    "letter": "we or me"
+    "letter": "we or us"
   },
   "大家  (dàjiā)": {
     "letter": "everybody"
