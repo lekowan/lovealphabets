@@ -157,6 +157,7 @@ class View {
       });
 
       languageReset.addEventListener("click", function () {  
+        alert("Are you sure?");
         localStorage.removeItem(item.localStorageKey + "Number");
         localStorage.removeItem(item.localStorageKey + "Data");
         localStorage.removeItem(itemlocalStorageKey + "Progress");
