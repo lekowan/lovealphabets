@@ -162,8 +162,8 @@ class View {
           alert("done!");
           localStorage.removeItem(item.localStorageKey + "Number");
           localStorage.removeItem(item.localStorageKey + "Data");
-          localStorage.removeItem(itemlocalStorageKey + "Progress");
-          localStorage.removeItem(itemlocalStorageKey + "NextDate");
+          localStorage.removeItem(item.localStorageKey + "Progress");
+          localStorage.removeItem(item.localStorageKey + "NextDate");
           location.reload();
           console.log(localStorage);
 
