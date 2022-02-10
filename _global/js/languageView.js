@@ -157,13 +157,19 @@ class View {
       });
 
       languageReset.addEventListener("click", function () {  
-        alert("Are you sure?");
-        localStorage.removeItem(item.localStorageKey + "Number");
-        localStorage.removeItem(item.localStorageKey + "Data");
-        localStorage.removeItem(itemlocalStorageKey + "Progress");
-        localStorage.removeItem(itemlocalStorageKey + "NextDate");
-        location.reload();
-        console.log(localStorage);
+        let text = "Press a button!\nEither OK or Cancel.";
+        if (confirm(text) == true) {
+          alert("done!");
+          localStorage.removeItem(item.localStorageKey + "Number");
+          localStorage.removeItem(item.localStorageKey + "Data");
+          localStorage.removeItem(itemlocalStorageKey + "Progress");
+          localStorage.removeItem(itemlocalStorageKey + "NextDate");
+          location.reload();
+          console.log(localStorage);
+
+        } else {
+          alert("cancelled!");
+        }
       });
 
     });
