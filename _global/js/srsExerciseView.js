@@ -545,8 +545,6 @@ class View {
         console.log(srsDataExamples[card].examples);
         let wordExampleArray = srsDataExamples[card].examples.sort((a,b) => a.target.length - b.target.length)
                                                              .slice(0,2);
-        
-        
 
         console.log(wordExampleArray)
         for(let example of wordExampleArray){
@@ -613,18 +611,42 @@ class View {
       nextCardSlide.append(this.nextCard);
       this.slides.append(nextCardSlide);
 
+      // Add event listener to main audio icon
       this.svgAudio.addEventListener("click", (event) => {
-          console.log('clicked!') ;
-          this.playSpeech (allSyllableMap[card].character);        
+          
+          // Play audio on click
+          this.playSpeech (allSyllableMap[card].character);
+          
+          // Animate audio icon
+          let audioIcon = this.svgAudio;
+          
+          // Add key frame animation
+          audioIcon.classList.add("audio-icon-animation");
+          
+          // Remove key frame animation
+          setTimeout(function() {
+              audioIcon.classList.remove("audio-icon-animation");
+          }, 500);
       })
-
-      console.log(svgAudioCtaArray);
       
+      // Add event listeners to audio icons of each example
       for(let audio of svgAudioCtaArray){
-        console.log(audio.word);
         audio.element.addEventListener("click", (event) => {
-            console.log(audio.word);
-            this.playSpeech(audio.word);        
+          
+          // Play audio on click
+          this.playSpeech(audio.word); 
+
+          // Animate audio icon
+          //let audioIcon = this.svgAudio;
+
+          // Add key frame animation
+          audio.element.classList.add("audio-icon-animation-small");
+
+          // Remove key frame animation
+          setTimeout(function() {
+              audio.element.classList.remove("audio-icon-animation-small");
+          }, 500);
+               
         })
       }
       

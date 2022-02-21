@@ -30,6 +30,23 @@ class Model {
     }
 
 
+    // New settings Popover
+    showNewItemsPopover(boolean, localStorageKey) {
+        
+        languageContent.forEach(item => {
+            if(item.localStorageKey == localStorageKey){
+                console.log(localStorageKey);
+            }
+        })
+
+        this.onShowNewSettingsChanged(boolean);
+    }
+
+    bindOnShowNewSettingsChanged(callback) {
+        this.onShowNewSettingsChanged = callback;
+    }
+
+
     // Save in local storage methods
     _commitNextDate(nextDate) {
         localStorage.setItem(localStorageKey + 'NextDate', JSON.stringify(nextDate))

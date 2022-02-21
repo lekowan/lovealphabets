@@ -1539,7 +1539,7 @@ p.learn-how {
   display: flex;
   margin-top: 1px;
   margin-left: auto;
-  opacity: 0.1;
+  opacity: 1;
   cursor: pointer;
   transform: scale(.75);
 }
@@ -1974,6 +1974,87 @@ article.home-language:nth-child(7n + 7) .language-cta {
     width: calc(100% - 42px);
   }
 }
+
+
+/*///////////////////////////////////////////////////////////////////////////// NEW ITEMS SETTINGS POPOVER ////////////////////////////////////////////////////////////////////////////*/
+
+.popover {
+  position: fixed !important;
+}
+
+/*
+.popover {
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 200px);
+    width: 400px;
+    background-color: white;
+    height: 500px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 14px;
+}
+
+
+.popover-content {
+    padding: 0 35px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 137px);
+    margin-top: 55px;
+}
+
+.shortcut-title {
+  font-size: 15px;
+  font-weight: 600;
+  height: 55px;
+  border-bottom: 1px #f4f4f4 solid;
+  line-height: 55px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.popover-content-text {
+    text-align: center;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.new-items-input {
+    width: 90px;
+    border-bottom: 1px solid #fbc8fe;
+    text-align: center;
+    font-size: 35px;
+}
+
+.continue-popover-container {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    background: #fff;
+    padding-top: 20px;
+    border-top: 1px #f4f4f4 solid;
+}
+
+.purple-background {
+    background: #cebdff;
+    background: linear-gradient(70deg, #cebdff 0%, rgb(235, 229, 255) 100%);
+}
+
+*/
 
 /*///////////////////////////////////////////////////////////////////////////// FOOTER ////////////////////////////////////////////////////////////////////////////*/
 

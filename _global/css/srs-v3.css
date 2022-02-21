@@ -746,6 +746,37 @@ p.example-english {
   transform: scale(.8);
 }
 
+.audio-icon-animation {
+  transition: all;
+  animation: --scale-up ease-in 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes --scale-up {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+     transform: scale(1);
+  }
+}
+
+.audio-icon-animation-small {
+  transition: all;
+  animation: --scale-up-small ease-in 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes --scale-up-small {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+     transform: scale(.8);
+  }
+}
+
+
 .pinyin {
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif !important;

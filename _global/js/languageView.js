@@ -78,6 +78,7 @@ class View {
     this.home = this.createElement("div", "home");
 
     this.languageViewCtaArray = [];
+    this.languageResetCtaArray = [];
 
     // Go through languageContent array and display content
     languageContent.forEach((item, number) => {
@@ -125,9 +126,16 @@ class View {
       this.svgClearPath2.setAttribute("d", "M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z");
 
       this.svgClear.append(this.svgClearPath1, this.svgClearPath2);
+      
       this.languageReset = this.createElement("div", "settings-menu__icon");
+      
+
+      let languageReset = this.svgClear;
+      languageReset.id = item.localStorageKey;
+
+      this.languageResetCtaArray.push(languageReset);
+
       this.languageReset.append(this.svgClear);
-      let languageReset = this.languageReset;
 
       // End of SVG 
 
@@ -156,6 +164,7 @@ class View {
         window.location.href = item.url;
       });
 
+      /*
       languageReset.addEventListener("click", function () {  
         let text = "Press a button!\nEither OK or Cancel.";
         if (confirm(text) == true) {
@@ -171,6 +180,9 @@ class View {
           alert("cancelled!");
         }
       });
+      */
+
+      console.log(this.languageResetCtaArray);
 
     });
 
@@ -214,9 +226,62 @@ class View {
 
     this.footer.append(this.footerContent, this.footerEmail);
 
+    // New Items Popover
+    this.newItemsContainer = this.createElement("div", "popover");
+    this.newItemsTitle = this.createElement("div", "shortcut-title");
+    this.newItemsTitle.textContent = "New characters settings";
+    this.newItemsContent = this.createElement("div", "popover-content");
+    this.newItemsContent.classList.add("popover-content-center");
+    this.newItemsContentText = this.createElement("div", "popover-content-text");
+    this.newItemsContentText.innerHTML = "How many new characters do you want to learn everyday?";
+    this.newItemsContinueContainer = this.createElement("div", "continue-popover-container");
+    this.newItemsContinueButton = this.createElement("div", "continue-popover");
+    this.newItemsContinueButton.id = "continue-new-items";
+    this.newItemsContinueButton.classList.add("purple-background");
+    this.newItemsContinueButton.textContent = "CONTINUE";
+    this.newItemsContinueContainer.append(this.newItemsContinueButton);
+
+    // The form, with a [type="text"] input, and a submit button
+    this.newItemsForm = this.createElement("form", "new-items-form");
+    this.newItemsForm.setAttribute("onSubmit", "return false");
+
+    // Input
+    this.input = this.createElement("input", "new-items-input");
+    this.input.type = "number";
+    this.input.value = this._number || 5;
+    this.input.min = 1;
+    this.input.name = "todo";
+
+    // Hidden form submit
+    this.inputSubmit = this.createElement("input");
+    this.inputSubmit.type = "submit";
+    this.inputSubmit.hidden = true;
+
+    // Append the input and hidden submit to the form
+    this.newItemsForm.append(this.input, this.inputSubmit);
+    this.newItemsContent.append(this.newItemsContentText, this.newItemsForm);
+
+    this.newItemsContainer.append(this.newItemsTitle, this.newItemsContent, this.newItemsContinueContainer);
+    this.newItemsContainer.style.display = "none";
+
+    this.settingsCloseButton = this.createElement("div", "chart-close");
+
+    // Today's Items Popover
+    this.todayContainer = this.createElement("div", "popover");
+    this.todayTitle = this.createElement("div", "shortcut-title");
+    this.todayTitle.textContent = "Today's items";
+    this.todayContent = this.createElement("div", "popover-content");
+    this.todayContinueContainer = this.createElement("div", "continue-popover-container");
+    this.todayContinueButton = this.createElement("div", "continue-popover");
+    this.todayContinueButton.id = "continue-new-items";
+    this.todayContinueButton.classList.add("purple-background");
+    this.todayContinueButton.textContent = "CONTINUE";
+    this.todayContinueContainer.append(this.todayContinueButton);
+
+
     // Append all elements
     this.homeWrapper.append(this.home);
-    this.homeContainer.append(this.header, this.languageHeader, this.homeWrapper, this.footer, this.popoverBackground, this.chartContainer);
+    this.homeContainer.append(this.header, this.languageHeader, this.homeWrapper, this.footer, this.popoverBackground, this.chartContainer, this.newItemsContainer);
     this.app.append(this.homeContainer);
   } // End of constructor
 
@@ -265,6 +330,7 @@ class View {
     this.chartWrapper = this.createElement("div", "chart-wrapper");
     this.category = this.createElement("div", "category");
 
+    if(chart){
     chart.forEach((subChart) => {
       let subChartTitle = this.createElement("div", "character-title");
       subChartTitle.innerHTML = subChart.subtitle;
@@ -275,68 +341,60 @@ class View {
 
       // If type of exercise is character
       if (chartType == "character" || chartType == undefined) {
-        // If number of column is set in data file
-        if (subChart.chartColumn) {
-          characterColumn = this.createElement("div", subChart.chartColumn);
+          // If number of column is set in data file
+          if (subChart.chartColumn) {
+            characterColumn = this.createElement("div", subChart.chartColumn);
+          }
+
+          // If number of column is not set
+          else {
+            characterColumn = this.createElement("div", "character-content-11-column");
+          }
+
+          for (let item in charMap) {
+            let charCard = this.createElement("div", "character-card");
+            let top = this.createElement("div", "top");
+            top.innerHTML = item;
+            let bottom = this.createElement("div", "bottom");
+            bottom.innerHTML = charMap[item].letter;
+
+            charCard.append(top, bottom);
+            characterColumn.append(charCard);
+          }
+
+          this.category.append(characterColumn);
         }
 
-        // If number of column is not set
-        else {
-          characterColumn = this.createElement("div", "character-content-11-column");
+        if (chartType == "vocabulary" || chartType == "vocabularyEnglish") {
+
+          characterColumn = this.createElement("div", "character-content-1-column");
+          let n = 1;
+
+          for (let item in charMap) {
+            let charCard = this.createElement("div", "character-card-vocab");
+            let top = this.createElement("div", "top-vocab");
+            top.innerHTML = n;
+            let middle = this.createElement("div", "middle-vocab");
+            middle.innerHTML = item;
+            let bottom = this.createElement("div", "bottom-vocab");
+            bottom.innerHTML = charMap[item].letter;
+            charCard.append(top, middle, bottom);
+            characterColumn.append(charCard);
+            n++;
+          }
+
+          this.category.append(characterColumn);
         }
 
-        for (let item in charMap) {
-          let charCard = this.createElement("div", "character-card");
-          let top = this.createElement("div", "top");
-          top.innerHTML = item;
-          let bottom = this.createElement("div", "bottom");
-          bottom.innerHTML = charMap[item].letter;
+      });
+    }
 
-          charCard.append(top, bottom);
-          characterColumn.append(charCard);
-        }
-
-        this.category.append(characterColumn);
-      }
-
-      if (chartType == "vocabulary" || chartType == "vocabularyEnglish") {
-
-        characterColumn = this.createElement("div", "character-content-1-column");
-        let n = 1;
-
-        for (let item in charMap) {
-          let charCard = this.createElement("div", "character-card-vocab");
-          let top = this.createElement("div", "top-vocab");
-          top.innerHTML = n;
-          let middle = this.createElement("div", "middle-vocab");
-          middle.innerHTML = item;
-          let bottom = this.createElement("div", "bottom-vocab");
-          bottom.innerHTML = charMap[item].letter;
-          charCard.append(top, middle, bottom);
-          characterColumn.append(charCard);
-          n++;
-        }
-
-        this.category.append(characterColumn);
-      }
-
-    });
 
     this.chartWrapper.append(this.category);
     this.chartPopoverContent.append(this.chartWrapper);
     this.chartContainer.append(this.chartPopoverContent);
 
-    /*
-        let popover = this.createElement("div", "chart-popover");
-        let popoverTitle = this.createElement("div", "chart-title");
-        popoverTitle.innerHTML = "title";
 
-        array.forEach(item => {
-            console.log(item);
-        })
-
-        popover.append(popoverTitle);
-        */
   }
 
   displayChart(boolean) {
@@ -371,7 +429,54 @@ class View {
 
     this.closeButton.addEventListener("click", (event) => {
       boolean = false;
-      handler(boolean, "");
+      handler(boolean);
+    });
+  }
+
+    // Generate character chart items
+  addNewSettingsPopover(chart, chartTitle, chartType) {
+    //this.chartContainer.innerHTML = "";
+    // Create close button
+  
+    this.closeButton.append(this.closeSvg);
+    this.newItemsContainer.append(this.closeButton);
+  }
+
+  displayNewSettings(boolean) {
+
+    if (boolean == false) {
+      this.popoverBackground.style.display = "none";
+      this.newItemsContainer.style.display = "none";
+    } else {
+      console.log("show new settings");
+      this.popoverBackground.style.display = "block";
+      this.newItemsContainer.style.display = "block";
+    }
+  }
+
+  bindShowNewSettings(handler) {
+    let boolean;
+
+    this.languageResetCtaArray.forEach((cta) => {
+      console.log(cta);
+
+      cta.addEventListener("click", (event) => {
+        boolean = true;
+        console.log(event.target);
+        
+        handler(boolean);
+
+        if (event.target.id == cta.id) {
+          console.log(cta.id);
+          let chart = cta.id;
+          
+        }
+      });
+    });
+
+    this.closeButton.addEventListener("click", (event) => {
+      boolean = false;
+      handler(boolean);
     });
   }
 }

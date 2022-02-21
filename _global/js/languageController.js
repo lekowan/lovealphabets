@@ -8,10 +8,14 @@ class Controller {
         ////////////////////
         // Function bindings
 
-
         // Display Chart        
         this.model.bindOnShowChartChanged(this.onShowChartChanged);
         this.view.bindShowChart(this.handleDisplayChart);
+
+
+        // Display new settings popover        
+        this.model.bindOnShowNewSettingsChanged(this.onShowNewSettingsChanged);
+        this.view.bindShowNewSettings(this.handleDisplayNewItemsPopover);
 
         // Display Menu        
         this.view.bindShowMenu(this.handleDisplayMenu);
@@ -20,7 +24,7 @@ class Controller {
     } // End of constructor
 
 
-    // Handle Congratulations Popover visibility
+    // Handle Chart Popover visibility
     handleDisplayChart = (boolean, chart) => {
         this.model.showChart(boolean, chart);
     }
@@ -29,6 +33,17 @@ class Controller {
         this.view.displayChart(boolean);
         this.view.addCharacterChart(chart, chartTitle, chartType);
     }
+
+    // Handle New Settings Popover visibility
+    handleDisplayNewItemsPopover = (boolean, chart) => {
+        this.model.showNewItemsPopover(boolean, chart);
+    }
+
+    onShowNewSettingsChanged = (boolean) => {
+        this.view.displayNewSettings(boolean);
+        this.view.addNewSettingsPopover();
+    }
+
 
     // Handle Congratulations Popover visibility
     handleDisplayMenu = (boolean) => {
