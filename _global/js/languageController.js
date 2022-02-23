@@ -20,6 +20,10 @@ class Controller {
         // Display Menu        
         this.view.bindShowMenu(this.handleDisplayMenu);
 
+        // Change number in array
+        this.model.bindOnNumberChanged(this.onNumberChanged);
+        this.view.bindChangeNumber(this.handleChangeNumber);
+
 
     } // End of constructor
 
@@ -35,8 +39,8 @@ class Controller {
     }
 
     // Handle New Settings Popover visibility
-    handleDisplayNewItemsPopover = (boolean, chart) => {
-        this.model.showNewItemsPopover(boolean, chart);
+    handleDisplayNewItemsPopover = (boolean, localStorageKey) => {
+        this.model.showNewItemsPopover(boolean, localStorageKey);
     }
 
     onShowNewSettingsChanged = (boolean) => {
@@ -49,6 +53,11 @@ class Controller {
     handleDisplayMenu = (boolean) => {
         this.view.displayMenu(boolean);
     }
+
+    // Change number in array handlers
+    handleChangeNumber = (number, localStorageKey) => {
+        this.model.changeNumber(number, localStorageKey);
+  };
 
 }
 

@@ -5,6 +5,8 @@ class View {
     let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
     let endOfDay = startOfDay + 24 * 60 * 60 * 1000 - 1;
 
+    this.localStorageKey = '';
+
     this.app = this.$("#root");
 
     // Create content container
@@ -111,6 +113,7 @@ class View {
       this.languageViewCtaArray.push(languageViewChart);
 
       // Create "reset SRS data" icon
+      /*
       this.svgClear = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       this.svgClear.setAttribute("xmlns", "https://www.w3.org/2000/svg");
       this.svgClear.setAttribute("height", "24px");
@@ -126,17 +129,32 @@ class View {
       this.svgClearPath2.setAttribute("d", "M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z");
 
       this.svgClear.append(this.svgClearPath1, this.svgClearPath2);
-      
-      this.languageReset = this.createElement("div", "settings-menu__icon");
-      
+      */
 
-      let languageReset = this.svgClear;
+      // Create new character settings icon
+      this.svgEdit = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      this.svgEdit.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+      this.svgEdit.setAttribute("height", "24px");
+      this.svgEdit.setAttribute("viewBox", "0 0 24 24");
+      this.svgEdit.setAttribute("width", "24px");
+      this.svgEdit.setAttribute("fill", "#18093e");
+
+      this.svgEditPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgEditPath1.setAttribute("d", "M0 0h24v24H0V0z");
+      this.svgEditPath1.setAttribute("fill", "none");
+
+      this.svgEditPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgEditPath2.setAttribute("d", "M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z");
+
+      this.svgEdit.append(this.svgEditPath1, this.svgEditPath2);
+
+      this.languageReset = this.createElement("div", "settings-menu__icon");
+      this.languageReset.append(this.svgEdit);
+
+      let languageReset = this.languageReset;
       languageReset.id = item.localStorageKey;
 
       this.languageResetCtaArray.push(languageReset);
-
-      this.languageReset.append(this.svgClear);
-
       // End of SVG 
 
 
@@ -302,6 +320,10 @@ class View {
     });
   }
 
+  get _number() {
+    return this.input.value;
+  }
+
   displayMenu(boolean) {
     if (boolean == false) {
       this.languageToolTip.style.visibility = "hidden";
@@ -462,14 +484,13 @@ class View {
 
       cta.addEventListener("click", (event) => {
         boolean = true;
-        console.log(event.target);
+        let targetedEl = event.target.parentNode.id;
+        this.localStorageKey = targetedEl;
         
-        handler(boolean);
-
-        if (event.target.id == cta.id) {
+        if (targetedEl == cta.id) {
           console.log(cta.id);
           let chart = cta.id;
-          
+          handler(boolean);
         }
       });
     });
@@ -478,5 +499,38 @@ class View {
       boolean = false;
       handler(boolean);
     });
+
+    this.newItemsForm.addEventListener("submit", () => {
+      boolean = false;
+      handler(boolean); 
+    });
+
+    this.newItemsContinueButton.addEventListener("click", () => {
+      boolean = false;
+      handler(boolean);
+    });
+
   }
+
+
+  bindChangeNumber(handler) {
+
+    this.newItemsForm.addEventListener("submit", () => {
+      if (this._number && this._number > 0) {
+        handler(this._number, this.localStorageKey);
+        console.log(this._number);
+      }
+      
+    });
+
+    this.newItemsContinueButton.addEventListener("click", () => {
+      if (this._number && this._number > 0) {
+        handler(this._number, this.localStorageKey);
+      }
+      
+      console.log(this._number, this.localStorageKey);
+    
+    });
+  }
+
 }
