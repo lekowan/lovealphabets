@@ -87,5 +87,18 @@ const languageContent = [{
     localStorageKey: "mandarin" + "Hsk3VocabularyEnglish" + "Srs",
     chartType: chineseHsk2EnglishChartType
   },
-  */
+  */ 
+  {
+    chartName: "hsk4-map",
+    chartData: chineseHsk4ChartData,
+    chartTitle: "The HSK4 vocabulary list",
+    title: "The HSK4 vocabulary list",
+    sub: "Memorize all 1200 words and expressions required for passing the HSK4 test",
+    info: "",
+    view: "View the words",
+    icon: "您",
+    url: "chinese-hsk4",
+    localStorageKey: "mandarin" + "Hsk4Vocabulary" + "Srs",
+    chartType: chineseHsk4ChartType
+  },
 ];

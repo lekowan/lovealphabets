@@ -397,7 +397,7 @@ class View {
             let top = this.createElement("div", "top-vocab");
             top.innerHTML = n;
             let middle = this.createElement("div", "middle-vocab");
-            middle.innerHTML = item;
+            middle.innerHTML = charMap[item].character;
             let bottom = this.createElement("div", "bottom-vocab");
             bottom.innerHTML = charMap[item].letter;
             charCard.append(top, middle, bottom);
