@@ -1,7 +1,7 @@
 // Exercise Type (character, vocabulary )
-const shirokumaEpisode20ChartType = "vocabulary";
+const shirokumaEpisode20Part1ChartType = "vocabulary";
 
-const shirokumaEpisode20Map =  {
+const shirokumaEpisode20Part1Map =  {
     "1": {
         "character": "憧れの一人暮らし",
         "letter": "My dream life alone",
@@ -909,4 +909,4 @@ const shirokumaEpisode20Map =  {
     },
 }
 
-const shirokumaEpisode20ChartData = [{ subtitle: "", "content": shirokumaEpisode20Map }]
+const shirokumaEpisode20Part1ChartData = [{ subtitle: "", "content": shirokumaEpisode20Map }]

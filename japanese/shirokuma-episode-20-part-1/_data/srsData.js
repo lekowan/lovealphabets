@@ -1,5 +1,5 @@
 // Configuration
-const localStorageKey = "japanese" + "Episode20" + "Srs";
+const localStorageKey = "japanese" + "Episode20Part1" + "Srs";
 
 // Speech Synthesis
 const language = "ja-JP";
