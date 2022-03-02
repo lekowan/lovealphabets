@@ -605,9 +605,10 @@ class View {
 
         this.nextCard.append(this.nextCardExamples);
 
-        // Autoplay audio
-        this.playSpeech (allSyllableMap[card].character);
       }
+
+      // Autoplay audio
+      this.playSpeech(allSyllableMap[card].character);
 
 
       let nextCardSlide = this.createElement("div", "slide");
@@ -618,7 +619,7 @@ class View {
       this.svgAudio.addEventListener("click", (event) => {
           
           // Play audio on click
-          this.playSpeech (allSyllableMap[card].character);
+          this.playSpeech(allSyllableMap[card].character);
           
           // Animate audio icon
           let audioIcon = this.svgAudio;
