@@ -22,6003 +22,5894 @@ const welcomeIntro = "In this spaced-repetition practice (SRS), you will study n
 
 const allSyllableMap = {
     "1": {
-        "character": "阿姨",
-        "letter": "maternal aunt; step-mother; childcare worker; nursemaid; woman of similar age to one's parents (term of address used by child); CL:個|个[gè]",
-        "pinyin": "āyí"
+        "character": "啊",
+        "letter": "a",
+        "pinyin": "exclamatory particle"
     },
     "2": {
-        "character": "啊",
-        "letter": "modal particle ending sentence, showing affirmation, approval, or consent",
-        "pinyin": "a"
+        "character": "爱",
+        "letter": "ài",
+        "pinyin": "to love"
     },
     "3": {
         "character": "矮",
-        "letter": "low; short (in length)",
-        "pinyin": "ǎi"
+        "letter": "ǎi",
+        "pinyin": "short (in height)"
     },
     "4": {
-        "character": "\u0001",
-        "letter": "to love; affection; to be fond of; to like",
-        "pinyin": "ài"
+        "character": "爱好",
+        "letter": "àihào",
+        "pinyin": "hobby"
     },
     "5": {
-        "character": "\u0001好",
-        "letter": "to like; to take pleasure in; keen on; fond of; interest; hobby; appetite for; CL:個|个[gè]",
-        "pinyin": "àihào"
+        "character": "爱情",
+        "letter": "àiqíng",
+        "pinyin": "love, romance"
     },
     "6": {
-        "character": "\u0001情",
-        "letter": "romance; love (romantic); CL:個|个[gè]",
-        "pinyin": "àiqíng"
+        "character": "安静",
+        "letter": "ānjìng",
+        "pinyin": "quiet"
     },
     "7": {
-        "character": "安静",
-        "letter": "quiet; peaceful; calm",
-        "pinyin": "ānjìng"
+        "character": "安排",
+        "letter": "ānpái",
+        "pinyin": "arrangement, set up"
     },
     "8": {
-        "character": "安排",
-        "letter": "to arrange; to plan; to set up",
-        "pinyin": "ānpái"
+        "character": "安全",
+        "letter": "ānquán",
+        "pinyin": "secure, safe, security, safety"
     },
     "9": {
-        "character": "安全",
-        "letter": "safe; secure; safety; security",
-        "pinyin": "ānquán"
+        "character": "按时",
+        "letter": "ànshí",
+        "pinyin": "on time, before deadline, on schedule"
     },
     "10": {
-        "character": "暗",
-        "letter": "dark; gloomy; hidden; secret; muddled; obscure; in the dark",
-        "pinyin": "àn"
+        "character": "按照",
+        "letter": "ànzhào",
+        "pinyin": "according to, on the basis of"
     },
     "11": {
-        "character": "按",
-        "letter": "on time; before deadline; on schedule",
-        "pinyin": "ànshí"
+        "character": "阿姨",
+        "letter": "āyí",
+        "pinyin": "aunt or maid"
     },
     "12": {
-        "character": "按照",
-        "letter": "according to; in accordance with; in the light of; on the basis of",
-        "pinyin": "ànzhào"
+        "character": "吧",
+        "letter": "ba",
+        "pinyin": "question particle"
     },
     "13": {
-        "character": "八",
-        "letter": "eight;",
-        "pinyin": "bā"
+        "character": "把",
+        "letter": "bǎ",
+        "pinyin": "for things with a handle"
     },
     "14": {
-        "character": "把",
-        "letter": "to hold; to contain; to grasp; to take hold of; a handle; particle marking the following noun as a direct object; classifier for objects with handle",
-        "pinyin": "bǎ"
+        "character": "八",
+        "letter": "bā",
+        "pinyin": "eight"
     },
     "15": {
         "character": "爸爸",
-        "letter": "(informal) father; CL:個|个[gè],位[wèi]",
-        "pinyin": "bàba"
+        "letter": "bàba",
+        "pinyin": "dad"
     },
     "16": {
-        "character": "吧",
-        "letter": "(modal particle indicating polite suggestion); ...right?; ...OK?",
-        "pinyin": "ba"
+        "character": "白",
+        "letter": "bái",
+        "pinyin": "white"
     },
     "17": {
-        "character": "白",
-        "letter": "white; snowy; pure; bright; empty; blank; plain; clear; to make clear; in vain; gratuitous; free of charge; reactionary; anti-communist; funeral; to stare coldly; to write wrong character; to state; to explain; vernacular; spoken lines in opera; surname Bai",
-        "pinyin": "bái"
+        "character": "百",
+        "letter": "bǎi",
+        "pinyin": "hundred"
     },
     "18": {
-        "character": "百",
-        "letter": "hundred; numerous; all kinds of; surname Bai  2/56",
-        "pinyin": "bǎi"
+        "character": "百分之",
+        "letter": "bǎifēnzhī",
+        "pinyin": "percent"
     },
     "19": {
-        "character": "班",
-        "letter": "team; class; squad; work shift; classifier for groups; ranking; surname Ban; CL:個|个[gè]",
-        "pinyin": "bān"
+        "character": "半",
+        "letter": "bàn",
+        "pinyin": "half"
     },
     "20": {
-        "character": "搬",
-        "letter": "to move; to shift; to remove; to transport; to apply indiscriminately; to copy mechanically",
-        "pinyin": "bān"
+        "character": "班",
+        "letter": "bān",
+        "pinyin": "class"
     },
     "21": {
-        "character": "半",
-        "letter": "half; semi-; incomplete; (after a number) and a half",
-        "pinyin": "bàn"
+        "character": "搬",
+        "letter": "bān",
+        "pinyin": "to move"
     },
     "22": {
-        "character": "\u0001法",
-        "letter": "means; method; way (of doing sth); CL:條|条 [tiáo],個|个[gè]",
-        "pinyin": "bànfǎ"
+        "character": "办法",
+        "letter": "bànfǎ",
+        "pinyin": "method"
     },
     "23": {
-        "character": "\u0001公室",
-        "letter": "an office; business premises; a bureau; CL:間|\u0005 [jiān]",
-        "pinyin": "bàngōngshì"
+        "character": "棒",
+        "letter": "bàng",
+        "pinyin": "smart, capable, strong, stick"
     },
     "24": {
         "character": "帮忙",
-        "letter": "to help; to lend a hand; to do a favor; to do a good turn",
-        "pinyin": "bāngmáng"
+        "letter": "bāngmáng",
+        "pinyin": "to help"
     },
     "25": {
-        "character": "帮助",
-        "letter": "assistance; aid; to help; to assist",
-        "pinyin": "bāngzhù"
+        "character": "办公室",
+        "letter": "bàngōngshì",
+        "pinyin": "office"
     },
     "26": {
-        "character": "包",
-        "letter": "to cover; to wrap; to hold; to include; to take charge of; package; wrapper; container; bag; to hold or embrace; bundle; packet; to contract (to or for); surname Bao; CL:個|个[gè],隻|只[zhī]",
-        "pinyin": "bāo"
+        "character": "帮助",
+        "letter": "bāngzhù",
+        "pinyin": "to help"
     },
     "27": {
-        "character": "包括",
-        "letter": "to comprise; to include; to involve; to incorporate; to consist of",
-        "pinyin": "bāokuò"
+        "character": "抱",
+        "letter": "bào",
+        "pinyin": "hold, adopt"
     },
     "28": {
-        "character": "bǎo",
-        "letter": "eat till full; satisfied",
-        "pinyin": "to"
+        "character": "饱",
+        "letter": "bǎo",
+        "pinyin": "full"
     },
     "29": {
-        "character": "保\u0004",
-        "letter": "to protect; to defend; to safeguard; protection; CL: 種|䝅[zhǒng]",
-        "pinyin": "bǎohù"
+        "character": "包",
+        "letter": "bāo",
+        "pinyin": "bag"
     },
     "30": {
-        "character": "保\u0007",
-        "letter": "guarantee; to guarantee; to ensure; to safeguard; to pledge; CL:個|个[gè]",
-        "pinyin": "bǎozhèng"
+        "character": "保护",
+        "letter": "bǎohù",
+        "pinyin": "protect, safeguard"
     },
     "31": {
-        "character": "抱",
-        "letter": "to hold; to carry (in one's arms); to hug or embrace; surround; cherish",
-        "pinyin": "bào"
+        "character": "报名",
+        "letter": "bàomíng",
+        "pinyin": "sign up, register"
     },
     "32": {
         "character": "抱歉",
-        "letter": "sorry; We apologize!; to feel apologetic; to regret",
-        "pinyin": "bàoqiàn"
+        "letter": "bàoqiàn",
+        "pinyin": "feel sorry, feel regret, apologize"
     },
     "33": {
-        "character": "道",
-        "letter": "report; CL:篇[piān],份[fèn]",
-        "pinyin": "bàodào"
+        "character": "保证",
+        "letter": "bǎozhèng",
+        "pinyin": "ensure, guarantee"
     },
     "34": {
-        "character": "名",
-        "letter": "to sign up; to enter one's name; to apply; to register; to enroll; to enlist",
-        "pinyin": "bàomíng"
+        "character": "报纸",
+        "letter": "bàozhǐ",
+        "pinyin": "newspaper"
     },
     "35": {
-        "character": "\b",
-        "letter": "newspaper; newsprint; CL:份[fèn],期[qī],張|\u0006 [zhāng]",
-        "pinyin": "bàozhǐ"
+        "character": "包子",
+        "letter": "bāozi",
+        "pinyin": "bun, steamed stuffed bun"
     },
     "36": {
-        "character": "杯子",
-        "letter": "cup; glass; CL:個|个[gè],支[zhī],枝[zhī]  3/56",
-        "pinyin": "bēizi"
+        "character": "倍",
+        "letter": "bèi",
+        "pinyin": "times, double, twice as much"
     },
     "37": {
-        "character": "北方",
-        "letter": "north; the northern part a country; China north of the Yellow River",
-        "pinyin": "běifāng"
+        "character": "被",
+        "letter": "bèi",
+        "pinyin": "by"
     },
     "38": {
-        "character": "北京",
-        "letter": "Beijing, capital of People's Republic of China; Peking; PRC government",
-        "pinyin": "běijīng"
+        "character": "北方",
+        "letter": "běifāng",
+        "pinyin": "north or northern China"
     },
     "39": {
-        "character": "倍",
-        "letter": "(two, three etc) -fold; times (multiplier); double; to increase or multiply",
-        "pinyin": "bèi"
+        "character": "北京",
+        "letter": "Běijīng",
+        "pinyin": "Beijing"
     },
     "40": {
-        "character": "被",
-        "letter": "by (indicates passive-voice sentences or clauses); quilt; to cover (literary)",
-        "pinyin": "bèi"
+        "character": "杯子",
+        "letter": "bēizi",
+        "pinyin": "cup or glass"
     },
     "41": {
-        "character": "本",
-        "letter": "roots or stems of plants; origin; source; this; the current; root; foundation; basis; classifier for books, periodicals, files etc; originally",
-        "pinyin": "běn"
+        "character": "笨",
+        "letter": "bèn",
+        "pinyin": "stupid, foolish, silly"
     },
     "42": {
-        "character": "本来",
-        "letter": "original; originally; at first; it goes without saying; of course",
-        "pinyin": "běnlái"
+        "character": "本",
+        "letter": "běn",
+        "pinyin": "for books"
     },
     "43": {
-        "character": "笨",
-        "letter": "stupid; foolish; silly; slow-witted; clumsy",
-        "pinyin": "bèn"
+        "character": "本来",
+        "letter": "běnlái",
+        "pinyin": "originally"
     },
     "44": {
-        "character": "鼻子",
-        "letter": "nose; CL:個|个[gè],隻|只[zhī]",
-        "pinyin": "bízi"
+        "character": "比",
+        "letter": "bǐ",
+        "pinyin": "than"
     },
     "45": {
-        "character": "比",
-        "letter": "(particle used for comparison and -er than); to compare; to contrast; to gesture (with hands); ratio",
-        "pinyin": "bǐ"
+        "character": "遍",
+        "letter": "biàn",
+        "pinyin": "all over, everywhere"
     },
     "46": {
-        "character": "比\u0007",
-        "letter": "compare; contrast; fairly; comparatively; relatively; quite; rather",
-        "pinyin": "bǐjiào"
+        "character": "变化",
+        "letter": "biànhuà",
+        "pinyin": "to change"
     },
     "47": {
-        "character": "比\b",
-        "letter": "competition (sports etc); match; CL:場|\u0004[chǎng], 次[cì]",
-        "pinyin": "bǐsài"
+        "character": "表格",
+        "letter": "biǎogé",
+        "pinyin": "form"
     },
     "48": {
-        "character": "笔\u0006本",
-        "letter": "notebook; CL:本[běn]",
-        "pinyin": "bǐjìběn"
+        "character": "表示",
+        "letter": "biǎoshì",
+        "pinyin": "to express"
     },
     "49": {
-        "character": "必\t",
-        "letter": "to have to; must; compulsory; necessarily",
-        "pinyin": "bìxū"
+        "character": "表演",
+        "letter": "biǎoyǎn",
+        "pinyin": "to perform"
     },
     "50": {
-        "character": "\u0001",
-        "letter": "graduation; to graduate; to finish school",
-        "pinyin": "bìyè"
+        "character": "表扬",
+        "letter": "biǎoyáng",
+        "pinyin": "praise"
     },
     "51": {
-        "character": "遍",
-        "letter": "a time; everywhere; turn; all over; one time",
-        "pinyin": "biàn"
+        "character": "标准",
+        "letter": "biāozhǔn",
+        "pinyin": "standard"
     },
     "52": {
-        "character": "化",
-        "letter": "change; variation; to change; to vary; CL:個|个 [gè]",
-        "pinyin": "biànhuà"
+        "character": "别",
+        "letter": "bié",
+        "pinyin": "don’t…"
     },
     "53": {
-        "character": "准",
-        "letter": "(an official) standard; norm; criterion; CL:個|个 [gè]",
-        "pinyin": "biāozhǔn"
+        "character": "别人",
+        "letter": "biéren",
+        "pinyin": "other people"
     },
     "54": {
-        "character": "表\u0005",
-        "letter": "to voice (an opinion); to express; to convey",
-        "pinyin": "biǎodá"
+        "character": "比较",
+        "letter": "bǐjiào",
+        "pinyin": "to compare"
     },
     "55": {
-        "character": "表格",
-        "letter": "form; table; CL:張|\u000b[zhāng],份[fèn]",
-        "pinyin": "biǎogé"
+        "character": "饼干",
+        "letter": "bǐnggān",
+        "pinyin": "biscuit, cookie"
     },
     "56": {
-        "character": "表示",
-        "letter": "to express; to show; to say; to state; to indicate; to mean  4/56",
-        "pinyin": "biǎoshì"
+        "character": "宾馆",
+        "letter": "bīngguǎn",
+        "pinyin": "hotel"
     },
     "57": {
-        "character": "表演",
-        "letter": "play; show; performance; exhibition; to perform; to act; to demonstrate; CL:場|[chǎng]",
-        "pinyin": "biǎoyǎn"
+        "character": "并且",
+        "letter": "bìngqiě",
+        "pinyin": "also, and, moreover, furthermore"
     },
     "58": {
-        "character": "表\t",
-        "letter": "to praise; to commend",
-        "pinyin": "biǎoyáng"
+        "character": "冰箱",
+        "letter": "bīngxiāng",
+        "pinyin": "refrigerator"
     },
     "59": {
-        "character": "䫲",
-        "letter": "to leave; to depart; to separate; to distinguish; to classify; other; another; do not; must not; to pin",
-        "pinyin": "bié"
+        "character": "比如",
+        "letter": "bǐrú",
+        "pinyin": "such as, for example"
     },
     "60": {
-        "character": "䫲人",
-        "letter": "other people; others; other person",
-        "pinyin": "biérén"
+        "character": "比赛",
+        "letter": "bǐsài",
+        "pinyin": "match"
     },
     "61": {
-        "character": "\u0001\u0004",
-        "letter": "guesthouse; CL:個|个[gè],家[jiā]",
-        "pinyin": "bīnguǎn"
+        "character": "必须",
+        "letter": "bìxū",
+        "pinyin": "must"
     },
     "62": {
-        "character": "冰箱",
-        "letter": "icebox; freezer cabinet; refrigerator; CL:臺|台[tái], 個|个[gè]",
-        "pinyin": "bīngxiāng"
+        "character": "毕业",
+        "letter": "bìyè",
+        "pinyin": "graduation"
     },
     "63": {
-        "character": "干",
-        "letter": "biscuit; cracker; cookie; CL:片[piàn],塊|\u0007[kuài]",
-        "pinyin": "bǐnggān"
+        "character": "鼻子",
+        "letter": "bízi",
+        "pinyin": "nose"
     },
     "64": {
-        "character": "并且",
-        "letter": "and; besides; moreover; furthermore; in addition",
-        "pinyin": "bìngqiě"
+        "character": "博士",
+        "letter": "bóshì",
+        "pinyin": "Ph.D, doctor of philosophy"
     },
     "65": {
-        "character": "博士",
-        "letter": "doctor; court academician (in feudal China); Ph.D.",
-        "pinyin": "bóshì"
+        "character": "不",
+        "letter": "bù",
+        "pinyin": "not"
     },
     "66": {
-        "character": "不但",
-        "letter": "not only (... but also...)",
-        "pinyin": "bùdàn"
+        "character": "不客气",
+        "letter": "bú kèqi",
+        "pinyin": "you’re welcome"
     },
     "67": {
-        "character": "不\u0005",
-        "letter": "only; merely; no more than; but; however; anyway (to get back to a previous topic)",
-        "pinyin": "bùguò"
+        "character": "不得不",
+        "letter": "bùdébù",
+        "pinyin": "have to, can't avoid, have no choice or option"
     },
     "68": {
-        "character": "不客气",
-        "letter": "you're welcome; impolite; rude; blunt; don't mention it",
-        "pinyin": "bùkèqi"
+        "character": "部分",
+        "letter": "bùfen",
+        "pinyin": "part, share, section"
     },
     "69": {
-        "character": "不",
-        "letter": "(negative prefix); not; no",
-        "pinyin": "bù"
+        "character": "不管",
+        "letter": "bùguǎn",
+        "pinyin": "no matter, regardless of"
     },
     "70": {
-        "character": "不得不",
-        "letter": "have no choice or option but to; cannot but; have to; can't help it; can't avoid",
-        "pinyin": "bùdébù"
+        "character": "不过",
+        "letter": "búguò",
+        "pinyin": "only, however, anyway"
     },
     "71": {
-        "character": "不管",
-        "letter": "no matter (what, how); regardless of; no matter",
-        "pinyin": "bùguǎn"
+        "character": "不仅",
+        "letter": "bùjǐn",
+        "pinyin": "not only"
     },
     "72": {
-        "character": "不\u0006",
-        "letter": "not only (this one); not just (...) but also",
-        "pinyin": "bùjǐn"
+        "character": "擦",
+        "letter": "cā",
+        "pinyin": "rub, wipe, erase"
     },
     "73": {
-        "character": "部分",
-        "letter": "part; share; section; piece; CL:個|个[gè]",
-        "pinyin": "bùfèn"
+        "character": "才",
+        "letter": "cái",
+        "pinyin": "just"
     },
     "74": {
-        "character": "擦",
-        "letter": "to wipe; to erase; rubbing (brush stroke in painting); to clean; to polish",
-        "pinyin": "cā"
+        "character": "菜",
+        "letter": "cài",
+        "pinyin": "dish"
     },
     "75": {
         "character": "猜",
-        "letter": "to guess",
-        "pinyin": "cāi"
+        "letter": "cāi",
+        "pinyin": "to guess"
     },
     "76": {
-        "character": "才",
-        "letter": "ability; talent; endowment; gift; an expert; only (then); only if; just",
-        "pinyin": "cái"
+        "character": "菜单",
+        "letter": "càidān",
+        "pinyin": "menu"
     },
     "77": {
         "character": "材料",
-        "letter": "material; data; makings; stuff; CL:個|个[gè],種|䝅 [zhǒng]",
-        "pinyin": "cáiliào"
+        "letter": "cáiliào",
+        "pinyin": "material"
     },
     "78": {
-        "character": "菜",
-        "letter": "dish (type of food); vegetables; vegetable; cuisine; CL:盤|\b[pán],道[dào]  5/56",
-        "pinyin": "cài"
+        "character": "参观",
+        "letter": "cānguān",
+        "pinyin": "visit, to look around"
     },
     "79": {
-        "character": "菜\u0007",
-        "letter": "menu; CL:份[fèn],張|\u000f[zhāng]",
-        "pinyin": "càidān"
+        "character": "参加",
+        "letter": "cānjiā",
+        "pinyin": "to attend"
     },
     "80": {
-        "character": "参\b",
-        "letter": "to look around; to inspect; visit and observe",
-        "pinyin": "cānguān"
+        "character": "餐厅",
+        "letter": "cāntīng",
+        "pinyin": "restaurant, dining hall"
     },
     "81": {
-        "character": "参加",
-        "letter": "to participate; to take part; to join",
-        "pinyin": "cānjiā"
+        "character": "草",
+        "letter": "cǎo",
+        "pinyin": "grass"
     },
     "82": {
-        "character": "草",
-        "letter": "grass; straw; manuscript; draft (of a document); careless; rough; CL:䯿[kē],撮[zuǒ],株[zhū],根 [gēn]",
-        "pinyin": "cǎo"
+        "character": "层",
+        "letter": "céng",
+        "pinyin": "floor"
     },
     "83": {
-        "character": "\u0001",
-        "letter": "layer; stratum; laminated; floor (of a building); storey; classifier for layers; repeated; sheaf (math.)",
-        "pinyin": "céng"
+        "character": "厕所",
+        "letter": "cèsuǒ",
+        "pinyin": "toilet, washroom"
     },
     "84": {
         "character": "茶",
-        "letter": "tea; tea plant; CL:杯[bēi],壺| [hú]",
-        "pinyin": "chá"
+        "letter": "chá",
+        "pinyin": "tea"
     },
     "85": {
         "character": "差",
-        "letter": "differ from; short of; to lack; poor",
-        "pinyin": "chà"
+        "letter": "chà",
+        "pinyin": "bad (in quality)"
     },
     "86": {
         "character": "差不多",
-        "letter": "almost; nearly; more or less",
-        "pinyin": "chàbuduō"
+        "letter": "chà bù duō",
+        "pinyin": "almost, nearly"
     },
     "87": {
-        "character": "cháng",
-        "letter": "taste; flavor; (past tense marker); already; formerly; ever; once; test",
-        "pinyin": "to"
+        "character": "尝",
+        "letter": "cháng",
+        "pinyin": "taste, flavor"
     },
     "88": {
-        "character": "\u0004",
-        "letter": "length; long; forever; always; constantly",
-        "pinyin": "cháng"
+        "character": "长",
+        "letter": "zhǎng",
+        "pinyin": "to grow"
     },
     "89": {
-        "character": "\u0004城",
-        "letter": "the Great Wall",
-        "pinyin": "chángchéng"
+        "character": "场",
+        "letter": "chǎng",
+        "pinyin": "large place used for a specific purpose"
     },
     "90": {
-        "character": "\u0004江",
-        "letter": "Changjiang river; Yangtze river",
-        "pinyin": "chángjiāng"
+        "character": "长城",
+        "letter": "cháng chéng",
+        "pinyin": "the Great Wall"
     },
     "91": {
-        "character": "chǎng",
-        "letter": "place used for a specific purpose; stage; scene (of a play); classifier for sporting or recreational activities; classifier for number of exams",
-        "pinyin": "large"
+        "character": "唱歌",
+        "letter": "chàng gē",
+        "pinyin": "to sing"
     },
     "92": {
-        "character": "唱歌",
-        "letter": "to sing a song",
-        "pinyin": "chànggē"
+        "character": "长江",
+        "letter": "cháng jiāng",
+        "pinyin": "yangtze river"
     },
     "93": {
-        "character": "超\t",
-        "letter": "to surpass; to exceed; to outstrip",
-        "pinyin": "chāoguò"
+        "character": "超过",
+        "letter": "chāoguò",
+        "pinyin": "to surpass, to exceed, to outstrip"
     },
     "94": {
         "character": "超市",
-        "letter": "supermarket (abbr.); CL:家[jiā]",
-        "pinyin": "chāoshì"
+        "letter": "chāoshì",
+        "pinyin": "supermarket"
     },
     "95": {
-        "character": "䬘",
-        "letter": "to quarrel; to make a noise; noisy; to disturb by making a noise",
-        "pinyin": "chǎo"
+        "character": "成功",
+        "letter": "chénggōng",
+        "pinyin": "success"
     },
     "96": {
-        "character": "\u0005衫",
-        "letter": "shirt; blouse; CL:件[jiàn]",
-        "pinyin": "chènshān"
+        "character": "成绩",
+        "letter": "chéngjì",
+        "pinyin": "score"
     },
     "97": {
-        "character": "成功",
-        "letter": "success; to succeed; CL:次[cì],個|个[gè]",
-        "pinyin": "chénggōng"
+        "character": "诚实",
+        "letter": "chéngshí",
+        "pinyin": "honest, truthful"
     },
     "98": {
-        "character": "成\u000b",
-        "letter": "achievement; performance records; grades; CL:項| \u000e[xiàng],個|个[gè]",
-        "pinyin": "chéngjì"
+        "character": "城市",
+        "letter": "chéngshì",
+        "pinyin": "city"
     },
     "99": {
-        "character": "成熟",
-        "letter": "mature; ripe; Taiwan pr. chéng shóu",
-        "pinyin": "chéngshú"
+        "character": "成为",
+        "letter": "chéngwéi",
+        "pinyin": "become"
     },
     "100": {
-        "character": "成",
-        "letter": "to become; to turn into",
-        "pinyin": "chéngwéi"
+        "character": "乘坐",
+        "letter": "chéngzuò",
+        "pinyin": "to ride (in a vehicle)"
     },
     "101": {
-        "character": "\u0006\f",
-        "letter": "honest; honesty; honorable; truthful  6/56",
-        "pinyin": "chéngshí"
+        "character": "衬衫",
+        "letter": "chènshān",
+        "pinyin": "shirt"
     },
     "102": {
-        "character": "城市",
-        "letter": "city; town; CL:座[zuò]",
-        "pinyin": "chéngshì"
+        "character": "吃",
+        "letter": "chī",
+        "pinyin": "to eat"
     },
     "103": {
-        "character": "乘坐",
-        "letter": "to ride (in a vehicle)",
-        "pinyin": "chéngzuò"
+        "character": "迟到",
+        "letter": "chídào",
+        "pinyin": "to be late"
     },
     "104": {
-        "character": "吃",
-        "letter": "to eat; to have one's meal; to eradicate; to destroy; to absorb; to suffer; to exhaust",
-        "pinyin": "chī"
+        "character": "吃惊",
+        "letter": "chījīng",
+        "pinyin": "to be amazed, to be shocked"
     },
     "105": {
-        "character": "吃\b",
-        "letter": "to be startled; to be shocked; to be amazed",
-        "pinyin": "chījīng"
+        "character": "重新",
+        "letter": "chóngxīn",
+        "pinyin": "again, once more"
     },
     "106": {
-        "character": "到",
-        "letter": "to arrive late",
-        "pinyin": "chídào"
+        "character": "抽烟",
+        "letter": "chōuyān",
+        "pinyin": "to smoke (a cigarette, tobacco)"
     },
     "107": {
-        "character": "重新",
-        "letter": "again; once more; re108 抽烟 chōuyān to smoke (a cigarette, tobacco)",
-        "pinyin": "chóngxīn"
+        "character": "出",
+        "letter": "chū",
+        "pinyin": "to get out"
     },
     "108": {
-        "character": "出",
-        "letter": "to go out; to come out; to occur; to produce; to go beyond; to rise; to put forth; to happen; classifier for dramas, plays, operas etc",
-        "pinyin": "chū"
+        "character": "船",
+        "letter": "chuán",
+        "pinyin": "boat"
     },
     "109": {
-        "character": "出差",
-        "letter": "to go on an official or business trip",
-        "pinyin": "chūchāi"
+        "character": "穿",
+        "letter": "chuān",
+        "pinyin": "to wear"
     },
     "110": {
-        "character": "出\u0005",
-        "letter": "to start out; to set off",
-        "pinyin": "chūfā"
+        "character": "窗户",
+        "letter": "chuānghu",
+        "pinyin": "window"
     },
     "111": {
-        "character": "出生",
-        "letter": "to be born",
-        "pinyin": "chūshēng"
+        "character": "传真",
+        "letter": "chuánzhēn",
+        "pinyin": "fax"
     },
     "112": {
-        "character": "出\t",
-        "letter": "to appear; to arise; to emerge; to show up",
-        "pinyin": "chūxiàn"
+        "character": "出差",
+        "letter": "chūchāi",
+        "pinyin": "to go on an official or business trip"
     },
     "113": {
-        "character": "出租\u0001",
-        "letter": "taxi",
-        "pinyin": "chūzūchē"
+        "character": "出发",
+        "letter": "chūfā",
+        "pinyin": "to start out, to set off"
     },
     "114": {
         "character": "厨房",
-        "letter": "kitchen; CL:間|\u0007[jiān]",
-        "pinyin": "chúfáng"
+        "letter": "chúfáng",
+        "pinyin": "kitchen"
     },
     "115": {
         "character": "除了",
-        "letter": "besides; apart from (... also...); in addition to; except (for)",
-        "pinyin": "chúle"
+        "letter": "chúle",
+        "pinyin": "besides or except"
     },
     "116": {
-        "character": "穿",
-        "letter": "to bore through; pierce; perforate; penetrate; pass through; to dress; to wear; to put on; to thread",
-        "pinyin": "chuān"
+        "character": "春",
+        "letter": "chūn",
+        "pinyin": "spring"
     },
     "117": {
-        "character": "船",
-        "letter": "a boat; vessel; ship; CL:條|条[tiáo],艘[sōu],隻|只 [zhī]",
-        "pinyin": "chuán"
+        "character": "出生",
+        "letter": "chūshēng",
+        "pinyin": "born, birth"
     },
     "118": {
-        "character": "真",
-        "letter": "fax; facsimile",
-        "pinyin": "chuánzhēn"
+        "character": "出现",
+        "letter": "chūxiàn",
+        "pinyin": "to appear"
     },
     "119": {
-        "character": "窗\u0006",
-        "letter": "window; CL:個|个[gè],扇[shàn]",
-        "pinyin": "chuānghu"
+        "character": "出租车",
+        "letter": "chūzūchē",
+        "pinyin": "taxi"
     },
     "120": {
-        "character": "春",
-        "letter": "spring (time); gay; joyful; youthful; love; lust; life",
-        "pinyin": "chūn"
+        "character": "次",
+        "letter": "cì",
+        "pinyin": "time (frequency of an act)"
     },
     "121": {
-        "character": "\u0004典",
-        "letter": "dictionary (of Chinese compound words); also written 辭典|辞典[cí diǎn]; CL:部[bù],本[běn]",
-        "pinyin": "cídiǎn"
+        "character": "词语",
+        "letter": "cíyǔ",
+        "pinyin": "word"
     },
     "122": {
-        "character": "\u0004",
-        "letter": "word (general term including monosyllables through to short phrases); term (e.g. technical term); expression",
-        "pinyin": "cíyǔ"
+        "character": "从",
+        "letter": "cóng",
+        "pinyin": "from"
     },
     "123": {
-        "character": "次",
-        "letter": "next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality;  7/56 substandard; order; sequence; hypo- (chemistry); classifier for enumerated events: time",
-        "pinyin": "cì"
+        "character": "从来",
+        "letter": "cónglái",
+        "pinyin": "always"
     },
     "124": {
-        "character": "\u0001明",
-        "letter": "acute (of sight and hearing); clever; intelligent; bright; smart",
-        "pinyin": "cōngming"
+        "character": "聪明",
+        "letter": "cōngming",
+        "pinyin": "smart"
     },
     "125": {
-        "character": "从",
-        "letter": "from; via; passing through; through (a gap); past; ever (followed by negative, meaning never); (formerly pr. zòng and related to 縱| ) to follow; to comply with; to obey; to join; to engage in; adopting some mode of action or attitude; follower; retainer; accessory; accomplice; related by common paternal grandfather or earlier ancestor; surname Cong",
-        "pinyin": "cóng"
+        "character": "存",
+        "letter": "cún",
+        "pinyin": "exist, deposit, store, keep, survive"
     },
     "126": {
-        "character": "从来",
-        "letter": "always; at all times; never (if used in negative sentence)",
-        "pinyin": "cónglái"
+        "character": "错",
+        "letter": "cuò",
+        "pinyin": "wrong"
     },
     "127": {
-        "character": "粗心",
-        "letter": "careless; thoughtless",
-        "pinyin": "cūxīn"
+        "character": "错误",
+        "letter": "cuò wù",
+        "pinyin": "error, mistake"
     },
     "128": {
-        "character": "cuò",
-        "letter": "error; blunder; fault; cross; uneven; wrong; CL:個|个[gè]",
-        "pinyin": "mistake;"
+        "character": "粗心",
+        "letter": "cūxīn",
+        "pinyin": "careless"
     },
     "129": {
-        "character": "答案",
-        "letter": "answer; solution; CL:個|个[gè]",
-        "pinyin": "dáàn"
+        "character": "大",
+        "letter": "dà",
+        "pinyin": "big"
     },
     "130": {
-        "character": "打扮",
-        "letter": "to decorate; to dress; to make up; to adorn; manner of dressing; style of dress",
-        "pinyin": "dǎban"
+        "character": "打电话",
+        "letter": "dǎ diànhuà",
+        "pinyin": "to make a phone call"
     },
     "131": {
-        "character": "打\u0005",
-        "letter": "to make a telephone call",
-        "pinyin": "dǎdiànhuà"
+        "character": "打篮球",
+        "letter": "dǎ lánqiú",
+        "pinyin": "to play basketball"
     },
     "132": {
-        "character": "打\u0006球",
-        "letter": "play basketball",
-        "pinyin": "dǎlánqiú"
+        "character": "答案",
+        "letter": "dá'àn",
+        "pinyin": "answer, solution"
     },
     "133": {
-        "character": "打\u0007",
-        "letter": "to disturb; to bother; to trouble",
-        "pinyin": "dǎrǎo"
+        "character": "打扮",
+        "letter": "dǎban",
+        "pinyin": "dress up, make up"
     },
     "134": {
-        "character": "打\b",
-        "letter": "to clean; to sweep",
-        "pinyin": "dǎsǎo"
+        "character": "大概",
+        "letter": "dàgài",
+        "pinyin": "probably, roughly"
     },
     "135": {
-        "character": "打算",
-        "letter": "to plan; to intend; to calculate; plan; intention; calculation; CL:個|个[gè]",
-        "pinyin": "dǎsuàn"
+        "character": "戴",
+        "letter": "dài",
+        "pinyin": "to put on or wear (glasses, hat, gloves etc)"
     },
     "136": {
-        "character": "打印",
-        "letter": "to print; to seal; to stamp",
-        "pinyin": "dǎyìn"
+        "character": "带",
+        "letter": "dài",
+        "pinyin": "to bring"
     },
     "137": {
-        "character": "打折",
-        "letter": "to give a discount",
-        "pinyin": "dǎzhé"
+        "character": "大夫",
+        "letter": "dàifu",
+        "pinyin": "doctor"
     },
     "138": {
-        "character": "打\t",
-        "letter": "to give or have an injection",
-        "pinyin": "dǎzhēn"
+        "character": "大家",
+        "letter": "dàjiā",
+        "pinyin": "everybody"
     },
     "139": {
-        "character": "大",
-        "letter": "big; huge; large; major; great; wide; deep; oldest; eldest",
-        "pinyin": "dà"
+        "character": "当",
+        "letter": "dāng",
+        "pinyin": "when, during"
     },
     "140": {
-        "character": "大概",
-        "letter": "roughly; probably; rough; approximate; about",
-        "pinyin": "dàgài"
+        "character": "蛋糕",
+        "letter": "dàngāo",
+        "pinyin": "cake"
     },
     "141": {
-        "character": "大家",
-        "letter": "authority; everyone",
-        "pinyin": "dàjiā"
+        "character": "当然",
+        "letter": "dāngrán",
+        "pinyin": "of course"
     },
     "142": {
-        "character": "大使\u0004",
-        "letter": "embassy; CL:座[zuò],個|个[gè]  8/56",
-        "pinyin": "dàshǐguǎn"
+        "character": "当时",
+        "letter": "dāngshí",
+        "pinyin": "at that time"
     },
     "143": {
-        "character": "大\u0006",
-        "letter": "approximately; about",
-        "pinyin": "dàyuē"
+        "character": "但是",
+        "letter": "dànshì",
+        "pinyin": "but"
     },
     "144": {
-        "character": "dài",
-        "letter": "belt; girdle; ribbon; tire; area; zone; region; CL:條|条[tiáo]; to wear; to carry; to lead; to bring; to look after; to raise",
-        "pinyin": "band;"
+        "character": "担心",
+        "letter": "dānxīn",
+        "pinyin": "to worry"
     },
     "145": {
-        "character": "戴",
-        "letter": "to put on or wear (glasses, hat, gloves etc); to respect; to bear; to support",
-        "pinyin": "dài"
+        "character": "倒",
+        "letter": "dào",
+        "pinyin": "to move backwards, converse"
     },
     "146": {
-        "character": "代表",
-        "letter": "representative; delegate; CL:位[wèi],個|个[gè],名 [míng]; to represent; to stand for; on behalf of; in the name of",
-        "pinyin": "dàibiǎo"
+        "character": "到",
+        "letter": "dào",
+        "pinyin": "to arrive"
     },
     "147": {
-        "character": "代替",
-        "letter": "instead; to replace; to substitute (X for Y, or a number in an algebraic expression)",
-        "pinyin": "dàitì"
+        "character": "刀",
+        "letter": "dāo",
+        "pinyin": "knife"
     },
     "148": {
-        "character": "大夫",
-        "letter": "doctor; minister of state (in pre-Han states); CL:個| 个[gè],位[wèi]",
-        "pinyin": "dàifu"
+        "character": "到处",
+        "letter": "dàochù",
+        "pinyin": "everywhere, in all places"
     },
     "149": {
-        "character": "担心",
-        "letter": "anxious; worried; uneasy; to worry; to be anxious",
-        "pinyin": "dānxīn"
+        "character": "到底",
+        "letter": "dàodǐ",
+        "pinyin": "finally, in the end, after all"
     },
     "150": {
-        "character": "蛋䊏",
-        "letter": "cake; CL:塊|\u0004[kuài],個|个[gè]",
-        "pinyin": "dàngāo"
+        "character": "道歉",
+        "letter": "dàoqiàn",
+        "pinyin": "apologize"
     },
     "151": {
-        "character": "但是",
-        "letter": "but; however",
-        "pinyin": "dànshì"
+        "character": "导游",
+        "letter": "dǎoyóu",
+        "pinyin": "tourist guide, guidebook"
     },
     "152": {
-        "character": "当",
-        "letter": "to be; to act as; manage; withstand; when; during; ought; should; match equally; equal; same; obstruct; just at (a time or place); on the spot; right; just at",
-        "pinyin": "dāng"
+        "character": "打扰",
+        "letter": "dǎrǎo",
+        "pinyin": "disturb, bother, trouble"
     },
     "153": {
-        "character": "当地",
-        "letter": "local",
-        "pinyin": "dāngdì"
+        "character": "打扫",
+        "letter": "dǎsǎo",
+        "pinyin": "to clean"
     },
     "154": {
-        "character": "当然",
-        "letter": "only natural; as it should be; certainly; of course; without doubt",
-        "pinyin": "dāngrán"
+        "character": "大使馆",
+        "letter": "dàshǐguǎn",
+        "pinyin": "embassy"
     },
     "155": {
-        "character": "当\u0005",
-        "letter": "then; at that time; while",
-        "pinyin": "dāngshí"
+        "character": "打算",
+        "letter": "dǎsuàn",
+        "pinyin": "to plan"
     },
     "156": {
-        "character": "刀",
-        "letter": "knife; CL:把[bǎ]",
-        "pinyin": "dāo"
+        "character": "打印",
+        "letter": "dǎyìn",
+        "pinyin": "print"
     },
     "157": {
-        "character": "游",
-        "letter": "tour guide; to conduct a tour; a guidebook",
-        "pinyin": "dǎoyóu"
+        "character": "大约",
+        "letter": "dàyuē",
+        "pinyin": "about, approximately"
     },
     "158": {
-        "character": "到",
-        "letter": "to (a place); until (a time); up to; to go; to arrive",
-        "pinyin": "dào"
+        "character": "打招呼",
+        "letter": "dǎzhāohū",
+        "pinyin": "to give prior notice"
     },
     "159": {
-        "character": "到\u0001",
-        "letter": "in all places; everywhere",
-        "pinyin": "dàochù"
+        "character": "打折",
+        "letter": "dǎzhé",
+        "pinyin": "to give a discount"
     },
     "160": {
-        "character": "到底",
-        "letter": "finally; in the end; when all is said and done; after all; to the end; to the last",
-        "pinyin": "dàodǐ"
+        "character": "打针",
+        "letter": "dǎzhēn",
+        "pinyin": "to give or have an injection"
     },
     "161": {
-        "character": "道歉",
-        "letter": "to apologize; to make an apology",
-        "pinyin": "dàoqiàn"
+        "character": "的",
+        "letter": "de",
+        "pinyin": "possession particle"
     },
     "162": {
-        "character": "得意",
-        "letter": "proud of oneself; pleased with oneself; complacent  9/56",
-        "pinyin": "déyì"
+        "character": "得",
+        "letter": "dé",
+        "pinyin": "particle used to express capability, possibility, degree"
     },
     "163": {
         "character": "地",
-        "letter": "-ly; structural particle: used before a verb or adjective, linking it to preceding modifying adverbial adjunct",
-        "pinyin": "de"
+        "letter": "de",
+        "pinyin": "structure particle"
     },
     "164": {
-        "character": "的",
-        "letter": "of; structural particle: used before a noun, linking it to preceding possessive or descriptive attributive",
-        "pinyin": "de"
+        "character": "等",
+        "letter": "děng",
+        "pinyin": "to wait"
     },
     "165": {
-        "character": "得",
-        "letter": "structural particle: used after a verb (or adjective as main verb), linking it to following phrase indicating effect, degree, possibility etc",
-        "pinyin": "de"
+        "character": "灯",
+        "letter": "dēng",
+        "pinyin": "light"
     },
     "166": {
-        "character": "得",
-        "letter": "to have to; must; ought to; to need to",
-        "pinyin": "děi"
+        "character": "登机牌",
+        "letter": "dēng jī pái",
+        "pinyin": "boarding pass"
     },
     "167": {
-        "character": "灯",
-        "letter": "lamp; light; lantern; CL:盞|[zhǎn]",
-        "pinyin": "dēng"
+        "character": "得意",
+        "letter": "déyì",
+        "pinyin": "proud"
     },
     "168": {
-        "character": "等",
-        "letter": "wait for; await",
-        "pinyin": "děng"
+        "character": "底",
+        "letter": "dǐ",
+        "pinyin": "bottom, base, background"
     },
     "169": {
-        "character": "等",
-        "letter": "et cetera; and so on; et al. (and other authors); after; as soon as; once",
-        "pinyin": "děng"
+        "character": "低",
+        "letter": "dī",
+        "pinyin": "low"
     },
     "170": {
-        "character": "低",
-        "letter": "low; beneath; to lower (one's head); to let droop; to hang down; to incline",
-        "pinyin": "dī"
+        "character": "第一",
+        "letter": "dì-yī",
+        "pinyin": "first"
     },
     "171": {
-        "character": "底",
-        "letter": "background; bottom; base; the end of a period of time; towards the end of (last month)",
-        "pinyin": "dǐ"
+        "character": "点",
+        "letter": "diǎn",
+        "pinyin": "o’clock"
     },
     "172": {
-        "character": "弟弟",
-        "letter": "younger brother; CL:個|个[gè],位[wèi]",
-        "pinyin": "dìdi"
+        "character": "电脑",
+        "letter": "diànnǎo",
+        "pinyin": "computer"
     },
     "173": {
-        "character": "地方",
-        "letter": "region; regional (away from the central administration)",
-        "pinyin": "dìfāng"
+        "character": "电视",
+        "letter": "diànshì",
+        "pinyin": "TV"
     },
     "174": {
-        "character": "地球",
-        "letter": "the Earth; planet; CL:個|个[gè]",
-        "pinyin": "dìqiú"
+        "character": "电梯",
+        "letter": "diàntī",
+        "pinyin": "elevator"
     },
     "175": {
-        "character": "地\u0001",
-        "letter": "subway; metro",
-        "pinyin": "dìtiě"
+        "character": "电影",
+        "letter": "diànyǐng",
+        "pinyin": "movie"
     },
     "176": {
-        "character": "地",
-        "letter": "map; CL:張|\u0004[zhāng],本[běn]",
-        "pinyin": "dìtú"
+        "character": "电子邮件",
+        "letter": "diànzǐ yóujiàn",
+        "pinyin": "email"
     },
     "177": {
-        "character": "地址",
-        "letter": "address; CL:個|个[gè]",
-        "pinyin": "dìzhǐ"
+        "character": "掉",
+        "letter": "diào",
+        "pinyin": "fall, drop, lose, come off"
     },
     "178": {
-        "character": "第一",
-        "letter": "first; number one",
-        "pinyin": "dìyī"
+        "character": "调查",
+        "letter": "diàochá",
+        "pinyin": "investigation, inquiry, survey"
     },
     "179": {
-        "character": "点",
-        "letter": "drop (of liquid); stain; spot; speck; jot; dot stroke (in Chinese characters); decimal point; point; mark (of degree or level); a place (with certain characteristics); iron bell; o’clock; a little; a bit; some; (point) unit of measurement for type; to touch on briefly; to make clear; to light; to ignite; to kindle; period of time at night (24 minutes) (old); a drip; to dibble; classifier for small indeterminate quantities  10/56",
-        "pinyin": "diǎn"
+        "character": "弟弟",
+        "letter": "dìdi",
+        "pinyin": "younger brother"
     },
     "180": {
-        "character": "\u0004",
-        "letter": "computer; CL:臺|台[tái]",
-        "pinyin": "diànnǎo"
+        "character": "地点",
+        "letter": "dìdiǎn",
+        "pinyin": "location, place, venue"
     },
     "181": {
-        "character": "\u0004\u000b",
-        "letter": "television; TV; CL:臺|台[tái],個|个[gè]",
-        "pinyin": "diànshì"
+        "character": "地方",
+        "letter": "dìfāng",
+        "pinyin": "place"
     },
     "182": {
-        "character": "\u0004梯",
-        "letter": "elevator; CL:臺|台[tái],部[bù]",
-        "pinyin": "diàntī"
+        "character": "地球",
+        "letter": "dìqiú",
+        "pinyin": "earth, planet"
     },
     "183": {
-        "character": "\u0004影",
-        "letter": "movie; film; CL:部[bù],片[piàn],幕[mù],場| [chǎng]",
-        "pinyin": "diànyǐng"
+        "character": "地铁",
+        "letter": "dìtiě",
+        "pinyin": "metro"
     },
     "184": {
-        "character": "\u0004子件",
-        "letter": "electronic mail; email; CL:封[fēng]",
-        "pinyin": "diànzǐyóujiàn"
+        "character": "地图",
+        "letter": "dìtú",
+        "pinyin": "map"
     },
     "185": {
-        "character": "掉",
-        "letter": "to fall; to drop; to lag behind; to lose; to go missing; to reduce; fall (in prices); to lose (value, weight etc); to wag; to swing; to turn; to change; to exchange; to swap; to show off; to shed (hair)",
-        "pinyin": "diào"
+        "character": "丢",
+        "letter": "diū",
+        "pinyin": "throw, put aside"
     },
     "186": {
-        "character": "\u0005\u0001",
-        "letter": "investigation; inquiry; to investigate; to survey; survey; (opinion) poll; CL:項|\f[xiàng],個|个[gè]",
-        "pinyin": "diàochá"
+        "character": "地址",
+        "letter": "dìzhǐ",
+        "pinyin": "address"
     },
     "187": {
-        "character": "\u0006",
-        "letter": "to lose; to put aside; to throw",
-        "pinyin": "diū"
+        "character": "懂",
+        "letter": "dǒng",
+        "pinyin": "to understand"
     },
     "188": {
         "character": "冬",
-        "letter": "winter",
-        "pinyin": "dōng"
+        "letter": "dōng",
+        "pinyin": "winter"
     },
     "189": {
-        "character": "\u0007",
-        "letter": "east; host (i.e. sitting on east side of guest); landlord; surname Dong",
-        "pinyin": "dōng"
+        "character": "东",
+        "letter": "dōng",
+        "pinyin": "east"
     },
     "190": {
-        "character": "\u0007西",
-        "letter": "thing; stuff; person; CL:個|个[gè],件[jiàn]",
-        "pinyin": "dōngxi"
+        "character": "动物",
+        "letter": "dòngwù",
+        "pinyin": "animal"
     },
     "191": {
-        "character": "懂",
-        "letter": "to understand; to know",
-        "pinyin": "dǒng"
+        "character": "东西",
+        "letter": "dōngxi",
+        "pinyin": "thing"
     },
     "192": {
-        "character": "\b物",
-        "letter": "animal; CL:隻|只[zhī],群[qún],個|个[gè]",
-        "pinyin": "dòngwù"
+        "character": "动作",
+        "letter": "dòngzuò",
+        "pinyin": "action, movement"
     },
     "193": {
-        "character": "\b作",
-        "letter": "movement; motion; action; CL:個|个[gè]",
-        "pinyin": "dòngzuò"
+        "character": "都",
+        "letter": "dōu",
+        "pinyin": "both or all"
     },
     "194": {
-        "character": "都",
-        "letter": "all, both; entirely (due to) each; even; already",
-        "pinyin": "dōu"
+        "character": "读",
+        "letter": "dú",
+        "pinyin": "to read"
     },
     "195": {
-        "character": "dú",
-        "letter": "read; to study; reading of word (i.e. pronunciation), similar to 拼音[pīn yīn]",
-        "pinyin": "to"
+        "character": "段",
+        "letter": "duàn",
+        "pinyin": "span of time or distance"
     },
     "196": {
-        "character": "堵",
-        "letter": "traffic jam; choking",
-        "pinyin": "dǔchē"
+        "character": "短",
+        "letter": "duǎn",
+        "pinyin": "short"
     },
     "197": {
-        "character": "肚子",
-        "letter": "belly; abdomen; stomach; CL:個|个[gè]",
-        "pinyin": "dùzi"
+        "character": "锻炼",
+        "letter": "duànliàn",
+        "pinyin": "to work out"
     },
     "198": {
-        "character": "短",
-        "letter": "short or brief; to lack; weak point; fault",
-        "pinyin": "duǎn"
+        "character": "短信",
+        "letter": "duǎnxìn",
+        "pinyin": "SMS"
     },
     "199": {
-        "character": "段",
-        "letter": "paragraph; section; segment; stage (of a process); classifier for stories, periods of time, lengths of thread etc",
-        "pinyin": "duàn"
+        "character": "堵车",
+        "letter": "dǔchē",
+        "pinyin": "traffic jam"
     },
     "200": {
-        "character": "断",
-        "letter": "to break; to snap; to cut off; to give up or abstain from sth; to judge; (usu. used in the negative) absolutely, definitely,decidedly  11/56",
-        "pinyin": "duàn"
+        "character": "对",
+        "letter": "duì",
+        "pinyin": "right"
     },
     "201": {
-        "character": "\b",
-        "letter": "to engage in physical exercise; to toughen; to temper",
-        "pinyin": "duànliàn"
+        "character": "对不起",
+        "letter": "duìbuqǐ",
+        "pinyin": "sorry"
     },
     "202": {
-        "character": "duì",
-        "letter": "pair; to be opposite; to oppose; to face; versus; for; to; correct (answer); to answer; to reply; to direct (towards sth); right",
-        "pinyin": "couple;"
+        "character": "对话",
+        "letter": "duìhuà",
+        "pinyin": "dialogue"
     },
     "203": {
-        "character": "duì",
-        "letter": "for",
-        "pinyin": "(介\u0001)to;"
+        "character": "对面",
+        "letter": "duìmiàn",
+        "pinyin": "opposite"
     },
     "204": {
-        "character": "不起",
-        "letter": "unworthy; to let down; I'm sorry; excuse me; pardon me; if you please; sorry? (please repeat)",
-        "pinyin": "duìbuqǐ"
+        "character": "对于",
+        "letter": "duìyú",
+        "pinyin": "regarding, As far as is concerned"
     },
     "205": {
-        "character": "\u0007",
-        "letter": "dialog; CL:個|个[gè]",
-        "pinyin": "duìhuà"
+        "character": "多",
+        "letter": "duō",
+        "pinyin": "many"
     },
     "206": {
-        "character": "面",
-        "letter": "opposite",
-        "pinyin": "duìmiàn"
+        "character": "多么",
+        "letter": "duōme",
+        "pinyin": "how…"
     },
     "207": {
-        "character": "\u0004",
-        "letter": "stop; pause; to arrange; to lay out; to kowtow; to stamp; at once; classifier for meals, beating, tellings off etc: time, bout, spell, meal",
-        "pinyin": "dùn"
+        "character": "多少",
+        "letter": "duōshao",
+        "pinyin": "how many or how much"
     },
     "208": {
-        "character": "多",
-        "letter": "many; much; a lot of; numerous; multi210 多么 duōme how (wonderful etc); what (a great idea etc); however (difficult it may be etc)",
-        "pinyin": "duō"
+        "character": "肚子",
+        "letter": "dùzi",
+        "pinyin": "belly, stomach"
     },
     "209": {
-        "character": "多少",
-        "letter": "number; amount; somewhat",
-        "pinyin": "duōshǎo"
+        "character": "饿",
+        "letter": "è",
+        "pinyin": "hungry"
     },
     "210": {
-        "character": "䯳",
-        "letter": "flower; earlobe; fig. item on both sides; classifier for flowers, clouds etc",
-        "pinyin": "duǒ"
+        "character": "而",
+        "letter": "ér",
+        "pinyin": "and, as well as"
     },
     "211": {
-        "character": "\u0005",
-        "letter": "to be hungry; hungry",
-        "pinyin": "è"
+        "character": "二",
+        "letter": "èr",
+        "pinyin": "two"
     },
     "212": {
-        "character": "而",
-        "letter": "and; as well as; and so; but (not); yet (not); (indicates causal relation); (indicates change of state); (indicates contrast)",
-        "pinyin": "ér"
+        "character": "耳朵",
+        "letter": "ěrduo",
+        "pinyin": "ear"
     },
     "213": {
         "character": "而且",
-        "letter": "(not only ...) but also; moreover; in addition; furthermore",
-        "pinyin": "érqiě"
+        "letter": "érqiě",
+        "pinyin": "moreover"
     },
     "214": {
         "character": "儿童",
-        "letter": "child; CL:個|个[gè]",
-        "pinyin": "értóng"
+        "letter": "értóng",
+        "pinyin": "children"
     },
     "215": {
         "character": "儿子",
-        "letter": "son",
-        "pinyin": "érzi"
+        "letter": "érzi",
+        "pinyin": "son"
     },
     "216": {
-        "character": "耳䯳",
-        "letter": "ear; CL:隻|只[zhī],個|个[gè],對|[duì]",
-        "pinyin": "ěrduo"
+        "character": "法律",
+        "letter": "fǎlǜ",
+        "pinyin": "law"
     },
     "217": {
-        "character": "二",
-        "letter": "two; 2; stupid (Beijing dialect)",
-        "pinyin": "èr"
+        "character": "反对",
+        "letter": "fǎnduì",
+        "pinyin": "opposition"
     },
     "218": {
-        "character": "\u0006",
-        "letter": "to send out; to show (one's feeling); to issue; to develop; classifier for gunshots (rounds)",
-        "pinyin": "fā"
+        "character": "放",
+        "letter": "fàng",
+        "pinyin": "to put"
     },
     "219": {
-        "character": "\u0006\t",
-        "letter": "have a high temperature (from illness); have a fever",
-        "pinyin": "fāshāo"
+        "character": "方便",
+        "letter": "fāngbiàn",
+        "pinyin": "convenient"
     },
     "220": {
-        "character": "\u0006生",
-        "letter": "to happen; to occur; to take place; to break out  12/56",
-        "pinyin": "fāshēng"
+        "character": "房东",
+        "letter": "fángdōng",
+        "pinyin": "landlord, owner of land"
     },
     "221": {
-        "character": "fāxiàn",
-        "letter": "find; to discover",
-        "pinyin": "to"
+        "character": "方法",
+        "letter": "fāngfǎ",
+        "pinyin": "method, way, means"
     },
     "222": {
-        "character": "展",
-        "letter": "development; growth; to develop; to grow; to expand",
-        "pinyin": "fāzhǎn"
+        "character": "房间",
+        "letter": "fángjiān",
+        "pinyin": "room"
     },
     "223": {
-        "character": "法律",
-        "letter": "law; CL:條|条[tiáo], 套[tào], 個|个[gè]",
-        "pinyin": "fǎlǜ"
+        "character": "方面",
+        "letter": "fāngmiàn",
+        "pinyin": "aspect, respect"
     },
     "224": {
-        "character": "翻\f",
-        "letter": "to translate; to interpret; translator; interpreter; translation; interpretation; CL:個|个[gè],位[wèi], 名[míng]",
-        "pinyin": "fānyì"
+        "character": "放弃",
+        "letter": "fàngqì",
+        "pinyin": "give up, abandon"
     },
     "225": {
-        "character": "\b",
-        "letter": "agonize; agony; annoyance; upset; vexation; worries",
-        "pinyin": "fánnǎo"
+        "character": "放暑假",
+        "letter": "fàngshǔjià",
+        "pinyin": "summer vacation"
     },
     "226": {
-        "character": "反\u0001",
-        "letter": "to fight against; to oppose; to be opposed to; opposition",
-        "pinyin": "fǎnduì"
+        "character": "放松",
+        "letter": "fàngsōng",
+        "pinyin": "relax"
     },
     "227": {
-        "character": "反",
-        "letter": "to mirror; to reflect; mirror image; reflection; fig. to report; to make known; to render; used erroneously for 反應|反, response or reaction",
-        "pinyin": "fǎnyìng"
+        "character": "饭馆",
+        "letter": "fànguǎn",
+        "pinyin": "restaurant"
     },
     "228": {
-        "character": "\u0004\u0006",
-        "letter": "restaurant; CL:家[jiā]",
-        "pinyin": "fànguǎn"
+        "character": "方向",
+        "letter": "fāngxiàng",
+        "pinyin": "direction, orientation"
     },
     "229": {
-        "character": "范\t",
-        "letter": "range; scope; limit; extent; CL:個|个[gè]",
-        "pinyin": "fànwéi"
+        "character": "放心",
+        "letter": "fàngxīn",
+        "pinyin": "to rest assured"
     },
     "230": {
-        "character": "方便",
-        "letter": "convenient; to help out; to make things easy for people; convenience; suitable; having money to spare; (euphemism) to go to the toilet",
-        "pinyin": "fāngbiàn"
+        "character": "烦恼",
+        "letter": "fánnǎo",
+        "pinyin": "annoyance, vexation"
     },
     "231": {
-        "character": "方法",
-        "letter": "method; way; means; CL:個|个[gè]",
-        "pinyin": "fāngfǎ"
+        "character": "翻译",
+        "letter": "fānyì",
+        "pinyin": "translate, interpreter"
     },
     "232": {
-        "character": "方面",
-        "letter": "respect; aspect; field; side; CL:個|个[gè]",
-        "pinyin": "fāngmiàn"
+        "character": "发烧",
+        "letter": "fāshāo",
+        "pinyin": "to have a fever"
     },
     "233": {
-        "character": "方向",
-        "letter": "direction; orientation; path to follow; CL:個|个 [gè]",
-        "pinyin": "fāngxiàng"
+        "character": "发生",
+        "letter": "fāshēng",
+        "pinyin": "happen, occur, break out"
     },
     "234": {
-        "character": "房\u0007",
-        "letter": "room; CL:間|\u0007[jiān]",
-        "pinyin": "fángjiān"
+        "character": "发现",
+        "letter": "fāxiàn",
+        "pinyin": "to discover"
     },
     "235": {
-        "character": "\u0005",
-        "letter": "to visit; to call on; to interview; CL:次[cì]",
-        "pinyin": "fǎngwèn"
+        "character": "发展",
+        "letter": "fāzhǎn",
+        "pinyin": "development, growth"
     },
     "236": {
-        "character": "放",
-        "letter": "to release; to free; to let go; to put; to place; to let out; to set off (fireworks)",
-        "pinyin": "fàng"
+        "character": "非常",
+        "letter": "fēicháng",
+        "pinyin": "extremely"
     },
     "237": {
-        "character": "放弃",
-        "letter": "to renounce; to abandon; to give up",
-        "pinyin": "fàngqì"
+        "character": "飞机",
+        "letter": "fēijī",
+        "pinyin": "plane"
     },
     "238": {
-        "character": "放暑假",
-        "letter": "take summer vacation",
-        "pinyin": "fàngshǔjià"
+        "character": "份",
+        "letter": "fèn",
+        "pinyin": "part, share, copy"
     },
     "239": {
-        "character": "放心",
-        "letter": "to set one's mind at rest; to be at ease; to rest",
-        "pinyin": "fàngxīn"
+        "character": "分",
+        "letter": "fēn",
+        "pinyin": "to divide or separate"
     },
     "240": {
-        "character": "非常",
-        "letter": "unusual; extraordinary; extreme; very; exceptional  13/56",
-        "pinyin": "fēicháng"
+        "character": "丰富",
+        "letter": "fēngfù",
+        "pinyin": "rich"
     },
     "241": {
-        "character": "机",
-        "letter": "airplane; CL: 架[jià]",
-        "pinyin": "fēijī"
+        "character": "分钟",
+        "letter": "fēnzhōng",
+        "pinyin": "minute"
     },
     "242": {
-        "character": "分",
-        "letter": "to divide; to separate; to allocate; to distinguish (good and bad); part or subdivision; fraction; one tenth (of certain units); unit of length equivalent to 0.33 cm; minute; a point (in sports or games); 0.1 yuan (unit of money)",
-        "pinyin": "fēn"
+        "character": "否则",
+        "letter": "fǒuzé",
+        "pinyin": "otherwise"
     },
     "243": {
-        "character": "…分之…",
-        "letter": "used for fractions and percentages, e.g. 四分之一 is 1/4 and 百分之一 is 1%",
-        "pinyin": "fēnzhī"
+        "character": "富",
+        "letter": "fù",
+        "pinyin": "rich, surname Fu"
     },
     "244": {
-        "character": "分\f",
-        "letter": "minute",
-        "pinyin": "fēnzhōng"
+        "character": "符合",
+        "letter": "fúhé",
+        "pinyin": "in keeping with, in accordance with"
     },
     "245": {
-        "character": "份",
-        "letter": "part; share; portion; copy; classifier for gifts, newspaper, magazine, papers, reports, contracts etc",
-        "pinyin": "fèn"
+        "character": "附近",
+        "letter": "fùjìn",
+        "pinyin": "surrounding area"
     },
     "246": {
-        "character": "丰富",
-        "letter": "rich; plentiful; abundant",
-        "pinyin": "fēngfù"
+        "character": "付款",
+        "letter": "fùkuǎn",
+        "pinyin": "payment"
     },
     "247": {
-        "character": "景",
-        "letter": "scenery; landscape; CL:個|个[gè]",
-        "pinyin": "fēngjǐng"
+        "character": "父亲",
+        "letter": "fùqīn",
+        "pinyin": "father"
     },
     "248": {
-        "character": "否\u000b",
-        "letter": "if not; otherwise; else; or else",
-        "pinyin": "fǒuzé"
+        "character": "服务员",
+        "letter": "fúwùyuán",
+        "pinyin": "waiter or waitress"
     },
     "249": {
-        "character": "符合",
-        "letter": "in keeping with; in accordance with; tallying with; in line with; to agree with; to accord with; to conform to; to correspond with; to manage; to handle",
-        "pinyin": "fúhé"
+        "character": "复习",
+        "letter": "fùxí",
+        "pinyin": "to review"
     },
     "250": {
-        "character": "服\u0006\b",
-        "letter": "waiter; waitress; attendant; customer service personnel; CL:個|个[gè]",
-        "pinyin": "fúwùyuán"
+        "character": "复印",
+        "letter": "fùyìn",
+        "pinyin": "photocopy"
     },
     "251": {
-        "character": "富",
-        "letter": "rich; surname Fu",
-        "pinyin": "fù"
+        "character": "复杂",
+        "letter": "fùzá",
+        "pinyin": "complicated"
     },
     "252": {
-        "character": "附近",
-        "letter": "(in the) vicinity; nearby; neighboring; next to",
-        "pinyin": "fùjìn"
+        "character": "负责",
+        "letter": "fùzé",
+        "pinyin": "to take responsibility"
     },
     "253": {
-        "character": "父\u0005",
-        "letter": "father; also pr. with light tone [fù qin]; CL:個|个 [gè]",
-        "pinyin": "fùqīn"
+        "character": "改变",
+        "letter": "gǎibiàn",
+        "pinyin": "change, transform"
     },
     "254": {
-        "character": "䐾\u0007",
-        "letter": "to revise; to review; revision; CL:次[cì]",
-        "pinyin": "fùxí"
+        "character": "干",
+        "letter": "gàn",
+        "pinyin": "to do (some work)"
     },
     "255": {
-        "character": "䐾印",
-        "letter": "to photocopy; to duplicate a document",
-        "pinyin": "fùyìn"
+        "character": "敢",
+        "letter": "gǎn",
+        "pinyin": "to dare"
     },
     "256": {
-        "character": "䐾\t",
-        "letter": "complicated; complex",
-        "pinyin": "fùzá"
+        "character": "赶",
+        "letter": "gǎn",
+        "pinyin": "rush, hurry, to catch up"
     },
     "257": {
-        "character": "\u0004",
-        "letter": "to be in charge of; to take responsibility for; to be to blame; conscientious",
-        "pinyin": "fùzé"
+        "character": "干杯",
+        "letter": "gānbēi",
+        "pinyin": "cheers"
     },
     "258": {
-        "character": "改\u0001",
-        "letter": "to change; to alter; to transform",
-        "pinyin": "gǎibiàn"
+        "character": "感动",
+        "letter": "gǎndòng",
+        "pinyin": "to move, moving"
     },
     "259": {
-        "character": "干杯",
-        "letter": "to drink a toast; Cheers! (proposing a toast); Here's to you!; Bottoms up!; lit. dry cup  14/56",
-        "pinyin": "gānbēi"
+        "character": "刚",
+        "letter": "gāng",
+        "pinyin": "just, exactly, hard, strong"
     },
     "260": {
-        "character": "干\u0006",
-        "letter": "clean; neat",
-        "pinyin": "gānjìng"
+        "character": "刚才",
+        "letter": "gāngcái",
+        "pinyin": "just now"
     },
     "261": {
-        "character": "干燥",
-        "letter": "to dry (of weather, paint, cement etc); desiccation; dull; uninteresting; arid",
-        "pinyin": "gānzào"
+        "character": "干净",
+        "letter": "gānjìng",
+        "pinyin": "clean"
     },
     "262": {
-        "character": "敢",
-        "letter": "to dare; daring; (polite) may I venture",
-        "pinyin": "gǎn"
+        "character": "感觉",
+        "letter": "gǎnjué",
+        "pinyin": "feel, perception, sense"
     },
     "263": {
-        "character": "感",
-        "letter": "to move (sb); to touch (sb emotionally); moving",
-        "pinyin": "gǎndòng"
+        "character": "感冒",
+        "letter": "gǎnmào",
+        "pinyin": "to have a cold"
     },
     "264": {
-        "character": "感\u0007",
-        "letter": "to feel; to become aware of; feeling; sense; perception; CL:個|个[gè]",
-        "pinyin": "gǎnjué"
+        "character": "感情",
+        "letter": "gǎnqíng",
+        "pinyin": "feeling, emotion, sensation"
     },
     "265": {
-        "character": "感冒",
-        "letter": "to catch cold; (common) cold; CL:場|\u0001[cháng], 次[cì]",
-        "pinyin": "gǎnmào"
+        "character": "感谢",
+        "letter": "gǎnxiè",
+        "pinyin": "gratitude, grateful, thankful"
     },
     "266": {
-        "character": "感情",
-        "letter": "feeling; emotion; sensation; likes and dislikes; deep affection for sb or sth; relationship (i.e. love affair); CL:個|个[gè],種|䝅[zhǒng]",
-        "pinyin": "gǎnqíng"
+        "character": "高",
+        "letter": "gāo",
+        "pinyin": "tall or high"
     },
     "267": {
-        "character": "感\t",
-        "letter": "(express) thanks; gratitude; grateful; thankful; thanks",
-        "pinyin": "gǎnxiè"
+        "character": "告诉",
+        "letter": "gàosù",
+        "pinyin": "to tell"
     },
     "268": {
-        "character": "干",
-        "letter": "to work; to do; to manage",
-        "pinyin": "gān"
+        "character": "高速公路",
+        "letter": "gāosù gōnglù",
+        "pinyin": "expressway, highway"
     },
     "269": {
-        "character": "才",
-        "letter": "just now; a moment ago",
-        "pinyin": "gāngcái"
+        "character": "高兴",
+        "letter": "gāoxìng",
+        "pinyin": "happy"
     },
     "270": {
-        "character": "gānggang",
-        "letter": "recently; just a moment ago",
-        "pinyin": "just"
+        "character": "各",
+        "letter": "gè",
+        "pinyin": "each, every"
     },
     "271": {
-        "character": "高",
-        "letter": "high; tall; above average; loud; your (honorific); surname Gao",
-        "pinyin": "gāo"
+        "character": "个",
+        "letter": "gè",
+        "pinyin": "generic measure word"
     },
     "272": {
-        "character": "高\u0005",
-        "letter": "high level; high grade; advanced; high-ranking",
-        "pinyin": "gāojí"
+        "character": "胳膊",
+        "letter": "gēbó",
+        "pinyin": "arm"
     },
     "273": {
-        "character": "高䫤",
-        "letter": "happy; glad; willing (to do sth); in a cheerful mood",
-        "pinyin": "gāoxìng"
+        "character": "哥哥",
+        "letter": "gēge",
+        "pinyin": "elder brother"
     },
     "274": {
-        "character": "告\b",
-        "letter": "to tell; to inform; to let know",
-        "pinyin": "gàosu"
+        "character": "给",
+        "letter": "gěi",
+        "pinyin": "to give"
     },
     "275": {
-        "character": "哥哥",
-        "letter": "older brother; CL:個|个[gè],位[wèi]",
-        "pinyin": "gēge"
+        "character": "跟",
+        "letter": "gēn",
+        "pinyin": "with"
     },
     "276": {
-        "character": "各",
-        "letter": "each; every",
-        "pinyin": "gè"
+        "character": "更",
+        "letter": "gèng",
+        "pinyin": "more"
     },
     "277": {
-        "character": "个",
-        "letter": "individual; this; that; size; classifier for people or objects in general",
-        "pinyin": "gè"
+        "character": "根据",
+        "letter": "gēnjù",
+        "pinyin": "according to"
     },
     "278": {
-        "character": "个子",
-        "letter": "height; stature; build; size",
-        "pinyin": "gèzi"
+        "character": "功夫",
+        "letter": "gōngfū",
+        "pinyin": "skill, effort, art, kung fu"
     },
     "279": {
-        "character": "\u0004",
-        "letter": "to; for; for the benefit of; to give; to allow; to do sth (for sb); (passive particle)",
-        "pinyin": "gěi"
+        "character": "公共汽车",
+        "letter": "gōnggòng qìchē",
+        "pinyin": "bus"
     },
     "280": {
-        "character": "跟",
-        "letter": "heel; to follow closely; to go with; to marry sb (of woman); with; towards; as (compared to); from (different from); and (in addition to)  15/56",
-        "pinyin": "gēn"
+        "character": "公斤",
+        "letter": "gōngjīn",
+        "pinyin": "kilo"
     },
     "281": {
-        "character": "根据",
-        "letter": "according to; based on; basis; foundation; CL:個| 个[gè]",
-        "pinyin": "gēnjù"
+        "character": "公里",
+        "letter": "gōnglǐ",
+        "pinyin": "kilometer"
     },
     "282": {
-        "character": "更",
-        "letter": "to change or replace; to experience; one of the five two hour periods into which the night was formerly divided; watch (eg of a sentry or guard)",
-        "pinyin": "gēng"
+        "character": "公司",
+        "letter": "gōngsī",
+        "pinyin": "company"
     },
     "283": {
-        "character": "公共汽",
-        "letter": "bus; CL:輛|\b[liàng],班[bān]",
-        "pinyin": "gōnggòngqìchē"
+        "character": "共同",
+        "letter": "gòngtóng",
+        "pinyin": "common, join, together"
     },
     "284": {
-        "character": "公斤",
-        "letter": "kilogram (kg)",
-        "pinyin": "gōngjīn"
+        "character": "公园",
+        "letter": "gōngyuán",
+        "pinyin": "park"
     },
     "285": {
-        "character": "公里",
-        "letter": "kilometer",
-        "pinyin": "gōnglǐ"
+        "character": "工资",
+        "letter": "gōngzī",
+        "pinyin": "wage, pay"
     },
     "286": {
-        "character": "公司",
-        "letter": "(business) company; company; firm; corporation; incorporated; CL:家[jiā]",
-        "pinyin": "gōngsī"
+        "character": "工作",
+        "letter": "gōngzuò",
+        "pinyin": "to work"
     },
     "287": {
-        "character": "公䭉",
-        "letter": "public park; CL:場|\u0001[chǎng]",
-        "pinyin": "gōngyuán"
+        "character": "够",
+        "letter": "gòu",
+        "pinyin": "to reach, to be enough"
     },
     "288": {
-        "character": "工具",
-        "letter": "tool; instrument; utensil; means (to achieve a goal etc)",
-        "pinyin": "gōngjù"
+        "character": "狗",
+        "letter": "gǒu",
+        "pinyin": "dog"
     },
     "289": {
-        "character": "工",
-        "letter": "wages; pay; CL:個|个[gè],份[fèn],月[yuè]",
-        "pinyin": "gōngzī"
+        "character": "购物",
+        "letter": "gòuwù",
+        "pinyin": "shopping"
     },
     "290": {
-        "character": "工作",
-        "letter": "job; work; construction; task; CL:個|个[gè],份 [fèn],項|\t[xiàng]",
-        "pinyin": "gōngzuò"
+        "character": "挂",
+        "letter": "guà",
+        "pinyin": "suspend, hang"
     },
     "291": {
-        "character": "共同",
-        "letter": "common; joint; jointly; together; collaborative",
-        "pinyin": "gòngtóng"
+        "character": "刮风",
+        "letter": "guā fēng",
+        "pinyin": "to blow (wind)"
     },
     "292": {
-        "character": "狗",
-        "letter": "dog; CL:隻|只[zhī],條|条[tiáo]",
-        "pinyin": "gǒu"
+        "character": "关",
+        "letter": "guān",
+        "pinyin": "to close or to shut"
     },
     "293": {
-        "character": "䭧",
-        "letter": "to reach; to be enough",
-        "pinyin": "gòu"
+        "character": "逛",
+        "letter": "guàng",
+        "pinyin": "to stroll, to visit"
     },
     "294": {
-        "character": "\u0005物",
-        "letter": "shopping",
-        "pinyin": "gòuwù"
+        "character": "光",
+        "letter": "guāng",
+        "pinyin": "light, bright"
     },
     "295": {
-        "character": "孤",
-        "letter": "lone; lonely; loneliness",
-        "pinyin": "gūdān"
+        "character": "广播",
+        "letter": "guǎngbō",
+        "pinyin": "radio broadcast, widely spread"
     },
     "296": {
-        "character": "估\u0007",
-        "letter": "to estimate; to reckon; CL:個|个[gè]",
-        "pinyin": "gūjì"
+        "character": "广告",
+        "letter": "guǎnggào",
+        "pinyin": "advertisement"
     },
     "297": {
-        "character": "鼓励",
-        "letter": "to encourage",
-        "pinyin": "gǔlì"
+        "character": "关键",
+        "letter": "guānjiàn",
+        "pinyin": "key, crucial point, crux"
     },
     "298": {
-        "character": "鼓掌",
-        "letter": "to applaud; to clap",
-        "pinyin": "gǔzhǎng"
+        "character": "管理",
+        "letter": "guǎnlǐ",
+        "pinyin": "administration, management"
     },
     "299": {
-        "character": "\u0006客",
-        "letter": "client; customer; CL:位[wèi]",
-        "pinyin": "gùkè"
+        "character": "关系",
+        "letter": "guānxì",
+        "pinyin": "relation"
     },
     "300": {
-        "character": "故事",
-        "letter": "old practice; CL:個|个[gè]",
-        "pinyin": "gùshì"
+        "character": "关心",
+        "letter": "guānxīn",
+        "pinyin": "to concern"
     },
     "301": {
-        "character": "故意",
-        "letter": "deliberately; on purpose",
-        "pinyin": "gùyì"
+        "character": "关于",
+        "letter": "guānyú",
+        "pinyin": "about, regarding"
     },
     "302": {
-        "character": "刮\u0004",
-        "letter": "to be windy",
-        "pinyin": "guāfēng"
+        "character": "观众",
+        "letter": "guānzhòng",
+        "pinyin": "audience, spectators"
     },
     "303": {
-        "character": "挂",
-        "letter": "to hang or suspend (from a hook etc); (of a telephone call) to hang up; to be worried or  16/56 concerned; to make a phone call (topolect); to register or record; to hitch; classifier for sets or clusters of objects",
-        "pinyin": "guà"
+        "character": "贵",
+        "letter": "guì",
+        "pinyin": "expensive"
     },
     "304": {
-        "character": "䎔",
-        "letter": "mountain pass; to close; to shut; to turn off; to concern; to involve",
-        "pinyin": "guān"
+        "character": "规定",
+        "letter": "guīdìng",
+        "pinyin": "rule, regulation"
     },
     "305": {
-        "character": "䎔\b",
-        "letter": "crucial point; crux; CL:個|个[gè]; key; crucial; pivotal",
-        "pinyin": "guānjiàn"
+        "character": "估计",
+        "letter": "gūjì",
+        "pinyin": "estimate"
     },
     "306": {
-        "character": "䎔系",
-        "letter": "relation; relationship; to concern; to affect; to have to do with; guanxi; CL:個|个[gè]",
-        "pinyin": "guānxì"
+        "character": "顾客",
+        "letter": "gùkè",
+        "pinyin": "customer, client"
     },
     "307": {
-        "character": "䎔心",
-        "letter": "to care for sth; caring; concerned",
-        "pinyin": "guānxīn"
+        "character": "鼓励",
+        "letter": "gǔlì",
+        "pinyin": "encourage"
     },
     "308": {
-        "character": "䎔于",
-        "letter": "pertaining to; concerning; regarding; with regards to; about; a matter of",
-        "pinyin": "guānyú"
+        "character": "过",
+        "letter": "guò",
+        "pinyin": "aspect particle"
     },
     "309": {
-        "character": "guānzhòng",
-        "letter": "audience; visitors (to an exhibition etc)",
-        "pinyin": "spectators;"
+        "character": "过程",
+        "letter": "guòchéng",
+        "pinyin": "course of events, process"
     },
     "310": {
-        "character": "管理",
-        "letter": "to supervise; to manage; to administer; management; administration; CL:個|个[gè]",
-        "pinyin": "guǎnlǐ"
+        "character": "国籍",
+        "letter": "guójí",
+        "pinyin": "nationality, country of citizenship"
     },
     "311": {
-        "character": "光",
-        "letter": "light; ray; CL:道[dào]; bright; only; merely; to use up",
-        "pinyin": "guāng"
+        "character": "国际",
+        "letter": "guójì",
+        "pinyin": "international"
     },
     "312": {
-        "character": "广播",
-        "letter": "broadcast; widely spread; CL:個|个[gè]",
-        "pinyin": "guǎngbō"
+        "character": "国家",
+        "letter": "guójiā",
+        "pinyin": "nation"
     },
     "313": {
-        "character": "广告",
-        "letter": "to advertise; a commercial; advertisement; CL:項| [xiàng]",
-        "pinyin": "guǎnggào"
+        "character": "过去",
+        "letter": "guòqù",
+        "pinyin": "past"
     },
     "314": {
-        "character": "䶯",
-        "letter": "to stroll; to visit",
-        "pinyin": "guàng"
+        "character": "果汁",
+        "letter": "guǒzhī",
+        "pinyin": "juice"
     },
     "315": {
-        "character": "\u0004定",
-        "letter": "provision; to fix; to set; to formulate; to stipulate; to provide; regulation; rule; CL:個|个[gè]",
-        "pinyin": "guīdìng"
+        "character": "故事",
+        "letter": "gùshi",
+        "pinyin": "story"
     },
     "316": {
-        "character": "\u0005",
-        "letter": "expensive; noble; your (name); precious",
-        "pinyin": "guì"
+        "character": "故意",
+        "letter": "gùyì",
+        "pinyin": "deliberately, on purpose"
     },
     "317": {
-        "character": "国\u0007",
-        "letter": "international",
-        "pinyin": "guójì"
+        "character": "还",
+        "letter": "huán",
+        "pinyin": "to return (sth)"
     },
     "318": {
-        "character": "国家",
-        "letter": "country; nation; state; CL:個|个[gè]",
-        "pinyin": "guójiā"
+        "character": "害怕",
+        "letter": "hàipà",
+        "pinyin": "to fear"
     },
     "319": {
-        "character": "果然",
-        "letter": "really; sure enough; as expected",
-        "pinyin": "guǒrán"
+        "character": "还是",
+        "letter": "háishì",
+        "pinyin": "or"
     },
     "320": {
-        "character": "果汁",
-        "letter": "fruit juice",
-        "pinyin": "guǒzhī"
+        "character": "害羞",
+        "letter": "hàixiū",
+        "pinyin": "shy"
     },
     "321": {
-        "character": "\u0006",
-        "letter": "to cross; to go over; to pass (time); to celebrate (a holiday); to live; to get along; excessively; too-; surname Guo",
-        "pinyin": "guò"
+        "character": "海洋",
+        "letter": "hǎiyáng",
+        "pinyin": "ocean"
     },
     "322": {
-        "character": "\u0006",
-        "letter": "助\u0001 (indicates a past action or state, \u0001+\u0006)",
-        "pinyin": "guò"
+        "character": "孩子",
+        "letter": "háizi",
+        "pinyin": "child"
     },
     "323": {
-        "character": "\u0006程",
-        "letter": " 17/56 course of events; process; CL:個|个[gè]",
-        "pinyin": "guòchéng"
+        "character": "汗",
+        "letter": "hàn",
+        "pinyin": "sweat, perspiration"
     },
     "324": {
-        "character": "去",
-        "letter": "(in the) past; former; previous; to go over; to pass by",
-        "pinyin": "guòqu"
+        "character": "航班",
+        "letter": "hángbān",
+        "pinyin": "flight"
     },
     "325": {
-        "character": "\u0004",
-        "letter": "still; still in progress; still more; yet; even more; in addition; fairly; passably (good); as early as; even; also; else",
-        "pinyin": "hái"
+        "character": "寒假",
+        "letter": "hánjià",
+        "pinyin": "winter vacation"
     },
     "326": {
-        "character": "\u0004是",
-        "letter": "or; still; nevertheless",
-        "pinyin": "háishì"
+        "character": "汉语",
+        "letter": "Hànyǔ",
+        "pinyin": "Chinese (language)"
     },
     "327": {
-        "character": "孩子",
-        "letter": "child",
-        "pinyin": "háizi"
+        "character": "号",
+        "letter": "hào",
+        "pinyin": "date or number"
     },
     "328": {
-        "character": "海洋",
-        "letter": "ocean; CL:個|个[gè]",
-        "pinyin": "hǎiyáng"
+        "character": "好",
+        "letter": "hǎo",
+        "pinyin": "good"
     },
     "329": {
-        "character": "害怕",
-        "letter": "to be afraid; to be scared",
-        "pinyin": "hàipà"
+        "character": "好吃",
+        "letter": "hǎochī",
+        "pinyin": "tasty"
     },
     "330": {
-        "character": "害羞",
-        "letter": "blush; shy",
-        "pinyin": "hàixiū"
+        "character": "好处",
+        "letter": "hǎochù",
+        "pinyin": "benefit"
     },
     "331": {
-        "character": "寒假",
-        "letter": "winter vacation",
-        "pinyin": "hánjià"
+        "character": "号码",
+        "letter": "hàomǎ",
+        "pinyin": "number"
     },
     "332": {
-        "character": "汗",
-        "letter": "perspiration; sweat; CL:滴[dī],頭|\u0006[tóu],身 [shēn]; Khan (Persian or Mongol king or emperor); Khan (name); to be speechless (out of helplessness, embarrassment etc) (Internet slang used as an interjection)",
-        "pinyin": "hàn"
+        "character": "好像",
+        "letter": "hǎoxiàng",
+        "pinyin": "as if, to seem like"
     },
     "333": {
-        "character": "\u0007",
-        "letter": "Chinese language; CL:門|門[mén]",
-        "pinyin": "hànyǔ"
+        "character": "河",
+        "letter": "hé",
+        "pinyin": "river"
     },
     "334": {
-        "character": "航班",
-        "letter": "scheduled flight; flight number; plane; scheduled sailing; sailing number; passenger ship",
-        "pinyin": "hángbān"
+        "character": "和",
+        "letter": "hé",
+        "pinyin": "and"
     },
     "335": {
-        "character": "好",
-        "letter": "good; well; proper; good to; easy to; very; so; (suffix indicating completion or readiness)",
-        "pinyin": "hǎo"
+        "character": "喝",
+        "letter": "hē",
+        "pinyin": "to drink"
     },
     "336": {
-        "character": "好吃",
-        "letter": "tasty; delicious",
-        "pinyin": "hǎochī"
+        "character": "合格",
+        "letter": "hégé",
+        "pinyin": "qualified, eligible"
     },
     "337": {
-        "character": "好\u0001",
-        "letter": "benefit; advantage; gain; profit; also pronounced hǎo chù; CL:個|个[gè]",
-        "pinyin": "hǎochu"
+        "character": "黑",
+        "letter": "hēi",
+        "pinyin": "black"
     },
     "338": {
-        "character": "好像",
-        "letter": "as if; to seem like",
-        "pinyin": "hǎoxiàng"
+        "character": "黑板",
+        "letter": "hēibǎn",
+        "pinyin": "blackboard"
     },
     "339": {
-        "character": "号",
-        "letter": "day of a month; (suffix used after) name of a ship; (ordinal) number",
-        "pinyin": "hào"
+        "character": "很",
+        "letter": "hěn",
+        "pinyin": "very"
     },
     "340": {
-        "character": "号\u0005",
-        "letter": "number; CL:堆[duī],個|个[gè]",
-        "pinyin": "hàomǎ"
+        "character": "合适",
+        "letter": "héshì",
+        "pinyin": "appropriate, suitable"
     },
     "341": {
-        "character": "喝",
-        "letter": "to drink; to shout (a command); My goodness!",
-        "pinyin": "hē"
+        "character": "盒子",
+        "letter": "hézi",
+        "pinyin": "box"
     },
     "342": {
-        "character": "和",
-        "letter": "and; together with; with; sum; union; peace; harmony; surname He; Japanese related; Taiwan pr. hàn  18/56",
-        "pinyin": "hé"
+        "character": "红",
+        "letter": "hóng",
+        "pinyin": "red"
     },
     "343": {
-        "character": "河",
-        "letter": "river; CL:條|条[tiáo],道[dào]",
-        "pinyin": "hé"
+        "character": "厚",
+        "letter": "hòu",
+        "pinyin": "thick"
     },
     "344": {
-        "character": "合格",
-        "letter": "qualified; meeting a standard; eligible (voter)",
-        "pinyin": "hégé"
+        "character": "后悔",
+        "letter": "hòuhuǐ",
+        "pinyin": "regret, repent"
     },
     "345": {
-        "character": "合适",
-        "letter": "suitable; fitting; decent; to fit",
-        "pinyin": "héshì"
+        "character": "后面",
+        "letter": "hòumiàn",
+        "pinyin": "back"
     },
     "346": {
-        "character": "盒子",
-        "letter": "case",
-        "pinyin": "hézi"
+        "character": "画",
+        "letter": "huà",
+        "pinyin": "to draw or to paint"
     },
     "347": {
-        "character": "黑",
-        "letter": "black; dark; abbr. for Heilongjiang 黑龍江|黑\b 江 province in northeast China",
-        "pinyin": "hēi"
+        "character": "花",
+        "letter": "huā",
+        "pinyin": "to spend or to cost"
     },
     "348": {
-        "character": "黑板",
-        "letter": "blackboard; CL:塊|\u0007[kuài],個|个[gè]",
-        "pinyin": "hēibǎn"
+        "character": "坏",
+        "letter": "huài",
+        "pinyin": "bad"
     },
     "349": {
-        "character": "很",
-        "letter": "(adverb of degree); quite; very; awfully",
-        "pinyin": "hěn"
+        "character": "怀疑",
+        "letter": "huáiyí",
+        "pinyin": "doubt, suspect"
     },
     "350": {
-        "character": "\u0001",
-        "letter": "bonus; popular; red; revolutionary",
-        "pinyin": "hóng"
+        "character": "换",
+        "letter": "huàn",
+        "pinyin": "to exchange"
     },
     "351": {
-        "character": "猴子",
-        "letter": "monkey; CL:隻|只[zhī]",
-        "pinyin": "hóuzi"
+        "character": "黄",
+        "letter": "huáng",
+        "pinyin": "yellow"
     },
     "352": {
-        "character": "厚",
-        "letter": "thick; deep or profound; kind; generous; rich or strong in flavor; to favor; to stress",
-        "pinyin": "hòu"
+        "character": "环境",
+        "letter": "huánjìng",
+        "pinyin": "environment"
     },
     "353": {
-        "character": "后悔",
-        "letter": "to regret; to repent",
-        "pinyin": "hòuhuǐ"
+        "character": "欢迎",
+        "letter": "huānyíng",
+        "pinyin": "to welcome"
     },
     "354": {
-        "character": "后来",
-        "letter": "afterwards; later",
-        "pinyin": "hòulái"
+        "character": "花园",
+        "letter": "huāyuán",
+        "pinyin": "garden"
     },
     "355": {
-        "character": "后面",
-        "letter": "rear; back; behind; later; afterwards",
-        "pinyin": "hòumian"
+        "character": "回",
+        "letter": "huí",
+        "pinyin": "to return"
     },
     "356": {
-        "character": "忽然",
-        "letter": "suddenly; all of a sudden",
-        "pinyin": "hūrán"
+        "character": "会",
+        "letter": "huì",
+        "pinyin": "can (to know how to)"
     },
     "357": {
-        "character": "士",
-        "letter": "nurse; CL:個|个[gè]",
-        "pinyin": "hùshi"
+        "character": "回答",
+        "letter": "huídá",
+        "pinyin": "to answer"
     },
     "358": {
-        "character": "照",
-        "letter": "passport; CL:本[běn],個|个[gè]",
-        "pinyin": "hùzhào"
+        "character": "回忆",
+        "letter": "huíyì",
+        "pinyin": "memories, recollection"
     },
     "359": {
-        "character": "互相",
-        "letter": "each other; mutually; mutual",
-        "pinyin": "hùxiāng"
+        "character": "会议",
+        "letter": "huìyì",
+        "pinyin": "meeting"
     },
     "360": {
-        "character": "花",
-        "letter": "flower; blossom; fancy pattern; CL:䯳[duǒ],支 [zhī],束[shù],把[bǎ],盆[pén],簇[cù]; to spend (money, time); surname Hua",
-        "pinyin": "huā"
+        "character": "火",
+        "letter": "huǒ",
+        "pinyin": "fire"
     },
     "361": {
-        "character": "花䭉",
-        "letter": "garden; CL:座[zuò],個|个[gè]",
-        "pinyin": "huāyuán"
+        "character": "火车站",
+        "letter": "huǒchēzhàn",
+        "pinyin": "train station"
     },
     "362": {
-        "character": "画",
-        "letter": "to draw; picture; painting; CL:幅[fú],張|\t[zhāng]",
-        "pinyin": "huà"
+        "character": "获得",
+        "letter": "huòdé",
+        "pinyin": "get, receive"
     },
     "363": {
-        "character": "疑",
-        "letter": "to doubt; to suspect; doubt; suspicion; skeptical",
-        "pinyin": "huáiyí"
+        "character": "活动",
+        "letter": "huódòng",
+        "pinyin": "activity"
     },
     "364": {
-        "character": "坏",
-        "letter": "bad; spoiled; broken; to break down",
-        "pinyin": "huài"
+        "character": "活泼",
+        "letter": "huópō",
+        "pinyin": "lively, active"
     },
     "365": {
-        "character": "\u0004迎",
-        "letter": "to welcome; welcome",
-        "pinyin": "huānyíng"
+        "character": "或者",
+        "letter": "huòzhě",
+        "pinyin": "or"
     },
     "366": {
-        "character": "\u0006",
-        "letter": "to pay back; to return; surname Huan",
-        "pinyin": "huán"
+        "character": "护士",
+        "letter": "hùshi",
+        "pinyin": "nurse"
     },
     "367": {
-        "character": "\u0005境",
-        "letter": "environment; circumstances; surroundings; CL:個| 个[gè]; ambient  19/56",
-        "pinyin": "huánjìng"
+        "character": "互相",
+        "letter": "hùxiāng",
+        "pinyin": "each other, mutual"
     },
     "368": {
-        "character": "\u0006",
-        "letter": "change; exchange",
-        "pinyin": "huàn"
+        "character": "护照",
+        "letter": "hùzhào",
+        "pinyin": "passport"
     },
     "369": {
-        "character": "黄",
-        "letter": "yellow; pornographic; to fall through",
-        "pinyin": "huáng"
+        "character": "极",
+        "letter": "jí",
+        "pinyin": "extremely"
     },
     "370": {
-        "character": "回",
-        "letter": "to circle; to go back; to turn around; to answer; to return; to revolve; Hui ethnic group (Chinese Muslims); time; classifier for acts of a play; section or chapter (of a classic book)",
-        "pinyin": "huí"
+        "character": "寄",
+        "letter": "jì",
+        "pinyin": "to mail, to send"
     },
     "371": {
-        "character": "回答",
-        "letter": "to reply; to answer; the answer; CL:個|个[gè]",
-        "pinyin": "huídá"
+        "character": "几",
+        "letter": "jǐ",
+        "pinyin": "how many or how much"
     },
     "372": {
-        "character": "回\f",
-        "letter": "to recall; recollection; CL:個|个[gè]",
-        "pinyin": "huíyì"
+        "character": "假",
+        "letter": "jiǎ",
+        "pinyin": "fake, false"
     },
     "373": {
-        "character": "会",
-        "letter": "can; be possible; be able to; will; be likely to; be sure to; to assemble; to meet; to gather; to see; union; group; association; CL:個|个[gè]; a moment (Taiwan pr. for this sense is huǐ)",
-        "pinyin": "huì"
+        "character": "家",
+        "letter": "jiā",
+        "pinyin": "home or family"
     },
     "374": {
-        "character": "会",
-        "letter": "meeting; conference; CL:場|\u0001[chǎng],屆|届[jiè]",
-        "pinyin": "huìyì"
+        "character": "加班",
+        "letter": "jiābān",
+        "pinyin": "overtime work"
     },
     "375": {
-        "character": "活\u0005",
-        "letter": "to exercise; to move about; to operate; activity; loose; shaky; active; movable; maneuver; to use connections; CL:項|\u000b[xiàng],個|个[gè]",
-        "pinyin": "huódòng"
+        "character": "价格",
+        "letter": "jiàgé",
+        "pinyin": "price"
     },
     "376": {
-        "character": "活",
-        "letter": "lively; vivacious; brisk; active",
-        "pinyin": "huópo"
+        "character": "家具",
+        "letter": "jiājù",
+        "pinyin": "furniture"
     },
     "377": {
-        "character": "火",
-        "letter": "fire; CL:把[bǎ]",
-        "pinyin": "huǒ"
+        "character": "件",
+        "letter": "jiàn",
+        "pinyin": "for affairs, clothes, furniture"
     },
     "378": {
-        "character": "火站",
-        "letter": "train station",
-        "pinyin": "huǒchēzhàn"
+        "character": "检查",
+        "letter": "jiǎnchá",
+        "pinyin": "to check"
     },
     "379": {
-        "character": "\u0007得",
-        "letter": "to obtain; to receive; to get",
-        "pinyin": "huòdé"
+        "character": "坚持",
+        "letter": "jiānchí",
+        "pinyin": "to insist on, to continue upholding"
     },
     "380": {
-        "character": "或者",
-        "letter": "or; possibly; maybe; perhaps",
-        "pinyin": "huòzhě"
+        "character": "简单",
+        "letter": "jiǎndān",
+        "pinyin": "simple"
     },
     "381": {
-        "character": "机\u0001",
-        "letter": "airport; airfield; CL:家[jiā],處|\u0004[chù]",
-        "pinyin": "jīchǎng"
+        "character": "减肥",
+        "letter": "jiǎnféi",
+        "pinyin": "to lose weight"
     },
     "382": {
-        "character": "机会",
-        "letter": "opportunity; chance; occasion; CL:個|个[gè]",
-        "pinyin": "jīhuì"
+        "character": "讲",
+        "letter": "jiǎng",
+        "pinyin": "to say or to speak"
     },
     "383": {
-        "character": "基",
-        "letter": "base; foundation; basis; underlying; CL:個|个[gè]",
-        "pinyin": "jīchǔ"
+        "character": "降低",
+        "letter": "jiàngdī",
+        "pinyin": "to bring down"
     },
     "384": {
-        "character": "蛋",
-        "letter": "(chicken) egg; hen's egg; CL:個|个[gè],打[dá]",
-        "pinyin": "jīdàn"
+        "character": "奖金",
+        "letter": "jiǎngjīn",
+        "pinyin": "bonus, award money"
     },
     "385": {
-        "character": "激\u0005",
-        "letter": "to excite; to agitate; exciting",
-        "pinyin": "jīdòng"
+        "character": "将来",
+        "letter": "jiānglái",
+        "pinyin": "future"
     },
     "386": {
-        "character": "几乎",
-        "letter": "almost; nearly; practically",
-        "pinyin": "jīhū"
+        "character": "降落",
+        "letter": "jiàngluò",
+        "pinyin": "landing, descent"
     },
     "387": {
-        "character": "\b䈀",
-        "letter": "active; energetic; vigorous; positive (outlook); proactive",
-        "pinyin": "jījí"
+        "character": "健康",
+        "letter": "jiànkāng",
+        "pinyin": "healthy"
     },
     "388": {
-        "character": "\b累",
-        "letter": "to accumulate; accumulation; cumulative; cumulatively",
-        "pinyin": "jīlěi"
+        "character": "见面",
+        "letter": "jiànmiàn",
+        "pinyin": "to meet"
     },
     "389": {
-        "character": "䈀",
-        "letter": "extremely; pole (geography, physics); utmost; top  20/56",
-        "pinyin": "jí"
+        "character": "减少",
+        "letter": "jiǎnshǎo",
+        "pinyin": "reduce, decrease"
     },
     "390": {
-        "character": "䈀其",
-        "letter": "extremely",
-        "pinyin": "jíqí"
+        "character": "建议",
+        "letter": "jiànyì",
+        "pinyin": "suggest, recommend, proposal"
     },
     "391": {
-        "character": "集合",
-        "letter": "a congregation; to gather; a set",
-        "pinyin": "jíhé"
+        "character": "叫",
+        "letter": "jiào",
+        "pinyin": "to call"
     },
     "392": {
-        "character": "及\b",
-        "letter": "in time; promptly; without delay; timely",
-        "pinyin": "jíshí"
+        "character": "脚",
+        "letter": "jiǎo",
+        "pinyin": "foot"
     },
     "393": {
-        "character": "即使",
-        "letter": "even if; even though; given that",
-        "pinyin": "jíshǐ"
+        "character": "角",
+        "letter": "jiǎo",
+        "pinyin": "1/10 of Chinese Yuan"
     },
     "394": {
-        "character": "几",
-        "letter": "how much; how many; several; a few",
-        "pinyin": "jǐ"
+        "character": "交",
+        "letter": "jiāo",
+        "pinyin": "hand over"
     },
     "395": {
-        "character": "寄",
-        "letter": "to live (in a house); to lodge; to mail; to send; to entrust; to depend",
-        "pinyin": "jì"
+        "character": "教",
+        "letter": "jiāo",
+        "pinyin": "to teach"
     },
     "396": {
-        "character": "得",
-        "letter": "to remember",
-        "pinyin": "jìde"
+        "character": "骄傲",
+        "letter": "jiāo'ào",
+        "pinyin": "proud"
     },
     "397": {
-        "character": "者",
-        "letter": "reporter; journalist; CL:個|个[gè]",
-        "pinyin": "jìzhě"
+        "character": "交流",
+        "letter": "jiāoliú",
+        "pinyin": "communication"
     },
     "398": {
-        "character": "䎞",
-        "letter": "plan; project; program; to plan; to map out; CL: 個|个[gè],項| [xiàng]",
-        "pinyin": "jìhuà"
+        "character": "郊区",
+        "letter": "jiāoqū",
+        "pinyin": "suburbs, outskirts"
     },
     "399": {
-        "character": "季\u0007",
-        "letter": "time; season; period; CL:個|个[gè]",
-        "pinyin": "jìjié"
+        "character": "教室",
+        "letter": "jiàoshì",
+        "pinyin": "classroom"
     },
     "400": {
-        "character": "既然",
-        "letter": "since; as; this being the case",
-        "pinyin": "jìrán"
+        "character": "教授",
+        "letter": "jiàoshòu",
+        "pinyin": "professor"
     },
     "401": {
-        "character": "技\t",
-        "letter": "technology; technique; skill; CL:門|門[mén],種|䝅 [zhǒng],項| [xiàng]",
-        "pinyin": "jìshù"
+        "character": "交通",
+        "letter": "jiāotōng",
+        "pinyin": "traffic, communication"
     },
     "402": {
-        "character": "\u0004\u000b",
-        "letter": "to continue; to proceed with; to go on with",
-        "pinyin": "jìxù"
+        "character": "教育",
+        "letter": "jiàoyù",
+        "pinyin": "education"
     },
     "403": {
-        "character": "家",
-        "letter": "home; family; classifier for families or businesses; refers to the philosophical schools of pre-Han China; noun suffix for specialists in some activity such as musician or revolutionary, corresponds to English -ist, -er, -ary or -ian; surname Jia; CL:個| 个[gè]",
-        "pinyin": "jiā"
+        "character": "饺子",
+        "letter": "jiǎozi",
+        "pinyin": "dumpling"
     },
     "404": {
-        "character": "家具",
-        "letter": "furniture; CL:件[jiàn],套[tào]",
-        "pinyin": "jiājù"
+        "character": "加油站",
+        "letter": "jiāyóuzhàn",
+        "pinyin": "gas station"
     },
     "405": {
-        "character": "加班",
-        "letter": "to work overtime",
-        "pinyin": "jiābān"
+        "character": "机场",
+        "letter": "jīchǎng",
+        "pinyin": "airport"
     },
     "406": {
-        "character": "加油站",
-        "letter": "gas station",
-        "pinyin": "jiāyóuzhàn"
+        "character": "基础",
+        "letter": "jīchǔ",
+        "pinyin": "foundation, base"
     },
     "407": {
-        "character": "假",
-        "letter": "fake; false; artificial; to borrow; if; suppose",
-        "pinyin": "jiǎ"
+        "character": "鸡蛋",
+        "letter": "jīdàn",
+        "pinyin": "egg"
     },
     "408": {
-        "character": "价格",
-        "letter": "price; CL:個|个[gè]",
-        "pinyin": "jiàgé"
+        "character": "记得",
+        "letter": "jìde",
+        "pinyin": "to remember"
     },
     "409": {
-        "character": "\u0005持",
-        "letter": "to continue upholding; to remain committed to; persistence; to persist; to uphold; to insist on; persevere",
-        "pinyin": "jiānchí"
+        "character": "激动",
+        "letter": "jīdòng",
+        "pinyin": "excited, agitate"
     },
     "410": {
-        "character": "\u0006\u0001",
-        "letter": "inspection; to examine; to inspect; CL:次[cì]  21/56",
-        "pinyin": "jiǎnchá"
+        "character": "节",
+        "letter": "jié",
+        "pinyin": "festival, holiday"
     },
     "411": {
-        "character": "\u0001",
-        "letter": "simple; not complicated",
-        "pinyin": "jiǎndān"
+        "character": "借",
+        "letter": "jiè",
+        "pinyin": "to borrow or to lend"
     },
     "412": {
-        "character": "䫩肥",
-        "letter": "to lose weight",
-        "pinyin": "jiǎnféi"
+        "character": "接",
+        "letter": "jiē",
+        "pinyin": "to catch or to pick up"
     },
     "413": {
-        "character": "䫩少",
-        "letter": "to lessen; to decrease; to reduce; to lower",
-        "pinyin": "jiǎnshǎo"
+        "character": "街道",
+        "letter": "jiēdào",
+        "pinyin": "street"
     },
     "414": {
-        "character": "件",
-        "letter": "item; component; classifier for events, things, clothes etc",
-        "pinyin": "jiàn"
+        "character": "结果",
+        "letter": "jiéguǒ",
+        "pinyin": "result, outcome"
     },
     "415": {
-        "character": "健康",
-        "letter": "health; healthy",
-        "pinyin": "jiànkāng"
+        "character": "结婚",
+        "letter": "jiéhūn",
+        "pinyin": "to marry"
     },
     "416": {
-        "character": "\u0004面",
-        "letter": "to meet; to see sb; CL:次[cì]",
-        "pinyin": "jiànmiàn"
+        "character": "姐姐",
+        "letter": "jiějie",
+        "pinyin": "elder sister"
     },
     "417": {
-        "character": "将来",
-        "letter": "in the future; future; the future; CL:個|个[gè]",
-        "pinyin": "jiānglái"
+        "character": "解决",
+        "letter": "jiějué",
+        "pinyin": "to solve"
     },
     "418": {
-        "character": "\u0006",
-        "letter": "to speak; to explain; to negotiate; to emphasise; to be particular about; as far as sth is concerned; speech; lecture",
-        "pinyin": "jiǎng"
+        "character": "节目",
+        "letter": "jiémù",
+        "pinyin": "program"
     },
     "419": {
-        "character": "\u0005金",
-        "letter": "premium; award money; a bonus",
-        "pinyin": "jiǎngjīn"
+        "character": "节日",
+        "letter": "jiérì",
+        "pinyin": "festival"
     },
     "420": {
-        "character": "降低",
-        "letter": "to reduce; to lower; to bring down",
-        "pinyin": "jiàngdī"
+        "character": "介绍",
+        "letter": "jièshào",
+        "pinyin": "to introduce"
     },
     "421": {
-        "character": "教",
-        "letter": "to teach",
-        "pinyin": "jiāo"
+        "character": "解释",
+        "letter": "jiěshì",
+        "pinyin": "explanation"
     },
     "422": {
-        "character": "交",
-        "letter": "to hand over; to deliver; to pay (money); to turn over; to make friends; to intersect (lines)",
-        "pinyin": "jiāo"
+        "character": "接受",
+        "letter": "jiēshòu",
+        "pinyin": "accept"
     },
     "423": {
-        "character": "交流",
-        "letter": "exchange; give-and-take; to exchange; to alternate; communication; alternating current (electricity)",
-        "pinyin": "jiāoliú"
+        "character": "结束",
+        "letter": "jiéshù",
+        "pinyin": "to end"
     },
     "424": {
-        "character": "交通",
-        "letter": "to be connected; traffic; communications; liaison",
-        "pinyin": "jiāotōng"
+        "character": "节约",
+        "letter": "jiéyuē",
+        "pinyin": "saving"
     },
     "425": {
-        "character": "\u0007傲",
-        "letter": "arrogant; full of oneself; conceited; proud of sth; CL:個|个[gè]",
-        "pinyin": "jiāoào"
+        "character": "接着",
+        "letter": "jiēzhe",
+        "pinyin": "then, to carry on"
     },
     "426": {
-        "character": "角",
-        "letter": "angle; corner; horn; horn-shaped; unit of money equal to 0.1 yuan; CL:個|个[gè]",
-        "pinyin": "jiǎo"
+        "character": "几乎",
+        "letter": "jīhū",
+        "pinyin": "almost"
     },
     "427": {
-        "character": "脚",
-        "letter": "foot; leg; base; kick; CL:雙|双[shuāng],隻|只[zhī]",
-        "pinyin": "jiǎo"
+        "character": "计划",
+        "letter": "jìhuà",
+        "pinyin": "plan"
     },
     "428": {
-        "character": "\b子",
-        "letter": "dumpling; pot-sticker; CL:個|个[gè],隻|只[zhī]",
-        "pinyin": "jiǎozi"
+        "character": "机会",
+        "letter": "jīhuì",
+        "pinyin": "opportunity or chance"
     },
     "429": {
-        "character": "叫",
-        "letter": "to shout; to call; to order; to ask; to be called; by (indicates agent in the passive mood)",
-        "pinyin": "jiào"
+        "character": "积极",
+        "letter": "jījí",
+        "pinyin": "energetic, proactive, positive"
     },
     "430": {
-        "character": "教室",
-        "letter": "classroom; CL:間|[jiān]",
-        "pinyin": "jiàoshì"
+        "character": "季节",
+        "letter": "jìjié",
+        "pinyin": "season"
     },
     "431": {
-        "character": "教授",
-        "letter": "professor; to instruct; to lecture on; CL:個|个[gè], 位[wèi]",
-        "pinyin": "jiàoshòu"
+        "character": "积累",
+        "letter": "jīlěi",
+        "pinyin": "accumulation"
     },
     "432": {
-        "character": "教育",
-        "letter": "to educate; to teach; education  22/56",
-        "pinyin": "jiàoyù"
+        "character": "进",
+        "letter": "jìn",
+        "pinyin": "to enter"
     },
     "433": {
-        "character": "接",
-        "letter": "to receive; to answer (the phone); to meet or welcome sb; to connect; to catch; to join; to extend; to take one's turn on duty; take over for sb",
-        "pinyin": "jiē"
+        "character": "近",
+        "letter": "jìn",
+        "pinyin": "near"
     },
     "434": {
-        "character": "接受",
-        "letter": "to accept; to receive",
-        "pinyin": "jiēshòu"
+        "character": "精彩",
+        "letter": "jīngcǎi",
+        "pinyin": "marvellous, brilliant"
     },
     "435": {
-        "character": "街道",
-        "letter": "street; CL:條|条[tiáo]",
-        "pinyin": "jiēdào"
+        "character": "警察",
+        "letter": "jǐngchá",
+        "pinyin": "policeman"
     },
     "436": {
-        "character": "果",
-        "letter": "to bear fruit; CL:個|个[gè]",
-        "pinyin": "jiēguǒ"
+        "character": "经常",
+        "letter": "jīngcháng",
+        "pinyin": "often"
     },
     "437": {
-        "character": "婚",
-        "letter": "to marry; to get married; CL:次[cì]",
-        "pinyin": "jiéhūn"
+        "character": "经过",
+        "letter": "jīngguò",
+        "pinyin": "to pass"
     },
     "438": {
-        "character": "束",
-        "letter": "termination; to finish; to end; to conclude; to close",
-        "pinyin": "jiéshù"
+        "character": "经济",
+        "letter": "jīngjì",
+        "pinyin": "economic"
     },
     "439": {
-        "character": "\u0001目",
-        "letter": "program; item (on a program); CL:臺|台[tái],個| 个[gè],套[tào]",
-        "pinyin": "jiémù"
+        "character": "京剧",
+        "letter": "jīngjù",
+        "pinyin": "beijing opera"
     },
     "440": {
-        "character": "\u0001日",
-        "letter": "holiday; festival; CL:個|个[gè]",
-        "pinyin": "jiérì"
+        "character": "经历",
+        "letter": "jīnglì",
+        "pinyin": "experience"
     },
     "441": {
-        "character": "\u0001\u0007",
-        "letter": "to economize; to conserve (resources); economy; frugal",
-        "pinyin": "jiéyuē"
+        "character": "经理",
+        "letter": "jīnglǐ",
+        "pinyin": "manager"
     },
     "442": {
-        "character": "姐姐",
-        "letter": "older sister; CL:個|个[gè]",
-        "pinyin": "jiějie"
+        "character": "竟然",
+        "letter": "jìngrán",
+        "pinyin": "unexpectedly"
     },
     "443": {
-        "character": "解决",
-        "letter": "to settle (a dispute); to resolve; to solve",
-        "pinyin": "jiějué"
+        "character": "景色",
+        "letter": "jǐngsè",
+        "pinyin": "view, scenery"
     },
     "444": {
-        "character": "解\u0006",
-        "letter": "explanation; to explain; to interpret; to resolve; CL:個|个[gè]",
-        "pinyin": "jiěshì"
+        "character": "尽管",
+        "letter": "jǐnguǎn",
+        "pinyin": "although, despite"
     },
     "445": {
-        "character": "借",
-        "letter": "to lend; to borrow; excuse; pretext; by means of; to seize (an opportunity); to take (an opportunity)",
-        "pinyin": "jiè"
+        "character": "经验",
+        "letter": "jīngyàn",
+        "pinyin": "experience"
     },
     "446": {
-        "character": "介\u0005",
-        "letter": "to present; to introduce; to recommend; to suggest; to let know; to brief",
-        "pinyin": "jièshào"
+        "character": "竞争",
+        "letter": "jìngzhēng",
+        "pinyin": "competition"
     },
     "447": {
-        "character": "今天",
-        "letter": "today; at the present; now",
-        "pinyin": "jīntiān"
+        "character": "镜子",
+        "letter": "jìngzi",
+        "pinyin": "mirror"
     },
     "448": {
-        "character": "尽管",
-        "letter": "despite; although; even though; in spite of; unhesitatingly; do not hesitate (to ask, complain etc); (go ahead and do it) without hesitating",
-        "pinyin": "jǐnguǎn"
+        "character": "今天",
+        "letter": "jīntiān",
+        "pinyin": "today"
     },
     "449": {
-        "character": "\b",
-        "letter": "nervous; keyed up; intense; tense; strained; in short supply; scarce; CL:陣|\t[zhèn]",
-        "pinyin": "jǐnzhāng"
+        "character": "进行",
+        "letter": "jìnxíng",
+        "pinyin": "in progress"
     },
     "450": {
-        "character": "近",
-        "letter": "near; close to; approximately",
-        "pinyin": "jìn"
+        "character": "紧张",
+        "letter": "jǐnzhāng",
+        "pinyin": "nervous"
     },
     "451": {
-        "character": "\u0004",
-        "letter": "to advance; to enter; to come (or go) into; to receive or admit; to eat or drink; to submit or present; (used after a verb) into, in; to score a goal",
-        "pinyin": "jìn"
+        "character": "禁止",
+        "letter": "jìnzhǐ",
+        "pinyin": "prohibit, forbid"
     },
     "452": {
-        "character": "\u0004行",
-        "letter": "to advance; to conduct; underway; in progress; to  23/56 do; to carry out; to carry on; to execute",
-        "pinyin": "jìnxíng"
+        "character": "既然",
+        "letter": "jìrán",
+        "pinyin": "since, as, although"
     },
     "453": {
-        "character": "禁止",
-        "letter": "to prohibit; to forbid; to ban",
-        "pinyin": "jìnzhǐ"
+        "character": "及时",
+        "letter": "jíshí",
+        "pinyin": "timely, without delay"
     },
     "454": {
-        "character": "精彩",
-        "letter": "brilliant; splendid",
-        "pinyin": "jīngcǎi"
+        "character": "即使",
+        "letter": "jíshǐ",
+        "pinyin": "even if"
     },
     "455": {
-        "character": "精神",
-        "letter": "spirit; mind; consciousness; thought; mental; psychological; essence; gist; CL:個|个[gè]",
-        "pinyin": "jīngshén"
+        "character": "技术",
+        "letter": "jìshù",
+        "pinyin": "technology"
     },
     "456": {
-        "character": "\u0005常",
-        "letter": "day to day; everyday; daily; frequently; constantly; regularly; often",
-        "pinyin": "jīngcháng"
+        "character": "旧",
+        "letter": "jiù",
+        "pinyin": "old or used"
     },
     "457": {
-        "character": "\u0005",
-        "letter": "to pass; to go through; process; course; CL:個|个 [gè]",
-        "pinyin": "jīngguò"
+        "character": "久",
+        "letter": "jiǔ",
+        "pinyin": "long (in time)"
     },
     "458": {
-        "character": "\u0005\u0004",
-        "letter": "economy; economic",
-        "pinyin": "jīngjì"
+        "character": "九",
+        "letter": "jiǔ",
+        "pinyin": "nine"
     },
     "459": {
-        "character": "\u0005理",
-        "letter": "manager; director; CL:個|个[gè],位[wèi],名[míng]",
-        "pinyin": "jīnglǐ"
+        "character": "就",
+        "letter": "jiǜ",
+        "pinyin": "at once"
     },
     "460": {
-        "character": "\u0005",
-        "letter": "experience; CL:個|个[gè],次[cì]; to experience; to go through",
-        "pinyin": "jīnglì"
+        "character": "究竟",
+        "letter": "jiūjìng",
+        "pinyin": "after all, actually"
     },
     "461": {
-        "character": "\u0005\u000b",
-        "letter": "to experience; experience",
-        "pinyin": "jīngyàn"
+        "character": "继续",
+        "letter": "jìxù",
+        "pinyin": "continue"
     },
     "462": {
-        "character": "京\t",
-        "letter": "Beijing opera; CL:場|[chǎng],出[chū]",
-        "pinyin": "jīngjù"
+        "character": "记者",
+        "letter": "jìzhě",
+        "pinyin": "reporter, journalist"
     },
     "463": {
-        "character": "警察",
-        "letter": "police; policeman; policewoman; CL:個|个[gè]",
-        "pinyin": "jǐngchá"
+        "character": "举",
+        "letter": "jǔ",
+        "pinyin": "lift, to hold up, to raise"
     },
     "464": {
-        "character": "竟然",
-        "letter": "unexpectedly; to one's surprise; in spite of everything; in that crazy way; actually; to go as far as to",
-        "pinyin": "jìngrán"
+        "character": "举办",
+        "letter": "jǔbàn",
+        "pinyin": "to conduct, to hold"
     },
     "465": {
-        "character": "\u0007争",
-        "letter": "to compete; competition",
-        "pinyin": "jìngzhēng"
+        "character": "觉得",
+        "letter": "juédé",
+        "pinyin": "to feel or to think"
     },
     "466": {
-        "character": "\u0006子",
-        "letter": "mirror; CL:面[miàn],個|个[gè]",
-        "pinyin": "jìngzi"
+        "character": "决定",
+        "letter": "juédìng",
+        "pinyin": "to decide"
     },
     "467": {
-        "character": "究竟",
-        "letter": "after all (when all is said and done); actually; outcome; result",
-        "pinyin": "jiūjìng"
+        "character": "聚会",
+        "letter": "jùhuì",
+        "pinyin": "get together"
     },
     "468": {
-        "character": "九",
-        "letter": "nine;",
-        "pinyin": "jiǔ"
+        "character": "拒绝",
+        "letter": "jùjué",
+        "pinyin": "refuse, decline, reject"
     },
     "469": {
-        "character": "久",
-        "letter": "(long) time; (long) duration of time",
-        "pinyin": "jiǔ"
+        "character": "距离",
+        "letter": "jùlí",
+        "pinyin": "distance"
     },
     "470": {
-        "character": "旧",
-        "letter": "old; opposite: new 新; former; worn (with age)",
-        "pinyin": "jiù"
+        "character": "举行",
+        "letter": "jǔxíng",
+        "pinyin": "to hold (event)"
     },
     "471": {
-        "character": "就",
-        "letter": "at once; right away; only; just (emphasis); as early as; already; as soon as; then; in that case; as many as; even if; to approach; to move towards; to undertake; to engage in; to suffer; subjected to; to accomplish; to take advantage of; to go with (of foods); with regard to; concerning",
-        "pinyin": "jiù"
+        "character": "句子",
+        "letter": "jùzi",
+        "pinyin": "sentence"
     },
     "472": {
-        "character": "\b\u0001",
-        "letter": "to conduct; to hold  24/56",
-        "pinyin": "jǔbàn"
+        "character": "咖啡",
+        "letter": "kāfēi",
+        "pinyin": "coffee"
     },
     "473": {
-        "character": "行",
-        "letter": "to hold (a meeting, ceremony etc)",
-        "pinyin": "jǔxíng"
+        "character": "开",
+        "letter": "kāi",
+        "pinyin": "to drive or to open"
     },
     "474": {
-        "character": "拒\u0005",
-        "letter": "to refuse; to decline; to reject",
-        "pinyin": "jùjué"
+        "character": "开始",
+        "letter": "kāishǐ",
+        "pinyin": "to begin"
     },
     "475": {
-        "character": "距离",
-        "letter": "distance; to be apart; CL:個|个[gè]",
-        "pinyin": "jùlí"
+        "character": "开玩笑",
+        "letter": "kāiwánxiào",
+        "pinyin": "just kidding, to make fun"
     },
     "476": {
-        "character": "句子",
-        "letter": "sentence; CL:個|个[gè]",
-        "pinyin": "jùzi"
+        "character": "开心",
+        "letter": "kāixīn",
+        "pinyin": "to feel happy, to have a great time"
     },
     "477": {
-        "character": "\u0004得",
-        "letter": "to think; to feel",
-        "pinyin": "juéde"
+        "character": "看",
+        "letter": "kàn",
+        "pinyin": "to look or to watch"
     },
     "478": {
-        "character": "决定",
-        "letter": "to decide (to do something); to resolve; decision; CL:個|个[gè],項|\b[xiàng]; certainly",
-        "pinyin": "juédìng"
+        "character": "看法",
+        "letter": "kànfǎ",
+        "pinyin": "view"
     },
     "479": {
-        "character": "咖佔",
-        "letter": "coffee; CL:杯[bēi]",
-        "pinyin": "kāfēi"
+        "character": "看见",
+        "letter": "kànjiàn",
+        "pinyin": "to see"
     },
     "480": {
-        "character": "䇖",
-        "letter": "to open; to start; to turn on; to boil; to write out (a medical prescription); to operate (vehicle); abbr. for 開爾文|䇖尔文 degrees Kelvin",
-        "pinyin": "kāi"
+        "character": "考虑",
+        "letter": "kǎolǜ",
+        "pinyin": "consideration"
     },
     "481": {
-        "character": "䇖始",
-        "letter": "to begin; beginning; to start; initial; CL:個|个[gè]",
-        "pinyin": "kāishǐ"
+        "character": "考试",
+        "letter": "kǎoshì",
+        "pinyin": "exam"
     },
     "482": {
-        "character": "䇖玩笑",
-        "letter": "to play a joke; to make fun of; to joke",
-        "pinyin": "kāiwánxiào"
+        "character": "烤鸭",
+        "letter": "kǎoyā",
+        "pinyin": "roast duck"
     },
     "483": {
-        "character": "看",
-        "letter": "to see; to look at; to read; to watch; to consider; to regard as; to view as; to treat as; to judge; (after repeated verb) to give it a try; depending on (how you're judging); to visit; to call on; to treat (an illness); to look after; Watch out! (for a danger)",
-        "pinyin": "kàn"
+        "character": "课",
+        "letter": "kè",
+        "pinyin": "lesson"
     },
     "484": {
-        "character": "看法",
-        "letter": "way of looking at a thing; view; opinion; CL:個| 个[gè]",
-        "pinyin": "kànfǎ"
+        "character": "刻",
+        "letter": "kè",
+        "pinyin": "quarter (time)"
     },
     "485": {
-        "character": "看",
-        "letter": "to see; to catch sight of",
-        "pinyin": "kànjiàn"
+        "character": "渴",
+        "letter": "kě",
+        "pinyin": "thirsty"
     },
     "486": {
-        "character": "考\u0006",
-        "letter": "to think over; to consider; consideration",
-        "pinyin": "kǎolǜ"
+        "character": "棵",
+        "letter": "kē",
+        "pinyin": "classifier for trees"
     },
     "487": {
-        "character": "考\u0007",
-        "letter": "exam; CL:次[cì]",
-        "pinyin": "kǎoshì"
+        "character": "可爱",
+        "letter": "Kě’ài",
+        "pinyin": "cute"
     },
     "488": {
-        "character": "䯿",
-        "letter": "classifier for trees, cabbages, plants etc",
-        "pinyin": "kē"
+        "character": "可怜",
+        "letter": "kělián",
+        "pinyin": "pathetic, pitiful"
     },
     "489": {
-        "character": "科学",
-        "letter": "science; scientific knowledge; scientific; CL:門|門 [mén],個|个[gè],種|䝅[zhǒng]",
-        "pinyin": "kēxué"
+        "character": "肯定",
+        "letter": "kěndìng",
+        "pinyin": "to be sure, to be certain"
     },
     "490": {
-        "character": "咳嗽",
-        "letter": "to cough; CL:陣|\t[zhèn]",
-        "pinyin": "késou"
+        "character": "可能",
+        "letter": "kěnéng",
+        "pinyin": "maybe"
     },
     "491": {
-        "character": "渴",
-        "letter": "thirsty",
-        "pinyin": "kě"
+        "character": "客人",
+        "letter": "kèren",
+        "pinyin": "guest"
     },
     "492": {
-        "character": "可\u0001",
-        "letter": "amiable; cute; lovely",
-        "pinyin": "kěài"
+        "character": "可是",
+        "letter": "kěshì",
+        "pinyin": "however, but"
     },
     "493": {
-        "character": "可怜",
-        "letter": "pitiful; pathetic",
-        "pinyin": "kělián"
+        "character": "咳嗽",
+        "letter": "késou",
+        "pinyin": "cough"
     },
     "494": {
-        "character": "可能",
-        "letter": "might (happen); possible; probable; possibility;  25/56 probability; maybe; perhaps; CL:個|个[gè]",
-        "pinyin": "kěnéng"
+        "character": "客厅",
+        "letter": "kètīng",
+        "pinyin": "living room"
     },
     "495": {
-        "character": "可是",
-        "letter": "but; however",
-        "pinyin": "kěshì"
+        "character": "可惜",
+        "letter": "kěxī",
+        "pinyin": "unfortunately"
     },
     "496": {
-        "character": "可惜",
-        "letter": "it is a pity; what a pity; (it's) too bad",
-        "pinyin": "kěxī"
+        "character": "科学",
+        "letter": "kēxué",
+        "pinyin": "science"
     },
     "497": {
         "character": "可以",
-        "letter": "can; may; possible; able to",
-        "pinyin": "kěyǐ"
+        "letter": "kěyǐ",
+        "pinyin": "can (to be permitted to)"
     },
     "498": {
-        "character": "刻",
-        "letter": "quarter (hour); moment; to carve; to engrave; to cut; oppressive; classifier for short time intervals",
-        "pinyin": "kè"
+        "character": "空",
+        "letter": "kōng",
+        "pinyin": "leisure, free time, to empty"
     },
     "499": {
-        "character": "\u0004",
-        "letter": "subject; course; class; lesson; CL:堂[táng],|節 [jié],門|門[mén]",
-        "pinyin": "kè"
+        "character": "恐怕",
+        "letter": "kǒngpà",
+        "pinyin": "I'm afraid, to fear"
     },
     "500": {
-        "character": "客人",
-        "letter": "visitor; guest; customer; client; CL:位[wèi]",
-        "pinyin": "kèrén"
+        "character": "空气",
+        "letter": "kōngqì",
+        "pinyin": "air"
     },
     "501": {
-        "character": "肯定",
-        "letter": "to be sure; to be certain; sure; certain; definite; to confirm; to affirm; affirmative",
-        "pinyin": "kěndìng"
+        "character": "空调",
+        "letter": "kōngtiáo",
+        "pinyin": "air conditioner"
     },
     "502": {
-        "character": "空气",
-        "letter": "air; atmosphere",
-        "pinyin": "kōngqì"
+        "character": "口",
+        "letter": "kǒu",
+        "pinyin": "mouth"
     },
     "503": {
-        "character": "空\u0001",
-        "letter": "air conditioning",
-        "pinyin": "kōngtiáo"
+        "character": "苦",
+        "letter": "kǔ",
+        "pinyin": "bitter, pain, to suffer"
     },
     "504": {
-        "character": "恐怕",
-        "letter": "fear; to dread; I'm afraid that...; perhaps; maybe",
-        "pinyin": "kǒngpà"
+        "character": "哭",
+        "letter": "kū",
+        "pinyin": "to cry"
     },
     "505": {
-        "character": "口",
-        "letter": "mouth; classifier for things with mouths (people, domestic animals, cannons, wells etc)",
-        "pinyin": "kǒu"
+        "character": "块",
+        "letter": "kuài",
+        "pinyin": "basic monetary unit of China"
     },
     "506": {
-        "character": "哭",
-        "letter": "to cry; to weep",
-        "pinyin": "kū"
+        "character": "快",
+        "letter": "kuài",
+        "pinyin": "fast"
     },
     "507": {
-        "character": "苦",
-        "letter": "bitter; hardship; pain; to suffer; painstaking",
-        "pinyin": "kǔ"
+        "character": "快乐",
+        "letter": "kuàilè",
+        "pinyin": "happy"
     },
     "508": {
-        "character": "\u0005子",
-        "letter": "trousers; pants; CL:條|条[tiáo]",
-        "pinyin": "kùzi"
+        "character": "筷子",
+        "letter": "kuàizi",
+        "pinyin": "chopsticks"
     },
     "509": {
-        "character": "\u0006",
-        "letter": "lump (of earth); chunk; piece; classifier for pieces of cloth, cake, soap etc; colloquial word for yuan (or other unit of currency such as Hong Kong or US dollar etc), usually as 塊錢|\u0006",
-        "pinyin": "kuài"
+        "character": "矿泉水",
+        "letter": "kuàngquán shuǐ",
+        "pinyin": "mineral water"
     },
     "510": {
-        "character": "快",
-        "letter": "rapid; quick; speed; rate; soon; almost; to make haste; clever; sharp (of knives or wits); forthright; plain-spoken; gratified; pleased; pleasant",
-        "pinyin": "kuài"
+        "character": "困",
+        "letter": "kùn",
+        "pinyin": "sleepy"
     },
     "511": {
-        "character": "快\b",
-        "letter": "happy; merry",
-        "pinyin": "kuàilè"
+        "character": "困难",
+        "letter": "kùnnan",
+        "pinyin": "difficulty, problem, issue"
     },
     "512": {
-        "character": "䲳子",
-        "letter": "chopsticks; CL:對|[duì],根[gēn],把[bǎ],雙|双 [shuāng]",
-        "pinyin": "kuàizi"
+        "character": "裤子",
+        "letter": "kùzi",
+        "pinyin": "pants"
     },
     "513": {
-        "character": "\u0007",
-        "letter": "lenient; wide; broad",
-        "pinyin": "kuān"
+        "character": "辣",
+        "letter": "là",
+        "pinyin": "hot (spicy)"
     },
     "514": {
-        "character": "困",
-        "letter": "to trap; to surround; hard-pressed; stranded; destitute",
-        "pinyin": "kùn"
+        "character": "拉",
+        "letter": "lā",
+        "pinyin": "pull"
     },
     "515": {
-        "character": "困\t",
-        "letter": "(financial etc) difficulty; problem; issue; CL:個|个  26/56 [gè]",
-        "pinyin": "kùnnan"
+        "character": "来",
+        "letter": "lái",
+        "pinyin": "to come"
     },
     "516": {
-        "character": "大",
-        "letter": "to expand; to enlarge; to broaden one's scope",
-        "pinyin": "kuòdà"
+        "character": "来不及",
+        "letter": "láibují",
+        "pinyin": "there's not enough time"
     },
     "517": {
-        "character": "拉",
-        "letter": "to pull; to play (string instruments); to drag; to draw",
-        "pinyin": "lā"
+        "character": "来得及",
+        "letter": "láidejí",
+        "pinyin": "there's still time"
     },
     "518": {
-        "character": "䭘䭓桶",
-        "letter": "rubbish bin",
-        "pinyin": "lājītǒng"
+        "character": "来自",
+        "letter": "láizì",
+        "pinyin": "from, come from"
     },
     "519": {
-        "character": "辣",
-        "letter": "hot (spicy); pungent",
-        "pinyin": "là"
+        "character": "垃圾桶",
+        "letter": "lājītǒng",
+        "pinyin": "trash, rubbish bin"
     },
     "520": {
-        "character": "来",
-        "letter": "to come; to arrive; to come round; ever since; next",
-        "pinyin": "lái"
+        "character": "蓝",
+        "letter": "lán",
+        "pinyin": "blue"
     },
     "521": {
-        "character": "来不及",
-        "letter": "there's not enough time (to do sth); it's too late (to do sth)",
-        "pinyin": "láibují"
+        "character": "懒",
+        "letter": "lǎn",
+        "pinyin": "lazy"
     },
     "522": {
-        "character": "来得及",
-        "letter": "there's still time; able to do sth in time",
-        "pinyin": "láidejí"
+        "character": "浪费",
+        "letter": "làngfèi",
+        "pinyin": "waste"
     },
     "523": {
-        "character": "lán",
-        "letter": "indigo plant",
-        "pinyin": "blue;"
+        "character": "浪漫",
+        "letter": "làngmàn",
+        "pinyin": "romantic"
     },
     "524": {
-        "character": "\u0004",
-        "letter": "lazy",
-        "pinyin": "lǎn"
+        "character": "老",
+        "letter": "lǎo",
+        "pinyin": "old (in age)"
     },
     "525": {
-        "character": "浪\u0001",
-        "letter": "to waste; to squander",
-        "pinyin": "làngfèi"
+        "character": "老虎",
+        "letter": "lǎohǔ",
+        "pinyin": "tiger"
     },
     "526": {
-        "character": "浪漫",
-        "letter": "romantic",
-        "pinyin": "làngmàn"
+        "character": "老师",
+        "letter": "lǎoshī",
+        "pinyin": "teacher"
     },
     "527": {
-        "character": "老",
-        "letter": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity; old (of people); venerable (person); experienced; of long standing; always; all the time; of the past; very; outdated; (of meat etc) tough",
-        "pinyin": "lǎo"
+        "character": "了",
+        "letter": "le",
+        "pinyin": "aspect particle"
     },
     "528": {
-        "character": "老虎",
-        "letter": "tiger; CL:隻|只[zhī]",
-        "pinyin": "lǎohǔ"
+        "character": "累",
+        "letter": "lèi",
+        "pinyin": "tired"
     },
     "529": {
-        "character": "老\u0005",
-        "letter": "teacher; CL:個|个[gè],位[wèi]",
-        "pinyin": "lǎoshī"
+        "character": "冷",
+        "letter": "lěng",
+        "pinyin": "cold"
     },
     "530": {
-        "character": "了",
-        "letter": "(modal particle intensifying preceding clause); (completed action marker)",
-        "pinyin": "le"
+        "character": "冷静",
+        "letter": "lěngjìng",
+        "pinyin": "calm down, cool-headed"
     },
     "531": {
-        "character": "累",
-        "letter": "tired; weary; to strain; to wear out; to work hard",
-        "pinyin": "lèi"
+        "character": "离",
+        "letter": "lí",
+        "pinyin": "away from"
     },
     "532": {
-        "character": "冷",
-        "letter": "cold",
-        "pinyin": "lěng"
+        "character": "里",
+        "letter": "lǐ",
+        "pinyin": "inside"
     },
     "533": {
-        "character": "冷静",
-        "letter": "calm; cool-headed",
-        "pinyin": "lěngjìng"
+        "character": "俩",
+        "letter": "liǎ",
+        "pinyin": "both, some"
     },
     "534": {
-        "character": "离",
-        "letter": "to leave; to part from; to be away from; (in giving distances) from; without (sth); independent of; one of the eight trigrams of the Book of Changes representing fire (old)",
-        "pinyin": "lí"
+        "character": "连",
+        "letter": "lián",
+        "pinyin": "even, repeatedly"
     },
     "535": {
-        "character": "离䇖",
-        "letter": "to depart; to leave  27/56",
-        "pinyin": "líkāi"
+        "character": "脸",
+        "letter": "liǎn",
+        "pinyin": "face"
     },
     "536": {
-        "character": "里",
-        "letter": "lining; interior; inside; internal; also written 裡|里 [lǐ]",
-        "pinyin": "lǐ"
+        "character": "辆",
+        "letter": "liàng",
+        "pinyin": "for vehicles"
     },
     "537": {
-        "character": "理\u0001",
-        "letter": "a barber; hairdressing",
-        "pinyin": "lǐfà"
-    },
-    "538": {
-        "character": "理解",
-        "letter": "to comprehend; to understand; comprehension; understanding",
-        "pinyin": "lǐjiě"
-    },
-    "539": {
-        "character": "理想",
-        "letter": "a dream; an ideal; perfection; ideal; perfect; desirable; CL:個|个[gè]",
-        "pinyin": "lǐxiǎng"
-    },
-    "540": {
-        "character": "礼貌",
-        "letter": "courtesy; manners",
-        "pinyin": "lǐmào"
-    },
-    "541": {
-        "character": "礼物",
-        "letter": "gift; present; CL:件[jiàn],個|个[gè],份[fèn]",
-        "pinyin": "lǐwù"
-    },
-    "542": {
-        "character": "厉害",
-        "letter": "difficult to deal with; difficult to endure; ferocious; radical; serious; terrible; violent; tremendous; awesome",
-        "pinyin": "lìhai"
-    },
-    "543": {
-        "character": "力气",
-        "letter": "strength; CL:把[bǎ]",
-        "pinyin": "lìqi"
-    },
-    "544": {
-        "character": "例如",
-        "letter": "for example; for instance; such as",
-        "pinyin": "lìrú"
-    },
-    "545": {
-        "character": "史",
-        "letter": "history; CL:門|門[mén],段[duàn]",
-        "pinyin": "lìshǐ"
-    },
-    "546": {
-        "character": "liǎ",
-        "letter": "(colloquial equivalent of 兩個|䫆个); both; some",
+        "character": "两",
+        "letter": "liǎng",
         "pinyin": "two"
     },
+    "538": {
+        "character": "凉快",
+        "letter": "liángkuai",
+        "pinyin": "nice and cold, pleasantly cool"
+    },
+    "539": {
+        "character": "联系",
+        "letter": "liánxì",
+        "pinyin": "contact, connection, relation"
+    },
+    "540": {
+        "character": "练习",
+        "letter": "liànxí",
+        "pinyin": "to practice"
+    },
+    "541": {
+        "character": "了解",
+        "letter": "liǎojiě",
+        "pinyin": "to know well"
+    },
+    "542": {
+        "character": "礼拜天",
+        "letter": "lǐbài tiān",
+        "pinyin": "sunday"
+    },
+    "543": {
+        "character": "理发",
+        "letter": "lǐfà",
+        "pinyin": "haircut, barber, hairdressing"
+    },
+    "544": {
+        "character": "厉害",
+        "letter": "lìhai",
+        "pinyin": "great, awesome, tremendous"
+    },
+    "545": {
+        "character": "理解",
+        "letter": "lǐjiě",
+        "pinyin": "understanding, comprehension"
+    },
+    "546": {
+        "character": "离开",
+        "letter": "líkāi",
+        "pinyin": "to leave"
+    },
     "547": {
-        "character": "\u0005",
-        "letter": "to link; to join; to connect; continuously; in succession; including; (used with 也, 都 etc) even; company (military)",
-        "pinyin": "lián"
+        "character": "礼貌",
+        "letter": "lǐmào",
+        "pinyin": "courtesy, manners, politeness"
     },
     "548": {
-        "character": "\u0004系",
-        "letter": "connection; contact; relation; in touch with; to integrate; to link; to touch",
-        "pinyin": "liánxì"
+        "character": "零",
+        "letter": "líng",
+        "pinyin": "zero"
     },
     "549": {
-        "character": "\u0006",
-        "letter": "face; CL:張|\u000b[zhāng],個|个[gè]",
-        "pinyin": "liǎn"
+        "character": "零钱",
+        "letter": "língqián",
+        "pinyin": "small change, pocket money"
     },
     "550": {
-        "character": "\u0007",
-        "letter": "exercise; drill; practice; CL:個|个[gè]",
-        "pinyin": "liànxí"
+        "character": "另外",
+        "letter": "lìngwài",
+        "pinyin": "in addition"
     },
     "551": {
-        "character": "凉快",
-        "letter": "nice and cold; pleasantly cool",
-        "pinyin": "liángkuai"
+        "character": "邻居",
+        "letter": "línjū",
+        "pinyin": "neighbor"
     },
     "552": {
-        "character": "䫆",
-        "letter": "both; two; ounce; some; a few; tael; weight equal to grams",
-        "pinyin": "liǎng"
+        "character": "力气",
+        "letter": "lìqi",
+        "pinyin": "strength"
     },
     "553": {
-        "character": "亮",
-        "letter": "bright; clear; resonant; to shine; to show; to reveal",
-        "pinyin": "liàng"
+        "character": "例如",
+        "letter": "lìrú",
+        "pinyin": "for example"
     },
     "554": {
-        "character": "\b",
-        "letter": "classifier for vehicles",
-        "pinyin": "liàng"
+        "character": "历史",
+        "letter": "lìshǐ",
+        "pinyin": "history"
     },
     "555": {
-        "character": "聊天",
-        "letter": "to chat; to gossip",
-        "pinyin": "liáotiān"
+        "character": "留",
+        "letter": "liú",
+        "pinyin": "retain, stay, keep, preserve"
     },
     "556": {
-        "character": "了解",
-        "letter": "to understand; to realize; to find out",
-        "pinyin": "liǎojiě"
+        "character": "六",
+        "letter": "liù",
+        "pinyin": "six"
     },
     "557": {
-        "character": "居",
-        "letter": "neighbor; next door; CL:個|个[gè]  28/56",
-        "pinyin": "línjū"
+        "character": "流利",
+        "letter": "liúlì",
+        "pinyin": "fluent"
     },
     "558": {
-        "character": "零",
-        "letter": "zero; nought; zero sign; fractional; fragmentary; odd (of numbers); (placed between two numbers to indicate a smaller quantity followed by a larger one); fraction; (in mathematics) remainder (after division); extra; to wither and fall; to wither",
-        "pinyin": "líng"
+        "character": "流行",
+        "letter": "liúxíng",
+        "pinyin": "popular"
     },
     "559": {
-        "character": "另外",
-        "letter": "additional; in addition; besides; separate; other; moreover; furthermore",
-        "pinyin": "lìngwài"
+        "character": "礼物",
+        "letter": "lǐwù",
+        "pinyin": "gift"
     },
     "560": {
-        "character": "留",
-        "letter": "to leave (eg a message); to retain; to stay; to remain; to keep; to preserve",
-        "pinyin": "liú"
+        "character": "理想",
+        "letter": "lǐxiǎng",
+        "pinyin": "ideal, perfection, desirable"
     },
     "561": {
-        "character": "留学",
-        "letter": "to study abroad",
-        "pinyin": "liúxué"
+        "character": "楼",
+        "letter": "lóu",
+        "pinyin": "building or floor"
     },
     "562": {
-        "character": "流泪",
-        "letter": "to shed tears",
-        "pinyin": "liúlèi"
+        "character": "路",
+        "letter": "lù",
+        "pinyin": "road"
     },
     "563": {
-        "character": "流利",
-        "letter": "fluent",
-        "pinyin": "liúlì"
+        "character": "绿",
+        "letter": "lǜ",
+        "pinyin": "green"
     },
     "564": {
-        "character": "流行",
-        "letter": "to spread; to rage (of contagious disease); popular; fashionable; prevalent; (math.) manifold",
-        "pinyin": "liúxíng"
+        "character": "乱",
+        "letter": "luàn",
+        "pinyin": "chaos, disorderly"
     },
     "565": {
-        "character": "六",
-        "letter": "six;",
-        "pinyin": "liù"
+        "character": "律师",
+        "letter": "lǜshī",
+        "pinyin": "lawyer"
     },
     "566": {
-        "character": "楼",
-        "letter": "house with more than",
-        "pinyin": "lóu"
+        "character": "旅行",
+        "letter": "lǚxíng",
+        "pinyin": "travel, trip, journey"
     },
     "567": {
-        "character": "story;",
-        "letter": "building; floor; CL:層|\u0001[céng],座[zuò],棟|[dòng]",
-        "pinyin": "storied"
+        "character": "旅游",
+        "letter": "lǚyóu",
+        "pinyin": "to travel"
     },
     "568": {
-        "character": "路",
-        "letter": "road; path; way; CL:條|条[tiáo]",
-        "pinyin": "lù"
+        "character": "吗",
+        "letter": "ma",
+        "pinyin": "question particle"
     },
     "569": {
-        "character": "乱",
-        "letter": "in confusion or disorder; in a confused state of mind; disorder; upheaval; riot; illicit sexual relations; to throw into disorder; to mix up; indiscriminate; random; arbitrary",
-        "pinyin": "luàn"
+        "character": "马",
+        "letter": "mǎ",
+        "pinyin": "horse"
     },
     "570": {
-        "character": "旅游",
-        "letter": "trip; journey; tourism; travel; tour",
-        "pinyin": "lǚyóu"
+        "character": "麻烦",
+        "letter": "máfan",
+        "pinyin": "trouble, inconvenient"
     },
     "571": {
-        "character": "\u0004",
-        "letter": "green",
-        "pinyin": "lǜ"
+        "character": "马虎",
+        "letter": "mǎhu",
+        "pinyin": "careless"
     },
     "572": {
-        "character": "律\t",
-        "letter": "lawyer",
-        "pinyin": "lǜshī"
+        "character": "卖",
+        "letter": "mài",
+        "pinyin": "to sell"
     },
     "573": {
-        "character": "\u0005\u0005",
-        "letter": "mama; mommy; mother; CL:個|个[gè],位[wèi]",
-        "pinyin": "māma"
+        "character": "买",
+        "letter": "mǎi",
+        "pinyin": "to buy"
     },
     "574": {
-        "character": "麻",
-        "letter": "inconvenient; troublesome; to trouble or bother sb; to put sb to trouble",
-        "pinyin": "máfan"
+        "character": "妈妈",
+        "letter": "māma",
+        "pinyin": "mom"
     },
     "575": {
-        "character": "\u0006",
-        "letter": "horse; abbr. for Malaysia 馬來西亞|\u0006来西",
-        "pinyin": "mǎ"
+        "character": "慢",
+        "letter": "màn",
+        "pinyin": "slow"
     },
     "576": {
-        "character": "\u0006虎",
-        "letter": "careless; sloppy; negligent; skimpy",
-        "pinyin": "mǎhu"
+        "character": "满",
+        "letter": "mǎn",
+        "pinyin": "full, completely, satisfied"
     },
     "577": {
-        "character": "\u0006上",
-        "letter": "at once, right away, immediately; lit. on horseback",
-        "pinyin": "mǎshàng"
+        "character": "忙",
+        "letter": "máng",
+        "pinyin": "busy"
     },
     "578": {
-        "character": "\u0007",
-        "letter": "(question tag)",
-        "pinyin": "ma"
+        "character": "满意",
+        "letter": "mǎnyì",
+        "pinyin": "satisfied"
     },
     "579": {
-        "character": "\b",
-        "letter": "to buy; to purchase  29/56",
-        "pinyin": "mǎi"
+        "character": "毛",
+        "letter": "máo",
+        "pinyin": "hair, feather, wool, down"
     },
     "580": {
-        "character": "\b",
-        "letter": "to sell; to betray; to spare no effort; to show off or flaunt",
-        "pinyin": "mài"
+        "character": "猫",
+        "letter": "māo",
+        "pinyin": "cat"
     },
     "581": {
-        "character": "mǎn",
-        "letter": "filled; packed; fully; completely; quite; to reach the limit; to satisfy; satisfied; contented; to fill; abbr. for Manchurian",
-        "pinyin": "full;"
+        "character": "毛巾",
+        "letter": "máojīn",
+        "pinyin": "towel"
     },
     "582": {
-        "character": "意",
-        "letter": "satisfied; pleased; to one's satisfaction",
-        "pinyin": "mǎnyì"
+        "character": "帽子",
+        "letter": "màozi",
+        "pinyin": "hat or cap"
     },
     "583": {
-        "character": "慢",
-        "letter": "slow",
-        "pinyin": "màn"
+        "character": "马上",
+        "letter": "mǎshàng",
+        "pinyin": "immediately"
     },
     "584": {
-        "character": "忙",
-        "letter": "busy; hurriedly",
-        "pinyin": "máng"
+        "character": "没",
+        "letter": "méi",
+        "pinyin": "not"
     },
     "585": {
-        "character": "猫",
-        "letter": "cat; CL:隻|只[zhī]",
-        "pinyin": "māo"
+        "character": "每",
+        "letter": "měi",
+        "pinyin": "every"
     },
     "586": {
-        "character": "毛巾",
-        "letter": "towel; CL:條|条[tiáo]",
-        "pinyin": "máojīn"
+        "character": "没关系",
+        "letter": "méi guānxi",
+        "pinyin": "it’s all right"
     },
     "587": {
-        "character": "帽子",
-        "letter": "hat; cap; CL:頂|[dǐng]",
-        "pinyin": "màozi"
+        "character": "美丽",
+        "letter": "měilì",
+        "pinyin": "beautiful, pretty"
     },
     "588": {
-        "character": "没",
-        "letter": "(negative prefix for verbs); have not; not",
-        "pinyin": "méi"
+        "character": "妹妹",
+        "letter": "mèimei",
+        "pinyin": "younger sister"
     },
     "589": {
-        "character": "没䎔系",
-        "letter": "it doesn't matter",
-        "pinyin": "méiguānxi"
+        "character": "门",
+        "letter": "mén",
+        "pinyin": "door"
     },
     "590": {
-        "character": "每",
-        "letter": "each; every",
-        "pinyin": "měi"
+        "character": "梦",
+        "letter": "mèng",
+        "pinyin": "dream"
     },
     "591": {
-        "character": "美\u0006",
-        "letter": "beautiful",
-        "pinyin": "měilì"
+        "character": "米",
+        "letter": "mǐ",
+        "pinyin": "meter"
     },
     "592": {
-        "character": "妹妹",
-        "letter": "younger sister; fig. younger woman (esp. girl friend or rival); CL:個|个[gè]",
-        "pinyin": "mèimei"
+        "character": "面包",
+        "letter": "miànbāo",
+        "pinyin": "bread"
     },
     "593": {
-        "character": "門",
-        "letter": "gate; door; CL:扇[shàn]; gateway; doorway; CL: 個|个[gè]; opening; valve; switch; way to do something; knack; family; house; (religious) sect; school (of thought); class; category; phylum or division (taxonomy); classifier for large guns; classifier for lessons, subjects, branches of technology",
-        "pinyin": "mén"
+        "character": "免费",
+        "letter": "miǎnfèi",
+        "pinyin": "free of charge"
     },
     "594": {
-        "character": "梦",
-        "letter": "dream; CL:場|\u0001[cháng],個|个[gè]",
-        "pinyin": "mèng"
+        "character": "面条",
+        "letter": "miàntiáo",
+        "pinyin": "noodle"
     },
     "595": {
-        "character": "米",
-        "letter": "rice; CL:粒[lì]; meter (classifier)",
-        "pinyin": "mǐ"
+        "character": "秒",
+        "letter": "miǎo",
+        "pinyin": "second (of time)"
     },
     "596": {
-        "character": "米",
-        "letter": "(cooked) rice",
-        "pinyin": "mǐfàn"
+        "character": "米饭",
+        "letter": "mǐfàn",
+        "pinyin": "(cooked) rice"
     },
     "597": {
-        "character": "密\u0007",
-        "letter": "code; secret code; password; pin number",
-        "pinyin": "mìmǎ"
+        "character": "迷路",
+        "letter": "mílù",
+        "pinyin": "get lost"
     },
     "598": {
-        "character": "免\u0004",
-        "letter": "free (of charge)",
-        "pinyin": "miǎnfèi"
+        "character": "密码",
+        "letter": "mìmǎ",
+        "pinyin": "password, secret code, pin number"
     },
     "599": {
-        "character": "面包",
-        "letter": "bread; CL:片[piàn],袋[dài],塊|\u0005[kuài]",
-        "pinyin": "miànbāo"
+        "character": "明白",
+        "letter": "míngbai",
+        "pinyin": "to understand"
     },
     "600": {
-        "character": "面条",
-        "letter": "noodles",
-        "pinyin": "miàntiáo"
+        "character": "明天",
+        "letter": "míngtiān",
+        "pinyin": "tomorrow"
     },
     "601": {
-        "character": "民族",
-        "letter": "nationality; ethnic group; CL:個|个[gè]  30/56",
-        "pinyin": "mínzú"
+        "character": "名字",
+        "letter": "míngzì",
+        "pinyin": "name"
     },
     "602": {
-        "character": "明白",
-        "letter": "clear; obvious; unequivocal; to understand; to realize",
-        "pinyin": "míngbai"
+        "character": "民族",
+        "letter": "mínzú",
+        "pinyin": "nationality, ethnic group"
     },
     "603": {
-        "character": "明天",
-        "letter": "tomorrow",
-        "pinyin": "míngtiān"
+        "character": "目的",
+        "letter": "mùdì",
+        "pinyin": "purpose, target, objective"
     },
     "604": {
-        "character": "名字",
-        "letter": "name (of a person or thing); CL:個|个[gè]",
-        "pinyin": "míngzi"
+        "character": "互联网",
+        "letter": "mùliánwǎng",
+        "pinyin": "internet"
     },
     "605": {
-        "character": "母",
-        "letter": "mother; also pr. with light tone [mǔ qin]; CL:個| 个[gè]",
-        "pinyin": "mǔqīn"
+        "character": "母亲",
+        "letter": "mǔqīn",
+        "pinyin": "mother"
     },
     "606": {
-        "character": "目的",
-        "letter": "purpose; aim; goal; target; objective; CL:個|个[gè]",
-        "pinyin": "mùdì"
+        "character": "拿",
+        "letter": "ná",
+        "pinyin": "to hold or to take"
     },
     "607": {
-        "character": "拿",
-        "letter": "to hold; to seize; to catch; to apprehend; to take",
-        "pinyin": "ná"
+        "character": "那/那儿",
+        "letter": "nà/nàr",
+        "pinyin": "that/there"
     },
     "608": {
-        "character": "䬟",
-        "letter": "how; which",
-        "pinyin": "nǎ"
+        "character": "哪/哪儿",
+        "letter": "nǎ/nǎr",
+        "pinyin": "which/where"
     },
     "609": {
-        "character": "䬟儿",
-        "letter": "where?; wherever; anywhere",
-        "pinyin": "nǎr"
+        "character": "奶奶",
+        "letter": "nǎinai",
+        "pinyin": "grandma"
     },
     "610": {
-        "character": "那",
-        "letter": "that; those; then (in that case); commonly pr. nèi before a classifier, esp. in Beijing",
-        "pinyin": "nà"
+        "character": "耐心",
+        "letter": "nàixīn",
+        "pinyin": "patience"
     },
     "611": {
-        "character": "那儿",
-        "letter": "there",
-        "pinyin": "nàr"
+        "character": "南",
+        "letter": "nán",
+        "pinyin": "south"
     },
     "612": {
-        "character": "䑊䑊",
-        "letter": "(informal) father's mother; paternal grandmother; CL:位[wèi]",
-        "pinyin": "nǎinai"
-    },
-    "613": {
-        "character": "耐心",
-        "letter": "patient (adjective)",
-        "pinyin": "nàixīn"
-    },
-    "614": {
-        "character": "南",
-        "letter": "south",
-        "pinyin": "nán"
-    },
-    "615": {
-        "character": "nán",
-        "letter": "(to...); problem; difficulty; difficult; not good",
+        "character": "难",
+        "letter": "nán",
         "pinyin": "difficult"
     },
+    "613": {
+        "character": "难道",
+        "letter": "nándào",
+        "pinyin": "could it be that...?"
+    },
+    "614": {
+        "character": "难过",
+        "letter": "nánguò",
+        "pinyin": "sad"
+    },
+    "615": {
+        "character": "男人",
+        "letter": "nánrén",
+        "pinyin": "man"
+    },
     "616": {
-        "character": "道",
-        "letter": "don't tell me ...; could it be that...?",
-        "pinyin": "nándào"
+        "character": "难受",
+        "letter": "nánshòu",
+        "pinyin": "uncomfortable"
     },
     "617": {
-        "character": "\u0001",
-        "letter": "feel sorry; be grieved",
-        "pinyin": "nánguò"
+        "character": "呢",
+        "letter": "ne",
+        "pinyin": "question particle"
     },
     "618": {
-        "character": "受",
-        "letter": "to feel unwell; to suffer pain; to be difficult to bear",
-        "pinyin": "nánshòu"
+        "character": "内",
+        "letter": "nèi",
+        "pinyin": "inside, inner, within"
     },
     "619": {
-        "character": "男人",
-        "letter": "a man; a male; men; CL:個|个[gè]",
-        "pinyin": "nánrén"
+        "character": "内容",
+        "letter": "nèiróng",
+        "pinyin": "content, details"
     },
     "620": {
-        "character": "䏆",
-        "letter": "(question particle for subjects already mentioned)",
-        "pinyin": "ne"
+        "character": "能",
+        "letter": "néng",
+        "pinyin": "can (to be able to)"
     },
     "621": {
-        "character": "内",
-        "letter": "inside; inner; internal; within; interior",
-        "pinyin": "nèi"
+        "character": "能力",
+        "letter": "nénglì",
+        "pinyin": "capability, ability"
     },
     "622": {
-        "character": "内容",
-        "letter": "content; substance; details; CL:個|个[gè],項|\u0004 [xiàng]",
-        "pinyin": "nèiróng"
+        "character": "你",
+        "letter": "nǐ",
+        "pinyin": "you (singular)"
     },
     "623": {
-        "character": "能",
-        "letter": "to be able to; to be capable of; ability; capability; able; capable; can possibly; (usually used in the negative) to have the possibility of",
-        "pinyin": "néng"
+        "character": "年",
+        "letter": "nián",
+        "pinyin": "year"
     },
     "624": {
-        "character": "能力",
-        "letter": "capability; capable; able; ability; CL:個|个[gè]  31/56",
-        "pinyin": "nénglì"
+        "character": "年级",
+        "letter": "niánjí",
+        "pinyin": "grade"
     },
     "625": {
-        "character": "你",
-        "letter": "you (informal, as opposed to polite 䓟[nín])",
-        "pinyin": "nǐ"
+        "character": "年龄",
+        "letter": "niánlíng",
+        "pinyin": "age (a person)"
     },
     "626": {
-        "character": "年",
-        "letter": "year; CL:個|个[gè]",
-        "pinyin": "nián"
+        "character": "年轻",
+        "letter": "niánqīng",
+        "pinyin": "young"
     },
     "627": {
-        "character": "年",
-        "letter": "grade; CL:個|个[gè]",
-        "pinyin": "niánjí"
+        "character": "鸟",
+        "letter": "niǎo",
+        "pinyin": "bird"
     },
     "628": {
-        "character": "年",
-        "letter": "(a person's) age; CL:把[bǎ],個|个[gè]",
-        "pinyin": "niánlíng"
+        "character": "您",
+        "letter": "nín",
+        "pinyin": "you (singular/honorific)"
     },
     "629": {
-        "character": "年\b",
-        "letter": "young",
-        "pinyin": "niánqīng"
+        "character": "牛奶",
+        "letter": "niúnǎi",
+        "pinyin": "milk"
     },
     "630": {
-        "character": "\u0004",
-        "letter": "bird; CL:隻|只[zhī],群[qún]",
-        "pinyin": "niǎo"
+        "character": "弄",
+        "letter": "nòng",
+        "pinyin": "get, make"
     },
     "631": {
-        "character": "䓟",
-        "letter": "you (polite, as opposed to informal 你[nǐ])",
-        "pinyin": "nín"
+        "character": "女儿",
+        "letter": "nǚ’ér",
+        "pinyin": "daughter"
     },
     "632": {
-        "character": "牛䑊",
-        "letter": "cow's milk; CL:瓶[píng],杯[bēi]",
-        "pinyin": "niúnǎi"
+        "character": "暖和",
+        "letter": "nuǎnhuo",
+        "pinyin": "warm"
     },
     "633": {
-        "character": "\u0005村",
-        "letter": "rural area; village; CL:個|个[gè]",
-        "pinyin": "nóngcūn"
+        "character": "努力",
+        "letter": "nǔlì",
+        "pinyin": "studious or hardworking"
     },
     "634": {
-        "character": "弄",
-        "letter": "to do; to manage; to handle; to play with; to fool with; to mess with; to fix; to toy with",
-        "pinyin": "nòng"
+        "character": "女人",
+        "letter": "nǚrén",
+        "pinyin": "woman"
     },
     "635": {
-        "character": "努力",
-        "letter": "great effort; to strive; to try hard",
-        "pinyin": "nǔlì"
+        "character": "偶尔",
+        "letter": "ǒu'ěr",
+        "pinyin": "occasionally"
     },
     "636": {
-        "character": "暖和",
-        "letter": "warm; nice and warm",
-        "pinyin": "nuǎnhuo"
+        "character": "爬山",
+        "letter": "pá shān",
+        "pinyin": "to climb mountain"
     },
     "637": {
-        "character": "女儿",
-        "letter": "daughter",
-        "pinyin": "nǚér"
+        "character": "排队",
+        "letter": "páiduì",
+        "pinyin": "queue, line up"
     },
     "638": {
-        "character": "女人",
-        "letter": "woman",
-        "pinyin": "nǚrén"
+        "character": "排列",
+        "letter": "páiliè",
+        "pinyin": "array, arrangement"
     },
     "639": {
-        "character": "偶尔",
-        "letter": "occasionally; once in a while; sometimes",
-        "pinyin": "ǒuěr"
+        "character": "判断",
+        "letter": "pànduàn",
+        "pinyin": "judgment"
     },
     "640": {
-        "character": "爬山",
-        "letter": "to climb a mountain; to mountaineer; hiking; mountaineering",
-        "pinyin": "páshān"
+        "character": "胖",
+        "letter": "pàng",
+        "pinyin": "fat"
     },
     "641": {
-        "character": "排列",
-        "letter": "array; arrangement; permutation (i.e. ordered choice of n elements out of m)",
-        "pinyin": "páiliè"
+        "character": "旁边",
+        "letter": "pángbiān",
+        "pinyin": "side"
     },
     "642": {
-        "character": "\u0006子",
-        "letter": "tray; plate; dish; CL:個|个[gè]",
-        "pinyin": "pánzi"
+        "character": "盘子",
+        "letter": "pánzi",
+        "pinyin": "plate"
     },
     "643": {
-        "character": "判断",
-        "letter": "to decide; to determine; CL:個|个[gè]",
-        "pinyin": "pànduàn"
+        "character": "跑步",
+        "letter": "pǎo bù",
+        "pinyin": "to run"
     },
     "644": {
-        "character": "旁\u0001",
-        "letter": "lateral; side; to the side; beside",
-        "pinyin": "pángbiān"
+        "character": "陪",
+        "letter": "péi",
+        "pinyin": "accompany"
     },
     "645": {
-        "character": "胖",
-        "letter": "fat; plump",
-        "pinyin": "pàng"
+        "character": "朋友",
+        "letter": "péngyǒu",
+        "pinyin": "friend"
     },
     "646": {
-        "character": "䋯步",
-        "letter": "to walk quickly; to march; to run",
-        "pinyin": "pǎobù"
+        "character": "骗",
+        "letter": "piàn",
+        "pinyin": "to cheat, to trick, to fool"
     },
     "647": {
-        "character": "陪",
-        "letter": "to accompany; to keep sb company",
-        "pinyin": "péi"
+        "character": "篇",
+        "letter": "piān",
+        "pinyin": "piece, sheet, articles"
     },
     "648": {
-        "character": "朋友",
-        "letter": "friend; CL:個|个[gè],位[wèi]",
-        "pinyin": "péngyou"
+        "character": "便宜",
+        "letter": "piányi",
+        "pinyin": "cheap"
     },
     "649": {
-        "character": "批\u0007",
-        "letter": "to criticize; criticism; CL:個|个[gè]",
-        "pinyin": "pīpíng"
+        "character": "票",
+        "letter": "piào",
+        "pinyin": "ticket"
     },
     "650": {
-        "character": "皮䟭",
-        "letter": "skin; CL:種|䝅[zhǒng]  32/56",
-        "pinyin": "pífū"
+        "character": "漂亮",
+        "letter": "piàoliang",
+        "pinyin": "pretty"
     },
     "651": {
-        "character": "䏜酒",
-        "letter": "beer; CL:杯[bēi],瓶[píng],罐[guàn],桶[tǒng],缸 [gāng]",
-        "pinyin": "píjiǔ"
+        "character": "皮肤",
+        "letter": "pífū",
+        "pinyin": "skin"
     },
     "652": {
-        "character": "脾气",
-        "letter": "temperament; disposition; temper; CL:個|个[gè]",
-        "pinyin": "píqì"
+        "character": "啤酒",
+        "letter": "píjiǔ",
+        "pinyin": "beer"
     },
     "653": {
-        "character": "篇",
-        "letter": "sheet; piece of writing; bound set of bamboo slips used for record keeping (old); classifier for written items: chapter, article",
-        "pinyin": "piān"
+        "character": "苹果",
+        "letter": "píngguǒ",
+        "pinyin": "apple"
     },
     "654": {
-        "character": "便宜",
-        "letter": "small advantages; to let sb off lightly; cheap; inexpensive",
-        "pinyin": "piányi"
+        "character": "乒乓球",
+        "letter": "pīngpāng qiú",
+        "pinyin": "table tennis"
     },
     "655": {
-        "character": "\u0004",
-        "letter": "to cheat; to swindle; to deceive; to fool; to hoodwink; to trick",
-        "pinyin": "piàn"
+        "character": "平时",
+        "letter": "píngshí",
+        "pinyin": "peacetime, in normal times"
     },
     "656": {
-        "character": "票",
-        "letter": "ticket; ballot; bank note; CL:張|\b[zhāng]; person held for ransom; amateur performance of Chinese opera; classifier for shipments and business transactions (topolect)",
-        "pinyin": "piào"
+        "character": "批评",
+        "letter": "pīpíng",
+        "pinyin": "criticism"
     },
     "657": {
-        "character": "漂亮",
-        "letter": "pretty; beautiful",
-        "pinyin": "piàoliang"
+        "character": "脾气",
+        "letter": "píqi",
+        "pinyin": "temperament, disposition"
     },
     "658": {
-        "character": "\u0005球",
-        "letter": "table tennis; ping-pong; ping pong; table tennis ball; CL:個|个[gè]",
-        "pinyin": "pīngpāngqiú"
+        "character": "破",
+        "letter": "pò",
+        "pinyin": "broken, damaged"
     },
     "659": {
-        "character": "苹果",
-        "letter": "apple; CL:個|个[gè],顆|[kē]",
-        "pinyin": "píngguǒ"
+        "character": "普遍",
+        "letter": "pǔbiàn",
+        "pinyin": "universal"
     },
     "660": {
-        "character": "平\u0007",
-        "letter": "in normal times; in peacetime",
-        "pinyin": "píngshí"
+        "character": "葡萄",
+        "letter": "pútáo",
+        "pinyin": "grape"
     },
     "661": {
-        "character": "瓶子",
-        "letter": "bottle; CL:個|个[gè]",
-        "pinyin": "píngzi"
+        "character": "普通话",
+        "letter": "pǔtōnghuà",
+        "pinyin": "(standard) Mandarin"
     },
     "662": {
-        "character": "破",
-        "letter": "broken; damaged; worn out; to break, split or cleave; to get rid of; to destroy; to break with; to defeat; to capture (a city etc); to expose the truth of",
-        "pinyin": "pò"
+        "character": "骑",
+        "letter": "qí",
+        "pinyin": "to ride"
     },
     "663": {
-        "character": "葡萄",
-        "letter": "grape",
-        "pinyin": "pútao"
+        "character": "七",
+        "letter": "qī",
+        "pinyin": "seven"
     },
     "664": {
-        "character": "普遍",
-        "letter": "universal; general; widespread; common",
-        "pinyin": "pǔbiàn"
+        "character": "起床",
+        "letter": "qǐ chuáng",
+        "pinyin": "to get up"
     },
     "665": {
-        "character": "普通\u0001",
-        "letter": "Mandarin (common language); Putonghua (common speech of the Chinese language); ordinary speech",
-        "pinyin": "pǔtōnghuà"
+        "character": "钱",
+        "letter": "qián",
+        "pinyin": "money"
     },
     "666": {
-        "character": "七",
-        "letter": "seven;",
-        "pinyin": "qī"
+        "character": "千",
+        "letter": "qiān",
+        "pinyin": "thousand"
     },
     "667": {
-        "character": "妻子",
-        "letter": "wife; CL:個|个[gè]",
-        "pinyin": "qīzi"
+        "character": "铅笔",
+        "letter": "qiānbǐ",
+        "pinyin": "pencil"
     },
     "668": {
-        "character": "\u0006",
-        "letter": "to ride (an animal or bike); to sit astride",
-        "pinyin": "qí"
+        "character": "前面",
+        "letter": "qiánmiàn",
+        "pinyin": "front"
     },
     "669": {
-        "character": "其次",
-        "letter": "next; secondly  33/56",
-        "pinyin": "qícì"
+        "character": "千万",
+        "letter": "qiānwàn",
+        "pinyin": "ten million"
     },
     "670": {
-        "character": "其",
-        "letter": "actually, in fact, really",
-        "pinyin": "qíshí"
+        "character": "签证",
+        "letter": "qiānzhèng",
+        "pinyin": "visa"
     },
     "671": {
-        "character": "其他",
-        "letter": "other; the others; else; other than (that person); in addition to the person mentioned above",
-        "pinyin": "qítā"
+        "character": "桥",
+        "letter": "qiáo",
+        "pinyin": "bridge"
     },
     "672": {
-        "character": "其中",
-        "letter": "among; in; included among these",
-        "pinyin": "qízhōng"
+        "character": "敲",
+        "letter": "qiāo",
+        "pinyin": "knock"
     },
     "673": {
-        "character": "奇怪",
-        "letter": "strange; odd",
-        "pinyin": "qíguài"
+        "character": "巧克力",
+        "letter": "qiǎokèlì",
+        "pinyin": "chocolate"
     },
     "674": {
-        "character": "起床",
-        "letter": "to get up",
-        "pinyin": "qǐchuáng"
+        "character": "其次",
+        "letter": "qícì",
+        "pinyin": "next, second"
     },
     "675": {
-        "character": "起\u0001",
-        "letter": "to take off (in an airplane)",
-        "pinyin": "qǐfēi"
+        "character": "奇怪",
+        "letter": "qíguài",
+        "pinyin": "strange"
     },
     "676": {
-        "character": "起来",
-        "letter": "beginning or continuing an action; upward movement; stand up",
-        "pinyin": "qǐlai"
+        "character": "气候",
+        "letter": "qìhòu",
+        "pinyin": "climate"
     },
     "677": {
-        "character": "气候",
-        "letter": "climate; atmosphere; situation; CL:種|䝅[zhǒng]",
-        "pinyin": "qìhòu"
+        "character": "晴",
+        "letter": "qíng",
+        "pinyin": "sunny"
     },
     "678": {
-        "character": "千",
-        "letter": "thousand",
-        "pinyin": "qiān"
+        "character": "请",
+        "letter": "qǐng",
+        "pinyin": "please…"
     },
     "679": {
-        "character": "千万",
-        "letter": "ten million; countless; many; one must by all means",
-        "pinyin": "qiānwàn"
+        "character": "轻",
+        "letter": "qīng",
+        "pinyin": "light"
     },
     "680": {
-        "character": "笔",
-        "letter": "(lead) pencil; CL:支[zhī],枝[zhī],桿|杆[gǎn]",
-        "pinyin": "qiānbǐ"
+        "character": "清楚",
+        "letter": "qīngchu",
+        "pinyin": "clear"
     },
     "681": {
-        "character": "\u0004\u000b",
-        "letter": "visa; certificate; to certify; CL:個|个[gè]",
-        "pinyin": "qiānzhèng"
+        "character": "情况",
+        "letter": "qíngkuàng",
+        "pinyin": "circumstances, situation"
     },
     "682": {
-        "character": "\u0005",
-        "letter": "coin; money; CL:筆|笔[bǐ]",
-        "pinyin": "qián"
+        "character": "轻松",
+        "letter": "qīngsōng",
+        "pinyin": "easy, relaxed"
     },
     "683": {
-        "character": "前面",
-        "letter": "ahead; in front; preceding; above",
-        "pinyin": "qiánmiàn"
+        "character": "亲戚",
+        "letter": "qīnqi",
+        "pinyin": "relative"
     },
     "684": {
-        "character": "\u0006",
-        "letter": "wall; CL:面[miàn],堵[dǔ]",
-        "pinyin": "qiáng"
+        "character": "穷",
+        "letter": "qióng",
+        "pinyin": "poor"
     },
     "685": {
-        "character": "敲",
-        "letter": "extort; knock; to strike; to knock (at a door); to hit",
-        "pinyin": "qiāo"
+        "character": "其实",
+        "letter": "qíshí",
+        "pinyin": "actually"
     },
     "686": {
-        "character": "\u0007",
-        "letter": "bridge; CL:座[zuò]",
-        "pinyin": "qiáo"
+        "character": "其他",
+        "letter": "qítā",
+        "pinyin": "other"
     },
     "687": {
-        "character": "巧克力",
-        "letter": "chocolate (loanword); CL:塊|[kuài]",
-        "pinyin": "qiǎokèlì"
+        "character": "秋",
+        "letter": "qiū",
+        "pinyin": "autumn"
     },
     "688": {
-        "character": "\b戚",
-        "letter": "a relative (i.e. family relation); CL:門|門[mén],個| 个[gè],位[wèi]",
-        "pinyin": "qīnqi"
+        "character": "其中",
+        "letter": "qízhōng",
+        "pinyin": "among"
     },
     "689": {
-        "character": "qīng",
-        "letter": "easy; gentle; soft; reckless; unimportant; frivolous; small in number; unstressed; neutral",
-        "pinyin": "light;"
+        "character": "妻子",
+        "letter": "qīzi",
+        "pinyin": "wife"
     },
     "690": {
-        "character": "松",
-        "letter": "gentle; relaxed",
-        "pinyin": "qīngsōng"
+        "character": "去",
+        "letter": "qù",
+        "pinyin": "to go"
     },
     "691": {
-        "character": "清楚",
-        "letter": "clear; clearly understood; distinct",
-        "pinyin": "qīngchu"
+        "character": "取",
+        "letter": "qǔ",
+        "pinyin": "take, get, choose"
     },
     "692": {
-        "character": "晴",
-        "letter": "clear; fine (weather)",
-        "pinyin": "qíng"
+        "character": "全部",
+        "letter": "quánbù",
+        "pinyin": "whole, entire, complete"
     },
     "693": {
-        "character": "情况",
-        "letter": "circumstances; state of affairs; situation; CL:個|个 [gè],種|䝅[zhǒng]  34/56",
-        "pinyin": "qíngkuàng"
+        "character": "区别",
+        "letter": "qūbié",
+        "pinyin": "difference, distinguish"
     },
     "694": {
-        "character": "qǐng",
-        "letter": "ask; to invite; please (do sth); to treat (to a meal etc); to request",
-        "pinyin": "to"
+        "character": "却",
+        "letter": "què",
+        "pinyin": "but, however, yet, while"
     },
     "695": {
-        "character": "假",
-        "letter": "ask for time off",
-        "pinyin": "qǐngjià"
+        "character": "缺点",
+        "letter": "quēdiǎn",
+        "pinyin": "weak point, shortcoming"
     },
     "696": {
-        "character": "客",
-        "letter": "give a dinner party; entertain guests; invite to dinner",
-        "pinyin": "qǐngkè"
+        "character": "缺少",
+        "letter": "quēshǎo",
+        "pinyin": "lack, shortage"
     },
     "697": {
-        "character": "qióng",
-        "letter": "poor",
-        "pinyin": "exhausted;"
+        "character": "确实",
+        "letter": "quèshí",
+        "pinyin": "indeed, really, reliable"
     },
     "698": {
-        "character": "秋",
-        "letter": "autumn; fall; harvest time; a swing; surname Qiu",
-        "pinyin": "qiū"
+        "character": "去年",
+        "letter": "qùnián",
+        "pinyin": "last year"
     },
     "699": {
-        "character": "区䫲",
-        "letter": "difference; to distinguish; to discriminate; to make a distinction; CL:個|个[gè]",
-        "pinyin": "qūbié"
+        "character": "裙子",
+        "letter": "qúnzi",
+        "pinyin": "skirt"
     },
     "700": {
-        "character": "取",
-        "letter": "to take; to get; to choose; to fetch",
-        "pinyin": "qǔ"
+        "character": "然而",
+        "letter": "rán'ér",
+        "pinyin": "however, yet, but"
     },
     "701": {
-        "character": "去",
-        "letter": "to go; to go to (a place); to cause to go or send (sb); to remove; to get rid of; (when used either before or after a verb) to go in order to do sth; to be apart from in space or time; (after a verb of motion indicates movement away from the speaker); (used after certain verbs to indicate detachment or separation); (of a time or an event etc) just passed or elapsed",
-        "pinyin": "qù"
+        "character": "让",
+        "letter": "ràng",
+        "pinyin": "to let"
     },
     "702": {
-        "character": "去年",
-        "letter": "last year",
-        "pinyin": "qùnián"
+        "character": "然后",
+        "letter": "ránhòu",
+        "pinyin": "then, afterwards"
     },
     "703": {
-        "character": "全部",
-        "letter": "whole; entire; complete",
-        "pinyin": "quánbù"
+        "character": "热",
+        "letter": "rè",
+        "pinyin": "hot"
     },
     "704": {
-        "character": "缺点",
-        "letter": "weak point; fault; shortcoming; CL:個|个[gè]",
-        "pinyin": "quēdiǎn"
+        "character": "人",
+        "letter": "rén",
+        "pinyin": "person or people"
     },
     "705": {
-        "character": "缺少",
-        "letter": "lack; shortage of; shortfall; to be short (of); to lack",
-        "pinyin": "quēshǎo"
+        "character": "热闹",
+        "letter": "rènào",
+        "pinyin": "lively"
     },
     "706": {
-        "character": "却",
-        "letter": "but; yet; however; while; to go back; to decline; to retreat; nevertheless; even though",
-        "pinyin": "què"
+        "character": "扔",
+        "letter": "rēng",
+        "pinyin": "throw"
     },
     "707": {
-        "character": "䉯\u0006",
-        "letter": "indeed; really; reliable; real; true",
-        "pinyin": "quèshí"
+        "character": "仍然",
+        "letter": "réngrán",
+        "pinyin": "still"
     },
     "708": {
-        "character": "群",
-        "letter": "group; crowd; flock, herd, pack etc",
-        "pinyin": "qún"
+        "character": "任何",
+        "letter": "rènhé",
+        "pinyin": "whatever, any"
     },
     "709": {
-        "character": "裙子",
-        "letter": "skirt; CL:條|条[tiáo]",
-        "pinyin": "qúnzi"
+        "character": "认识",
+        "letter": "rènshi",
+        "pinyin": "to know"
     },
     "710": {
-        "character": "然而",
-        "letter": "however; yet; but",
-        "pinyin": "ránér"
+        "character": "认为",
+        "letter": "rènwéi",
+        "pinyin": "to think or to consider"
     },
     "711": {
-        "character": "然后",
-        "letter": "after; then (afterwards); after that; afterwards",
-        "pinyin": "ránhòu"
+        "character": "任务",
+        "letter": "rènwu",
+        "pinyin": "task, mission, assignment"
     },
     "712": {
-        "character": "\u0004",
-        "letter": "to yield; to permit; to let sb do sth; to have sb do sth",
-        "pinyin": "ràng"
+        "character": "认真",
+        "letter": "rènzhēn",
+        "pinyin": "serious or careful"
     },
     "713": {
-        "character": "\u0005",
-        "letter": "heat; to heat up; fervent; hot (of weather); warm up",
-        "pinyin": "rè"
+        "character": "热情",
+        "letter": "rèqíng",
+        "pinyin": "enthusiastic"
     },
     "714": {
-        "character": "\u0005\u0001",
-        "letter": "bustling with noise and excitement; lively  35/56",
-        "pinyin": "rènao"
+        "character": "日",
+        "letter": "rì",
+        "pinyin": "day"
     },
     "715": {
-        "character": "\u0004情",
-        "letter": "cordial; enthusiastic; passion; passionate; passionately",
-        "pinyin": "rèqíng"
+        "character": "日记",
+        "letter": "rìjì",
+        "pinyin": "diary"
     },
     "716": {
-        "character": "人",
-        "letter": "man; person; people; CL:個|个[gè],位[wèi]",
-        "pinyin": "rén"
+        "character": "容易",
+        "letter": "róngyì",
+        "pinyin": "easy"
     },
     "717": {
-        "character": "人民\u0001",
-        "letter": "Renminbi (RMB); Chinese Yuan (CNY)",
-        "pinyin": "rénmínbì"
+        "character": "如果",
+        "letter": "rúguǒ",
+        "pinyin": "if"
     },
     "718": {
-        "character": "任何",
-        "letter": "any; whatever; whichever; whatsoever",
-        "pinyin": "rènhé"
+        "character": "入口",
+        "letter": "rùkǒu",
+        "pinyin": "entrance"
     },
     "719": {
-        "character": "任\f",
-        "letter": "mission; assignment; task; duty; role; CL:項| [xiàng],個|个[gè]",
-        "pinyin": "rènwu"
+        "character": "伞",
+        "letter": "sǎn",
+        "pinyin": "umbrella"
     },
     "720": {
-        "character": "\u0005",
-        "letter": "to know; to recognize; to be familiar with; acquainted with sth; knowledge; understanding; awareness; cognition",
-        "pinyin": "rènshi"
+        "character": "三",
+        "letter": "sān",
+        "pinyin": "three"
     },
     "721": {
-        "character": "\u0005\u000b",
-        "letter": "to believe; to think; to consider; to feel",
-        "pinyin": "rènwéi"
+        "character": "散步",
+        "letter": "sànbù",
+        "pinyin": "to go for a walk"
     },
     "722": {
-        "character": "\u0005真",
-        "letter": "conscientious; earnest; serious; to take seriously; to take to heart",
-        "pinyin": "rènzhēn"
+        "character": "森林",
+        "letter": "sēnlín",
+        "pinyin": "forest"
     },
     "723": {
-        "character": "\u0006",
-        "letter": "to throw; to throw away",
-        "pinyin": "rēng"
+        "character": "沙发",
+        "letter": "shāfā",
+        "pinyin": "sofa"
     },
     "724": {
-        "character": "仍然",
-        "letter": "still; yet",
-        "pinyin": "réngrán"
+        "character": "上",
+        "letter": "shàng",
+        "pinyin": "on, above or last"
     },
     "725": {
-        "character": "日",
-        "letter": "sun; day; date, day of the month; abbr. for 日本| 日本 Japan",
-        "pinyin": "rì"
+        "character": "上班",
+        "letter": "shàng bān",
+        "pinyin": "to go to work"
     },
     "726": {
-        "character": "日",
-        "letter": "diary; CL:則|\u000e[zé],本[běn],篇[piān]",
-        "pinyin": "rìjì"
+        "character": "商店",
+        "letter": "shāngdiàn",
+        "pinyin": "shop"
     },
     "727": {
-        "character": "容易",
-        "letter": "easy; likely; liable (to)",
-        "pinyin": "róngyì"
+        "character": "商量",
+        "letter": "shāngliang",
+        "pinyin": "discuss, consult"
     },
     "728": {
-        "character": "如果",
-        "letter": "if; in case; in the event that",
-        "pinyin": "rúguǒ"
+        "character": "上网",
+        "letter": "shàngwǎng",
+        "pinyin": "to get online"
     },
     "729": {
-        "character": "入口",
-        "letter": "entrance",
-        "pinyin": "rùkǒu"
+        "character": "上午",
+        "letter": "shàngwǔ",
+        "pinyin": "morning"
     },
     "730": {
-        "character": "\u0007",
-        "letter": "soft; flexible",
-        "pinyin": "ruǎn"
+        "character": "伤心",
+        "letter": "shāngxīn",
+        "pinyin": "sad, broken-hearted"
     },
     "731": {
-        "character": "三",
-        "letter": "three;",
-        "pinyin": "sān"
+        "character": "少",
+        "letter": "shǎo",
+        "pinyin": "few"
     },
     "732": {
-        "character": "\b",
-        "letter": "umbrella; parasol; CL:把[bǎ]",
-        "pinyin": "sǎn"
+        "character": "稍微",
+        "letter": "shāowēi",
+        "pinyin": "slightly, a little bit"
     },
     "733": {
-        "character": "散步",
-        "letter": "to take a walk; to go for a walk",
-        "pinyin": "sànbù"
+        "character": "勺子",
+        "letter": "sháozi",
+        "pinyin": "spoon"
     },
     "734": {
-        "character": "森林",
-        "letter": "forest; CL:片[piàn]",
-        "pinyin": "sēnlín"
+        "character": "社会",
+        "letter": "shèhuì",
+        "pinyin": "society"
     },
     "735": {
-        "character": "沙",
-        "letter": "sofa; CL:條|条[tiáo],張|\u000f[zhāng]",
-        "pinyin": "shāfā"
+        "character": "谁",
+        "letter": "shéi",
+        "pinyin": "who"
     },
     "736": {
-        "character": "商店",
-        "letter": "store; shop; CL:家[jiā],個|个[gè]",
-        "pinyin": "shāngdiàn"
+        "character": "深",
+        "letter": "shēn",
+        "pinyin": "deep"
     },
     "737": {
-        "character": "商量",
-        "letter": "to consult; to talk over; to discuss",
-        "pinyin": "shāngliang"
+        "character": "剩",
+        "letter": "shèng",
+        "pinyin": "to be left"
     },
     "738": {
-        "character": "心",
-        "letter": "to grieve; broken-hearted",
-        "pinyin": "shāngxīn"
+        "character": "省",
+        "letter": "shěng",
+        "pinyin": "province"
     },
     "739": {
-        "character": "上",
-        "letter": "on; on top; upon; first (of multiple parts);  36/56 previous; last; upper; higher; above; to climb; to go into; to go up; to attend (class or university)",
-        "pinyin": "shàng"
+        "character": "生病",
+        "letter": "shēng bìng",
+        "pinyin": "to get sick"
     },
     "740": {
-        "character": "上班",
-        "letter": "to go to work; to be on duty; to start work; to go to the office",
-        "pinyin": "shàngbān"
+        "character": "生活",
+        "letter": "shēnghuó",
+        "pinyin": "life, activity"
     },
     "741": {
-        "character": "上网",
-        "letter": "to be on the internet; to stretch a net (in a sports game or for covering sth); to be netted (of fish)",
-        "pinyin": "shàngwǎng"
+        "character": "生命",
+        "letter": "shēngmìng",
+        "pinyin": "life, living"
     },
     "742": {
-        "character": "上午",
-        "letter": "morning; CL:個|个[gè]",
-        "pinyin": "shàngwǔ"
+        "character": "生气",
+        "letter": "shēngqì",
+        "pinyin": "to get angry"
     },
     "743": {
-        "character": "稍微",
-        "letter": "a little bit",
-        "pinyin": "shāowēi"
+        "character": "生日",
+        "letter": "shēngrì",
+        "pinyin": "birthday"
     },
     "744": {
-        "character": "少",
-        "letter": "few; little; lack",
-        "pinyin": "shǎo"
+        "character": "生意",
+        "letter": "shēngyi",
+        "pinyin": "business"
     },
     "745": {
-        "character": "社会",
-        "letter": "society; CL:個|个[gè]",
-        "pinyin": "shèhuì"
+        "character": "声音",
+        "letter": "shēngyīn",
+        "pinyin": "sound or voice"
     },
     "746": {
-        "character": "shéi",
-        "letter": "also pronounced shuí",
-        "pinyin": "who;"
+        "character": "什么",
+        "letter": "shénme",
+        "pinyin": "what"
     },
     "747": {
-        "character": "深",
-        "letter": "close; deep; late; profound; dark (of color, water etc)",
-        "pinyin": "shēn"
+        "character": "申请",
+        "letter": "shēnqǐng",
+        "pinyin": "to apply for something"
     },
     "748": {
-        "character": "申",
-        "letter": "to apply for sth; application (form etc); CL:份[fèn]",
-        "pinyin": "shēnqǐng"
+        "character": "身体",
+        "letter": "shēntǐ",
+        "pinyin": "body"
     },
     "749": {
-        "character": "身体",
-        "letter": "(human) body; health; CL:個|个[gè]",
-        "pinyin": "shēntǐ"
+        "character": "甚至",
+        "letter": "shènzhì",
+        "pinyin": "so much so that, even"
     },
     "750": {
-        "character": "什么",
-        "letter": "what?; who?; something; anything",
-        "pinyin": "shénme"
+        "character": "十",
+        "letter": "shí",
+        "pinyin": "ten"
     },
     "751": {
-        "character": "甚至",
-        "letter": "even; so much so that",
-        "pinyin": "shènzhì"
+        "character": "是",
+        "letter": "shì",
+        "pinyin": "to be"
     },
     "752": {
-        "character": "生病",
-        "letter": "to fall ill; to sicken",
-        "pinyin": "shēngbìng"
+        "character": "使",
+        "letter": "shǐ",
+        "pinyin": "to make"
     },
     "753": {
-        "character": "生活",
-        "letter": "life; activity; to live; livelihood",
-        "pinyin": "shēnghuó"
+        "character": "失败",
+        "letter": "shībài",
+        "pinyin": "fail, lose"
     },
     "754": {
-        "character": "生命",
-        "letter": "life; living; biological; CL:個|个[gè]",
-        "pinyin": "shēngmìng"
+        "character": "十分",
+        "letter": "shífēn",
+        "pinyin": "very, fully, divide into ten equal parts"
     },
     "755": {
-        "character": "生气",
-        "letter": "angry; mad; offended; animated; to get angry; to be enraged; to take offense; animation",
-        "pinyin": "shēngqì"
+        "character": "是否",
+        "letter": "shìfǒu",
+        "pinyin": "whether"
     },
     "756": {
-        "character": "生日",
-        "letter": "birthday; CL:個|个[gè]",
-        "pinyin": "shēngrì"
+        "character": "师傅",
+        "letter": "shīfu",
+        "pinyin": "qualified worker, master worker"
     },
     "757": {
-        "character": "声音",
-        "letter": "voice; sound; CL:個|个[gè]",
-        "pinyin": "shēngyīn"
+        "character": "适合",
+        "letter": "shìhé",
+        "pinyin": "to fit, to suit"
     },
     "758": {
-        "character": "省",
-        "letter": "to save; to economize; to do without; to omit; to leave out; province; CL:個|个[gè]",
-        "pinyin": "shěng"
+        "character": "时候",
+        "letter": "shíhou",
+        "pinyin": "a certain point in time"
     },
     "759": {
-        "character": "剩",
-        "letter": "to remain; to be left; to have as remainder",
-        "pinyin": "shèng"
+        "character": "实际",
+        "letter": "shíjì",
+        "pinyin": "actual, reality"
     },
     "760": {
-        "character": "失\u0001",
-        "letter": "to be defeated; to lose; to fail (e.g. experiments); failure; defeat; CL:次[cì]",
-        "pinyin": "shībài"
+        "character": "世纪",
+        "letter": "shìjì",
+        "pinyin": "century"
     },
     "761": {
-        "character": "失望",
-        "letter": "disappointed; to lose hope; to despair  37/56",
-        "pinyin": "shīwàng"
+        "character": "时间",
+        "letter": "shíjiān",
+        "pinyin": "a period of time"
     },
     "762": {
-        "character": "\u0007傅",
-        "letter": "master; qualified worker; respectful form of address for older men; CL:個|个[gè],位[wèi],名 [míng]",
-        "pinyin": "shīfu"
+        "character": "世界",
+        "letter": "shìjiè",
+        "pinyin": "world"
     },
     "763": {
-        "character": "湿\u0006",
-        "letter": "moist",
-        "pinyin": "shīrùn"
+        "character": "事情",
+        "letter": "shìqing",
+        "pinyin": "matter"
     },
     "764": {
-        "character": "\b子",
-        "letter": "lion; CL:隻|只[zhī],頭|\f[tóu]; Leo (star sign)",
-        "pinyin": "shīzi"
+        "character": "失望",
+        "letter": "shīwàng",
+        "pinyin": "disappointed"
     },
     "765": {
-        "character": "十",
-        "letter": "ten;",
-        "pinyin": "shí"
+        "character": "适应",
+        "letter": "shìyìng",
+        "pinyin": "adapt, to be suitable"
     },
     "766": {
-        "character": "十分",
-        "letter": "to divide into ten equal parts; very; hundred percent; completely; extremely; utterly; absolutely",
-        "pinyin": "shífēn"
+        "character": "使用",
+        "letter": "shǐyòng",
+        "pinyin": "to use"
     },
     "767": {
-        "character": "候",
-        "letter": "time; length of time; moment; period",
-        "pinyin": "shíhou"
+        "character": "实在",
+        "letter": "shízài",
+        "pinyin": "really, honestly"
     },
     "768": {
-        "character": "\u0005",
-        "letter": "time; period; CL:段[duàn]",
-        "pinyin": "shíjiān"
+        "character": "瘦",
+        "letter": "shòu",
+        "pinyin": "thin"
     },
     "769": {
-        "character": "shíjì",
-        "letter": "reality; practice",
-        "pinyin": "actual;"
+        "character": "收",
+        "letter": "shōu",
+        "pinyin": "receive, accept, collect"
     },
     "770": {
-        "character": "在",
-        "letter": "in reality; honestly; really; verily; concrete",
-        "pinyin": "shízài"
+        "character": "手表",
+        "letter": "shǒubiǎo",
+        "pinyin": "watch"
     },
     "771": {
-        "character": "食品",
-        "letter": "foodstuff; food; provisions; CL:種|䝅[zhǒng]",
-        "pinyin": "shípǐn"
+        "character": "受不了",
+        "letter": "shòubuliǎo",
+        "pinyin": "unbearable, can't stand it"
     },
     "772": {
-        "character": "使",
-        "letter": "to make; to cause; to enable; to use; to employ; to send; to instruct sb to do sth; envoy; messenger",
-        "pinyin": "shǐ"
+        "character": "受到",
+        "letter": "shòudào",
+        "pinyin": "suffer, obtained"
     },
     "773": {
-        "character": "使用",
-        "letter": "to use; to employ; to apply; to make use of",
-        "pinyin": "shǐyòng"
+        "character": "首都",
+        "letter": "shǒudū",
+        "pinyin": "capital"
     },
     "774": {
-        "character": "是",
-        "letter": "is; are; am; yes; to be",
-        "pinyin": "shì"
+        "character": "售货员",
+        "letter": "shòuhuòyuán",
+        "pinyin": "salesperson"
     },
     "775": {
-        "character": "shì",
-        "letter": "test; to try; experiment; examination; test",
-        "pinyin": "to"
+        "character": "手机",
+        "letter": "shǒujī",
+        "pinyin": "mobile phone"
     },
     "776": {
-        "character": "市\u0001",
-        "letter": "market place; market (also in abstract); abbr. for 超級市場|超市\u0001 supermarket; CL:個|个[gè]",
-        "pinyin": "shìchǎng"
+        "character": "收入",
+        "letter": "shōurù",
+        "pinyin": "income"
     },
     "777": {
-        "character": "适合",
-        "letter": "to fit; to suit",
-        "pinyin": "shìhé"
+        "character": "收拾",
+        "letter": "shōushi",
+        "pinyin": "to put in order, pack, tidy"
     },
     "778": {
-        "character": "适",
-        "letter": "to suit; to fit; to be suitable; to adapt; to get used to sth",
-        "pinyin": "shìyìng"
+        "character": "首先",
+        "letter": "shǒuxiān",
+        "pinyin": "in the first place"
     },
     "779": {
-        "character": "世\u0004",
-        "letter": "century; CL:個|个[gè]",
-        "pinyin": "shìjì"
+        "character": "树",
+        "letter": "shù",
+        "pinyin": "tree"
     },
     "780": {
-        "character": "世界",
-        "letter": "world; CL:個|个[gè]",
-        "pinyin": "shìjiè"
+        "character": "输",
+        "letter": "shū",
+        "pinyin": "lose, fail"
     },
     "781": {
-        "character": "事情",
-        "letter": "affair; matter; thing; business; CL:件[jiàn],樁|\u000e [zhuāng]",
-        "pinyin": "shìqíng"
+        "character": "书",
+        "letter": "shū",
+        "pinyin": "book"
     },
     "782": {
-        "character": "收",
-        "letter": "to receive; to accept; to collect; in care of (used on address line after name)",
-        "pinyin": "shōu"
+        "character": "帅",
+        "letter": "shuài",
+        "pinyin": "handsome"
     },
     "783": {
-        "character": "收入",
-        "letter": "to take in; income; revenue; CL:筆|笔[bǐ],個|个 [gè]  38/56",
-        "pinyin": "shōurù"
+        "character": "双",
+        "letter": "shuāng",
+        "pinyin": "pair"
     },
     "784": {
-        "character": "收拾",
-        "letter": "to put in order; to tidy up; to pack; to repair; to punish (colloquial); to manage",
-        "pinyin": "shōushi"
+        "character": "刷牙",
+        "letter": "shuāyá",
+        "pinyin": "to brush teeth"
     },
     "785": {
-        "character": "手表",
-        "letter": "wrist watch; CL:塊|[kuài],隻|只[zhī],個|个[gè]",
-        "pinyin": "shǒubiǎo"
+        "character": "舒服",
+        "letter": "shūfu",
+        "pinyin": "comfortable"
     },
     "786": {
-        "character": "手机",
-        "letter": "cell phone; cellular phone; mobile phone; CL:部 [bù]",
-        "pinyin": "shǒujī"
+        "character": "水",
+        "letter": "shuǐ",
+        "pinyin": "water"
     },
     "787": {
-        "character": "首都",
-        "letter": "capital (city); CL:個|个[gè]",
-        "pinyin": "shǒudū"
+        "character": "水果",
+        "letter": "shuǐguǒ",
+        "pinyin": "fruit"
     },
     "788": {
-        "character": "首先",
-        "letter": "first (of all); in the first place",
-        "pinyin": "shǒuxiān"
+        "character": "睡觉",
+        "letter": "shuìjiào",
+        "pinyin": "to sleep"
     },
     "789": {
-        "character": "瘦",
-        "letter": "tight; thin; lean",
-        "pinyin": "shòu"
+        "character": "水平",
+        "letter": "shuǐpíng",
+        "pinyin": "level or standard"
     },
     "790": {
-        "character": "受不了",
-        "letter": "unbearable; unable to endure; can't stand",
-        "pinyin": "shòubùliǎo"
+        "character": "数量",
+        "letter": "shùliàng",
+        "pinyin": "quantity, amount"
     },
     "791": {
-        "character": "受到",
-        "letter": "to receive; to suffer; obtained; given",
-        "pinyin": "shòudào"
+        "character": "顺便",
+        "letter": "shùnbiàn",
+        "pinyin": "conveniently, Incidentally"
     },
     "792": {
-        "character": "售\u0001\b",
-        "letter": "salesperson; CL:個|个[gè]",
-        "pinyin": "shòuhuòyuán"
+        "character": "顺利",
+        "letter": "shùnlì",
+        "pinyin": "smoothly"
     },
     "793": {
-        "character": "\u0005",
-        "letter": "book; letter; CL:本[běn],冊|册[cè],部[bù]; see also 書經|\u0005 Book of History",
-        "pinyin": "shū"
+        "character": "顺序",
+        "letter": "shùnxù",
+        "pinyin": "sequence, order"
     },
     "794": {
-        "character": "\u0004",
-        "letter": "to lose; to transport; to donate; to enter (a password)",
-        "pinyin": "shū"
+        "character": "说话",
+        "letter": "shuōhuà",
+        "pinyin": "to speak"
     },
     "795": {
-        "character": "舒服",
-        "letter": "comfortable; feeling well",
-        "pinyin": "shūfu"
+        "character": "说明",
+        "letter": "shuōmíng",
+        "pinyin": "explanation"
     },
     "796": {
-        "character": "叔叔",
-        "letter": "father's younger brother; uncle; Taiwan pr. shú shu; CL:個|个[gè]",
-        "pinyin": "shūshu"
+        "character": "硕士",
+        "letter": "shuòshì",
+        "pinyin": "master's degree"
     },
     "797": {
-        "character": "熟悉",
-        "letter": "to be familiar with; to know well",
-        "pinyin": "shúxī"
+        "character": "修理",
+        "letter": "shūri",
+        "pinyin": "repair, maintenance"
     },
     "798": {
-        "character": "\u0006",
-        "letter": "tree; CL:䯿[kē]",
-        "pinyin": "shù"
+        "character": "叔叔",
+        "letter": "shūshu",
+        "pinyin": "uncle"
     },
     "799": {
-        "character": "数量",
-        "letter": "amount; quantity; CL:個|个[gè]",
-        "pinyin": "shùliàng"
+        "character": "熟悉",
+        "letter": "shúxī",
+        "pinyin": "be familiar with"
     },
     "800": {
         "character": "数学",
-        "letter": "mathematics; mathematical",
-        "pinyin": "shùxué"
+        "letter": "shùxué",
+        "pinyin": "math"
     },
     "801": {
         "character": "数字",
-        "letter": "numeral; digit; number; figure; amount; digital (electronics etc); CL:個|个[gè]",
-        "pinyin": "shùzì"
+        "letter": "shùzì",
+        "pinyin": "number, digit"
     },
     "802": {
-        "character": "刷牙",
-        "letter": "to brush teeth",
-        "pinyin": "shuāyá"
+        "character": "四",
+        "letter": "sì",
+        "pinyin": "four"
     },
     "803": {
-        "character": "\u0007",
-        "letter": "handsome; graceful; smart; commander in chief",
-        "pinyin": "shuài"
+        "character": "死",
+        "letter": "sǐ",
+        "pinyin": "dead, die, pass out"
     },
     "804": {
-        "character": "双",
-        "letter": "two; double; pair; both",
-        "pinyin": "shuāng"
+        "character": "司机",
+        "letter": "sījī",
+        "pinyin": "driver"
     },
     "805": {
-        "character": "水",
-        "letter": "water; river; liquid; beverage; additional charges or income; (of clothes) classifier for number of washes",
-        "pinyin": "shuǐ"
+        "character": "送",
+        "letter": "sòng",
+        "pinyin": "to give as a gift or to deliver"
     },
     "806": {
-        "character": "水果",
-        "letter": "fruit; CL:個|个[gè]  39/56",
-        "pinyin": "shuǐguǒ"
+        "character": "酸",
+        "letter": "suān",
+        "pinyin": "acid, sour, tart"
     },
     "807": {
-        "character": "水平",
-        "letter": "level (of achievement etc); standard; horizontal",
-        "pinyin": "shuǐpíng"
+        "character": "速度",
+        "letter": "sùdù",
+        "pinyin": "speed, rate"
     },
     "808": {
-        "character": "睡",
-        "letter": "to go to bed; to go to sleep",
-        "pinyin": "shuìjiào"
+        "character": "岁",
+        "letter": "suì",
+        "pinyin": "year (of age)"
     },
     "809": {
-        "character": "便",
-        "letter": "conveniently; in passing; without much extra effort",
-        "pinyin": "shùnbiàn"
+        "character": "随便",
+        "letter": "suíbiàn",
+        "pinyin": "as one wishes, casual"
     },
     "810": {
-        "character": "利",
-        "letter": "smoothly; without a hitch",
-        "pinyin": "shùnlì"
+        "character": "虽然",
+        "letter": "suīrán",
+        "pinyin": "although"
     },
     "811": {
-        "character": "序",
-        "letter": "sequence; order",
-        "pinyin": "shùnxù"
+        "character": "随着",
+        "letter": "suízhe",
+        "pinyin": "along with"
     },
     "812": {
-        "character": "\u0004\u0001",
-        "letter": "to speak; to say; to talk; to gossip; to tell stories; talk; word",
-        "pinyin": "shuōhuà"
+        "character": "塑料袋",
+        "letter": "sùliàodài",
+        "pinyin": "plastic bag"
     },
     "813": {
-        "character": "\u0004明",
-        "letter": "to explain; to illustrate; explanation; directions; caption; CL:個|个[gè]",
-        "pinyin": "shuōmíng"
+        "character": "孙子",
+        "letter": "sūnzi",
+        "pinyin": "grandson (paternal)"
     },
     "814": {
-        "character": "\u0005士",
-        "letter": "master's degree; learned person",
-        "pinyin": "shuòshì"
+        "character": "所以",
+        "letter": "suǒyǐ",
+        "pinyin": "so"
     },
     "815": {
-        "character": "司机",
-        "letter": "chauffeur; driver; CL:個|个[gè]",
-        "pinyin": "sījī"
+        "character": "所有",
+        "letter": "suǒyǒu",
+        "pinyin": "all"
     },
     "816": {
-        "character": "死",
-        "letter": "to die; impassable; uncrossable; inflexible; rigid; extremely",
-        "pinyin": "sǐ"
+        "character": "他",
+        "letter": "tā",
+        "pinyin": "he or him"
     },
     "817": {
-        "character": "四",
-        "letter": "four;",
-        "pinyin": "sì"
+        "character": "她",
+        "letter": "tā",
+        "pinyin": "she or her"
     },
     "818": {
-        "character": "送",
-        "letter": "to deliver; to carry; to give (as a present); to present (with); to see off; to send",
-        "pinyin": "sòng"
+        "character": "它",
+        "letter": "tā",
+        "pinyin": "it"
     },
     "819": {
-        "character": "速度",
-        "letter": "speed; rate; velocity; CL:個|个[gè]",
-        "pinyin": "sùdù"
+        "character": "台",
+        "letter": "tái",
+        "pinyin": "platform, station, classifier for vehicles or machines"
     },
     "820": {
-        "character": "塑料袋",
-        "letter": "plastic bag",
-        "pinyin": "sùliàodài"
+        "character": "抬",
+        "letter": "tái",
+        "pinyin": "to lift, to raise, to carry"
     },
     "821": {
-        "character": "酸",
-        "letter": "sour; sore; ache; acid",
-        "pinyin": "suān"
+        "character": "太",
+        "letter": "tài",
+        "pinyin": "too…"
     },
     "822": {
-        "character": "算",
-        "letter": "regard as; to figure; to calculate; to compute",
-        "pinyin": "suàn"
+        "character": "态度",
+        "letter": "tàidu",
+        "pinyin": "attitude, manner, approach"
     },
     "823": {
-        "character": "虽然",
-        "letter": "although; even though; even if",
-        "pinyin": "suīrán"
+        "character": "太阳",
+        "letter": "tàiyáng",
+        "pinyin": "sun"
     },
     "824": {
-        "character": "随便",
-        "letter": "as one wishes; as one pleases; at random; negligent; casual; wanton",
-        "pinyin": "suíbiàn"
+        "character": "谈",
+        "letter": "tán",
+        "pinyin": "chat, discuss, talk"
     },
     "825": {
-        "character": "随着",
-        "letter": "along with; in the wake of; following",
-        "pinyin": "suízhe"
+        "character": "糖",
+        "letter": "táng",
+        "pinyin": "candy or sugar"
     },
     "826": {
-        "character": "\u0006",
-        "letter": "classifier for years (of age); year; year (of crop harvests)",
-        "pinyin": "suì"
+        "character": "趟",
+        "letter": "tàng",
+        "pinyin": "quantifier for the number of trips or runs made"
     },
     "827": {
-        "character": "\u0007子",
-        "letter": "grandson; son's son",
-        "pinyin": "sūnzi"
+        "character": "躺",
+        "letter": "tǎng",
+        "pinyin": "lie, to recline"
     },
     "828": {
-        "character": "所以",
-        "letter": "therefore; as a result; so",
-        "pinyin": "suǒyǐ"
+        "character": "汤",
+        "letter": "tāng",
+        "pinyin": "soup, hot water"
     },
     "829": {
-        "character": "所有",
-        "letter": "all; to have; to possess; to own",
-        "pinyin": "suǒyǒu"
+        "character": "弹钢琴",
+        "letter": "tángāngqín",
+        "pinyin": "play the piano"
     },
     "830": {
-        "character": "他",
-        "letter": "he or him; (used for either sex when the sex is unknown or unimportant); (used before sb's name for emphasis); (used as a meaningless mock object); other; another  40/56",
-        "pinyin": "tā"
+        "character": "讨论",
+        "letter": "tǎolùn",
+        "pinyin": "to talk over, to discuss"
     },
     "831": {
-        "character": "䭪",
-        "letter": "she",
-        "pinyin": "tā"
+        "character": "讨厌",
+        "letter": "tǎoyàn",
+        "pinyin": "hate, dislike, annoying"
     },
     "832": {
-        "character": "它",
-        "letter": "it",
-        "pinyin": "tā"
+        "character": "特别",
+        "letter": "tèbié",
+        "pinyin": "special"
     },
     "833": {
-        "character": "台",
-        "letter": "desk; platform; stage; terrace; stand; support; desk; station; broadcasting station; classifier for vehicles or machines; Taiwan (abbr.)",
-        "pinyin": "tái"
+        "character": "特点",
+        "letter": "tèdiǎn",
+        "pinyin": "characteristic, feature"
     },
     "834": {
-        "character": "抬",
-        "letter": "to lift; to raise; (of two or more persons) to carry",
-        "pinyin": "tái"
+        "character": "疼",
+        "letter": "téng",
+        "pinyin": "to ache"
     },
     "835": {
-        "character": "太",
-        "letter": "highest; greatest; too (much); very; extremely",
-        "pinyin": "tài"
+        "character": "提",
+        "letter": "tí",
+        "pinyin": "to carry, to lift, to raise"
     },
     "836": {
-        "character": "太䧈",
-        "letter": "sun; CL:個|个[gè]",
-        "pinyin": "tàiyáng"
+        "character": "题",
+        "letter": "tí",
+        "pinyin": "question (exam, exercise)"
     },
     "837": {
-        "character": "\u0006度",
-        "letter": "manner; bearing; attitude; approach; CL:個|个[gè]",
-        "pinyin": "tàidu"
+        "character": "踢足球",
+        "letter": "tī zúqiú",
+        "pinyin": "to play soccer"
     },
     "838": {
-        "character": "\u0007",
-        "letter": "to speak; to talk; to converse; to chat; to discuss",
-        "pinyin": "tán"
+        "character": "甜",
+        "letter": "tián",
+        "pinyin": "sweet"
     },
     "839": {
-        "character": "\u0001琴",
-        "letter": "play the piano",
-        "pinyin": "tángāngqín"
+        "character": "填空",
+        "letter": "tiánkòng",
+        "pinyin": "fill in the blanks"
     },
     "840": {
-        "character": "\b",
-        "letter": "soup; hot or boiling water; decoction of medicinal herbs; water in which sth has been boiled",
-        "pinyin": "tāng"
+        "character": "天气",
+        "letter": "tiānqì",
+        "pinyin": "weather"
     },
     "841": {
-        "character": "䶀",
-        "letter": "to wade; to trample; to turn the soil",
-        "pinyin": "tāng"
+        "character": "条",
+        "letter": "tiáo",
+        "pinyin": "for long objects"
     },
     "842": {
-        "character": "糖",
-        "letter": "sugar; sweets; candy; CL:顆|[kē],塊|\u0004[kuài]",
-        "pinyin": "táng"
+        "character": "跳舞",
+        "letter": "tiào wǔ",
+        "pinyin": "to dance"
     },
     "843": {
-        "character": "tǎng",
-        "letter": "recline; to lie down",
-        "pinyin": "to"
+        "character": "条件",
+        "letter": "tiáojiàn",
+        "pinyin": "condition, requirement"
     },
     "844": {
-        "character": "\u0005",
-        "letter": "to discuss; to talk over; CL:個|个[gè]",
-        "pinyin": "tǎolùn"
+        "character": "提高",
+        "letter": "tígāo",
+        "pinyin": "to improve"
     },
     "845": {
-        "character": "tǎoyàn",
-        "letter": "troublesome; nuisance; nasty; to hate doing sth",
-        "pinyin": "disgusting;"
+        "character": "提供",
+        "letter": "tígōng",
+        "pinyin": "supply, provide"
     },
     "846": {
-        "character": "特䫲",
-        "letter": "especially; special; particular; unusual",
-        "pinyin": "tèbié"
+        "character": "停",
+        "letter": "tíng",
+        "pinyin": "stop, halt"
     },
     "847": {
-        "character": "特点",
-        "letter": "characteristic (feature); trait; feature; CL:個|个[gè]",
-        "pinyin": "tèdiǎn"
+        "character": "挺",
+        "letter": "tǐng",
+        "pinyin": "very, extraordinary, outstanding, classifier for machine guns"
     },
     "848": {
-        "character": "仏",
-        "letter": "(it) hurts; love fondly; ache; pain; sore",
-        "pinyin": "téng"
+        "character": "听",
+        "letter": "tīng",
+        "pinyin": "to listen"
     },
     "849": {
-        "character": "䤫足球",
-        "letter": "play soccer(football)",
-        "pinyin": "tīzúqiú"
+        "character": "提前",
+        "letter": "tíqián",
+        "pinyin": "in advance"
     },
     "850": {
-        "character": "tí",
-        "letter": "problem for discussion; exam question; subject; to inscribe; to mention; surname Ti; CL: 個|个[gè],道[dào]",
-        "pinyin": "topic;"
+        "character": "提醒",
+        "letter": "tíxǐng",
+        "pinyin": "remind"
     },
     "851": {
-        "character": "提高",
-        "letter": "to raise; to increase",
-        "pinyin": "tígāo"
+        "character": "体育",
+        "letter": "tǐyù",
+        "pinyin": "sports or physical education"
     },
     "852": {
-        "character": "提供",
-        "letter": "to offer; to supply; to provide; to furnish",
-        "pinyin": "tígōng"
+        "character": "通过",
+        "letter": "tōngguò",
+        "pinyin": "through"
     },
     "853": {
-        "character": "提前",
-        "letter": "to shift to an earlier date; to bring forward; to advance",
-        "pinyin": "tíqián"
+        "character": "同情",
+        "letter": "tóngqíng",
+        "pinyin": "sympathy"
     },
     "854": {
-        "character": "提醒",
-        "letter": "to remind; to call attention to; to warn of  41/56",
-        "pinyin": "tíxǐng"
+        "character": "同时",
+        "letter": "tóngshí",
+        "pinyin": "simultaneously, at the same time"
     },
     "855": {
-        "character": "体育",
-        "letter": "sports; physical education",
-        "pinyin": "tǐyù"
+        "character": "同事",
+        "letter": "tóngshì",
+        "pinyin": "colleague"
     },
     "856": {
-        "character": "天气",
-        "letter": "weather",
-        "pinyin": "tiānqì"
+        "character": "同学",
+        "letter": "tóngxué",
+        "pinyin": "schoolmate"
     },
     "857": {
-        "character": "甜",
-        "letter": "sweet",
-        "pinyin": "tián"
+        "character": "同意",
+        "letter": "tóngyì",
+        "pinyin": "to agree"
     },
     "858": {
-        "character": "填空",
-        "letter": "to fill a job vacancy; to fill in a blank (e.g. on questionnaire or exam paper)",
-        "pinyin": "tiánkòng"
+        "character": "通知",
+        "letter": "tōngzhī",
+        "pinyin": "notice, notification"
     },
     "859": {
-        "character": "条",
-        "letter": "strip; item; article; clause (of law or treaty); classifier for long thin things (ribbon, river, road, trousers etc)",
-        "pinyin": "tiáo"
+        "character": "头发",
+        "letter": "tóufa",
+        "pinyin": "hair"
     },
     "860": {
-        "character": "条件",
-        "letter": "condition; circumstances; term; factor; requirement; prerequisite; qualification; CL:個|个 [gè]",
-        "pinyin": "tiáojiàn"
+        "character": "腿",
+        "letter": "tuǐ",
+        "pinyin": "leg"
     },
     "861": {
-        "character": "跳舞",
-        "letter": "to dance",
-        "pinyin": "tiàowǔ"
+        "character": "推",
+        "letter": "tuī",
+        "pinyin": "push"
     },
     "862": {
-        "character": "听",
-        "letter": "to listen; to hear; to obey; a can (loanword from English tin); classifier for canned beverages",
-        "pinyin": "tīng"
+        "character": "推迟",
+        "letter": "tuīchí",
+        "pinyin": "delay, postpone"
     },
     "863": {
-        "character": "停止",
-        "letter": "to stop; to halt; to cease",
-        "pinyin": "tíngzhǐ"
+        "character": "脱",
+        "letter": "tuō",
+        "pinyin": "take off, get away from"
     },
     "864": {
-        "character": "伾",
-        "letter": "to stick out; to (physically) straighten up; to endure or hold out; straight; stiff; outstanding; extraordinary; rather; quite; very; classifier for machine guns",
-        "pinyin": "tǐng"
+        "character": "突然",
+        "letter": "tūrán",
+        "pinyin": "suddenly"
     },
     "865": {
-        "character": "通",
-        "letter": "by means of; through; via; to pass through; to get through; to adopt; to pass (a bill); to switch over",
-        "pinyin": "tōngguò"
+        "character": "图书馆",
+        "letter": "túshūguǎn",
+        "pinyin": "library"
     },
     "866": {
-        "character": "通知",
-        "letter": "to notify; to inform; notice; notification; CL:個|个 [gè]",
-        "pinyin": "tōngzhī"
+        "character": "外",
+        "letter": "wài",
+        "pinyin": "outside"
     },
     "867": {
-        "character": "同情",
-        "letter": "compassion; relent; sympathize; sympathy",
-        "pinyin": "tóngqíng"
+        "character": "玩",
+        "letter": "wán",
+        "pinyin": "to play"
     },
     "868": {
-        "character": "同事",
-        "letter": "colleague; co-worker; CL:個|个[gè],位[wèi]",
-        "pinyin": "tóngshì"
+        "character": "完",
+        "letter": "wán",
+        "pinyin": "to finish"
     },
     "869": {
-        "character": "同学",
-        "letter": "(fellow) classmate; CL:位[wèi],個|个[gè]",
-        "pinyin": "tóngxué"
+        "character": "万",
+        "letter": "wàn",
+        "pinyin": "ten thousand"
     },
     "870": {
-        "character": "同意",
-        "letter": "to agree; to consent; to approve",
-        "pinyin": "tóngyì"
+        "character": "碗",
+        "letter": "wǎn",
+        "pinyin": "bowl"
     },
     "871": {
-        "character": "\u0005\u0001",
-        "letter": "hair (on the head)",
-        "pinyin": "tóufa"
+        "character": "完成",
+        "letter": "wánchéng",
+        "pinyin": "to complete or accomplish"
     },
     "872": {
-        "character": "突然",
-        "letter": "sudden; abrupt; unexpected",
-        "pinyin": "tūrán"
+        "character": "忘记",
+        "letter": "wàngjì",
+        "pinyin": "to forget"
     },
     "873": {
-        "character": "\u0006\u0004",
-        "letter": "library; CL:家[jiā],個|个[gè]",
-        "pinyin": "túshūguǎn"
+        "character": "网球",
+        "letter": "wǎngqiú",
+        "pinyin": "tennis"
     },
     "874": {
-        "character": "推",
-        "letter": "to push; to cut; to refuse; to reject; to decline; to shirk (responsibility); to put off; to delay; to push forward; to nominate; to elect  42/56",
-        "pinyin": "tuī"
+        "character": "往往",
+        "letter": "wǎngwǎng",
+        "pinyin": "often, frequently"
     },
     "875": {
-        "character": "推\u0001",
-        "letter": "to postpone; to put off; to defer",
-        "pinyin": "tuīchí"
+        "character": "网站",
+        "letter": "wǎngzhàn",
+        "pinyin": "website, network station"
     },
     "876": {
-        "character": "腿",
-        "letter": "leg; CL:條|条[tiáo]",
-        "pinyin": "tuǐ"
+        "character": "完全",
+        "letter": "wánquán",
+        "pinyin": "completely, entirely"
     },
     "877": {
-        "character": "脱",
-        "letter": "to shed; to take off; to escape; to get away from",
-        "pinyin": "tuō"
+        "character": "晚上",
+        "letter": "wǎnshàng",
+        "pinyin": "evening"
     },
     "878": {
-        "character": "䵈子",
-        "letter": "socks; stockings; CL:隻|只[zhī],對|[duì],雙|双 [shuāng]",
-        "pinyin": "wàzi"
+        "character": "袜子",
+        "letter": "wàzi",
+        "pinyin": "socks"
     },
     "879": {
-        "character": "外",
-        "letter": "outside; in addition; foreign; external",
-        "pinyin": "wài"
+        "character": "位",
+        "letter": "wèi",
+        "pinyin": "measure word for people"
     },
     "880": {
-        "character": "玩",
-        "letter": "toy; sth used for amusement; curio or antique (Taiwan pr. wàn); to play; to have fun; to trifle with; to keep sth for entertainment",
-        "pinyin": "wán"
+        "character": "为",
+        "letter": "wèi",
+        "pinyin": "for (sb/sth)"
     },
     "881": {
-        "character": "完",
-        "letter": "to finish; to be over; whole; complete; entire",
-        "pinyin": "wán"
+        "character": "喂",
+        "letter": "wèi",
+        "pinyin": "hello (on the phone)"
     },
     "882": {
-        "character": "完成",
-        "letter": "complete; accomplish; perfect tense (grammar)",
-        "pinyin": "wánchéng"
+        "character": "为什么",
+        "letter": "wèi shénme",
+        "pinyin": "why"
     },
     "883": {
-        "character": "完全",
-        "letter": "complete; whole; totally; entirely",
-        "pinyin": "wánquán"
+        "character": "味道",
+        "letter": "wèidào",
+        "pinyin": "taste, flavor, smell"
     },
     "884": {
-        "character": "碗",
-        "letter": "bowl; cup; CL:隻|只[zhī],個|个[gè]",
-        "pinyin": "wǎn"
+        "character": "为了",
+        "letter": "wèile",
+        "pinyin": "for (purpose)"
     },
     "885": {
-        "character": "晩上",
-        "letter": "in the evening; CL:個|个[gè]",
-        "pinyin": "wǎnshang"
+        "character": "卫生间",
+        "letter": "wèishēngjiān",
+        "pinyin": "bathroom, toilet"
     },
     "886": {
-        "character": "万",
-        "letter": "ten thousand; a great number",
-        "pinyin": "wàn"
+        "character": "危险",
+        "letter": "wēixiǎn",
+        "pinyin": "dangerous"
     },
     "887": {
-        "character": "往",
-        "letter": "to go (in a direction); to; towards; (of a train) bound for; past; previous",
-        "pinyin": "wǎng"
+        "character": "问",
+        "letter": "wèn",
+        "pinyin": "to ask"
     },
     "888": {
-        "character": "往往",
-        "letter": "often; frequently",
-        "pinyin": "wǎngwǎng"
+        "character": "温度",
+        "letter": "wēndù",
+        "pinyin": "temperature"
     },
     "889": {
-        "character": "网球",
-        "letter": "tennis; CL:個|个[gè]",
-        "pinyin": "wǎngqiú"
+        "character": "文化",
+        "letter": "wénhuà",
+        "pinyin": "culture"
     },
     "890": {
-        "character": "网站",
-        "letter": "website; network station; node",
-        "pinyin": "wǎngzhàn"
+        "character": "问题",
+        "letter": "wèntí",
+        "pinyin": "question"
     },
     "891": {
-        "character": "忘",
-        "letter": "to forget",
-        "pinyin": "wàngjì"
+        "character": "文章",
+        "letter": "wénzhāng",
+        "pinyin": "article, essay"
     },
     "892": {
-        "character": "危\u0005",
-        "letter": "danger; dangerous",
-        "pinyin": "wēixiǎn"
+        "character": "我",
+        "letter": "wǒ",
+        "pinyin": "I or me"
     },
     "893": {
-        "character": "䏟",
-        "letter": "hello (interj., esp. on telephone); hey; to feed (sb or some animal)",
-        "pinyin": "wèi"
+        "character": "我们",
+        "letter": "wǒmen",
+        "pinyin": "we or me"
     },
     "894": {
-        "character": "位",
-        "letter": "position; location; place; seat; classifier for people (honorific); classifier for binary bits (e.g. 十六位 1-bit or",
-        "pinyin": "wèi"
+        "character": "无",
+        "letter": "wú",
+        "pinyin": "nothing"
     },
     "895": {
-        "character": "bytes)",
-        "letter": ""
+        "character": "五",
+        "letter": "wǔ",
+        "pinyin": "five"
     },
     "896": {
-        "character": "\u0004",
-        "letter": "because of; for; to",
-        "pinyin": "wèi"
+        "character": "误会",
+        "letter": "wùhuì",
+        "pinyin": "misunderstand, mistake"
     },
     "897": {
-        "character": "\u0004了",
-        "letter": "in order to; for the purpose of; so as to",
-        "pinyin": "wèile"
+        "character": "无聊",
+        "letter": "wúliáo",
+        "pinyin": "boring"
     },
     "898": {
-        "character": "\u0004什么",
-        "letter": "why?; for what reason?",
-        "pinyin": "wèishénme"
+        "character": "无论",
+        "letter": "wúlùn",
+        "pinyin": "no matter what"
     },
     "899": {
-        "character": "味道",
-        "letter": "flavor; smell; hint of",
-        "pinyin": "wèidào"
+        "character": "污染",
+        "letter": "wūrǎn",
+        "pinyin": "pollution, contamination"
     },
     "900": {
-        "character": "温度",
-        "letter": " 43/56 temperature; CL:個|个[gè]",
-        "pinyin": "wēndù"
+        "character": "洗",
+        "letter": "xǐ",
+        "pinyin": "to wash"
     },
     "901": {
-        "character": "文化",
-        "letter": "culture; civilization; cultural; CL:個|个[gè],種|䝅 [zhǒng]",
-        "pinyin": "wénhuà"
+        "character": "西",
+        "letter": "xī",
+        "pinyin": "west"
     },
     "902": {
-        "character": "文章",
-        "letter": "article; essay; literary works; writings; hidden meaning; CL:篇[piān],段[duàn],頁|\f[yè]",
-        "pinyin": "wénzhāng"
+        "character": "夏",
+        "letter": "xià",
+        "pinyin": "summer"
     },
     "903": {
-        "character": "\b",
-        "letter": "to ask",
-        "pinyin": "wèn"
+        "character": "下",
+        "letter": "xià",
+        "pinyin": "under, below or next"
     },
     "904": {
-        "character": "\b\u0007",
-        "letter": "question; problem; issue; topic; CL:個|个[gè]",
-        "pinyin": "wèntí"
+        "character": "下雨",
+        "letter": "xià yǔ",
+        "pinyin": "to rain"
     },
     "905": {
-        "character": "我",
-        "letter": "I; me; my",
-        "pinyin": "wǒ"
+        "character": "咸",
+        "letter": "xián",
+        "pinyin": "salty"
     },
     "906": {
-        "character": "我\u0006",
-        "letter": "we; us; ourselves; our",
-        "pinyin": "wǒmen"
+        "character": "先",
+        "letter": "xiān",
+        "pinyin": "first"
     },
     "907": {
-        "character": "握手",
-        "letter": "to shake hands",
-        "pinyin": "wòshǒu"
+        "character": "向",
+        "letter": "xiàng",
+        "pinyin": "towards"
     },
     "908": {
-        "character": "染",
-        "letter": "pollution; contamination; CL:個|个[gè]",
-        "pinyin": "wūrǎn"
+        "character": "像",
+        "letter": "xiàng",
+        "pinyin": "as or like"
     },
     "909": {
-        "character": "无",
-        "letter": "-less; not to have; no; none; not; to lack; un908 无聊 wúliáo nonsense; bored",
-        "pinyin": "wú"
+        "character": "响",
+        "letter": "xiǎng",
+        "pinyin": "ring, classifier for noises"
     },
     "910": {
-        "character": "无\u0005",
-        "letter": "no matter what or how; regardless of whether...",
-        "pinyin": "wúlùn"
+        "character": "想",
+        "letter": "xiǎng",
+        "pinyin": "to think"
     },
     "911": {
-        "character": "五",
-        "letter": "five;",
-        "pinyin": "wǔ"
+        "character": "香",
+        "letter": "xiāng",
+        "pinyin": "fragrant, sweet smelling"
     },
     "912": {
-        "character": "会",
-        "letter": "to misunderstand; to mistake; misunderstanding; CL:個|个[gè]",
-        "pinyin": "wùhuì"
+        "character": "相反",
+        "letter": "xiāngfǎn",
+        "pinyin": "opposite, contrary"
     },
     "913": {
-        "character": "西",
-        "letter": "west",
-        "pinyin": "xī"
+        "character": "香蕉",
+        "letter": "xiāngjiāo",
+        "pinyin": "banana"
     },
     "914": {
-        "character": "西瓜",
-        "letter": "watermelon; CL:條|条[tiáo]",
-        "pinyin": "xīguā"
+        "character": "橡皮",
+        "letter": "xiàngpí",
+        "pinyin": "rubber, eraser"
     },
     "915": {
-        "character": "西柿",
-        "letter": "tomato; CL:隻|只[zhī]",
-        "pinyin": "xīhóngshì"
+        "character": "相同",
+        "letter": "xiāngtóng",
+        "pinyin": "same"
     },
     "916": {
-        "character": "希望",
-        "letter": "to wish for; to desire; hope CL:個|个[gè]",
-        "pinyin": "xīwàng"
+        "character": "详细",
+        "letter": "xiángxì",
+        "pinyin": "detailed"
     },
     "917": {
-        "character": "吸引",
-        "letter": "to attract (interest, investment etc); CL:個|个[gè]",
-        "pinyin": "xīyǐn"
+        "character": "相信",
+        "letter": "xiāngxìn",
+        "pinyin": "to believe"
     },
     "918": {
-        "character": "\u0001",
-        "letter": "habit; custom; usual practice; to be used to; CL: 個|个[gè]",
-        "pinyin": "xíguàn"
+        "character": "现金",
+        "letter": "xiànjīn",
+        "pinyin": "cash"
     },
     "919": {
-        "character": "洗",
-        "letter": "to wash; to bathe",
-        "pinyin": "xǐ"
+        "character": "羡慕",
+        "letter": "xiànmù",
+        "pinyin": "envious, envy"
     },
     "920": {
-        "character": "洗手\u0004",
-        "letter": "toilet; lavatory; washroom",
-        "pinyin": "xǐshǒujiān"
+        "character": "先生",
+        "letter": "xiānsheng",
+        "pinyin": "Mr or sir"
     },
     "921": {
-        "character": "洗衣机",
-        "letter": "washer; washing machine; CL:臺|台[tái]",
-        "pinyin": "xǐyījī"
+        "character": "现在",
+        "letter": "xiànzài",
+        "pinyin": "now"
     },
     "922": {
-        "character": "洗澡",
-        "letter": "to bathe; to take a shower",
-        "pinyin": "xǐzǎo"
+        "character": "笑",
+        "letter": "xiào",
+        "pinyin": "to smile or to laugh"
     },
     "923": {
-        "character": "喜",
-        "letter": "to like; to be fond of",
-        "pinyin": "xǐhuan"
+        "character": "小",
+        "letter": "xiǎo",
+        "pinyin": "small"
     },
     "924": {
-        "character": "夏",
-        "letter": "summer  44/56",
-        "pinyin": "xià"
+        "character": "小吃",
+        "letter": "xiǎochī",
+        "pinyin": "snack"
     },
     "925": {
-        "character": "下",
-        "letter": "down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down",
-        "pinyin": "xià"
+        "character": "效果",
+        "letter": "xiàoguǒ",
+        "pinyin": "result, effect"
     },
     "926": {
-        "character": "下午",
-        "letter": "afternoon; p.m.; CL:個|个[gè]",
-        "pinyin": "xiàwǔ"
+        "character": "笑话",
+        "letter": "xiàohua",
+        "pinyin": "joke"
     },
     "927": {
-        "character": "下雨",
-        "letter": "to rain; rainy",
-        "pinyin": "xiàyǔ"
+        "character": "小伙子",
+        "letter": "xiǎohuǒzi",
+        "pinyin": "young man, young fellow"
     },
     "928": {
-        "character": "先",
-        "letter": "early; prior; former; in advance; first",
-        "pinyin": "xiān"
+        "character": "小姐",
+        "letter": "xiǎojiě",
+        "pinyin": "Miss"
     },
     "929": {
-        "character": "先生",
-        "letter": "teacher; Mister (Mr.); husband; doctor (topolect); CL:個|个[gè],位[wèi]",
-        "pinyin": "xiānsheng"
+        "character": "小时",
+        "letter": "xiǎoshí",
+        "pinyin": "hour"
     },
     "930": {
-        "character": "咸",
-        "letter": "salted; salty; stingy; miserly",
-        "pinyin": "xián"
+        "character": "小说",
+        "letter": "xiǎoshuō",
+        "pinyin": "novel, fiction"
     },
     "931": {
-        "character": "代",
-        "letter": "modern times; modern age; modern era",
-        "pinyin": "xiàndài"
+        "character": "消息",
+        "letter": "xiāoxi",
+        "pinyin": "news, information"
     },
     "932": {
-        "character": "在",
-        "letter": "now; at present; at the moment; modern; current; nowadays",
-        "pinyin": "xiànzài"
+        "character": "小心",
+        "letter": "xiǎoxīn",
+        "pinyin": "to be careful"
     },
     "933": {
-        "character": "羡慕",
-        "letter": "envious; envy; to admire",
-        "pinyin": "xiànmù"
+        "character": "校长",
+        "letter": "xiàozhǎng",
+        "pinyin": "head of a school"
     },
     "934": {
-        "character": "限制",
-        "letter": "to restrict; to limit; to confine; restriction; limit; CL:個|个[gè]",
-        "pinyin": "xiànzhì"
+        "character": "下午",
+        "letter": "xiàwǔ",
+        "pinyin": "afternoon"
     },
     "935": {
-        "character": "香",
-        "letter": "fragrant; sweet smelling; aromatic; savory or appetizing; (to eat) with relish; (of sleep) sound; perfume or spice; joss or incense stick; CL:根 [gēn]",
-        "pinyin": "xiāng"
+        "character": "鞋",
+        "letter": "xié",
+        "pinyin": "shoe"
     },
     "936": {
-        "character": "香蕉",
-        "letter": "banana; CL:枝[zhī],根[gēn],個|个[gè],把[bǎ]",
-        "pinyin": "xiāngjiāo"
+        "character": "写",
+        "letter": "xiě",
+        "pinyin": "to write"
     },
     "937": {
-        "character": "相反",
-        "letter": "opposite; contrary",
-        "pinyin": "xiāngfǎn"
+        "character": "些",
+        "letter": "xiē",
+        "pinyin": "some"
     },
     "938": {
-        "character": "相同",
-        "letter": "identical; same",
-        "pinyin": "xiāngtóng"
+        "character": "谢谢",
+        "letter": "xièxie",
+        "pinyin": "thanks"
     },
     "939": {
-        "character": "相信",
-        "letter": "be convinced (that something is true); believe; to accept sth as true",
-        "pinyin": "xiāngxìn"
+        "character": "西瓜",
+        "letter": "xīguā",
+        "pinyin": "watermelon"
     },
     "940": {
-        "character": "\u0001",
-        "letter": "detailed; in detail; minute",
-        "pinyin": "xiángxì"
+        "character": "习惯",
+        "letter": "xíguàn",
+        "pinyin": "habit"
     },
     "941": {
-        "character": "响",
-        "letter": "to make a sound; to sound; to ring; loud; classifier for noises",
-        "pinyin": "xiǎng"
+        "character": "西红柿",
+        "letter": "xīhóngshì",
+        "pinyin": "tomato"
     },
     "942": {
-        "character": "想",
-        "letter": "to think; to believe; to suppose; to wish; to want; to miss",
-        "pinyin": "xiǎng"
+        "character": "喜欢",
+        "letter": "xǐhuan",
+        "pinyin": "to like"
     },
     "943": {
-        "character": "向",
-        "letter": "direction; orientation; to face; to turn toward; to; towards; shortly before; formerly; to side with; to be partial to; all along (previously); surname Xiang",
-        "pinyin": "xiàng"
+        "character": "信",
+        "letter": "xìn",
+        "pinyin": "letter"
     },
     "944": {
-        "character": "像",
-        "letter": "(look) like; similar (to); appearance; to appear; to  45/56 seem; image; portrait; resemble; seem",
-        "pinyin": "xiàng"
+        "character": "新",
+        "letter": "xīn",
+        "pinyin": "new"
     },
     "945": {
-        "character": "消息",
-        "letter": "news; information; CL:條|条[tiáo]",
-        "pinyin": "xiāoxi"
+        "character": "信封",
+        "letter": "xìnfēng",
+        "pinyin": "envelope"
     },
     "946": {
-        "character": "小",
-        "letter": "small; tiny; few; young",
-        "pinyin": "xiǎo"
+        "character": "行",
+        "letter": "xíng",
+        "pinyin": "row, travel, all right"
     },
     "947": {
-        "character": "小姐",
-        "letter": "young lady; miss; CL:個|个[gè],位[wèi]",
-        "pinyin": "xiǎojie"
+        "character": "姓",
+        "letter": "xìng",
+        "pinyin": "to be surnamed"
     },
     "948": {
-        "character": "小\u0004",
-        "letter": "hour; CL:個|个[gè]",
-        "pinyin": "xiǎoshí"
+        "character": "醒",
+        "letter": "xǐng",
+        "pinyin": "wake up"
     },
     "949": {
-        "character": "小\u0005",
-        "letter": "novel; fiction; CL:本[běn],部[bù]",
-        "pinyin": "xiǎoshuō"
+        "character": "性别",
+        "letter": "xìngbié",
+        "pinyin": "gender, sex"
     },
     "950": {
-        "character": "小心",
-        "letter": "to be careful; to take care",
-        "pinyin": "xiǎoxīn"
+        "character": "兴奋",
+        "letter": "xīngfèn",
+        "pinyin": "excitement"
     },
     "951": {
-        "character": "笑",
-        "letter": "laugh; smile; CL:個|个[gè]",
-        "pinyin": "xiào"
+        "character": "幸福",
+        "letter": "xìngfú",
+        "pinyin": "happiness"
     },
     "952": {
-        "character": "笑",
-        "letter": "joke; jest; CL:個|个[gè]",
-        "pinyin": "xiàohuà"
+        "character": "性格",
+        "letter": "xìnggé",
+        "pinyin": "character, temperament"
     },
     "953": {
-        "character": "效果",
-        "letter": "result; effect; quality; CL:個|个[gè]",
-        "pinyin": "xiàoguǒ"
+        "character": "行李箱",
+        "letter": "xínglǐxiāng",
+        "pinyin": "suitcase"
     },
     "954": {
-        "character": "校\u0001",
-        "letter": "(college, university) president; headmaster; CL:個| 个[gè],位[wèi],名[míng]",
-        "pinyin": "xiàozhǎng"
+        "character": "星期",
+        "letter": "xīngqī",
+        "pinyin": "week"
     },
     "955": {
-        "character": "些",
-        "letter": "some; few; several; (a measure word)",
-        "pinyin": "xiē"
+        "character": "兴趣",
+        "letter": "xìngqù",
+        "pinyin": "interest"
     },
     "956": {
-        "character": "鞋",
-        "letter": "shoe; CL:雙|双[shuāng],隻|只[zhī]",
-        "pinyin": "xié"
+        "character": "辛苦",
+        "letter": "xīnkǔ",
+        "pinyin": "hard, exhausting"
     },
     "957": {
-        "character": "写",
-        "letter": "to write",
-        "pinyin": "xiě"
+        "character": "心情",
+        "letter": "xīnqíng",
+        "pinyin": "mood, frame of mind"
     },
     "958": {
-        "character": "\b\b",
-        "letter": "to thank; thanks",
-        "pinyin": "xièxie"
+        "character": "新闻",
+        "letter": "xīnwén",
+        "pinyin": "news"
     },
     "959": {
-        "character": "新",
-        "letter": "new; newly; meso- (chemistry)",
-        "pinyin": "xīn"
+        "character": "信息",
+        "letter": "xìnxī",
+        "pinyin": "information"
     },
     "960": {
-        "character": "新\u0006",
-        "letter": "news; CL:條|条[tiáo],個|个[gè]",
-        "pinyin": "xīnwén"
+        "character": "新鲜",
+        "letter": "xīnxiān",
+        "pinyin": "fresh"
     },
     "961": {
-        "character": "新\u0007",
-        "letter": "fresh (experience, food etc); freshness",
-        "pinyin": "xīnxiān"
+        "character": "信心",
+        "letter": "xìnxīn",
+        "pinyin": "confidence, faith"
     },
     "962": {
-        "character": "辛苦",
-        "letter": "hard; exhausting; with much toil; thanks for your trouble",
-        "pinyin": "xīnkǔ"
+        "character": "熊猫",
+        "letter": "xióngmāo",
+        "pinyin": "panda"
     },
     "963": {
-        "character": "心情",
-        "letter": "mood; frame of mind; CL:個|个[gè]",
-        "pinyin": "xīnqíng"
+        "character": "洗手间",
+        "letter": "xǐshǒujiān",
+        "pinyin": "washroom"
     },
     "964": {
-        "character": "信",
-        "letter": "letter; mail; to trust; to believe; to profess faith in; truthful; confidence; trust; at will; at random",
-        "pinyin": "xìn"
+        "character": "休息",
+        "letter": "xiūxi",
+        "pinyin": "to rest"
     },
     "965": {
-        "character": "信任",
-        "letter": "to trust; to have confidence in",
-        "pinyin": "xìnrèn"
+        "character": "希望",
+        "letter": "xīwàng",
+        "pinyin": "to hope"
     },
     "966": {
-        "character": "信心",
-        "letter": "confidence; faith (in sb or sth); CL:個|个[gè]",
-        "pinyin": "xìnxīn"
+        "character": "吸引",
+        "letter": "xīyǐn",
+        "pinyin": "to attract (interest, investment etc)"
     },
     "967": {
-        "character": "信用卡",
-        "letter": "credit card",
-        "pinyin": "xìnyòngkǎ"
+        "character": "洗澡",
+        "letter": "xǐzǎo",
+        "pinyin": "to bathe"
     },
     "968": {
-        "character": "䫤",
-        "letter": "excited; excitement  46/56",
-        "pinyin": "xīngfèn"
+        "character": "选择",
+        "letter": "xuǎnzé",
+        "pinyin": "to choose"
     },
     "969": {
-        "character": "星期",
-        "letter": "week; CL:個|个[gè]",
-        "pinyin": "xīngqī"
+        "character": "许多",
+        "letter": "xǔduō",
+        "pinyin": "many, much, lot of"
     },
     "970": {
-        "character": "行",
-        "letter": "to walk; to go; to travel; a visit; temporary; makeshift; current; in circulation; to do; to perform; capable; competent; effective; all right; OK!; will do",
-        "pinyin": "xíng"
+        "character": "雪",
+        "letter": "xuě",
+        "pinyin": "snow"
     },
     "971": {
-        "character": "行李箱",
-        "letter": "suitcase",
-        "pinyin": "xínglixiāng"
+        "character": "学期",
+        "letter": "xuéqí",
+        "pinyin": "semester, school term"
     },
     "972": {
-        "character": "醒",
-        "letter": "to wake up; to awaken; to be awake",
-        "pinyin": "xǐng"
+        "character": "学生",
+        "letter": "xuésheng",
+        "pinyin": "student"
     },
     "973": {
-        "character": "姓",
-        "letter": "family name; surname; name; CL:個|个[gè]",
-        "pinyin": "xìng"
+        "character": "学习",
+        "letter": "xuéxí",
+        "pinyin": "to learn"
     },
     "974": {
-        "character": "性䫲",
-        "letter": "gender; sex; distinguishing between the sexes",
-        "pinyin": "xìngbié"
+        "character": "学校",
+        "letter": "xuéxiào",
+        "pinyin": "school"
     },
     "975": {
-        "character": "性格",
-        "letter": "nature; disposition; temperament; character; CL: 個|个[gè]",
-        "pinyin": "xìnggé"
+        "character": "需要",
+        "letter": "xūyào",
+        "pinyin": "to need"
     },
     "976": {
-        "character": "幸福",
-        "letter": "blessed; happiness; happy",
-        "pinyin": "xìngfú"
+        "character": "呀",
+        "letter": "ya",
+        "pinyin": "ahh!, expressing surprise or doubt"
     },
     "977": {
-        "character": "䫤趣",
-        "letter": "interest in (something); CL:個|个[gè]",
-        "pinyin": "xìngqu"
+        "character": "牙膏",
+        "letter": "yágāo",
+        "pinyin": "toothpaste"
     },
     "978": {
-        "character": "熊猫",
-        "letter": "panda; CL:隻|只[zhī]",
-        "pinyin": "xióngmāo"
+        "character": "压力",
+        "letter": "yālì",
+        "pinyin": "pressure"
     },
     "979": {
-        "character": "修",
-        "letter": "to decorate; to embellish; to repair; to build; to study; to write; to cultivate",
-        "pinyin": "xiū"
+        "character": "盐",
+        "letter": "yán",
+        "pinyin": "salt"
     },
     "980": {
-        "character": "休息",
-        "letter": "rest; to rest",
-        "pinyin": "xiūxi"
+        "character": "演出",
+        "letter": "yǎnchū",
+        "pinyin": "to perform, to show, to act (in a play)"
     },
     "981": {
-        "character": "需要",
-        "letter": "to need; to want; to demand; needs; to require",
-        "pinyin": "xūyào"
+        "character": "养成",
+        "letter": "yǎngchéng",
+        "pinyin": "cultivate, acquire"
     },
     "982": {
-        "character": "多",
-        "letter": "many; a lot of; much",
-        "pinyin": "xǔduō"
+        "character": "严格",
+        "letter": "yángé",
+        "pinyin": "strict, tight"
     },
     "983": {
-        "character": "\u0004\u0007",
-        "letter": "to select; to pick; choice; option; alternative",
-        "pinyin": "xuǎnzé"
+        "character": "阳光",
+        "letter": "yángguāng",
+        "pinyin": "sunshine, sunlight"
     },
     "984": {
-        "character": "学生",
-        "letter": "student; school child",
-        "pinyin": "xuésheng"
+        "character": "羊肉",
+        "letter": "yángròu",
+        "pinyin": "lamb or mutton"
     },
     "985": {
-        "character": "学",
-        "letter": "to learn; to study",
-        "pinyin": "xuéxí"
+        "character": "样子",
+        "letter": "yàngzi",
+        "pinyin": "looks, appearance"
     },
     "986": {
-        "character": "学校",
-        "letter": "school; CL:所[suǒ]",
-        "pinyin": "xuéxiào"
+        "character": "眼镜",
+        "letter": "yǎnjìng",
+        "pinyin": "glasses"
     },
     "987": {
-        "character": "雪",
-        "letter": "snow; snowfall; CL:場|\u0001[cháng]; to have the appearance of snow; to wipe away, off or out; to clean",
-        "pinyin": "xuě"
+        "character": "眼睛",
+        "letter": "yǎnjīng",
+        "pinyin": "eye"
     },
     "988": {
-        "character": "血",
-        "letter": "blood; informal colloquial and Taiwan pr. xiě; also pr. xuě; CL:滴[dī],片[piàn]",
-        "pinyin": "xuè"
+        "character": "研究",
+        "letter": "yánjiūshēng",
+        "pinyin": "graduate student"
     },
     "989": {
-        "character": "\u0005力",
-        "letter": "pressure",
-        "pinyin": "yālì"
+        "character": "颜色",
+        "letter": "yánsè",
+        "pinyin": "color"
     },
     "990": {
-        "character": "牙膏",
-        "letter": "toothpaste; CL:管[guǎn]",
-        "pinyin": "yágāo"
+        "character": "演员",
+        "letter": "yǎnyuán",
+        "pinyin": "actor or actress"
     },
     "991": {
-        "character": "\u0006洲",
-        "letter": "Asia; Asian",
-        "pinyin": "yàzhōu"
+        "character": "严重",
+        "letter": "yánzhòng",
+        "pinyin": "serious, critical"
     },
     "992": {
-        "character": "呀",
-        "letter": " 47/56 (particle equivalent to 啊 after a vowel, expressing",
-        "pinyin": "ya"
+        "character": "药",
+        "letter": "yào",
+        "pinyin": "medicine"
     },
     "993": {
-        "character": "\u0005",
-        "letter": "surprise or doubt) salt; CL:粒[lì]",
-        "pinyin": "yán"
+        "character": "要",
+        "letter": "yào",
+        "pinyin": "to want"
     },
     "994": {
-        "character": "\u0006格",
-        "letter": "strict; stringent; tight; rigorous",
-        "pinyin": "yángé"
+        "character": "邀请",
+        "letter": "yāoqǐng",
+        "pinyin": "invitation"
     },
     "995": {
-        "character": "\u0006重",
-        "letter": "grave; serious; severe; critical",
-        "pinyin": "yánzhòng"
+        "character": "要求",
+        "letter": "yāoqiú",
+        "pinyin": "to require"
     },
     "996": {
-        "character": "研究生",
-        "letter": "graduate student; postgraduate student; research student",
-        "pinyin": "yánjiūshēng"
+        "character": "要是",
+        "letter": "yàoshi",
+        "pinyin": "if"
     },
     "997": {
-        "character": "\u0007色",
-        "letter": "color; CL:個|个[gè]",
-        "pinyin": "yánsè"
+        "character": "钥匙",
+        "letter": "yàoshi",
+        "pinyin": "key"
     },
     "998": {
-        "character": "演出",
-        "letter": "to act (in a play); to perform; to put on (a performance); performance; concert; show; CL:場| \u0001[cháng],次[cì]",
-        "pinyin": "yǎnchū"
+        "character": "亚洲",
+        "letter": "yàzhōu",
+        "pinyin": "asia"
     },
     "999": {
-        "character": "演\u000b",
-        "letter": "actor or actress; performer; CL:個|个[gè],位[wèi], 名[míng]",
-        "pinyin": "yǎnyuán"
+        "character": "页",
+        "letter": "yè",
+        "pinyin": "page"
     },
     "1000": {
-        "character": "眼",
-        "letter": "spectacles; eyeglasses; CL:副[fù]",
-        "pinyin": "yǎnjìng"
+        "character": "也",
+        "letter": "yě",
+        "pinyin": "also"
     },
     "1001": {
-        "character": "眼睛",
-        "letter": "eye; CL:隻|只[zhī],雙|双[shuāng]",
-        "pinyin": "yǎnjing"
+        "character": "也许",
+        "letter": "yěxǔ",
+        "pinyin": "perhaps, maybe, probably"
     },
     "1002": {
-        "character": "䧈光",
-        "letter": "sunshine; CL:線|\u0004[xiàn]",
-        "pinyin": "yángguāng"
+        "character": "爷爷",
+        "letter": "yéye",
+        "pinyin": "grandpa"
     },
     "1003": {
-        "character": "羊肉",
-        "letter": "mutton",
-        "pinyin": "yángròu"
+        "character": "叶子",
+        "letter": "yèzi",
+        "pinyin": "leaf, foliage"
     },
     "1004": {
-        "character": "䟙成",
-        "letter": "to cultivate; to raise; to form (a habit); to acquire",
-        "pinyin": "yǎngchéng"
+        "character": "以",
+        "letter": "yǐ",
+        "pinyin": "with, to use as, according to"
     },
     "1005": {
-        "character": "\b子",
-        "letter": "manner; air; looks; aspect",
-        "pinyin": "yàngzi"
+        "character": "一",
+        "letter": "yī",
+        "pinyin": "one"
     },
     "1006": {
-        "character": "邀",
-        "letter": "to invite; invitation; CL:個|个[gè]",
-        "pinyin": "yāoqǐng"
+        "character": "一般",
+        "letter": "yìbān",
+        "pinyin": "generally"
     },
     "1007": {
-        "character": "要求",
-        "letter": "to request; to require; to stake a claim; to ask; to demand; CL:點|点[diǎn]",
-        "pinyin": "yāoqiú"
+        "character": "一边",
+        "letter": "yìbiān",
+        "pinyin": "at the same time"
     },
     "1008": {
-        "character": "要",
-        "letter": "important; vital; to want; will; going to (as future auxiliary); may; must",
-        "pinyin": "yào"
+        "character": "一定",
+        "letter": "yídìng",
+        "pinyin": "definitely"
     },
     "1009": {
-        "character": "yào",
-        "letter": "drug; cure; CL:種|䝅[zhǒng],服[fù]",
-        "pinyin": "medicine;"
+        "character": "衣服",
+        "letter": "yīfu",
+        "pinyin": "clothes"
     },
     "1010": {
-        "character": "匙",
-        "letter": "key; CL:把[bǎ]",
-        "pinyin": "yàoshi"
+        "character": "一共",
+        "letter": "yígòng",
+        "pinyin": "altogether"
     },
     "1011": {
-        "character": "yéye",
-        "letter": "father's father; paternal grandfather; CL: 個|个[gè]",
-        "pinyin": "(informal)"
+        "character": "以后",
+        "letter": "yǐhòu",
+        "pinyin": "after or later"
     },
     "1012": {
-        "character": "也",
-        "letter": "also; too; (in classical Chinese) final particle serving as copula  48/56",
-        "pinyin": "yě"
+        "character": "一会儿",
+        "letter": "yíhuìr",
+        "pinyin": "a short while"
     },
     "1013": {
-        "character": "也\u0004",
-        "letter": "perhaps; maybe",
-        "pinyin": "yěxǔ"
+        "character": "意见",
+        "letter": "yìjiàn",
+        "pinyin": "opinion, suggestion, objection"
     },
     "1014": {
-        "character": "\u0006",
-        "letter": "page; leaf",
-        "pinyin": "yè"
+        "character": "已经",
+        "letter": "yǐjīng",
+        "pinyin": "already"
     },
     "1015": {
-        "character": "叶子",
-        "letter": "foliage; leaf; CL:片[piàn]",
-        "pinyin": "yèzi"
+        "character": "阴",
+        "letter": "yīn",
+        "pinyin": "cloudy"
     },
     "1016": {
-        "character": "一",
-        "letter": "one; 1; single; a (article); as soon as; entire; whole; all; throughout; one radical in Chinese characters (Kangxi radical 1)",
-        "pinyin": "yī"
+        "character": "因此",
+        "letter": "yīncǐ",
+        "pinyin": "consequently, therefore"
     },
     "1017": {
-        "character": "衣服",
-        "letter": "clothes; CL:件[jiàn],套[tào]",
-        "pinyin": "yīfu"
+        "character": "赢",
+        "letter": "yíng",
+        "pinyin": "win, beat"
     },
     "1018": {
-        "character": "医生",
-        "letter": "doctor; CL:個|个[gè],位[wèi],名[míng]",
-        "pinyin": "yīshēng"
+        "character": "应该",
+        "letter": "yīnggāi",
+        "pinyin": "should"
     },
     "1019": {
-        "character": "医院",
-        "letter": "hospital; CL:所[suǒ],家[jiā],座[zuò]",
-        "pinyin": "yīyuàn"
+        "character": "应聘",
+        "letter": "yìngpìn",
+        "pinyin": "to apply for position"
     },
     "1020": {
-        "character": "一定",
-        "letter": "surely; certainly; necessarily; fixed; a certain (extent etc); given; particular; must",
-        "pinyin": "yídìng"
+        "character": "影响",
+        "letter": "yǐngxiǎng",
+        "pinyin": "to affect"
     },
     "1021": {
-        "character": "一共",
-        "letter": "altogether",
-        "pinyin": "yígòng"
+        "character": "银行",
+        "letter": "yínháng",
+        "pinyin": "bank"
     },
     "1022": {
-        "character": "一会儿",
-        "letter": "a while",
-        "pinyin": "yíhuìr"
+        "character": "引起",
+        "letter": "yǐnqǐ",
+        "pinyin": "to give rise, cause"
     },
     "1023": {
-        "character": "一切",
-        "letter": "everything; every; all",
-        "pinyin": "yíqiè"
+        "character": "因为",
+        "letter": "yīnwèi",
+        "pinyin": "because"
     },
     "1024": {
-        "character": "一\u0005",
-        "letter": "same; like; equal to; the same as; just like",
-        "pinyin": "yíyàng"
+        "character": "印象",
+        "letter": "yìnxiàng",
+        "pinyin": "impression, reflection"
     },
     "1025": {
-        "character": "以",
-        "letter": "to use; according to; so as to; by means of; in order to; by; with; because",
-        "pinyin": "yǐ"
+        "character": "音乐",
+        "letter": "yīnyuè",
+        "pinyin": "music"
     },
     "1026": {
-        "character": "以后",
-        "letter": "after; later; afterwards; following; later on; in the future",
-        "pinyin": "yǐhòu"
+        "character": "一起",
+        "letter": "yìqǐ",
+        "pinyin": "together"
     },
     "1027": {
         "character": "以前",
-        "letter": "before; formerly; previous; ago",
-        "pinyin": "yǐqián"
+        "letter": "yǐqián",
+        "pinyin": "before or ago"
     },
     "1028": {
-        "character": "以",
-        "letter": "to believe; to think; to consider; to be under the impression",
-        "pinyin": "yǐwéi"
+        "character": "一切",
+        "letter": "yíqiè",
+        "pinyin": "all, everything"
     },
     "1029": {
-        "character": "已",
-        "letter": "already",
-        "pinyin": "yǐjīng"
+        "character": "医生",
+        "letter": "yīshēng",
+        "pinyin": "doctor"
     },
     "1030": {
-        "character": "椅子",
-        "letter": "chair; CL:把[bǎ],套[tào]",
-        "pinyin": "yǐzi"
+        "character": "艺术",
+        "letter": "yìshù",
+        "pinyin": "art"
     },
     "1031": {
-        "character": "\u0007",
-        "letter": "a hundred million; calculate",
-        "pinyin": "yì"
+        "character": "意思",
+        "letter": "yìsi",
+        "pinyin": "meaning"
     },
     "1032": {
-        "character": "一般",
-        "letter": "same; ordinary; common; general; generally; in general",
-        "pinyin": "yìbān"
+        "character": "以为",
+        "letter": "yǐwéi",
+        "pinyin": "to think (wrongly)"
     },
     "1033": {
-        "character": "一\u0001",
-        "letter": "one side; either side; on the one hand; on the other hand; doing while",
-        "pinyin": "yìbiān"
+        "character": "一样",
+        "letter": "yíyàng",
+        "pinyin": "same"
     },
     "1034": {
-        "character": "一起",
-        "letter": "in the same place; together; with; altogether (in total)",
-        "pinyin": "yìqǐ"
+        "character": "医院",
+        "letter": "yīyuàn",
+        "pinyin": "hospital"
     },
     "1035": {
         "character": "一直",
-        "letter": "straight (in a straight line); continuously; always; from the beginning of ... up to ...; all along  49/56",
-        "pinyin": "yìzhí"
+        "letter": "yìzhí",
+        "pinyin": "constantly"
     },
     "1036": {
-        "character": "意",
-        "letter": "idea; opinion; suggestion; objection; complaint; CL:點|点[diǎn],條|条[tiáo]",
-        "pinyin": "yìjiàn"
+        "character": "椅子",
+        "letter": "yǐzi",
+        "pinyin": "chair"
     },
     "1037": {
-        "character": "意思",
-        "letter": "idea; opinion; meaning; wish; desire; CL:個|个 [gè]",
-        "pinyin": "yìsi"
+        "character": "用",
+        "letter": "yòng",
+        "pinyin": "to use"
     },
     "1038": {
-        "character": "\u0006\u0004",
-        "letter": "art; CL:種|䝅[zhǒng]",
-        "pinyin": "yìshù"
+        "character": "勇敢",
+        "letter": "yǒnggǎn",
+        "pinyin": "brave, courageous"
     },
     "1039": {
-        "character": "䧉",
-        "letter": "overcast (weather); cloudy; shady; Yin (the negative principle of Yin and Yang); negative (electric.); feminine; moon; implicit; hidden; genitalia",
-        "pinyin": "yīn"
+        "character": "永远",
+        "letter": "yǒngyuǎn",
+        "pinyin": "forever, eternal"
     },
     "1040": {
-        "character": "因此",
-        "letter": "thus; consequently; as a result",
-        "pinyin": "yīncǐ"
+        "character": "由",
+        "letter": "yóu",
+        "pinyin": "from, to follow"
     },
     "1041": {
-        "character": "因\u0005",
-        "letter": "because; owing to; on account of",
-        "pinyin": "yīnwèi"
+        "character": "又",
+        "letter": "yòu",
+        "pinyin": "again"
     },
     "1042": {
-        "character": "音",
-        "letter": "music; CL:張|[zhāng],曲[qǔ],段[duàn]",
-        "pinyin": "yīnyuè"
+        "character": "有",
+        "letter": "yǒu",
+        "pinyin": "to have"
     },
     "1043": {
-        "character": "\u0007行",
-        "letter": "bank; CL:家[jiā],個|个[gè]",
-        "pinyin": "yínháng"
+        "character": "游泳",
+        "letter": "yóu yǒng",
+        "pinyin": "to swim"
     },
     "1044": {
-        "character": "\b料",
-        "letter": "drink; beverage",
-        "pinyin": "yǐnliào"
+        "character": "右边",
+        "letter": "yòubiān",
+        "pinyin": "right"
     },
     "1045": {
-        "character": "引起",
-        "letter": "to give rise to; to lead to; to cause; to arouse",
-        "pinyin": "yǐnqǐ"
+        "character": "优点",
+        "letter": "yōudiǎn",
+        "pinyin": "advantage, benefit"
     },
     "1046": {
-        "character": "印象",
-        "letter": "impression; reflection; perception; CL:個|个[gè]",
-        "pinyin": "yìnxiàng"
+        "character": "友好",
+        "letter": "yǒuhǎo",
+        "pinyin": "friendly"
     },
     "1047": {
-        "character": "\u0001",
-        "letter": "ought to; should; must",
-        "pinyin": "yīnggāi"
+        "character": "邮局",
+        "letter": "yóujú",
+        "pinyin": "post Office"
     },
     "1048": {
-        "character": "yíng",
-        "letter": "beat; to win; to profit",
-        "pinyin": "to"
+        "character": "有名",
+        "letter": "yǒumíng",
+        "pinyin": "famous"
     },
     "1049": {
-        "character": "影响",
-        "letter": "an influence; an effect; to influence; to affect (usually adversely); to disturb; CL:股[gǔ]",
-        "pinyin": "yǐngxiǎng"
+        "character": "幽默",
+        "letter": "yōumò",
+        "pinyin": "humor"
     },
     "1050": {
-        "character": "硬",
-        "letter": "hard; stiff; strong; firm; to manage to do sth with difficulty; good (quality); able (person)",
-        "pinyin": "yìng"
+        "character": "尤其",
+        "letter": "yóuqí",
+        "pinyin": "especially, particularly"
     },
     "1051": {
-        "character": "勇敢",
-        "letter": "brave; courageous",
-        "pinyin": "yǒnggǎn"
+        "character": "有趣",
+        "letter": "yǒuqù",
+        "pinyin": "interesting, fascinating"
     },
     "1052": {
-        "character": "永\f",
-        "letter": "forever; eternal",
-        "pinyin": "yǒngyuǎn"
+        "character": "游戏",
+        "letter": "yóuxì",
+        "pinyin": "game"
     },
     "1053": {
-        "character": "用",
-        "letter": "to use; to employ; to have to; to eat or drink; expense or outlay; usefulness; hence; therefore",
-        "pinyin": "yòng"
+        "character": "优秀",
+        "letter": "yōuxiù",
+        "pinyin": "excellent, outstanding"
     },
     "1054": {
-        "character": "点",
-        "letter": "merit; benefit; strong point; advantage; CL:個|个 [gè]",
-        "pinyin": "yōudiǎn"
+        "character": "友谊",
+        "letter": "yǒuyì",
+        "pinyin": "friendship, fellowship"
     },
     "1055": {
-        "character": "秀",
-        "letter": "outstanding; excellent",
-        "pinyin": "yōuxiù"
+        "character": "由于",
+        "letter": "yóuyú",
+        "pinyin": "due to, because of"
     },
     "1056": {
-        "character": "幽默",
-        "letter": "humor; humorous",
-        "pinyin": "yōumò"
+        "character": "鱼",
+        "letter": "yú",
+        "pinyin": "fish"
     },
     "1057": {
-        "character": "由",
-        "letter": "to follow; from; it is for...to; reason; cause; because of; due to; to; to leave it (to sb); by (introduces passive verb)  50/56",
-        "pinyin": "yóu"
+        "character": "与",
+        "letter": "yǔ",
+        "pinyin": "versus, and"
     },
     "1058": {
-        "character": "由于",
-        "letter": "due to; as a result of; thanks to; owing to; since; because",
-        "pinyin": "yóuyú"
+        "character": "元",
+        "letter": "yuán",
+        "pinyin": "basic monetary unit of China"
     },
     "1059": {
-        "character": "尤其",
-        "letter": "especially; particularly",
-        "pinyin": "yóuqí"
+        "character": "远",
+        "letter": "yuǎn",
+        "pinyin": "far"
     },
     "1060": {
-        "character": "游\u0006",
-        "letter": "game; play; CL:場|[chǎng]",
-        "pinyin": "yóuxì"
+        "character": "原来",
+        "letter": "yuánlái",
+        "pinyin": "original"
     },
     "1061": {
-        "character": "游泳",
-        "letter": "swim",
-        "pinyin": "yóuyǒng"
+        "character": "原谅",
+        "letter": "yuánliàng",
+        "pinyin": "forgive"
     },
     "1062": {
-        "character": "有",
-        "letter": "to have; there is; there are; to exist; to be",
-        "pinyin": "yǒu"
+        "character": "愿意",
+        "letter": "yuànyì",
+        "pinyin": "to be willing to"
     },
     "1063": {
-        "character": "有名",
-        "letter": "famous; well-known",
-        "pinyin": "yǒumíng"
+        "character": "原因",
+        "letter": "yuányīn",
+        "pinyin": "reason, cause, origin"
     },
     "1064": {
-        "character": "有趣",
-        "letter": "interesting; fascinating; amusing",
-        "pinyin": "yǒuqù"
+        "character": "遇到",
+        "letter": "yùdào",
+        "pinyin": "to encounter"
     },
     "1065": {
-        "character": "友好",
-        "letter": "friendly (relations)",
-        "pinyin": "yǒuhǎo"
+        "character": "月",
+        "letter": "yuè",
+        "pinyin": "month"
     },
     "1066": {
-        "character": "友\u0007",
-        "letter": "companionship; fellowship; friendship",
-        "pinyin": "yǒuyì"
+        "character": "越",
+        "letter": "yuè",
+        "pinyin": "more"
     },
     "1067": {
-        "character": "又",
-        "letter": "(once) again; also; both... and...; again",
-        "pinyin": "yòu"
+        "character": "阅读",
+        "letter": "yuèdú",
+        "pinyin": "read"
     },
     "1068": {
-        "character": "右\u0001",
-        "letter": "right side; right, to the right",
-        "pinyin": "yòubian"
+        "character": "约会",
+        "letter": "yuēhuì",
+        "pinyin": "appointment, engagement, date"
     },
     "1069": {
-        "character": "\b",
-        "letter": "fish; CL:條|条[tiáo],尾[wěi]",
-        "pinyin": "yú"
+        "character": "月亮",
+        "letter": "yuèliang",
+        "pinyin": "moon"
     },
     "1070": {
-        "character": "愉快",
-        "letter": "cheerful; cheerily; delightful; pleasant; pleasantly; pleasing; happy; delighted",
-        "pinyin": "yúkuài"
+        "character": "语法",
+        "letter": "yǔfǎ",
+        "pinyin": "grammar"
     },
     "1071": {
-        "character": "于是",
-        "letter": "thereupon; as a result; consequently; thus; hence",
-        "pinyin": "yúshì"
+        "character": "愉快",
+        "letter": "yúkuài",
+        "pinyin": "cheerful, delightful, pleasant"
     },
     "1072": {
-        "character": "与",
-        "letter": "(same as 歟|欤, final particle expression doubt or surprise, similar to \u0004 or 䏆)",
-        "pinyin": "yú"
+        "character": "羽毛球",
+        "letter": "yǔmáoqiú",
+        "pinyin": "badminton, shuttlecock"
     },
     "1073": {
-        "character": "法",
-        "letter": "grammar",
-        "pinyin": "yǔfǎ"
+        "character": "云",
+        "letter": "yún",
+        "pinyin": "cloud"
     },
     "1074": {
-        "character": "言",
-        "letter": "language; CL:門|門[mén],種|䝅[zhǒng]",
-        "pinyin": "yǔyán"
+        "character": "运动",
+        "letter": "yùndòng",
+        "pinyin": "to do sports"
     },
     "1075": {
-        "character": "羽毛球",
-        "letter": "shuttlecock; badminton; CL:個|个[gè]",
-        "pinyin": "yǔmáoqiú"
+        "character": "允许",
+        "letter": "yǔnxǔ",
+        "pinyin": "allow, permit"
     },
     "1076": {
-        "character": "遇到",
-        "letter": "to meet; to run into; to come across",
-        "pinyin": "yùdào"
+        "character": "于是",
+        "letter": "yúshì",
+        "pinyin": "then, consequently"
     },
     "1077": {
-        "character": "\u0005",
-        "letter": "to prepare a lesson",
-        "pinyin": "yùxí"
+        "character": "预习",
+        "letter": "yùxí",
+        "pinyin": "to prepare a lesson"
     },
     "1078": {
-        "character": "元",
-        "letter": "Chinese monetary unit; dollar; primary; first; the Yuan or Mongol dynasty (12-13); surname Yuan",
-        "pinyin": "yuán"
+        "character": "语言",
+        "letter": "yǔyán",
+        "pinyin": "language"
     },
     "1079": {
-        "character": "yuán",
-        "letter": "round; circular; spherical; (of the moon) full; unit of Chinese currency (Yuan); tactful; to justify",
-        "pinyin": "circle;"
+        "character": "在",
+        "letter": "zài",
+        "pinyin": "to be in"
     },
     "1080": {
-        "character": "原来",
-        "letter": "original; former; originally; formerly; at first; so... actually",
-        "pinyin": "yuánlái"
+        "character": "再",
+        "letter": "zài",
+        "pinyin": "again"
     },
     "1081": {
-        "character": "原",
-        "letter": "to excuse; to forgive; to pardon  51/56",
-        "pinyin": "yuánliàng"
+        "character": "再见",
+        "letter": "zàijiàn",
+        "pinyin": "goodbye"
     },
     "1082": {
-        "character": "原因",
-        "letter": "cause; origin; root cause; reason; CL:個|个[gè]",
-        "pinyin": "yuányīn"
+        "character": "脏",
+        "letter": "zāng",
+        "pinyin": "dirty"
     },
     "1083": {
-        "character": "yuǎn",
-        "letter": "distant; remote",
-        "pinyin": "far;"
+        "character": "咱们",
+        "letter": "zánmen",
+        "pinyin": "we or us(including both speaker and person spoken to)"
     },
     "1084": {
-        "character": "愿意",
-        "letter": "to wish; to want; ready; willing (to do sth)",
-        "pinyin": "yuànyì"
+        "character": "暂时",
+        "letter": "zànshí",
+        "pinyin": "temporary"
     },
     "1085": {
-        "character": "会",
-        "letter": "appointment; engagement; date; CL:次[cì],個|个 [gè]",
-        "pinyin": "yuēhuì"
+        "character": "早上",
+        "letter": "zǎoshàng",
+        "pinyin": "early morning"
     },
     "1086": {
-        "character": "越",
-        "letter": "to exceed; to climb over; to surpass; the more... the more",
-        "pinyin": "yuè"
+        "character": "杂志",
+        "letter": "zázhì",
+        "pinyin": "magazine"
     },
     "1087": {
-        "character": "月",
-        "letter": "moon; month; CL:個|个[gè],輪|\u0006[lún]",
-        "pinyin": "yuè"
+        "character": "增加",
+        "letter": "zēngjiā",
+        "pinyin": "increase"
     },
     "1088": {
-        "character": "月亮",
-        "letter": "moon",
-        "pinyin": "yuèliang"
+        "character": "怎么",
+        "letter": "zěnme",
+        "pinyin": "how"
     },
     "1089": {
-        "character": "\u0004",
-        "letter": "to read; reading",
-        "pinyin": "yuèdú"
+        "character": "怎么样",
+        "letter": "zěnmeyàng",
+        "pinyin": "how about"
     },
     "1090": {
-        "character": "云",
-        "letter": "(classical) to say",
-        "pinyin": "yún"
+        "character": "责任",
+        "letter": "zérèn",
+        "pinyin": "responsibility, duty"
     },
     "1091": {
-        "character": "允\t",
-        "letter": "to permit; to allow",
-        "pinyin": "yǔnxǔ"
+        "character": "站",
+        "letter": "zhàn",
+        "pinyin": "to stand"
     },
     "1092": {
-        "character": "\u000e",
-        "letter": "movement; campaign; CL: 場|\u0001[chǎng]; sports",
-        "pinyin": "yùndòng"
+        "character": "张",
+        "letter": "zhāng",
+        "pinyin": "for flat objects"
     },
     "1093": {
-        "character": "\u000f志",
-        "letter": "magazine; CL:本[běn],份[fèn],期[qī]",
-        "pinyin": "zázhì"
+        "character": "丈夫",
+        "letter": "zhàngfu",
+        "pinyin": "husband"
     },
     "1094": {
-        "character": "在",
-        "letter": "(located) at; (to be) in; to exist; in the middle of doing sth; (indicating an action in progress)",
-        "pinyin": "zài"
+        "character": "占线",
+        "letter": "zhànxiàn",
+        "pinyin": "busy (telephone)"
     },
     "1095": {
-        "character": "再",
-        "letter": "again; once more; re-; second; another; then (after sth, and not until then)",
-        "pinyin": "zài"
+        "character": "照",
+        "letter": "zhào",
+        "pinyin": "according to"
     },
     "1096": {
-        "character": "再\u0005",
-        "letter": "goodbye; see you again later",
-        "pinyin": "zàijiàn"
+        "character": "找",
+        "letter": "zhǎo",
+        "pinyin": "to find"
     },
     "1097": {
-        "character": "䬜\u0007",
-        "letter": "we or us (including both the speaker and the person(s) spoken to); I or me; you",
-        "pinyin": "zánmen"
+        "character": "照顾",
+        "letter": "zhàogù",
+        "pinyin": "to look after"
     },
     "1098": {
-        "character": "\u0010\b",
-        "letter": "temporary; provisional; for the time being",
-        "pinyin": "zànshí"
+        "character": "着急",
+        "letter": "zháojí",
+        "pinyin": "to worry"
     },
     "1099": {
-        "character": "\u0011",
-        "letter": "viscera; (anatomy) organ",
-        "pinyin": "zàng"
+        "character": "照片",
+        "letter": "zhàopiàn",
+        "pinyin": "photo"
     },
     "1100": {
-        "character": "早上",
-        "letter": "early morning; CL:個|个[gè]; Good morning!",
-        "pinyin": "zǎoshang"
+        "character": "招聘",
+        "letter": "zhāopìn",
+        "pinyin": "recruitment, to invite applications for a job"
     },
     "1101": {
-        "character": "\u0012任",
-        "letter": "responsibility; blame; duty; CL:個|个[gè]",
-        "pinyin": "zérèn"
+        "character": "照相机",
+        "letter": "zhàoxiàngjī",
+        "pinyin": "camera"
     },
     "1102": {
-        "character": "怎么",
-        "letter": "how?; what?; why?",
-        "pinyin": "zěnme"
+        "character": "着",
+        "letter": "zhe",
+        "pinyin": "aspect particle"
     },
     "1103": {
-        "character": "怎么",
-        "letter": "how?; how about?; how was it?; how are things?",
-        "pinyin": "zěnmeyàng"
+        "character": "这/这儿",
+        "letter": "zhè/zhèr",
+        "pinyin": "this/here"
     },
     "1104": {
-        "character": "增加",
-        "letter": "to raise; to increase",
-        "pinyin": "zēngjiā"
+        "character": "真",
+        "letter": "zhēn",
+        "pinyin": "really"
     },
     "1105": {
-        "character": "增",
-        "letter": "to grow; to increase",
-        "pinyin": "zēngzhǎng"
+        "character": "正常",
+        "letter": "zhèngcháng",
+        "pinyin": "normal, regular"
     },
     "1106": {
-        "character": "窄",
-        "letter": "narrow; narrow-minded; badly off",
-        "pinyin": "zhǎi"
+        "character": "正好",
+        "letter": "zhènghǎo",
+        "pinyin": "just right, just enough"
     },
     "1107": {
-        "character": "站",
-        "letter": "station; to stand; to halt; to stop; branch of a  52/56 company or organisation",
-        "pinyin": "zhàn"
+        "character": "整理",
+        "letter": "zhěnglǐ",
+        "pinyin": "arrangement"
     },
     "1108": {
-        "character": "\u0004",
-        "letter": "to open up; to spread; sheet of paper; classifier for flat objects, sheet; classifier for votes",
-        "pinyin": "zhāng"
+        "character": "证明",
+        "letter": "zhèngmíng",
+        "pinyin": "prove, certificate, identification"
     },
     "1109": {
-        "character": "\u0001",
-        "letter": "chief; head; elder; to grow; to develop",
-        "pinyin": "zhǎng"
+        "character": "正确",
+        "letter": "zhèngquè",
+        "pinyin": "correct, proper"
     },
     "1110": {
-        "character": "丈夫",
-        "letter": "husband; CL:個|个[gè]",
-        "pinyin": "zhàngfu"
+        "character": "正式",
+        "letter": "zhèngshì",
+        "pinyin": "formal, official"
     },
     "1111": {
-        "character": "招聘",
-        "letter": "recruitment; to invite applications for a job",
-        "pinyin": "zhāopìn"
+        "character": "正在",
+        "letter": "zhèngzài",
+        "pinyin": "indicating action in progress"
     },
     "1112": {
-        "character": "着急",
-        "letter": "to worry; to feel anxious",
-        "pinyin": "zháojí"
+        "character": "真正",
+        "letter": "zhēnzhèng",
+        "pinyin": "genuine, real"
     },
     "1113": {
-        "character": "找",
-        "letter": "to try to find; to look for; to call on sb; to find; to seek; to return; to give change",
-        "pinyin": "zhǎo"
+        "character": "指",
+        "letter": "zhǐ",
+        "pinyin": "finger, to point"
     },
     "1114": {
-        "character": "照",
-        "letter": "to take care of; to show consideration; to attend to; to look after",
-        "pinyin": "zhàogu"
+        "character": "只",
+        "letter": "zhǐ",
+        "pinyin": "only"
     },
     "1115": {
-        "character": "照片",
-        "letter": "photo; photograph; picture; CL:張|\u0004[zhāng],套 [tào],幅[fú]",
-        "pinyin": "zhàopiàn"
+        "character": "之",
+        "letter": "zhī",
+        "pinyin": "of"
     },
     "1116": {
-        "character": "照相机",
-        "letter": "camera; CL:個|个[gè],架[jià],部[bù],台[tái],隻|只 [zhī]",
-        "pinyin": "zhàoxiàngjī"
+        "character": "支持",
+        "letter": "zhīchí",
+        "pinyin": "support, sustain"
     },
     "1117": {
-        "character": "\u0005",
-        "letter": "this; these; (commonly pr. zhèi before a classifier, esp. in Beijing)",
-        "pinyin": "zhè"
+        "character": "知道",
+        "letter": "zhīdao",
+        "pinyin": "to know"
     },
     "1118": {
-        "character": "\u0005儿",
-        "letter": "here",
-        "pinyin": "zhèr"
+        "character": "值得",
+        "letter": "zhídé",
+        "pinyin": "worth"
     },
     "1119": {
-        "character": "着",
-        "letter": "particle attached after verb to indicate action in progress, like -ing ending",
-        "pinyin": "zhe"
+        "character": "只好",
+        "letter": "zhǐhǎo",
+        "pinyin": "have to, without any better option"
     },
     "1120": {
-        "character": "真",
-        "letter": "really; truly; indeed; real; true; genuine",
-        "pinyin": "zhēn"
+        "character": "直接",
+        "letter": "zhíjiē",
+        "pinyin": "direct, straightforward"
     },
     "1121": {
-        "character": "真正",
-        "letter": "genuine; real; true; genuinely",
-        "pinyin": "zhēnzhèng"
+        "character": "质量",
+        "letter": "zhìliàng",
+        "pinyin": "quality"
     },
     "1122": {
-        "character": "整理",
-        "letter": "to arrange; to tidy up; to sort out; to straighten out; to list systematically; to collate (data, files); to pack (luggage)",
-        "pinyin": "zhěnglǐ"
+        "character": "至少",
+        "letter": "zhìshǎo",
+        "pinyin": "at least"
     },
     "1123": {
-        "character": "整",
-        "letter": "orderly; neat; even; tidy",
-        "pinyin": "zhěngqí"
+        "character": "知识",
+        "letter": "zhīshi",
+        "pinyin": "knowledge, intellectual"
     },
     "1124": {
-        "character": "正常",
-        "letter": "regular; normal; ordinary",
-        "pinyin": "zhèngcháng"
+        "character": "植物",
+        "letter": "zhíwù",
+        "pinyin": "plant, botanical"
     },
     "1125": {
-        "character": "正好",
-        "letter": "just (in time); just right; just enough; to happen to; to chance to; by chance; it just so happens that",
-        "pinyin": "zhènghǎo"
+        "character": "只要",
+        "letter": "zhǐyào",
+        "pinyin": "as long as"
     },
     "1126": {
-        "character": "正䉯",
-        "letter": "correct; proper",
-        "pinyin": "zhèngquè"
+        "character": "职业",
+        "letter": "zhíyè",
+        "pinyin": "occupation, profession"
     },
     "1127": {
-        "character": "正式",
-        "letter": "formal; official",
-        "pinyin": "zhèngshì"
+        "character": "重",
+        "letter": "zhòng",
+        "pinyin": "weight, heavy"
     },
     "1128": {
-        "character": "正在",
-        "letter": "in the process of (doing something or happening); while (doing)",
-        "pinyin": "zhèngzài"
+        "character": "种",
+        "letter": "zhǒng",
+        "pinyin": "type"
     },
     "1129": {
-        "character": "\u0006明",
-        "letter": "proof; certificate; identification; testimonial; CL:  53/56 個|个[gè]; to prove; to testify; to confirm the truth of",
-        "pinyin": "zhèngmíng"
+        "character": "重点",
+        "letter": "zhòngdiǎn",
+        "pinyin": "focal point, priority, key"
     },
     "1130": {
-        "character": "之",
-        "letter": "(possessive particle, literary equivalent of 的); him; her; it",
-        "pinyin": "zhī"
+        "character": "中国",
+        "letter": "Zhōngguó",
+        "pinyin": "China"
     },
     "1131": {
-        "character": "只",
-        "letter": "classifier for birds and certain animals, one of a pair, some utensils, vessels etc",
-        "pinyin": "zhī"
+        "character": "中间",
+        "letter": "zhōngjiān",
+        "pinyin": "middle"
     },
     "1132": {
-        "character": "支持",
-        "letter": "to be in favor of; to support; to back; support; backing; to stand by; CL:個|个[gè]",
-        "pinyin": "zhīchí"
+        "character": "重视",
+        "letter": "zhòngshì",
+        "pinyin": "to attach importance to something"
     },
     "1133": {
-        "character": "知道",
-        "letter": "to know; to be aware of",
-        "pinyin": "zhīdao"
+        "character": "中午",
+        "letter": "zhōngwǔ",
+        "pinyin": "noon"
     },
     "1134": {
-        "character": "知",
-        "letter": "intellectual; knowledge-related; knowledge; CL: 門|門[mén]",
-        "pinyin": "zhīshi"
+        "character": "重要",
+        "letter": "zhòngyào",
+        "pinyin": "important"
     },
     "1135": {
-        "character": "\u0005得",
-        "letter": "to be worth; to deserve",
-        "pinyin": "zhíde"
+        "character": "终于",
+        "letter": "zhōngyú",
+        "pinyin": "finally"
     },
     "1136": {
-        "character": "直接",
-        "letter": "direct; opposite: indirect 間接|\u0001接; immediate; directly; straightforward",
-        "pinyin": "zhíjiē"
+        "character": "周末",
+        "letter": "zhōumò",
+        "pinyin": "weekend"
     },
     "1137": {
-        "character": "植物",
-        "letter": "botanical; plant; vegetation; CL:種|䝅[zhǒng]",
-        "pinyin": "zhíwù"
+        "character": "周围",
+        "letter": "zhōuwéi",
+        "pinyin": "surroundings, environment"
     },
     "1138": {
-        "character": "\u0004",
-        "letter": "occupation; profession; vocation; professional",
-        "pinyin": "zhíyè"
+        "character": "住",
+        "letter": "zhù",
+        "pinyin": "to live or to stay"
     },
     "1139": {
-        "character": "指",
-        "letter": "finger; to point at or to; to indicate or refer to; to depend on; to count on; (of hair) to stand on end",
-        "pinyin": "zhǐ"
+        "character": "祝",
+        "letter": "zhù",
+        "pinyin": "to wish"
     },
     "1140": {
-        "character": "只",
-        "letter": "only; merely; just; but",
-        "pinyin": "zhǐ"
+        "character": "赚",
+        "letter": "zhuàn",
+        "pinyin": "earn, make a profit"
     },
     "1141": {
-        "character": "只好",
-        "letter": "without any better option; to have to; to be forced to",
-        "pinyin": "zhǐhǎo"
+        "character": "转",
+        "letter": "zhuǎn",
+        "pinyin": "to turn, to change direction, to transfer"
     },
     "1142": {
-        "character": "只要",
-        "letter": "if only; so long as",
-        "pinyin": "zhǐyào"
+        "character": "专门",
+        "letter": "zhuānmén",
+        "pinyin": "specialist, specialized"
     },
     "1143": {
-        "character": "\u0006量",
-        "letter": "quality; mass (in physics); CL:個|个[gè]",
-        "pinyin": "zhìliàng"
+        "character": "专业",
+        "letter": "zhuānyè",
+        "pinyin": "major, specialty, main field of study"
     },
     "1144": {
-        "character": "至少",
-        "letter": "at least; (to say the) least",
-        "pinyin": "zhìshǎo"
+        "character": "祝贺",
+        "letter": "zhùhè",
+        "pinyin": "congratulations"
     },
     "1145": {
-        "character": "制造",
-        "letter": "to manufacture; to make",
-        "pinyin": "zhìzào"
+        "character": "著名",
+        "letter": "zhùmíng",
+        "pinyin": "famous, well-known"
     },
     "1146": {
-        "character": "中国",
-        "letter": "China; Middle Kingdom",
-        "pinyin": "zhōngguó"
+        "character": "准备.",
+        "letter": "zhǔnbèi",
+        "pinyin": "to prepare"
     },
     "1147": {
-        "character": "中\u0001",
-        "letter": "between; intermediate; mid; middle",
-        "pinyin": "zhōngjiān"
+        "character": "准确",
+        "letter": "zhǔnquè",
+        "pinyin": "accuracy, exact"
     },
     "1148": {
-        "character": "中文",
-        "letter": "Chinese; Chinese written language; Chinese writing",
-        "pinyin": "zhōngwén"
+        "character": "准时",
+        "letter": "zhǔnshí",
+        "pinyin": "on time, punctual"
     },
     "1149": {
-        "character": "中午",
-        "letter": "noon; midday; CL:個|个[gè]",
-        "pinyin": "zhōngwǔ"
+        "character": "桌子",
+        "letter": "zhuōzi",
+        "pinyin": "table or desk"
     },
     "1150": {
-        "character": "\u0007于",
-        "letter": "at last; in the end; finally; eventually  54/56",
-        "pinyin": "zhōngyú"
+        "character": "主要",
+        "letter": "zhǔyào",
+        "pinyin": "main"
     },
     "1151": {
-        "character": "䝅",
-        "letter": "abbr. for 物種|物䝅, genus; race; seed; breed; species; strain; kind; type; has guts (i.e. courage); nerve; classifier for types: kind, sort; classifier for languages",
-        "pinyin": "zhǒng"
+        "character": "注意",
+        "letter": "zhùyì",
+        "pinyin": "to pay attention to"
     },
     "1152": {
-        "character": "重点",
-        "letter": "emphasis; focal point; priority; key; with the emphasis on; focusing on",
-        "pinyin": "zhòngdiǎn"
+        "character": "主意",
+        "letter": "zhǔyi",
+        "pinyin": "idea, plan"
     },
     "1153": {
-        "character": "重\u0006",
-        "letter": "to attach importance to sth; to value",
-        "pinyin": "zhòngshì"
+        "character": "字",
+        "letter": "zì",
+        "pinyin": "character"
     },
     "1154": {
-        "character": "重要",
-        "letter": "important; significant; major",
-        "pinyin": "zhòngyào"
+        "character": "字典",
+        "letter": "zìdiǎn",
+        "pinyin": "dictionary"
     },
     "1155": {
-        "character": "周末",
-        "letter": "weekend",
-        "pinyin": "zhōumò"
+        "character": "自己",
+        "letter": "zìjǐ",
+        "pinyin": "oneself"
     },
     "1156": {
-        "character": "周\b",
-        "letter": "surroundings; environment; to encompass",
-        "pinyin": "zhōuwéi"
+        "character": "自然",
+        "letter": "zìrán",
+        "pinyin": "natural, free from affectation"
     },
     "1157": {
-        "character": "猪",
-        "letter": "hog; pig; swine; CL:口[kǒu],頭|\u0007[tóu]",
-        "pinyin": "zhū"
+        "character": "仔细",
+        "letter": "zǐxì",
+        "pinyin": "careful, attentive"
     },
     "1158": {
-        "character": "逐\u0004",
-        "letter": "gradually",
-        "pinyin": "zhújiàn"
+        "character": "自信",
+        "letter": "zìxìn",
+        "pinyin": "self-confidence"
     },
     "1159": {
-        "character": "主",
-        "letter": "to take the initiative; to do sth of one's own accord; active; opposite: passive 被動|被[bèi dòng]; drive (of gears and shafts etc)",
-        "pinyin": "zhǔdòng"
+        "character": "自行车",
+        "letter": "zìxíngchē",
+        "pinyin": "bike"
     },
     "1160": {
-        "character": "主要",
-        "letter": "main; principal; major; primary",
-        "pinyin": "zhǔyào"
+        "character": "总结",
+        "letter": "zǒngjié",
+        "pinyin": "summary, conclude"
     },
     "1161": {
-        "character": "主意",
-        "letter": "plan; idea; decision; CL:個|个[gè]",
-        "pinyin": "zhǔyi"
+        "character": "总是",
+        "letter": "zǒngshì",
+        "pinyin": "always"
     },
     "1162": {
-        "character": "住",
-        "letter": "to live; to dwell; to stay; to reside; to stop",
-        "pinyin": "zhù"
+        "character": "走",
+        "letter": "zǒu",
+        "pinyin": "to walk"
     },
     "1163": {
-        "character": "祝",
-        "letter": "invoke; pray to; wish; to express good wishes; surname Zhu",
-        "pinyin": "zhù"
+        "character": "租",
+        "letter": "zū",
+        "pinyin": "rent, hire"
     },
     "1164": {
-        "character": "祝",
-        "letter": "to congratulate; congratulations; CL:個|个[gè]",
-        "pinyin": "zhùhè"
+        "character": "最",
+        "letter": "zuì",
+        "pinyin": "most"
     },
     "1165": {
-        "character": "著名",
-        "letter": "famous; noted; well-known; celebrated",
-        "pinyin": "zhùmíng"
+        "character": "最好",
+        "letter": "zuìhǎo",
+        "pinyin": "best"
     },
     "1166": {
-        "character": "注意",
-        "letter": "to take note of; to pay attention to",
-        "pinyin": "zhùyì"
+        "character": "最近",
+        "letter": "zuìjìn",
+        "pinyin": "recent time"
     },
     "1167": {
-        "character": "門",
-        "letter": "specialist; specialized; customized",
-        "pinyin": "zhuānmén"
+        "character": "尊重",
+        "letter": "zūnzhòng",
+        "pinyin": "respect, honor"
     },
     "1168": {
-        "character": "zhuānyè",
-        "letter": "specialized field; main field of study (at university); major; CL:門|門[mén],個|个[gè]; professional",
-        "pinyin": "specialty;"
+        "character": "座",
+        "letter": "zuò",
+        "pinyin": "seat, base, (classifier for buildings, mountains)"
     },
     "1169": {
-        "character": "zhuàn",
-        "letter": "make a profit",
-        "pinyin": "earn;"
+        "character": "做",
+        "letter": "zuò",
+        "pinyin": "to do"
     },
     "1170": {
-        "character": "撞",
-        "letter": "to hit; to strike; to meet by accident; to run into; to bump against; to bump into",
-        "pinyin": "zhuàng"
+        "character": "坐",
+        "letter": "zuò",
+        "pinyin": "to sit"
     },
     "1171": {
-        "character": "准\u0001",
-        "letter": "preparation; prepare",
-        "pinyin": "zhǔnbèi"
+        "character": "左边",
+        "letter": "zuǒbiān",
+        "pinyin": "left"
     },
     "1172": {
-        "character": "准䉯",
-        "letter": "accurate; exact; precise",
-        "pinyin": "zhǔnquè"
+        "character": "作家",
+        "letter": "zuòjiā",
+        "pinyin": "writer, author"
     },
     "1173": {
-        "character": "准\u0005",
-        "letter": "on time; punctual; on schedule  55/56",
-        "pinyin": "zhǔnshí"
+        "character": "昨天",
+        "letter": "zuótiān",
+        "pinyin": "yesterday"
     },
     "1174": {
-        "character": "䖂子",
-        "letter": "table; desk; CL:張|\u0006[zhāng],套[tào]",
-        "pinyin": "zhuōzi"
+        "character": "座位",
+        "letter": "zuòwèi",
+        "pinyin": "a place to sit"
     },
     "1175": {
-        "character": "仔\u0005",
-        "letter": "careful; attentive; cautious",
-        "pinyin": "zǐxì"
+        "character": "作业",
+        "letter": "zuòyè",
+        "pinyin": "homework"
     },
     "1176": {
-        "character": "字",
-        "letter": "letter; symbol; character; word; CL:個|个[gè]; courtesy or style name traditionally given to males aged",
-        "pinyin": "zì"
+        "character": "作用",
+        "letter": "zuòyòng",
+        "pinyin": "effect"
     },
     "1177": {
-        "character": "in",
-        "letter": "China",
-        "pinyin": "dynastic"
+        "character": "左右",
+        "letter": "zuǒyòu",
+        "pinyin": "approximately, about, left and right"
     },
     "1178": {
-        "character": "字典",
-        "letter": "dictionary; character dictionary; CL:本[běn]",
-        "pinyin": "zìdiǎn"
-    },
-    "1179": {
-        "character": "自己",
-        "letter": "self; (reflexive pronoun); own",
-        "pinyin": "zìjǐ"
-    },
-    "1180": {
-        "character": "自然",
-        "letter": "nature; natural; naturally",
-        "pinyin": "zìrán"
-    },
-    "1181": {
-        "character": "自行",
-        "letter": "bicycle; bike; CL:輛|\u0004[liàng]",
-        "pinyin": "zìxíngchē"
-    },
-    "1182": {
-        "character": "\b",
-        "letter": "to sum up; to conclude; summary; resume; CL:個| 个[gè]",
-        "pinyin": "zǒngjié"
-    },
-    "1183": {
-        "character": "\b是",
-        "letter": "always",
-        "pinyin": "zǒngshì"
-    },
-    "1184": {
-        "character": "走",
-        "letter": "to walk; to go; to run; to move (of vehicle); to visit; to leave; to go away; to die (euph.); from; through; away (in compound verbs, such as 撤 走); to change (shape, form, meaning)",
-        "pinyin": "zǒu"
-    },
-    "1185": {
-        "character": "租",
-        "letter": "to hire; to rent; to charter; to rent out; to lease out; rent; land tax",
-        "pinyin": "zū"
-    },
-    "1186": {
-        "character": "成",
-        "letter": "component; part; element; constitute; make up",
-        "pinyin": "zǔchéng"
-    },
-    "1187": {
-        "character": "\u0007",
-        "letter": "to organize; organization; organized system; nerve; tissue; CL:個|个[gè]",
-        "pinyin": "zǔzhī"
-    },
-    "1188": {
-        "character": "嘴",
-        "letter": "mouth; beak; spout (of teapot etc); CL:張|\u0006 [zhāng],個|个[gè]",
-        "pinyin": "zuǐ"
-    },
-    "1189": {
-        "character": "最",
-        "letter": "most; the most; -est",
-        "pinyin": "zuì"
-    },
-    "1190": {
-        "character": "最好",
-        "letter": "best; (you) had better (do what we suggest)",
-        "pinyin": "zuìhǎo"
-    },
-    "1191": {
-        "character": "最后",
-        "letter": "final; last; finally; ultimate",
-        "pinyin": "zuìhòu"
-    },
-    "1192": {
-        "character": "最近",
-        "letter": "recent; recently; these days; latest; soon; nearest (of locations); shortest (of routes)",
-        "pinyin": "zuìjìn"
-    },
-    "1193": {
-        "character": "尊重",
-        "letter": "esteem; respect; to honor; to value sth",
-        "pinyin": "zūnzhòng"
-    },
-    "1194": {
-        "character": "昨天",
-        "letter": "yesterday",
-        "pinyin": "zuótiān"
-    },
-    "1195": {
-        "character": "左\u0001",
-        "letter": "left; the left side; to the left of  56/56",
-        "pinyin": "zuǒbian"
-    },
-    "1196": {
-        "character": "坐",
-        "letter": "to sit; to take a seat; to take (a bus, airplane etc); to bear fruit; surname Zuo",
-        "pinyin": "zuò"
-    },
-    "1197": {
-        "character": "做",
-        "letter": "to do; to make; to produce; to write; to compose; to act as; to engage in; to hold (a party); to be; to become; to function (in some capacity); to serve as; to be used for; to form (a bond or relationship); to pretend; to feign; to act a part; to put on appearance",
-        "pinyin": "zuò"
-    },
-    "1198": {
-        "character": "做生意",
-        "letter": "to do business",
-        "pinyin": "zuòshēngyì"
-    },
-    "1199": {
-        "character": "座",
-        "letter": "seat; base; stand; CL:個|个[gè]; classifier for buildings, mountains and similar immovable objects",
-        "pinyin": "zuò"
-    },
-    "1200": {
-        "character": "座位",
-        "letter": "seat; CL:個|个[gè]",
-        "pinyin": "zuòwèi"
+        "character": "作者",
+        "letter": "zuòzhě",
+        "pinyin": "writer, author"
     }
 }
 

@@ -653,6 +653,7 @@ h2 {
     flex-direction: column;
     position: relative;
     padding-top: 66px;
+    paddoing-bpttom: 66px;
     transition: height 0.1s ease-in;
 }
 
@@ -676,6 +677,7 @@ h2 {
 p.word-original {
     padding: 0;
     margin: 0 0 5px 0;
+    width: calc(100% - 60px);
     /* flex-direction: column;
     display: flex;
     */

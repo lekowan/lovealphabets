@@ -1,7 +1,19 @@
-// Exercise Type (character, vocabulary )
-const shirokumaEpisode20ChartType = "vocabulary";
+// Configuration
+const localStorageKey = "japanese" + "Episode20" + "Srs";
 
-const shirokumaEpisode20Map =  {
+// Speech Synthesis
+const language = "ja-JP";
+const activateSpeech = true;
+
+// Gradient
+const loadergradientBackground = "purple-loader-background";
+
+// Exercise Type (character, vocabulary )
+const exerciseType = "vocabulary";
+
+const welcomeIntro = "In this spaced-repetition practice (SRS), you will study Japanese expressions from Shirokuma Episode 20. \n \n After your first session, you will also revise learned characters from previous sessions";
+
+const allSyllableMap =  {
     "1": {
         "character": "憧れの一人暮らし",
         "letter": "My dream life alone",
@@ -907,6 +919,944 @@ const shirokumaEpisode20Map =  {
         "letter": "Will you give me up, too?",
         "pinyin": "ぼくのこともあきらめてくれる？"
     },
+    "182": {
+        "character": "夏のお祭り",
+        "letter": "Summer Festival",
+        "pinyin": "なつのおまつり"
+    },
+    "183": {
+        "character": "今日はしろくまカフェとグリズリーバーのジョイント企画で",
+        "letter": "Today is the joint project of Shirokuma Cafe and Grizzly Bar.",
+        "pinyin": "きょうはしろくまかふぇとぐりずりーばーのじょいんときかくで"
+    },
+    "184": {
+        "character": "屋台をやりま～す！",
+        "letter": "We're having a food stall today!",
+        "pinyin": "やたいをやりま～す！"
+    },
+    "185": {
+        "character": "いいね",
+        "letter": "Sounds great!",
+        "pinyin": "いいね"
+    },
+    "186": {
+        "character": "楽しみ！",
+        "letter": "I'm looking forward to it!",
+        "pinyin": "たのしみ！"
+    },
+    "187": {
+        "character": "似合ってるね笹子さん",
+        "letter": "You look great, Sasako-san!",
+        "pinyin": "にあってるねささごさん"
+    },
+    "188": {
+        "character": "みんなで盛り上げましょう！",
+        "letter": "Let's make it a success!",
+        "pinyin": "みんなでもりあげましょう！"
+    },
+    "189": {
+        "character": "は～い！",
+        "letter": "Yes!",
+        "pinyin": "は～い！"
+    },
+    "190": {
+        "character": "祭りなら任せろ！",
+        "letter": "I'll take care of the festival!",
+        "pinyin": "まつりならまかせろ！"
+    },
+    "191": {
+        "character": "炎上炎上！",
+        "letter": "Flame on, flame on!",
+        "pinyin": "えんじょうえんじょう！"
+    },
+    "192": {
+        "character": "かっこいい！",
+        "letter": "It's so cool!",
+        "pinyin": "かっこいい！"
+    },
+    "193": {
+        "character": "グリズリーくんは焼そばを作ってね",
+        "letter": "Grizzly, make some fried noodles.",
+        "pinyin": "ぐりずりーくんはやきそばをつくってね"
+    },
+    "194": {
+        "character": "おうガンガン作ってやるぜ",
+        "letter": "I'll do my best.",
+        "pinyin": "おうがんがんつくってやるぜ"
+    },
+    "195": {
+        "character": "パンダくんはソースを塗ったりする担当",
+        "letter": "Panda is in charge of spreading the sauce.",
+        "pinyin": "ぱんだくんはそーすをぬったりするたんとう"
+    },
+    "196": {
+        "character": "任せて！",
+        "letter": "I'll take care of it!",
+        "pinyin": "まかせて！"
+    },
+    "197": {
+        "character": "ペンギンさんは呼び込みで",
+        "letter": "Penguin, you're in charge of inviting people in.",
+        "pinyin": "ぺんぎんさんはよびこみで"
+    },
+    "198": {
+        "character": "了解！",
+        "letter": "Got it!",
+        "pinyin": "りょうかい！"
+    },
+    "199": {
+        "character": "あの僕も何かお手伝いしましょうか？",
+        "letter": "Can I help with anything?",
+        "pinyin": "あのぼくもなにかおてつだいしましょうか？"
+    },
+    "200": {
+        "character": "ああお久しぶり！",
+        "letter": "Long time no see!",
+        "pinyin": "ああおひさしぶり！"
+    },
+    "201": {
+        "character": "パンダくんの知り合い？",
+        "letter": "You know the panda?",
+        "pinyin": "ぱんだくんのしりあい？"
+    },
+    "202": {
+        "character": "うんお兄さん！",
+        "letter": "Yeah, he's my brother.",
+        "pinyin": "うんおにいさん！"
+    },
+    "203": {
+        "character": "お兄さん？",
+        "letter": "Big brother?",
+        "pinyin": "おにいさん？"
+    },
+    "204": {
+        "character": "みたいな",
+        "letter": "Sort of.",
+        "pinyin": "みたいな"
+    },
+    "205": {
+        "character": "ど…どういう関係？",
+        "letter": "What's the connection?",
+        "pinyin": "ど…どういうかんけい？"
+    },
+    "206": {
+        "character": "名前は同じだけど",
+        "letter": "We share the same name.",
+        "pinyin": "なまえはおなじだけど"
+    },
+    "207": {
+        "character": "種属違いの親戚",
+        "letter": "But we're related by a different species.",
+        "pinyin": "たねぞくちがいのしんせき"
+    },
+    "208": {
+        "character": "うん？",
+        "letter": "What?",
+        "pinyin": "うん？"
+    },
+    "209": {
+        "character": "もともとパンダって呼ばれてたのは僕たちだったんですよ",
+        "letter": "We're the ones who were originally called pandas.",
+        "pinyin": "もともとぱんだってよばれてたのはぼくたちだったんですよ"
+    },
+    "210": {
+        "character": "へぇ～そうだったんですか",
+        "letter": "Oh, I didn't know that.",
+        "pinyin": "へぇ～そうだったんですか"
+    },
+    "211": {
+        "character": "でもジャイアントパンダくんが出てきてから",
+        "letter": "But after the giant panda came out.",
+        "pinyin": "でもじゃいあんとぱんだくんがでてきてから"
+    },
+    "212": {
+        "character": "僕たちは小さいほうのパンダレッサーパンダって呼ばれるようになったんです",
+        "letter": "We came to be called the smaller panda, the red panda.",
+        "pinyin": "ぼくたちはちいさいほうのぱんだれっさーぱんだってよばれるようになったんです"
+    },
+    "213": {
+        "character": "へぇ～",
+        "letter": "Wow!",
+        "pinyin": "へぇ～"
+    },
+    "214": {
+        "character": "今も笹情報まわしたりとか",
+        "letter": "Do you still pass around information about bamboo grass?",
+        "pinyin": "いまもささじょうほうまわしたりとか"
+    },
+    "215": {
+        "character": "親戚づきあいは続いてるんだよね",
+        "letter": "We still keep in touch with our relatives, right?",
+        "pinyin": "しんせきづきあいはつづいてるんだよね"
+    },
+    "216": {
+        "character": "笹情報って？",
+        "letter": "What's bamboo information?",
+        "pinyin": "ささじょうほうって？"
+    },
+    "217": {
+        "character": "はいどこの笹がおいしいとか調べたり",
+        "letter": "Yes, like finding out which bamboo is good.",
+        "pinyin": "はいどこのささがおいしいとかしらべたり"
+    },
+    "218": {
+        "character": "僕たちも笹大好きなんで",
+        "letter": "We love bamboo, too.",
+        "pinyin": "ぼくたちもささだいすきなんで"
+    },
+    "219": {
+        "character": "こまめに動くタイプなんです",
+        "letter": "We like bamboo, too, so we're very active.",
+        "pinyin": "こまめにうごくたいぷなんです"
+    },
+    "220": {
+        "character": "へぇ～！",
+        "letter": "Oh, really?",
+        "pinyin": "へぇ～！"
+    },
+    "221": {
+        "character": "じゃあ私は注文やお客さんをさばいたりするから",
+        "letter": "Then I'll be taking orders and dealing with customers.",
+        "pinyin": "じゃあわたしはちゅうもんやおきゃくさんをさばいたりするから"
+    },
+    "222": {
+        "character": "お勘定係お願いしてもいいかな？",
+        "letter": "May I ask you to take care of the check?",
+        "pinyin": "おかんじょうかかりおねがいしてもいいかな？"
+    },
+    "223": {
+        "character": "はい！",
+        "letter": "Yes!",
+        "pinyin": "はい！"
+    },
+    "224": {
+        "character": "すげぇ！",
+        "letter": "That's great!",
+        "pinyin": "すげぇ！"
+    },
+    "225": {
+        "character": "これがいい！",
+        "letter": "I love this!",
+        "pinyin": "これがいい！"
+    },
+    "226": {
+        "character": "きれい！",
+        "letter": "Beautiful!",
+        "pinyin": "きれい！"
+    },
+    "227": {
+        "character": "そうそう…これを立てておこう",
+        "letter": "Oh, yeah... let's get this up.",
+        "pinyin": "そうそう…これをたてておこう"
+    },
+    "228": {
+        "character": "タイムサービス？",
+        "letter": "Time service?",
+        "pinyin": "たいむさーびす？"
+    },
+    "229": {
+        "character": "どんなサービスするんだ？",
+        "letter": "What kind of service do you do?",
+        "pinyin": "どんなさーびすするんだ？"
+    },
+    "230": {
+        "character": "増量か？値引きか？",
+        "letter": "Extra volume? A discount?",
+        "pinyin": "ぞうりょうか？ねびきか？"
+    },
+    "231": {
+        "character": "別に何も",
+        "letter": "Nothing.",
+        "pinyin": "べつになにも"
+    },
+    "232": {
+        "character": "あぁ？",
+        "letter": "What?",
+        "pinyin": "あぁ？"
+    },
+    "233": {
+        "character": "でもこれを見たら",
+        "letter": "But when I see this.",
+        "pinyin": "でもこれをみたら"
+    },
+    "234": {
+        "character": "今買わなきゃって思う",
+        "letter": "I'm gonna have to buy it now.",
+        "pinyin": "いまかわなきゃっておもう"
+    },
+    "235": {
+        "character": "正々堂々とやれ！",
+        "letter": "Do it fair and square!",
+        "pinyin": "せいせいどうどうとやれ！"
+    },
+    "236": {
+        "character": "いらっしゃいいらっしゃい！",
+        "letter": "Welcome, welcome, welcome!",
+        "pinyin": "いらっしゃいいらっしゃい！"
+    },
+    "237": {
+        "character": "シロクマ風お好み焼とグリズリー焼そばだよ",
+        "letter": "Polar bear style okonomiyaki and grizzly yakisoba.",
+        "pinyin": "しろくまふうおこのみやきとぐりずりーやきそばだよ"
+    },
+    "238": {
+        "character": "一度食べたら忘れられない味",
+        "letter": "Once you try them, you'll never forget the taste.",
+        "pinyin": "いちどたべたらわすれられないあじ"
+    },
+    "239": {
+        "character": "しかもめったに食べられないよ",
+        "letter": "And you don't get to eat them often.",
+        "pinyin": "しかもめったにたべられないよ"
+    },
+    "240": {
+        "character": "え～い！まどろっこしい！！",
+        "letter": "Oh, no! It's so sloppy!",
+        "pinyin": "え～い！まどろっこしい！！"
+    },
+    "241": {
+        "character": "おりゃ～！オラオラ！！",
+        "letter": "Oh, no! Oh, no!",
+        "pinyin": "おりゃ～！おらおら！！"
+    },
+    "242": {
+        "character": "グリズリー焼そばの激うまさに驚け！",
+        "letter": "You'll be amazed at how delicious this grizzly yakisoba is!",
+        "pinyin": "ぐりずりーやきそばのげきうまさにおどろけ！"
+    },
+    "243": {
+        "character": "グリズリーくん勢いよすぎ",
+        "letter": "You're too good to be a grizzly.",
+        "pinyin": "ぐりずりーくんいきおいよすぎ"
+    },
+    "244": {
+        "character": "焼そば２つ！",
+        "letter": "Two yakisoba!",
+        "pinyin": "やきそば２つ！"
+    },
+    "245": {
+        "character": "お好み焼１つと焼そば１つ！",
+        "letter": "One okonomiyaki and one yakisoba!",
+        "pinyin": "おこのみやき１つとやきそば１つ！"
+    },
+    "246": {
+        "character": "焼そば３つとお好み焼１つ",
+        "letter": "Three yakisoba and one okonomiyaki.",
+        "pinyin": "やきそば３つとおこのみやき１つ"
+    },
+    "247": {
+        "character": "モダン焼できる？",
+        "letter": "Can you make modern-yaki?",
+        "pinyin": "もだんやきできる？"
+    },
+    "248": {
+        "character": "はいできますよ",
+        "letter": "Yes, we can.",
+        "pinyin": "はいできますよ"
+    },
+    "249": {
+        "character": "パンダくん早くお好み焼お願い！",
+        "letter": "Hurry up, panda, okonomiyaki!",
+        "pinyin": "ぱんだくんはやくおこのみやきおねがい！"
+    },
+    "250": {
+        "character": "う…うん今…",
+        "letter": "Now...",
+        "pinyin": "う…うんいま…"
+    },
+    "251": {
+        "character": "あっ！自分にソース塗っちゃった",
+        "letter": "Oh! I put sauce on myself.",
+        "pinyin": "あっ！じぶんにそーすぬっちゃった"
+    },
+    "252": {
+        "character": "パンダ急げ！",
+        "letter": "Hurry up, panda!",
+        "pinyin": "ぱんだいそげ！"
+    },
+    "253": {
+        "character": "ぐわっ！何しやがる！？",
+        "letter": "Oh, no! What are you doing?",
+        "pinyin": "ぐわっ！なにしやがる！？"
+    },
+    "254": {
+        "character": "あっ！逆だった",
+        "letter": "Oh! It's the other way.",
+        "pinyin": "あっ！ぎゃくだった"
+    },
+    "255": {
+        "character": "笹子に代われ！",
+        "letter": "Put Sasago on!",
+        "pinyin": "ささこにかわれ！"
+    },
+    "256": {
+        "character": "はいどうぞ",
+        "letter": "Here you go.",
+        "pinyin": "はいどうぞ"
+    },
+    "257": {
+        "character": "やった～！",
+        "letter": "Yes!",
+        "pinyin": "やった～！"
+    },
+    "258": {
+        "character": "よかったわね",
+        "letter": "Good for you.",
+        "pinyin": "よかったわね"
+    },
+    "259": {
+        "character": "ありがとうございました",
+        "letter": "Thank you very much.",
+        "pinyin": "ありがとうございました"
+    },
+    "260": {
+        "character": "うりきれ！店じまいです",
+        "letter": "Sold out! We're closing up.",
+        "pinyin": "うりきれ！みせじまいです"
+    },
+    "261": {
+        "character": "お疲れさまでした",
+        "letter": "Thank you for your hard work.",
+        "pinyin": "おつかれさまでした"
+    },
+    "262": {
+        "character": "ふぅ…お疲れ！",
+        "letter": "Good night!",
+        "pinyin": "ふぅ…おつかれ！"
+    },
+    "263": {
+        "character": "お疲れさま",
+        "letter": "Good work.",
+        "pinyin": "おつかれさま"
+    },
+    "264": {
+        "character": "あぁ…疲れた！",
+        "letter": "I'm so tired!",
+        "pinyin": "あぁ…つかれた！"
+    },
+    "265": {
+        "character": "働くのって大変",
+        "letter": "Working is hard.",
+        "pinyin": "はたらくのってたいへん"
+    },
+    "266": {
+        "character": "パンダくんは途中でクビになったでしょ",
+        "letter": "You got fired in the middle of the day.",
+        "pinyin": "ぱんだくんはとちゅうでくびになったでしょ"
+    },
+    "267": {
+        "character": "他の屋台回ってみようよ",
+        "letter": "Let's go to the other stalls.",
+        "pinyin": "ほかのやたいまわってみようよ"
+    },
+    "268": {
+        "character": "おっ！いいね",
+        "letter": "Whoa! Nice.",
+        "pinyin": "おっ！いいね"
+    },
+    "269": {
+        "character": "わぁ～！たくさんあるね",
+        "letter": "Wow! There's so many.",
+        "pinyin": "わぁ～！たくさんあるね"
+    },
+    "270": {
+        "character": "僕これにする",
+        "letter": "I'll take this one.",
+        "pinyin": "ぼくこれにする"
+    },
+    "271": {
+        "character": "パンダインパンダ！",
+        "letter": "Panda in panda!",
+        "pinyin": "ぱんだいんぱんだ！"
+    },
+    "272": {
+        "character": "変だよそれ…",
+        "letter": "That's weird...",
+        "pinyin": "へんだよそれ…"
+    },
+    "273": {
+        "character": "じゃあ…",
+        "letter": "Well, then...",
+        "pinyin": "じゃあ…"
+    },
+    "274": {
+        "character": "パンダアンドパンダ",
+        "letter": "Panda and panda.",
+        "pinyin": "ぱんだあんどぱんだ"
+    },
+    "275": {
+        "character": "なんか怖いよ…",
+        "letter": "I'm scared...",
+        "pinyin": "なんかこわいよ…"
+    },
+    "276": {
+        "character": "あれおもしろそうやってみたい！",
+        "letter": "I want to try that!",
+        "pinyin": "あれおもしろそうやってみたい！"
+    },
+    "277": {
+        "character": "またそんなご迷惑なことを…",
+        "letter": "You are such a pain in the ass.",
+        "pinyin": "またそんなごめいわくなことを…"
+    },
+    "278": {
+        "character": "いいよやってみるかい？",
+        "letter": "Do you want to try it?",
+        "pinyin": "いいよやってみるかい？"
+    },
+    "279": {
+        "character": "やるやる！",
+        "letter": "I'm in!",
+        "pinyin": "やるやる！"
+    },
+    "280": {
+        "character": "別の生きものになっちゃってるよ",
+        "letter": "You're turning into something else.",
+        "pinyin": "べつのいきものになっちゃってるよ"
+    },
+    "281": {
+        "character": "う～ん…ベロが届かないよ！",
+        "letter": "I can't reach my tongue!",
+        "pinyin": "う～ん…べろがとどかないよ！"
+    },
+    "282": {
+        "character": "あぁ～！惜しい…",
+        "letter": "Oh, no! That was close.",
+        "pinyin": "あぁ～！おしい…"
+    },
+    "283": {
+        "character": "もう１回もう１回！",
+        "letter": "One more time, one more time!",
+        "pinyin": "もう１かいもう１かい！"
+    },
+    "284": {
+        "character": "あっ今…",
+        "letter": "Oh, now...",
+        "pinyin": "あっいま…"
+    },
+    "285": {
+        "character": "銃がよくないよおじさん交換して",
+        "letter": "The gun's not good, Uncle.",
+        "pinyin": "じゅうがよくないよおじさんこうかんして"
+    },
+    "286": {
+        "character": "またそんなワガママ言って",
+        "letter": "You're being so selfish again.",
+        "pinyin": "またそんなわがままいって"
+    },
+    "287": {
+        "character": "やった！ねぇほら！",
+        "letter": "I did it! Hey, come on!",
+        "pinyin": "やった！ねぇほら！"
+    },
+    "288": {
+        "character": "貸してみろ",
+        "letter": "Give it to me.",
+        "pinyin": "かしてみろ"
+    },
+    "289": {
+        "character": "おらぁっ！",
+        "letter": "Hey!",
+        "pinyin": "おらぁっ！"
+    },
+    "290": {
+        "character": "どうだ！",
+        "letter": "Look at that!",
+        "pinyin": "どうだ！"
+    },
+    "291": {
+        "character": "俺にかかりゃこんなもんよ",
+        "letter": "That's what I'm talking about.",
+        "pinyin": "おれにかかりゃこんなもんよ"
+    },
+    "292": {
+        "character": "あ…ほらよ",
+        "letter": "Here you go.",
+        "pinyin": "あ…ほらよ"
+    },
+    "293": {
+        "character": "あ…ありがとうございます",
+        "letter": "Thank you...",
+        "pinyin": "あ…ありがとうございます"
+    },
+    "294": {
+        "character": "細かすぎんだよ",
+        "letter": "You're too detailed!",
+        "pinyin": "こまかすぎんだよ"
+    },
+    "295": {
+        "character": "コイツら！サケやマスなら一発なのによ！",
+        "letter": "These guys! Salmon and trout are easy!",
+        "pinyin": "こいつら！さけやますならいちはつなのによ！"
+    },
+    "296": {
+        "character": "シロクマさんすご～い",
+        "letter": "Polar bears are amazing!",
+        "pinyin": "しろくまさんすご～い"
+    },
+    "297": {
+        "character": "もう２０匹目ですよ",
+        "letter": "You've already caught 20!",
+        "pinyin": "もう２０ひきめですよ"
+    },
+    "298": {
+        "character": "さすがだね",
+        "letter": "That's impressive.",
+        "pinyin": "さすがだね"
+    },
+    "299": {
+        "character": "いっそのこと直に…",
+        "letter": "Maybe we should just...",
+        "pinyin": "いっそのことじかに…"
+    },
+    "300": {
+        "character": "お客さん困ります",
+        "letter": "We've got a problem.",
+        "pinyin": "おきゃくさんこまります"
+    },
+    "301": {
+        "character": "あれ？半田さん",
+        "letter": "What? Handa-san.",
+        "pinyin": "あれ？はんでんさん"
+    },
+    "302": {
+        "character": "あっパンダくん",
+        "letter": "Panda-kun.",
+        "pinyin": "あっぱんだくん"
+    },
+    "303": {
+        "character": "仕事終わって今来たところなんだ",
+        "letter": "I just got off work.",
+        "pinyin": "しごとおわっていまきたところなんだ"
+    },
+    "304": {
+        "character": "笹子さん…あいや屋台は？",
+        "letter": "Sasago-san... where's the stall?",
+        "pinyin": "ささごさん…あいややたいは？"
+    },
+    "305": {
+        "character": "うん完売でもうみんな遊んでるよ",
+        "letter": "It's sold out and everyone's already playing.",
+        "pinyin": "うんかんばいでもうみんなあそんでるよ"
+    },
+    "306": {
+        "character": "そ…そう",
+        "letter": "I see.",
+        "pinyin": "そ…そう"
+    },
+    "307": {
+        "character": "何？それ…",
+        "letter": "What? That...",
+        "pinyin": "なに？それ…"
+    },
+    "308": {
+        "character": "笹子さ…あいや！みんなに差し入れをと思って…",
+        "letter": "Sasago-san... no! I thought I'd bring something for everyone...",
+        "pinyin": "ささこさ…あいや！みんなにさしいれをとおもって…"
+    },
+    "309": {
+        "character": "お茶とかジュース",
+        "letter": "Tea, juice...",
+        "pinyin": "おちゃとかじゅーす"
+    },
+    "310": {
+        "character": "笹子さんならあっちにいるよ",
+        "letter": "Sasago-san's over there.",
+        "pinyin": "ささごさんならあっちにいるよ"
+    },
+    "311": {
+        "character": "え？あ～そう…",
+        "letter": "What? Oh, right...",
+        "pinyin": "え？あ～そう…"
+    },
+    "312": {
+        "character": "渡しにいこうよ",
+        "letter": "Let's go give it to her.",
+        "pinyin": "わたりしにいこうよ"
+    },
+    "313": {
+        "character": "えっ！",
+        "letter": "What?",
+        "pinyin": "えっ！"
+    },
+    "314": {
+        "character": "みんなじゃなくて２人で飲めばいいと思うよ",
+        "letter": "I think it's better if we drink together.",
+        "pinyin": "みんなじゃなくて２にんでのめばいいとおもうよ"
+    },
+    "315": {
+        "character": "いやいや…",
+        "letter": "No, no...",
+        "pinyin": "いやいや…"
+    },
+    "316": {
+        "character": "あれ？半田さん？",
+        "letter": "Huh? Handa-san?",
+        "pinyin": "あれ？はんでんさん？"
+    },
+    "317": {
+        "character": "さ…笹子さん",
+        "letter": "Sasago-san.",
+        "pinyin": "さ…ささごさん"
+    },
+    "318": {
+        "character": "こんばんは",
+        "letter": "Good evening.",
+        "pinyin": "こんばんは"
+    },
+    "319": {
+        "character": "ど…ど…どうも",
+        "letter": "Do you...do you...hi.",
+        "pinyin": "ど…ど…どうも"
+    },
+    "320": {
+        "character": "半田さんが差し入れにきてくれたよ",
+        "letter": "Handa-san brought you some food.",
+        "pinyin": "はんでんさんがさしいれにきてくれたよ"
+    },
+    "321": {
+        "character": "ど…どうぞ",
+        "letter": "Here you go.",
+        "pinyin": "ど…どうぞ"
+    },
+    "322": {
+        "character": "あら…ありがとうございます",
+        "letter": "Oh...thank you.",
+        "pinyin": "あら…ありがとうございます"
+    },
+    "323": {
+        "character": "いやいやつまらないものだから",
+        "letter": "No, it's just boring stuff.",
+        "pinyin": "いやいやつまらないものだから"
+    },
+    "324": {
+        "character": "ちょっと…パンダくん",
+        "letter": "Hey, panda.",
+        "pinyin": "ちょっと…ぱんだくん"
+    },
+    "325": {
+        "character": "おう半田ありがたくもらうぜ",
+        "letter": "Oh, Handa, thank you very much.",
+        "pinyin": "おうはんでんありがたくもらうぜ"
+    },
+    "326": {
+        "character": "僕も飲む～！",
+        "letter": "I'll have some too!",
+        "pinyin": "ぼくものむ～！"
+    },
+    "327": {
+        "character": "僕ももらおうかな",
+        "letter": "I think I'll have one too.",
+        "pinyin": "ぼくももらおうかな"
+    },
+    "328": {
+        "character": "もう一本！",
+        "letter": "One more!",
+        "pinyin": "もういっぽん！"
+    },
+    "329": {
+        "character": "せっかくなんでいただきます",
+        "letter": "I'll take it for what it's worth.",
+        "pinyin": "せっかくなんでいただきます"
+    },
+    "330": {
+        "character": "あ…どうぞどうぞ",
+        "letter": "Here you go.",
+        "pinyin": "あ…どうぞどうぞ"
+    },
+    "331": {
+        "character": "半田さん…間が悪いなぁ",
+        "letter": "Handa-san... your timing is terrible.",
+        "pinyin": "はんでんさん…まがわるいなぁ"
+    },
+    "332": {
+        "character": "わぁ…花火",
+        "letter": "Wow... fireworks.",
+        "pinyin": "わぁ…はなび"
+    },
+    "333": {
+        "character": "始まったみたいですね",
+        "letter": "It looks like they've started.",
+        "pinyin": "はじまったみたいですね"
+    },
+    "334": {
+        "character": "わぁ…きれい",
+        "letter": "wow...beautiful.",
+        "pinyin": "わぁ…きれい"
+    },
+    "335": {
+        "character": "私花火大好きなんですよ",
+        "letter": "I love fireworks.",
+        "pinyin": "わたしはなびだいすきなんですよ"
+    },
+    "336": {
+        "character": "僕も…僕も大好きです",
+        "letter": "Me too... me too.",
+        "pinyin": "ぼくも…ぼくもだいすきです"
+    },
+    "337": {
+        "character": "いいですよね花火",
+        "letter": "Fireworks are good, aren't they?",
+        "pinyin": "いいですよねはなび"
+    },
+    "338": {
+        "character": "は…はい",
+        "letter": "Yes...",
+        "pinyin": "は…はい"
+    },
+    "339": {
+        "character": "笹子さんは座ってください",
+        "letter": "Sasago-san, please sit down.",
+        "pinyin": "ささごさんはすわってください"
+    },
+    "340": {
+        "character": "あ…すみません",
+        "letter": "I'm sorry.",
+        "pinyin": "あ…すみません"
+    },
+    "341": {
+        "character": "ダメだよ半田さん遠慮してちゃ",
+        "letter": "Don't be shy, Mr. Handa.",
+        "pinyin": "だめだよはんでんさんえんりょしてちゃ"
+    },
+    "342": {
+        "character": "でもこれで一緒に並んで座れたでしょ？",
+        "letter": "But now we can sit together in a row, right?",
+        "pinyin": "でもこれでいっしょにならんですわれたでしょ？"
+    },
+    "343": {
+        "character": "あ…あの…最後の１本になっちゃいましたが",
+        "letter": "Well... it's the last one, but...",
+        "pinyin": "あ…あの…さいごの１ぽんになっちゃいましたが"
+    },
+    "344": {
+        "character": "お茶どうぞ",
+        "letter": "Here's your tea.",
+        "pinyin": "おちゃどうぞ"
+    },
+    "345": {
+        "character": "ありがとうございます",
+        "letter": "Thank you very much.",
+        "pinyin": "ありがとうございます"
+    },
+    "346": {
+        "character": "すごくノドが渇いてたんですよ",
+        "letter": "I was really thirsty.",
+        "pinyin": "すごくのどがかわいてたんですよ"
+    },
+    "347": {
+        "character": "冷たくて気持いい",
+        "letter": "It's nice and cold.",
+        "pinyin": "つめたくてきもちいい"
+    },
+    "348": {
+        "character": "きれ～い！",
+        "letter": "It's beautiful!",
+        "pinyin": "きれ～い！"
+    },
+    "349": {
+        "character": "おぉ～！炎上炎上！",
+        "letter": "Ooh! Fire, fire, fire!",
+        "pinyin": "おぉ～！えんじょうえんじょう！"
+    },
+    "350": {
+        "character": "グリズリーくんそれ違うから",
+        "letter": "That's not right, Mr. Grizzly.",
+        "pinyin": "ぐりずりーくんそれちがうから"
+    },
+    "351": {
+        "character": "きらめいてます！",
+        "letter": "It's sparkling.",
+        "pinyin": "きらめいてます！"
+    },
+    "352": {
+        "character": "もう…みんな空気読まないんだから",
+        "letter": "Oh, my... you guys are so airheaded.",
+        "pinyin": "もう…みんなくうきよまないんだから"
+    },
+    "353": {
+        "character": "ペンギンさんペンギンさん",
+        "letter": "Mr. Penguin. Mr. Penguin.",
+        "pinyin": "ぺんぎんさんぺんぎんさん"
+    },
+    "354": {
+        "character": "何",
+        "letter": "What?",
+        "pinyin": "なに"
+    },
+    "355": {
+        "character": "ぺんぎんさんって十回言うと呪われるっていう噂",
+        "letter": "Rumor has it that if you say Mr. Penguin ten times, you'll be cursed.",
+        "pinyin": "ぺんぎんさんってじゅっかいいうとのろわれるっていううわさ"
+    },
+    "356": {
+        "character": "流していい",
+        "letter": "You can spread it.",
+        "pinyin": "ながしていい"
+    },
+    "357": {
+        "character": "ダメ",
+        "letter": "No!",
+        "pinyin": "だめ"
+    },
+    "358": {
+        "character": "そう簡単に呪われたら大忙しだよ",
+        "letter": "If it's that easy to get cursed, we'll be busy.",
+        "pinyin": "そうかんたんにのろわれたらおおいそがしだよ"
+    },
+    "359": {
+        "character": "じゃペンギンさんが考えた",
+        "letter": "So, Mr. Penguin, what's your idea?",
+        "pinyin": "じゃぺんぎんさんがかんがえた"
+    },
+    "360": {
+        "character": "せこく思われないように割り勘って言い出す方法を聞かせてよ",
+        "letter": "So, penguins, tell us what you've come up with so we don't feel so guilty about splitting the bill.",
+        "pinyin": "せこくおもわれないようにわりかんっていいだすほうほうをきかせてよ"
+    },
+    "361": {
+        "character": "海でする話じゃないだな",
+        "letter": "I don't think we're supposed to be talking about this at sea.",
+        "pinyin": "うみでするはなしじゃないだな"
+    },
+    "362": {
+        "character": "ていうか終わろ",
+        "letter": "I mean, end of story.",
+        "pinyin": "ていうかおわろ"
+    },
+    "363": {
+        "character": "来週のしろくまカフェは急ぎ足でお送りします",
+        "letter": "Next week's Shirokuma Cafe will be rushed!",
+        "pinyin": "らいしゅうのしろくまかふぇはいそぎあしでおおくりします"
+    },
+    "364": {
+        "character": "一歩一歩行こう",
+        "letter": "Let's go step by step.",
+        "pinyin": "いっぽいっぽいこう"
+    },
+    "365": {
+        "character": "お楽しみに",
+        "letter": "Enjoy!",
+        "pinyin": "おたのしみに"
+    }
 }
 
-const shirokumaEpisode20ChartData = [{ subtitle: "", "content": shirokumaEpisode20Map }]
+
+function getCharacter(n){
+  if (!n) {
+    n = this;
+  }
+  let obj = allSyllableMap[n];
+  return obj["character"];   
+}
+
+function translation(n) {
+  if (!n) {
+    n = this;
+  }
+  let obj = allSyllableMap[n];
+  return obj["letter"];
+}
+
+String.prototype.romanize = translation;
+String.prototype.original = getCharacter;

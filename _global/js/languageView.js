@@ -113,7 +113,6 @@ class View {
       this.languageViewCtaArray.push(languageViewChart);
 
       // Create "reset SRS data" icon
-      /*
       this.svgClear = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       this.svgClear.setAttribute("xmlns", "https://www.w3.org/2000/svg");
       this.svgClear.setAttribute("height", "24px");
@@ -129,9 +128,17 @@ class View {
       this.svgClearPath2.setAttribute("d", "M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z");
 
       this.svgClear.append(this.svgClearPath1, this.svgClearPath2);
-      */
+
+      this.languageReset = this.createElement("div", "settings-menu__icon");
+      this.languageReset.append(this.svgClear);
+
+      let languageReset = this.languageReset;
+      languageReset.id = item.localStorageKey;
+
+      this.languageResetCtaArray.push(languageReset);
 
       // Create new character settings icon
+      /*
       this.svgEdit = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       this.svgEdit.setAttribute("xmlns", "https://www.w3.org/2000/svg");
       this.svgEdit.setAttribute("height", "24px");
@@ -155,6 +162,8 @@ class View {
       languageReset.id = item.localStorageKey;
 
       this.languageResetCtaArray.push(languageReset);
+      */
+
       // End of SVG 
 
 
@@ -182,7 +191,7 @@ class View {
         window.location.href = item.url;
       });
 
-      /*
+      
       languageReset.addEventListener("click", function () {  
         let text = "Press a button!\nEither OK or Cancel.";
         if (confirm(text) == true) {
@@ -198,7 +207,7 @@ class View {
           alert("cancelled!");
         }
       });
-      */
+      
 
       console.log(this.languageResetCtaArray);
 
