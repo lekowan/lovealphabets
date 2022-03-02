@@ -369,7 +369,8 @@ class Model {
     }
 
     toggleVisibility(boolean) {
-        if (boolean == true) this.sayIt();
+        if (boolean == true) 
+        // this.sayIt();
         this.onVisibilityChanged(boolean);
     }
 
@@ -416,8 +417,6 @@ class Model {
                 // add next card
                 this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
 
-                // play next card audio
-                this.sayIt();
             }
         }
         // If end of array is NOT reached
@@ -425,8 +424,6 @@ class Model {
             // add next card
             this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
 
-            // play next card audio
-            this.sayIt();
         }
     }
 
