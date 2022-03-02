@@ -676,6 +676,7 @@ p.word-original {
     padding: 0;
     margin: 0 0 5px 0;
     width: calc(100% - 60px);
+    word-wrap: break-word;
     /*word-break: keep-all;
     flex-direction: column;
     display: flex;
