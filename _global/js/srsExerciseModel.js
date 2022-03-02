@@ -369,8 +369,7 @@ class Model {
     }
 
     toggleVisibility(boolean) {
-        if (boolean == true) 
-        // this.sayIt();
+        // if (boolean == true) this.sayIt();
         this.onVisibilityChanged(boolean);
     }
 
