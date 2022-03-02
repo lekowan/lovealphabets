@@ -636,8 +636,6 @@ h2 {
 .word {
     font-size: 20px;
     font-weight: 500;
-    height: 200px;
-    min-height: 200px;
     border: 1px solid rgb(241, 240, 244);
     box-shadow: 2px 2px rgb(241 240 244);
     background-color: white;
@@ -652,8 +650,8 @@ h2 {
     border-radius: 13px;
     flex-direction: column;
     position: relative;
-    padding-top: 66px;
-    padding-bottom: 66px;
+    padding-top: 56px;
+    padding-bottom: 56px;
     transition: height 0.1s ease-in;
 }
 
@@ -678,8 +676,8 @@ p.word-original {
     padding: 0;
     margin: 0 0 5px 0;
     width: calc(100% - 60px);
-    word-break: keep-all;
-    /* flex-direction: column;
+    /*word-break: keep-all;
+    flex-direction: column;
     display: flex;
     */
 }
@@ -821,7 +819,7 @@ p.word-translation {
     font-weight: 500;
     /* color: #413c51; */
     opacity: 0;
-    height: 18px;
+    height: auto;
     display: inline-block;
 }
 

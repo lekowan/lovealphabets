@@ -415,12 +415,18 @@ class Model {
 
                 // add next card
                 this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
+
+                // play next card audio
+                this.sayIt();
             }
         }
         // If end of array is NOT reached
         else {
             // add next card
             this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
+
+            // play next card audio
+            this.sayIt();
         }
     }
 

@@ -604,6 +604,9 @@ class View {
         }
 
         this.nextCard.append(this.nextCardExamples);
+
+        // Autoplay audio
+        this.playSpeech (allSyllableMap[card].character);
       }
 
 
