@@ -653,7 +653,7 @@ h2 {
     flex-direction: column;
     position: relative;
     padding-top: 66px;
-    paddoing-bpttom: 66px;
+    padding-bottom: 66px;
     transition: height 0.1s ease-in;
 }
 
