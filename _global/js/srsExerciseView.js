@@ -608,6 +608,7 @@ class View {
       }
 
       // Autoplay audio
+      console.log(allSyllableMap[card].character);
       this.playSpeech(allSyllableMap[card].character);
 
 
@@ -782,7 +783,6 @@ class View {
     if(item != undefined){
       this.answer.innerHTML = item;
     }
-    //this.nextCardWordTranslation.innerHTML = item;
   }
 
   bindIncrementTracker(handler) {
@@ -811,6 +811,10 @@ class View {
       if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
+
+      if(this.pinyin){
+          this.pinyin.style.display = "inline";
+      }
     }
   }
 
