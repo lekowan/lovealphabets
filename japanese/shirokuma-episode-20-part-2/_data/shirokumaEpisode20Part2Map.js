@@ -1,19 +1,7 @@
-// Configuration
-const localStorageKey = "japanese" + "Episode20Part2" + "Srs";
-
-// Speech Synthesis
-const language = "ja-JP";
-const activateSpeech = true;
-
-// Gradient
-const loadergradientBackground = "purple-loader-background";
-
 // Exercise Type (character, vocabulary )
-const exerciseType = "vocabulary";
+const shirokumaEpisode20Part2ChartType = "vocabulary";
 
-const welcomeIntro = "In this spaced-repetition practice (SRS), you will study Japanese expressions from Shirokuma Episode 20. \n \n After your first session, you will also revise learned characters from previous sessions";
-
-const allSyllableMap =  {
+const shirokumaEpisode20Part2Map =  {
     "1": {
         "character": "夏のお祭り",
         "letter": "Summer Festival",
@@ -936,22 +924,4 @@ const allSyllableMap =  {
     }
 }
 
-
-function getCharacter(n){
-  if (!n) {
-    n = this;
-  }
-  let obj = allSyllableMap[n];
-  return obj["character"];   
-}
-
-function translation(n) {
-  if (!n) {
-    n = this;
-  }
-  let obj = allSyllableMap[n];
-  return obj["letter"];
-}
-
-String.prototype.romanize = translation;
-String.prototype.original = getCharacter;
+const shirokumaEpisode20Part2ChartData = [{ subtitle: "", "content": shirokumaEpisode20Part2Map }]

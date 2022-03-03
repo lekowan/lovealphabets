@@ -15,4 +15,15 @@ const languageContent = [{
       "url": "shirokuma-episode-20-part-1",
       "localStorageKey": "japanese" + "Episode20Part1" + "Srs",
       "chartType": shirokumaEpisode20Part1ChartType
+},
+{
+      "chartTitle": "Shirokuma / Episode 20 / Part 2",
+      "chartName": "shirokuma-episode-20-part-2-map",
+      "chartData": shirokumaEpisode20Part2ChartData,
+      "title": "Shirokuma Episode 20 Part 2",
+      "sub": "Memorize all words from Shirokuma Episode 20 Part 2",
+      "icon": "ぎ",
+      "url": "shirokuma-episode-20-part-2",
+      "localStorageKey": "japanese" + "Episode20Part2" + "Srs",
+      "chartType": shirokumaEpisode20Part2ChartType
 }, ]
