@@ -493,6 +493,13 @@ class View {
       this.answer = this.createElement("p", "word-translation");
       this.answer.style.opacity = 0;
 
+      this.targetLanguage = this.createElement("p", "target-language");
+      this.targetLanguage.innerHTML = languageTitle;
+
+      this.englishLanguage = this.createElement("p", "english");
+      this.englishLanguage.innerHTML = "English";
+      this.englishLanguage.style.display = "none";
+
       if(isNew){
         newIcon = this.createElement("div", "new-icon");
         newIcon.textContent = "new";
@@ -527,7 +534,7 @@ class View {
       
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
-      this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
+      this.nextCard.append(this.targetLanguage, nextCardOriginalContainer, nextCardWordSeparator, this.englishLanguage, this.answer);
       
       let svgAudioCtaArray = [];
 
@@ -765,6 +772,7 @@ class View {
       this.goodBadButton.style.bottom = "-80px";
       if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 0;
       //this.nextCard.style.height = "200px";
+      this.englishLanguage.style.display = 'none';
 
     } else {
       //this.badButton.style.display = "block";
@@ -774,6 +782,7 @@ class View {
       if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
+      this.englishLanguage.style.display = 'inline';
 
       if(this.pinyin){
           this.pinyin.style.display = "inline";
