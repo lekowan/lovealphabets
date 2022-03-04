@@ -493,12 +493,14 @@ class View {
       this.answer = this.createElement("p", "word-translation");
       this.answer.style.opacity = 0;
 
+      /*
       this.targetLanguage = this.createElement("p", "target-language");
       this.targetLanguage.innerHTML = languageTitle;
 
       this.englishLanguage = this.createElement("p", "english");
       this.englishLanguage.innerHTML = "English";
       this.englishLanguage.style.display = "none";
+      */
 
       if(isNew){
         newIcon = this.createElement("div", "new-icon");
@@ -534,9 +536,10 @@ class View {
       
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
-      this.nextCard.append(this.targetLanguage, nextCardOriginalContainer, nextCardWordSeparator, this.englishLanguage, this.answer);
+      this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
       
       let svgAudioCtaArray = [];
+
 
       if(typeof srsDataExamples !== 'undefined'){
 
