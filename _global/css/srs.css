@@ -488,7 +488,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #fafafa;
+  background-color: #fff;
 }
 
 
@@ -554,7 +554,7 @@ h2 {
   transition: all 0.5s;
   width: 100%;
   animation: --fade-in 1s 0.5s ease-in;
-  background-color: #fafafa;
+  background-color: #fff;
 }
 
 @keyframes --fade-in {
@@ -634,24 +634,19 @@ h2 {
 }
 
 .word {
-    font-size: 20px;
+    font-size: 27px !important;
     font-weight: 500;
-    border: 1px solid rgb(241, 240, 244);
-    box-shadow: 2px 2px rgb(241 240 244);
     background-color: white;
     width: calc(100% - 42px);
-    max-width:  400px;
+    max-width: 400px;
     color: #18093e;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    padding: 30px;
     border-radius: 13px;
     flex-direction: column;
     position: relative;
-    padding-top: 56px;
-    padding-bottom: 56px;
     transition: height 0.1s ease-in;
 }
 
@@ -675,12 +670,7 @@ h2 {
 p.word-original {
     padding: 0;
     margin: 0 0 5px 0;
-    width: calc(100% - 60px);
     word-wrap: break-word;
-    /*word-break: keep-all;
-    flex-direction: column;
-    display: flex;
-    */
 }
 
 .pinyin-button {
@@ -725,9 +715,9 @@ p.example-english {
 
 .original-container {
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    flex-direction: column;
     width: 100%;
+    padding-bottom: 30px;
 }
 
 .example-target-container {
@@ -738,8 +728,18 @@ p.example-english {
 }
 
 .audio-icon {
-  margin-bottom: 7px;
-  cursor: pointer;
+    /* margin-bottom: 7px; */
+    cursor: pointer;
+    position: absolute;
+    bottom: 139px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    /* padding: 28px; */
+    padding: 10px;
+    transform: scale(2);
+    width: 30px;
+    height: 30px;
+    color: white;
 }
 
 
@@ -783,7 +783,8 @@ p.example-english {
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif !important;
     font-weight: 500;
-    margin-left: 6px;
+    padding: 0;
+    margin: 0;
 }
 
 p.pinyin-icon {
@@ -805,24 +806,26 @@ p.pinyin-icon {
 p.word-separator {
     width: 100%;
     height: 1px;
-    /*background-color:#18093e; 
-    #c4c4c4;*/
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     border-top: solid #18093e 1px;
-    opacity: .1;
+    opacity: 0.1;
+    text-align: center;
+    display: none;
 }
 
 p.word-translation {
     padding: 0;
-    margin: 5px 0 0 0;
-    font-size: 16px;
-    font-weight: 500;
-    /* color: #413c51; */
+    margin: 0px 0 0 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6b4fbd;
     opacity: 0;
     height: auto;
     display: inline-block;
 }
+
+
 
 ::-webkit-input-placeholder {
   color: #8c869d;
@@ -926,14 +929,15 @@ p.word-translation {
 */
 
 .body-content {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  top: 20%;
-  position: absolute;
+    display: flex;
+    /* justify-content: center; */
+    width: 100%;
+    flex-direction: column;
+    /* align-content: center; */
+    /* align-items: center; */
+    top: 20%;
+    height: 100%;
+    position: absolute;
 }
 
 .content {
@@ -953,7 +957,7 @@ p.word-translation {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  background-color: #fafafa;
+  background-color: #fff;
 }
 
 .settings {

@@ -505,11 +505,13 @@ class View {
 
       this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
 
+      this.content.append(this.svgAudio);
+
       let nextCardOriginalContainer = this.createElement("div", "original-container");
 
       if(allSyllableMap[card].pinyin){
-        this.pinyin = this.createElement("span", "pinyin");
-        this.pinyin.textContent = '(' + allSyllableMap[card].pinyin + ')';
+        this.pinyin = this.createElement("p", "pinyin");
+        this.pinyin.textContent = allSyllableMap[card].pinyin;
         nextCardWordOriginal.textContent = allSyllableMap[card].character;
 
         if(this.showPinyin){
@@ -523,16 +525,14 @@ class View {
         this.pinyinIcon = this.createElement("p", "pinyin-icon");
         this.pinyinIcon.textContent = "show pinyin";
 
-        nextCardWordOriginal.append(this.pinyin);
-        nextCardOriginalContainer.append(nextCardWordOriginal, this.svgAudio)
+        nextCardOriginalContainer.append(nextCardWordOriginal, this.pinyin)
       }
 
       else {
         nextCardWordOriginal.textContent = allSyllableMap[card].character; 
-        nextCardOriginalContainer.append(nextCardWordOriginal, this.svgAudio)
+        nextCardOriginalContainer.append(nextCardWordOriginal);
       }
       
-  
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
       this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
