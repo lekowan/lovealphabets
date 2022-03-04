@@ -62,16 +62,19 @@ class View {
     });
 
     // If language is Mandarin
-      if(language == "zh-CN"){
-      // Create pinyin button
-      this.pinyinButton = this.createElement("div", "pinyin-button");
-      this.pinyinButton.textContent = "pinyin ✓";
+      if(language == "zh-CN" || language == "ja-JP" ){
+        // Create pinyin button
+        this.pinyinButton = this.createElement("div", "pinyin-button");
+        
+        if(language == "zh-CN") this.pinyinButton.textContent = "pinyin";
+        else this.pinyinButton.textContent = "kana";
 
-      this.showPinyin = true;
+        console.log(language);
+        this.showPinyin = true;
 
-      this.pinyinButton.addEventListener("click", (event) => {
-        this.displayPinyin();
-      });
+        this.pinyinButton.addEventListener("click", (event) => {
+          this.displayPinyin();
+        });
     }
 
 
@@ -127,7 +130,7 @@ class View {
     this.app.append(this.content);
 
     // If language is Mandarin, append pinyin button
-    if(language == "zh-CN"){
+    if(this.showPinyin){
       this.app.append(this.pinyinButton);
     }
 
@@ -425,12 +428,12 @@ class View {
     if(this.showPinyin){
       this.pinyin.style.display = "none";
       this.pinyinButton.classList.add("hidden");
-      this.pinyinButton.textContent = "pinyin";
+      //this.pinyinButton.textContent = "pinyin";
     }
     else {
       this.pinyin.style.display = "inline";
       this.pinyinButton.classList.remove("hidden");
-      this.pinyinButton.textContent = "pinyin ✓";
+      //this.pinyinButton.textContent = "pinyin ✓";
     }
     this.showPinyin = !this.showPinyin;
   }
@@ -484,12 +487,13 @@ class View {
       let nextCard;
       let nextCardWordOriginal;
       //let nextCardWordTranslation;
-      let nextCardWordSeparator;
+      //let nextCardWordSeparator;
       let newIcon;
 
       this.nextCard = this.createElement("div", "word");
       nextCardWordOriginal = this.createElement("p", "word-original");
-      nextCardWordSeparator = this.createElement("p", "word-separator");
+      this.nextCardWordSeparator = this.createElement("p", "word-separator");
+      this.nextCardWordSeparator.style.display = "none";
       this.answer = this.createElement("p", "word-translation");
       this.answer.style.opacity = 0;
 
@@ -536,7 +540,7 @@ class View {
       
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
-      this.nextCard.append(nextCardOriginalContainer, nextCardWordSeparator, this.answer);
+      this.nextCard.append(nextCardOriginalContainer, this.nextCardWordSeparator, this.answer);
       
       let svgAudioCtaArray = [];
 
@@ -775,7 +779,7 @@ class View {
       this.goodBadButton.style.bottom = "-80px";
       if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 0;
       //this.nextCard.style.height = "200px";
-      this.englishLanguage.style.display = 'none';
+      //this.englishLanguage.style.display = 'none';
 
     } else {
       //this.badButton.style.display = "block";
@@ -785,7 +789,9 @@ class View {
       if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
       //this.showButton.style.display = "none";
       this.goodBadButton.style.bottom = 0;
-      this.englishLanguage.style.display = 'inline';
+      //this.englishLanguage.style.display = 'inline';
+
+      this.nextCardWordSeparator.style.display = "block";
 
       if(this.pinyin){
           this.pinyin.style.display = "inline";
