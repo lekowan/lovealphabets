@@ -368,6 +368,37 @@ class View {
     this.srsResetButtonContainer.append(this.srsResetYes, this.srsResetNo);
     this.srsResetContainer.append(this.srsResetContent, this.srsResetButtonContainer);
 
+
+    // Create audio icon
+    this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    this.svgAudio.classList.add("audio-icon");
+    this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+    this.svgAudio.setAttribute("height", "20px");
+    this.svgAudio.setAttribute("viewBox", "0 0 24 24");
+    this.svgAudio.setAttribute("width", "20px");
+    this.svgAudio.setAttribute("fill", "none");
+    this.svgAudio.setAttribute("stroke", "#18093e");
+    this.svgAudio.setAttribute("stroke-width", "2");
+
+    this.svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
+    this.svgAudioPath1.setAttribute("fill", "none");
+    this.svgAudioPath1.setAttribute("stroke", "none");
+
+    this.svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
+
+    this.svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
+
+    this.svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
+
+    this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
+
+    this.content.append(this.svgAudio);
+
+
     // Append All Popovers
     this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
 
@@ -456,15 +487,6 @@ class View {
       let nextCardWordSeparator;
       let newIcon;
 
-      //let nextAnswer = this.answer;
-
-      /*
-      if (exerciseType == "character") {
-        nextCard = this.createElement("div", "character");
-      }
-
-      if (exerciseType == "vocabulary" || exerciseType == "vocabularyEnglish") {
-      */
       this.nextCard = this.createElement("div", "word");
       nextCardWordOriginal = this.createElement("p", "word-original");
       nextCardWordSeparator = this.createElement("p", "word-separator");
@@ -476,36 +498,6 @@ class View {
         newIcon.textContent = "new";
         this.nextCard.append(newIcon);
       } 
-
-      // Create audio icon
-      this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      this.svgAudio.id = this.count;
-      this.svgAudio.classList.add("audio-icon");
-      this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-      this.svgAudio.setAttribute("height", "20px");
-      this.svgAudio.setAttribute("viewBox", "0 0 24 24");
-      this.svgAudio.setAttribute("width", "20px");
-      this.svgAudio.setAttribute("fill", "none");
-      this.svgAudio.setAttribute("stroke", "#18093e");
-      this.svgAudio.setAttribute("stroke-width", "2");
-
-      this.svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
-      this.svgAudioPath1.setAttribute("fill", "none");
-      this.svgAudioPath1.setAttribute("stroke", "none");
-
-      this.svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
-
-      this.svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
-
-      this.svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
-
-      this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
-
-      this.content.append(this.svgAudio);
 
       let nextCardOriginalContainer = this.createElement("div", "original-container");
 
@@ -562,37 +554,6 @@ class View {
           exampleEnglish.textContent = example.english;
           console.log(example.english);
 
-
-          let i = 1;
-
-          // Create audio icon
-          let svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-          svgAudio.id = i;
-          svgAudio.classList.add("audio-icon-small");
-          svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-          svgAudio.setAttribute("height", "20px");
-          svgAudio.setAttribute("viewBox", "0 0 24 24");
-          svgAudio.setAttribute("width", "20px");
-          svgAudio.setAttribute("fill", "none");
-          svgAudio.setAttribute("stroke", "#18093e");
-          svgAudio.setAttribute("stroke-width", "2");
-
-          let svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-          svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
-          svgAudioPath1.setAttribute("fill", "none");
-          svgAudioPath1.setAttribute("stroke", "none");
-
-          let svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-          svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
-
-          let svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-          svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
-
-          let svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-          svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
-
-          svgAudio.append(svgAudioPath1, svgAudioPath2, svgAudioPath3, svgAudioPath4);
-
           // Push View Chart CTAs into array so they can be accessed later
           svgAudioCtaArray.push({'element': svgAudio, 'word': example.target});
           //console.log(this.svgAudioCtaArray);
@@ -618,6 +579,8 @@ class View {
 
       // Add event listener to main audio icon
       this.svgAudio.addEventListener("click", (event) => {
+
+        console.log(allSyllableMap[card].character);
           
           // Play audio on click
           this.playSpeech(allSyllableMap[card].character);
@@ -633,7 +596,7 @@ class View {
               audioIcon.classList.remove("audio-icon-animation");
           }, 500);
       })
-      
+
       // Add event listeners to audio icons of each example
       for(let audio of svgAudioCtaArray){
         audio.element.addEventListener("click", (event) => {
@@ -652,7 +615,7 @@ class View {
               audio.element.classList.remove("audio-icon-animation-small");
           }, 500);
                
-        })
+        }) 
       }
       
 
