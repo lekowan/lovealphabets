@@ -637,7 +637,7 @@ h2 {
     font-size: 27px !important;
     font-weight: 500;
     background-color: white;
-    width: calc(100% - 42px);
+    width: calc(100% - 65px);
     max-width: 400px;
     color: #18093e;
     display: flex;
@@ -818,8 +818,8 @@ p.word-translation {
     padding: 0;
     margin: 0px 0 0 0;
     font-size: 20px;
-    font-weight: 400;
-    color: #6b4fbd;
+    font-weight: 500;
+    color: #754fe3;
     opacity: 0;
     height: auto;
     display: inline-block;
