@@ -591,6 +591,14 @@ class View {
       nextCardSlide.append(this.nextCard);
       this.slides.append(nextCardSlide);
 
+      this.svgAudio.removeEventListener("click", (event) => 
+       { 
+        // Play audio on click
+        this.playSpeech(allSyllableMap[card].character);
+       }   
+      );
+
+
       // Add event listener to main audio icon
       this.svgAudio.addEventListener("click", (event) => {
 
