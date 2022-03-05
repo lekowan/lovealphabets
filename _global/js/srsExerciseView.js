@@ -544,7 +544,7 @@ class View {
       
       let svgAudioCtaArray = [];
 
-
+      /*
       if(typeof srsDataExamples !== 'undefined'){
 
         this.nextCardExamples = this.createElement("div", "examples-container");
@@ -580,7 +580,7 @@ class View {
 
         this.nextCard.append(this.nextCardExamples);
 
-      }
+      } */
 
       // Autoplay audio
       console.log(allSyllableMap[card].character);
@@ -777,7 +777,7 @@ class View {
       //this.goodButton.style.display = "none";
       this.answer.style.opacity = 0;
       this.goodBadButton.style.bottom = "-80px";
-      if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 0;
+      //if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 0;
       //this.nextCard.style.height = "200px";
       //this.englishLanguage.style.display = 'none';
 
@@ -786,8 +786,10 @@ class View {
       //this.goodButton.style.display = "block";
       this.answer.style.opacity = 1;
       this.nextCard.style.height = "auto";
-      if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
-      //this.showButton.style.display = "none";
+      
+
+      //if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
+      
       this.goodBadButton.style.bottom = 0;
       //this.englishLanguage.style.display = 'inline';
 
