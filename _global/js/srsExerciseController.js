@@ -95,7 +95,7 @@ class Controller {
 
     // Process SayIt
     this.model.bindOnSayItPressed(this.onSayItPressed);
-    this.view.bindPlayAudio(this.handleProcessSayIt);
+    //this.view.bindPlayAudio(this.handleProcessSayIt);
 
   } // End of constructor
 

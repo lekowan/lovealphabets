@@ -489,6 +489,7 @@ class View {
       //let nextCardWordTranslation;
       //let nextCardWordSeparator;
       let newIcon;
+      let audioValue = "";
 
       this.nextCard = this.createElement("div", "word");
       nextCardWordOriginal = this.createElement("p", "word-original");
@@ -586,38 +587,16 @@ class View {
       console.log(allSyllableMap[card].character);
       this.playSpeech(allSyllableMap[card].character);
 
+      audioValue = allSyllableMap[card].character
+
+      this.svgAudio.addEventListener("click", (event) => {
+        this.playAudio(audioValue);
+      });
 
       let nextCardSlide = this.createElement("div", "slide");
       nextCardSlide.append(this.nextCard);
       this.slides.append(nextCardSlide);
 
-      this.svgAudio.removeEventListener("click", (event) => 
-       { 
-        // Play audio on click
-        this.playSpeech(allSyllableMap[card].character);
-       }   
-      );
-
-
-      // Add event listener to main audio icon
-      this.svgAudio.addEventListener("click", (event) => {
-
-        console.log(allSyllableMap[card].character);
-          
-          // Play audio on click
-          this.playSpeech(allSyllableMap[card].character);
-          
-          // Animate audio icon
-          let audioIcon = this.svgAudio;
-          
-          // Add key frame animation
-          audioIcon.classList.add("audio-icon-animation");
-          
-          // Remove key frame animation
-          setTimeout(function() {
-              audioIcon.classList.remove("audio-icon-animation");
-          }, 500);
-      })
 
       // Add event listeners to audio icons of each example
       for(let audio of svgAudioCtaArray){
@@ -1008,25 +987,31 @@ class View {
     });
   }
 
-  bindPlayAudio(handler) {
+  playAudio(value){
+    // Play audio on click
+    this.playSpeech(value);
+    
+    // Animate audio icon
+    let audioIcon = this.svgAudio;
+    
+    // Add key frame animation
+    audioIcon.classList.add("audio-icon-animation");
+    
+    // Remove key frame animation
+    setTimeout(function() {
+        audioIcon.classList.remove("audio-icon-animation");
+    }, 500);
+  }
+
+  /*
+  bindplayAudio(handler) {
    
-    /*
-    console.log(this.svgAudioCtaArray.length);
-    console.log('bound');
-
-    this.svgAudioCtaArray.forEach((cta) => {
-
-      cta.addEventListener("click", (event) => {
-          console.log('cta clicked!')
-          console.log(event.target.id)
-          if (event.target.id == cta.id) {
-            console.log('dealt with!')
-            handler();
-        }
-      });
-    });
-    */ 
+     // Add event listener to main audio icon
+     this.svgAudio.addEventListener("click", (event) => {
+        handler();
+     });
     
   }
+  */
     
 }
