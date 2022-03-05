@@ -372,36 +372,6 @@ class View {
     this.srsResetContainer.append(this.srsResetContent, this.srsResetButtonContainer);
 
 
-    // Create audio icon
-    this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    this.svgAudio.classList.add("audio-icon");
-    this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-    this.svgAudio.setAttribute("height", "20px");
-    this.svgAudio.setAttribute("viewBox", "0 0 24 24");
-    this.svgAudio.setAttribute("width", "20px");
-    this.svgAudio.setAttribute("fill", "none");
-    this.svgAudio.setAttribute("stroke", "#18093e");
-    this.svgAudio.setAttribute("stroke-width", "2");
-
-    this.svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
-    this.svgAudioPath1.setAttribute("fill", "none");
-    this.svgAudioPath1.setAttribute("stroke", "none");
-
-    this.svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
-
-    this.svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
-
-    this.svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
-
-    this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
-
-    this.content.append(this.svgAudio);
-
-
     // Append All Popovers
     this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
 
@@ -587,7 +557,42 @@ class View {
       console.log(allSyllableMap[card].character);
       this.playSpeech(allSyllableMap[card].character);
 
+
+      // Play audio on button press
+
+      // Create audio icon
+      this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      this.svgAudio.classList.add("audio-icon");
+      this.svgAudio.id = "audio-icon-" + this.count;
+      this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+      this.svgAudio.setAttribute("height", "20px");
+      this.svgAudio.setAttribute("viewBox", "0 0 24 24");
+      this.svgAudio.setAttribute("width", "20px");
+      this.svgAudio.setAttribute("fill", "none");
+      this.svgAudio.setAttribute("stroke", "#18093e");
+      this.svgAudio.setAttribute("stroke-width", "2");
+
+      this.svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
+      this.svgAudioPath1.setAttribute("fill", "none");
+      this.svgAudioPath1.setAttribute("stroke", "none");
+
+      this.svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
+
+      this.svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
+
+      this.svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      this.svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
+
+      this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
+
+      this.content.append(this.svgAudio);
+      
+
       audioValue = allSyllableMap[card].character
+
 
       this.svgAudio.addEventListener("click", (event) => {
         this.playAudio(audioValue);
