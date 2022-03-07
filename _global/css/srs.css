@@ -222,7 +222,7 @@ body {
 }
 
 .header {
-    min-height: 50px;
+    min-height: 70px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
