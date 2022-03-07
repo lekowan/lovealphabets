@@ -222,19 +222,42 @@ body {
 }
 
 .header {
-  min-height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #18093e;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+    min-height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #18093e;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 21px;
+}
+
+.main-heading {
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.progress {
+    min-height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #18093e;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 21px;
 }
 
 p,
@@ -244,7 +267,7 @@ h2 {
 }
 
 .close-button {
-  padding: 10px 41px;
+  padding: 6px 0px 0 0px;
   color: #18093e;
   font-size: 16px;
   font-weight: 900;
@@ -495,23 +518,32 @@ h2 {
 /* ///////////////////////// Progress Bar /////////////////////// */
 
 .progress-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: first baseline;
-  -ms-flex-align: first baseline;
-  align-items: first baseline;
-  font-size: 12px;
-  color: #18093e;
-  margin-left:21px;
-  width: calc(100% - 42px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: first baseline;
+    -ms-flex-align: first baseline;
+    align-items: first baseline;
+    font-size: 12px;
+    color: #18093e;
+    margin-right: 36px;
+    width: 100%;
+    order: 1;
+}
+
+.more-button {
+    color: #18093e;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    order: 3;
 }
 
 #start {
-  padding-right: 14px;
+  padding-left: 14px;
   font-weight: 800;
 }
 
@@ -532,8 +564,12 @@ h2 {
 }
 
 #end {
-  padding-left: 14px;
+  padding-right: 14px;
   font-weight: 800;
+}
+
+.divider {
+    margin: 0 6px;
 }
 
 .purple {
@@ -575,21 +611,24 @@ h2 {
 }
 
 .slide {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 100vw;
-  height: auto;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: flex-start;
-  font-size: 100px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: flex-start;
+    font-size: 100px;
+    top: 0;
+    left: 0;
+    background: white;
 }
 
 .font-icon {
@@ -636,7 +675,7 @@ h2 {
 .word {
     font-weight: 500;
     background-color: white;
-    width: calc(100% - 85px);
+    width: calc(100% - 42px);
     max-width: 800px;
     color: #18093e;
     display: flex;
@@ -650,16 +689,18 @@ h2 {
 }
 
 p.target-language {
-    padding: 0 0 30px 0;
+    padding: 0 0 2px 0;
     margin: 0;
-    font-size: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 p.english {
-    padding: 30px 0 30px 0;
-    margin: 0;
-    font-size: 16px;
     color: #754fe3;
+    padding: 0 0 2px 0;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .new-icon {
@@ -687,9 +728,9 @@ p.word-original {
 }
 
 .pinyin-button {
-    position: absolute;
-    left: 46px;
-    top: 76px;
+    /* position: absolute; */
+    /* left: 46px; */
+    /* top: 76px; */
     font-size: 12px;
     text-align: center;
     color: white;
@@ -697,6 +738,8 @@ p.word-original {
     border-radius: 20px;
     text-transform: capitalize;
     background: #7e7989;
+    margin: 0 10px 0 0;
+    order: 2;
 }
 
 .hidden {
@@ -730,6 +773,7 @@ p.example-english {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 .example-target-container {
@@ -1111,13 +1155,6 @@ p.word-translation {
   font-weight: inherit;
 }
 
-.close-button {
-  padding: 6px 41px 0 41px;
-  color: #18093e;
-  font-size: 16px;
-  font-weight: 900;
-  cursor: pointer;
-}
 
 @media only screen and (max-height: 650px) {
   #level {
@@ -1160,9 +1197,6 @@ p.word-translation {
     right: 14px;
   }
 
-  .close-button {
-    padding: 6px 21px 0 21px;
-  }
 }
 
 /*/////////////////////////////////////////////////////////////*/

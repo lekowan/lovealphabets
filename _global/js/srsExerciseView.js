@@ -15,6 +15,14 @@ class View {
     this.header = this.createElement("div", "header");
     // this.header.classList.add("pink-background");
 
+    this.mainHeading = this.createElement("div", "main-heading");
+    this.mainHeading.innerHTML = languageTitle;
+
+
+    // Create header
+    this.progress = this.createElement("div", "progress");
+    // this.header.classList.add("pink-background");
+
     // Create progress bar
     this.progressBar = this.createElement("div", "progress-bar");
     this.progressBar.id = "progress-bar";
@@ -33,7 +41,13 @@ class View {
     this.end = this.createElement("div", "end");
     this.end.id = "end";
 
-    this.progressBar.append(this.start, this.inner, this.end);
+    this.divider = this.createElement("div", "divider");
+    this.divider.innerHTML = "/";
+
+    this.moreButton = this.createElement("div", "more-button");
+    this.moreButton.innerHTML = "M";
+
+    this.progressBar.append(this.inner, this.start, this.divider, this.end, this.moreButton);
 
     // Create generic close button
     let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -77,13 +91,20 @@ class View {
         });
     }
 
+    // If language is Mandarin, append pinyin button
+    if(this.showPinyin){
+      this.progress.append(this.progressBar, this.pinyinButton, this.moreButton);
+    }
+
+    // Append progressBar to progress
+    this.progress.append(this.progressBar, this.moreButton);
 
     // Create SRS practice header title
     this.languagePractice = this.createElement("p", "language-practice");
     this.languagePractice.textContent = "SRS Practice";
 
     // Append close button + title to header
-    this.header.append(this.progressBar, this.closeButton);
+    this.header.append(this.mainHeading, this.closeButton);
 
     // Create slider container
     this.slider = this.createElement("div", "slider");
@@ -124,15 +145,12 @@ class View {
     //this.answer.style.opacity = 0;
  
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.bodyContent, this.buttonArea);
+    this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea);
 
     // Append content div to app
     this.app.append(this.content);
 
-    // If language is Mandarin, append pinyin button
-    if(this.showPinyin){
-      this.app.append(this.pinyinButton);
-    }
+
 
     // Create settings button
     this.settings = this.createElement("div", "settings");
@@ -468,14 +486,12 @@ class View {
       this.answer = this.createElement("p", "word-translation");
       this.answer.style.opacity = 0;
 
-      /*
       this.targetLanguage = this.createElement("p", "target-language");
       this.targetLanguage.innerHTML = languageTitle;
 
       this.englishLanguage = this.createElement("p", "english");
       this.englishLanguage.innerHTML = "English";
       this.englishLanguage.style.display = "none";
-      */
 
       if(isNew){
         newIcon = this.createElement("div", "new-icon");
@@ -501,17 +517,17 @@ class View {
         this.pinyinIcon = this.createElement("p", "pinyin-icon");
         this.pinyinIcon.textContent = "show pinyin";
 
-        nextCardOriginalContainer.append(nextCardWordOriginal, this.pinyin)
+        nextCardOriginalContainer.append(this.targetLanguage, nextCardWordOriginal, this.pinyin)
       }
 
       else {
         nextCardWordOriginal.textContent = allSyllableMap[card].character; 
-        nextCardOriginalContainer.append(nextCardWordOriginal);
+        nextCardOriginalContainer.append(this.targetLanguage, nextCardWordOriginal);
       }
       
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
-      this.nextCard.append(nextCardOriginalContainer, this.nextCardWordSeparator, this.answer);
+      this.nextCard.append(nextCardOriginalContainer, this.englishLanguage, this.answer);
       
       let svgAudioCtaArray = [];
 
@@ -771,7 +787,7 @@ class View {
       this.goodBadButton.style.bottom = "-80px";
       //if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 0;
       //this.nextCard.style.height = "200px";
-      //this.englishLanguage.style.display = 'none';
+      this.englishLanguage.style.display = 'none';
 
     } else {
       //this.badButton.style.display = "block";
@@ -783,7 +799,7 @@ class View {
       //if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
       
       this.goodBadButton.style.bottom = 0;
-      //this.englishLanguage.style.display = 'inline';
+      this.englishLanguage.style.display = 'inline';
 
       this.nextCardWordSeparator.style.display = "block";
 
@@ -795,7 +811,7 @@ class View {
 
   animateSlider(number) {
     // Slide next slide in
-    this.slider.style.transform = "translate(" + number * -100 + "vw)";
+    //this.slider.style.transform = "translate(" + number * -100 + "vw)";
   }
 
   bindToggleVisibility(handler) {
