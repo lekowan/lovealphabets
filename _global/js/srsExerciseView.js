@@ -434,11 +434,13 @@ class View {
 
   displayPinyin(){
     if(this.showPinyin){
+      this.pinyinTitle.style.display = "none";
       this.pinyin.style.display = "none";
       this.pinyinButton.classList.add("hidden");
       //this.pinyinButton.textContent = "pinyin";
     }
     else {
+      this.pinyinTitle.style.display = "inline";
       this.pinyin.style.display = "inline";
       this.pinyinButton.classList.remove("hidden");
       //this.pinyinButton.textContent = "pinyin ✓";
@@ -526,18 +528,24 @@ class View {
         this.pinyin.textContent = allSyllableMap[card].pinyin;
         nextCardWordOriginal.textContent = allSyllableMap[card].character;
 
+        this.pinyinTitle = this.createElement("p", "pinyin-title");
+        if(language == "zh-CN") this.pinyinTitle.textContent = "pinyin"; 
+        else this.pinyinTitle.textContent = "hiragana";
+
         if(this.showPinyin){
+          this.pinyinTitle.style.display = "inline";
           this.pinyin.style.display = "inline";
         }
 
         else {
+          this.pinyinTitle.style.display = "none";
          this.pinyin.style.display = "none"; 
         }
 
         this.pinyinIcon = this.createElement("p", "pinyin-icon");
         this.pinyinIcon.textContent = "show pinyin";
 
-        nextCardOriginalContainer.append(this.targetLanguage, nextCardWordOriginal, this.pinyin)
+        nextCardOriginalContainer.append(this.targetLanguage, nextCardWordOriginal, this.pinyinTitle, this.pinyin)
       }
 
       else {

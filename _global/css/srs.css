@@ -241,6 +241,10 @@ body {
 .main-heading {
     font-weight: 800;
     font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .progress {
@@ -690,19 +694,19 @@ h2 {
     transition: height 0.1s ease-in;
 }
 
-p.target-language {
+p.target-language, p.english, p.pinyin-title {
     padding: 0 0 2px 0;
     margin: 0;
     font-size: 12px;
     text-transform: uppercase;
 }
 
+p.pinyin-title {
+    margin-top:  20px;
+}
+
 p.english {
     color: #754fe3;
-    padding: 0 0 2px 0;
-    margin: 0;
-    font-size: 12px;
-    text-transform: uppercase;
 }
 
 .new-icon {
