@@ -1,6 +1,6 @@
 // Configuration
 const localStorageKey = "japanese" + "Episode19Part1" + "Srs";
-const languageTitle = "Japanese";
+const languageTitle = "Shirokuma Cafe Ep19 Part 1";
 
 // Speech Synthesis
 const language = "ja-JP";
