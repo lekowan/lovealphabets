@@ -1,6 +1,6 @@
 // Configuration
 const localStorageKey = "mandarin" + "Hsk2Vocabulary" + "Srs";
-const srsTitle = "Hsk2 Vocabulary";
+const srsTitle = "HSK 2 Vocabulary";
 const languageTitle = "Mandarin";
 
 // Display level
