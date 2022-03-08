@@ -44,8 +44,28 @@ class View {
     this.divider = this.createElement("div", "divider");
     this.divider.innerHTML = "/";
 
+    // Create generic more button
+    let moreButtonSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    moreButtonSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+    moreButtonSvg.setAttribute("height", "24px");
+    moreButtonSvg.setAttribute("viewBox", "0 0 24 24");
+    moreButtonSvg.setAttribute("width", "24px");
+    moreButtonSvg.setAttribute("fill", "#7e7989");
+    let moreButtonSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    moreButtonSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
+    moreButtonSvgPath1.setAttribute("fill", "none");
+    let moreButtonSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    let moreButtonSvgPath2d = "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z";
+    moreButtonSvgPath2.setAttribute("d", moreButtonSvgPath2d); //Set path's data
+    moreButtonSvg.append(moreButtonSvgPath1, moreButtonSvgPath2);
+
+    // <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d=""/></svg>
+
+     // Clone generic SVG button
+    this.moreButtonSvg = moreButtonSvg.cloneNode(true);
+
     this.moreButton = this.createElement("div", "more-button");
-    this.moreButton.innerHTML = "M";
+    this.moreButton.append(this.moreButtonSvg);
 
     this.progressBar.append(this.inner, this.start, this.divider, this.end, this.moreButton);
 
