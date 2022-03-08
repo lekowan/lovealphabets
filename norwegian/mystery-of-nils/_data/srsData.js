@@ -1,6 +1,7 @@
 // Configuration
 const localStorageKey = "norwegian" + "MysteryOfNilsVocabulary" + "Srs";
-const languageTitle = "Mystery of Nils";
+const srsTitle = "Mystery of Nils";
+const languageTitle = "Norwegian";
 
 // Speech Synthesis
 const language = "nb-NO";

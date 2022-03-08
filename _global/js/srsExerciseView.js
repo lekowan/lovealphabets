@@ -16,7 +16,7 @@ class View {
     // this.header.classList.add("pink-background");
 
     this.mainHeading = this.createElement("div", "main-heading");
-    this.mainHeading.innerHTML = languageTitle;
+    this.mainHeading.innerHTML = srsTitle;
 
 
     // Create header

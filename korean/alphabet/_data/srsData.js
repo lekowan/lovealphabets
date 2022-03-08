@@ -1,6 +1,7 @@
 // Configuration
 const localStorageKey = "korean" + "Characters" + "Srs";
-const languageTitle = "The Korean Hangul";
+const srsTitle = "The Korean Hangul";
+const languageTitle = "Korean";
 
 // Display level
 const displayLevel = "SRS Practice";
