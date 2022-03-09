@@ -426,47 +426,16 @@ class Model {
         }
     }
 
+    
     // Play audio
-    sayIt() {
-        console.log('say it');
-        let word = this.allNewCards[this.tracker].original();
+    
+   
 
-        // If speechSynthesis in user's browser and activateSpeech is zh-CN
-        if (activateSpeech && "speechSynthesis" in window && language == "zh-CN") {
-            if (exerciseType == "vocabularyEnglish") {
-                let newWord = word.romanize()
-                    .split("")
-                    .filter(char => /\p{Script=Han}/u.test(char))
-                    .join("")
-                let audioWord = new SpeechSynthesisUtterance(newWord.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
-                audioWord.lang = language;
-                window.speechSynthesis.speak(audioWord);
-            } else {
-                let audioWord = new SpeechSynthesisUtterance(word.replace(/\s*\(.*?\)\s*/g, '').toLowerCase());
-                audioWord.lang = language;
-                window.speechSynthesis.speak(audioWord);
-            }
-
-        }
-
-        // If speechSynthesis in user's browser and activateSpeech is not zh-CN
-        if (activateSpeech && "speechSynthesis" in window && language != "zh-CN") {
-            let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
-            audioWord.lang = language;
-            window.speechSynthesis.speak(audioWord);
-        }
-
-        // If activate speech is false and audio file exists, play it
-        if (!activateSpeech && allSyllableMap[word].audio) {
-            this.playAudio(allSyllableMap[word].audio);
-        }
-
-        this.onSayItPressed();
-    }
-
+    /*
     bindOnSayItPressed(callback) {
         this.onSayItPressed = callback;
     }
+    */
 
     // Initiate audio
     playAudio(url) {

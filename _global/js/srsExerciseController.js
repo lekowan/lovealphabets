@@ -94,7 +94,7 @@ class Controller {
     this.view.addTodaysCards(this.model.newItemsArray.slice(0, _number));
 
     // Process SayIt
-    this.model.bindOnSayItPressed(this.onSayItPressed);
+    //this.model.bindOnSayItPressed(this.onSayItPressed);
     //this.view.bindPlayAudio(this.handleProcessSayIt);
 
   } // End of constructor
@@ -160,14 +160,14 @@ class Controller {
   };
 
   // Handle Say it
-  handleProcessSayIt = () => {
-    this.model.sayIt();
-  };
+  //handleProcessSayIt = () => {
+  //  this.model.sayIt();
+  //};
 
-  onSayItPressed = () => {
-    this.view.bindPlayAudio();
+  //onSayItPressed = () => {
+  //  this.view.bindPlayAudio();
     //this.view.addNextCard();
-  };
+  //};
 
   // Add card
   handleAddCard = () => {
