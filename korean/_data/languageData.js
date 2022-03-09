@@ -46,6 +46,17 @@ const languageContent = [{
         "localStorageKey": "korean" + "IntegratedKorean" + "Srs",
         "chartType": integratedKoreanChartType
     },
+    {
+        "chartTitle": "Integrated Korean (Beginning 2)",
+        "chartName": "integrated-korean-beginning-2-map",
+        "chartData": integratedKoreanBeginning2ChartData,
+        "title": "Integrated Korean (Beginning&nbsp;2)",
+        "sub": "Memorize all words and expressions from the Integrated Korean (Beginning&nbsp;2) textbook",
+        "icon": "학생",
+        "url": "integrated-korean-beginning-2",
+        "localStorageKey": "korean" + "IntegratedKoreanBeginning2" + "Srs",
+        "chartType": integratedKoreanBeginning2ChartType
+    },
     /*
     {
         "chartTitle": "Declarative Present (Informal High) Verbs",

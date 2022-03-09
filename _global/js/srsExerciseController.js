@@ -93,9 +93,8 @@ class Controller {
     let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
     this.view.addTodaysCards(this.model.newItemsArray.slice(0, _number));
 
-    // Process SayIt
-    //this.model.bindOnSayItPressed(this.onSayItPressed);
-    //this.view.bindPlayAudio(this.handleProcessSayIt);
+    // Process remove card
+    this.view.bindRemoveCard(this.handleRemoveCard);
 
   } // End of constructor
 
@@ -117,6 +116,11 @@ class Controller {
   // Restore previous input number
   handleDisplayPreviousInputNumber = () => {
     this.model.restorePreviousInputNumber();
+  };
+
+  // Remove card
+  handleRemoveCard = () => {
+    this.model.removeCard();
   };
 
   onRestorePreviousInputNumber = (previousInputNumber) => {

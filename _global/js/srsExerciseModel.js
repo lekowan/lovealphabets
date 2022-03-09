@@ -39,19 +39,22 @@ class Model {
             for (let item in _data) {
                 let wordData = _data[item];
 
-                // If SRS Data exists for item, item is NOT new
-                if (wordData.srsData) {
-                    let dueDate = wordData.srsData.date;
+                if(wordData.status == "undefined" || wordData.status != "hidden"){
 
-                    // If item is due today or in the past, push in to dueTodayArray
-                    if (dueDate <= endOfDay) {
-                        this.dueTodayItemsArray.push(item);
+                    // If SRS Data exists for item, item is NOT new
+                    if (wordData.srsData) {
+                        let dueDate = wordData.srsData.date;
+
+                        // If item is due today or in the past, push in to dueTodayArray
+                        if (dueDate <= endOfDay) {
+                            this.dueTodayItemsArray.push(item);
+                        }
                     }
-                }
 
-                // If SRS Data doesn't exist, item is new - push into newItemsArray
-                else {
-                    this.newItemsArray.push(item);
+                    // If SRS Data doesn't exist, item is new - push into newItemsArray
+                    else {
+                        this.newItemsArray.push(item);
+                    }
                 }
             }
         }
@@ -124,6 +127,7 @@ class Model {
         else {
             // If this is a new session
             if (_progress.timeStamp != todaysDate) {
+
                 // Create a new array including new Items that have NOT been completed in previous session
                 this.newItemsFromPreviousSession = this.newItemsArray.filter((item) => _progress.completedItemsArray.includes(item));
 
@@ -132,13 +136,6 @@ class Model {
                     .concat(this.shuffle(this.newItemsFromPreviousSession))
                     .concat(this.shuffle(this.dueTodayItemsArray))
                     .filter((item) => item != null);
-
-                /*
-                this.allNewCards = this.shuffle(this.newItemsArray.slice(0, this.number))
-                  .concat(this.shuffle(this.newItemsFromPreviousSession))
-                  .concat(this.shuffle(this.dueTodayItemsArray))
-                  .filter((item) => item != null);
-                */
 
                 // If new items array is empty, hide today's items popover
                 if (this.newItemsArray.slice(0, this.number).length == 0) {
@@ -426,16 +423,30 @@ class Model {
         }
     }
 
-    
-    // Play audio
-    
-   
+    // Remove card
+    removeCard(){
+        let word = allSyllableMap[this.allNewCards[this.trackerValue]];
+        console.log(word);
+        console.log(this.trackerValue);
+        console.log(this.allNewCards);
+        let _data = JSON.parse(localStorage.getItem(localStorageKey + "Data"));
+        console.log(_data);
 
-    /*
-    bindOnSayItPressed(callback) {
-        this.onSayItPressed = callback;
+        _data[this.allNewCards[this.trackerValue]].status = 'hidden';
+
+        console.log(this.allNewCards[this.trackerValue]);
+        let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
+        console.log(_progress);
+        
+        // Push into completedItemsArray if the item is NOT already in
+        if(!_progress.completedItemsArray.includes(this.allNewCards[this.trackerValue])){
+            _progress.completedItemsArray.push(this.allNewCards[this.trackerValue]);
+        }
+
+        // save data in local storage
+        this._commitData(_data);
+        this._commitProgress(_progress);
     }
-    */
 
     // Initiate audio
     playAudio(url) {
@@ -538,7 +549,7 @@ class Model {
 
             this.removeNewItem();
 
-            // If SRS data exists and the word is not new
+        // If SRS data exists and the word is not new
         } else {
             lastShown = wordData.srsData.date;
             lastState = wordData.srsData.state;

@@ -654,9 +654,6 @@ class View {
           // Play audio on click
           this.playSpeech(audio.word); 
 
-          // Animate audio icon
-          //let audioIcon = this.svgAudio;
-
           // Add key frame animation
           audio.element.classList.add("audio-icon-animation-small");
 
@@ -679,8 +676,6 @@ class View {
     playSpeech(string) {
         console.log(string);
         let word = string;
-
-        //let word = string.replace('。', '');
 
         // If speechSynthesis in user's browser
         if (activateSpeech && "speechSynthesis" in window) {
@@ -809,31 +804,18 @@ class View {
 
   displayButtons(boolean) {
     if (boolean == false) {
-      //this.badButton.style.display = "none";
-      //this.goodButton.style.display = "none";
       this.answer.style.opacity = 0;
       this.goodBadButton.style.bottom = "-80px";
-      //if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 0;
-      //this.nextCard.style.height = "200px";
       this.englishLanguage.style.display = 'none';
 
     } else {
-      //this.badButton.style.display = "block";
-      //this.goodButton.style.display = "block";
       this.answer.style.opacity = 1;
-      this.nextCard.style.height = "auto";
-      
-
-      //if(typeof srsDataExamples !== 'undefined') this.nextCardExamples.style.opacity = 1;
-      
+      this.nextCard.style.height = "auto";  
       this.goodBadButton.style.bottom = 0;
       this.englishLanguage.style.display = 'inline';
-
       this.nextCardWordSeparator.style.display = "block";
 
-      if(this.pinyin){
-          this.pinyin.style.display = "inline";
-      }
+      if(this.pinyin) this.pinyin.style.display = "inline";
     }
   }
 
@@ -1052,15 +1034,10 @@ class View {
     }, 500);
   }
 
-  /*
-  bindplayAudio(handler) {
-   
-     // Add event listener to main audio icon
-     this.svgAudio.addEventListener("click", (event) => {
-        handler();
-     });
-    
+  bindRemoveCard(handler) {
+    this.moreButton.addEventListener("click", () => {
+      handler();
+    });
   }
-  */
     
 }
