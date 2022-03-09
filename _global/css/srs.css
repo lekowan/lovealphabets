@@ -240,7 +240,7 @@ body {
 
 .main-heading {
     font-weight: 800;
-    font-size: 14px;
+    font-size: 16px;
     text-overflow: ellipsis;
     white-space: nowrap; 
     overflow: hidden;
