@@ -446,6 +446,8 @@ class Model {
         // save data in local storage
         this._commitData(_data);
         this._commitProgress(_progress);
+
+        alert("removed!");
     }
 
     // Initiate audio
