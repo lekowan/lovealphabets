@@ -438,8 +438,10 @@ class Model {
         let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
         console.log(_progress);
         
+        console.log(_progress.completedItemsArray.includes(this.allNewCards[this.trackerValue]));
+
         // Push into completedItemsArray if the item is NOT already in
-        if(!_progress.completedItemsArray.includes(this.allNewCards[this.trackerValue])){
+        if(_progress.completedItemsArray.includes(this.allNewCards[this.trackerValue]) == false){
             _progress.completedItemsArray.push(this.allNewCards[this.trackerValue]);
         }
 
