@@ -2,456 +2,756 @@
 const chineseHsk1ChartType = "vocabulary";
 
 const chineseHsk1Map = {
-   "我  (wǒ)": {
-    "letter": "I or me"
-  },
-  "你  (nǐ)": {
-    "letter": "you (singular)"
-  },
-  "他  (tā)": {
-    "letter": "he or him"
-  },
-  "她  (tā)": {
-    "letter": "she or her"
-  },
-  "我们  (wǒmen)": {
-    "letter": "we or us"
-  },
-  "人  (rén)": {
-    "letter": "person or people"
-  },
-  "名字  (míngzì)": {
-    "letter": "name"
-  },
-  "妈妈  (māma)": {
-    "letter": "mom"
-  },
-  "爸爸  (bàba)": {
-    "letter": "dad"
-  },
-  "儿子  (érzi)": {
-    "letter": "son"
-  },
-  "女儿  (nǚ’ér)": {
-    "letter": "daughter"
-  },
-  "朋友  (péngyǒu)": {
-    "letter": "friend"
-  },
-  "先生  (xiānsheng)": {
-    "letter": "Mr or sir"
-  },
-  "小姐  (xiǎojiě)": {
-    "letter": "Miss"
-  },
-  "老师  (lǎoshī)": {
-    "letter": "teacher"
-  },
-  "学生  (xuésheng)": {
-    "letter": "student"
-  },
-  "同学  (tóngxué)": {
-    "letter": "schoolmate"
-  },
-  "医生  (yīshēng)": {
-    "letter": "doctor"
-  },
-  "东西  (dōngxi)": {
-    "letter": "thing"
-  },
-  "钱  (qián)": {
-    "letter": "money"
-  },
-  "水  (shuǐ)": {
-    "letter": "water"
-  },
-  "茶  (chá)": {
-    "letter": "tea"
-  },
-  "菜  (cài)": {
-    "letter": "dish"
-  },
-  "米饭  (mǐfàn)": {
-    "letter": "(cooked) rice"
-  },
-  "衣服  (yīfu)": {
-    "letter": "clothes"
-  },
-  "书  (shū)": {
-    "letter": "book"
-  },
-  "桌子  (zhuōzi)": {
-    "letter": "table or desk"
-  },
-  "椅子  (yǐzi)": {
-    "letter": "chair"
-  },
-  "水果  (shuǐguǒ)": {
-    "letter": "fruit"
-  },
-  "苹果  (píngguǒ)": {
-    "letter": "apple"
-  },
-  "杯子  (bēizi)": {
-    "letter": "cup or glass"
-  },
-  "电视  (diànshì)": {
-    "letter": "TV"
-  },
-  "电脑  (diànnǎo)": {
-    "letter": "computer"
-  },
-  "电影  (diànyǐng)": {
-    "letter": "movie"
-  },
-  "飞机  (fēijī)": {
-    "letter": "plane"
-  },
-  "出租车  (chūzūchē)": {
-    "letter": "taxi"
-  },
-  "猫  (māo)": {
-    "letter": "cat"
-  },
-  "狗  (gǒu)": {
-    "letter": "dog"
-  },
-  "天气  (tiānqì)": {
-    "letter": "weather"
-  },
-  "字  (zì)": {
-    "letter": "character"
-  },
-  "汉语  (Hànyǔ)": {
-    "letter": "Chinese (language)"
-  },
-  "这/这儿  (zhè/zhèr)": {
-    "letter": "this/here"
-  },
-  "那/那儿  (nà/nàr)": {
-    "letter": "that/there"
-  },
-  "哪/哪儿  (nǎ/nǎr)": {
-    "letter": "which/where"
-  },
-  "谁  (shéi)": {
-    "letter": "who"
-  },
-  "什么  (shénme)": {
-    "letter": "what"
-  },
-  "多少  (duōshao)": {
-    "letter": "how many or how much"
-  },
-  "几  (jǐ)": {
-    "letter": "how many or how much"
-  },
-  "怎么  (zěnme)": {
-    "letter": "how"
-  },
-  "怎么样  (zěnmeyàng)": {
-    "letter": "how about"
-  },
-  "现在  (xiànzài)": {
-    "letter": "now"
-  },
-  "今天  (jīntiān)": {
-    "letter": "today"
-  },
-  "明天  (míngtiān)": {
-    "letter": "tomorrow"
-  },
-  "昨天  (zuótiān)": {
-    "letter": "yesterday"
-  },
-  "上午  (shàngwǔ)": {
-    "letter": "morning"
-  },
-  "中午  (zhōngwǔ)": {
-    "letter": "noon"
-  },
-  "下午  (xiàwǔ)": {
-    "letter": "afternoon"
-  },
-  "点  (diǎn)": {
-    "letter": "o’clock"
-  },
-  "分钟  (fēnzhōng)": {
-    "letter": "minute"
-  },
-  "年  (nián)": {
-    "letter": "year"
-  },
-  "月  (yuè)": {
-    "letter": "month"
-  },
-  "日  (rì)": {
-    "letter": "day"
-  },
-  "星期  (xīngqī)": {
-    "letter": "week"
-  },
-  "时候  (shíhou)": {
-    "letter": "a certain point in time"
-  },
-  "中国  (Zhōngguó)": {
-    "letter": "China"
-  },
-  "北京  (Běijīng)": {
-    "letter": "Beijing"
-  },
-  "家  (jiā)": {
-    "letter": "home or family"
-  },
-  "学校  (xuéxiào)": {
-    "letter": "school"
-  },
-  "饭馆  (fànguǎn)": {
-    "letter": "restaurant"
-  },
-  "商店  (shāngdiàn)": {
-    "letter": "shop"
-  },
-  "医院  (yīyuàn)": {
-    "letter": "hospital"
-  },
-  "火车站  (huǒchēzhàn)": {
-    "letter": "train station"
-  },
-  "上  (shàng)": {
-    "letter": "on, above or last"
-  },
-  "下  (xià)": {
-    "letter": "under, below or next"
-  },
-  "前面  (qiánmiàn)": {
-    "letter": "front"
-  },
-  "后面  (hòumiàn)": {
-    "letter": "back"
-  },
-  "里  (lǐ)": {
-    "letter": "inside"
-  },
-  "个  (gè)": {
-    "letter": "generic measure word"
-  },
-  "块  (kuài)": {
-    "letter": "basic monetary unit of China"
-  },
-  "本  (běn)": {
-    "letter": "for books"
-  },
-  "岁  (suì)": {
-    "letter": "year (of age)"
-  },
-  "些  (xiē)": {
-    "letter": "some"
-  },
-  "做  (zuò)": {
-    "letter": "to do"
-  },
-  "是  (shì)": {
-    "letter": "to be"
-  },
-  "在  (zài)": {
-    "letter": "to be in"
-  },
-  "有  (yǒu)": {
-    "letter": "to have"
-  },
-  "住  (zhù)": {
-    "letter": "to live or to stay"
-  },
-  "来  (lái)": {
-    "letter": "to come"
-  },
-  "去  (qù)": {
-    "letter": "to go"
-  },
-  "回  (huí)": {
-    "letter": "to return"
-  },
-  "想  (xiǎng)": {
-    "letter": "to think"
-  },
-  "吃  (chī)": {
-    "letter": "to eat"
-  },
-  "喝  (hē)": {
-    "letter": "to drink"
-  },
-  "说话  (shuōhuà)": {
-    "letter": "to speak"
-  },
-  "看  (kàn)": {
-    "letter": "to look or to watch"
-  },
-  "看见  (kànjiàn)": {
-    "letter": "to see"
-  },
-  "听  (tīng)": {
-    "letter": "to listen"
-  },
-  "叫  (jiào)": {
-    "letter": "to call"
-  },
-  "买  (mǎi)": {
-    "letter": "to buy"
-  },
-  "开  (kāi)": {
-    "letter": "to drive or to open"
-  },
-  "坐  (zuò)": {
-    "letter": "to sit"
-  },
-  "读  (dú)": {
-    "letter": "to read"
-  },
-  "写  (xiě)": {
-    "letter": "to write"
-  },
-  "打电话  (dǎ diànhuà)": {
-    "letter": "to make a phone call"
-  },
-  "认识  (rènshi)": {
-    "letter": "to know"
-  },
-  "学习  (xuéxí)": {
-    "letter": "to learn"
-  },
-  "工作  (gōngzuò)": {
-    "letter": "to work"
-  },
-  "睡觉  (shuìjiào)": {
-    "letter": "to sleep"
-  },
-  "喜欢  (xǐhuan)": {
-    "letter": "to like"
-  },
-  "爱  (ài)": {
-    "letter": "to love"
-  },
-  "会  (huì)": {
-    "letter": "can (to know how to)"
-  },
-  "能  (néng)": {
-    "letter": "can (to be able to)"
-  },
-  "下雨  (xià yǔ)": {
-    "letter": "to rain"
-  },
-  "好  (hǎo)": {
-    "letter": "good"
-  },
-  "大  (dà)": {
-    "letter": "big"
-  },
-  "小  (xiǎo)": {
-    "letter": "small"
-  },
-  "多  (duō)": {
-    "letter": "many"
-  },
-  "少  (shǎo)": {
-    "letter": "few"
-  },
-  "热  (rè)": {
-    "letter": "hot"
-  },
-  "冷  (lěng)": {
-    "letter": "cold"
-  },
-  "漂亮  (piàoliang)": {
-    "letter": "pretty"
-  },
-  "高兴  (gāoxìng)": {
-    "letter": "happy"
-  },
-  "很  (hěn)": {
-    "letter": "very"
-  },
-  "太  (tài)": {
-    "letter": "too…"
-  },
-  "都  (dōu)": {
-    "letter": "both or all"
-  },
-  "不  (bù)": {
-    "letter": "not"
-  },
-  "没  (méi)": {
-    "letter": "not"
-  },
-  "的  (de)": {
-    "letter": "possession particle"
-  },
-  "了  (le)": {
-    "letter": "aspect particle"
-  },
-  "吗  (ma)": {
-    "letter": "question particle"
-  },
-  "呢  (ne)": {
-    "letter": "question particle"
-  },
-  "和  (hé)": {
-    "letter": "and"
-  },
-  "喂  (wèi)": {
-    "letter": "hello (on the phone)"
-  },
-  "谢谢  (xièxie)": {
-    "letter": "thanks"
-  },
-  "不客气  (bú kèqi)": {
-    "letter": "you’re welcome"
-  },
-  "再见  (zàijiàn)": {
-    "letter": "goodbye"
-  },
-  "请  (qǐng)": {
-    "letter": "please…"
-  },
-  "对不起  (duìbuqǐ)": {
-    "letter": "sorry"
-  },
-  "没关系  (méi guānxi)": {
-    "letter": "it’s all right"
-  },
-  "零  (líng)": {
-    "letter": "zero"
-  },
-  "一  (yī)": {
-    "letter": "one"
-  },
-  "二  (èr)": {
-    "letter": "two"
-  },
-  "三  (sān)": {
-    "letter": "three"
-  },
-  "四  (sì)": {
-    "letter": "four"
-  },
-  "五  (wǔ)": {
-    "letter": "five"
-  },
-  "六  (liù)": {
-    "letter": "six"
-  },
-  "七  (qī)": {
-    "letter": "seven"
-  },
-  "八  (bā)": {
-    "letter": "eight"
-  },
-  "九  (jiǔ)": {
-    "letter": "nine"
-  },
-  "十  (shí)": {
-    "letter": "ten"
-  }
+    "1": {
+        "character": "我",
+        "letter": "I or me",
+        "pinyin": "wǒ"
+    },
+    "2": {
+        "character": "你",
+        "letter": "you (singular)",
+        "pinyin": "nǐ"
+    },
+    "3": {
+        "character": "他",
+        "letter": "he or him",
+        "pinyin": "tā"
+    },
+    "4": {
+        "character": "她",
+        "letter": "she or her",
+        "pinyin": "tā"
+    },
+    "5": {
+        "character": "我们",
+        "letter": "we or us",
+        "pinyin": "wǒmen"
+    },
+    "6": {
+        "character": "人",
+        "letter": "person or people",
+        "pinyin": "rén"
+    },
+    "7": {
+        "character": "名字",
+        "letter": "name",
+        "pinyin": "míngzì"
+    },
+    "8": {
+        "character": "妈妈",
+        "letter": "mom",
+        "pinyin": "māma"
+    },
+    "9": {
+        "character": "爸爸",
+        "letter": "dad",
+        "pinyin": "bàba"
+    },
+    "10": {
+        "character": "儿子",
+        "letter": "son",
+        "pinyin": "érzi"
+    },
+    "11": {
+        "character": "女儿",
+        "letter": "daughter",
+        "pinyin": "nǚ’ér"
+    },
+    "12": {
+        "character": "朋友",
+        "letter": "friend",
+        "pinyin": "péngyǒu"
+    },
+    "13": {
+        "character": "先生",
+        "letter": "Mr or sir",
+        "pinyin": "xiānsheng"
+    },
+    "14": {
+        "character": "小姐",
+        "letter": "Miss",
+        "pinyin": "xiǎojiě"
+    },
+    "15": {
+        "character": "老师",
+        "letter": "teacher",
+        "pinyin": "lǎoshī"
+    },
+    "16": {
+        "character": "学生",
+        "letter": "student",
+        "pinyin": "xuésheng"
+    },
+    "17": {
+        "character": "同学",
+        "letter": "schoolmate",
+        "pinyin": "tóngxué"
+    },
+    "18": {
+        "character": "医生",
+        "letter": "doctor",
+        "pinyin": "yīshēng"
+    },
+    "19": {
+        "character": "东西",
+        "letter": "thing",
+        "pinyin": "dōngxi"
+    },
+    "20": {
+        "character": "钱",
+        "letter": "money",
+        "pinyin": "qián"
+    },
+    "21": {
+        "character": "水",
+        "letter": "water",
+        "pinyin": "shuǐ"
+    },
+    "22": {
+        "character": "茶",
+        "letter": "tea",
+        "pinyin": "chá"
+    },
+    "23": {
+        "character": "菜",
+        "letter": "dish",
+        "pinyin": "cài"
+    },
+    "24": {
+        "character": "米饭",
+        "letter": "(cooked) rice",
+        "pinyin": "mǐfàn"
+    },
+    "25": {
+        "character": "衣服",
+        "letter": "clothes",
+        "pinyin": "yīfu"
+    },
+    "26": {
+        "character": "书",
+        "letter": "book",
+        "pinyin": "shū"
+    },
+    "27": {
+        "character": "桌子",
+        "letter": "table or desk",
+        "pinyin": "zhuōzi"
+    },
+    "28": {
+        "character": "椅子",
+        "letter": "chair",
+        "pinyin": "yǐzi"
+    },
+    "29": {
+        "character": "水果",
+        "letter": "fruit",
+        "pinyin": "shuǐguǒ"
+    },
+    "30": {
+        "character": "苹果",
+        "letter": "apple",
+        "pinyin": "píngguǒ"
+    },
+    "31": {
+        "character": "杯子",
+        "letter": "cup or glass",
+        "pinyin": "bēizi"
+    },
+    "32": {
+        "character": "电视",
+        "letter": "TV",
+        "pinyin": "diànshì"
+    },
+    "33": {
+        "character": "电脑",
+        "letter": "computer",
+        "pinyin": "diànnǎo"
+    },
+    "34": {
+        "character": "电影",
+        "letter": "movie",
+        "pinyin": "diànyǐng"
+    },
+    "35": {
+        "character": "飞机",
+        "letter": "plane",
+        "pinyin": "fēijī"
+    },
+    "36": {
+        "character": "出租车",
+        "letter": "taxi",
+        "pinyin": "chūzūchē"
+    },
+    "37": {
+        "character": "猫",
+        "letter": "cat",
+        "pinyin": "māo"
+    },
+    "38": {
+        "character": "狗",
+        "letter": "dog",
+        "pinyin": "gǒu"
+    },
+    "39": {
+        "character": "天气",
+        "letter": "weather",
+        "pinyin": "tiānqì"
+    },
+    "40": {
+        "character": "字",
+        "letter": "character",
+        "pinyin": "zì"
+    },
+    "41": {
+        "character": "汉语",
+        "letter": "Chinese (language)",
+        "pinyin": "Hànyǔ"
+    },
+    "42": {
+        "character": "这/这儿",
+        "letter": "this/here",
+        "pinyin": "zhè/zhèr"
+    },
+    "43": {
+        "character": "那/那儿",
+        "letter": "that/there",
+        "pinyin": "nà/nàr"
+    },
+    "44": {
+        "character": "哪/哪儿",
+        "letter": "which/where",
+        "pinyin": "nǎ/nǎr"
+    },
+    "45": {
+        "character": "谁",
+        "letter": "who",
+        "pinyin": "shéi"
+    },
+    "46": {
+        "character": "什么",
+        "letter": "what",
+        "pinyin": "shénme"
+    },
+    "47": {
+        "character": "多少",
+        "letter": "how many or how much",
+        "pinyin": "duōshao"
+    },
+    "48": {
+        "character": "几",
+        "letter": "how many or how much",
+        "pinyin": "jǐ"
+    },
+    "49": {
+        "character": "怎么",
+        "letter": "how",
+        "pinyin": "zěnme"
+    },
+    "50": {
+        "character": "怎么样",
+        "letter": "how about",
+        "pinyin": "zěnmeyàng"
+    },
+    "51": {
+        "character": "现在",
+        "letter": "now",
+        "pinyin": "xiànzài"
+    },
+    "52": {
+        "character": "今天",
+        "letter": "today",
+        "pinyin": "jīntiān"
+    },
+    "53": {
+        "character": "明天",
+        "letter": "tomorrow",
+        "pinyin": "míngtiān"
+    },
+    "54": {
+        "character": "昨天",
+        "letter": "yesterday",
+        "pinyin": "zuótiān"
+    },
+    "55": {
+        "character": "上午",
+        "letter": "morning",
+        "pinyin": "shàngwǔ"
+    },
+    "56": {
+        "character": "中午",
+        "letter": "noon",
+        "pinyin": "zhōngwǔ"
+    },
+    "57": {
+        "character": "下午",
+        "letter": "afternoon",
+        "pinyin": "xiàwǔ"
+    },
+    "58": {
+        "character": "点",
+        "letter": "o’clock",
+        "pinyin": "diǎn"
+    },
+    "59": {
+        "character": "分钟",
+        "letter": "minute",
+        "pinyin": "fēnzhōng"
+    },
+    "60": {
+        "character": "年",
+        "letter": "year",
+        "pinyin": "nián"
+    },
+    "61": {
+        "character": "月",
+        "letter": "month",
+        "pinyin": "yuè"
+    },
+    "62": {
+        "character": "日",
+        "letter": "day",
+        "pinyin": "rì"
+    },
+    "63": {
+        "character": "星期",
+        "letter": "week",
+        "pinyin": "xīngqī"
+    },
+    "64": {
+        "character": "时候",
+        "letter": "a certain point in time",
+        "pinyin": "shíhou"
+    },
+    "65": {
+        "character": "中国",
+        "letter": "China",
+        "pinyin": "Zhōngguó"
+    },
+    "66": {
+        "character": "北京",
+        "letter": "Beijing",
+        "pinyin": "Běijīng"
+    },
+    "67": {
+        "character": "家",
+        "letter": "home or family",
+        "pinyin": "jiā"
+    },
+    "68": {
+        "character": "学校",
+        "letter": "school",
+        "pinyin": "xuéxiào"
+    },
+    "69": {
+        "character": "饭馆",
+        "letter": "restaurant",
+        "pinyin": "fànguǎn"
+    },
+    "70": {
+        "character": "商店",
+        "letter": "shop",
+        "pinyin": "shāngdiàn"
+    },
+    "71": {
+        "character": "医院",
+        "letter": "hospital",
+        "pinyin": "yīyuàn"
+    },
+    "72": {
+        "character": "火车站",
+        "letter": "train station",
+        "pinyin": "huǒchēzhàn"
+    },
+    "73": {
+        "character": "上",
+        "letter": "on, above or last",
+        "pinyin": "shàng"
+    },
+    "74": {
+        "character": "下",
+        "letter": "under, below or next",
+        "pinyin": "xià"
+    },
+    "75": {
+        "character": "前面",
+        "letter": "front",
+        "pinyin": "qiánmiàn"
+    },
+    "76": {
+        "character": "后面",
+        "letter": "back",
+        "pinyin": "hòumiàn"
+    },
+    "77": {
+        "character": "里",
+        "letter": "inside",
+        "pinyin": "lǐ"
+    },
+    "78": {
+        "character": "个",
+        "letter": "generic measure word",
+        "pinyin": "gè"
+    },
+    "79": {
+        "character": "块",
+        "letter": "basic monetary unit of China",
+        "pinyin": "kuài"
+    },
+    "80": {
+        "character": "本",
+        "letter": "for books",
+        "pinyin": "běn"
+    },
+    "81": {
+        "character": "岁",
+        "letter": "year (of age)",
+        "pinyin": "suì"
+    },
+    "82": {
+        "character": "些",
+        "letter": "some",
+        "pinyin": "xiē"
+    },
+    "83": {
+        "character": "做",
+        "letter": "to do",
+        "pinyin": "zuò"
+    },
+    "84": {
+        "character": "是",
+        "letter": "to be",
+        "pinyin": "shì"
+    },
+    "85": {
+        "character": "在",
+        "letter": "to be in",
+        "pinyin": "zài"
+    },
+    "86": {
+        "character": "有",
+        "letter": "to have",
+        "pinyin": "yǒu"
+    },
+    "87": {
+        "character": "住",
+        "letter": "to live or to stay",
+        "pinyin": "zhù"
+    },
+    "88": {
+        "character": "来",
+        "letter": "to come",
+        "pinyin": "lái"
+    },
+    "89": {
+        "character": "去",
+        "letter": "to go",
+        "pinyin": "qù"
+    },
+    "90": {
+        "character": "回",
+        "letter": "to return",
+        "pinyin": "huí"
+    },
+    "91": {
+        "character": "想",
+        "letter": "to think",
+        "pinyin": "xiǎng"
+    },
+    "92": {
+        "character": "吃",
+        "letter": "to eat",
+        "pinyin": "chī"
+    },
+    "93": {
+        "character": "喝",
+        "letter": "to drink",
+        "pinyin": "hē"
+    },
+    "94": {
+        "character": "说话",
+        "letter": "to speak",
+        "pinyin": "shuōhuà"
+    },
+    "95": {
+        "character": "看",
+        "letter": "to look or to watch",
+        "pinyin": "kàn"
+    },
+    "96": {
+        "character": "看见",
+        "letter": "to see",
+        "pinyin": "kànjiàn"
+    },
+    "97": {
+        "character": "听",
+        "letter": "to listen",
+        "pinyin": "tīng"
+    },
+    "98": {
+        "character": "叫",
+        "letter": "to call",
+        "pinyin": "jiào"
+    },
+    "99": {
+        "character": "买",
+        "letter": "to buy",
+        "pinyin": "mǎi"
+    },
+    "100": {
+        "character": "开",
+        "letter": "to drive or to open",
+        "pinyin": "kāi"
+    },
+    "101": {
+        "character": "坐",
+        "letter": "to sit",
+        "pinyin": "zuò"
+    },
+    "102": {
+        "character": "读",
+        "letter": "to read",
+        "pinyin": "dú"
+    },
+    "103": {
+        "character": "写",
+        "letter": "to write",
+        "pinyin": "xiě"
+    },
+    "104": {
+        "character": "打电话",
+        "letter": "to make a phone call",
+        "pinyin": "dǎ diànhuà"
+    },
+    "105": {
+        "character": "认识",
+        "letter": "to know",
+        "pinyin": "rènshi"
+    },
+    "106": {
+        "character": "学习",
+        "letter": "to learn",
+        "pinyin": "xuéxí"
+    },
+    "107": {
+        "character": "工作",
+        "letter": "to work",
+        "pinyin": "gōngzuò"
+    },
+    "108": {
+        "character": "睡觉",
+        "letter": "to sleep",
+        "pinyin": "shuìjiào"
+    },
+    "109": {
+        "character": "喜欢",
+        "letter": "to like",
+        "pinyin": "xǐhuan"
+    },
+    "110": {
+        "character": "爱",
+        "letter": "to love",
+        "pinyin": "ài"
+    },
+    "111": {
+        "character": "会",
+        "letter": "can (to know how to)",
+        "pinyin": "huì"
+    },
+    "112": {
+        "character": "能",
+        "letter": "can (to be able to)",
+        "pinyin": "néng"
+    },
+    "113": {
+        "character": "下雨",
+        "letter": "to rain",
+        "pinyin": "xià yǔ"
+    },
+    "114": {
+        "character": "好",
+        "letter": "good",
+        "pinyin": "hǎo"
+    },
+    "115": {
+        "character": "大",
+        "letter": "big",
+        "pinyin": "dà"
+    },
+    "116": {
+        "character": "小",
+        "letter": "small",
+        "pinyin": "xiǎo"
+    },
+    "117": {
+        "character": "多",
+        "letter": "many",
+        "pinyin": "duō"
+    },
+    "118": {
+        "character": "少",
+        "letter": "few",
+        "pinyin": "shǎo"
+    },
+    "119": {
+        "character": "热",
+        "letter": "hot",
+        "pinyin": "rè"
+    },
+    "120": {
+        "character": "冷",
+        "letter": "cold",
+        "pinyin": "lěng"
+    },
+    "121": {
+        "character": "漂亮",
+        "letter": "pretty",
+        "pinyin": "piàoliang"
+    },
+    "122": {
+        "character": "高兴",
+        "letter": "happy",
+        "pinyin": "gāoxìng"
+    },
+    "123": {
+        "character": "很",
+        "letter": "very",
+        "pinyin": "hěn"
+    },
+    "124": {
+        "character": "太",
+        "letter": "too…",
+        "pinyin": "tài"
+    },
+    "125": {
+        "character": "都",
+        "letter": "both or all",
+        "pinyin": "dōu"
+    },
+    "126": {
+        "character": "不",
+        "letter": "not",
+        "pinyin": "bù"
+    },
+    "127": {
+        "character": "没",
+        "letter": "not",
+        "pinyin": "méi"
+    },
+    "128": {
+        "character": "的",
+        "letter": "possession particle",
+        "pinyin": "de"
+    },
+    "129": {
+        "character": "了",
+        "letter": "aspect particle",
+        "pinyin": "le"
+    },
+    "130": {
+        "character": "吗",
+        "letter": "question particle",
+        "pinyin": "ma"
+    },
+    "131": {
+        "character": "呢",
+        "letter": "question particle",
+        "pinyin": "ne"
+    },
+    "132": {
+        "character": "和",
+        "letter": "and",
+        "pinyin": "hé"
+    },
+    "133": {
+        "character": "喂",
+        "letter": "hello (on the phone)",
+        "pinyin": "wèi"
+    },
+    "134": {
+        "character": "谢谢",
+        "letter": "thanks",
+        "pinyin": "xièxie"
+    },
+    "135": {
+        "character": "不客气",
+        "letter": "you’re welcome",
+        "pinyin": "bú kèqi"
+    },
+    "136": {
+        "character": "再见",
+        "letter": "goodbye",
+        "pinyin": "zàijiàn"
+    },
+    "137": {
+        "character": "请",
+        "letter": "please…",
+        "pinyin": "qǐng"
+    },
+    "138": {
+        "character": "对不起",
+        "letter": "sorry",
+        "pinyin": "duìbuqǐ"
+    },
+    "139": {
+        "character": "没关系",
+        "letter": "it’s all right",
+        "pinyin": "méi guānxi"
+    },
+    "140": {
+        "character": "零",
+        "letter": "zero",
+        "pinyin": "líng"
+    },
+    "141": {
+        "character": "一",
+        "letter": "one",
+        "pinyin": "yī"
+    },
+    "142": {
+        "character": "二",
+        "letter": "two",
+        "pinyin": "èr"
+    },
+    "143": {
+        "character": "三",
+        "letter": "three",
+        "pinyin": "sān"
+    },
+    "144": {
+        "character": "四",
+        "letter": "four",
+        "pinyin": "sì"
+    },
+    "145": {
+        "character": "五",
+        "letter": "five",
+        "pinyin": "wǔ"
+    },
+    "146": {
+        "character": "六",
+        "letter": "six",
+        "pinyin": "liù"
+    },
+    "147": {
+        "character": "七",
+        "letter": "seven",
+        "pinyin": "qī"
+    },
+    "148": {
+        "character": "八",
+        "letter": "eight",
+        "pinyin": "bā"
+    },
+    "149": {
+        "character": "九",
+        "letter": "nine",
+        "pinyin": "jiǔ"
+    },
+    "150": {
+        "character": "十",
+        "letter": "ten",
+        "pinyin": "shí"
+    }
 }
 
 const chineseHsk1ChartData = [
