@@ -33,9 +33,9 @@ class Controller {
         this.model.showChart(boolean, chart);
     }
 
-    onShowChartChanged = (boolean, chart, chartTitle, chartType) => {
+    onShowChartChanged = (boolean, chart, chartTitle, chartType, chartLocalStorageKey) => {
         this.view.displayChart(boolean);
-        this.view.addCharacterChart(chart, chartTitle, chartType);
+        this.view.addCharacterChart(chart, chartTitle, chartType, chartLocalStorageKey);
     }
 
     // Handle New Settings Popover visibility

@@ -1380,6 +1380,10 @@ p.learn-how {
     grid-template-columns: 20% 40% 40%;
 }
 
+.grey {
+  color: grey !important;
+}
+
 .top-vocab {
 
     overflow-wrap: break-word;

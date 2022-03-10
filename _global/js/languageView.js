@@ -345,7 +345,7 @@ class View {
   }
 
   // Generate character chart items
-  addCharacterChart(chart, chartTitle, chartType) {
+  addCharacterChart(chart, chartTitle, chartType, chartLocalStorageKey) {
     this.chartContainer.innerHTML = "";
     // Create close button
 
@@ -360,6 +360,10 @@ class View {
     this.chartPopoverContent = this.createElement("div", "chart-popover-content");
     this.chartWrapper = this.createElement("div", "chart-wrapper");
     this.category = this.createElement("div", "category");
+
+    // Get data from local Storage
+    let _data = JSON.parse(localStorage.getItem(chartLocalStorageKey + "Data"));
+    console.log(_data);
 
     if(chart){
     chart.forEach((subChart) => {
@@ -402,6 +406,7 @@ class View {
           let n = 1;
 
           for (let item in charMap) {
+
             let charCard = this.createElement("div", "character-card-vocab");
             let top = this.createElement("div", "top-vocab");
             top.innerHTML = n;
@@ -410,6 +415,11 @@ class View {
             let bottom = this.createElement("div", "bottom-vocab");
             bottom.innerHTML = charMap[item].letter;
             charCard.append(top, middle, bottom);
+
+            if(_data[item].status == 'hidden'){
+              alert(_data[item]);
+              charCard.classList.add('grey');
+            }
             characterColumn.append(charCard);
             n++;
           }

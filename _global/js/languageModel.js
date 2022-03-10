@@ -12,17 +12,18 @@ class Model {
     // Chart Popover
     showChart(boolean, chart) {
         console.log(boolean, chart);
-        let chartData, chartTitle, chartType;
+        let chartData, chartTitle, chartType, chartLocalStorageKey;
 
         languageContent.forEach(item => {
             if(item.chartName == chart){
                 chartData = item.chartData 
                 chartTitle = item.chartTitle;
                 chartType = item.chartType;
+                chartLocalStorageKey = item.localStorageKey;
             }
         })
 
-        this.onShowChartChanged(boolean, chartData,chartTitle,chartType);
+        this.onShowChartChanged(boolean, chartData,chartTitle,chartType, chartLocalStorageKey);
     }
 
     bindOnShowChartChanged(callback) {
