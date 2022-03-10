@@ -417,7 +417,6 @@ class View {
             charCard.append(top, middle, bottom);
 
             if(_data[item].status == 'hidden'){
-              alert(_data[item]);
               charCard.classList.add('grey');
             }
             characterColumn.append(charCard);
