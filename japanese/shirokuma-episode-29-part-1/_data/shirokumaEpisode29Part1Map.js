@@ -1,1008 +1,928 @@
 // Exercise Type (character, vocabulary )
-const shirokumaEpisode19Part1ChartType = "vocabulary";
+const shirokumaEpisode29Part1ChartType = "vocabulary";
 
-const shirokumaEpisode19Part1Map =  {
+const shirokumaEpisode29Part1Map =  {
     "1": {
-        "character": "ペンギンにもいろいろあるよ",
-        "letter": "Penguins come in all shapes and sizes.",
-        "pinyin": "ぺんぎんにもいろいろあるよ"
+        "character": "パンダくんの新しいバイト",
+        "letter": "ぱんだくんのあたらしいばいと",
+        "pinyin": "Panda-kun's new job"
     },
     "2": {
-        "character": "はい…はい…ええええ…ですから…はい…",
-        "letter": "Yes... yes... yes... yes... so... yes...",
-        "pinyin": "はい…はい…ええええ…ですから…はい…"
+        "character": "こんにちは～",
+        "letter": "こんにちは～",
+        "pinyin": "Hello."
     },
     "3": {
-        "character": "わかった先に入ってる",
-        "letter": "Okay, I'm in first.",
-        "pinyin": "わかったさきにはいってる"
+        "character": "なにその格好",
+        "letter": "なにそのかっこう",
+        "pinyin": "What's with the outfit?"
     },
     "4": {
-        "character": "笹子さんなんって？",
-        "letter": "What's that, Sasago?",
-        "pinyin": "ささごさんなんって？"
+        "character": "クフフ…週１で新しいバイト始めるの",
+        "letter": "くふふ…しゅう１であたらしいばいとはじめるの",
+        "pinyin": "I'm starting a new part-time job once a week."
     },
     "5": {
-        "character": "海がきれいだって",
-        "letter": "He says the ocean is beautiful.",
-        "pinyin": "うみがきれいだって"
+        "character": "えぇやめるんじゃなくて増やすの",
+        "letter": "えぇやめるんじゃなくてふやすの",
+        "pinyin": "Yeah, but I'm not stopping. I'm adding."
     },
     "6": {
-        "character": "なんで海にいるの？",
-        "letter": "Why are you at the beach?",
-        "pinyin": "なんでうみにいるの？"
+        "character": "そうだよ",
+        "letter": "そうだよ",
+        "pinyin": "Yes, it is."
     },
     "7": {
-        "character": "久しぶりに電車に乗ったから方向間違えたって",
-        "letter": "He said it's been a while since he took the train, so he took a wrong turn.",
-        "pinyin": "ひさしぶりにでんしゃにのったからほうこうまちがえたって"
+        "character": "かわいいねパンダ柄",
+        "letter": "かわいいねぱんだがら",
+        "pinyin": "Cute panda print."
     },
     "8": {
-        "character": "ペンギンさんも遅いね",
-        "letter": "You're late, Penguin.",
-        "pinyin": "ぺんぎんさんもおそいね"
+        "character": "わかる笹子さん",
+        "letter": "わかるささごさん",
+        "pinyin": "I understand, Sasago."
     },
     "9": {
-        "character": "また逃げ回ってるんじゃないの？ペン子さんズから",
-        "letter": "I thought you were on the run again. From the Penkosans.",
-        "pinyin": "またにげまわってるんじゃないの？ぺんごさんずから"
+        "character": "でどんなバイトなの",
+        "letter": "でどんなばいとなの",
+        "pinyin": "So what kind of job is it?"
     },
     "10": {
-        "character": "７人もいるから名前を覚えるだけで大変だね",
-        "letter": "There are seven of us, so it's hard just to remember our names.",
-        "pinyin": "７にんもいるからなまえをおぼえるだけでたいへんだね"
+        "character": "ローラー",
+        "letter": "ろーらー",
+        "pinyin": "Roller."
     },
     "11": {
-        "character": "お待たせ！",
-        "letter": "Hey, guys!",
-        "pinyin": "おまたせ！"
+        "character": "ローラー?",
+        "letter": "ろーらー?",
+        "pinyin": "Rollers?"
     },
     "12": {
-        "character": "誰？",
-        "letter": "Who's there?",
-        "pinyin": "だれ？"
+        "character": "皆目見当つかないんだけど",
+        "letter": "かいもくけんとうつかないんだけど",
+        "pinyin": "I have no idea what you're talking about."
     },
     "13": {
-        "character": "ペン子さん８号？",
-        "letter": "Penko-san 8?",
-        "pinyin": "ぺんごさん８ごう？"
+        "character": "知らないのローラーだよローラー",
+        "letter": "しらないのろーらーだよろーらー",
+        "pinyin": "I don't know."
     },
     "14": {
-        "character": "やめてよ",
-        "letter": "Stop it.",
-        "pinyin": "やめてよ"
+        "character": "カーラーそれやったよね",
+        "letter": "かーらーそれやったよね",
+        "pinyin": "Curler, you did that."
     },
     "15": {
-        "character": "この子は僕の甥っ子",
-        "letter": "This is my nephew.",
-        "pinyin": "このこはぼくのおいっこ"
+        "character": "セーラーそれもやったよね",
+        "letter": "せーらーそれもやったよね",
+        "pinyin": "Sailor, you did that too."
     },
     "16": {
-        "character": "こんにちは",
-        "letter": "Hello.",
-        "pinyin": "こんにちは"
+        "character": "ディーラーそれも…",
+        "letter": "でぃーらーそれも…",
+        "pinyin": "Dealer, that's..."
     },
     "17": {
-        "character": "かわいい！",
-        "letter": "Cute!",
-        "pinyin": "かわいい！"
+        "character": "あ…それだ",
+        "letter": "あ…それだ",
+        "pinyin": "Uh... that's it."
     },
     "18": {
-        "character": "コウテイペンギンのヒナって本当にかわいいよね",
-        "letter": "Cute little penguin chicks are really cute, aren't they?",
-        "pinyin": "こうていぺんぎんのひなってほんとうにかわいいよね"
+        "character": "えっ",
+        "letter": "えっ",
+        "pinyin": "What?"
     },
     "19": {
-        "character": "あらアンタも来てたの？",
-        "letter": "Oh, you're here too?",
-        "pinyin": "あらあんたもこてたの？"
+        "character": "ローラーじゃなくてディーラーだった",
+        "letter": "ろーらーじゃなくてでぃーらーだった",
+        "pinyin": "I was a dealer, not a roller."
     },
     "20": {
-        "character": "げっ！？",
-        "letter": "Geez!",
-        "pinyin": "げっ！？"
+        "character": "カジノで働くの",
+        "letter": "かじのではたらくの",
+        "pinyin": "I work in a casino."
     },
     "21": {
-        "character": "しつこいね",
-        "letter": "You're persistent.",
-        "pinyin": "しつこいね"
+        "character": "ううんかっこいい車を売るの",
+        "letter": "ううんかっこいいくるまをうるの",
+        "pinyin": "No, I sell cool cars."
     },
     "22": {
-        "character": "ペンギンさんのお友達？",
-        "letter": "Are you a friend of Penguin?",
-        "pinyin": "ぺんぎんさんのおともだち？"
+        "character": "それって…車のディーラー",
+        "letter": "それって…くるまのでぃーらー",
+        "pinyin": "It's a... car dealership."
     },
     "23": {
-        "character": "まあ失礼な！！",
-        "letter": "Oh, my God, that's so rude!",
-        "pinyin": "まあしつれいな！！"
+        "character": "キミが車を売るの",
+        "letter": "きみがくるまをうるの",
+        "pinyin": "You sell cars."
     },
     "24": {
-        "character": "コウテイペンギンなんかと仲間にしないでよ！",
-        "letter": "You don't get to be friends with a penguin!",
-        "pinyin": "こうていぺんぎんなんかとなかまにしないでよ！"
+        "character": "大丈夫ネクタイしてるし",
+        "letter": "だいじょうぶねくたいしてるし",
+        "pinyin": "I'm fine. I'm wearing a tie."
     },
     "25": {
-        "character": "それはこっちのセリフだよ！",
-        "letter": "That's my line!",
-        "pinyin": "それはこっちのせりふだよ！"
+        "character": "あ…なんでキミを雇ったんだろう",
+        "letter": "あ…なんできみをやとったんだろう",
+        "pinyin": "Uh... why did I hire you?"
     },
     "26": {
-        "character": "えっ？",
-        "letter": "What?",
-        "pinyin": "えっ？"
+        "character": "あ～あ楽しみだなぁ",
+        "letter": "あ～あたのしみだなぁ",
+        "pinyin": "Oh, this is gonna be fun."
     },
     "27": {
-        "character": "どっちもコウテイペンギンさんじゃないの？",
-        "letter": "Aren't they both Mr. Storks?",
-        "pinyin": "どっちもこうていぺんぎんさんじゃないの？"
+        "character": "なにをするのかなぁ",
+        "letter": "なにをするのかなぁ",
+        "pinyin": "I wonder what he's going to do."
     },
     "28": {
-        "character": "違うよ！違うわよ！",
-        "letter": "No, I'm not! No, I'm not!",
-        "pinyin": "ちがうよ！ちがうわよ！"
+        "character": "売るんじゃない車を",
+        "letter": "うるんじゃないくるまを",
+        "pinyin": "I'm not selling the car."
     },
     "29": {
-        "character": "僕が正真正銘のコウテイペンギン！",
-        "letter": "I am the real penguin!",
-        "pinyin": "ぼくがしょうしんしょうめいのこうていぺんぎん！"
+        "character": "あれお客さんですか",
+        "letter": "あれおきゃくさんですか",
+        "pinyin": "Is that a customer?"
     },
     "30": {
-        "character": "私が正真正銘のキングペンギン！",
-        "letter": "I am the real King Penguin!",
-        "pinyin": "わたしがしょうしんしょうめいのきんぐぺんぎん！"
+        "character": "えっそうだけど",
+        "letter": "えっそうだけど",
+        "pinyin": "Oh, yeah."
     },
     "31": {
-        "character": "こんな図体がでかいだけのヤツと一緒にしないでちょうだい！",
-        "letter": "Don't put me with these big guys!",
-        "pinyin": "こんなずうたいがでかいだけのやつといっしょにしないでちょうだい！"
+        "character": "いらっしゃいませ",
+        "letter": "いらっしゃいませ",
+        "pinyin": "Welcome."
     },
     "32": {
-        "character": "イタッ！こっちこそ一緒にされたくないね",
-        "letter": "Ouch! I don't want to be lumped in with you.",
-        "pinyin": "いたっ！こっちこそいっしょにされたくないね"
+        "character": "キミは",
+        "letter": "きみは",
+        "pinyin": "You are."
     },
     "33": {
-        "character": "ド派手なオレンジ色のキングペンギンなんかと",
-        "letter": "I don't want to be the flashy orange king penguin.",
-        "pinyin": "どはでなおれんじいろのきんぐぺんぎんなんかと"
+        "character": "新しく入ったパンダです",
+        "letter": "あたらしくはいったぱんだです",
+        "pinyin": "I'm the new panda."
     },
     "34": {
-        "character": "ド派手じゃなくてエレガント！！",
-        "letter": "Not flashy, elegant!",
-        "pinyin": "どはでじゃなくてえれがんと！！"
+        "character": "はぁそうじゃあちょっといいかね",
+        "letter": "はぁそうじゃあちょっといいかね",
+        "pinyin": "Oh, well, can I have a word with you?"
     },
     "35": {
-        "character": "イタッ！",
-        "letter": "Ouch!",
-        "pinyin": "いたっ！"
+        "character": "ちょっとだけならいいですよ",
+        "letter": "ちょっとだけならいいですよ",
+        "pinyin": "Just a little bit is all right."
     },
     "36": {
-        "character": "なんか仲悪いね",
-        "letter": "They don't get along with each other.",
-        "pinyin": "なんかなかわるいね"
+        "character": "なんですか",
+        "letter": "なんですか",
+        "pinyin": "Excuse me?"
     },
     "37": {
-        "character": "僕らは平和主義なのに",
-        "letter": "We're pacifists.",
-        "pinyin": "ぼくらはへいわしゅぎなのに"
+        "character": "あぁこの車オプションはなにがあるのかね",
+        "letter": "あぁこのくるまおぷしょんはなにがあるのかね",
+        "pinyin": "What are the options for this car?"
     },
     "38": {
-        "character": "キングペンギンたちがやたらとケンカを売ってくるから",
-        "letter": "The king penguins are always trying to pick a fight with me.",
-        "pinyin": "きんぐぺんぎんたちがやたらとけんかをうってくるから"
+        "character": "オプションってなに",
+        "letter": "おぷしょんってなに",
+        "pinyin": "What are options?"
     },
     "39": {
-        "character": "原因はアンタたちでしょ",
-        "letter": "You're the cause of all this.",
-        "pinyin": "げんいんはあんたたちでしょ"
+        "character": "あ…",
+        "letter": "あ…",
+        "pinyin": "Uh..."
     },
     "40": {
-        "character": "コウテイペンギンのせいで私たちはいっつも大迷惑しているんだから",
-        "letter": "The penguins are always causing us a lot of trouble!",
-        "pinyin": "こうていぺんぎんのせいでわたしたちはいっつもだいめいわくしているんだから"
+        "character": "え～っと…エアバックはついてるのかな",
+        "letter": "え～っと…えあばっくはついてるのかな",
+        "pinyin": "Well... does it have air bags?"
     },
     "41": {
-        "character": "大迷惑？",
-        "letter": "Big trouble?",
-        "pinyin": "だいめいわく？"
+        "character": "バックしますよさせますか",
+        "letter": "ばっくしますよさせますか",
+        "pinyin": "It'll back up."
     },
     "42": {
-        "character": "そうよ例えば…",
-        "letter": "Yeah, like...",
-        "pinyin": "そうよたとえば…"
+        "character": "えっ…じゃあ燃費は",
+        "letter": "えっ…じゃあねんぴは",
+        "pinyin": "Well... fuel economy then."
     },
     "43": {
-        "character": "動物園じゃキングペンギンのほうが大活躍しているのに",
-        "letter": "King penguins are more successful at the zoo.",
-        "pinyin": "どうぶつえんじゃきんぐぺんぎんのほうがだいかつやくしているのに"
+        "character": "もっと違う質問ないですか",
+        "letter": "もっとちがうしつもんないですか",
+        "pinyin": "Do you have a different question?"
     },
     "44": {
-        "character": "人間たちは平気で間違うのよ！",
-        "letter": "Humans are so wrong!",
-        "pinyin": "にんげんたちはへいきでまちがうのよ！"
+        "character": "例えば",
+        "letter": "たとえば",
+        "pinyin": "For example."
     },
     "45": {
-        "character": "ハア…大迷惑よ",
-        "letter": "Haa... it's a huge pain in the ass.",
-        "pinyin": "はあ…だいめいわくよ"
+        "character": "パンダのこととか竹のこととか",
+        "letter": "ぱんだのこととかたけのこととか",
+        "pinyin": "I'm talking about pandas, bamboo..."
     },
     "46": {
-        "character": "ペンギンにもいろいろあるんだね",
-        "letter": "I guess penguins come in all shapes and sizes.",
-        "pinyin": "ぺんぎんにもいろいろあるんだね"
+        "character": "だれか…他の人いないかな",
+        "letter": "だれか…ほかのひといないかな",
+        "pinyin": "Anyone else... anyone else?"
     },
     "47": {
-        "character": "まあ大人同士は多少似てるかもしれないけど",
-        "letter": "Well, the adults may look a little bit like each other.",
-        "pinyin": "まあおとなどうしはたしょうにてるかもしれないけど"
+        "character": "どっちが聞きたいですか",
+        "letter": "どっちがききたいですか",
+        "pinyin": "Which one do you want to ask?"
     },
     "48": {
-        "character": "キングペンギンのヒナときたら",
-        "letter": "King penguin chicks...",
-        "pinyin": "きんぐぺんぎんのひなときたら"
+        "character": "え",
+        "letter": "え",
+        "pinyin": "Eh..."
     },
     "49": {
-        "character": "まるで汚れたモップみたいなんだから",
-        "letter": "You're like a dirty mop.",
-        "pinyin": "まるでよごれたもっぷみたいなんだから"
+        "character": "あぁ…じゃあパンダ",
+        "letter": "あぁ…じゃあぱんだ",
+        "pinyin": "Ah... then pandas."
     },
     "50": {
-        "character": "まあ失礼ね！！",
-        "letter": "Oh, my God, that's so rude!",
-        "pinyin": "まあしつれいね！！"
+        "character": "パンダは…こんな感じでぇ～す",
+        "letter": "ぱんだは…こんなかんじでぇ～す",
+        "pinyin": "Pandas... look like this."
     },
     "51": {
-        "character": "イタッ！乱暴しないでよ！！",
-        "letter": "Ow! Don't hurt me!",
-        "pinyin": "いたっ！らんぼうしないでよ！！"
+        "character": "あぁ…かわいいはかわいいんだけど…",
+        "letter": "あぁ…かわいいはかわいいんだけど…",
+        "pinyin": "Yeah... cute is cute, but..."
     },
     "52": {
-        "character": "あれ？その子は？",
-        "letter": "Huh? Who's the boy?",
-        "pinyin": "あれ？そのこは？"
+        "character": "ハッハハハ…困ったなぁ",
+        "letter": "はっははは…こまったなぁ",
+        "pinyin": "Hahahahaha... you're in trouble."
     },
     "53": {
-        "character": "家の息子よかわいいでしょ？",
-        "letter": "Isn't he cute?",
-        "pinyin": "いえのむすこよかわいいでしょ？"
+        "character": "辛抱強いお客さんだね",
+        "letter": "しんぼうづよいおきゃくさんだね",
+        "pinyin": "You're a patient customer."
     },
     "54": {
-        "character": "かわいいというより…",
-        "letter": "It's not cute. It's just...",
-        "pinyin": "かわいいというより…"
+        "character": "自然体って大事だよねぇ",
+        "letter": "しぜんたいってだいじだよねぇ",
+        "pinyin": "It's important to be natural, isn't it?"
     },
     "55": {
-        "character": "ちょっと怖いかも",
-        "letter": "Maybe I'm a little scared.",
-        "pinyin": "ちょっとこわいかも"
+        "character": "それが通用するのは動物園だけじゃない",
+        "letter": "それがつうようするのはどうぶつえんだけじゃない",
+        "pinyin": "And it's not just zoos where it works."
     },
     "56": {
-        "character": "失礼ね！こういうのがブスかわいいっていうのよ！！",
-        "letter": "That's rude! This is what I call ugly cute!",
-        "pinyin": "しつれいね！こういうのがぶすかわいいっていうのよ！！"
+        "character": "車だって売れたよ",
+        "letter": "くるまだってうれたよ",
+        "pinyin": "I even sold a car."
     },
     "57": {
-        "character": "ぼ…僕…モップとか言ってごめんね",
-        "letter": "I'm... sorry for calling you a mop.",
-        "pinyin": "ぼ…ぼく…もっぷとかいってごめんね"
+        "character": "えっどうやって",
+        "letter": "えっどうやって",
+        "pinyin": "What? How?"
     },
     "58": {
-        "character": "フワフワ…",
-        "letter": "Fluffy...",
-        "pinyin": "ふわふわ…"
+        "character": "だから自然体だよ",
+        "letter": "だからしぜんたいだよ",
+        "pinyin": "That's why I'm a natural."
     },
     "59": {
-        "character": "モコモコ…",
-        "letter": "Fluffy...",
-        "pinyin": "もこもこ…"
+        "character": "これでも起きないってすごいなぁ…",
+        "letter": "これでもおきないってすごいなぁ…",
+        "pinyin": "It's amazing this hasn't happened..."
     },
     "60": {
-        "character": "こっちは仲よくなってるよ",
-        "letter": "We're getting along great over here.",
-        "pinyin": "こっちはなかよくなってるよ"
+        "character": "なんでパンダが乗っかってるの",
+        "letter": "なんでぱんだがのっかってるの",
+        "pinyin": "Why is there a panda on it?"
     },
     "61": {
-        "character": "そっちも仲よくしたら？",
-        "letter": "Why don't you get along?",
-        "pinyin": "そっちもなかよくしたら？"
+        "character": "えっ…",
+        "letter": "えっ…",
+        "pinyin": "What..."
     },
     "62": {
-        "character": "ま…まあ僕はもともと平和主義だし…",
-        "letter": "Well, I'm a pacifist by nature, so...",
-        "pinyin": "ま…まあぼくはもともとへいわしゅぎだし…"
+        "character": "こ…このように",
+        "letter": "こ…このように",
+        "pinyin": "This... this way."
     },
     "63": {
-        "character": "しかたないわね特別に停戦してあげるわ",
-        "letter": "Well, I guess I'll have to make a special truce with you.",
-        "pinyin": "しかたないわねとくべつにていせんしてあげるわ"
+        "character": "パンダを乗せてもヘコまない強靭なボディー",
+        "letter": "ぱんだをのせてもへこまないきょうじんなぼでぃー",
+        "pinyin": "Strong body that doesn't get bent even with a panda on it."
     },
     "64": {
-        "character": "よかった",
-        "letter": "Good.",
-        "pinyin": "よかった"
+        "character": "眠りを妨げないエンジン音は",
+        "letter": "ねむりをさまたげないえんじんおんは",
+        "pinyin": "The engine sound that does not disturb your sleep"
     },
     "65": {
-        "character": "南極平和条約締結だね",
-        "letter": "So we have an Antarctic peace treaty.",
-        "pinyin": "なんきょくへいわじょうやくていけつだね"
+        "character": "他社と比べて頭１つ抜きんでております",
+        "letter": "たしゃとくらべてあたま１つぬきんでております",
+        "pinyin": "We are a head and shoulders above the competition."
     },
     "66": {
-        "character": "おっコウテイペンギンだぞ",
-        "letter": "Hey, there's a penguin.",
-        "pinyin": "おっこうていぺんぎんだぞ"
+        "character": "気持よさそうだね",
+        "letter": "きもちよさそうだね",
+        "pinyin": "Looks comfortable."
     },
     "67": {
-        "character": "本当だ！",
-        "letter": "It's true!",
-        "pinyin": "ほんとうだ！"
+        "character": "ですね",
+        "letter": "ですね",
+        "pinyin": "Yes, sir."
     },
     "68": {
-        "character": "うわぁ～！",
-        "letter": "Oh, my God!",
-        "pinyin": "うわぁ～！"
+        "character": "ちょっと乗ってみていい",
+        "letter": "ちょっとのってみていい",
+        "pinyin": "You can go for a ride."
     },
     "69": {
-        "character": "プール！プール！",
-        "letter": "Pool! Pool!",
-        "pinyin": "ぷーる！ぷーる！"
+        "character": "ありがとうございます",
+        "letter": "ありがとうございます",
+        "pinyin": "Thank you."
     },
     "70": {
-        "character": "僕でも余裕の広さだね",
-        "letter": "It's big enough for me.",
-        "pinyin": "ぼくでもよゆうのひろさだね"
+        "character": "店員さんの手柄じゃない",
+        "letter": "てんいんさんのてがらじゃない",
+        "pinyin": "No credit to the clerk."
     },
     "71": {
-        "character": "最近飲みすぎでメタボ気味だから",
-        "letter": "I've been drinking too much lately.",
-        "pinyin": "さいきんのみすぎでめたぼぎみだから"
+        "character": "でも僕のおかげだって褒められたよ",
+        "letter": "でもぼくのおかげだってほめられたよ",
+        "pinyin": "But they said it was because of me."
     },
     "72": {
-        "character": "今日はいっぱい泳ごう",
-        "letter": "Let's swim a lot today.",
-        "pinyin": "きょうはいっぱいおよごう"
+        "character": "売り上げがあがったって",
+        "letter": "うりあげがあがったって",
+        "pinyin": "He said sales went up."
     },
     "73": {
-        "character": "あっペンギンさん発見！",
-        "letter": "Oh, I found the penguins!",
-        "pinyin": "あっぺんぎんさんはっけん！"
+        "character": "また車の上で寝てくれって",
+        "letter": "またくるまのうえでねてくれって",
+        "pinyin": "He wants me to sleep on the car again."
     },
     "74": {
-        "character": "ペンギンさんひどい！どうして私を誘ってくれないの？",
-        "letter": "Oh, Penguin, you're terrible! Why didn't you invite me?",
-        "pinyin": "ぺんぎんさんひどい！どうしてわたしをさそってくれないの？"
+        "character": "販売員というよりはマスコットキャラだね",
+        "letter": "はんばいいんというよりはますこっときゃらだね",
+        "pinyin": "You're more of a mascot character than a salesperson."
     },
     "75": {
-        "character": "さてここで問題です",
-        "letter": "Now here's the question.",
-        "pinyin": "さてここでもんだいです"
+        "character": "まあ上手くいってるみたいでよかったね",
+        "letter": "まあうまくいってるみたいでよかったね",
+        "pinyin": "Well, I'm glad it's working out for you."
     },
     "76": {
-        "character": "ペンジョリーナさんは右から何番目でしょう？",
-        "letter": "What is Ms. Penjolina's position from the right?",
-        "pinyin": "ぺんじょりーなさんはみぎからなんばんめでしょう？"
+        "character": "それで転職したんだ",
+        "letter": "それでてんしょくしたんだ",
+        "pinyin": "So I got a new job."
     },
     "77": {
-        "character": "それ難しいね",
-        "letter": "That's a tough one.",
-        "pinyin": "それむずかしいね"
+        "character": "なんで",
+        "letter": "なんで",
+        "pinyin": "Why?"
     },
     "78": {
-        "character": "どうしてここに？",
-        "letter": "How did you get here?",
-        "pinyin": "どうしてここに？"
+        "character": "お得意様の社長さんに気に入られて",
+        "letter": "おとくいさまのしゃちょうさんにきにいられて",
+        "pinyin": "The president of one of our clients liked me."
     },
     "79": {
-        "character": "けさスマホでつぶやいてたでしょ？",
-        "letter": "You were tweeting on your phone the other day, weren't you?",
-        "pinyin": "けさすまほでつぶやいてたでしょ？"
+        "character": "そこの会社で働くことになったんだ～",
+        "letter": "そこのかいしゃではたらくことになったんだ～",
+        "pinyin": "I'm going to work for them."
     },
     "80": {
-        "character": "甥っ子をよろしく！",
-        "letter": "Take care of my nephew!",
-        "pinyin": "おいっこをよろしく！"
+        "character": "今度はどんな仕事なの",
+        "letter": "こんどはどんなしごとなの",
+        "pinyin": "What kind of work do you do now?"
     },
     "81": {
-        "character": "あっ逃げた！",
-        "letter": "Oh, he got away!",
-        "pinyin": "あっにげた！"
+        "character": "ウリウリカイカイみたいな仕事だよ",
+        "letter": "うりうりかいかいみたいなしごとだよ",
+        "pinyin": "It's a job like the Uri Uri Kai Kai Kai."
     },
     "82": {
-        "character": "あ～～～",
-        "letter": "Ah~~",
-        "pinyin": "あ～～～"
+        "character": "ウリウリ",
+        "letter": "うりうり",
+        "pinyin": "Ulli Ulli"
     },
     "83": {
-        "character": "待ってーー",
-        "letter": "Wait!",
-        "pinyin": "まってーー"
+        "character": "カイカイ",
+        "letter": "かいかい",
+        "pinyin": "Kai Kai"
     },
     "84": {
-        "character": "ペンギンさん今日はいっぱい泳げそうだね",
-        "letter": "Well, Penguin, looks like you're going to have a lot of swimming today.",
-        "pinyin": "ぺんぎんさんきょうはいっぱいおよげそうだね"
+        "character": "マルビの株ですが部長の読みどおりでした",
+        "letter": "まるびのかぶですがぶちょうのよみどおりでした",
+        "pinyin": "Marubi's stock, as read by the department head."
     },
     "85": {
-        "character": "ペンギンさん～～",
-        "letter": "Penguin~!",
-        "pinyin": "ぺんぎんさん～～"
+        "character": "そうかヨツビシのほうはどうなって…",
+        "letter": "そうかよつびしのほうはどうなって…",
+        "pinyin": "I see. What about Yotsubishis?"
     },
     "86": {
-        "character": "私がペン子",
-        "letter": "I'm Penko.",
-        "pinyin": "わたしがぺんご"
+        "character": "うん",
+        "letter": "うん",
+        "pinyin": "Yeah. - Yeah."
     },
     "87": {
-        "character": "私がペン美",
-        "letter": "I am Penmi.",
-        "pinyin": "わたしがぺんび"
+        "character": "いつからパンダが部長に…",
+        "letter": "いつからぱんだがぶちょうに…",
+        "pinyin": "Since when did pandas become department heads..."
     },
     "88": {
-        "character": "私がペン乃",
-        "letter": "I am Penno",
-        "pinyin": "わたしがぺんの"
+        "character": "なに",
+        "letter": "なに",
+        "pinyin": "what?"
     },
     "89": {
-        "character": "私がペン花",
-        "letter": "I am Penhana",
-        "pinyin": "わたしがぺんばな"
+        "character": "あの…ここは何をする会社なんですか",
+        "letter": "あの…ここはなにをするかいしゃなんですか",
+        "pinyin": "Um... what does this company do?"
     },
     "90": {
-        "character": "私がペン奈",
-        "letter": "I am Penna",
-        "pinyin": "わたしがぺんだい"
+        "character": "どうやら部長ってわけでもないみたいですね…",
+        "letter": "どうやらぶちょうってわけでもないみたいですね…",
+        "pinyin": "Apparently, I'm not the head of the department..."
     },
     "91": {
-        "character": "私がペンニュエル",
-        "letter": "I am Penuel",
-        "pinyin": "わたしがぺんにゅえる"
+        "character": "迷子か",
+        "letter": "まいごか",
+        "pinyin": "Lost."
     },
     "92": {
-        "character": "私がペンジョリーナ",
-        "letter": "I am Penjolina",
-        "pinyin": "わたしがぺんじょりーな"
+        "character": "新入社員ですよ",
+        "letter": "しんにゅうしゃいんですよ",
+        "pinyin": "We're new employees."
     },
     "93": {
-        "character": "私が…",
-        "letter": "I'll...",
-        "pinyin": "わたしが…"
+        "character": "新入社員",
+        "letter": "しんにゅうしゃいん",
+        "pinyin": "new employee"
     },
     "94": {
-        "character": "あれ剥製じゃないよね？",
-        "letter": "That's not stuffed, is it?",
-        "pinyin": "あれはくせいじゃないよね？"
+        "character": "こりゃまた人事部も思い切ったことを…",
+        "letter": "こりゃまたじんじぶもおもいきったことを…",
+        "pinyin": "Oh my, another drastic move by the HR department..."
     },
     "95": {
-        "character": "話かけようか？",
-        "letter": "You want me to talk to him?",
-        "pinyin": "はなしかけようか？"
+        "character": "ウリウリカイカイって何",
+        "letter": "うりうりかいかいってなに",
+        "pinyin": "What is Uri Uri Kaikai?"
     },
     "96": {
-        "character": "やばいよ！目玉つつかれるぞ！",
-        "letter": "Oh, no! You're gonna get poked in the eyeball!",
-        "pinyin": "やばいよ！めだまつつかれるぞ！"
+        "character": "とりあえずキミ",
+        "letter": "とりあえずきみ",
+        "pinyin": "You for now."
     },
     "97": {
-        "character": "パンダくんせっかくプールに来たんだから泳ごうよ",
-        "letter": "Come on, panda, we're at the pool. Let's go swimming.",
-        "pinyin": "ぱんだくんせっかくぷーるにきたんだからおよごうよ"
+        "character": "しばらく面倒をみてやれ",
+        "letter": "しばらくめんどうをみてやれ",
+        "pinyin": "Take care of him for a while."
     },
     "98": {
-        "character": "泳ごうよ！",
-        "letter": "Let's swim!",
-        "pinyin": "およごうよ！"
+        "character": "えっ僕がですか",
+        "letter": "えっぼくがですか",
+        "pinyin": "What? Me?"
     },
     "99": {
-        "character": "えぇ～？僕涼みに来たんだもん",
-        "letter": "What? I came here to cool off.",
-        "pinyin": "えぇ～？ぼくすずみにきたんだもん"
+        "character": "いいもう１回説明するからよく聞いて",
+        "letter": "いいもう１かいせつめいするからよくきいて",
+        "pinyin": "Okay, I'm gonna explain it to you one more time, but listen carefully."
     },
     "100": {
-        "character": "食っちゃ寝してたら太るよ",
-        "letter": "You're gonna get fat if you keep sleeping around.",
-        "pinyin": "くっちゃねしてたらふとるよ"
+        "character": "これをサポートラインといって",
+        "letter": "これをさぽーとらいんといって",
+        "pinyin": "This is called a support line."
     },
     "101": {
-        "character": "太るよ",
-        "letter": "You'll get fat.",
-        "pinyin": "ふとるよ"
+        "character": "これよりも下がったら売り",
+        "letter": "これよりもさがったらうり",
+        "pinyin": "Sell when it drops below this level."
     },
     "102": {
-        "character": "いいも～ん",
-        "letter": "I don't care.",
-        "pinyin": "いいも～ん"
+        "character": "この線に近づいたときが買い",
+        "letter": "このせんにちかづいたときがかい",
+        "pinyin": "Buy when you get close to this line."
     },
     "103": {
-        "character": "運動嫌いだもん",
-        "letter": "I hate exercise.",
-        "pinyin": "うんどうきらいだもん"
+        "character": "反対にこの山の部分をつないだ線を…",
+        "letter": "はんたいにこのやまのぶぶんをつないだせんを…",
+        "pinyin": "On the other hand, the line connecting these mountains..."
     },
     "104": {
-        "character": "シロクマさん！一緒に遊びましょう！",
-        "letter": "Polar bear! Come play with us!",
-        "pinyin": "しろくまさん！いっしょにあそびましょう！"
+        "character": "寝てる",
+        "letter": "ねてる",
+        "pinyin": "He's sleeping."
     },
     "105": {
-        "character": "いいよ",
-        "letter": "Okay.",
-        "pinyin": "いいよ"
+        "character": "かわいいはかわいいんだよな",
+        "letter": "かわいいはかわいいんだよな",
+        "pinyin": "Cute is cute, right?"
     },
     "106": {
-        "character": "少しは運動しなよ",
-        "letter": "Get some exercise.",
-        "pinyin": "すこしはうんどうしなよ"
+        "character": "ウリウリ…カイ…",
+        "letter": "うりうり…かい…",
+        "pinyin": "Uli uli uli... kai..."
     },
     "107": {
-        "character": "はぁ～極楽極楽",
-        "letter": "Oh, it's paradise, paradise, paradise!",
-        "pinyin": "はぁ～ごくらくごくらく"
+        "character": "笹…笹大盛り一丁…",
+        "letter": "ささ…ささおおもりいっちょう…",
+        "pinyin": "Bamboos... a big bowl of bamboos..."
     },
     "108": {
-        "character": "あっコウテイペンギンだ！",
-        "letter": "Oh, it's a penguin!",
-        "pinyin": "あっこうていぺんぎんだ！"
+        "character": "で会社のお金で１０万株も買っちゃったの",
+        "letter": "でかいしゃのおかねで１０まんかぶもかっちゃったの",
+        "pinyin": "And I bought 100,000 shares with company money."
     },
     "109": {
-        "character": "違うわよ私はキングペンギンよ！",
-        "letter": "No, I'm the king penguin!",
-        "pinyin": "ちがうわよわたしはきんぐぺんぎんよ！"
+        "character": "どうしてキミを雇ったんだろう",
+        "letter": "どうしてきみをやとったんだろう",
+        "pinyin": "I don't know why I hired you."
     },
     "110": {
-        "character": "あっコウテイペンギンだろ？",
-        "letter": "Oh, you're a penguin, right?",
-        "pinyin": "あっこうていぺんぎんだろ？"
+        "character": "でもねすごく儲かったんだって",
+        "letter": "でもねすごくもうかったんだって",
+        "pinyin": "But, you know, he made a lot of money."
     },
     "111": {
-        "character": "イテテテ！",
-        "letter": "Ouch!",
-        "pinyin": "いててて！"
+        "character": "ほんとなんで",
+        "letter": "ほんとなんで",
+        "pinyin": "Really? Why?"
     },
     "112": {
-        "character": "もう！人間たちってどうして私たちを間違うのかしらね",
-        "letter": "Oh, my God! How can the humans get us so wrong?",
-        "pinyin": "もう！にんげんたちってどうしてわたしたちをまちがうのかしらね"
+        "character": "う～んたまたま",
+        "letter": "う～んたまたま",
+        "pinyin": "Well, it just happened."
     },
     "113": {
-        "character": "なんでキングとコウテイなの？",
-        "letter": "Why king and ko-tay?",
-        "pinyin": "なんできんぐとこうていなの？"
+        "character": "運がいいんだねパンダくん",
+        "letter": "うんがいいんだねぱんだくん",
+        "pinyin": "You're a lucky panda."
     },
     "114": {
-        "character": "あんまり言いたくないけど…",
-        "letter": "I hate to say this, but...",
-        "pinyin": "あんまりいいたくないけど…"
+        "character": "けどねキミ運だけじゃこの先やっていけないよ",
+        "letter": "けどねきみうんだけじゃこのさきやっていけないよ",
+        "pinyin": "But you're not going to make it on luck alone."
     },
     "115": {
-        "character": "昔むかし",
-        "letter": "Once upon a time...",
-        "pinyin": "むかしむかし"
+        "character": "ボロが出ないうちに辞めたほうがいいんじゃないかな",
+        "letter": "ぼろがでないうちにやめたほうがいいんじゃないかな",
+        "pinyin": "I think you should quit before you fall apart."
     },
     "116": {
-        "character": "人間がまだ南極へ行けなかった頃のことよ",
-        "letter": "Back when humans couldn't go to Antarctica.",
-        "pinyin": "にんげんがまだなんきょくへいけなかったころのことよ"
+        "character": "辞めたよ",
+        "letter": "やめたよ",
+        "pinyin": "I quit."
     },
     "117": {
-        "character": "でかっ！なんてでかいペンギンなんだ！",
-        "letter": "It's huge! What a big penguin!",
-        "pinyin": "でかっ！なんてでかいぺんぎんなんだ！"
+        "character": "そうなの",
+        "letter": "そうなの",
+        "pinyin": "Yeah."
     },
     "118": {
-        "character": "最大のペンギンまさに王様キングペンギンと名づけよう",
-        "letter": "The biggest penguin... the very king of penguins... we'll name him King Penguin.",
-        "pinyin": "さいだいのぺんぎんまさにおうさまきんぐぺんぎんとなづけよう"
+        "character": "また転職",
+        "letter": "またてんしょく",
+        "pinyin": "I'm changing jobs again."
     },
     "119": {
-        "character": "当時人が見たことのある一番大きなペンギンはあたしたちだったの",
-        "letter": "We were the biggest penguins people had ever seen.",
-        "pinyin": "とうじひとがみたことのあるいちばんおおきなぺんぎんはあたしたちだったの"
+        "character": "今度は営業セミナーの講師になるんだ",
+        "letter": "こんどはえいぎょうせみなーのこうしになるんだ",
+        "pinyin": "This time I'm going to teach a sales seminar."
     },
     "120": {
-        "character": "へぇ～かっこいいそれで？",
-        "letter": "Wow, cool, so?",
-        "pinyin": "へぇ～かっこいいそれで？"
+        "character": "えっキミが何を教えられるっていうの",
+        "letter": "えっきみがなにをおしえられるっていうの",
+        "pinyin": "What are you supposed to teach?"
     },
     "121": {
-        "character": "その後人間が南極大陸へ行けるようになって",
-        "letter": "Then, when humans were able to go to Antarctica...",
-        "pinyin": "そのごにんげんがなんきょくたいりくへいけるようになって"
+        "character": "ところで…",
+        "letter": "ところで…",
+        "pinyin": "By the way..."
     },
     "122": {
-        "character": "そこにはヤツらがいたのよ！",
-        "letter": "They were there!",
-        "pinyin": "そこにはやつらがいたのよ！"
+        "character": "あのドアの脇の…観葉植物は何かな",
+        "letter": "あのどあのわきの…かんようしょくぶつはなにかな",
+        "pinyin": "What's with the... plant by the door?"
     },
     "123": {
-        "character": "あっでかっ！隊長！キングペンギンよりでかいっすよ！",
-        "letter": "Oh, my God, it's huge! Captain! They're bigger than king penguins!",
-        "pinyin": "あっでかっ！たいちょう！きんぐぺんぎんよりでかいっすよ！"
+        "character": "そっち観葉植物より隣の人でしょあれ誰",
+        "letter": "そっちかんようしょくぶつよりとなりのひとでしょあれだれ",
+        "pinyin": "That's not a houseplant, that's the guy next to you."
     },
     "124": {
-        "character": "名前どうしましょう？",
-        "letter": "What should we name him?",
-        "pinyin": "なまえどうしましょう？"
+        "character": "僕の秘書",
+        "letter": "ぼくのひしょ",
+        "pinyin": "My secretary."
     },
     "125": {
-        "character": "あぁ…それじゃあもう王様の上の皇帝ってことで",
-        "letter": "Well... we're the emperor above the king now.",
-        "pinyin": "あぁ…それじゃあもうおうさまのうえのこうていってことで"
+        "character": "えぇ",
+        "letter": "えぇ",
+        "pinyin": "Yeah. - Yeah."
     },
     "126": {
-        "character": "コウテイペンギンにしちゃえ",
-        "letter": "Let's call him Kotei Penguin!",
-        "pinyin": "こうていぺんぎんにしちゃえ"
+        "character": "丸山と申します",
+        "letter": "まるやまともうします",
+        "pinyin": "My name is Maruyama."
     },
     "127": {
-        "character": "えっ！？そんなに簡単に？",
-        "letter": "What? It's that easy?",
-        "pinyin": "えっ！？そんなにかんたんに？"
+        "character": "あぁどうもペンギンと申します",
+        "letter": "あぁどうもぺんぎんともうします",
+        "pinyin": "Oh, hi. I'm Penguin."
     },
     "128": {
-        "character": "そうよ！",
-        "letter": "Yes!",
-        "pinyin": "そうよ！"
+        "character": "シロクマくん彼にも笹あげて大盛りでね",
+        "letter": "しろくまくんかれにもささあげておおもりでね",
+        "pinyin": "Polar bear, give him some bamboo grass, too."
     },
     "129": {
-        "character": "適当なネーミングをしたのは人間なのに",
-        "letter": "It was the humans who came up with the appropriate name.",
-        "pinyin": "てきとうなねーみんぐをしたのはにんげんなのに"
+        "character": "コーヒーのほうがいいんじゃないかな",
+        "letter": "こーひーのほうがいいんじゃないかな",
+        "pinyin": "Maybe coffee would be better."
     },
     "130": {
-        "character": "その人間にコウテイと間違われるなんて…",
-        "letter": "I can't believe that human mistook me for a bat.",
-        "pinyin": "そのにんげんにこうていとまちがわれるなんて…"
+        "character": "こんにちはパンダです",
+        "letter": "こんにちはぱんだです",
+        "pinyin": "Hello, I'm Panda."
     },
     "131": {
-        "character": "悔しいわ！",
-        "letter": "It's so frustrating!",
-        "pinyin": "くやしいわ！"
+        "character": "今日皆さんにお話するのは人生のあり方についてです",
+        "letter": "きょうみなさんにおはなしするのはじんせいのありかたについてです",
+        "pinyin": "What I'm going to talk to you about today is how life is supposed to be."
     },
     "132": {
-        "character": "そんなの気にしなくても大丈夫だよ",
-        "letter": "You don't have to worry about that.",
-        "pinyin": "そんなのけにしなくてもだいじょうぶだよ"
+        "character": "僕は週に２日動物園でバイトをしています",
+        "letter": "ぼくはしゅうに２にちどうぶつえんでばいとをしています",
+        "pinyin": "I work two days a week at the zoo."
     },
     "133": {
-        "character": "ほら人生山あり谷ありって言うじゃない？",
-        "letter": "You know what they say, there are peaks and valleys in life.",
-        "pinyin": "ほらじんせいやまありたにありっていうじゃない？"
+        "character": "これがその写真です",
+        "letter": "これがそのしゃしんです",
+        "pinyin": "Here's a picture of it."
     },
     "134": {
-        "character": "山には竹あり",
-        "letter": "In the mountains there is bamboo",
-        "pinyin": "やまにはたけあり"
+        "character": "一緒にダラダラしているのは",
+        "letter": "いっしょにだらだらしているのは",
+        "pinyin": "The one who is lazing around with me..."
     },
     "135": {
-        "character": "お腹が空いたら竹あり笹あり",
-        "letter": "When you are hungry, there is bamboo and there is bamboo grass",
-        "pinyin": "おなかがあいたらたけありささあり"
+        "character": "先輩の常勤パンダさんです",
+        "letter": "せんぱいのじょうきんぱんださんです",
+        "pinyin": "This is Mr. Panda, a full-time senior staff member."
     },
     "136": {
-        "character": "ピシッ！ムカつく！",
-        "letter": "Pish! I'm pissed off!",
-        "pinyin": "ぴしっ！むかつく！"
+        "character": "お手元の資料の２ページ目をご覧ください",
+        "letter": "おてもとのしりょうの２ぺーじめをごらんください",
+        "pinyin": "Please see the second page of your handout."
     },
     "137": {
-        "character": "なんかアンタムカつくのよ！",
-        "letter": "I'm kinda pissed off at you, Antam!",
-        "pinyin": "なんかあんたむかつくのよ！"
+        "character": "特に重要な写真を載せてあります",
+        "letter": "とくにじゅうようなしゃしんをのせてあります",
+        "pinyin": "I have included a particularly important photo."
     },
     "138": {
-        "character": "ピシッピシッ…",
-        "letter": "Beep, beep, beep...",
-        "pinyin": "ぴしっぴしっ…"
+        "character": "お母さんに掃除機で吸われている僕です",
+        "letter": "おかあさんにそうじきですわれているぼくです",
+        "pinyin": "This is me being vacuumed by my mother."
     },
     "139": {
-        "character": "あっパンダくん！",
-        "letter": "Oh, Mr. Panda!",
-        "pinyin": "あっぱんだくん！"
+        "character": "どういう趣旨の講演だ",
+        "letter": "どういうしゅしのこうえんだ",
+        "pinyin": "What was the point of the speech?"
     },
     "140": {
-        "character": "なんか運動してる！",
-        "letter": "He's doing some kind of exercise!",
-        "pinyin": "なんかうんどうしてる！"
+        "character": "わからん",
+        "letter": "わからん",
+        "pinyin": "I don't know."
     },
     "141": {
-        "character": "楽しそう！",
-        "letter": "Looks like fun!",
-        "pinyin": "たのしそう！"
+        "character": "だがかわいいのは確かだな",
+        "letter": "だがかわいいのはたしかだな",
+        "pinyin": "But I'm sure he's cute."
     },
     "142": {
-        "character": "ひぃ～だぁ～！",
-        "letter": "Hee~dah~!",
-        "pinyin": "ひぃ～だぁ～！"
+        "character": "続きまして…",
+        "letter": "つづきまして…",
+        "pinyin": "And now..."
     },
     "143": {
-        "character": "待って！",
-        "letter": "Wait!",
-        "pinyin": "まって！"
+        "character": "いやぁかわいかったね",
+        "letter": "いやぁかわいかったね",
+        "pinyin": "Well, that was cute."
     },
     "144": {
-        "character": "あっペンギンさん！",
-        "letter": "Oh, penguins!",
-        "pinyin": "あっぺんぎんさん！"
+        "character": "こういうのもたまにはいいですね",
+        "letter": "こういうのもたまにはいいですね",
+        "pinyin": "This kind of thing is nice sometimes."
     },
     "145": {
-        "character": "ペンギンさんも運動してる！",
-        "letter": "Penguins are exercising too!",
-        "pinyin": "ぺんぎんさんもうんどうしてる！"
+        "character": "明日から頑張ろうな",
+        "letter": "あしたからがんばろうな",
+        "pinyin": "Let's work hard tomorrow."
     },
     "146": {
-        "character": "人気ナンバーワンのパンダに私の気持なんかわかんないわ！",
-        "letter": "The most popular panda doesn't know how I feel!",
-        "pinyin": "にんきなんばーわんのぱんだにわたしのきもちなんかわかんないわ！"
+        "character": "そう社内の空気がよくなって業績が上がったの",
+        "letter": "そうしゃないのくうきがよくなってぎょうせきがあがったの",
+        "pinyin": "Yes, the atmosphere in the office has improved, and our performance has gone up."
     },
     "147": {
-        "character": "こんにちは！",
-        "letter": "Hello!",
-        "pinyin": "こんにちは！"
+        "character": "ああそう",
+        "letter": "ああそう",
+        "pinyin": "Oh, yeah."
     },
     "148": {
-        "character": "またペンギン？",
-        "letter": "Penguins again?",
-        "pinyin": "またぺんぎん？"
+        "character": "ってそんな甘いもんなの世の中って",
+        "letter": "ってそんなあまいもんなのよのなかって",
+        "pinyin": "Is the world really that simple?"
     },
     "149": {
-        "character": "南極の恋人アデリーペンギンです",
-        "letter": "I'm Adelie the Adelie Penguin, lover of Antarctica.",
-        "pinyin": "なんきょくのこいびとあでりーぺんぎんです"
+        "character": "それから本も出したんだ",
+        "letter": "それからほんもだしたんだ",
+        "pinyin": "And then I published a book."
     },
     "150": {
-        "character": "渋めで地味めアゴヒモペンギンです",
-        "letter": "A sober, sober chinstrap penguin.",
-        "pinyin": "しぶめでじみめあごひもぺんぎんです"
+        "character": "本",
+        "letter": "ほん",
+        "pinyin": "Book"
     },
     "151": {
-        "character": "オシャレな性格美人ジェンツーペンギンです",
-        "letter": "A gentoo penguin with a fashionable personality and beauty.",
-        "pinyin": "おしゃれなせいかくびじんじぇんつーぺんぎんです"
+        "character": "こちらでございます",
+        "letter": "こちらでございます",
+        "pinyin": "This way, sir."
     },
     "152": {
-        "character": "３羽合わせてピゴセリス属！",
-        "letter": "All three together are in the genus Pygoscelis!",
-        "pinyin": "３わあわせてぴごせりすぞく！"
+        "character": "サイン入りだよ",
+        "letter": "さいんいりだよ",
+        "pinyin": "It's signed."
     },
     "153": {
-        "character": "決まったね",
-        "letter": "Well, that's settled.",
-        "pinyin": "きまったね"
+        "character": "へぇ～写真集を出したんだ",
+        "letter": "へぇ～しゃしんしゅうをだしたんだ",
+        "pinyin": "Wow, you published a photo book?"
     },
     "154": {
-        "character": "決まった",
-        "letter": "Done.",
-        "pinyin": "きまった"
+        "character": "ビジネス書だよ",
+        "letter": "びじねすしょだよ",
+        "pinyin": "It's a business book."
     },
     "155": {
-        "character": "ピ…ピゴ？",
-        "letter": "Pi... pigo?",
-        "pinyin": "ぴ…ぴご？"
+        "character": "どう見てもただの写真集だよね",
+        "letter": "どうみてもただのしゃしんしゅうだよね",
+        "pinyin": "It's just a photo book, no matter how you look at it."
     },
     "156": {
-        "character": "ピゴセリス！",
-        "letter": "Pigocelis!",
-        "pinyin": "ぴごせりす！"
+        "character": "でいろいろあって今は…",
+        "letter": "でいろいろあっていまは…",
+        "pinyin": "So, a lot has happened, and now..."
     },
     "157": {
-        "character": "アンタたちの属性は呼びにくいのよ",
-        "letter": "Your attributes are hard to call.",
-        "pinyin": "あんたたちのぞくせいはよびにくいのよ"
+        "character": "ＣＥＯ",
+        "letter": "ＣＥＯ",
+        "pinyin": "CEO"
     },
     "158": {
-        "character": "お久しぶりですキングペンギンさん",
-        "letter": "Long time no see, Mr. King Penguin.",
-        "pinyin": "おひさしぶりですきんぐぺんぎんさん"
+        "character": "はいＣＥＯでございます",
+        "letter": "はいＣＥＯでございます",
+        "pinyin": "Yes, I'm the CEO."
     },
     "159": {
-        "character": "キングペンギンさんのアプテノディテス属のほうが呼びにくいです",
-        "letter": "It's more difficult to call you King Penguin's Aptenodytes.",
-        "pinyin": "きんぐぺんぎんさんのあぷてのでぃてすぞくのほうがよびにくいです"
+        "character": "ＣＥＯって何だろうね",
+        "letter": "ＣＥＯってなんだろうね",
+        "pinyin": "I don't know what a CEO is."
     },
     "160": {
-        "character": "同じくアプテノディテス属のコウテイペンギンさんとは仲よくしてますか？",
-        "letter": "Do you get along with Mr. Steller's sea penguin, who also belongs to the genus Aptenodytes?",
-        "pinyin": "おなじくあぷてのでぃてすぞくのこうていぺんぎんさんとはなかよくしてますか？"
+        "character": "ちゃっかりえばって…",
+        "letter": "ちゃっかりえばって…",
+        "pinyin": "You're all smug and..."
     },
     "161": {
-        "character": "フン！アイツのまぎらわしい名前で迷惑しているわ",
-        "letter": "Hmph! His confusing name annoys me.",
-        "pinyin": "ふん！あいつのまぎらわしいなまえでめいわくしているわ"
+        "character": "はい笹子さん",
+        "letter": "はいささごさん",
+        "pinyin": "Yes, Sasago-san."
     },
     "162": {
-        "character": "それを言うなら僕らの名前も適当なもんです",
-        "letter": "If you put it that way, our names are appropriate, too.",
-        "pinyin": "それをいうならぼくらのなまえもてきとうなもんです"
+        "character": "おいしいところ",
+        "letter": "おいしいところ",
+        "pinyin": "Delicious part."
     },
     "163": {
-        "character": "そうなの？",
-        "letter": "Is that so?",
-        "pinyin": "そうなの？"
+        "character": "まぁそういう解釈もあるかもしれないけどさ",
+        "letter": "まぁそういうかいしゃくもあるかもしれないけどさ",
+        "pinyin": "Well, that might be one interpretation."
     },
     "164": {
-        "character": "僕らアデリーペンギンなんて探検家の奥さんの名前なんです",
-        "letter": "We're Adélie penguins, named after the explorer's wife.",
-        "pinyin": "ぼくらあでりーぺんぎんなんてたんけんかのおくさんのなまえなんです"
+        "character": "ＣＥＯって最高経営責任者でしょ",
+        "letter": "ＣＥＯってさいこうけいえいせきにんしゃでしょ",
+        "pinyin": "CEO is the chief executive officer."
     },
     "165": {
-        "character": "だからオスでもアデリーちゃん",
-        "letter": "That's why even the males are Adelie.",
-        "pinyin": "だからおすでもあでりーちゃん"
+        "character": "会社でいちばん偉い人じゃない",
+        "letter": "かいしゃでいちばんえらいひとじゃない",
+        "pinyin": "He's not the most important person in the company."
     },
     "166": {
-        "character": "私たちはアゴヒモをしてることにされて",
-        "letter": "We're supposed to be wearing a chinstrap.",
-        "pinyin": "わたしたちはあごひもをしてることにされて"
+        "character": "僕かわいいだけじゃなくて偉いんだ",
+        "letter": "ぼくかわいいだけじゃなくてえらいんだ",
+        "pinyin": "I'm not only cute, I'm great."
     },
     "167": {
-        "character": "アゴヒモペンギンに…",
-        "letter": "A chinstrap penguin...",
-        "pinyin": "あごひもぺんぎんに…"
+        "character": "すごいねパンダくん",
+        "letter": "すごいねぱんだくん",
+        "pinyin": "That's great, panda."
     },
     "168": {
-        "character": "僕らジェンツーペンギンなんか",
-        "letter": "We gentoo penguins",
-        "pinyin": "ぼくらじぇんつーぺんぎんなんか"
+        "character": "すごいのひと言ですませていいのかな",
+        "letter": "すごいのひとことですませていいのかな",
+        "pinyin": "I don't know if amazing is the right word."
     },
     "169": {
-        "character": "頭の白い模様がターバンに似てるから",
-        "letter": "Because the white pattern on your head looks like a turban.",
-        "pinyin": "あたまのしろいもようがたーばんににてるから"
+        "character": "ご歓談中すみません",
+        "letter": "ごかんだんちゅうすみません",
+        "pinyin": "Excuse me for interrupting your pleasantries."
     },
     "170": {
-        "character": "ポルトガル語で異教徒を意味するジェンツーだなんて！",
-        "letter": "I can't believe it's Gentoo, which means heathen in Portuguese!",
-        "pinyin": "ぽるとがるごでいきょうとをいみするじぇんつーだなんて！"
+        "character": "パンダくん様そろそろお時間でございます",
+        "letter": "ぱんだくんさまそろそろおじかんでございます",
+        "pinyin": "Mr. Panda, I think it's time for you to go."
     },
     "171": {
-        "character": "本当に適当だね",
-        "letter": "That's really appropriate.",
-        "pinyin": "ほんとうにてきとうだね"
+        "character": "またね～",
+        "letter": "またね～",
+        "pinyin": "See you later."
     },
     "172": {
-        "character": "アンタたちもいろいろあんのね…",
-        "letter": "You guys are a lot of things...",
-        "pinyin": "あんたたちもいろいろあんのね…"
+        "character": "人生って計り知れない可能性に満ちてるね",
+        "letter": "じんせいってはかりしれないかのうせいにみちてるね",
+        "pinyin": "Life is full of unfathomable possibilities."
     },
     "173": {
-        "character": "どうです？パンダくん！",
-        "letter": "What do you think? Panda!",
-        "pinyin": "どうです？ぱんだくん！"
+        "character": "いやおかしいでしょ",
+        "letter": "いやおかしいでしょ",
+        "pinyin": "No, it's crazy."
     },
     "174": {
-        "character": "僕たちのこと覚えてくれました？",
-        "letter": "Do you remember us?",
-        "pinyin": "ぼくたちのことおぼえてくれました？"
+        "character": "そうですか",
+        "letter": "そうですか",
+        "pinyin": "Okay."
     },
     "175": {
-        "character": "助けて！",
-        "letter": "Help!",
-        "pinyin": "たすけて！"
+        "character": "こんにちは",
+        "letter": "こんにちは",
+        "pinyin": "Hello. - Hello."
     },
     "176": {
-        "character": "ペンギンさん！",
-        "letter": "Penguin!",
-        "pinyin": "ぺんぎんさん！"
+        "character": "いらっしゃいあれネクタイは",
+        "letter": "いらっしゃいあれねくたいは",
+        "pinyin": "Hey, how are you doing? What's with the tie?"
     },
     "177": {
-        "character": "ペンギン！",
-        "letter": "Penguin!",
-        "pinyin": "ぺんぎん！"
+        "character": "今日はお仕事お休み",
+        "letter": "きょうはおしごとおやすみ",
+        "pinyin": "I'm off work today."
     },
     "178": {
-        "character": "ペンギン！！",
-        "letter": "Penguin!",
-        "pinyin": "ぺんぎん！！"
+        "character": "もう来なくていいって言われたの",
+        "letter": "もうこなくていいっていわれたの",
+        "pinyin": "They told me not to come back."
     },
     "179": {
-        "character": "覚えてくれました？",
-        "letter": "Do you remember me?",
-        "pinyin": "おぼえてくれました？"
+        "character": "そうなんだ残念だね",
+        "letter": "そうなんだざんねんだね",
+        "pinyin": "I'm sorry to hear that."
     },
     "180": {
-        "character": "ピ…ピ…",
-        "letter": "Pi... pi...",
-        "pinyin": "ぴ…ぴ…"
+        "character": "ていうかいままでよくもったよね",
+        "letter": "ていうかいままでよくもったよね",
+        "pinyin": "I mean, how have you lasted this long?"
     },
     "181": {
-        "character": "なかなか覚えられませんよね",
-        "letter": "It's hard to remember, isn't it?",
-        "pinyin": "なかなかおぼえられませんよね"
+        "character": "あれ今日はペンギンさんは来てないの",
+        "letter": "あれきょうはぺんぎんさんはきてないの",
+        "pinyin": "Oh, hey, Penguin didn't come today."
     },
     "182": {
-        "character": "しかもペンギンは全部で１８種類もいるんですよ！",
-        "letter": "And there are a total of 18 different kinds of penguins!",
-        "pinyin": "しかもぺんぎんはぜんぶで１８しゅるいもいるんですよ！"
+        "character": "ちょっと何寝てんの",
+        "letter": "ちょっとなにねてんの",
+        "pinyin": "Hey, what are you doing sleeping?"
     },
     "183": {
-        "character": "えっ！？",
-        "letter": "What?",
-        "pinyin": "えっ！？"
+        "character": "えいやぁ…",
+        "letter": "えいやぁ…",
+        "pinyin": "No, no, no..."
     },
     "184": {
-        "character": "でも大丈夫！",
-        "letter": "But it's okay!",
-        "pinyin": "でもだいじょうぶ！"
+        "character": "ここで寝てたらＣＥＯに…",
+        "letter": "ここでねてたらＣＥＯに…",
+        "pinyin": "If I sleep here, I'll have to tell the CEO..."
     },
-    "185": {
-        "character": "そこでこの…ペンギンカード！",
-        "letter": "That's where these... penguin cards come in!",
-        "pinyin": "そこでこの…ぺんぎんかーど！"
-    },
-    "186": {
-        "character": "遊びながら楽しく覚えられて…",
-        "letter": "You can have fun learning while playing...",
-        "pinyin": "あそびながらたのしくおぼえられて…"
-    },
-    "187": {
-        "character": "今なら特別価格の５００円！",
-        "letter": "Special price now: 500 yen!",
-        "pinyin": "いまならとくべつかかくの５００えん！"
-    },
-    "188": {
-        "character": "何営業してんのよ！？",
-        "letter": "What are you open for business?",
-        "pinyin": "なにえいぎょうしてんのよ！？"
-    },
-    "189": {
-        "character": "あははららあ早い",
-        "letter": "ahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha",
-        "pinyin": "あははららあはやい"
-    },
-    "190": {
-        "character": "電車って難しい…",
-        "letter": "Trains are hard...",
-        "pinyin": "でんしゃってむずかしい…"
-    },
-    "191": {
-        "character": "特別快速とか通勤急行とかいろいろありすぎ",
-        "letter": "Too many things like special rapid, commuter express, etc.",
-        "pinyin": "とくべつかいそくとかつうきんきゅうこうとかいろいろありすぎ"
-    },
-    "192": {
-        "character": "バスみたいにボタン押したら止まってくれればいいのに",
-        "letter": "I wish they would just stop when I push the button like the buses.",
-        "pinyin": "ばすみたいにぼたんおしたらとまってくれればいいのに"
-    },
-    "193": {
-        "character": "ペンギンさん早く降りてきて！",
-        "letter": "Penguin, come down quickly!",
-        "pinyin": "ぺんぎんさんはやくふりてきて！"
-    },
-    "194": {
-        "character": "一緒に泳ぎましょうよ",
-        "letter": "Let's swim together.",
-        "pinyin": "いっしょにおよぎましょうよ"
-    },
-    "195": {
-        "character": "なんでコウテイが最強カードなのよ！？",
-        "letter": "Why is Kotei the most powerful card!",
-        "pinyin": "なんでこうていがさいきょうかーどなのよ！？"
-    },
-    "196": {
-        "character": "知らないよ…",
-        "letter": "I don't know...",
-        "pinyin": "しらないよ…"
-    },
-    "197": {
-        "character": "シロクマさん！ほいっと",
-        "letter": "Polar bear! cheekily",
-        "pinyin": "しろくまさん！ほいっと"
-    },
-    "198": {
-        "character": "こっちこっち！",
-        "letter": "Come here, come here, come here!",
-        "pinyin": "こっちこっち！"
-    },
-    "199": {
-        "character": "泳ごっと！",
-        "letter": "Let's swim!",
-        "pinyin": "およごっと！"
-    },
-    "200": {
-        "character": "バイセンってナンダ！？",
-        "letter": "What's a bicene?",
-        "pinyin": "ばいせんってなんだ！？"
-    },
-   
+
 }
 
-const shirokumaEpisode19Part1ChartData = [{ subtitle: "", "content": shirokumaEpisode19Part1Map }]
+const shirokumaEpisode29Part1ChartData = [{ subtitle: "", "content": shirokumaEpisode29Part1Map }]
