@@ -388,7 +388,7 @@ class Model {
                 if (_data) {
                     for (let item in _data) {
                         let wordData = _data[item];
-                        if (wordData.srsData) {
+                        if (wordData.srsData && wordData.status == undefined) {
                             dateArray.push(wordData.srsData.date);
                         }
                     }
