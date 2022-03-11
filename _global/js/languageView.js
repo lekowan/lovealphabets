@@ -192,8 +192,8 @@ class View {
       languageCta.addEventListener("click", function () {
         window.location.href = item.url;
       });
-
-      
+    
+      /*
       languageReset.addEventListener("click", function () {  
         let text = "Press a button!\nEither OK or Cancel.";
         if (confirm(text) == true) {
@@ -207,7 +207,8 @@ class View {
         } else {
           alert("cancelled!");
         }
-      });
+      }); */
+      
     });
 
     // Popover background
