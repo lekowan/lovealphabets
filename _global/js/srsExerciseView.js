@@ -693,6 +693,12 @@ class View {
     this.goodButton.addEventListener("click", (event) => {
       handler();
     });
+
+    /*
+    this.moreButton.addEventListener("click", (event) => {
+      handler();
+    });
+    */
   }
 
   get _number() {
@@ -800,6 +806,11 @@ class View {
     this.badButton.addEventListener("click", (event) => {
       handler();
     });
+    /*
+    this.moreButton.addEventListener("click", (event) => {
+      handler();
+    });
+    */
   }
 
   displayButtons(boolean) {
@@ -830,6 +841,13 @@ class View {
       handler(boolean);
     });
 
+    /*
+    this.moreButton.addEventListener("click", (event) => {
+      let boolean = false;
+      handler(boolean);
+    });
+    */
+
     this.goodButton.addEventListener("click", (event) => {
       let boolean = false;
       handler(boolean);
@@ -852,6 +870,14 @@ class View {
       handler();
     });
   }
+
+  /*
+  bindProcessMoreButton(handler) {
+    this.moreButton.addEventListener("click", (event) => {
+      handler();
+    });
+  }
+  */
 
   displayCongratulationsPopover(boolean) {
     if (boolean == false) {

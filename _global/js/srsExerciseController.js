@@ -33,6 +33,12 @@ class Controller {
     this.model.bindOnGoodAnswerProcessed(this.onGoodPressed);
     this.view.bindProcessGoodAnswer(this.handleProcessGoodAnswer);
 
+    /*
+    // Process more button
+    this.model.bindOnMoreButtonProcessed(this.moreButtonPressed);
+    this.view.bindProcessMoreButton(this.handleProcessMoreButton);
+    */
+
     // Display initial word + answer
     if (!this.model.showWelcome) this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
 
@@ -162,6 +168,18 @@ class Controller {
   onGoodPressed = () => {
     this.view.bindProcessGoodAnswer();
   };
+
+  /*
+  // Process more button
+  handleProcessMoreButton = () => {
+    this.model.processMoreButton();
+  };
+
+  onMoreButtonPressed = () => {
+    this.view.bindProcessMoreButton();
+  };
+  */
+
 
   // Handle Say it
   //handleProcessSayIt = () => {

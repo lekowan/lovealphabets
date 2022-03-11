@@ -6,7 +6,7 @@ const language = "ja-JP";
 const activateSpeech = true;
 
 const languageContent = [
-{
+/*{
       "chartTitle": "Shirokuma / Episode 19 / Part 1",
       "chartName": "shirokuma-episode-19-part-1-map",
       "chartData": shirokumaEpisode19Part1ChartData,
@@ -28,6 +28,7 @@ const languageContent = [
       "localStorageKey": "japanese" + "Episode19Part2" + "Srs",
       "chartType": shirokumaEpisode19Part2ChartType
 },
+*/
 {
       "chartTitle": "Shirokuma / Episode 20 / Part 1",
       "chartName": "shirokuma-episode-20-part-1-map",

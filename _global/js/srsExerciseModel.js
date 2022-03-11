@@ -576,6 +576,14 @@ class Model {
         this._commitProgress(_progress);
     }
 
+    /*
+    processMoreButton(){
+        // increment progress start value
+        this.goodAnswer++;        
+        this.incrementProgressStart();
+    }
+    */
+
     bindOnBadAnswerProcessed(callback) {
         this.onBadPressed = callback;
     }
@@ -583,6 +591,12 @@ class Model {
     bindOnGoodAnswerProcessed(callback) {
         this.onGoodPressed = callback;
     }
+    
+    /*
+    bindOnMoreButtonProcessed(callback) {
+        this.moreButtonPressed = callback;
+    }
+    */
 
     // Welcome Popover
     showWelcomePopover(boolean) {
