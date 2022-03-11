@@ -113,6 +113,7 @@ class View {
       this.languageViewCtaArray.push(languageViewChart);
 
       // Create "reset SRS data" icon
+      /*
       this.svgClear = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       this.svgClear.setAttribute("xmlns", "https://www.w3.org/2000/svg");
       this.svgClear.setAttribute("height", "24px");
@@ -136,9 +137,10 @@ class View {
       languageReset.id = item.localStorageKey;
 
       this.languageResetCtaArray.push(languageReset);
+      */
 
       // Create new character settings icon
-      /*
+      
       this.svgEdit = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       this.svgEdit.setAttribute("xmlns", "https://www.w3.org/2000/svg");
       this.svgEdit.setAttribute("height", "24px");
@@ -162,7 +164,7 @@ class View {
       languageReset.id = item.localStorageKey;
 
       this.languageResetCtaArray.push(languageReset);
-      */
+      
 
       // End of SVG 
 
@@ -201,16 +203,11 @@ class View {
           localStorage.removeItem(item.localStorageKey + "Progress");
           localStorage.removeItem(item.localStorageKey + "NextDate");
           location.reload();
-          console.log(localStorage);
 
         } else {
           alert("cancelled!");
         }
       });
-      
-
-      console.log(this.languageResetCtaArray);
-
     });
 
     // Popover background
@@ -305,7 +302,6 @@ class View {
     this.todayContinueButton.textContent = "CONTINUE";
     this.todayContinueContainer.append(this.todayContinueButton);
 
-
     // Append all elements
     this.homeWrapper.append(this.home);
     this.homeContainer.append(this.header, this.languageHeader, this.homeWrapper, this.footer, this.popoverBackground, this.chartContainer, this.newItemsContainer);
@@ -324,7 +320,6 @@ class View {
   bindShowMenu(handler) {
     this.languageMenu.addEventListener("click", (event) => {
       this.showMenu = !this.showMenu;
-      console.log(this.showMenu);
       handler(this.showMenu);
     });
   }
@@ -338,7 +333,6 @@ class View {
       this.languageToolTip.style.visibility = "hidden";
       this.languageMenuList.style.display = "none";
     } else {
-      console.log("show menu");
       this.languageToolTip.style.visibility = "visible";
       this.languageMenuList.style.display = "block";
     }
@@ -347,10 +341,8 @@ class View {
   // Generate character chart items
   addCharacterChart(chart, chartTitle, chartType, chartLocalStorageKey) {
     this.chartContainer.innerHTML = "";
+
     // Create close button
-
-    console.log(chart);
-
     this.closeButton.append(this.closeSvg);
     this.chartTitle = this.createElement("div", "chart-title");
     this.chartTitle.innerHTML = chartTitle;
@@ -363,9 +355,9 @@ class View {
 
     // Get data from local Storage
     let _data = JSON.parse(localStorage.getItem(chartLocalStorageKey + "Data"));
-    console.log(_data);
 
     if(chart){
+
     chart.forEach((subChart) => {
       let subChartTitle = this.createElement("div", "character-title");
       subChartTitle.innerHTML = subChart.subtitle;
@@ -429,11 +421,9 @@ class View {
       });
     }
 
-
     this.chartWrapper.append(this.category);
     this.chartPopoverContent.append(this.chartWrapper);
     this.chartContainer.append(this.chartPopoverContent);
-
 
   }
 
@@ -442,25 +432,20 @@ class View {
       this.popoverBackground.style.display = "none";
       this.chartContainer.style.display = "none";
     } else {
-      console.log("show chart");
       this.popoverBackground.style.display = "block";
       this.chartContainer.style.display = "block";
     }
   }
 
   bindShowChart(handler) {
-    console.log('view', this.languageViewCtaArray);
     let boolean;
 
     this.languageViewCtaArray.forEach((cta) => {
-      console.log(cta);
 
       cta.addEventListener("click", (event) => {
         boolean = true;
-        console.log(boolean);
 
         if (event.target.id == cta.id) {
-          console.log(cta.id);
           let chart = cta.id;
           handler(boolean, chart);
         }
@@ -488,7 +473,6 @@ class View {
       this.popoverBackground.style.display = "none";
       this.newItemsContainer.style.display = "none";
     } else {
-      console.log("show new settings");
       this.popoverBackground.style.display = "block";
       this.newItemsContainer.style.display = "block";
     }
@@ -498,15 +482,13 @@ class View {
     let boolean;
 
     this.languageResetCtaArray.forEach((cta) => {
-      console.log(cta);
-
+      
       cta.addEventListener("click", (event) => {
         boolean = true;
         let targetedEl = event.target.parentNode.id;
         this.localStorageKey = targetedEl;
         
         if (targetedEl == cta.id) {
-          console.log(cta.id);
           let chart = cta.id;
           handler(boolean);
         }
@@ -536,19 +518,15 @@ class View {
     this.newItemsForm.addEventListener("submit", () => {
       if (this._number && this._number > 0) {
         handler(this._number, this.localStorageKey);
-        console.log(this._number);
-      }
-      
+      }      
     });
 
     this.newItemsContinueButton.addEventListener("click", () => {
       if (this._number && this._number > 0) {
         handler(this._number, this.localStorageKey);
       }
-      
-      console.log(this._number, this.localStorageKey);
-    
     });
+
   }
 
 }
