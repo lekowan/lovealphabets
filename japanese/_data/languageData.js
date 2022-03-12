@@ -6,6 +6,28 @@ const language = "ja-JP";
 const activateSpeech = true;
 
 const languageContent = [
+{
+      "chartTitle": "Shirokuma / Episode 1 / Part 1",
+      "chartName": "shirokuma-episode-1-part-1-map",
+      "chartData": shirokumaEpisode1Part1ChartData,
+      "title": "Shirokuma Episode 1 Part 1",
+      "sub": "Memorize all words from Shirokuma Episode 1 Part 1",
+      "icon": "ペ",
+      "url": "shirokuma-episode-1-part-1",
+      "localStorageKey": "japanese" + "Episode1Part1" + "Srs",
+      "chartType": shirokumaEpisode1Part1ChartType
+},
+{
+      "chartTitle": "Shirokuma / Episode 1 / Part 2",
+      "chartName": "shirokuma-episode-1-part-2-map",
+      "chartData": shirokumaEpisode1Part2ChartData,
+      "title": "Shirokuma Episode 1 Part 2",
+      "sub": "Memorize all words from Shirokuma Episode 1 Part 2",
+      "icon": "ペ",
+      "url": "shirokuma-episode-1-part-2",
+      "localStorageKey": "japanese" + "Episode1Part2" + "Srs",
+      "chartType": shirokumaEpisode1Part2ChartType
+}, 
 /*{
       "chartTitle": "Shirokuma / Episode 19 / Part 1",
       "chartName": "shirokuma-episode-19-part-1-map",
