@@ -43,9 +43,27 @@ const allSyllableMap =  {
         "pinyin": "ちょっとまたこのこはひるまからごろごろして"
     },
     "4": {
-        "character": "掃除の邪魔よどきなさい",
+        "character": "<span>掃除</span>の<span>邪魔</span>よ<span>どきなさい</span>",
         "letter": "You're interrupting my cleaning, so get out of my way.",
-        "pinyin": "そうじのじゃまよどきなさい"
+        "pinyin": "そうじのじゃまよどきなさい",
+        "definition" : [
+            {
+                "target": "掃除",
+                "pinyin": "そうじ",
+                "english": "cleaning; sweeping; dusting; scrubbing"
+            },
+            {
+                "target": "邪魔",
+                "pinyin": "じゃま",
+                "english": "hindrance; obstacle; nuisance; disturbance; interruption; interference"
+            },
+            {
+                "target": "どく",
+                "pinyin": "どく",
+                "english": "to step aside; to move (out of the way); to make way"
+            },
+
+        ]
     },
     "5": {
         "character": "はいー",
