@@ -637,7 +637,7 @@ class View {
               let definitionPopoverPinyin = this.createElement("div", "definition-popover-pinyin");
               definitionPopoverPinyin.innerHTML = allSyllableMap[card].definition[number].pinyin;
 
-              definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
+              definitionPopover.append(definitionPopoverPinyin, definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
             }
             else {
               definitionPopover.append(definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg); 

@@ -734,8 +734,10 @@ p.word-original {
 }
 
 p.word-original span {
-    text-decoration: dotted rgb(126, 121, 137) underline;
+    /* text-decoration: dotted rgb(126, 121, 137) underline; */
     cursor: pointer;
+    font-family: inherit;
+    border-bottom: 2px dotted #F3F2F6;
 }
 
 p.word-original span:first-child {
