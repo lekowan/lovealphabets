@@ -586,9 +586,33 @@ class View {
             let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
              definitionPopoverEnglish.innerHTML = allSyllableMap[card].definition[number].english;
 
+            // Create generic close button
+            let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            closeSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+            closeSvg.setAttribute("height", "24px");
+            closeSvg.setAttribute("viewBox", "0 0 24 24");
+            closeSvg.setAttribute("width", "24px");
+            closeSvg.setAttribute("fill", "#2a2142");
+            let closeSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            closeSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
+            closeSvgPath1.setAttribute("fill", "none");
+            let closeSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            let closePath2d = "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z";
+            closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
+            closeSvg.append(closeSvgPath1, closeSvgPath2);
+
+            // Clone generic SVG button
+            //this.closeSvg = closeSvg.cloneNode(true);
+
+            // Create close button
+            //this.closeButton = this.createElement("div", "close-button");
+            //this.closeButton.append(this.closeSvg);
+
+
             // Clone original close button
             let definitionPopoverCloseButtonSvg = this.createElement("div", "definition-popover-close");
-             definitionPopoverCloseButtonSvg.innerHTML = 'X';
+            //definitionPopoverCloseButtonSvg.innerHTML = 'X';
+            definitionPopoverCloseButtonSvg.append(closeSvg);
 
              definitionPopoverCloseButtonSvg.addEventListener("click", (event) => {
               definitionPopover.style.bottom = "-40%";

@@ -1489,6 +1489,18 @@ p.word-translation {
     cursor: pointer;
 }
 
+.definition-popover-target {
+    font-family: 'Noto Sans', sans-serif !important;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.definition-popover-english {
+    margin-top: 10px;
+    color: #754fe3;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
 .shortcut-title {
   font-size: 15px;
   font-weight: 600;
