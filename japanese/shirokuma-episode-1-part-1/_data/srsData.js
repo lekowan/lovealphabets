@@ -17,9 +17,20 @@ const welcomeIntro = "In this spaced-repetition practice (SRS), you will study J
 
 const allSyllableMap =  {
     "1": {
-        "character": "しろくまカフェへようこそ",
+        "character": "<span>しろくまカフェへ</span><span>ようこそ</span>",
         "letter": "Welcome to Shirokuma Cafe",
-        "pinyin": "しろくまかふぇへようこそ"
+        "pinyin": "しろくまかふぇへようこそ",
+        "definition" : [
+            {
+                "target": "しろくまカフェへ",
+                "english": "Shirokuma Cafe"
+            },
+            {
+                "target": "ようこそ",
+                "english": "Welcome"
+            },
+
+        ]
     },
     "2": {
         "character": "笹を食べながらのんびりするのは最高だなぁ",

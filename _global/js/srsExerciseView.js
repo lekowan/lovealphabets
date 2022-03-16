@@ -526,7 +526,7 @@ class View {
       if(allSyllableMap[card].pinyin){
         this.pinyin = this.createElement("p", "pinyin");
         this.pinyin.textContent = allSyllableMap[card].pinyin;
-        nextCardWordOriginal.textContent = allSyllableMap[card].character;
+        nextCardWordOriginal.innerHTML = allSyllableMap[card].character;
 
         this.pinyinTitle = this.createElement("p", "pinyin-title");
         if(language == "zh-CN") this.pinyinTitle.textContent = "pinyin"; 
@@ -558,6 +558,47 @@ class View {
       this.nextCard.append(nextCardOriginalContainer, this.englishLanguage, this.answer);
       
       let svgAudioCtaArray = [];
+
+      // If definition exists
+
+      if(allSyllableMap[card].definition){
+
+        // Collect all span tags from string
+        // Convert into array
+        let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
+        let spanArray = [...spanCollection];
+
+        // Create popover element
+        let definitionPopover = this.createElement("div", "definition-popover");
+        this.app.append(definitionPopover);
+
+        // Go through all span tags and assign event listeners and populate
+        spanArray.forEach((span, number) => {
+          span.addEventListener("click", (event) => {
+
+            definitionPopover.innerHTML = '';
+
+            definitionPopover.style.bottom = "0"
+
+            let definitionPopoverTarget = this.createElement("div", "definition-popover-target");
+             definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].target;
+
+            let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
+             definitionPopoverEnglish.innerHTML = allSyllableMap[card].definition[number].english;
+
+            // Clone original close button
+            let definitionPopoverCloseButtonSvg = this.createElement("div", "definition-popover-close");
+             definitionPopoverCloseButtonSvg.innerHTML = 'X';
+
+             definitionPopoverCloseButtonSvg.addEventListener("click", (event) => {
+              definitionPopover.style.bottom = "-40%";
+             })
+          
+             definitionPopover.append(definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
+
+          });
+        })
+      }
 
       /*
       if(typeof srsDataExamples !== 'undefined'){
