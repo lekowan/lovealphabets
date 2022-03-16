@@ -734,7 +734,7 @@ p.word-original {
 }
 
 p.word-original span {
-    /* text-decoration: dotted #f3f2f7 underline; */
+    text-decoration: dotted rgb(126, 121, 137) underline;
     cursor: pointer;
 }
 
@@ -743,7 +743,7 @@ p.word-original span:first-child {
 }
 
 p.word-original span:not(:first-child){
-    padding-left: 15px;
+    padding-left: 0px;
 }
 
 .pinyin-button {
@@ -1478,7 +1478,7 @@ p.word-translation {
     box-shadow: 0px -3px 14px rgb(50 50 50 / 13%);
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 50px 30px 30px;
     transition: 0.3s ease-in-out;
 }
 
@@ -1492,13 +1492,16 @@ p.word-translation {
 .definition-popover-target {
     font-family: 'Noto Sans', sans-serif !important;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .definition-popover-english {
     margin-top: 10px;
-    color: #754fe3;
     font-family: "Noto Sans KR", sans-serif;
+}
+
+.definition-popover-pinyin {
+    font-size: 13px;
 }
 
 .shortcut-title {

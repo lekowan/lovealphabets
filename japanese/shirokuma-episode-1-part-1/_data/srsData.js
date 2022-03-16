@@ -43,7 +43,7 @@ const allSyllableMap =  {
         "pinyin": "ちょっとまたこのこはひるまからごろごろして"
     },
     "4": {
-        "character": "<span>掃除</span>の<span>邪魔</span>よ<span>どきなさい</span>",
+        "character": "掃除の邪魔よどきなさい",
         "letter": "You're interrupting my cleaning, so get out of my way.",
         "pinyin": "そうじのじゃまよどきなさい",
         "definition" : [
@@ -58,7 +58,8 @@ const allSyllableMap =  {
                 "english": "hindrance; obstacle; nuisance; disturbance; interruption; interference"
             },
             {
-                "target": "どく",
+                "target": "どきなさい",
+                "infinitive": "どく",
                 "pinyin": "どく",
                 "english": "to step aside; to move (out of the way); to make way"
             },

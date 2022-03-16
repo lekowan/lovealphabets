@@ -539,7 +539,7 @@ class View {
 
         else {
           this.pinyinTitle.style.display = "none";
-         this.pinyin.style.display = "none"; 
+          this.pinyin.style.display = "none"; 
         }
 
         this.pinyinIcon = this.createElement("p", "pinyin-icon");
@@ -559,14 +559,25 @@ class View {
       
       let svgAudioCtaArray = [];
 
-      // If definition exists
+      let stringDefined = nextCardWordOriginal.innerHTML;
+      console.log(stringDefined);
 
+      // If definition exists
       if(allSyllableMap[card].definition){
+
+        // Parse defined words and add span tags around them 
+        allSyllableMap[card].definition.forEach(word => {
+          let newWord = '<span>' + word.target + '</span>';
+          stringDefined = stringDefined.replace(word.target, newWord);
+        })
+
+        nextCardWordOriginal.innerHTML = stringDefined;
 
         // Collect all span tags from string
         // Convert into array
         let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
         let spanArray = [...spanCollection];
+
 
         // Create popover element
         let definitionPopover = this.createElement("div", "definition-popover");
@@ -574,17 +585,14 @@ class View {
 
         // Go through all span tags and assign event listeners and populate
         spanArray.forEach((span, number) => {
+
           span.addEventListener("click", (event) => {
 
+            // Reset popover content
             definitionPopover.innerHTML = '';
 
-            definitionPopover.style.bottom = "0"
-
-            let definitionPopoverTarget = this.createElement("div", "definition-popover-target");
-             definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].target;
-
-            let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
-             definitionPopoverEnglish.innerHTML = allSyllableMap[card].definition[number].english;
+            // Anchor position of popover
+            definitionPopover.style.bottom = "0";
 
             // Create generic close button
             let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -601,24 +609,40 @@ class View {
             closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
             closeSvg.append(closeSvgPath1, closeSvgPath2);
 
-            // Clone generic SVG button
-            //this.closeSvg = closeSvg.cloneNode(true);
-
-            // Create close button
-            //this.closeButton = this.createElement("div", "close-button");
-            //this.closeButton.append(this.closeSvg);
-
 
             // Clone original close button
             let definitionPopoverCloseButtonSvg = this.createElement("div", "definition-popover-close");
-            //definitionPopoverCloseButtonSvg.innerHTML = 'X';
             definitionPopoverCloseButtonSvg.append(closeSvg);
 
-             definitionPopoverCloseButtonSvg.addEventListener("click", (event) => {
+            // On click reset position
+            definitionPopoverCloseButtonSvg.addEventListener("click", (event) => {
               definitionPopover.style.bottom = "-40%";
              })
-          
-             definitionPopover.append(definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
+
+            // 
+            let definitionPopoverTarget = this.createElement("div", "definition-popover-target");
+
+            if(allSyllableMap[card].definition[number].infinitive){
+              definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].infinitive;
+            }
+            else {
+              definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].target; 
+            }
+
+            let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
+             definitionPopoverEnglish.innerHTML = allSyllableMap[card].definition[number].english;
+
+
+            if(allSyllableMap[card].definition[number].pinyin){
+              let definitionPopoverPinyin = this.createElement("div", "definition-popover-pinyin");
+              definitionPopoverPinyin.innerHTML = allSyllableMap[card].definition[number].pinyin;
+
+              definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
+            }
+            else {
+              definitionPopover.append(definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg); 
+            }                     
+             
 
           });
         })
