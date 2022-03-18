@@ -101,7 +101,7 @@ class View {
     this.showButton.innerHTML = "SHOW";
 
     // Create Show button
-    this.nextButton = this.createElement("button", "pink-cta");
+    this.nextButton = this.createElement("button");
     this.nextButton.id = "next-button";
     this.nextButton.innerHTML = "NEXT";
 

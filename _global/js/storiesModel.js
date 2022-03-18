@@ -54,6 +54,7 @@ class Model {
           if(this.isInViewport(slide, bodyContent)){
             this.currentSlide = slide.id;
             console.log(this.currentSlide);
+            this.playAudio();
           }
         })
 
@@ -167,6 +168,7 @@ class Model {
         let nextSlide;
         console.log(this.whatSlide);
         nextSlide = this.whatSlide;
+
         this.onWentToNext(nextSlide);
     }
 

@@ -1151,11 +1151,12 @@ p.word-translation {
 }
 
 #next-button {
-  color: #18093e;
+  color: #fff;
   padding: 12px 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  background: #0f0037;
   cursor: pointer;
   font-size: 11px;
   letter-spacing: 1.5px;
