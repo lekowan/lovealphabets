@@ -24,6 +24,10 @@ class Controller {
     // Display initial word + answer
     if (!this.model.showWelcome) this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
 
+    // Display answer
+    this.model.bindOnScrolled(this.onScrolled);
+    this.view.bindScroll(this.handleScroll);
+
     // Display Welcome popover
     this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
     this.model.bindOnShowWelcomePopoverChanged(this.onShowWelcomePopoverChanged);
@@ -34,8 +38,6 @@ class Controller {
     //this.model.bindOnShowCongratulationsPopoverChanged(this.onShowCongratulationsPopoverChanged);
     //this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
 
-    // Scrolling 
-    this.view.scrolled();
 
     // Play audio
     this.view.playSpeech();
@@ -71,6 +73,15 @@ class Controller {
 
   onNextCardAdded = (card, answer, isNew) => {
     this.view.addNextCard(card, answer, isNew);
+  };
+
+  // Scroll
+  handleScroll = (bodyContent, slideCollection) => {
+    this.model.scroll(bodyContent, slideCollection);
+  };
+
+  onScrolled = (answer) => {
+    this.view.displayAnswer(answer);
   };
 
   // Handle Welcome Popover visibility

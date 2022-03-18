@@ -597,19 +597,36 @@ class View {
     }, 500);
   }
 
-  // Check if element is within parent's viewport
-  isInViewport(el, bodyContent) {
-      const rect = el.getBoundingClientRect();
 
-      return (
-          rect.top >= bodyContent.getBoundingClientRect().top * 0.9  &&
-          rect.bottom <= bodyContent.getBoundingClientRect().bottom * 1.1
-      )
+
+  bindScroll(handler){
+    let bodyContent = this.bodyContent;
+    let slideCollection = this.slideCollection;
+
+    // Setup isScrolling variable
+    let isScrolling;
+
+    this.bodyContent.addEventListener('scroll', function ( event ) {
+      
+      // Clear our timeout throughout the scroll
+      window.clearTimeout( isScrolling );
+
+      // Set a timeout to run after scrolling ends
+      isScrolling = setTimeout(function() {
+
+      // Run the callback
+      console.log( 'Scrolling has stopped.' );
+
+      handler(bodyContent, slideCollection);
+      
+      }, 500);
+
+    }, false);
+
   }
 
-  
 
-  scrolled() {
+  /* scrolled() {
 
     let slideArray = this.slideArray;
     let slideCollection = this.slideCollection;
@@ -645,5 +662,6 @@ class View {
     }, false);
     return this.currentSlide;
   }
+  */
     
 }

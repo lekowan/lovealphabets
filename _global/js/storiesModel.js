@@ -12,12 +12,18 @@ class Model {
         // Display first word
         this.word = this.allNewCards[0];
 
+        this.currentSlide;
+
         
     } // End of constructor ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
     get initialWelcomePopover() {
         return this.showWelcome;
+    }
+
+    get whatSlide(){
+        return this.currentSlide;
     }
 
 
@@ -29,6 +35,32 @@ class Model {
         if(this.allNewCards.length > 0){
           return this.allNewCards
        }
+    }
+
+
+    // Check if element is within parent's viewport
+    isInViewport(el, bodyContent) {
+          const rect = el.getBoundingClientRect();
+
+          return (
+              rect.top >= bodyContent.getBoundingClientRect().top * 0.9  &&
+              rect.bottom <= bodyContent.getBoundingClientRect().bottom * 1.1
+          )
+    }
+      
+    scroll(bodyContent, slideCollection){
+
+        slideCollection.forEach(slide => {
+          if(this.isInViewport(slide, bodyContent)){
+            this.currentSlide = slide.id;
+            console.log(this.currentSlide);
+          }
+        })
+    }
+
+
+    bindOnScrolled(callback) {
+        this.onScrolled = callback;
     }
 
 
