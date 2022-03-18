@@ -7,6 +7,17 @@ const activateSpeech = true;
 
 const languageContent = [
 {
+      "chartTitle": "Shirokuma / Episode 1 / Part 1 / Story",
+      "chartName": "shirokuma-episode-1-part-1-story-map",
+      "chartData": shirokumaEpisode1Part1StoryChartData,
+      "title": "Shirokuma Episode 1 Part 1",
+      "sub": "Memorize all words from Shirokuma Episode 1 Part 1",
+      "icon": "ペ",
+      "url": "shirokuma-episode-1-part-1-story",
+      "localStorageKey": "japanese" + "Episode1Part1" + "Story",
+      "chartType": shirokumaEpisode1Part1StoryChartType
+},
+{
       "chartTitle": "Shirokuma / Episode 1 / Part 1",
       "chartName": "shirokuma-episode-1-part-1-map",
       "chartData": shirokumaEpisode1Part1ChartData,
