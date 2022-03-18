@@ -24,9 +24,17 @@ class Controller {
     // Display initial word + answer
     if (!this.model.showWelcome) this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
 
-    // Display answer
+    // Get slide number upon scrolling
     this.model.bindOnScrolled(this.onScrolled);
     this.view.bindScroll(this.handleScroll);
+
+    // Play audio
+    this.model.bindOnPlayedAudio(this.onPlayedAudio);
+    this.view.bindPlayAudio(this.handlePlayAudio);
+
+    // Show answer
+    this.model.bindOnShowedAnswer(this.onShowedAnswer);
+    this.view.bindShowAnswer(this.handleShowAnswer);
 
     // Display Welcome popover
     this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
@@ -37,10 +45,6 @@ class Controller {
     //this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
     //this.model.bindOnShowCongratulationsPopoverChanged(this.onShowCongratulationsPopoverChanged);
     //this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
-
-
-    // Play audio
-    this.view.playSpeech();
 
   } // End of constructor
 
@@ -81,7 +85,25 @@ class Controller {
   };
 
   onScrolled = (answer) => {
-    this.view.displayAnswer(answer);
+    //this.view.displayAnswer(answer);
+  };
+
+  // Play Audio
+  handlePlayAudio = () => {
+    this.model.playAudio();
+  };
+
+  onPlayedAudio = () => {
+    this.view.animateAudioIcon();
+  };
+
+  // Show Answer
+  handleShowAnswer = () => {
+    this.model.showAnswer();
+  };
+
+  onShowedAnswer = (id) => {
+    this.view.displayAnswer(id);
   };
 
   // Handle Welcome Popover visibility

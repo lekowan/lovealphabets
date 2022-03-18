@@ -803,7 +803,7 @@ p.example-english {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 40px 0;
+    margin: 40px 0 20px 0;
 }
 
 .example-target-container {

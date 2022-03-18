@@ -254,14 +254,16 @@ class View {
   
       let answer = this.createElement("p", "word-translation");
       answer.innerHTML = allSyllableMap[card].letter;
+      answer.id = "word-translation-" + (id + 1);
       answer.style.opacity = 0;
 
-      let targetLanguage = this.createElement("p", "target-language");
-      targetLanguage.innerHTML = languageTitle;
+      //let targetLanguage = this.createElement("p", "target-language");
+      //targetLanguage.innerHTML = languageTitle;
+      //targetLanguage.style.display = "none";
 
-      let englishLanguage = this.createElement("p", "english");
-      englishLanguage.innerHTML = "English";
-      englishLanguage.style.display = "none";
+      //let englishLanguage = this.createElement("p", "english");
+      //englishLanguage.innerHTML = "English";
+      //englishLanguage.style.display = "none";
 
       if(isNew){
         newIcon = this.createElement("div", "new-icon");
@@ -276,24 +278,24 @@ class View {
         pinyin.textContent = allSyllableMap[card].pinyin;
         nextCardWordOriginal.innerHTML = allSyllableMap[card].character;
 
-        let pinyinTitle = this.createElement("p", "pinyin-title");
-        if(language == "zh-CN") pinyinTitle.textContent = "pinyin"; 
-        else pinyinTitle.textContent = "hiragana";
+        //let pinyinTitle = this.createElement("p", "pinyin-title");
+        //if(language == "zh-CN") pinyinTitle.textContent = "pinyin"; 
+        //else pinyinTitle.textContent = "hiragana";
 
         if(this.showPinyin){
-          pinyinTitle.style.display = "inline";
+          //pinyinTitle.style.display = "inline";
           pinyin.style.display = "inline";
         }
 
         else {
-          pinyinTitle.style.display = "none";
+          //pinyinTitle.style.display = "none";
           pinyin.style.display = "none"; 
         }
 
         let pinyinIcon = this.createElement("p", "pinyin-icon");
         pinyinIcon.textContent = "show pinyin";
 
-        nextCardOriginalContainer.append(targetLanguage, nextCardWordOriginal, pinyinTitle, pinyin)
+        nextCardOriginalContainer.append(nextCardWordOriginal, pinyin)
       }
 
       else {
@@ -301,7 +303,7 @@ class View {
         nextCardOriginalContainer.append(targetLanguage, nextCardWordOriginal);
       }
       
-      nextCard.append(nextCardOriginalContainer, englishLanguage, answer);
+      nextCard.append(nextCardOriginalContainer, answer);
       
       let svgAudioCtaArray = [];
 
@@ -406,47 +408,24 @@ class View {
       this.slideCollection.push(nextCardSlide);
       this.bodyContent.append(nextCardSlide);
 
-      /*
-      // Add event listeners to audio icons of each example
-      for(let audio of svgAudioCtaArray){
-        audio.element.addEventListener("click", (event) => {
-          
-          // Play audio on click
-          this.playSpeech(audio.word); 
-
-          // Add key frame animation
-          audio.element.classList.add("audio-icon-animation-small");
-
-          // Remove key frame animation
-          setTimeout(function() {
-              audio.element.classList.remove("audio-icon-animation-small");
-          }, 500);
-               
-        }) 
-      } */
     }
 
     this.count++;
     })
   }
 
+  // Retrieve an element from the DOM
+  getElement(selector) {
+    const element = document.querySelector(selector)
+
+    return element
+  }
+
   // Play audio
-  playSpeech(){
-
+  bindPlayAudio(handler){
    this.svgAudio.addEventListener("click", (event) => {
-
-      let currentSlide = this.currentSlide;
-      console.log(this.currentSlide);
-      let word = allSyllableMap[currentSlide].character;
-      console.log(word);
-
-      // If speechSynthesis in user's browser
-      if (activateSpeech && "speechSynthesis" in window) {
-          let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
-          audioWord.lang = language;
-          window.speechSynthesis.speak(audioWord);
-      }
-    });
+    handler();
+   })
   }
 
 
@@ -474,26 +453,25 @@ class View {
   }
 
   displayButtons(boolean) {
-    console.log(this.answer);
+    //console.log(this.answer);
     if (boolean == false) {
-      this.answer.style.opacity = 0;
+      //this.answer.style.opacity = 0;
       this.goodBadButton.style.bottom = "-80px";
-      this.englishLanguage.style.display = 'none';
+      //this.englishLanguage.style.display = 'none';
 
     } else {
-      this.answer.style.opacity = 1;
-      this.nextCard.style.height = "auto";  
+      //this.answer.style.opacity = 1;
+      //this.nextCard.style.height = "auto";  
       this.goodBadButton.style.bottom = 0;
-      this.englishLanguage.style.display = 'inline';
-      this.nextCardWordSeparator.style.display = "block";
+      //this.englishLanguage.style.display = 'inline';
+      //this.nextCardWordSeparator.style.display = "block";
 
-      if(this.pinyin) this.pinyin.style.display = "inline";
+      //if(this.pinyin) this.pinyin.style.display = "inline";
     }
   }
 
   animateSlider(number) {
-    // Slide next slide in
-    //this.slider.style.transform = "translate(" + number * -100 + "vw)";
+
   }
 
   bindToggleVisibility(handler) {
@@ -581,9 +559,9 @@ class View {
     });
   }
 
-  playAudio(value){
-    // Play audio on click
-    this.playSpeech(value);
+  animateAudioIcon(){
+
+    console.log('test');
     
     // Animate audio icon
     let audioIcon = this.svgAudio;
@@ -625,43 +603,17 @@ class View {
 
   }
 
-
-  /* scrolled() {
-
-    let slideArray = this.slideArray;
-    let slideCollection = this.slideCollection;
-    let bodyContent = this.bodyContent;
-    let isInViewport = this.isInViewport;
-
-    // Setup isScrolling variable
-    let isScrolling;
-
-    //console.log(this.isInViewport());
-
-    // Listen for scroll events
-    bodyContent.addEventListener('scroll', function ( event ) {
-
-      // Clear our timeout throughout the scroll
-      window.clearTimeout( isScrolling );
-
-      // Set a timeout to run after scrolling ends
-      isScrolling = setTimeout(function() {
-
-        // Run the callback
-        console.log( 'Scrolling has stopped.' );
-
-        slideCollection.forEach(slide => {
-          if(isInViewport(slide, bodyContent)){
-            this.currentSlide = slide.id;
-            console.log(this.currentSlide);
-          }
-        })
-
-      }, 500);
-
-    }, false);
-    return this.currentSlide;
+  displayAnswer(element){
+    console.log(element);
+    let answer = document.getElementById("word-translation-" + element);
+    console.log(answer);
+    answer.style.opacity = 1;
   }
-  */
+
+  bindShowAnswer(handler) {
+    this.showButton.addEventListener("click", (event) => {
+      handler();
+    });
+  }
     
 }

@@ -12,7 +12,7 @@ class Model {
         // Display first word
         this.word = this.allNewCards[0];
 
-        this.currentSlide;
+        this.currentSlide = 1;
 
         
     } // End of constructor ////////////////////////////////////////////////////////////////////////
@@ -56,8 +56,33 @@ class Model {
             console.log(this.currentSlide);
           }
         })
+
+        // Update the view
+        this.onScrolled(this.currentSlide);
+        return this.currentSlide;
     }
 
+
+    playAudio(){
+
+      console.log(allSyllableMap);
+      console.log(this.whatSlide);
+      let word = allSyllableMap[this.whatSlide].character;
+      console.log(word);
+
+      // If speechSynthesis in user's browser
+      if (activateSpeech && "speechSynthesis" in window) {
+          let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
+          audioWord.lang = language;
+          window.speechSynthesis.speak(audioWord);
+      }
+
+      this.onPlayedAudio();
+    }
+
+    bindOnPlayedAudio(callback) {
+        this.onPlayedAudio = callback;
+    }
 
     bindOnScrolled(callback) {
         this.onScrolled = callback;
@@ -86,11 +111,6 @@ class Model {
         this.onCardAdded(this.nextCard, this.newAnswer, this.isWordNew);
     }
 
-    // Initiate audio
-    playAudio(url) {
-        new Audio(url).play();
-    }
-
     bindOnNextCardAdded(callback) {
         this.onCardAdded = callback;
     }
@@ -106,6 +126,14 @@ class Model {
     // Update SRS data
     processGoodAnswer() {
        
+    }
+
+    showAnswer(){
+        this.onShowedAnswer(this.whatSlide);
+    }
+
+    bindOnShowedAnswer(callback) {
+        this.onShowedAnswer = callback;
     }
 
     bindOnBadAnswerProcessed(callback) {
