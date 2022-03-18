@@ -36,6 +36,11 @@ class Controller {
     this.model.bindOnShowedAnswer(this.onShowedAnswer);
     this.view.bindShowAnswer(this.handleShowAnswer);
 
+    // Go to next slide
+    this.model.bindOnWentToNext(this.onWentToNext);
+    this.view.bindGoToNext(this.handleGoToNext);
+
+
     // Display Welcome popover
     this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
     this.model.bindOnShowWelcomePopoverChanged(this.onShowWelcomePopoverChanged);
@@ -95,6 +100,15 @@ class Controller {
 
   onPlayedAudio = () => {
     this.view.animateAudioIcon();
+  };
+
+  // Go to next
+  handleGoToNext = () => {
+    this.model.goToNext();
+  };
+
+  onWentToNext = (anchor) => {
+    this.view.displayNext(anchor);
   };
 
   // Show Answer

@@ -59,7 +59,7 @@ class Model {
 
         // Update the view
         this.onScrolled(this.currentSlide);
-        return this.currentSlide;
+        //return this.currentSlide;
     }
 
 
@@ -160,6 +160,18 @@ class Model {
 
     bindOnShowCongratulationsPopoverChanged(callback) {
         this.onShowCongratulationsPopoverChanged = callback;
+    }
+
+
+    goToNext(){
+        let nextSlide;
+        console.log(this.whatSlide);
+        nextSlide = this.whatSlide;
+        this.onWentToNext(nextSlide);
+    }
+
+    bindOnWentToNext(callback) {
+        this.onWentToNext = callback;
     }
 
     _commitData(data) {

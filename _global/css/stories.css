@@ -746,7 +746,7 @@ p.word-original span {
     /* text-decoration: dotted rgb(126, 121, 137) underline; */
     cursor: pointer;
     font-family: inherit;
-    border-bottom: 2px dotted #F3F2F6;
+    border-bottom: 2px solid #e3e2e7;
 }
 
 p.word-original span:first-child {
@@ -817,7 +817,7 @@ p.example-english {
     /* margin-bottom: 7px; */
     cursor: pointer;
     position: absolute;
-    bottom: 139px;
+    bottom: 120px;
     background-color: #e0e0e0;
     border-radius: 50px;
     /* padding: 28px; */
@@ -1022,7 +1022,7 @@ p.word-translation {
     /* align-content: center; */
     /* align-items: center; */
     top: 20%;
-    height: 50%;
+    height: calc(100% - 312px);
     position: absolute;
     overflow-y: scroll;
     /* border: black 1px solid; */
@@ -1034,6 +1034,21 @@ p.word-translation {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
+
+.scrolling::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.scrolling::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.scrolling::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
 
 .content {
   height: 100%;
@@ -1135,6 +1150,23 @@ p.word-translation {
   display: flex;
 }
 
+#next-button {
+  color: #18093e;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  width: calc(100% - 42px);
+  margin-bottom: 30px;
+  top: 15px;
+  position: absolute;
+  max-width: 380px;
+  border-radius: 50px;
+}
 
 .bad {
     color: #030303;

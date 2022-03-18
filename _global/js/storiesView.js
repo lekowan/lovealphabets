@@ -8,6 +8,7 @@ class View {
 
     // Create body-content container
     this.bodyContent = this.createElement("div", "body-content");
+    //this.bodyContent.classList.add("scrolling");
 
     // Create container container
     //this.container = this.createElement("div", "container");
@@ -99,9 +100,14 @@ class View {
     this.showButton.id = "show-button";
     this.showButton.innerHTML = "SHOW";
 
+    // Create Show button
+    this.nextButton = this.createElement("button", "pink-cta");
+    this.nextButton.id = "next-button";
+    this.nextButton.innerHTML = "NEXT";
+
     // Append buttons to button area
-    this.goodBadButton.append(this.badButton, this.goodButton);
-    this.buttonArea.append(this.showButton, this.goodBadButton);
+    //this.goodBadButton.append(this.badButton, this.goodButton);
+    this.buttonArea.append(this.nextButton, this.showButton);
  
     // Append the title, form, and todo list to the content div
     this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea);
@@ -125,7 +131,7 @@ class View {
 
     // Welcome Popover
     this.welcomeContainer = this.createElement("div", "popover");
-    //this.welcomeContainer.style.display = "block";
+    this.welcomeContainer.style.display = "none";
     this.welcomeTitle = this.createElement("div", "shortcut-title");
     this.welcomeTitle.textContent = "Welcome!";
     this.welcomeContent = this.createElement("div", "popover-content-welcome");
@@ -144,6 +150,7 @@ class View {
     this.welcomeCloseButton = this.createElement("div", "popover-close");
     this.welcomeCloseButton.append(this.welcomeCloseButtonSvg);
     this.welcomeContainer.append(this.welcomeTitle, this.welcomeContent, this.welcomeContinueContainer, this.welcomeCloseButton);
+
 
     // Congratulations Popover
     this.congratulationsContainer = this.createElement("div", "popover");
@@ -309,6 +316,7 @@ class View {
 
       let stringDefined = nextCardWordOriginal.innerHTML;
 
+      /*
       // If definition exists
       if(allSyllableMap[card].definition){
 
@@ -392,11 +400,11 @@ class View {
              
 
           });
-        })
+        }) 
 
         this.slideArray = [...this.slideCollection];
 
-      }
+      } */
     
       // Autoplay audio
       //this.playSpeech(allSyllableMap[card].character);
@@ -456,13 +464,15 @@ class View {
     //console.log(this.answer);
     if (boolean == false) {
       //this.answer.style.opacity = 0;
-      this.goodBadButton.style.bottom = "-80px";
+      this.nextButton.style.display = "none";
+      this.showButton.style.display = "block";
       //this.englishLanguage.style.display = 'none';
 
     } else {
       //this.answer.style.opacity = 1;
       //this.nextCard.style.height = "auto";  
-      this.goodBadButton.style.bottom = 0;
+      this.nextButton.style.display = "block";
+      this.showButton.style.display = "none";
       //this.englishLanguage.style.display = 'inline';
       //this.nextCardWordSeparator.style.display = "block";
 
@@ -480,15 +490,11 @@ class View {
       handler(boolean);
     });
 
-    this.goodButton.addEventListener("click", (event) => {
+    this.nextButton.addEventListener("click", (event) => {
       let boolean = false;
       handler(boolean);
     });
 
-    this.badButton.addEventListener("click", (event) => {
-      let boolean = false;
-      handler(boolean);
-    });
   }
 
   bindProcessBadAnswer(handler) {
@@ -572,7 +578,7 @@ class View {
     // Remove key frame animation
     setTimeout(function() {
         audioIcon.classList.remove("audio-icon-animation");
-    }, 500);
+    }, 150);
   }
 
 
@@ -612,6 +618,20 @@ class View {
 
   bindShowAnswer(handler) {
     this.showButton.addEventListener("click", (event) => {
+      handler();
+    });
+  }
+
+  displayNext(id){
+    id++;
+    console.log('id:', id);
+    let slide = document.getElementById(id);
+    slide.scrollIntoView();
+  }
+
+
+  bindGoToNext(handler) {
+    this.nextButton.addEventListener("click", (event) => {
       handler();
     });
   }
