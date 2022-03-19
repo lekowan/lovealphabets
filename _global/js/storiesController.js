@@ -46,6 +46,9 @@ class Controller {
     this.model.bindOnShowWelcomePopoverChanged(this.onShowWelcomePopoverChanged);
     this.view.bindDisplayWelcomePopover(this.handleDisplayWelcomePopover);
 
+    // Display definition popover
+    //this.view.bindShowDefinition();
+
     // Display Congratulations popover
     //this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
     //this.model.bindOnShowCongratulationsPopoverChanged(this.onShowCongratulationsPopoverChanged);

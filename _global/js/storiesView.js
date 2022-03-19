@@ -205,15 +205,33 @@ class View {
 
     this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
     this.content.append(this.svgAudio);
+
+    // Definition popover
+    this.definitionPopover = this.createElement("div", "definition-popover");
+    
+    // Anchor position of popover
+    this.definitionPopover.style.bottom = "-70%";
+
+    // Clone generic close button
+    this.definitionCloseSvg = closeSvg.cloneNode(true);
+ 
+    // Create definition popover content
+    this.definitionCloseButton = this.createElement("div", "definition-popover-close");
+    this.definitionCloseButton.append(this.definitionCloseSvg);
+    this.definitionPopoverTarget = this.createElement("div", "definition-popover-target");
+    this.definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
+    this.definitionPopoverPinyin = this.createElement("div", "definition-popover-pinyin");
+    this.definitionPopover.append(this.definitionPopoverPinyin, this.definitionPopoverTarget, this.definitionPopoverEnglish, this.definitionCloseButton); 
   
     // Append All Popovers
-    this.app.append(this.popoverBackground, this.welcomeContainer, this.congratulationsContainer);
+    this.app.append(this.popoverBackground, this.welcomeContainer, this.congratulationsContainer, this.definitionPopover);
 
     this.svgAudioCtaArray = [];
     this.count = 1;
     this.slideCollection = [];
     this.slideArray = [];
     this.currentSlide = 1;
+    this.spanArray = [];
 
   } // End of constructor
 
@@ -246,6 +264,8 @@ class View {
   }
 
   addNextCard(cardsSet, isNew) {
+
+    console.log(cardsSet);
 
     cardsSet.forEach((card, id) => {
 
@@ -315,99 +335,27 @@ class View {
       let svgAudioCtaArray = [];
 
       let stringDefined = nextCardWordOriginal.innerHTML;
-
-      /*
+  
       // If definition exists
       if(allSyllableMap[card].definition){
 
         // Parse defined words and add span tags around them 
         allSyllableMap[card].definition.forEach(word => {
-          let newWord = '<span>' + word.target + '</span>';
+          let newWord = '<span class=\'definition\'>' + word.target + '</span>';
           stringDefined = stringDefined.replace(word.target, newWord);
         })
 
-        nextCardWordOriginal.innerHTML = stringDefined;
+      }
 
-        // Collect all span tags from string
-        // Convert into array
-        let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
-        let spanArray = [...spanCollection];
+      nextCardWordOriginal.innerHTML = stringDefined;
 
+      // Collect all span tags from string
+      // Convert into array
+      let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
+      let spanArray = [...spanCollection]; 
 
-        // Create popover element
-        let definitionPopover = this.createElement("div", "definition-popover");
-        this.app.append(definitionPopover);
+      this.bindShowDefinition(spanArray);
 
-        // Go through all span tags and assign event listeners and populate
-        spanArray.forEach((span, number) => {
-
-          span.addEventListener("click", (event) => {
-
-            // Reset popover content
-            definitionPopover.innerHTML = '';
-
-            // Anchor position of popover
-            definitionPopover.style.bottom = "0";
-
-            // Create generic close button
-            let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-            closeSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-            closeSvg.setAttribute("height", "24px");
-            closeSvg.setAttribute("viewBox", "0 0 24 24");
-            closeSvg.setAttribute("width", "24px");
-            closeSvg.setAttribute("fill", "#2a2142");
-            let closeSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            closeSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
-            closeSvgPath1.setAttribute("fill", "none");
-            let closeSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            let closePath2d = "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z";
-            closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
-            closeSvg.append(closeSvgPath1, closeSvgPath2);
-
-
-            // Clone original close button
-            let definitionPopoverCloseButtonSvg = this.createElement("div", "definition-popover-close");
-            definitionPopoverCloseButtonSvg.append(closeSvg);
-
-            // On click reset position
-            definitionPopoverCloseButtonSvg.addEventListener("click", (event) => {
-              definitionPopover.style.bottom = "-40%";
-             })
-
-            // 
-            let definitionPopoverTarget = this.createElement("div", "definition-popover-target");
-
-            if(allSyllableMap[card].definition[number].infinitive){
-              definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].infinitive;
-            }
-            else {
-              definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].target; 
-            }
-
-            let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
-             definitionPopoverEnglish.innerHTML = allSyllableMap[card].definition[number].english;
-
-
-            if(allSyllableMap[card].definition[number].pinyin){
-              let definitionPopoverPinyin = this.createElement("div", "definition-popover-pinyin");
-              definitionPopoverPinyin.innerHTML = allSyllableMap[card].definition[number].pinyin;
-
-              definitionPopover.append(definitionPopoverPinyin, definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
-            }
-            else {
-              definitionPopover.append(definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg); 
-            }                     
-             
-
-          });
-        }) 
-
-        this.slideArray = [...this.slideCollection];
-
-      } */
-    
-      // Autoplay audio
-      //this.playSpeech(allSyllableMap[card].character);
 
       let nextCardSlide = this.createElement("div", "slide");
       nextCardSlide.id = "" + (id + 1);
@@ -425,7 +373,6 @@ class View {
   // Retrieve an element from the DOM
   getElement(selector) {
     const element = document.querySelector(selector)
-
     return element
   }
 
@@ -603,7 +550,7 @@ class View {
 
       handler(bodyContent, slideCollection);
       
-      }, 500);
+      }, 150);
 
     }, false);
 
@@ -621,6 +568,24 @@ class View {
       handler();
     });
   }
+
+  displayDefinition(definition){
+
+    // slide popoverup
+    this.definitionPopover.style.bottom = "0%";
+    console.log(definition);
+  }
+
+  bindShowDefinition(array, handler) {
+    //console.log(array);
+    array.forEach(span => {
+      span.addEventListener("click", (event) => {
+        console.log(span.innerHTML);
+        handler();
+      });
+    }) 
+  }
+
 
   displayNext(id){
     id++;
