@@ -20,18 +20,9 @@ const allSyllableMap =  {
         "character": "しろくまカフェへようこそ",
         "letter": "Welcome to Shirokuma Cafe",
         "pinyin": "しろくまかふぇへようこそ",
-        "definition" : [
-            {
-                "target": "しろくまカフェへ",
-                "english": "Shirokuma Cafe"
-            },
-            {
-                "target": "ようこそ",
-                "english": "Welcome"
-            },
-        ]
+        "definition": "しろくまカフェへ ようこそ".split(' ')
     },
-    "2": {
+  "2": {
         "character": "笹を食べながらのんびりするのは最高だなぁ",
         "letter": "I love relaxing while eating bamboo grass.",
         "pinyin": "ささをたべながらのんびりするのはさいこうだなぁ",
@@ -40,23 +31,7 @@ const allSyllableMap =  {
         "character": "ちょっとまたこの子は昼間からゴロゴロして",
         "letter": "Look at you, being so lazy so early in the day",
         "pinyin": "ちょっとまたこのこはひるまからごろごろして",
-        "definition" : [
-            {
-                "target": "子",
-                "pinyin": "こ",
-                "english": "child; kid; teenager",
-            },
-            {
-                "target": "昼間",
-                "pinyin": "ひるま",
-                "english": "daytime; during the day; time from sunrise until sunset"
-            },
-            {
-                "target": "ゴロゴロして",
-                "infinitive": "ごろごろごする",
-                "english": "to laze around"
-            },
-        ]
+        "definition" : "ちょっと また この 子 は 昼間 から ゴロゴロして".split(' ')
     },
     "4": {
         "character": "掃除の邪魔よどきなさい",

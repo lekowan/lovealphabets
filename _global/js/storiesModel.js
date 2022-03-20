@@ -129,6 +129,18 @@ class Model {
        
     }
 
+    showDefinition(span){
+        let word = this.whatSlide;
+        let definition = allSyllableMap[word].span;
+        console.log(definition)
+        this.onShowedDefinition(definition);
+    }
+
+    bindOnShowedDefinition(callback) {
+        this.onShowedDefinition = callback;
+    }
+
+
     showAnswer(){
         this.onShowedAnswer(this.whatSlide);
     }

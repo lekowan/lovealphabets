@@ -47,7 +47,8 @@ class Controller {
     this.view.bindDisplayWelcomePopover(this.handleDisplayWelcomePopover);
 
     // Display definition popover
-    //this.view.bindShowDefinition();
+    this.model.bindOnShowedDefinition(this.onShowedDefinition);
+    //this.view.displayDefinition(this.handleShowDefinition);
 
     // Display Congratulations popover
     //this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
@@ -104,6 +105,16 @@ class Controller {
   onPlayedAudio = () => {
     this.view.animateAudioIcon();
   };
+
+  // Play Audio
+  handleShowDefinition = (span) => {
+    this.model.showDefinition(span);
+  };
+
+  onShowedDefinition = () => {
+    //this.view.addNextCard(card, answer, isNew, handler);
+  };
+
 
   // Go to next
   handleGoToNext = () => {

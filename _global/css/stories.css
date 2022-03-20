@@ -1521,7 +1521,7 @@ p.word-translation {
 
 .definition-popover {
     height: 40%;
-    position: absolute;
+    position: fixed;
     bottom: -40%;
     /* border-top: #dedede 1px solid; */
     width: 100%;

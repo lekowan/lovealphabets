@@ -339,12 +339,17 @@ class View {
       // If definition exists
       if(allSyllableMap[card].definition){
 
-        // Parse defined words and add span tags around them 
-        allSyllableMap[card].definition.forEach(word => {
-          let newWord = '<span class=\'definition\'>' + word.target + '</span>';
-          stringDefined = stringDefined.replace(word.target, newWord);
-        })
+         let definitionObj = allSyllableMap[card].definition;
 
+        // Parse defined words and add span tags around them 
+        console.log(definitionObj);
+        definitionObj.forEach(word => {
+          console.log(word);
+          if(dictionary[word]){
+            let newWord = '<span class=\'definition\'>' + word + '</span>';
+            stringDefined = stringDefined.replace(word, newWord);
+          }
+        })
       }
 
       nextCardWordOriginal.innerHTML = stringDefined;
@@ -354,7 +359,7 @@ class View {
       let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
       let spanArray = [...spanCollection]; 
 
-      this.bindShowDefinition(spanArray);
+      this.showDefinition(spanArray);
 
 
       let nextCardSlide = this.createElement("div", "slide");
@@ -569,19 +574,19 @@ class View {
     });
   }
 
-  displayDefinition(definition){
 
-    // slide popoverup
-    this.definitionPopover.style.bottom = "0%";
-    console.log(definition);
-  }
-
-  bindShowDefinition(array, handler) {
+  showDefinition(array) {
     //console.log(array);
     array.forEach(span => {
       span.addEventListener("click", (event) => {
-        console.log(span.innerHTML);
-        handler();
+        let word = span.innerHTML;
+        this.definitionPopover.style.bottom = "0%";
+        this.definitionPopoverTarget.innerHTML = word;
+        this.definitionPopoverEnglish.innerHTML = dictionary[word].english;
+      });
+
+      this.definitionCloseButton.addEventListener("click", (event) => {
+        this.definitionPopover.style.bottom = "-70%";
       });
     }) 
   }
