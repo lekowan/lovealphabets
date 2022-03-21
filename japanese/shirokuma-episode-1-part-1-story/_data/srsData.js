@@ -20,116 +20,99 @@ const allSyllableMap =  {
         "character": "しろくまカフェへようこそ",
         "letter": "Welcome to Shirokuma Cafe",
         "pinyin": "しろくまかふぇへようこそ",
-        "definition": "しろくまカフェへ ようこそ".split(' ')
+        "definition": "しろくまカフェへ ようこそ"
     },
   "2": {
         "character": "笹を食べながらのんびりするのは最高だなぁ",
         "letter": "I love relaxing while eating bamboo grass.",
         "pinyin": "ささをたべながらのんびりするのはさいこうだなぁ",
+        "definition": "笹 を 食べながら のんびり する のは 最高だ なぁ"
     },
     "3": {
         "character": "ちょっとまたこの子は昼間からゴロゴロして",
         "letter": "Look at you, being so lazy so early in the day",
         "pinyin": "ちょっとまたこのこはひるまからごろごろして",
-        "definition" : "ちょっと また この 子 は 昼間 から ゴロゴロして".split(' ')
+        "definition" : "ちょっと また この 子 は 昼間 から ゴロゴロして"
     },
     "4": {
         "character": "掃除の邪魔よどきなさい",
         "letter": "You're interrupting my cleaning, so get out of my way.",
         "pinyin": "そうじのじゃまよどきなさい",
-        "definition" : [
-            {
-                "target": "掃除",
-                "pinyin": "そうじ",
-                "english": "cleaning; sweeping; dusting; scrubbing"
-            },
-            {
-                "target": "邪魔",
-                "pinyin": "じゃま",
-                "english": "hindrance; obstacle; nuisance; disturbance; interruption; interference"
-            },
-            {
-                "target": "どきなさい",
-                "infinitive": "どく",
-                "english": "to step aside; to move (out of the way); to make way"
-            },
-
-        ]
+        "definition" : "掃除 の 邪魔 よ どきなさい",
     },
     "5": {
         "character": "はいー",
         "letter": "Okay",
-        "pinyin": "はいー"
+        "pinyin": "はいー",
+        "definition": "はいー",
     },
     "6": {
         "character": "お母さんおかわり",
         "letter": "Seconds, please Mum",
-        "pinyin": "おかあさんおかわり"
+        "pinyin": "おかあさんおかわり",
+        "definition": "お母さん おかわり",
     },
     "7": {
         "character": "どうするのあなた将来は",
         "letter": "Exactly what do you have planned for your future?",
-        "pinyin": "どうするのあなたしょうらいは"
+        "pinyin": "どうするのあなたしょうらいは",
+        "definition": "どう する の あなた 将来 は",
     },
     "8": {
         "character": "もうゴロゴロしてるときに将来の話なんかしないでよ",
         "letter": "Could we not talk about my future when I'm relaxing?",
-        "pinyin": "もうごろごろしてるときにしょうらいのはなしなんかしないでよ"
+        "pinyin": "もうごろごろしてるときにしょうらいのはなしなんかしないでよ",
+        "definition": "もう ゴロゴロ してる とき に 将来 の 話 なんか しないで よ",
     },
     "9": {
         "character": "暇があるならちょっとはバイトでも探しなさい",
         "letter": "If you've got time to kill, why don't you get a part-time job?",
-        "pinyin": "ひまがあるならちょっとはばいとでもさがしなさい"
+        "pinyin": "ひまがあるならちょっとはばいとでもさがしなさい",
+        "definition": "暇 が ある なら ちょっと は バイト でも 探しなさい",
     },
     "10": {
         "character": "ええゴロゴロするのに忙しいから後にするよ",
         "letter": "I'm too busy relaxing, so I'll do it later.",
-        "pinyin": "ええごろごろするのにいそがしいからあとにするよ"
+        "pinyin": "ええごろごろするのにいそがしいからあとにするよ",
+        "definition": "ええ ゴロゴロ する のに 忙しい から 後 に する よ",
     },
     "11": {
         "character": "ああー吸わないで",
         "letter": "Don't try to suck me up!",
-        "pinyin": "ああーすわないで"
+        "pinyin": "ああーすわないで",
+        "definition": "ああー 吸わないで",
     },
     "12": {
         "character": "もう",
         "letter": "Jeez",
-        "pinyin": "もう"
+        "pinyin": "もう",
+        "definition": "もう",
     },
     "13": {
         "character": "どうしてお母さんはゴロゴロする忙しさが分かんないんだろな",
         "letter": "I wonder why Mom can't understand how much time relaxing takes up",
-        "pinyin": "どうしておかあさんはごろごろするいそがしさがわかんないんだろな"
+        "pinyin": "どうしておかあさんはごろごろするいそがしさがわかんないんだろな",
+        "definition": "どうして お母さん は ゴロゴロ する 忙し さが 分かんない ん だろ な",
     },
     "14": {
         "character": "えーと働かないでお金がもらえる仕事が載っているのはどれですか",
         "letter": "Excuse me, which ones of these will have jobs where I can get paid to do nothing?",
         "pinyin": "えーとはたらかないでおかねがもらえるしごとがのっているのはどれですか",
-        "definition" : [
-            {
-                "target": "載っている",
-                "infinitive": "載る",
-                "pinyin": "のる",
-                "english": "to appear (in print); to be mentioned"
-            },
-            {
-                "target": "働かない",
-                "infinitive": "働く",
-                "pinyin": "はたらく",
-                "english": "to work"
-            },
-        ]
+        "definition" : "えーと 働かない で お金が もらえる 仕事 が 載っている の は どれ です か"
     },
     "15": {
         "character": "ないと思います",
         "letter": "I don't think there is one",
-        "pinyin": "ないとおもいます"
+        "pinyin": "ないとおもいます",
+        "definition": "ない と 思います",
     },
     "16": {
         "character": "え",
         "letter": "What?",
-        "pinyin": "え"
+        "pinyin": "え",
+        "definition": "え"
     },
+    /*
     "17": {
         "character": "どうせならお洒落なバイトがいいなぁ",
         "letter": "I'd like a stylish job anyway.",
@@ -940,6 +923,7 @@ const allSyllableMap =  {
         "letter": "Heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee ！！！！",
         "pinyin": "へーーーーーーーー！！！！"
     },
+    */
 }
 
 

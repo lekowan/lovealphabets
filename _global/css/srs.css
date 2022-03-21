@@ -759,7 +759,7 @@ p.word-original span:not(:first-child){
     border-radius: 20px;
     text-transform: capitalize;
     background: #7e7989;
-    margin: 0 15px 0 0;
+    margin: 0 7px 0 0;
     order: 2;
 }
 

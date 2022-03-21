@@ -188,6 +188,24 @@ class Model {
         this.onWentToNext = callback;
     }
 
+    bindOnDisplayedPinyin(callback){
+        this.onDisplayedPinyin = callback;
+    }
+
+    showPinyin(array,boolean){
+        //console.log(array);
+        this.onDisplayedPinyin(array, boolean);
+    }
+
+    bindOnDisplayedNoSpace(callback){
+        this.onDisplayedNoSpace = callback;
+    }
+
+    displayNoSpace(boolean){
+       // let array = this.allNewCards.map(item => allSyllableMap[item].definition ? allSyllableMap[item].definition.join(' ') : allSyllableMap[item].character);
+        this.onDisplayedNoSpace(boolean);
+    }
+
     _commitData(data) {
         localStorage.setItem(localStorageKey + "Data", JSON.stringify(data));
     }

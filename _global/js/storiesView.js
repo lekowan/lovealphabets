@@ -49,8 +49,9 @@ class View {
       return (window.location.href = "../");
     });
 
-    // If language is Mandarin
+    // If language is Mandarin or Japanese
       if(language == "zh-CN" || language == "ja-JP" ){
+
         // Create pinyin button
         this.pinyinButton = this.createElement("div", "pinyin-button");
         
@@ -59,18 +60,14 @@ class View {
 
         this.showPinyin = true;
 
-        this.pinyinButton.addEventListener("click", (event) => {
-          this.displayPinyin();
-        });
-    }
+        // Create no space button
+        this.noSpaceButton = this.createElement("div", "no-space-button");
+        this.noSpaceButton.textContent = "spaces";
 
-    // If language is Mandarin, append pinyin button
-    if(this.showPinyin){
-      this.progress.append(this.pinyinButton);
-    }
+        this.showNoSpaceButton = true;
 
-    // Append progressBar to progress
-    //this.progress.append(this.progressBar, this.moreButton);
+        this.progress.append(this.pinyinButton, this.noSpaceButton);
+    }
 
     // Create SRS practice header title
     this.languagePractice = this.createElement("p", "language-practice");
@@ -232,6 +229,8 @@ class View {
     this.slideArray = [];
     this.currentSlide = 1;
     this.spanArray = [];
+    this.originalWordNoSpaceArray = [];
+    this.originalWordSpaceArray = [];
 
   } // End of constructor
 
@@ -245,24 +244,6 @@ class View {
   $ = (n) => document.querySelector(n);
 
 
-  // Display Pinyin
-
-  displayPinyin(){
-    if(this.showPinyin){
-      this.pinyinTitle.style.display = "none";
-      this.pinyin.style.display = "none";
-      this.pinyinButton.classList.add("hidden");
-      //this.pinyinButton.textContent = "pinyin";
-    }
-    else {
-      this.pinyinTitle.style.display = "inline";
-      this.pinyin.style.display = "inline";
-      this.pinyinButton.classList.remove("hidden");
-      //this.pinyinButton.textContent = "pinyin ✓";
-    }
-    this.showPinyin = !this.showPinyin;
-  }
-
   addNextCard(cardsSet, isNew) {
 
     console.log(cardsSet);
@@ -271,14 +252,28 @@ class View {
 
     if(card != undefined){
       let nextCardWordOriginal;
+      //let nextCardWordOriginalSpaces;
       //let nextCardWordTranslation;
       //let nextCardWordSeparator;
       let newIcon;
       let audioValue = "";
 
       let nextCard = this.createElement("div", "word");
+
+      // Insert original word
       nextCardWordOriginal = this.createElement("p", "word-original");
-  
+      nextCardWordOriginal.innerHTML = allSyllableMap[card].character;
+
+      /*
+      // If language is Mandarin or Japanese
+      if((language == "zh-CN" || language == "ja-JP") && allSyllableMap[card].definition){
+        nextCardWordOriginalSpaces = this.createElement("p", "word-original-space");
+        console.log(allSyllableMap[card].definition.join(' '));
+        nextCardWordOriginalSpaces.innerHTML = allSyllableMap[card].definition.join('&nbsp;');
+        nextCardWordOriginalSpaces.style.display = "none";
+      }
+      */
+
       let answer = this.createElement("p", "word-translation");
       answer.innerHTML = allSyllableMap[card].letter;
       answer.id = "word-translation-" + (id + 1);
@@ -303,7 +298,7 @@ class View {
       if(allSyllableMap[card].pinyin){
         let pinyin = this.createElement("p", "pinyin");
         pinyin.textContent = allSyllableMap[card].pinyin;
-        nextCardWordOriginal.innerHTML = allSyllableMap[card].character;
+        
 
         //let pinyinTitle = this.createElement("p", "pinyin-title");
         //if(language == "zh-CN") pinyinTitle.textContent = "pinyin"; 
@@ -322,11 +317,10 @@ class View {
         let pinyinIcon = this.createElement("p", "pinyin-icon");
         pinyinIcon.textContent = "show pinyin";
 
-        nextCardOriginalContainer.append(nextCardWordOriginal, pinyin)
+        nextCardOriginalContainer.append(nextCardWordOriginal, pinyin);
       }
 
       else {
-        nextCardWordOriginal.textContent = allSyllableMap[card].character; 
         nextCardOriginalContainer.append(targetLanguage, nextCardWordOriginal);
       }
       
@@ -335,30 +329,38 @@ class View {
       let svgAudioCtaArray = [];
 
       let stringDefined = nextCardWordOriginal.innerHTML;
+
   
       // If definition exists
       if(allSyllableMap[card].definition){
 
-         let definitionObj = allSyllableMap[card].definition;
+        let stringDefinedSpaces = allSyllableMap[card].definition;
+        //let stringDefinedSpaces = nextCardWordOriginalSpaces.innerHTML;
+        let definitionArray = allSyllableMap[card].definition.split(' ');
 
         // Parse defined words and add span tags around them 
-        console.log(definitionObj);
-        definitionObj.forEach(word => {
-          console.log(word);
-          if(dictionary[word]){
-            let newWord = '<span class=\'definition\'>' + word + '</span>';
-            stringDefined = stringDefined.replace(word, newWord);
-          }
-        })
-      }
+        
+        let newArr = [];
 
-      nextCardWordOriginal.innerHTML = stringDefined;
+        definitionArray.forEach(word => 
+          dictionary[word] ? newArr.push('<span class=\'definition\'>' + word + '</span>') : newArr.push(word)
+        );
+
+        console.log(newArr);
+
+        this.originalWordSpaceArray.push(newArr.join(' '));
+        this.originalWordNoSpaceArray.push(newArr.join(''));
+
+        nextCardWordOriginal.innerHTML = newArr.join(' ');
+
+      }
 
       // Collect all span tags from string
       // Convert into array
       let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
       let spanArray = [...spanCollection]; 
 
+      // Add event listeners to all span tags
       this.showDefinition(spanArray);
 
 
@@ -378,7 +380,7 @@ class View {
   // Retrieve an element from the DOM
   getElement(selector) {
     const element = document.querySelector(selector)
-    return element
+    return element;
   }
 
   // Play audio
@@ -413,7 +415,7 @@ class View {
   }
 
   displayButtons(boolean) {
-    //console.log(this.answer);
+    console.log(boolean);
     if (boolean == false) {
       //this.answer.style.opacity = 0;
       this.nextButton.style.display = "none";
@@ -574,10 +576,10 @@ class View {
     });
   }
 
+  showDefinition(spanArray) {
 
-  showDefinition(array) {
-    //console.log(array);
-    array.forEach(span => {
+    console.log(spanArray);
+    spanArray.forEach(span => {
       span.addEventListener("click", (event) => {
         let word = span.innerHTML;
         this.definitionPopover.style.bottom = "0%";
@@ -605,5 +607,84 @@ class View {
       handler();
     });
   }
+
+  displayPinyin(array,boolean){
+
+    console.log(array);
+    console.log(boolean);
+
+    if(boolean == false){
+      //this.pinyinTitle.style.display = "none";
+      //this.pinyin.style.display = "none";
+      this.pinyinButton.classList.add("hidden");
+      //this.pinyinButton.textContent = "pinyin";
+      array.forEach(item => item.style.display = "none");
+    }
+    else {
+      //this.pinyinTitle.style.display = "inline";
+      //this.pinyin.style.display = "inline";
+      this.pinyinButton.classList.remove("hidden");
+      array.forEach(item => item.style.display = "block");
+      //this.pinyinButton.textContent = "pinyin ✓";
+    }
+  }
+
+  bindDisplayPinyin(handler){
     
+    this.pinyinButton.addEventListener("click", (event) => {
+      let pinyinCollection = document.getElementsByClassName("pinyin");
+      let pinyinArray = [...pinyinCollection];
+        //console.log(pinyinArray);
+        this.showPinyin = !this.showPinyin;
+      console.log(this.showPinyin);
+
+      handler(pinyinArray, this.showPinyin);
+    });
+  }
+    
+  displayNoSpace(boolean){
+
+    console.log(boolean);
+    let noSpaceCollection = document.getElementsByClassName("word-original");
+    let noSpaceArray = [...noSpaceCollection];
+    console.log(noSpaceArray);
+
+    if(boolean == false){
+      this.noSpaceButton.classList.add("hidden");
+      noSpaceArray.forEach((item, number) => {
+        console.log(item.innerHTML);
+        item.innerHTML = this.originalWordNoSpaceArray[number];
+            
+        let noSpaceItemCollection = document.getElementsByClassName("definition");
+        let noSpaceItemArray = [...noSpaceItemCollection];
+        this.showDefinition(noSpaceItemArray);
+      });
+    }
+    else {
+      this.noSpaceButton.classList.remove("hidden");
+      noSpaceArray.forEach((item, number) => {
+        console.log(item.innerHTML);
+        item.innerHTML = this.originalWordSpaceArray[number];
+        
+        let spaceItemCollection = document.getElementsByClassName("definition");
+        let spaceItemArray = [...spaceItemCollection];
+        this.showDefinition(spaceItemArray);
+
+      });
+    }
+
+    
+  }
+
+  bindDisplayNoSpace(handler){
+    
+    this.noSpaceButton.addEventListener("click", (event) => {
+      this.showNoSpaceButton = !this.showNoSpaceButton;
+      console.log(this.showNoSpaceButton);
+
+      handler(this.showNoSpaceButton);
+    });
+  }
+
+
 }

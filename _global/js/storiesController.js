@@ -36,6 +36,14 @@ class Controller {
     this.model.bindOnShowedAnswer(this.onShowedAnswer);
     this.view.bindShowAnswer(this.handleShowAnswer);
 
+    // Show pinyin
+    this.view.bindDisplayPinyin(this.handleDisplayPinyin);
+    this.model.bindOnDisplayedPinyin(this.onDisplayedPinyin);
+
+    // Show no space
+    this.view.bindDisplayNoSpace(this.handleDisplayNoSpace);
+    this.model.bindOnDisplayedNoSpace(this.onDisplayedNoSpace);
+
     // Go to next slide
     this.model.bindOnWentToNext(this.onWentToNext);
     this.view.bindGoToNext(this.handleGoToNext);
@@ -45,7 +53,7 @@ class Controller {
     this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
     this.model.bindOnShowWelcomePopoverChanged(this.onShowWelcomePopoverChanged);
     this.view.bindDisplayWelcomePopover(this.handleDisplayWelcomePopover);
-
+  
     // Display definition popover
     this.model.bindOnShowedDefinition(this.onShowedDefinition);
     //this.view.displayDefinition(this.handleShowDefinition);
@@ -132,6 +140,24 @@ class Controller {
 
   onShowedAnswer = (id) => {
     this.view.displayAnswer(id);
+  };
+
+  // Show pinyin
+  handleDisplayPinyin = (array, boolean) => {
+    this.model.showPinyin(array, boolean);
+  };
+
+  onDisplayedPinyin = (array, boolean) => {
+    this.view.displayPinyin(array, boolean);
+  };
+
+  // Show No Space
+  handleDisplayNoSpace = (boolean) => {
+    this.model.displayNoSpace(boolean);
+  };
+
+  onDisplayedNoSpace = (boolean) => {
+    this.view.displayNoSpace(boolean);
   };
 
   // Handle Welcome Popover visibility
