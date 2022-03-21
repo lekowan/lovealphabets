@@ -20,147 +20,149 @@ const allSyllableMap =  {
         "character": "しろくまカフェへようこそ",
         "letter": "Welcome to Shirokuma Cafe",
         "pinyin": "しろくまかふぇへようこそ",
-        "definition": "しろくまカフェへ ようこそ"
+        "definition": "しろくまカフェへ ようこそ",
+        "pinyinSpace": "しろくまかふぇへ ようこそ",
     },
   "2": {
         "character": "笹を食べながらのんびりするのは最高だなぁ",
         "letter": "I love relaxing while eating bamboo grass.",
         "pinyin": "ささをたべながらのんびりするのはさいこうだなぁ",
-        "definition": "笹 を 食べながら のんびり する のは 最高だ なぁ"
+        "definition": "笹 を 食べながら のんびりする のは 最高 だ なぁ",
+        "pinyinSpace": "ささ を たべながら のんびりする のは さいこう だ なぁ",
     },
     "3": {
         "character": "ちょっとまたこの子は昼間からゴロゴロして",
         "letter": "Look at you, being so lazy so early in the day",
         "pinyin": "ちょっとまたこのこはひるまからごろごろして",
-        "definition" : "ちょっと また この 子 は 昼間 から ゴロゴロして"
+        "definition" : "ちょっと また この 子 は 昼間 から ゴロゴロして",
+        "pinyinSpace": "ちょっと また この こ は ひるま から ごろごろして",
     },
     "4": {
         "character": "掃除の邪魔よどきなさい",
         "letter": "You're interrupting my cleaning, so get out of my way.",
         "pinyin": "そうじのじゃまよどきなさい",
         "definition" : "掃除 の 邪魔 よ どきなさい",
+        "pinyinSpace": "そうじ の じゃま よ どきなさい",
     },
     "5": {
         "character": "はいー",
         "letter": "Okay",
         "pinyin": "はいー",
         "definition": "はいー",
+        "pinyinSpace":"はいー"
     },
     "6": {
         "character": "お母さんおかわり",
         "letter": "Seconds, please Mum",
         "pinyin": "おかあさんおかわり",
         "definition": "お母さん おかわり",
+        "pinyinSpace": "おかあさん おかわり",
     },
     "7": {
         "character": "どうするのあなた将来は",
         "letter": "Exactly what do you have planned for your future?",
         "pinyin": "どうするのあなたしょうらいは",
         "definition": "どう する の あなた 将来 は",
+        "pinyinSpace": "どう する の あなた しょうらい は",
     },
     "8": {
         "character": "もうゴロゴロしてるときに将来の話なんかしないでよ",
         "letter": "Could we not talk about my future when I'm relaxing?",
         "pinyin": "もうごろごろしてるときにしょうらいのはなしなんかしないでよ",
-        "definition": "もう ゴロゴロ してる とき に 将来 の 話 なんか しないで よ",
+        "definition": "もう ゴロゴロしてる とき に 将来 の 話 なんか しないで よ",
+        "pinyinSpace": "もう ごろごろしてる とき に しょうらい の はなし なんか しないで よ",
     },
     "9": {
         "character": "暇があるならちょっとはバイトでも探しなさい",
         "letter": "If you've got time to kill, why don't you get a part-time job?",
         "pinyin": "ひまがあるならちょっとはばいとでもさがしなさい",
         "definition": "暇 が ある なら ちょっと は バイト でも 探しなさい",
+        "pinyinSpace": "ひま が ある なら ちょっと は ばいと でも さがしなさい",
     },
     "10": {
         "character": "ええゴロゴロするのに忙しいから後にするよ",
         "letter": "I'm too busy relaxing, so I'll do it later.",
         "pinyin": "ええごろごろするのにいそがしいからあとにするよ",
-        "definition": "ええ ゴロゴロ する のに 忙しい から 後 に する よ",
+        "definition": "ええ ゴロゴロする のに 忙しい から 後 に する よ",
+        "pinyinSpace": "ええ ごろごろする の に いそがしい から あと に する よ",
     },
     "11": {
         "character": "ああー吸わないで",
         "letter": "Don't try to suck me up!",
         "pinyin": "ああーすわないで",
         "definition": "ああー 吸わないで",
+        "pinyinSpace":"ああー すわないで",
     },
     "12": {
         "character": "もう",
         "letter": "Jeez",
         "pinyin": "もう",
         "definition": "もう",
+        "pinyinSpace":"もう",
     },
     "13": {
         "character": "どうしてお母さんはゴロゴロする忙しさが分かんないんだろな",
         "letter": "I wonder why Mom can't understand how much time relaxing takes up",
         "pinyin": "どうしておかあさんはごろごろするいそがしさがわかんないんだろな",
         "definition": "どうして お母さん は ゴロゴロ する 忙し さが 分かんない ん だろ な",
+        "pinyinSpace": "どうして おかあさん は ごろごろする いそがし さが わかんない ん だろな",
     },
     "14": {
         "character": "えーと働かないでお金がもらえる仕事が載っているのはどれですか",
         "letter": "Excuse me, which ones of these will have jobs where I can get paid to do nothing?",
         "pinyin": "えーとはたらかないでおかねがもらえるしごとがのっているのはどれですか",
-        "definition" : "えーと 働かない で お金が もらえる 仕事 が 載っている の は どれ です か"
+        "definition" : "えーと 働かない で お金 が もらえる 仕事 が 載っている の は どれ です か",
+        "pinyinSpace": "えーと はたらかない で おかね が もらえる しごと が のっている の は どれ です か",
     },
     "15": {
         "character": "ないと思います",
         "letter": "I don't think there is one",
         "pinyin": "ないとおもいます",
         "definition": "ない と 思います",
+        "pinyinSpace": "ない と おもいます"
     },
     "16": {
         "character": "え",
         "letter": "What?",
         "pinyin": "え",
-        "definition": "え"
+        "definition": "え",
+        "pinyinSpace": "え",
     },
-    /*
+    
     "17": {
         "character": "どうせならお洒落なバイトがいいなぁ",
         "letter": "I'd like a stylish job anyway.",
         "pinyin": "どうせならおしゃれなばいとがいいなぁ",
-        "definition" : [
-            {
-                "target": "どうせなら",
-                "english": "if it's going to be that way, then ...; if given the choice; if possible; if anything"
-            },
-            {
-                "target": "お洒落",
-                "pinyin": "おしゃれ",
-                "english": "smartly dressed; stylish; fashion-conscious"
-            },
-            {
-                "target": "働かない",
-                "infinitive": "働く",
-                "pinyin": "はたらく",
-                "english": "to work"
-            },
-        ]
+        "definition" : "どうせなら お洒落 な バイト が いい なぁ",
+        "pinyinSpace": "どうせなら おしゃれ な ばいと が いい なぁ",
     },
     "18": {
         "character": "あこれいいな",
         "letter": "Oh, this looks good",
-        "pinyin": "あこれいいな"
+        "pinyin": "あこれいいな",
+        "definition": "あ これ いい な",
+        "pinyinSpace": "あ これ いい な",
     },
     "19": {
         "character": "はい",
         "letter": "Yes?",
-        "pinyin": "はい"
+        "pinyin": "はい",
+        "definition": "はい",
+        "pinyinSpace": "はい",
     },
     "20": {
         "character": "あもしもしパンダと申しますが",
         "letter": "Hello, my name is Panda.",
-        "pinyin": "あもしもしぱんだともうしますが"
+        "pinyin": "あもしもしぱんだともうしますが",
+        "definition": "あ もしもし パンダ と 申します が",
+        "pinyinSpace": "あ もしもし ぱんだ と もうします が",
     },
+    /*
     "21": {
         "character": "そちらでデザインなーデザイナーのアルバイト募集してますよね",
         "letter": "You're looking for a part-time designer, right?",
         "pinyin": "そちらででざいんなーでざいなーのあるばいとぼしゅうしてますよね",
-        "definition" : [
-            {
-                "target": "募集",
-                "pinyin": "ぼしゅう",
-                "english": "recruitment; invitation; selection; advertisement; taking applications"
-            },
-        ]
+        "definition" : 
     },
     "22": {
         "character": "ええそうですよ経験は？",
@@ -196,12 +198,7 @@ const allSyllableMap =  {
         "character": "笹を食べたり寝ながらぼんやりするのが得意です",
         "letter": "I'm good at eating bamboo grass and zoning out while lying down",
         "pinyin": "ささをたべたりねながらぼんやりするのがとくいです",
-        "definition" : [
-            {
-                "target": "ぼんやり",
-                "english": "absentmindedly; vacantly; carelessly"
-            },
-        ]
+        "definition" : 
     },
     "29": {
         "character": "あれもしもーし",
@@ -212,13 +209,7 @@ const allSyllableMap =  {
         "character": "もしもしそちらでインテリアコーディネーターも募集してますよね",
         "letter": "Hello? You're also looking for an interior decorator, right?",
         "pinyin": "もしもしそちらでいんてりあこーでぃねーたーもぼしゅうしてますよね",
-        "definition" : [
-            {
-                "target": "募集",
-                "pinyin": "ぼしゅう",
-                "english": "recruitment; invitation; selection; advertisement; taking applications"
-            },
-        ]
+        "definition" : 
     },
     "31": {
         "character": "インテリアコーディネーターってなんですか",
@@ -234,14 +225,7 @@ const allSyllableMap =  {
         "character": "アルバイト見つかったの",
         "letter": "Did you find a part-time job?",
         "pinyin": "あるばいとみつかったの",
-        "definition" : [
-            {
-                "target": "見つかった",
-                "infinitive": "見つかる",
-                "pinyin": "みつかる",
-                "english": "to find; to discover"
-            },
-        ]
+        "definition" : 
     },
     "34": {
         "character": "全然ないよ",
@@ -262,13 +246,7 @@ const allSyllableMap =  {
         "character": "品数多過ぎるよ覚えられないよ",
         "letter": "They have too many thins, I won't be able to remember them all!",
         "pinyin": "しなかずおおすぎるよおぼえられないよ",
-        "definition" : [
-            {
-                "target": "品数",
-                "pinyin": "しなかず",
-                "english": "variety of goods; number of articles"
-            },
-        ]
+        "definition" : 
 
     },
     "38": {
@@ -280,12 +258,7 @@ const allSyllableMap =  {
         "character": "もう外でだらだらしようっと",
         "letter": "I think I'll wander outside",
         "pinyin": "もうそとでだらだらしようっと",
-        "definition" : [
-            {
-                "target": "だらだら",
-                "english": "leisurely; idly; slowly; slovenly"
-            },
-        ]
+        "definition" : 
     },
     "40": {
         "character": "はははあら糸屑",
@@ -311,12 +284,7 @@ const allSyllableMap =  {
         "character": "じっとしてて",
         "letter": "Stay right there",
         "pinyin": "じっとしてて",
-        "definition" : [
-            {
-                "target": "じっと",
-                "english": "(be) still; motionlessly"
-            }
-        ]
+        "definition" : 
     },
     "45": {
         "character": "あ待って",
@@ -397,18 +365,7 @@ const allSyllableMap =  {
         "character": "ペンギンさんポイント貯める派",
         "letter": "You collect points, Mr. Penguin?",
         "pinyin": "ぺんぎんさんぽいんとためるは",
-        "definition" : [
-            {
-                "target": "貯める",
-                "infinitive": "ためる",
-                "english": "to save up; to collect"
-            },
-            {
-                "target": "派",
-                "pinyin": "は",
-                "english": "clique; group"
-            },
-        ]
+        "definition" : 
     },
     "61": {
         "character": "うん",
@@ -454,28 +411,13 @@ const allSyllableMap =  {
         "character": "このカフェダジャレがなければなぁ",
         "letter": "You know, if it weren't for all the puns in this café...",
         "pinyin": "このかふぇだじゃれがなければなぁ",
-        "definition" : [
-            {
-                "target": "なければ",
-                "english": "if (it) doesn't exist; if there is no ...; if (one) doesn't have ..."
-            },
-            {
-                "target": "ダジャレ",
-                "pinyin": "だじゃれ",
-                "english": "jokes; puns"
-            },    
-        ]
+        "definition" : 
     },
     "70": {
         "character": "そういえばアルバイト募集してるんだって",
         "letter": "By the way, I heard you were looking for a part-timer?",
         "pinyin": "そういえばあるばいとぼしゅうしてるんだって",
-        "definition" : [
-            {
-                "target": "そういえば",
-                "english": "now that you mention it; come to think of it; that reminds me"
-            },
-        ]
+        "definition" : 
     },
     "71": {
         "character": "うん人手が足りなくて",
@@ -491,25 +433,13 @@ const allSyllableMap =  {
         "character": "え？ぼくお客とバイトの両立できるかな",
         "letter": "I wonder if I could handle being a customer and a part-timer",
         "pinyin": "え？ぼくおきゃくとばいとのりょうりつできるかな",
-        "definition" : [
-            {
-                "target": "両立",
-                "pinyin": "りょうりつ",
-                "english": "compatibility; coexistence; standing together"
-            },
-        ]
+        "definition" : 
     },
     "74": {
         "character": "ウーソこれから四名ほど面接に来るんだよ",
         "letter": "Just kidding. I have about four interviews lined up",
         "pinyin": "うーそこれからよんめいほどめんせつにくるんだよ",
-        "definition" : [
-            {
-                "target": "両立",
-                "pinyin": "面接",
-                "english": "interview"
-            },
-        ]
+        "definition" : 
     },
     "75": {
         "character": "なんだちょっと考えちゃったよ",
@@ -560,18 +490,7 @@ const allSyllableMap =  {
         "character": "穴を掘るの得意なんです",
         "letter": "I'm a pro at digging holes!",
         "pinyin": "あなをほるのとくいなんです",
-        "definition" : [
-            {
-                "target": "穴",
-                "pinyin": "あな",
-                "english": "hole",
-            },
-            {
-                "target": "掘る",
-                "pinyin": "るの",
-                "english": "to dig; to excavate; to hollow"
-            },
-        ]
+        "definition" : 
     },
     "85": {
         "character": "いやそのホールは違うし",
@@ -677,16 +596,7 @@ const allSyllableMap =  {
         "character": "やっとまともな人が来たね",
         "letter": "Finally, someone decent.",
         "pinyin": "やっとまともなひとがきたね",
-        "definition" : [
-            {
-                "target": "やっと",
-                "english": "at last; finally",
-            },
-            {
-                "target": "まとも",
-                "english": "decent; normal"
-            },
-        ]
+        "definition" : 
     },
     "106": {
         "character": "パンダ君何か得意なことはありますか",
@@ -784,9 +694,9 @@ const allSyllableMap =  {
         "pinyin": "ぜんいんふごうかく"
     },
     "125": {
-        "character": "えー工????(′д｀)????工",
-        "letter": "E-engineer ???? (′decided)???? (工)",
-        "pinyin": "えーこう????(′д｀)????こう"
+        "character": "えー????",
+        "letter": "What????",
+        "pinyin": "ええー????"
     },
     "126": {
         "character": "そこ驚くとこ",

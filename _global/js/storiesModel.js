@@ -51,25 +51,21 @@ class Model {
     scroll(bodyContent, slideCollection){
 
         slideCollection.forEach(slide => {
+
           if(this.isInViewport(slide, bodyContent)){
             this.currentSlide = slide.id;
-            console.log(this.currentSlide);
             this.playAudio();
           }
         })
 
         // Update the view
         this.onScrolled(this.currentSlide);
-        //return this.currentSlide;
     }
 
 
     playAudio(){
 
-      console.log(allSyllableMap);
-      console.log(this.whatSlide);
       let word = allSyllableMap[this.whatSlide].character;
-      console.log(word);
 
       // If speechSynthesis in user's browser
       if (activateSpeech && "speechSynthesis" in window) {
@@ -132,7 +128,6 @@ class Model {
     showDefinition(span){
         let word = this.whatSlide;
         let definition = allSyllableMap[word].span;
-        console.log(definition)
         this.onShowedDefinition(definition);
     }
 
@@ -178,7 +173,6 @@ class Model {
 
     goToNext(){
         let nextSlide;
-        console.log(this.whatSlide);
         nextSlide = this.whatSlide;
 
         this.onWentToNext(nextSlide);
@@ -193,7 +187,6 @@ class Model {
     }
 
     showPinyin(array,boolean){
-        //console.log(array);
         this.onDisplayedPinyin(array, boolean);
     }
 
@@ -202,7 +195,6 @@ class Model {
     }
 
     displayNoSpace(boolean){
-       // let array = this.allNewCards.map(item => allSyllableMap[item].definition ? allSyllableMap[item].definition.join(' ') : allSyllableMap[item].character);
         this.onDisplayedNoSpace(boolean);
     }
 

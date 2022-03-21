@@ -825,10 +825,9 @@ p.example-english {
 }
 
 .audio-icon {
-    /* margin-bottom: 7px; */
     cursor: pointer;
     position: absolute;
-    bottom: 120px;
+    bottom: 100px;
     background-color: #e0e0e0;
     border-radius: 50px;
     /* padding: 28px; */
@@ -1032,18 +1031,20 @@ p.word-translation {
     flex-direction: column;
     /* align-content: center; */
     /* align-items: center; */
-    top: 20%;
-    height: calc(100% - 312px);
-    position: absolute;
+    /* top: 20%; */
+    /* margin-top: 70px; */
+    height: calc(100% - 287px);
+    /* position: absolute; */
     overflow-y: scroll;
     /* border: black 1px solid; */
     overflow-x: hidden;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     overflow-y: scroll;
     -webkit-scroll-snap-type: y mandatory;
     -ms-scroll-snap-type: y mandatory;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+}
 }
 
 .scrolling::-webkit-scrollbar-track {
@@ -1135,15 +1136,15 @@ p.word-translation {
 }
 
 .button-area {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 600;
-  height: 80px;
-  position: relative;
-  overflow:  hidden;
-  margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
 }
 
 .good-bad {

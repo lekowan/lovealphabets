@@ -63,6 +63,7 @@ class View {
         // Create no space button
         this.noSpaceButton = this.createElement("div", "no-space-button");
         this.noSpaceButton.textContent = "spaces";
+        this.noSpaceButton.classList.add("hidden");
 
         this.showNoSpaceButton = true;
 
@@ -231,6 +232,8 @@ class View {
     this.spanArray = [];
     this.originalWordNoSpaceArray = [];
     this.originalWordSpaceArray = [];
+    this.pinyinWordNoSpaceArrray = [];
+    this.pinyinWordSpaceArrray = [];
 
   } // End of constructor
 
@@ -245,8 +248,6 @@ class View {
 
 
   addNextCard(cardsSet, isNew) {
-
-    console.log(cardsSet);
 
     cardsSet.forEach((card, id) => {
 
@@ -264,28 +265,10 @@ class View {
       nextCardWordOriginal = this.createElement("p", "word-original");
       nextCardWordOriginal.innerHTML = allSyllableMap[card].character;
 
-      /*
-      // If language is Mandarin or Japanese
-      if((language == "zh-CN" || language == "ja-JP") && allSyllableMap[card].definition){
-        nextCardWordOriginalSpaces = this.createElement("p", "word-original-space");
-        console.log(allSyllableMap[card].definition.join(' '));
-        nextCardWordOriginalSpaces.innerHTML = allSyllableMap[card].definition.join('&nbsp;');
-        nextCardWordOriginalSpaces.style.display = "none";
-      }
-      */
-
       let answer = this.createElement("p", "word-translation");
       answer.innerHTML = allSyllableMap[card].letter;
       answer.id = "word-translation-" + (id + 1);
       answer.style.opacity = 0;
-
-      //let targetLanguage = this.createElement("p", "target-language");
-      //targetLanguage.innerHTML = languageTitle;
-      //targetLanguage.style.display = "none";
-
-      //let englishLanguage = this.createElement("p", "english");
-      //englishLanguage.innerHTML = "English";
-      //englishLanguage.style.display = "none";
 
       if(isNew){
         newIcon = this.createElement("div", "new-icon");
@@ -299,18 +282,14 @@ class View {
         let pinyin = this.createElement("p", "pinyin");
         pinyin.textContent = allSyllableMap[card].pinyin;
         
-
-        //let pinyinTitle = this.createElement("p", "pinyin-title");
-        //if(language == "zh-CN") pinyinTitle.textContent = "pinyin"; 
-        //else pinyinTitle.textContent = "hiragana";
+        this.pinyinWordNoSpaceArrray.push(allSyllableMap[card].pinyin);
+        this.pinyinWordSpaceArrray.push(allSyllableMap[card].pinyinSpace);
 
         if(this.showPinyin){
-          //pinyinTitle.style.display = "inline";
           pinyin.style.display = "inline";
         }
 
         else {
-          //pinyinTitle.style.display = "none";
           pinyin.style.display = "none"; 
         }
 
@@ -346,12 +325,10 @@ class View {
           dictionary[word] ? newArr.push('<span class=\'definition\'>' + word + '</span>') : newArr.push(word)
         );
 
-        console.log(newArr);
-
         this.originalWordSpaceArray.push(newArr.join(' '));
         this.originalWordNoSpaceArray.push(newArr.join(''));
 
-        nextCardWordOriginal.innerHTML = newArr.join(' ');
+        nextCardWordOriginal.innerHTML = newArr.join('');
 
       }
 
@@ -415,28 +392,18 @@ class View {
   }
 
   displayButtons(boolean) {
-    console.log(boolean);
+
     if (boolean == false) {
-      //this.answer.style.opacity = 0;
       this.nextButton.style.display = "none";
       this.showButton.style.display = "block";
-      //this.englishLanguage.style.display = 'none';
+    } 
 
-    } else {
-      //this.answer.style.opacity = 1;
-      //this.nextCard.style.height = "auto";  
+    else {
       this.nextButton.style.display = "block";
       this.showButton.style.display = "none";
-      //this.englishLanguage.style.display = 'inline';
-      //this.nextCardWordSeparator.style.display = "block";
-
-      //if(this.pinyin) this.pinyin.style.display = "inline";
     }
   }
 
-  animateSlider(number) {
-
-  }
 
   bindToggleVisibility(handler) {
     this.showButton.addEventListener("click", (event) => {
@@ -520,8 +487,6 @@ class View {
   }
 
   animateAudioIcon(){
-
-    console.log('test');
     
     // Animate audio icon
     let audioIcon = this.svgAudio;
@@ -552,9 +517,6 @@ class View {
       // Set a timeout to run after scrolling ends
       isScrolling = setTimeout(function() {
 
-      // Run the callback
-      console.log( 'Scrolling has stopped.' );
-
       handler(bodyContent, slideCollection);
       
       }, 150);
@@ -564,9 +526,7 @@ class View {
   }
 
   displayAnswer(element){
-    console.log(element);
     let answer = document.getElementById("word-translation-" + element);
-    console.log(answer);
     answer.style.opacity = 1;
   }
 
@@ -578,7 +538,6 @@ class View {
 
   showDefinition(spanArray) {
 
-    console.log(spanArray);
     spanArray.forEach(span => {
       span.addEventListener("click", (event) => {
         let word = span.innerHTML;
@@ -596,7 +555,6 @@ class View {
 
   displayNext(id){
     id++;
-    console.log('id:', id);
     let slide = document.getElementById(id);
     slide.scrollIntoView();
   }
@@ -610,78 +568,105 @@ class View {
 
   displayPinyin(array,boolean){
 
-    console.log(array);
-    console.log(boolean);
-
     if(boolean == false){
-      //this.pinyinTitle.style.display = "none";
-      //this.pinyin.style.display = "none";
       this.pinyinButton.classList.add("hidden");
-      //this.pinyinButton.textContent = "pinyin";
       array.forEach(item => item.style.display = "none");
     }
+
     else {
-      //this.pinyinTitle.style.display = "inline";
-      //this.pinyin.style.display = "inline";
+
       this.pinyinButton.classList.remove("hidden");
       array.forEach(item => item.style.display = "block");
-      //this.pinyinButton.textContent = "pinyin ✓";
+
     }
   }
 
   bindDisplayPinyin(handler){
     
     this.pinyinButton.addEventListener("click", (event) => {
+      
       let pinyinCollection = document.getElementsByClassName("pinyin");
       let pinyinArray = [...pinyinCollection];
-        //console.log(pinyinArray);
-        this.showPinyin = !this.showPinyin;
-      console.log(this.showPinyin);
-
+      
+      this.showPinyin = !this.showPinyin;
+    
       handler(pinyinArray, this.showPinyin);
+    
     });
   }
     
   displayNoSpace(boolean){
 
-    console.log(boolean);
+    //console.log(this.pinyinWordSpaceArrray);
+    //console.log(this.pinyinWordNoSpaceArrray);
+
     let noSpaceCollection = document.getElementsByClassName("word-original");
     let noSpaceArray = [...noSpaceCollection];
-    console.log(noSpaceArray);
 
-    if(boolean == false){
+    let noSpacePinyinCollection = document.getElementsByClassName("pinyin");
+    let noSpacePinyinArray = [...noSpacePinyinCollection];
+
+    if(boolean == true){
+
       this.noSpaceButton.classList.add("hidden");
+
+      // Loop through all word-original elements
       noSpaceArray.forEach((item, number) => {
-        console.log(item.innerHTML);
+      
         item.innerHTML = this.originalWordNoSpaceArray[number];
             
-        let noSpaceItemCollection = document.getElementsByClassName("definition");
+        let noSpaceItemCollection = item.getElementsByClassName("definition");
         let noSpaceItemArray = [...noSpaceItemCollection];
+      
+        //console.log(noSpaceItemArray);
         this.showDefinition(noSpaceItemArray);
+
       });
-    }
-    else {
-      this.noSpaceButton.classList.remove("hidden");
-      noSpaceArray.forEach((item, number) => {
+
+
+      // Loop through all pinyin elements
+      // Replace all innerHTML with No Space version
+      noSpacePinyinArray.forEach((item, number) => {
+
+        item.innerHTML = this.pinyinWordNoSpaceArrray[number];
         console.log(item.innerHTML);
+
+      })
+
+    }
+
+    else {
+
+      this.noSpaceButton.classList.remove("hidden");
+      
+      // Loop through all word-original elements
+      noSpaceArray.forEach((item, number) => {
+
         item.innerHTML = this.originalWordSpaceArray[number];
         
-        let spaceItemCollection = document.getElementsByClassName("definition");
+        let spaceItemCollection = item.getElementsByClassName("definition");
         let spaceItemArray = [...spaceItemCollection];
         this.showDefinition(spaceItemArray);
 
       });
+
+      // Loop through all pinyin elements
+      // Replace all innerHTML with space version  
+      noSpacePinyinArray.forEach((item, number) => {
+
+          item.innerHTML = this.pinyinWordSpaceArrray[number];
+          //console.log(item.innerHTML);
+
+      })
     }
 
-    
   }
 
   bindDisplayNoSpace(handler){
     
     this.noSpaceButton.addEventListener("click", (event) => {
       this.showNoSpaceButton = !this.showNoSpaceButton;
-      console.log(this.showNoSpaceButton);
-
+     
       handler(this.showNoSpaceButton);
     });
   }
