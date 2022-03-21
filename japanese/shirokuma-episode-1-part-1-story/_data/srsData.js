@@ -157,118 +157,156 @@ const allSyllableMap =  {
         "definition": "あ もしもし パンダ と 申します が",
         "pinyinSpace": "あ もしもし ぱんだ と もうします が",
     },
-    /*
+    
     "21": {
         "character": "そちらでデザインなーデザイナーのアルバイト募集してますよね",
         "letter": "You're looking for a part-time designer, right?",
         "pinyin": "そちらででざいんなーでざいなーのあるばいとぼしゅうしてますよね",
-        "definition" : 
+        "definition" : "そちらで でざいんなー でざいなー の あるばいと ぼ しゅうしてます よね",
+        "pinyinSpace": "そちらで でざいんなー でざいなー の あるばいと ぼしゅうしてます よね",
     },
     "22": {
         "character": "ええそうですよ経験は？",
         "letter": "Do you have any experience?",
-        "pinyin": "ええそうですよけいけんは？"
+        "pinyin": "ええそうですよけいけんは？",
+        "definition": "ええ そう です よ けいけん は？",
+        "pinyinSpace": "ええ そう です よ けいけん は？",
+
     },
+    
     "23": {
         "character": "ありません",
         "letter": "Not at all",
-        "pinyin": "ありません"
+        "pinyin": "ありません",
+        "definition": "ありません",
+        "pinyinSpace": "ありません",
     },
     "24": {
         "character": "パソコンのマウスは使えますか",
         "letter": "Can you use a computer mouse?",
-        "pinyin": "ぱそこんのまうすはつかえますか"
+        "pinyin": "ぱそこんのまうすはつかえますか",
+        "definition": "パソコン の マウス は 使えますか",
+        "pinyinSpace": "ぱそこんのまうすはつかえますか",
     },
     "25": {
         "character": "使えないですあんまり細かい作業はできません",
         "letter": "I'm not very good with detailed work",
-        "pinyin": "つかえないですあんまりこまかいさぎょうはできません"
+        "pinyin": "つかえないですあんまりこまかいさぎょうはできません",
+        "definition": "使えない です あんまり 細かい 作業 は できません",
+        "pinyinSpace": "つかえない です あんまり こまかい さぎょう は できません",
     },
     "26": {
         "character": "そうですか得意なことはありますか",
         "letter": "Is there anything you're good at?",
-        "pinyin": "そうですかとくいなことはありますか"
+        "pinyin": "そうですかとくいなことはありますか",
+        "definition": "そう です か 得意 な こと は あります か",
+        "pinyinSpace": "そう です か とくい な こと は ありますか",
     },
     "27": {
         "character": "あります",
         "letter": "Yes, there is",
-        "pinyin": "あります"
+        "pinyin": "あります",
+        "definition": "あります",
+        "pinyinSpace": "あります",
     },
     "28": {
         "character": "笹を食べたり寝ながらぼんやりするのが得意です",
         "letter": "I'm good at eating bamboo grass and zoning out while lying down",
         "pinyin": "ささをたべたりねながらぼんやりするのがとくいです",
-        "definition" : 
+        "definition" : "ささ を たべたり ねながら ぼんやりする の が とくい です",
+        "pinyinSpace": "ささ を たべたり ねながら ぼんやりする の が とくい です",
     },
     "29": {
         "character": "あれもしもーし",
         "letter": "Oh, hello?",
-        "pinyin": "あれもしもーし"
+        "pinyin": "あれもしもーし",
+        "definition": "あれ もしもーし",
+        "pinyinSpace": "あれ もしもーし",
     },
     "30": {
         "character": "もしもしそちらでインテリアコーディネーターも募集してますよね",
         "letter": "Hello? You're also looking for an interior decorator, right?",
         "pinyin": "もしもしそちらでいんてりあこーでぃねーたーもぼしゅうしてますよね",
-        "definition" : 
+        "definition" : "もしもし そちらで インテリアコーディネーター も 募集してます よね",
+        "pinyinSpace": "もしもし そちらで いんてりあこーでぃねーたー も ぼしゅうしてます よね",
     },
     "31": {
         "character": "インテリアコーディネーターってなんですか",
         "letter": "What's an interior decorator?",
-        "pinyin": "いんてりあこーでぃねーたーってなんですか"
+        "pinyin": "いんてりあこーでぃねーたーってなんですか",
+        "definition": "インテリアコーディネーター って なん です か",
+        "pinyinSpace": "いんてりあこーでぃねーたー って なん です か",
     },
     "32": {
         "character": "またゴロゴロして",
         "letter": "There you are being lazy again",
-        "pinyin": "またごろごろして"
+        "pinyin": "またごろごろして",
+        "definition": "また ゴロゴロして",
+        "pinyinSpace": "また ゴロゴロして",
     },
     "33": {
         "character": "アルバイト見つかったの",
         "letter": "Did you find a part-time job?",
         "pinyin": "あるばいとみつかったの",
-        "definition" : 
+        "definition" : "アルバイト 見つかった の",
+        "pinyinSpace": "あるばいと みつかった の",
     },
     "34": {
         "character": "全然ないよ",
         "letter": "There aren't any!",
-        "pinyin": "ぜんぜんないよ"
+        "pinyin": "ぜんぜんないよ",
+        "definition": "全然 ない よ",
+        "pinyinSpace": "ぜんぜん ない よ",
     },
     "35": {
         "character": "確かコンビニで募集してたでしょう",
         "letter": "I'm pretty sure there was an opening at the convenience store.",
-        "pinyin": "たしかこんびにでぼしゅうしてたでしょう"
+        "pinyin": "たしかこんびにでぼしゅうしてたでしょう",
+        "character": "確か コンビニ で 募集してた でしょう",
+        "pinyinSpace": "たしか こんびに で ぼしゅうしてた でしょう",
     },
     "36": {
         "character": "コンビニ",
         "letter": "Convenience store",
-        "pinyin": "こんびに"
+        "character": "コンビニ",
+        "pinyin": "こんびに",
+        "pinyinSpace": "こんびに"
     },
     "37": {
         "character": "品数多過ぎるよ覚えられないよ",
         "letter": "They have too many thins, I won't be able to remember them all!",
         "pinyin": "しなかずおおすぎるよおぼえられないよ",
-        "definition" : 
-
+        "definition" : "品数 多 過ぎる よ 覚えられない よ",
+        "pinyinSpace": "しなかず おお すぎる よ おぼえられない よ",
     },
     "38": {
         "character": "あー吸わないで",
         "letter": "Don't try to suck me up!",
-        "pinyin": "あーすわないで"
+        "definition": "あー 吸わないで",
+        "pinyin": "あーすわないで",
+        "pinyinSpace": "あー すわないで"
     },
     "39": {
         "character": "もう外でだらだらしようっと",
         "letter": "I think I'll wander outside",
         "pinyin": "もうそとでだらだらしようっと",
-        "definition" : 
+        "definition": "もう 外 で だらだらしよう っと",
+        "pinyinSpace": "もう そと で だらだらしよう っと",
     },
+        /*
     "40": {
         "character": "はははあら糸屑",
         "letter": "Huh?  A string",
-        "pinyin": "はははあらいとくず"
+        "pinyin": "はははあらいとくず",
+        "definition": "ははは あら 糸屑",
+        "pinyinSpace": "ははは あら いとくず",
     },
     "41": {
         "character": "あ取って",
         "letter": "Could you get it?",
-        "pinyin": "あとって"
+        "pinyin": "あとって",
+        "definition": "あ 取って",
+        "pinyinSpace": "あ とって",
     },
     "42": {
         "character": "うん取れた",
