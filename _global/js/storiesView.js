@@ -104,8 +104,8 @@ class View {
     this.nextButton.innerHTML = "NEXT";
 
     // Append buttons to button area
-    //this.goodBadButton.append(this.badButton, this.goodButton);
-    this.buttonArea.append(this.nextButton, this.showButton);
+    this.goodBadButton.append(this.badButton, this.goodButton);
+    this.buttonArea.append(this.goodBadButton, this.showButton);
  
     // Append the title, form, and todo list to the content div
     this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea);
@@ -253,9 +253,6 @@ class View {
 
     if(card != undefined){
       let nextCardWordOriginal;
-      //let nextCardWordOriginalSpaces;
-      //let nextCardWordTranslation;
-      //let nextCardWordSeparator;
       let newIcon;
       let audioValue = "";
 
@@ -394,12 +391,12 @@ class View {
   displayButtons(boolean) {
 
     if (boolean == false) {
-      this.nextButton.style.display = "none";
+      this.goodBadButton.style.bottom = "-80px";
       this.showButton.style.display = "block";
     } 
 
     else {
-      this.nextButton.style.display = "block";
+      this.goodBadButton.style.bottom = 0;
       this.showButton.style.display = "none";
     }
   }
@@ -411,7 +408,12 @@ class View {
       handler(boolean);
     });
 
-    this.nextButton.addEventListener("click", (event) => {
+    this.goodButton.addEventListener("click", (event) => {
+      let boolean = false;
+      handler(boolean);
+    });
+
+    this.badButton.addEventListener("click", (event) => {
       let boolean = false;
       handler(boolean);
     });
@@ -561,7 +563,10 @@ class View {
 
 
   bindGoToNext(handler) {
-    this.nextButton.addEventListener("click", (event) => {
+    this.goodButton.addEventListener("click", (event) => {
+      handler();
+    });
+    this.badButton.addEventListener("click", (event) => {
       handler();
     });
   }

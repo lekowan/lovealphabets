@@ -347,6 +347,10 @@ const dictionary = {
         "pinyin": "なん",
         "english": "what (used with t, d, n consonants and counters)"
     },
+    "なん": {
+        "pinyin": "なん",
+        "english": "what (used with t, d, n consonants and counters)"
+    },
     "何か": {
         "pinyin": "なにか",
         "english": "something, some"
@@ -3224,6 +3228,10 @@ const dictionary = {
         "english": "exam"
     },
     "経験": {
+        "pinyin": "けいけん",
+        "english": "experience, knowledge or skill gained"
+    },
+    "けいけん": {
         "pinyin": "けいけん",
         "english": "experience, knowledge or skill gained"
     },
@@ -16671,6 +16679,10 @@ const dictionary = {
         "pinyin": "ぼしゅう",
         "english": "recruitment, collection"
     },
+    "ぼしゅう": {
+        "pinyin": "ぼしゅう",
+        "english": "recruitment, collection"
+    },
     "集まり": {
         "pinyin": "あつまり",
         "english": "gathering, assembly"
@@ -26351,7 +26363,7 @@ const dictionary = {
         "pinyin": "だいだい",
         "english": "generation after generation"
     },
-    "お代わり": {
+    "おかわり": {
         "pinyin": "おかわり",
         "english": "second helping"
     },
@@ -37087,6 +37099,10 @@ const dictionary = {
         "pinyin": "しゃれ",
         "english": "pun; witticism"
     },
+    "お洒落": {
+        "pinyin": "おしゃれ",
+        "english": "stylish"
+    },
     "洒落る": {
         "pinyin": "しゃれる",
         "english": "dress smartly; pun"
@@ -37722,6 +37738,227 @@ const dictionary = {
     "黴": {
         "pinyin": "かび",
         "english": "mold; mould"
-    }
+    },
+    "笹": {
+        "pinyin": "ささ",
+        "english": "bamboo"  
+    },
+    "ささ": {
+        "pinyin": "ささ",
+        "english": "bamboo"  
+    },
+    "してる" : {
+      "pinyin": "してる",
+      "english": "to be doing"  
+    },
+    "している" : {
+      "pinyin": "している",
+      "english": "to be doing"  
+    },
+    "して" : {
+      "pinyin": "して",
+      "english": "to do"  
+    },
+    "してます" : {
+      "pinyin": "してます",
+      "english": "to do"       
+    },
+    "しています" : {
+      "pinyin": "しています",
+      "english": "to do"       
+    },
+    "使えます" : {
+      "pinyin": "つかえます",
+      "english": "can use"  
+    },
+    "つかえない" : {
+      "pinyin": "つかえない",
+      "english": "can't use"  
+    },
+    "使えない" : {
+      "pinyin": "つかえない",
+      "english": "can't use"  
+    },
+
+    "あります" : {
+      "pinyin": "あります",
+      "english": "to have; to be"    
+    },
+    "です" : {
+      "pinyin": "です",
+      "english": "to be"  
+    },
+    "だ" : {
+      "pinyin": "だ",
+      "english": "to be"  
+    },
+    "どきなさい" : {
+      "pinyin": "どきなさい",
+      "english": "get out of the way"  
+    },
+    "を" : {
+      "pinyin": "を",
+      "english": "object particle"  
+    },
+    "食べながら": {
+      "pinyin": "たべながら",
+      "english": "while eating"  
+    },
+    "から": {
+      "pinyin": "から",
+      "english": "from; since"  
+    },
+    "この": {
+      "pinyin": "この",
+      "english": "this"  
+    },
+    "こんな": {
+        "pinyin": "こんな",
+        "english": "this kind of; like this; such"
+    },
+    "こんな": {
+        "pinyin": "こんな",
+        "english": "this kind of; like this; such"
+    },
+    "なんか": {
+        "pinyin": "なんか",
+        "english": "something like ...; things like ...; someone like ...; the likes of .."
+    },
+    "しろくまカフェへ": {
+        "pinyin": "しろくまカフェへ",
+        "english": "Shirokuma Cafe",
+    },
+    "ゴロゴロ": {
+        "pinyin": "ゴロゴロ",
+        "english": "lazily",  
+    },
+    "しないで": {
+        "pinyin": "しないで",
+        "english": "don't do",  
+    },
+    "ある" : {
+        "pinyin": "ある",
+        "english": "to have",    
+    },
+    "探しなさい" : {
+        "pinyin": "さがしなさい",
+        "english": "look for!; search for!",    
+    },
+    "吸わないで" : {
+        "pinyin": "すわないで",
+        "english": "don't suck!",    
+    },
+    "忙しさ": {
+        "pinyin": "いそがしさ",
+        "english": "business",    
+    },
+    "分かんない": {
+        "pinyin": "わかんない",
+        "english": "don't understand",    
+    },
+    "働かない": {
+        "pinyin": "はたらかない",
+        "english": "don't work",    
+    },
+    "載っている": {
+        "pinyin": "のっている",
+        "english": "lists; mentions",    
+    },
+    "もらえる": {
+        "pinyin": "もらえる",
+        "english": "can get; can receive; can be given",    
+    },
+    "ない": {
+        "pinyin": "ない",
+        "english": "to not be; to not have",    
+    },
+    "思います": {
+        "pinyin": "おもいます",
+        "english": "think",    
+    },
+    "どうせなら": {
+        "pinyin": "どうせなら",
+        "english": "if it's going to be that way, then ...; if given the choice; if possible; if anything",    
+    },
+    "申します": {
+        "pinyin": "もうします",
+        "english": "to say; to be called"
+    },
+    "そちら": {
+        "pinyin": "そちら",
+        "english": "there"
+    },
+    "ありません": {
+        "pinyin": "ありません",
+        "english": "doesn't have; isn't"
+    },
+    "マウス": {
+        "pinyin": "マウス",
+        "english": "computer mouse"
+    },
+    "できません": {
+        "pinyin": "マウス",
+        "english": "computer mouse"
+    },
+    "こと": {
+        "pinyin": "こと",
+        "english": "thing; matter; incident"
+    },
+    "もしもし": {
+        "pinyin": "もしもし",
+        "english": "hello (on the phone)"
+    },
+    "って": {
+        "pinyin": "って",
+        "english": "you said; he said; she said; they said"
+    },
+    "見つかった": {
+        "pinyin": "みつかった",
+        "english": "found; discovered"        
+    },
+    "品数": {
+        "pinyin": "しなかず",
+        "english": "variety of goods"        
+    },
+    "だらだら": {
+        "pinyin": "だらだら",
+        "english": "sluggishly; endlessly; lengthily"        
+    },
+    "しよう": {
+        "pinyin": "しよう",
+        "english": "let's do"        
+    },
+    "っと": {
+        "pinyin": "っと",
+        "english": "I think"        
+    },
+    "覚えられない": {
+        "pinyin": "おぼえられない",
+        "english": "can't remember"        
+    },
+    "お金": {
+        "pinyin": "おかね",
+        "english": "money"        
+    },
+    "コンビニ": {
+        "pinyin": "コンビニ",
+        "english": "convenience store"        
+    },
+    "してた": {
+        "pinyin": "してた",
+        "english": "was doing; were doing"        
+    },
+    "していた": {
+        "pinyin": "していた",
+        "english": "was doing; were doing"        
+    },
+    "でしょう": {
+        "pinyin": "でしょう",
+        "english": "it seems; I think; I guess; I wonder"        
+    },
+
+    
 }
+
+
 

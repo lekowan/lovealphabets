@@ -930,13 +930,6 @@ class View {
       handler(boolean);
     });
 
-    /*
-    this.moreButton.addEventListener("click", (event) => {
-      let boolean = false;
-      handler(boolean);
-    });
-    */
-
     this.goodButton.addEventListener("click", (event) => {
       let boolean = false;
       handler(boolean);
