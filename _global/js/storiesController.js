@@ -79,8 +79,8 @@ class Controller {
     this.model.processBadAnswer();
   };
 
-  onBadPressed = () => {
-    this.view.bindProcessBadAnswer();
+  onBadPressed = (id) => {
+    this.view.displayBadIcon(id);
   };
 
   // Process good answer

@@ -112,12 +112,7 @@ class Model {
         this.onCardAdded = callback;
     }
 
-    // Process bad answer:
-    // Add answer to incorrect array
-    // Update SRS data
-    processBadAnswer() {
-       
-    }
+
 
     // Process good answer:
     // Update SRS data
@@ -142,6 +137,17 @@ class Model {
 
     bindOnShowedAnswer(callback) {
         this.onShowedAnswer = callback;
+    }
+
+    // Process bad answer:
+    // Add answer to incorrect array
+    // Update SRS data
+    processBadAnswer() {
+        let currentSlide;
+        currentSlide = this.whatSlide;
+
+        console.log('processed');
+        this.onBadPressed(currentSlide);
     }
 
     bindOnBadAnswerProcessed(callback) {

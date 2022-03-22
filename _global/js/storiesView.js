@@ -554,6 +554,18 @@ class View {
     }) 
   }
 
+  displayBadIcon(id){
+    let slide = document.getElementById(id);
+    let word = slide.getElementsByClassName("word")[0];
+
+    console.log(word.getElementsByClassName("wrong-answer"));
+    if(word.getElementsByClassName("wrong-answer").length == 0){
+      let wrong = this.createElement("div", "wrong-answer");
+      wrong.innerHTML = "BAD";
+      word.append(wrong)
+    }
+  }
+
 
   displayNext(id){
     id++;
@@ -599,24 +611,26 @@ class View {
     
     });
   }
-    
-  displayNoSpace(boolean){
 
-    //console.log(this.pinyinWordSpaceArrray);
-    //console.log(this.pinyinWordNoSpaceArrray);
-
+  get _wordOriginalElement(){
     let noSpaceCollection = document.getElementsByClassName("word-original");
-    let noSpaceArray = [...noSpaceCollection];
+    return [...noSpaceCollection];
+  } 
 
+  get _pinyinElement(){
     let noSpacePinyinCollection = document.getElementsByClassName("pinyin");
-    let noSpacePinyinArray = [...noSpacePinyinCollection];
+    return [...noSpacePinyinCollection];    
+  }
+
+
+  displayNoSpace(boolean){
 
     if(boolean == true){
 
       this.noSpaceButton.classList.add("hidden");
 
       // Loop through all word-original elements
-      noSpaceArray.forEach((item, number) => {
+      this._wordOriginalElement.forEach((item, number) => {
       
         item.innerHTML = this.originalWordNoSpaceArray[number];
             
@@ -631,7 +645,7 @@ class View {
 
       // Loop through all pinyin elements
       // Replace all innerHTML with No Space version
-      noSpacePinyinArray.forEach((item, number) => {
+      this._pinyinElement.forEach((item, number) => {
 
         item.innerHTML = this.pinyinWordNoSpaceArrray[number];
         console.log(item.innerHTML);
@@ -645,7 +659,7 @@ class View {
       this.noSpaceButton.classList.remove("hidden");
       
       // Loop through all word-original elements
-      noSpaceArray.forEach((item, number) => {
+      this._wordOriginalElement.forEach((item, number) => {
 
         item.innerHTML = this.originalWordSpaceArray[number];
         
@@ -657,7 +671,7 @@ class View {
 
       // Loop through all pinyin elements
       // Replace all innerHTML with space version  
-      noSpacePinyinArray.forEach((item, number) => {
+      this._pinyinElement.forEach((item, number) => {
 
           item.innerHTML = this.pinyinWordSpaceArrray[number];
           //console.log(item.innerHTML);
