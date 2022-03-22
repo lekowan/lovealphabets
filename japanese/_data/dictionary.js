@@ -1039,6 +1039,10 @@ const dictionary = {
         "pinyin": "きゃく",
         "english": "visitor, customer"
     },
+    "お客様": {
+        "pinyin": "きゃくさま",
+        "english": "visitor, customer"
+    },    
     "天ぷら": {
         "pinyin": "てんぷら",
         "english": "Japanese deep-fried food"
@@ -2666,6 +2670,10 @@ const dictionary = {
     "名前": {
         "pinyin": "なまえ",
         "english": "name"
+    },
+    "お名前": {
+        "pinyin": "おなまえ",
+        "english": "name (honorific)"
     },
     "名字": {
         "pinyin": "みょうじ",
@@ -37956,8 +37964,216 @@ const dictionary = {
         "pinyin": "でしょう",
         "english": "it seems; I think; I guess; I wonder"        
     },
+    "してて": {
+        "pinyin": "してて",
+        "english": "be doing!"        
+    },
+    "していて": {
+        "pinyin": "していて",
+        "english": "be doing!"        
+    },
+    "待って": {
+        "pinyin": "まって",
+        "english": "wait!"        
+    },
+    "あった": {
+        "pinyin": "あった",
+        "english": "was; had"        
+    },
+    "いらっしゃいませ": {
+        "pinyin": "いらっしゃいませ",
+        "english": "welcome"        
+    },
+    "ください": {
+        "pinyin": "ください",
+        "english": "please"        
+    },
+    "くん": {
+        "pinyin": "くん",
+        "english": "generally used by people of senior status addressing or referring to those of junior status"        
+    },
+    "貯める": {
+        "pinyin": "ためる",
+        "english": "to save up",        
+    },
+    "派": {
+        "pinyin": "は",
+        "english": "group; clique",        
+    },
+    "ひまわり": {
+        "pinyin": "ひまわり",
+        "english": "sunflower",        
+    },
+    "薪割り": {
+        "pinyin": "まきわり",
+        "english": "hatchet; axe; wood-chopping; wood-splitting",        
+    },
+    "西瓜割り": {
+        "pinyin": "すいかわり",
+        "english": "watermelon-splitting (game)"     
+    },
+    "なければ": {
+        "pinyin": "なければ",
+        "english": "if (it) doesn't exist; if there is no ...; if (one) doesn't have ..."     
+    },
+    "だって": {
+        "pinyin": "だって",
+        "english": "they say; I hear; you mean"     
+    },
+    "そういえば": {
+        "pinyin": "そういえば",
+        "english": "now that you mention it; come to think of it; that reminds me; on that subject; speaking of which"     
+    },
+    "足りなくて": {
+        "pinyin": "足りなくて",
+        "english": "not enough"
+    },
+    "かな": {
+        "pinyin": "かな",
+        "english": "I wonder"
+    },
+    "ほど": {
+        "pinyin": "ほど",
+        "english": "as much as ...; to the extent of"
+    },
+    "かんがえちゃった": {
+        "pinyin": "かんがえちゃった",
+        "english": "ended up thinking about"
+    },
+    "したい": {
+        "pinyin": "したい",
+        "english": "want to do"
+    },
+    "思って": {
+        "pinyin": "おもって",
+        "english": "think; consider; imagine"
+    },
+    "穴熊": {
+        "pinyin": "あなぐま",
+        "english": "badger; Eurasian badger (Meles meles)"
+    },
+    "やれます": {
+        "pinyin": "やれます",
+        "english": "do"
+    },
+    "任せて": {
+        "pinyin": "まかせて",
+        "english": "leave it to someone"
+    },
+    "運べます": {
+        "pinyin": "はこべます",
+        "english": "can carry"
+    },
+    "働かせて": {
+        "pinyin": "はたらかせて",
+        "english": "let me work"
+    },
+    "来た": {
+        "pinyin": "きた",
+        "english": "came"
+    },
+    "行きます": {
+        "pinyin": "いきます",
+        "english": "go"
+    },
+    "した": {
+        "pinyin": "した",
+        "english": "did"
+    },
+    "満々": {
+        "pinyin": "まんまん",
+        "english": "full of; brimming with"
+    },
+    "ちなみに": {
+        "pinyin": "ちなみに",
+        "english": "by the way; in this connection; incidentally; in passing"
+    },
+    "全員": {
+        "pinyin": "ぜんいん",
+        "english": "all members; all hands; everyone; everybody; whole crew"
+    },
+    "とこ": {
+        "pinyin": "とこ",
+        "english": "passage (in text); part"
+    },
+    "見つからなかった": {
+        "pinyin": "みつからなかった",
+        "english": "didn't find"
+    },
+    "吸われる": {
+        "pinyin": "すわれる",
+        "english": "to be sucked"
+    },
+    "すみません": {
+        "pinyin": "すみません",
+        "english": "excuse me"
+    },
+    "あのう": {
+        "pinyin": "あのう",
+        "english": "say; um; well"
+    },
+    "住み込み": {
+        "pinyin": "すみこみ",
+        "english": "to be a live-in employee; to live in; to live with"
+    },
+    "みたい": {
+        "pinyin": "みたい",
+        "english": "-like; sort of; similar to; resembling; it seems that"
+    },
+    "住み込みたい": {
+        "pinyin": "すみこみたい",
+        "english": "want to live in"
+    },
+    "運んで": {
+        "pinyin": "はこんで",
+        "english": "carry; transport"
+    },
+    "見つけちゃった": {
+        "pinyin": "みつけちゃった",
+        "english": "ended up finding"
+    },
+    "言ってる": {
+        "pinyin": "いってる",
+        "english": "saying"
+    },
+    "知ってる": {
+        "pinyin": "しってる",
+        "english": "to know"
+    },
+    "言っている": {
+        "pinyin": "いってる",
+        "english": "saying"
+    },
+    "知っている": {
+        "pinyin": "しってる",
+        "english": "to know"
+    },
+    "なの": {
+        "pinyin": "なの",
+        "english": "is that so?; is it?"
+    },
+    "隣り": {
+        "pinyin": "となり",
+        "english": "next to"
+    }, 
+    "くらい": {
+        "pinyin": "くらい",
+        "english": "about"
+    }, 
+    "くらい": {
+        "pinyin": "くらい",
+        "english": "about"
+    }, 
+    "いえ": {
+        "pinyin": "いえ",
+        "english": "no; nay"
+    },
+    "だけ": {
+        "pinyin": "だけ",
+        "english": "only; just; merely; simply; no more than; nothing but; alone​"
+    }, 
 
-    
+
 }
 
 
