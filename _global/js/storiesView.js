@@ -85,12 +85,39 @@ class View {
 
     // Create Good button
     this.goodButton = this.createElement("button", "good");
-    this.goodButton.innerHTML = "GOOD";
+    //this.goodButton.innerHTML = "GOOD";
     //this.goodButton.style.display = "none";
+
+    // Create thumb up icon
+    let thumbUpSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    thumbUpSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+    thumbUpSvg.setAttribute("height", "24px");
+    thumbUpSvg.setAttribute("viewBox", "0 0 24 24");
+    thumbUpSvg.setAttribute("width", "24px");
+    thumbUpSvg.setAttribute("fill", "#14e38c");
+    let thumbUpSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    thumbUpSvgPath1.setAttribute("d", "M0 0h24v24H0V0zm0 0h24v24H0V0z"); //Set path's data
+    thumbUpSvgPath1.setAttribute("fill", "none");
+    let thumbUpSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    let thumbUpSvgPath2d = "M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1z";
+    thumbUpSvgPath2.setAttribute("d", thumbUpSvgPath2d); //Set path's data
+    thumbUpSvg.append(thumbUpSvgPath1, thumbUpSvgPath2);
+
+    // Clone generic SVG button
+    this.thumbUpSvg = thumbUpSvg.cloneNode(true);
+    this.thumbUpSvg.style.filter = "drop-shadow(0px 0px 1px rgb(20 227 140 / .3))";
+    this.goodButton.append(this.thumbUpSvg);
 
     // Create Bad button
     this.badButton = this.createElement("button", "bad");
-    this.badButton.innerHTML = "BAD";
+    //this.badButton.innerHTML = "BAD";
+
+    this.thumbDownSvg = thumbUpSvg.cloneNode(true);
+    this.thumbDownSvg.style.transform = "rotate(180deg)";
+    this.thumbDownSvg.style.fill = "#f45acb";
+    this.thumbDownSvg.style.filter = "drop-shadow(0px 0px 1px rgb(244 90 203 / .3))";
+
+    this.badButton.append(this.thumbDownSvg);
     //this.badButton.style.display = "none";
 
     // Create Show button
