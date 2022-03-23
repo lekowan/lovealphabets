@@ -507,6 +507,8 @@ class View {
   }
 
   displayWelcomePopover(boolean) {
+
+    boolean = false;
     if (boolean == false) {
       this.welcomeContainer.style.display = "none";
 
