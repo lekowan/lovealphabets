@@ -23,7 +23,7 @@ class Controller {
 
     // Display initial word + answer
     //if (!this.model.showWelcome) 
-    this.onNextCardAdded(this.model.initialWord, this.model.wrongAnswersArray, this.model.rightAnswersArray);
+    this.onNextCardAdded(this.model.initialWord, this.model.rightAnswersArray, this.model.wrongAnswersArray);
 
     // Get slide number upon scrolling
     this.model.bindOnScrolled(this.onScrolled);

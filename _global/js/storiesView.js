@@ -341,7 +341,6 @@ class View {
       this.slideCollection.push(nextCardSlide);
       this.bodyContent.append(nextCardSlide);
 
-      console.log(rightAnswers.includes( (id + 1).toString() ));
       if(rightAnswers.includes( (id + 1).toString() )){
           let right = this.createElement("div", "right-answer");
           right.innerHTML = "GOOD";
