@@ -186,11 +186,13 @@ class View {
     this.englishTranslateButton = this.createElement("button", "english-translate-button");
     this.englishTranslateButton.innerHTML = "Translate";
 
-    this.buttonArea.append(this.audioButton, this.translateButton, this.englishTranslateButton) 
+    this.buttonArea.append(this.audioButton, this.translateButton, this.goodBadButton) 
       //this.showButton);
+
+    this.goodBadBackground = this.createElement("div", "good-bad-background");
  
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea, this.goodBadButton);
+    this.content.append(this.header, this.progress, this.bodyContent, this.goodBadBackground, this.buttonArea);
 
     // Append content div to app
     this.app.append(this.content);

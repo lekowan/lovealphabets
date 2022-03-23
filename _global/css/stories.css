@@ -1156,25 +1156,37 @@ p.word-translation {
   font-size: 20px;
 }
 
+
+.good-bad-background {
+    bottom: -100px;
+    right: -30px;
+    height: 160px;
+    width: 200px;
+    background-color: #0f0037;
+    /* justify-content: space-between; */
+    position: fixed;
+    border-radius: 67px 0 0 0;
+}
+
 .button-area {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     font-size: 11px;
     font-weight: 600;
-    height: 80px;
-    position: relative;
+    height: 62px;
+    /* position: relative; */
     overflow: hidden;
     margin-top: auto;
     padding-left: 21px;
 }
 
 button.translate-button {
-    margin: 0 0 0 11px;
+    margin: 0 0 0 21px;
 }
 
 button.english-translate-button {
-    margin-left: auto;
+    margin-left: 10px;
     padding-right: 40px;
     font-family: 'Noto Sans', sans-serif !important;
     font-weight: 900;
@@ -1184,15 +1196,16 @@ button.english-translate-button {
     /* bottom: -80px; */
     /* left: 0; */
     /* height: 80px; */
-    width: 100%;
-    background-color: #0f0037;
+    width: 139px;
+    /* background-color: #0f0037; */
     /* border-top: 1px #f0f0f0 solid; */
     /* box-shadow: 2px 2px rgb(241 240 244); */
-    /* position: absolute; */
+    /* position: relative; */
     /* transition: 0.1s ease-in; */
     justify-content: space-around;
     padding: 20px 0;
     display: flex;
+    margin-left: auto;
 }
 
 #next-button {
