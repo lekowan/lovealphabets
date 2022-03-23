@@ -4,15 +4,18 @@ class Model {
     constructor() {
 
         // Get data from  localStorage
-        let _data = JSON.parse(localStorage.getItem(localStorageKey + "Data"));
-        let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
+        let _rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"));
+        let _wrongAnswers = JSON.parse(localStorage.getItem(localStorageKey + "WrongAnswers"));
+
+        this.rightAnswers = _rightAnswers || [];
+        this.wrongAnswers = _wrongAnswers || [];
 
         this.allNewCards = Object.keys(allSyllableMap);
 
         // Display first word
         this.word = this.allNewCards[0];
 
-        this.currentSlide = 1;
+        this.currentSlide = "1";
 
         
     } // End of constructor ////////////////////////////////////////////////////////////////////////
@@ -26,6 +29,13 @@ class Model {
         return this.currentSlide;
     }
 
+    get wrongAnswersArray(){
+        return this.wrongAnswers;
+    }
+
+    get rightAnswersArray(){
+        return this.rightAnswers;
+    }
 
     get initialCongratulationsPopover() {
         return this.showCongratulations;
@@ -105,19 +115,11 @@ class Model {
 
     // Add new card to the DOM
     addCard() {
-        this.onCardAdded(this.nextCard, this.newAnswer, this.isWordNew);
+        this.onCardAdded(this.nextCard, this.rightAnswers, this.wrongAnswers);
     }
 
     bindOnNextCardAdded(callback) {
         this.onCardAdded = callback;
-    }
-
-
-
-    // Process good answer:
-    // Update SRS data
-    processGoodAnswer() {
-       
     }
 
     showDefinition(span){
@@ -143,11 +145,52 @@ class Model {
     // Add answer to incorrect array
     // Update SRS data
     processBadAnswer() {
-        let currentSlide;
-        currentSlide = this.whatSlide;
 
-        console.log('processed');
+        let wrongAnswers = JSON.parse(localStorage.getItem(localStorageKey + "WrongAnswers"))  || [];
+        let rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"))  || [];
+        
+        let currentSlide = this.whatSlide;
+
+        // If the answer is not already in wrongAnswers in localStorage, add it
+        if(!wrongAnswers.includes(currentSlide)){
+            wrongAnswers.push(currentSlide);
+            this._commitWrongAnswers(wrongAnswers);
+        }
+
+        // If the answer is already in rightAnswers in localStorage, remove it
+        if(rightAnswers.includes(currentSlide)){
+            let data = rightAnswers.filter(item => item != currentSlide);
+            this._commitRightAnswers(data);
+        }
+
+
         this.onBadPressed(currentSlide);
+    }
+
+    // Process good answer:
+    // Add answer to incorrect array
+    // Update SRS data
+    processGoodAnswer() {
+  
+        let wrongAnswers = JSON.parse(localStorage.getItem(localStorageKey + "WrongAnswers"))  || [];
+        let rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"))  || [];
+        
+        let currentSlide = this.whatSlide;
+
+        // If the answer is not already in rightAnswers in localStorage, add it
+        if(!rightAnswers.includes(currentSlide)){
+            rightAnswers.push(currentSlide);
+            this._commitRightAnswers(rightAnswers);
+        }
+
+        // If the answer is already in wrongAnswers in localStorage, remove it
+        if(wrongAnswers.includes(currentSlide)){
+            let data = wrongAnswers.filter(item => item != currentSlide);
+            this._commitWrongAnswers(data);
+        }
+
+
+        this.onGoodPressed(currentSlide);
     }
 
     bindOnBadAnswerProcessed(callback) {
@@ -204,15 +247,12 @@ class Model {
         this.onDisplayedNoSpace(boolean);
     }
 
-    _commitData(data) {
-        localStorage.setItem(localStorageKey + "Data", JSON.stringify(data));
+    _commitRightAnswers(data) {
+        localStorage.setItem(localStorageKey + "RightAnswers", JSON.stringify(data));
     }
 
-    _commitProgress(progress) {
-        localStorage.setItem(localStorageKey + "Progress", JSON.stringify(progress));
+    _commitWrongAnswers(data) {
+        localStorage.setItem(localStorageKey + "WrongAnswers", JSON.stringify(data));
     }
 
-    _commitNextDate(nextDate) {
-        localStorage.setItem(localStorageKey + "NextDate", JSON.stringify(nextDate));
-    }
 }

@@ -828,6 +828,15 @@ p.example-english {
     padding: 4px 10px;
 }
 
+.right-answer {
+    height: 25px;
+    color: #14e38c;
+    font-size: 10px;
+    border: 1px solid #14e38c;
+    border-radius: 1px;
+    padding: 4px 10px;
+}
+
 .example-target-container {
     display: flex;
     justify-content: space-between;

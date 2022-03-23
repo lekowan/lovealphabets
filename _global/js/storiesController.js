@@ -22,7 +22,8 @@ class Controller {
     this.view.bindProcessGoodAnswer(this.handleProcessGoodAnswer);
 
     // Display initial word + answer
-    if (!this.model.showWelcome) this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
+    //if (!this.model.showWelcome) 
+    this.onNextCardAdded(this.model.initialWord, this.model.wrongAnswersArray, this.model.rightAnswersArray);
 
     // Get slide number upon scrolling
     this.model.bindOnScrolled(this.onScrolled);
@@ -88,12 +89,12 @@ class Controller {
     this.model.processGoodAnswer();
   };
 
-  onGoodPressed = () => {
-    this.view.bindProcessGoodAnswer();
+  onGoodPressed = (id) => {
+    this.view.displayGoodIcon(id);
   };
 
-  onNextCardAdded = (card, answer, isNew) => {
-    this.view.addNextCard(card, answer, isNew);
+  onNextCardAdded = (card, rightAnswers, wrongAnswers) => {
+    this.view.addNextCard(card, rightAnswers, wrongAnswers);
   };
 
   // Scroll

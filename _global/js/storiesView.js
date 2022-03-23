@@ -247,7 +247,10 @@ class View {
   $ = (n) => document.querySelector(n);
 
 
-  addNextCard(cardsSet, isNew) {
+  addNextCard(cardsSet, rightAnswers, wrongAnswers) {
+
+    console.log(rightAnswers);
+    console.log(wrongAnswers);
 
     cardsSet.forEach((card, id) => {
 
@@ -266,12 +269,6 @@ class View {
       answer.innerHTML = allSyllableMap[card].letter;
       answer.id = "word-translation-" + (id + 1);
       answer.style.opacity = 0;
-
-      if(isNew){
-        newIcon = this.createElement("div", "new-icon");
-        newIcon.textContent = "new";
-        nextCard.append(newIcon);
-      } 
 
       let nextCardOriginalContainer = this.createElement("div", "original-container");
 
@@ -337,13 +334,25 @@ class View {
       // Add event listeners to all span tags
       this.showDefinition(spanArray);
 
-
       let nextCardSlide = this.createElement("div", "slide");
       nextCardSlide.id = "" + (id + 1);
       nextCardSlide.append(nextCard);
 
       this.slideCollection.push(nextCardSlide);
       this.bodyContent.append(nextCardSlide);
+
+      console.log(rightAnswers.includes( (id + 1).toString() ));
+      if(rightAnswers.includes( (id + 1).toString() )){
+          let right = this.createElement("div", "right-answer");
+          right.innerHTML = "GOOD";
+          nextCard.append(right);
+      }
+
+      if(wrongAnswers.includes( (id + 1).toString() )){
+          let wrong = this.createElement("div", "wrong-answer");
+          wrong.innerHTML = "BAD";
+          nextCard.append(wrong);
+      }
 
     }
 
@@ -556,13 +565,38 @@ class View {
 
   displayBadIcon(id){
     let slide = document.getElementById(id);
+    console.log(slide);
     let word = slide.getElementsByClassName("word")[0];
+    console.log(word);
 
-    console.log(word.getElementsByClassName("wrong-answer"));
+    // If GOOD icon is showing, remove it
+    if(word.getElementsByClassName("right-answer").length > 0){
+      word.getElementsByClassName("right-answer")[0].remove();
+    }
+
+    // Only add BAD icon if it is not already showing
     if(word.getElementsByClassName("wrong-answer").length == 0){
       let wrong = this.createElement("div", "wrong-answer");
       wrong.innerHTML = "BAD";
-      word.append(wrong)
+      word.append(wrong);
+    }
+  }
+
+  displayGoodIcon(id){
+    let slide = document.getElementById(id);
+    let word = slide.getElementsByClassName("word")[0];
+
+    // If BAD icon is showing, remove it
+    if(word.getElementsByClassName("wrong-answer").length > 0){
+      word.getElementsByClassName("wrong-answer")[0].remove()
+    }
+
+    // Only add GOOD icon if it is not already showing
+    if(word.getElementsByClassName("right-answer").length == 0){
+      let right = this.createElement("div", "right-answer");
+      right.innerHTML = "GOOD";
+      word.append(right);
+
     }
   }
 
