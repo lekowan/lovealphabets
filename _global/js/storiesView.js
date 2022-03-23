@@ -81,7 +81,7 @@ class View {
     this.buttonArea = this.createElement("div", "button-area");
 
     // Create Good / Bad button area
-    //this.goodBadButton = this.createElement("div", "good-bad");
+    this.goodBadButton = this.createElement("div", "good-bad");
 
     // Create Good button
     this.goodButton = this.createElement("button");
@@ -131,7 +131,7 @@ class View {
     this.nextButton.innerHTML = "NEXT";
 
     // Append buttons to button area
-    //this.goodBadButton.append(this.badButton, this.goodButton);
+    this.goodBadButton.append(this.badButton, this.goodButton);
 
     
     // Create translate icon
@@ -182,11 +182,15 @@ class View {
     this.audioButton = this.createElement("button", "audio-button");
     this.audioButton.append(this.audioSvg);
 
-    this.buttonArea.append(this.audioButton, this.translateButton, this.goodButton, this.badButton) 
+    // Create translate icon
+    this.englishTranslateButton = this.createElement("button", "english-translate-button");
+    this.englishTranslateButton.innerHTML = "Translate";
+
+    this.buttonArea.append(this.audioButton, this.translateButton, this.englishTranslateButton) 
       //this.showButton);
  
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea);
+    this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea, this.goodBadButton);
 
     // Append content div to app
     this.app.append(this.content);
@@ -448,12 +452,12 @@ class View {
   displayButtons(boolean) {
 
     if (boolean == false) {
-      this.goodBadButton.style.bottom = "-80px";
+      //this.goodBadButton.style.bottom = "-80px";
       this.showButton.style.display = "block";
     } 
 
     else {
-      this.goodBadButton.style.bottom = 0;
+      //this.goodBadButton.style.bottom = 0;
       this.showButton.style.display = "none";
     }
   }
