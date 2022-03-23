@@ -81,10 +81,10 @@ class View {
     this.buttonArea = this.createElement("div", "button-area");
 
     // Create Good / Bad button area
-    this.goodBadButton = this.createElement("div", "good-bad");
+    //this.goodBadButton = this.createElement("div", "good-bad");
 
     // Create Good button
-    this.goodButton = this.createElement("button", "good");
+    this.goodButton = this.createElement("button");
     //this.goodButton.innerHTML = "GOOD";
     //this.goodButton.style.display = "none";
 
@@ -109,7 +109,7 @@ class View {
     this.goodButton.append(this.thumbUpSvg);
 
     // Create Bad button
-    this.badButton = this.createElement("button", "bad");
+    this.badButton = this.createElement("button");
     //this.badButton.innerHTML = "BAD";
 
     this.thumbDownSvg = thumbUpSvg.cloneNode(true);
@@ -131,8 +131,59 @@ class View {
     this.nextButton.innerHTML = "NEXT";
 
     // Append buttons to button area
-    this.goodBadButton.append(this.badButton, this.goodButton);
-    this.buttonArea.append(this.goodBadButton, this.showButton);
+    //this.goodBadButton.append(this.badButton, this.goodButton);
+
+    
+    // Create translate icon
+    let translateSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    translateSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+    translateSvg.setAttribute("height", "24px");
+    translateSvg.setAttribute("viewBox", "0 0 24 24");
+    translateSvg.setAttribute("width", "24px");
+    translateSvg.setAttribute("fill", "#18093e");
+    let translateSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    translateSvgPath1.setAttribute("d", "M0 0h24v24H0V0z"); //Set path's data
+    translateSvgPath1.setAttribute("fill", "none");
+    let translateSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    let translateSvgPath2d = "M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z";
+    translateSvgPath2.setAttribute("d", translateSvgPath2d); //Set path's data
+    translateSvg.append(translateSvgPath1, translateSvgPath2);
+
+    // Clone generic translate icon
+    this.translateSvg = translateSvg.cloneNode(true);
+    this.translateButton = this.createElement("button", "translate-button");
+    this.translateButton.append(this.translateSvg);
+
+    // Create audio icon
+    let audioSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    //audioSvg.classList.add("audio-icon");
+    audioSvg.id = "audio-icon-" + this.count;
+    audioSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+    audioSvg.setAttribute("height", "20px");
+    audioSvg.setAttribute("viewBox", "0 0 24 24");
+    audioSvg.setAttribute("width", "20px");
+    audioSvg.setAttribute("fill", "none");
+    audioSvg.setAttribute("stroke", "#18093e");
+    audioSvg.setAttribute("stroke-width", "2");
+    let audioSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    audioSvgPath1.setAttribute("d", "M0 0h24v24H0z");
+    audioSvgPath1.setAttribute("fill", "none");
+    audioSvgPath1.setAttribute("stroke", "none");
+    let audioSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    audioSvgPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
+    let audioSvgPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    audioSvgPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
+    let audioSvgPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    audioSvgPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
+    audioSvg.append(audioSvgPath1, audioSvgPath2, audioSvgPath3, audioSvgPath4);
+    
+    // Clone generic translate icon
+    this.audioSvg = audioSvg.cloneNode(true);
+    this.audioButton = this.createElement("button", "audio-button");
+    this.audioButton.append(this.audioSvg);
+
+    this.buttonArea.append(this.audioButton, this.translateButton, this.goodButton, this.badButton) 
+      //this.showButton);
  
     // Append the title, form, and todo list to the content div
     this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea);
@@ -201,35 +252,6 @@ class View {
     this.congratulationsContainer.append(this.congratulationsTitle, this.congratulationsContent, this.congratulationsContinueContainer, this.congratulationsCloseButton);
 
     // Play audio on button press
-
-    // Create audio icon
-    this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    this.svgAudio.classList.add("audio-icon");
-    this.svgAudio.id = "audio-icon-" + this.count;
-    this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-    this.svgAudio.setAttribute("height", "20px");
-    this.svgAudio.setAttribute("viewBox", "0 0 24 24");
-    this.svgAudio.setAttribute("width", "20px");
-    this.svgAudio.setAttribute("fill", "none");
-    this.svgAudio.setAttribute("stroke", "#18093e");
-    this.svgAudio.setAttribute("stroke-width", "2");
-
-    this.svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
-    this.svgAudioPath1.setAttribute("fill", "none");
-    this.svgAudioPath1.setAttribute("stroke", "none");
-
-    this.svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
-
-    this.svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
-
-    this.svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    this.svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
-
-    this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
-    this.content.append(this.svgAudio);
 
     // Definition popover
     this.definitionPopover = this.createElement("div", "definition-popover");
@@ -394,7 +416,7 @@ class View {
 
   // Play audio
   bindPlayAudio(handler){
-   this.svgAudio.addEventListener("click", (event) => {
+   this.audioSvg.addEventListener("click", (event) => {
     handler();
    })
   }
@@ -526,7 +548,7 @@ class View {
   animateAudioIcon(){
     
     // Animate audio icon
-    let audioIcon = this.svgAudio;
+    let audioIcon = this.audioSvg;
     
     // Add key frame animation
     audioIcon.classList.add("audio-icon-animation");
