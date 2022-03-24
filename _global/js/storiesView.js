@@ -94,7 +94,7 @@ class View {
     thumbUpSvg.setAttribute("height", "24px");
     thumbUpSvg.setAttribute("viewBox", "0 0 24 24");
     thumbUpSvg.setAttribute("width", "24px");
-    thumbUpSvg.setAttribute("fill", "#14e38c");
+    thumbUpSvg.setAttribute("fill", "#18093e");
     let thumbUpSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     thumbUpSvgPath1.setAttribute("d", "M0 0h24v24H0V0zm0 0h24v24H0V0z"); //Set path's data
     thumbUpSvgPath1.setAttribute("fill", "none");
@@ -121,14 +121,11 @@ class View {
     //this.badButton.style.display = "none";
 
     // Create Show button
+    /*
     this.showButton = this.createElement("button", "purple-cta");
     this.showButton.id = "show-button";
     this.showButton.innerHTML = "SHOW";
-
-    // Create Show button
-    this.nextButton = this.createElement("button");
-    this.nextButton.id = "next-button";
-    this.nextButton.innerHTML = "NEXT";
+    */
 
     // Append buttons to button area
     this.goodBadButton.append(this.badButton, this.goodButton);
@@ -162,6 +159,24 @@ class View {
     audioSvg.setAttribute("height", "20px");
     audioSvg.setAttribute("viewBox", "0 0 24 24");
     audioSvg.setAttribute("width", "20px");
+    audioSvg.setAttribute("fill", "#18093e");
+     let audioSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    audioSvgPath1.setAttribute("d", "M0 0h24v24H0z");
+    audioSvgPath1.setAttribute("fill", "none");
+    audioSvgPath1.setAttribute("stroke", "none");
+    let audioSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    audioSvgPath2.setAttribute("d", "M8 5v14l11-7z" );
+    audioSvg.append(audioSvgPath1, audioSvgPath2);
+
+    /*
+    // Create audio icon
+    let audioSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    //audioSvg.classList.add("audio-icon");
+    audioSvg.id = "audio-icon-" + this.count;
+    audioSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+    audioSvg.setAttribute("height", "20px");
+    audioSvg.setAttribute("viewBox", "0 0 24 24");
+    audioSvg.setAttribute("width", "20px");
     audioSvg.setAttribute("fill", "none");
     audioSvg.setAttribute("stroke", "#18093e");
     audioSvg.setAttribute("stroke-width", "2");
@@ -176,23 +191,34 @@ class View {
     let audioSvgPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     audioSvgPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
     audioSvg.append(audioSvgPath1, audioSvgPath2, audioSvgPath3, audioSvgPath4);
-    
+    */
+
     // Clone generic translate icon
     this.audioSvg = audioSvg.cloneNode(true);
     this.audioButton = this.createElement("button", "audio-button");
     this.audioButton.append(this.audioSvg);
 
     // Create translate icon
-    this.englishTranslateButton = this.createElement("button", "english-translate-button");
-    this.englishTranslateButton.innerHTML = "Translate";
+    this.englishTranslateButton = this.createElement("button", "continue");
+    this.englishTranslateButton.innerHTML = "Continue";
+    this.englishTranslateButton.classList.add("purple-background");
 
-    this.buttonArea.append(this.audioButton, this.translateButton, this.goodBadButton) 
+
+    this.nextButton = this.createElement("button", "continue");
+    this.nextButton.style.display = "none";
+    this.nextButton.innerHTML = "Continue";
+    this.nextButton.classList.add("purple-background");
+
+    this.buttonArea.append(this.audioButton, this.goodButton, this.englishTranslateButton, this.nextButton) 
       //this.showButton);
 
-    this.goodBadBackground = this.createElement("div", "good-bad-background");
+    //this.goodBadOverlay = this.createElement("div", "good-bad-overlay");
+    //this.goodBadBackground = this.createElement("div", "good-bad-background");
+
+    //this.goodBadOverlay.append(this.goodBadButton, this.goodBadBackground);
  
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.progress, this.bodyContent, this.goodBadBackground, this.buttonArea);
+    this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea);
 
     // Append content div to app
     this.app.append(this.content);
@@ -453,33 +479,38 @@ class View {
 
   displayButtons(boolean) {
 
-    if (boolean == false) {
-      //this.goodBadButton.style.bottom = "-80px";
-      this.showButton.style.display = "block";
+    if (boolean == true) {
+      //this.goodBadOverlay.style.bottom = "-80px";
+      // this.showButton.style.display = "block";
+      this.nextButton.style.display = "block";
+      this.englishTranslateButton.style.display = "none";
     } 
 
     else {
-      //this.goodBadButton.style.bottom = 0;
-      this.showButton.style.display = "none";
+      //this.goodBadOverlay.style.bottom = 0;
+      this.englishTranslateButton.style.display = "block";
+      this.nextButton.style.display = "none";
     }
   }
 
 
   bindToggleVisibility(handler) {
-    this.showButton.addEventListener("click", (event) => {
+    this.nextButton.addEventListener("click", (event) => {
+      let boolean = false;
+      handler(boolean);
+    });
+
+    this.englishTranslateButton.addEventListener("click", (event) => {
       let boolean = true;
       handler(boolean);
     });
 
-    this.goodButton.addEventListener("click", (event) => {
-      let boolean = false;
-      handler(boolean);
-    });
-
+    /*
     this.badButton.addEventListener("click", (event) => {
       let boolean = false;
       handler(boolean);
     });
+    */
 
   }
 
@@ -598,7 +629,7 @@ class View {
   }
 
   bindShowAnswer(handler) {
-    this.showButton.addEventListener("click", (event) => {
+    this.englishTranslateButton.addEventListener("click", (event) => {
       handler();
     });
   }
@@ -665,12 +696,17 @@ class View {
 
 
   bindGoToNext(handler) {
+      this.nextButton.addEventListener("click", (event) => {
+        handler();
+      });
+    /*
     this.goodButton.addEventListener("click", (event) => {
       handler();
     });
     this.badButton.addEventListener("click", (event) => {
       handler();
     });
+    */
   }
 
   displayPinyin(array,boolean){
