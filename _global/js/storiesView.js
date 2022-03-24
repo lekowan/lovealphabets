@@ -157,9 +157,9 @@ class View {
     //audioSvg.classList.add("audio-icon");
     //audioSvg.id = "audio-icon-" + this.count;
     audioSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-    audioSvg.setAttribute("height", "30px");
+    audioSvg.setAttribute("height", "35px");
     audioSvg.setAttribute("viewBox", "0 0 24 24");
-    audioSvg.setAttribute("width", "30px");
+    audioSvg.setAttribute("width", "35px");
     audioSvg.setAttribute("fill", "#18093e");
      let audioSvgPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     audioSvgPath1.setAttribute("d", "M0 0h24v24H0V0z");
@@ -450,7 +450,7 @@ class View {
 
   // Play audio
   bindPlayAudio(handler){
-   this.audioSvg.addEventListener("click", (event) => {
+   this.audioButton.addEventListener("click", (event) => {
     handler();
    })
   }

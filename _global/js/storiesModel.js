@@ -76,6 +76,7 @@ class Model {
     playAudio(){
 
       let word = allSyllableMap[this.whatSlide].character;
+      console.log(word);
 
       // If speechSynthesis in user's browser
       if (activateSpeech && "speechSynthesis" in window) {
