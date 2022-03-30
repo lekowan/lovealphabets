@@ -482,6 +482,7 @@ class View {
   displayButtons(boolean) {
 
     if (boolean == true) {
+      this.bodyContent.style.overflowY = "hidden";
       this.goodBadButton.style.bottom = "0px";
       // this.showButton.style.display = "block";
       //this.nextButton.style.display = "block";
@@ -492,6 +493,7 @@ class View {
       this.goodBadButton.style.bottom = "-80px";
       this.englishTranslateButton.style.display = "block";
       //this.nextButton.style.display = "none";
+      this.bodyContent.style.overflowY = "scroll";
     }
   }
 

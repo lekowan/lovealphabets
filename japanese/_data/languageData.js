@@ -18,6 +18,19 @@ const languageContent = [
       "chartType": shirokumaEpisode1Part1StoryChartType
 },
 {
+      "chartTitle": "Shirokuma / Episode 1 / Part 2 / Story",
+      "chartName": "shirokuma-episode-1-part-2-story-map",
+      "chartData": shirokumaEpisode1Part2StoryChartData,
+      "title": "Shirokuma Episode 1 Part 2",
+      "sub": "Memorize all words from Shirokuma Episode 1 Part 2",
+      "icon": "ペ",
+      "url": "shirokuma-episode-1-part-2-story",
+      "localStorageKey": "japanese" + "Episode1Part2" + "Story",
+      "chartType": shirokumaEpisode1Part2StoryChartType
+},
+
+/*
+{
       "chartTitle": "Shirokuma / Episode 1 / Part 1",
       "chartName": "shirokuma-episode-1-part-1-map",
       "chartData": shirokumaEpisode1Part1ChartData,
@@ -39,7 +52,7 @@ const languageContent = [
       "localStorageKey": "japanese" + "Episode1Part2" + "Srs",
       "chartType": shirokumaEpisode1Part2ChartType
 }, 
-/*{
+{
       "chartTitle": "Shirokuma / Episode 19 / Part 1",
       "chartName": "shirokuma-episode-19-part-1-map",
       "chartData": shirokumaEpisode19Part1ChartData,
@@ -61,7 +74,6 @@ const languageContent = [
       "localStorageKey": "japanese" + "Episode19Part2" + "Srs",
       "chartType": shirokumaEpisode19Part2ChartType
 },
-*/
 {
       "chartTitle": "Shirokuma / Episode 20 / Part 1",
       "chartName": "shirokuma-episode-20-part-1-map",
@@ -106,4 +118,5 @@ const languageContent = [
       "localStorageKey": "japanese" + "Episode29Part2" + "Srs",
       "chartType": shirokumaEpisode29Part2ChartType
 },
+*/
 ]

@@ -1202,7 +1202,7 @@ button.english-translate-button {
 }
 
 .good-bad {
-    /* bottom: -80px; */
+    bottom: -80px;
     /* left: 0; */
     /* height: 80px; */
     width: 100%;
@@ -1210,7 +1210,7 @@ button.english-translate-button {
     /* border-top: 1px #f0f0f0 solid; */
     /* box-shadow: 2px 2px rgb(241 240 244); */
     /* position: relative; */
-    /* transition: 0.1s ease-in; */
+    transition: 0.2s ease-in;
     justify-content: space-around;
     padding: 20px 0;
     display: flex;
