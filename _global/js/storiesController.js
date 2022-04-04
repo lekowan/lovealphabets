@@ -59,12 +59,21 @@ class Controller {
     this.model.bindOnShowedDefinition(this.onShowedDefinition);
     //this.view.displayDefinition(this.handleShowDefinition);
 
+    // Display score
+    this.model.bindOnShowedScore(this.onShowedScore);
+
+
     // Display Congratulations popover
     //this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
     //this.model.bindOnShowCongratulationsPopoverChanged(this.onShowCongratulationsPopoverChanged);
     //this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
 
   } // End of constructor
+
+  // Show score
+  onShowedScore = (score) => {
+    this.view.displayScore(score);
+  }
 
   // Toggle button visibility handlers
   handleToggleVisibility = (boolean) => {

@@ -962,9 +962,9 @@ const allSyllableMap =  {
     },
     '119':
     {
-        'character': 'すごいやりきった顔だけどパン',
+        'character': 'すごいやりきったかおだけどぱんだくんとちゅうからずっとねてたらしいよ',
         'letter': "You look like you've done all you can do, but I heard you've been sleeping through the whole thing.",
-        'pinyin': 'すご',
+        'pinyin': 'すごいやりきったかおだけどぱんだくんとちゅうからずっとねてたらしいよ',
         'definition': 'すごい やりきった 顔 だけど パンダ 君 途中 から ずっと 寝てたらしい よ',
         'pinyinSpace': 'すごい　やりきった　かお　だけど　パンダ　きみ/くん　とちゅう　から　ずっと　ねてたらしい　よ'
     },
@@ -972,9 +972,9 @@ const allSyllableMap =  {
     {
         'character': 'パンダ君の自然態なんだねぇきっと',
         'letter': "I guess it's just your natural state.",
-        'pinyin': 'ぱんだくんのしぜんざまなんだね',
+        'pinyin': 'パンダくんのしぜんたいなんだねぇきっと',
         'definition': 'パンダ 君 の 自然 態 な ん だ ねぇ きっと',
-        'pinyinSpace': 'パンダ　きみ/くん　の　しぜん　たい　な　ん　だ　ねぇ　きっと'
+        'pinyinSpace': 'パンダ きみ/くん の しぜん　たい　な　ん　だ　ねぇ　きっと'
     },
     '121':
     {

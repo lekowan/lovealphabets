@@ -25,6 +25,11 @@ class Model {
         return this.showWelcome;
     }
 
+    get score(){
+        let _rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"));
+        return "" + rightAnswers.length + "/" + this.allNewCards.length
+    }
+
     get whatSlide(){
         return this.currentSlide;
     }
@@ -113,6 +118,15 @@ class Model {
     bindOnVisibilityChanged(callback) {
         this.onVisibilityChanged = callback;
     }
+
+    showScore(){
+        this.onShowScore(this.score);
+    }
+
+    bindOnShowedScore(){
+      this.onShowScore = callback; 
+    }
+
 
     // Add new card to the DOM
     addCard() {

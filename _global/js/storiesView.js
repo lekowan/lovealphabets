@@ -70,6 +70,9 @@ class View {
         this.progress.append(this.pinyinButton, this.noSpaceButton);
     }
 
+    this.scoreDisplay = this.createElement("p", "score");
+    this.progress.append(this.scoreDisplay);
+
     // Create SRS practice header title
     this.languagePractice = this.createElement("p", "language-practice");
     this.languagePractice.textContent = "SRS Practice";
@@ -528,6 +531,10 @@ class View {
     this.goodButton.addEventListener("click", (event) => {
       handler();
     });
+  }
+
+  displayScore(score){
+    this.scoreDisplay.innerText = score;
   }
 
 
