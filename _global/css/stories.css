@@ -1513,6 +1513,12 @@ button.english-translate-button {
   padding: 21px 16px 21px 21px;
 }
 
+p.score {
+    order: 10;
+    margin-left: auto;
+    font-weight: 700;
+}
+
 #settings-menu-reset-left {
   font-size: 14px;
 }

@@ -27,7 +27,9 @@ class Model {
 
     get score(){
         let _rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"));
-        return "" + rightAnswers.length + "/" + this.allNewCards.length
+        return "" + Math.floor(_rightAnswers.length * 100 / this.allNewCards.length) + "%"
+
+        //return "" + _rightAnswers.length + "/" + this.allNewCards.length
     }
 
     get whatSlide(){
@@ -119,13 +121,13 @@ class Model {
         this.onVisibilityChanged = callback;
     }
 
-    showScore(){
-        this.onShowScore(this.score);
-    }
+  
 
-    bindOnShowedScore(){
+    /*  
+    bindOnShowedScore(callback){
       this.onShowScore = callback; 
     }
+    */
 
 
     // Add new card to the DOM
@@ -179,7 +181,7 @@ class Model {
         }
 
 
-        this.onBadPressed(currentSlide);
+        this.onBadPressed(currentSlide, this.score);
     }
 
     // Process good answer:
@@ -205,7 +207,7 @@ class Model {
         }
 
 
-        this.onGoodPressed(currentSlide);
+        this.onGoodPressed(currentSlide, this.score);
     }
 
     bindOnBadAnswerProcessed(callback) {

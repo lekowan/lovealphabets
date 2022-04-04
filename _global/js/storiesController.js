@@ -60,7 +60,7 @@ class Controller {
     //this.view.displayDefinition(this.handleShowDefinition);
 
     // Display score
-    this.model.bindOnShowedScore(this.onShowedScore);
+    this.onShowedScore(this.model.score);
 
 
     // Display Congratulations popover
@@ -69,6 +69,7 @@ class Controller {
     //this.view.bindDisplayCongratulationsPopover(this.handleDisplayCongratulationsPopover);
 
   } // End of constructor
+
 
   // Show score
   onShowedScore = (score) => {
@@ -89,8 +90,9 @@ class Controller {
     this.model.processBadAnswer();
   };
 
-  onBadPressed = (id) => {
+  onBadPressed = (id, score) => {
     this.view.displayBadIcon(id);
+    this.view.displayScore(score);
   };
 
   // Process good answer
@@ -98,8 +100,9 @@ class Controller {
     this.model.processGoodAnswer();
   };
 
-  onGoodPressed = (id) => {
+  onGoodPressed = (id, score) => {
     this.view.displayGoodIcon(id);
+    this.view.displayScore(score);
   };
 
   onNextCardAdded = (card, rightAnswers, wrongAnswers) => {
