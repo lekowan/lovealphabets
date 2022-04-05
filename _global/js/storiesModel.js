@@ -67,15 +67,19 @@ class Model {
       
     scroll(bodyContent, slideCollection){
 
+        let _rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"));
+
         slideCollection.forEach(slide => {
 
           if(this.isInViewport(slide, bodyContent)){
             this.currentSlide = slide.id;
             this.playAudio();
+
+            console.log(allSyllableMap[slide.id].character);
           }
         })
 
-        // Update the view
+        // Pass on this.currentSlide to the view
         this.onScrolled(this.currentSlide);
     }
 
@@ -236,12 +240,43 @@ class Model {
         this.onShowCongratulationsPopoverChanged = callback;
     }
 
+    goToFirstSlide(){
+
+        let currentSlide;
+        currentSlide = this.whatSlide;
+
+        let rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"))  || [];
+        console.log(rightAnswers)
+
+        if(rightAnswers.includes(currentSlide)){
+            //this.currentSlide++;
+            console.log('initial');
+            this.goToNext()
+        }   
+    }
+
 
     goToNext(){
-        let nextSlide;
-        nextSlide = this.whatSlide;
+        let currentSlide;
+        currentSlide = this.whatSlide;
 
-        this.onWentToNext(nextSlide);
+        console.log(currentSlide);
+
+        let rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"))  || [];
+        console.log(rightAnswers)
+
+        let nextSlide = "" + (+currentSlide + 1);
+        console.log(nextSlide);
+
+        if(rightAnswers.includes(nextSlide)){
+            this.currentSlide++;
+            console.log('yay');
+            this.goToNext()
+        }
+
+        else {
+            this.onWentToNext(currentSlide);            
+        }
     }
 
     bindOnWentToNext(callback) {

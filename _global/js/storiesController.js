@@ -62,6 +62,8 @@ class Controller {
     // Display score
     this.onShowedScore(this.model.score);
 
+    // Go to correct slide
+    this.model.goToFirstSlide();
 
     // Display Congratulations popover
     //this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
