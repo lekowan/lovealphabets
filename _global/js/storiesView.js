@@ -20,6 +20,32 @@ class View {
     this.mainHeading = this.createElement("div", "main-heading");
     this.mainHeading.innerHTML = srsTitle;
 
+    // Create progress bar
+    this.progressBar = this.createElement("div", "progress-bar");
+    this.progressBar.id = "progress-bar";
+    this.start = this.createElement("div", "start");
+    this.start.id = "start";
+
+    this.start.innerHTML = "0";
+    this.inner = this.createElement("div", "inner");
+    this.bar = this.createElement("span", "bar")
+    this.bar.classList.add("purple");
+    this.bar.classList.add("purple-cta");
+    this.bar.id = "bar";
+    this.bar.style.width = "0%";
+
+    this.inner.append(this.bar);
+    this.end = this.createElement("div", "end");
+    this.end.id = "end";
+
+    this.divider = this.createElement("div", "divider");
+    this.divider.innerHTML = "/";
+
+    this.progressBar.append(this.inner, this.start, this.divider, this.end);
+
+    this.progressBarContainer = this.createElement("div", "progress-bar-container");
+    this.progressBarContainer.append(this.progressBar);
+
     // Create progres
     this.progress = this.createElement("div", "progress");
 
@@ -70,8 +96,8 @@ class View {
         this.progress.append(this.pinyinButton, this.noSpaceButton);
     }
 
-    this.scoreDisplay = this.createElement("p", "score");
-    this.progress.append(this.scoreDisplay);
+    // this.scoreDisplay = this.createElement("p", "score");
+    // this.progress.append(this.scoreDisplay);
 
     // Create SRS practice header title
     this.languagePractice = this.createElement("p", "language-practice");
@@ -223,7 +249,7 @@ class View {
     //this.goodBadOverlay.append(this.goodBadButton);
  
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea, this.goodBadButton);
+    this.content.append(this.header, this.progressBarContainer, this.progress, this.bodyContent, this.buttonArea, this.goodBadButton);
 
     // Append content div to app
     this.app.append(this.content);
@@ -533,9 +559,11 @@ class View {
     });
   }
 
+  /*
   displayScore(score){
     this.scoreDisplay.innerText = score;
   }
+  */
 
 
   displayCongratulationsPopover(boolean) {
@@ -820,6 +848,19 @@ class View {
      
       handler(this.showNoSpaceButton);
     });
+  }
+
+  displayProgressBarStart(start, total) {
+    this.start.innerHTML = start;
+    this.end.innerHTML = total;
+
+    // Update progress bar value and animate (via CSS transition)
+    let progressVal = Math.floor((start * 100) / total);
+    this.bar.style.width = progressVal + "%";
+  }
+
+  displayProgressBarEnd(total){
+      this.end.innerHTML = total;
   }
 
 

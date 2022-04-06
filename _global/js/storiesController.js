@@ -60,10 +60,16 @@ class Controller {
     //this.view.displayDefinition(this.handleShowDefinition);
 
     // Display score
-    this.onShowedScore(this.model.score);
+    //this.onShowedScore(this.model.score);
 
     // Go to correct slide
     this.model.goToFirstSlide();
+
+    // Display total number of items counter = progress end value
+    this.onProgressBarLoaded(this.model.totalCounter);
+
+    // Increment progress start
+    this.model.bindOnProgressIncremented(this.onProgressIncremented);
 
     // Display Congratulations popover
     //this.onShowCongratulationsPopoverChanged(this.model.initialCongratulationsPopover);
@@ -104,7 +110,7 @@ class Controller {
 
   onGoodPressed = (id, score) => {
     this.view.displayGoodIcon(id);
-    this.view.displayScore(score);
+    //this.view.displayScore(score);
   };
 
   onNextCardAdded = (card, rightAnswers, wrongAnswers) => {
@@ -191,6 +197,16 @@ class Controller {
 
   onShowCongratulationsPopoverChanged = (boolean) => {
     this.view.displayCongratulationsPopover(boolean);
+  };
+
+  // Display total number of items = progress end value
+  onProgressBarLoaded = (number) => {
+    this.view.displayProgressBarEnd(number);
+  };
+
+  // Increment progress start value
+  onProgressIncremented = (start, total) => {
+    this.view.displayProgressBarStart(start, total);
   };
 
 }

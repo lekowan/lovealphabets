@@ -16,6 +16,8 @@ class Model {
         this.word = this.allNewCards[0];
 
         this.currentSlide = "1";
+        this.goodAnswer = 0;
+        this.totalItems = this.allNewCards.length - _rightAnswers.length;
 
         
     } // End of constructor ////////////////////////////////////////////////////////////////////////
@@ -53,6 +55,13 @@ class Model {
           return this.allNewCards
        }
     }
+
+    get totalCounter() {
+        let _rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"));
+        console.log(this.allNewCards.length - _rightAnswers.length);
+        return this.allNewCards.length - _rightAnswers.length;
+    }
+
 
 
     // Check if element is within parent's viewport
@@ -200,6 +209,11 @@ class Model {
 
         // If the answer is not already in rightAnswers in localStorage, add it
         if(!rightAnswers.includes(currentSlide)){
+
+            // increment progress start value
+            this.goodAnswer++;        
+            this.incrementProgressStart();
+
             rightAnswers.push(currentSlide);
             this._commitRightAnswers(rightAnswers);
         }
@@ -209,7 +223,6 @@ class Model {
             let data = wrongAnswers.filter(item => item != currentSlide);
             this._commitWrongAnswers(data);
         }
-
 
         this.onGoodPressed(currentSlide, this.score);
     }
@@ -299,6 +312,17 @@ class Model {
         this.onDisplayedNoSpace(boolean);
     }
 
+
+    // Update progress start value
+    incrementProgressStart() {
+        this.onProgressStartChanged(this.goodAnswer, this.totalItems);
+    }
+
+    bindOnProgressIncremented(callback) {
+        this.onProgressStartChanged = callback;
+    }
+
+
     _commitRightAnswers(data) {
         localStorage.setItem(localStorageKey + "RightAnswers", JSON.stringify(data));
     }
@@ -306,5 +330,6 @@ class Model {
     _commitWrongAnswers(data) {
         localStorage.setItem(localStorageKey + "WrongAnswers", JSON.stringify(data));
     }
+
 
 }
