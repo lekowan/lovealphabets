@@ -96,9 +96,9 @@ class View {
         this.progress.append(this.pinyinButton, this.noSpaceButton);
     }
 
-    // this.scoreDisplay = this.createElement("p", "score");
-    // this.progress.append(this.scoreDisplay);
-
+    this.scoreDisplay = this.createElement("p", "score");
+    this.progress.append(this.scoreDisplay);
+    
     // Create SRS practice header title
     this.languagePractice = this.createElement("p", "language-practice");
     this.languagePractice.textContent = "SRS Practice";
@@ -249,7 +249,7 @@ class View {
     //this.goodBadOverlay.append(this.goodBadButton);
  
     // Append the title, form, and todo list to the content div
-    this.content.append(this.header, this.progressBarContainer, this.progress, this.bodyContent, this.buttonArea, this.goodBadButton);
+    this.content.append(this.header, this.progressBarContainer, this.progress, this.bodyContent,this.buttonArea, this.goodBadButton);
 
     // Append content div to app
     this.app.append(this.content);
@@ -559,11 +559,10 @@ class View {
     });
   }
 
-  /*
+  
   displayScore(score){
     this.scoreDisplay.innerText = score;
   }
-  */
 
 
   displayCongratulationsPopover(boolean) {

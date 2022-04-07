@@ -60,7 +60,7 @@ class Controller {
     //this.view.displayDefinition(this.handleShowDefinition);
 
     // Display score
-    //this.onShowedScore(this.model.score);
+    this.onShowedScore(this.model.score);
 
     // Go to correct slide
     this.model.goToFirstSlide();
@@ -110,7 +110,7 @@ class Controller {
 
   onGoodPressed = (id, score) => {
     this.view.displayGoodIcon(id);
-    //this.view.displayScore(score);
+    this.view.displayScore(score);
   };
 
   onNextCardAdded = (card, rightAnswers, wrongAnswers) => {

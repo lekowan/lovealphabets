@@ -133,14 +133,10 @@ class Model {
     bindOnVisibilityChanged(callback) {
         this.onVisibilityChanged = callback;
     }
-
   
-
-    /*  
     bindOnShowedScore(callback){
       this.onShowScore = callback; 
     }
-    */
 
 
     // Add new card to the DOM
@@ -181,8 +177,18 @@ class Model {
         
         let currentSlide = this.whatSlide;
 
+        // If the slide was previously marked as wrong or is new 
+        // Increment the progress tracker
+        if(!rightAnswers.includes(currentSlide) ){
+            
+            // increment progress start value
+            this.goodAnswer++;        
+            this.incrementProgressStart();
+        } 
+
         // If the answer is not already in wrongAnswers in localStorage, add it
         if(!wrongAnswers.includes(currentSlide)){
+
             wrongAnswers.push(currentSlide);
             this._commitWrongAnswers(wrongAnswers);
         }
@@ -210,6 +216,7 @@ class Model {
         // If the answer is not already in rightAnswers in localStorage, add it
         if(!rightAnswers.includes(currentSlide)){
 
+            // If the slide was previously marked as wrong or is new 
             // increment progress start value
             this.goodAnswer++;        
             this.incrementProgressStart();
