@@ -454,15 +454,18 @@ class View {
       this.bodyContent.append(nextCardSlide);
 
       if(rightAnswers.includes( (id + 1).toString() )){
-          let right = this.createElement("div", "right-answer");
-          right.innerHTML = "GOOD";
-          nextCard.append(right);
+          nextCard.style.color = "#ababab";
+          //let right = this.createElement("div", "right-answer");
+          //right.innerHTML = "GOOD";
+          //nextCard.append(right);
       }
 
       if(wrongAnswers.includes( (id + 1).toString() )){
-          let wrong = this.createElement("div", "wrong-answer");
-          wrong.innerHTML = "BAD";
-          nextCard.append(wrong);
+          //let wrong = this.createElement("div", "wrong-answer");
+          //wrong.innerHTML = "BAD";
+          //nextCard.append(wrong);
+          nextCardWordOriginal.classList.add("wrong-answer-cross");
+
       }
 
     }
@@ -695,22 +698,34 @@ class View {
     console.log(word);
 
     // If GOOD icon is showing, remove it
-    if(word.getElementsByClassName("right-answer").length > 0){
-      word.getElementsByClassName("right-answer")[0].remove();
-    }
+    //if(word.getElementsByClassName("right-answer").length > 0){
+    //  word.getElementsByClassName("right-answer")[0].remove();
+    //}
+
+    word.style.color = "#18093e";
+
+    let wordOriginal = word.getElementsByClassName("word-original")[0]
+    wordOriginal.classList.add("wrong-answer-cross");
 
     // Only add BAD icon if it is not already showing
-    if(word.getElementsByClassName("wrong-answer").length == 0){
-      let wrong = this.createElement("div", "wrong-answer");
-      wrong.innerHTML = "BAD";
-      word.append(wrong);
-    }
+    //if(word.getElementsByClassName("wrong-answer").length == 0){
+    //  let wrong = this.createElement("div", "wrong-answer");
+    //  wrong.innerHTML = "BAD";
+    //  word.append(wrong);
+    //}
   }
 
   displayGoodIcon(id){
+
     let slide = document.getElementById(id);
     let word = slide.getElementsByClassName("word")[0];
 
+    word.style.color = "#ababab";
+
+    let wordOriginal = word.getElementsByClassName("word-original")[0]
+    wordOriginal.classList.remove("wrong-answer-cross");
+
+    /*
     // If BAD icon is showing, remove it
     if(word.getElementsByClassName("wrong-answer").length > 0){
       word.getElementsByClassName("wrong-answer")[0].remove()
@@ -723,6 +738,7 @@ class View {
       word.append(right);
 
     }
+    */
   }
 
 

@@ -28,6 +28,17 @@ const languageContent = [
       "localStorageKey": "japanese" + "Episode1Part2" + "Story",
       "chartType": shirokumaEpisode1Part2StoryChartType
 },
+{
+      "chartTitle": "Shirokuma / Episode 2 / Part 1 / Story",
+      "chartName": "shirokuma-episode-2-part-1-story-map",
+      "chartData": shirokumaEpisode2Part1StoryChartData,
+      "title": "Shirokuma Episode 2 Part 1",
+      "sub": "Memorize all words from Shirokuma Episode 2 Part 1",
+      "icon": "ペ",
+      "url": "shirokuma-episode-2-part-1-story",
+      "localStorageKey": "japanese" + "Episode2Part1" + "Story",
+      "chartType": shirokumaEpisode2Part1StoryChartType
+},
 
 /*
 {

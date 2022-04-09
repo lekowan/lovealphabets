@@ -17,7 +17,7 @@ class Model {
 
         this.currentSlide = "1";
         this.goodAnswer = 0;
-        this.totalItems = this.allNewCards.length - _rightAnswers.length;
+        this.totalItems = this.allNewCards.length - this.rightAnswers.length;
 
         
     } // End of constructor ////////////////////////////////////////////////////////////////////////
@@ -29,7 +29,8 @@ class Model {
 
     get score(){
         let _rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"));
-        return "" + Math.floor(_rightAnswers.length * 100 / this.allNewCards.length) + "%"
+        let rightAnswers = _rightAnswers || [];
+        return "" + Math.floor(rightAnswers.length * 100 / this.allNewCards.length) + "%"
 
         //return "" + _rightAnswers.length + "/" + this.allNewCards.length
     }
@@ -58,8 +59,8 @@ class Model {
 
     get totalCounter() {
         let _rightAnswers = JSON.parse(localStorage.getItem(localStorageKey + "RightAnswers"));
-        console.log(this.allNewCards.length - _rightAnswers.length);
-        return this.allNewCards.length - _rightAnswers.length;
+        let rightAnswers = _rightAnswers || [];
+        return this.allNewCards.length - rightAnswers.length;
     }
 
 
