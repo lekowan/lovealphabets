@@ -406,7 +406,7 @@ class View {
       }
 
       else {
-        nextCardOriginalContainer.append(targetLanguage, nextCardWordOriginal);
+        nextCardOriginalContainer.append(nextCardWordOriginal);
       }
       
       nextCard.append(nextCardOriginalContainer, answer);
