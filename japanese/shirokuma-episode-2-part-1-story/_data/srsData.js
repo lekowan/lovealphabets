@@ -116,7 +116,7 @@ const allSyllableMap =  {
     },
     '15': {
         'character': 'ちょっと肩が見つからなくて',
-        'letter': "I just couldn't find my shoulder.",
+        'letter': "I just couldn't find your shoulders.",
         'pinyin': 'ちょっとかたがみつからなくて',
         'definition': 'ちょっと 肩 が 見つからなくて',
         'pinyinSpace': 'ちょっと かた が みつからなくて'
