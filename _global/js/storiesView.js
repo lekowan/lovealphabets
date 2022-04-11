@@ -417,10 +417,13 @@ class View {
 
   
       // If definition exists
+
+
+      /* ISSUES WITH CHARACTERS DISAPPEARING TO BE FIXED!
+      /*
       if(allSyllableMap[card].definition){
 
         let stringDefinedSpaces = allSyllableMap[card].definition;
-        //let stringDefinedSpaces = nextCardWordOriginalSpaces.innerHTML;
         let definitionArray = allSyllableMap[card].definition.split(' ');
 
         // Parse defined words and add span tags around them 
@@ -437,6 +440,7 @@ class View {
         nextCardWordOriginal.innerHTML = newArr.join('');
 
       }
+      */
 
       // Collect all span tags from string
       // Convert into array
