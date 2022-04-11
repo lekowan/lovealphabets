@@ -4,6 +4,8 @@ const languageTitle = "Japanese";
 const srsTitle = "Shirokuma Cafe Ep2 Part 2 Story";
 
 localStorage.removeItem(localStorageKey);
+localStorage.removeItem(localStorageKey + "RightAnswers");
+localStorage.removeItem(localStorageKey + "WrongAnswers");
 
 // Speech Synthesis
 const language = "ja-JP";
