@@ -57,7 +57,7 @@ class Controller {
   
     // Display definition popover
     this.model.bindOnShowedDefinition(this.onShowedDefinition);
-    this.view.showDefinition(this.handleShowDefinition);
+    //this.view.showDefinition(this.handleShowDefinition);
 
     // Display score
     this.onShowedScore(this.model.score);
@@ -137,7 +137,7 @@ class Controller {
 
   // Play Audio
   handleShowDefinition = (span) => {
-    this.model.showDefinition(span);
+    // this.model.showDefinition(span);
   };
 
   onShowedDefinition = () => {
