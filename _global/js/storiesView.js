@@ -419,8 +419,8 @@ class View {
       // If definition exists
 
 
-      /* ISSUES WITH CHARACTERS DISAPPEARING TO BE FIXED!
-      /*
+      /* ISSUES WITH CHARACTERS DISAPPEARING TO BE FIXED! */
+      
       if(allSyllableMap[card].definition){
 
         let stringDefinedSpaces = allSyllableMap[card].definition;
@@ -440,7 +440,7 @@ class View {
         nextCardWordOriginal.innerHTML = newArr.join('');
 
       }
-      */
+    
 
       // Collect all span tags from string
       // Convert into array
@@ -680,6 +680,8 @@ class View {
   }
 
   showDefinition(spanArray) {
+
+    console.log(spanArray);
 
     spanArray.forEach(span => {
       span.addEventListener("click", (event) => {

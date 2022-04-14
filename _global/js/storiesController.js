@@ -57,7 +57,7 @@ class Controller {
   
     // Display definition popover
     this.model.bindOnShowedDefinition(this.onShowedDefinition);
-    //this.view.displayDefinition(this.handleShowDefinition);
+    this.view.showDefinition(this.handleShowDefinition);
 
     // Display score
     this.onShowedScore(this.model.score);
@@ -141,7 +141,7 @@ class Controller {
   };
 
   onShowedDefinition = () => {
-    //this.view.addNextCard(card, answer, isNew, handler);
+    this.view.addNextCard(card, answer, isNew, handler);
   };
 
 
