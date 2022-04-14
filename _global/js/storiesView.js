@@ -331,8 +331,11 @@ class View {
     this.definitionPopoverTarget = this.createElement("div", "definition-popover-target");
     this.definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
     this.definitionPopoverPinyin = this.createElement("div", "definition-popover-pinyin");
-    this.definitionPopover.append(this.definitionPopoverPinyin, this.definitionPopoverTarget, this.definitionPopoverEnglish, this.definitionCloseButton); 
-  
+    this.definitionCta = this.createElement("div", "definition-cta");
+    this.definitionCta.innerHTML = "Add to SRS";
+    this.definitionCta.classList.add("purple-background");
+    this.definitionPopover.append(this.definitionPopoverPinyin, this.definitionPopoverTarget, this.definitionPopoverEnglish, this.definitionCloseButton,this.definitionCta); 
+
     // Append All Popovers
     this.app.append(this.popoverBackground, this.welcomeContainer, this.congratulationsContainer, this.definitionPopover);
 
@@ -430,8 +433,8 @@ class View {
         
         let newArr = [];
 
-        definitionArray.forEach(word => 
-          dictionary[word] ? newArr.push('<span class=\'definition\'>' + word + '</span>') : newArr.push(word)
+        definitionArray.forEach((word, n) => 
+          dictionary[word] ? newArr.push('<span id=\'' + (id+1) + '-' + (n+1) + '\'' + 'class=\'definition\'>' + word + '</span>') : newArr.push('<span id=\'' + (id+1) + '-' + (n+1) + '\'' + '>' + word + '</span>')
         );
 
         this.originalWordSpaceArray.push(newArr.join(' '));
@@ -689,12 +692,31 @@ class View {
         this.definitionPopover.style.bottom = "0%";
         this.definitionPopoverTarget.innerHTML = word;
         this.definitionPopoverEnglish.innerHTML = dictionary[word].english;
+        this.definitionCta.id = "cta-" + span.id;
+
+        console.log(span.id);
+
+        this.definitionCta.addEventListener("click", (ev) => {
+          //alert(ev.target.id);
+          if(ev.target.id == "cta-" + span.id){
+            let savedWords = JSON.parse(localStorage.getItem(languageTitle.toLowerCase() + "SavedWords")) ||[];
+            if(!savedWords.includes(word)){
+              savedWords.push(word);
+              this._commitSavedWords(savedWords);
+              console.log(savedWords);  
+            }
+          } 
+        })
       });
 
       this.definitionCloseButton.addEventListener("click", (event) => {
         this.definitionPopover.style.bottom = "-70%";
       });
     }) 
+  }
+
+  _commitSavedWords(data) {
+        localStorage.setItem(languageTitle.toLowerCase() + "SavedWords", JSON.stringify(data));
   }
 
   displayBadIcon(id){

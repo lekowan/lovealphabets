@@ -49,7 +49,6 @@ class Controller {
     this.model.bindOnWentToNext(this.onWentToNext);
     this.view.bindGoToNext(this.handleGoToNext);
 
-
     // Display Welcome popover
     this.onShowWelcomePopoverChanged(this.model.initialWelcomePopover);
     this.model.bindOnShowWelcomePopoverChanged(this.onShowWelcomePopoverChanged);
@@ -57,7 +56,7 @@ class Controller {
   
     // Display definition popover
     this.model.bindOnShowedDefinition(this.onShowedDefinition);
-    //this.view.showDefinition(this.handleShowDefinition);
+    //this.view.showDefinition(_, this.handleSaveDefinition);
 
     // Display score
     this.onShowedScore(this.model.score);
@@ -135,10 +134,12 @@ class Controller {
     this.view.animateAudioIcon();
   };
 
-  // Play Audio
-  handleShowDefinition = (span) => {
-    // this.model.showDefinition(span);
+  // Save definition
+  /* 
+  handleSaveDefinition = (word) => {
+    this.model.saveDefinition(word);
   };
+  */
 
   onShowedDefinition = () => {
     this.view.addNextCard(card, answer, isNew, handler);

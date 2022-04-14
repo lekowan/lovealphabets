@@ -301,6 +301,10 @@ class Model {
         }
     }
 
+    saveDefinition(word){
+        console.log(word)
+    }
+
     bindOnWentToNext(callback) {
         this.onWentToNext = callback;
     }
