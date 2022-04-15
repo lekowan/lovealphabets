@@ -100,7 +100,7 @@ const allSyllableMap = {
     '12': {
         'character': 'お待ち遠様竹大盛りね',
         'letter': 'There you go. A large serving of bamboo.',
-        'pinyin': 'おま',
+        'pinyin': 'おまちどおさまたけおおもりね',
         'definition': 'お待ち遠様 竹 大盛り ね',
         'pinyinSpace': 'おまちどおさま たけ おおもり ね'
     },
@@ -171,8 +171,8 @@ const allSyllableMap = {
         'character': 'お摘みどうしよう',
         'letter': 'I wonder what we should do for snacks...',
         'pinyin': 'おつまみどうしよう',
-        'definition': 'お 摘み どうしよう',
-        'pinyinSpace': 'お つみ/つまみ どうしよう'
+        'definition': 'お摘み どうしよう',
+        'pinyinSpace': 'おつまみ どうしよう'
     },
     '23': {
         'character': '情緒がないなぁ',
@@ -217,10 +217,10 @@ const allSyllableMap = {
         'pinyinSpace': 'もうひとり じょうちょ ない の が いる よ'
     },
     '29': {
-        'character': 'ラマさんは草が食べられるなら',
+        'character': 'ラマさんは草が食べられるなら食べられるんじゃない',
         'letter': 'You probably could, considering you eat grass, as well.',
         'pinyin': 'らまさんはくさがたべられるならたべられるんじゃない？',
-        'definition': 'ラマ さん は 草 が 食べられる なら 食べ ん じゃない',
+        'definition': 'ラマ さん は 草 が 食べられる なら 食べられる ん じゃない',
         'pinyinSpace': 'ラマ さん は くさ が たべられる なら たべられる ん じゃない ？'
     },
     '30': {
@@ -518,7 +518,7 @@ const allSyllableMap = {
         'pinyinSpace': 'よし 、 しろくま きみ/くん'
     },
     '72': {
-        'character': '僕をその木の上に挙',
+        'character': '僕をその木の上に挙げて空を飛んでみせるよ',
         'letter': "Lift me up to that tree there! I'll fly!",
         'pinyin': 'ぼくをそのきのうえにあげてそらをとんでみせるよ',
         'definition': '僕 を その 木 の 上 に 挙げて 空を飛んで みせる よ',

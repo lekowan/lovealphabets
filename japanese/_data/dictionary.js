@@ -38170,8 +38170,24 @@ const dictionary = {
     },
     "だけ": {
         "pinyin": "だけ",
-        "english": "only; just; merely; simply; no more than; nothing but; alone​"
+        "english": "only; just; merely; simply; no more than; nothing but; alone "
     }, 
+    "おまちどおさま": {
+        "pinyin": "おまちどおさま",
+        "english": "I'm sorry to have kept you waiting"
+    }, 
+    "お摘み": {
+        "pinyin": "おつまみ",
+        "english": "snack (to have with a drink); side dish"
+    },
+    "おつまみ": {
+        "pinyin": "おつまみ",
+        "english": "snack (to have with a drink); side dish"
+    },
+    "物真似": {
+        "pinyin": "ものまね",
+        "english": " mimicry; imitation (of someone, something)"
+    },
 
 
 }
