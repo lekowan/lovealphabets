@@ -474,7 +474,7 @@ const allSyllableMap =  {
     },
     '58':
     {
-        'character': 'いよいよ今日から',
+        'character': 'いよいよ今日からバイトかドキドキしちゃうなぁ',
         'letter': "I'm so excited to finally start working today!",
         'pinyin': 'いよいよきょうからばいとかどきどきしちゃうなぁ',
         'definition': 'いよいよ 今日 から バイト か ドキドキしちゃう なぁ',

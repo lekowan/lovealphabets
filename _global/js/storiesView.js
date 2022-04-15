@@ -447,7 +447,7 @@ class View {
 
       // Collect all span tags from string
       // Convert into array
-      let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
+      let spanCollection = nextCardWordOriginal.getElementsByClassName('definition');
       let spanArray = [...spanCollection]; 
 
       // Add event listeners to all span tags
@@ -705,9 +705,12 @@ class View {
               this._commitSavedWords(savedWords);
               console.log(savedWords);  
             }
-          } 
+          }
+          this.definitionPopover.style.bottom = "-70%"; 
         })
       });
+      
+        
 
       this.definitionCloseButton.addEventListener("click", (event) => {
         this.definitionPopover.style.bottom = "-70%";
