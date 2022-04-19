@@ -113,7 +113,6 @@ class View {
       this.languageViewCtaArray.push(languageViewChart);
 
       // Create "reset SRS data" icon
-      /*
       this.svgClear = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       this.svgClear.setAttribute("xmlns", "https://www.w3.org/2000/svg");
       this.svgClear.setAttribute("height", "24px");
@@ -137,8 +136,9 @@ class View {
       languageReset.id = item.localStorageKey;
 
       this.languageResetCtaArray.push(languageReset);
-      */
+      
 
+      /*
       // Create new character settings icon
       
       this.svgEdit = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -164,7 +164,7 @@ class View {
       languageReset.id = item.localStorageKey;
 
       this.languageResetCtaArray.push(languageReset);
-      
+      */
 
       // End of SVG 
 
@@ -193,7 +193,6 @@ class View {
         window.location.href = item.url;
       });
     
-      /*
       languageReset.addEventListener("click", function () {  
         let text = "Press a button!\nEither OK or Cancel.";
         if (confirm(text) == true) {
@@ -207,7 +206,7 @@ class View {
         } else {
           alert("cancelled!");
         }
-      }); */
+      });
       
     });
 
