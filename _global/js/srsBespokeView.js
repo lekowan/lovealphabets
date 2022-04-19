@@ -342,6 +342,7 @@ class View {
     this.newItemsContainer.append(this.newItemsTitle, this.newItemsContent, this.newItemsContinueContainer);
 
     // Today's Items Popover
+    /*
     this.todayContainer = this.createElement("div", "popover");
     this.todayTitle = this.createElement("div", "shortcut-title");
     this.todayTitle.textContent = "Today's items";
@@ -362,6 +363,7 @@ class View {
 
     // Append container
     this.todayContainer.append(this.todayTitle, this.todayContent, this.todayContinueContainer, this.todayCloseButton);
+    */
 
     // Congratulations Popover
     this.congratulationsContainer = this.createElement("div", "popover");
@@ -401,7 +403,7 @@ class View {
 
 
     // Append All Popovers
-    this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
+    this.app.append(this.popoverBackground, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
 
     this.preventInvalidInputCharacters();
 
@@ -439,6 +441,7 @@ class View {
   }
 
   // Generate Today's Items cards and add into Today's Item popover
+  /*
   addTodaysCards(array) {
 
     this.todayContent.innerHTML = "";
@@ -481,6 +484,7 @@ class View {
     }
 
   }
+  */
 
   addNextCard(card, isNew) {
     if(card != undefined){
@@ -881,6 +885,7 @@ class View {
     }
   }
 
+  /*
   displayTodaysItemsPopover(boolean) {
     if (boolean == false) {
       this.todayContainer.style.display = "none";
@@ -896,6 +901,7 @@ class View {
       }
     }
   }
+  */
 
   displaySrsResetPopover(boolean) {
     this.srsResetContainer.style.display = boolean ? "flex" : "none";
@@ -919,6 +925,7 @@ class View {
     });
   }
 
+  /*
   bindDisplayTodaysItemsPopover(handler) {
     this.todayCloseButton.addEventListener("click", (event) => {
       let boolean = false;
@@ -930,6 +937,7 @@ class View {
       handler(boolean);
     });
   }
+  */
 
   bindDisplayPreviousInputNumber(handler) {
     this.input.addEventListener("blur", () => {

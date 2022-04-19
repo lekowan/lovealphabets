@@ -50,9 +50,11 @@ class Controller {
     this.view.bindDisplayNextCard(this.handleAddCard);
 
     // Display Today's items popover
+    /*
     this.onShowTodaysItemsPopoverChanged(this.model.initialTodaysItemsPopover);
     this.model.bindOnShowTodaysItemsPopoverChanged(this.onShowTodaysItemsPopoverChanged);
     this.view.bindDisplayTodaysItemsPopover(this.handleDisplayTodaysItemsPopover);
+    */
 
     // Display New items popover
     this.onShowNewItemsPopoverChanged(this.model.initialNewItemsPopover);
@@ -96,8 +98,8 @@ class Controller {
     this.model.bindOnProgressIncremented(this.onProgressIncremented);
 
     // Display Today's Items popover
-    let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
-    this.view.addTodaysCards(this.model.newItemsArray.slice(0, _number));
+    //let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
+    // this.view.addTodaysCards(this.model.newItemsArray.slice(0, _number));
 
     // Process remove card
     this.view.bindRemoveCard(this.handleRemoveCard);
@@ -226,6 +228,7 @@ class Controller {
     this.view.displayNewItemsPopover(boolean);
   };
 
+  /*
   // Handle Today's Items Popover visibility
   handleDisplayTodaysItemsPopover = (boolean) => {
     this.model.showTodaysItemsPopover(boolean);
@@ -234,6 +237,7 @@ class Controller {
   onShowTodaysItemsPopoverChanged = (boolean) => {
     this.view.displayTodaysItemsPopover(boolean);
   };
+  */
 
   // Handle Congratulations Popover visibility
   handleDisplayCongratulationsPopover = (boolean) => {
