@@ -112,7 +112,7 @@ class Controller {
   };
 
   onNumberChanged = (array, number) => {
-    this.view.addTodaysCards(array);
+    //this.view.addTodaysCards(array);
     this.view.displayNewItemsCount(number);
   };
 
