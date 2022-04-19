@@ -56,7 +56,11 @@
         const allSyllableMap = JSON.parse(localStorage.getItem(localStorageKey.toLowerCase() + "SavedWords")) || {};
 
         localStorage.removeItem(localStorageKey.toLowerCase() + "SavedWords");
-        alert('removed!');
+        localStorage.removeItem(localStorageKey.toLowerCase() + "Data");
+        localStorage.removeItem(localStorageKey.toLowerCase() + "Progress");
+        localStorage.removeItem(localStorageKey.toLowerCase() + "NextDate");
+        
+        alert('removed too!');
 
     </script>
 
