@@ -846,15 +846,15 @@ const allSyllableMap =  {
         "character": "遅刻した場合だけですよ",
         "letter": "Only if I'm late.",
         "pinyin": "ちこくしたばあいだけですよ",
-        "definition": "遅刻 した 場合 だけ です よ",
-        "pinyinSpace": "ちこく した ばあい だけ です よ"
+        "definition": "遅刻した 場合 だけ です よ",
+        "pinyinSpace": "ちこくした ばあい だけ です よ"
     },
     "120": {
         "character": "遅刻する気満々だね",
         "letter": "You're going to be late.",
         "pinyin": "ちこくするきまんまんだね",
-        "definition": "遅刻 する 気 満々 だね",
-        "pinyinSpace": "ちこく する き まんまん だ ね"
+        "definition": "遅刻する 気 満々 だね",
+        "pinyinSpace": "ちこくする き まんまん だ ね"
     },
     "121": {
         "character": "ちなみにやる気はありますか",
