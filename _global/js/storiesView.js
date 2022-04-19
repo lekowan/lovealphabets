@@ -682,7 +682,7 @@ class View {
                 let word = span.innerHTML;
                 this.definitionPopover.style.bottom = "0%";
 
-                for (let item of dictionary[word]) {
+                dictionary[word].forEach((item, i) => {
 
                     let definitionPopoverTarget = this.createElement("div", "definition-popover-target");
                     let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
@@ -709,7 +709,15 @@ class View {
                         if (ev.target.id == "cta-" + span.id) {
                             if (!savedWords[word]) {
                                 let definitionObj = { 'kana': item.kana, 'definition': item.definition }
-                                savedWords[word] = definitionObj;
+                                
+                                // If there are more than 1 definitions
+                                if(dictionary[word].length > 1){
+                                  savedWords[word + (i+1)] = definitionObj;  
+                                }
+                                else {
+                                  savedWords[word] = definitionObj;
+                                }
+
                                 this._commitSavedWords(savedWords);
                                 console.log(savedWords);
                                 alert('saved in your library!')
@@ -740,7 +748,15 @@ class View {
                           
                             if (!savedWords[word]) {
                                 let definitionObj = { 'kana': item.kana, 'definition': item.definition }
-                                savedWords[word] = definitionObj;
+                                
+                                // If there are more than 1 definitions
+                                if(dictionary[word].length > 1){
+                                  savedWords[word + (i+1)] = definitionObj;  
+                                }
+                                else {
+                                  savedWords[word] = definitionObj;
+                                }
+                                
                                 this._commitSavedWords(savedWords);
                                 console.log(savedWords);
                                 alert('saved in your library!')
@@ -756,7 +772,7 @@ class View {
 
 
       
-                }
+                })
             });
 
 
