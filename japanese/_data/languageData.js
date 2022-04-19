@@ -14,7 +14,7 @@ const languageContent = [
       "sub": "Memorize all words from Shirokuma Episode 1 Part 1",
       "icon": "ペ",
       "url": "shirokuma-srs",
-      "localStorageKey": "japanese" + "SRS",
+      "localStorageKey": "japanese",
       "chartType": ''
 },
 {

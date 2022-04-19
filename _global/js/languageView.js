@@ -201,6 +201,8 @@ class View {
           localStorage.removeItem(item.localStorageKey + "Data");
           localStorage.removeItem(item.localStorageKey + "Progress");
           localStorage.removeItem(item.localStorageKey + "NextDate");
+          localStorage.removeItem(item.localStorageKey + "SavedWords");
+
           location.reload();
 
         } else {
