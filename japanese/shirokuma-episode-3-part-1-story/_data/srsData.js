@@ -26,7 +26,7 @@ const allSyllableMap = {
     '2': {
         'character': 'シロクマくん暇だから何か問題出してよ',
         'letter': "Hey, Polar Bear. I'm a little bored, so give me a problem to solve.",
-        'pinyin': 'し',
+        'pinyin': 'シロクマくんひまだからなにかもんだいだしてよ',
         'definition': 'シロクマ くん 暇 だから 何か 問題 出して よ',
         'pinyinSpace': 'シロクマ くん ひま だ から なにか もんだい だして よ'
     },
@@ -55,7 +55,7 @@ const allSyllableMap = {
         'character': '法令上の正式名称はＴ字路ではありません',
         'letter': "The legal name for this kind of intersection is not actually 'T-intersection.'",
         'pinyin': 'ほうれいじょうのせいしきめいしょうはてぃーじろではありません',
-        'definition': '法令 上 の 正式名称 は 字 路 ではあ',
+        'definition': '法令 上 の 正式名称 は 字 路 ではありません',
         'pinyinSpace': 'ほうれい うえ の せいしきめいしょう は Ｔ じ/あざ みち/ち ではありません'
     },
     '7': {

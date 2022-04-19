@@ -29,7 +29,7 @@ class Model {
             console.log('test');
             
                 // transform object into array
-                this.newItemsArray = allSyllableMap;
+                this.newItemsArray = Object.keys(allSyllableMap);
 
                 let obj = {}
                 this.newItemsArray.forEach(item => obj[item] = {})
@@ -45,7 +45,7 @@ class Model {
 
             console.log(allSyllableMap);
 
-            allSyllableMap.forEach(item => {
+            Object.keys(allSyllableMap).forEach(item => {
                 if (typeof _data[item] == 'undefined') {
                     _data[item] = {}
                 }
@@ -222,13 +222,13 @@ class Model {
     get initialAnswer() {
         if (this.allNewCards[0] != undefined) {
             let word = this.allNewCards[0];
-            return dictionary[word].english;
+            return allSyllableMap[word].definition;
         }
     }
 
     get newAnswer() {
         let word = this.allNewCards[this.tracker];
-        return dictionary[word].english;
+        return allSyllableMap[word].definition;
     }
 
     get nextCard() {

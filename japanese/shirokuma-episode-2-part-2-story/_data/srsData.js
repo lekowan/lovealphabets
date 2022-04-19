@@ -549,7 +549,7 @@ const allSyllableMap = {
         'character': 'ほら、僕を木の上に乗せて',
         'letter': 'Come on! Lift me up into the tree!',
         'pinyin': 'ほら、ぼくをきのうえにのせて',
-        'definition': 'ほら 僕 を 木 の 上 に 乗せ',
+        'definition': 'ほら 僕 を 木 の 上 に 乗せて',
         'pinyinSpace': 'ほら 、 ぼく を き の うえ/かみ/じょう に のせて'
     },
     '77': {

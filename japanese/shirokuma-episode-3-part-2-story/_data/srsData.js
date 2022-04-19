@@ -17,10 +17,9 @@ const welcomeIntro = "In this spaced-repetition practice (SRS), you will study J
 
 const allSyllableMap =  {
     "1": {
-        "character": "パンダくんの悩み",
-        "letter": "Panda's Problems.",
-        "pinyin": "ぱんだくんのなやみ"
-    },
+        "character": "パンダくんの悩み", 
+        "definition": "パンダ くん の 悩み", 
+        "pinyinSpace": 'パンダ くん の なやみ'},
     "2": {
         "character": "笹子さん肉じゃがが好きな男ってどう思う？",
         "letter": "Miss Sasako, how do you feel about men who like meat and potato stew?",

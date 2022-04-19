@@ -485,7 +485,7 @@ class View {
   addNextCard(card, isNew) {
     if(card != undefined){
 
-      let word = dictionary[card];
+      let word = allSyllableMap[card];
       let nextCard;
       let nextCardWordOriginal;
       //let nextCardWordTranslation;
@@ -515,9 +515,9 @@ class View {
 
       let nextCardOriginalContainer = this.createElement("div", "original-container");
 
-      if(word.pinyin){
+      if(word.kana){
         this.pinyin = this.createElement("p", "pinyin");
-        this.pinyin.textContent = word.pinyin;
+        this.pinyin.textContent = word.kana;
         nextCardWordOriginal.innerHTML = card;
 
         this.pinyinTitle = this.createElement("p", "pinyin-title");

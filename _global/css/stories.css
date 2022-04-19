@@ -1075,7 +1075,7 @@ p.word-translation {
     font-weight: 900;
     width: 160px;
     padding: 12px 0;
-    margin-top: 30px;
+    margin: 30px 0 40px;
 }
 
 .body-content {
@@ -1639,7 +1639,7 @@ p.score {
 }
 
 .definition-popover {
-    height: 40%;
+    height: auto;
     position: fixed;
     bottom: -40%;
     /* border-top: #dedede 1px solid; */
