@@ -201,7 +201,10 @@ class View {
           localStorage.removeItem(item.localStorageKey + "Data");
           localStorage.removeItem(item.localStorageKey + "Progress");
           localStorage.removeItem(item.localStorageKey + "NextDate");
+
           localStorage.removeItem(item.localStorageKey + "SavedWords");
+          localStorage.removeItem(item.localStorageKey + "WrongAnswers");
+          localStorage.removeItem(item.localStorageKey + "RightAnswers")
 
           location.reload();
 
