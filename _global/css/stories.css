@@ -1639,9 +1639,9 @@ p.score {
 }
 
 .definition-popover {
-    height: auto;
+    max-height: 100%;
     position: fixed;
-    bottom: -40%;
+    bottom: -100%;
     /* border-top: #dedede 1px solid; */
     width: 100%;
     background: white;
@@ -1652,6 +1652,7 @@ p.score {
     flex-direction: column;
     padding: 50px 30px 30px;
     transition: 0.3s ease-in-out;
+    overflow-y: auto;
 }
 
 .definition-popover-close {
