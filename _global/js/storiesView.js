@@ -731,7 +731,9 @@ class View {
 
                     }
 
+                    // If item is a verb
                     else {
+                      console.log('is verb');
                       definitionPopoverTarget.innerHTML = item.kanji;
                       definitionPopoverPinyin.innerHTML = item.kana;
                       definitionPopoverEnglish.innerHTML = item.definition.join(',');
@@ -743,6 +745,9 @@ class View {
                       this.definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionType, definitionPopoverEnglish, definitionCta);
 
                       definitionCta.addEventListener("click", (ev) => {
+
+                        let savedWords = JSON.parse(localStorage.getItem(languageTitle.toLowerCase() + "SavedWords")) || {};
+
                         //alert(ev.target.id);
                         if (ev.target.id == "cta-" + span.id) {
                           

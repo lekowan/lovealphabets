@@ -20,22 +20,22 @@ const allSyllableMap =  {
         "character": "しろくまカフェへようこそ",
         "letter": "Welcome to Shirokuma Cafe",
         "pinyin": "しろくまかふぇへようこそ",
-        "definition": "しろくまカフェへ ようこそ",
-        "pinyinSpace": "しろくまかふぇへ ようこそ"
+        "definition": "しろくま カフェへ ようこそ",
+        "pinyinSpace": "しろくま かふぇへ ようこそ"
     },
     "2": {
         "character": "笹を食べながらのんびりするのは最高だなぁ",
         "letter": "I love relaxing while eating bamboo grass.",
         "pinyin": "ささをたべながらのんびりするのはさいこうだなぁ",
-        "definition": "笹 を 食べながら のんびり する のは 最高 だ なぁ",
-        "pinyinSpace": "ささ を たべながら のんびり する のは さいこう だ なぁ"
+        "definition": "笹 を 食べな がら のんびり する のは 最高 だ なぁ",
+        "pinyinSpace": "ささ を たべ ながら のんびり する のは さいこう だ なぁ"
     },
     "3": {
         "character": "ちょっとまたこの子は昼間からゴロゴロして",
         "letter": "Look at you, being so lazy so early in the day",
         "pinyin": "ちょっとまたこのこはひるまからごろごろして",
-        "definition": "ちょっと また この 子 は 昼間 から ゴロゴロ して",
-        "pinyinSpace": "ちょっと また この こ は ひるま から ごろご ろして"
+        "definition": "ちょっと また この 子 は 昼間 から ゴロゴロして",
+        "pinyinSpace": "ちょっと また この こ は ひるま から ごろごろして"
     },
     "4": {
         "character": "掃除の邪魔よどきなさい",

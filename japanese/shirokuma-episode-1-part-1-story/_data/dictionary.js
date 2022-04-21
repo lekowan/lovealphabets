@@ -33,8 +33,8 @@ const dictionary = {
         'kana': 'ながら',
         'definition': ['while; during; as', 'while; although; though; despite; in spite of; notwithstanding', 'all; both', 'as (e.g. "as always", "as long ago"); in (e.g. "in tears")', 'while doing something else (at the same time)']
     }],
-    'のんびりする': [{
-        'kana': 'のんびりする',
+    'のんびり': [{
+        'kana': 'のんびり',
         'definition': ['at leisure; in a relaxed manner; in a carefree manner; quietly; peacefully']
     }],
     'の': [{
@@ -82,7 +82,7 @@ const dictionary = {
         'definition': ['from (e.g. time, place, numerical quantity); since', 'from (originator); by', 'because; since', 'out of (constituent, part)', 'through (e.g. window, vestibule)', 'after; since', 'expresses sympathy or warning']
     }],
     'ゴロゴロして': [{
-        'kana': 'ゴロゴロして',
+        'kana': 'ゴロゴロ',
         'definition': ['thundering; purring; grumbling (e.g. stomach)', 'something large and heavy starting to roll', 'scattered about; common; commonplace; all over', 'idleness; idling about', "having a foreign substance in (e.g. one's eye or stomach)", 'thunder']
     }, {
         'kanji': '為る',
