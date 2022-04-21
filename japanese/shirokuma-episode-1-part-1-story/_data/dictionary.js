@@ -734,13 +734,13 @@ const dictionary = {
         'kana': 'いらっしゃいませ',
         'definition': ['welcome']
     }],
-    'お': [{
-        'kana': 'お',
-        'definition': ['honorific/polite/humble prefix']
+    'お客様': [{
+        'kana': 'おきゃくさま',
+        'definition': ['guest; visitor', 'customer; client; shopper; spectator; audience; tourist; sightseer; passenger']
     }],
-    '客': [{
-        'kana': 'きゃく',
-        'definition': ['guest; visitor', 'customer; client; shopper; spectator; audience; tourist; sightseer; passenger', 'counter for containers used to entertain guests']
+    'お一人様': [{
+        'kana': 'おひとりさま',
+        'definition': ['one person; one customer', 'unmarried and childless older woman']
     }],
     '別に': [{
         'kana': 'べつに',
@@ -893,12 +893,24 @@ const dictionary = {
         'kana': 'ダジャレ',
         'definition': ['feeble joke; bad pun']
     }],
-    'なけれ': [{
-        'kanji': '泣ける',
-        'kana': 'なける',
-        'definition': ['to shed tears; to be moved to tears'],
-        'type': 'Continuative (~i)  '
+    'ダジャレ': [{
+        'kana': 'ダジャレ',
+        'definition': ['feeble joke; bad pun']
     }],
+    'なければ': [{
+        'kanji': '有る',
+        'kana': 'ある',
+        'definition': ['to be; to exist; to live', 'to have', 'to be located', 'to be equipped with', 'to happen; to come about'],
+        'type': 'Provisional (~eba) Negative '
+    }, {
+        'kana': 'なければ',
+        'definition': ["if (it) doesn't exist; if there is no ...; if (one) doesn't have ...", 'if not ...; unless ...', 'have to ...; must ...']
+    }],
+    'なぁ': [{
+        'kana': 'なぁ',
+        'definition': ['hey; listen; look; say', 'now, ...; well, ...; I tell you!; you know', 'wow; ooh', "right?; isn't it?; doesn't it?; don't you?; don't you think?", 'indicates な-adjective']
+    }],
+
     'そういえば': [{
         'kana': 'そういえば',
         'definition': ['now that you mention it; come to think of it; that reminds me; on that subject; speaking of which']
@@ -1403,6 +1415,18 @@ const dictionary = {
     'そこ': [{
         'kana': 'そこ',
         'definition': ['there (place relatively near listener)', 'there (place just mentioned); that place', 'then (of some incident just spoken of); that (of point just raised)', 'you']
+    }],
+    '発表します': [{
+        'kanji': '発表',
+        'kana': 'はっぴょう',
+        'definition': ["announcement; publication; presenting; statement; communique; making known; breaking (news story); expressing (one's opinion); releasing; unveiling"],
+        'type': 'compound'
+    }],
+    '見つからなかった': [{
+        'kanji': '見つかる',
+        'kana': 'みつかる',
+        'definition': ['to be found; to be discovered'],
+        'type': 'Past (~ta) Negative '
     }],
     '驚く': [{
         'kana': 'おどろく',

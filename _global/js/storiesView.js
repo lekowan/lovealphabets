@@ -182,8 +182,9 @@ class View {
             this.translateButton.append(this.translateSvg);
 
             // Create audio icon
+            /*
             let audioSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-            //audioSvg.classList.add("audio-icon");
+            audioSvg.classList.add("audio-icon");
             //audioSvg.id = "audio-icon-" + this.count;
             audioSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
             audioSvg.setAttribute("height", "35px");
@@ -197,12 +198,12 @@ class View {
             let audioSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
             audioSvgPath2.setAttribute("d", "M10 16.5l6-4.5-6-4.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z");
             audioSvg.append(audioSvgPath1, audioSvgPath2);
-
-            /*
+            */
+            
             // Create audio icon
             let audioSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             //audioSvg.classList.add("audio-icon");
-            audioSvg.id = "audio-icon-" + this.count;
+            //audioSvg.id = "audio-icon-" + this.count;
             audioSvg.setAttribute("xmlns", "https://www.w3.org/2000/svg");
             audioSvg.setAttribute("height", "20px");
             audioSvg.setAttribute("viewBox", "0 0 24 24");
@@ -221,12 +222,10 @@ class View {
             let audioSvgPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
             audioSvgPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
             audioSvg.append(audioSvgPath1, audioSvgPath2, audioSvgPath3, audioSvgPath4);
-            */
 
             // Clone generic translate icon
             this.audioSvg = audioSvg.cloneNode(true);
-            this.audioButton = this.createElement("button", "audio-button");
-            this.audioButton.append(this.audioSvg);
+            this.audioSvg.classList.add('audio-icon')
 
             // Create translate icon
             this.englishTranslateButton = this.createElement("button", "continue");
@@ -239,7 +238,7 @@ class View {
             this.nextButton.innerHTML = "Continue";
             this.nextButton.classList.add("purple-background");
 
-            this.buttonArea.append(this.audioButton, this.englishTranslateButton, this.nextButton)
+            this.buttonArea.append(this.englishTranslateButton, this.nextButton)
                 //this.showButton);
 
             //this.goodBadOverlay = this.createElement("div", "good-bad-overlay");
@@ -249,7 +248,7 @@ class View {
             //this.goodBadOverlay.append(this.goodBadButton);
 
             // Append the title, form, and todo list to the content div
-            this.content.append(this.header, this.progressBarContainer, this.progress, this.bodyContent, this.buttonArea, this.goodBadButton);
+            this.content.append(this.header, this.progressBarContainer, this.progress, this.bodyContent, this.audioSvg, this.buttonArea, this.goodBadButton);
 
             // Append content div to app
             this.app.append(this.content);
@@ -478,7 +477,7 @@ class View {
 
     // Play audio
     bindPlayAudio(handler) {
-        this.audioButton.addEventListener("click", (event) => {
+        this.audioSvg.addEventListener("click", (event) => {
             handler();
         })
     }
@@ -726,7 +725,7 @@ class View {
                               alert('already in your library!')
                             }
                         }
-                        this.definitionPopover.style.bottom = "-70%";
+                        this.definitionPopover.style.bottom = "-100%";
                       });
 
                     }
@@ -739,19 +738,21 @@ class View {
                       definitionPopoverEnglish.innerHTML = item.definition.join(',');
 
                       let definitionType = this.createElement("div", "definition-type");
-                      definitionType.innerHTML = item.type;
-
+                      if(item.type != "compound") definitionType.innerHTML = item.type;
+                    
                       definitionCta.id = "cta-" + span.id; 
                       this.definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionType, definitionPopoverEnglish, definitionCta);
 
                       definitionCta.addEventListener("click", (ev) => {
-
+                        let kanji = item.kanji;
+                        console.log(kanji);
                         let savedWords = JSON.parse(localStorage.getItem(languageTitle.toLowerCase() + "SavedWords")) || {};
+
 
                         //alert(ev.target.id);
                         if (ev.target.id == "cta-" + span.id) {
                           
-                            if (!savedWords[word]) {
+                            if (!savedWords[kanji]) {
                                 let definitionObj = { 'kana': item.kana, 'definition': item.definition }
                                 
                                 // If there are more than 1 definitions
@@ -759,7 +760,7 @@ class View {
                                   savedWords[word + (i+1)] = definitionObj;  
                                 }
                                 else {
-                                  savedWords[word] = definitionObj;
+                                  savedWords[kanji] = definitionObj;
                                 }
                                 
                                 this._commitSavedWords(savedWords);
@@ -770,7 +771,7 @@ class View {
                               alert('already in your library!')
                             }
                         }
-                        this.definitionPopover.style.bottom = "-70%";
+                        this.definitionPopover.style.bottom = "-100%";
                       });
 
                     }
@@ -783,7 +784,7 @@ class View {
 
 
             this.definitionCloseButton.addEventListener("click", (event) => {
-                this.definitionPopover.style.bottom = "-70%";
+                this.definitionPopover.style.bottom = "-100%";
             });
         })
     }

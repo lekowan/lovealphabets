@@ -63,8 +63,9 @@ class View {
 
     this.moreButton = this.createElement("div", "more-button");
     this.moreButton.append(this.moreButtonSvg);
+    console.log(this.moreButton);
 
-    this.progressBar.append(this.inner, this.start, this.divider, this.end, this.moreButton);
+    this.progressBar.append(this.inner, this.start, this.divider, this.end);
 
     // Create generic close button
     let closeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");

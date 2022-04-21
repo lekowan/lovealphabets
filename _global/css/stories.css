@@ -1204,23 +1204,28 @@ p.word-translation {
 .button-area {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 11px;
     font-weight: 600;
-    height: 45px;
-    /* position: relative; */
+    height: 80px;
+    position: relative;
     overflow: hidden;
     margin-top: auto;
-    margin-bottom: 10px;
-    padding: 0 21px 6px 21px;
-    align-items: center;
 }
 
-button.audio-button {
-    margin: 0;
-    padding: 4px 0 0 0;
-    width: 40px;
-    text-align: left;
+.audio-icon {
+    /* margin-bottom: 7px; */
+    cursor: pointer;
+    position: absolute;
+    bottom: 139px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    /* padding: 28px; */
+    padding: 10px;
+    transform: scale(2);
+    width: 30px;
+    height: 30px;
+    color: white;
 }
 
 button.translate-button {
@@ -1422,16 +1427,21 @@ button.english-translate-button {
 }
 
 .continue {
+    color: #18093e;
+    padding: 12px 0;
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 50px;
     font-size: 11px;
     letter-spacing: 1.5px;
-    font-weight: 900;
-    width: calc(100% - 53px);
-    padding:12px 0;
-    height:100%;
+    font-weight: 600;
+    width: calc(100% - 42px);
+    margin-bottom: 30px;
+    top: 15px;
+    position: absolute;
+    max-width: 380px;
+    border-radius: 50px;
 }
 
 #continue-welcome,

@@ -293,8 +293,8 @@ const allSyllableMap = {
         'character': 'はははあら糸屑',
         'letter': 'Huh?  A string',
         'pinyin': 'はははあらいとくず',
-        'definition': 'は はは あら 糸',
-        'pinyinSpace': 'は はは あら いとくず'
+        'definition': 'ははは あら 糸屑',
+        'pinyinSpace': 'ははは あら いとくず'
     },
     '41': {
         'character': 'あ取って',
@@ -353,7 +353,7 @@ const allSyllableMap = {
         'pinyinSpace': 'ようこそ しろくま カフェ へ'
     },
     '49': {
-        'character': 'お客',
+        'character': 'お客様お一人様ですか',
         'letter': 'Table for one, sir?',
         'pinyin': 'おきゃくさま おひとり さま です か',
         'definition': 'お客様 お一人様 です か',
@@ -493,7 +493,7 @@ const allSyllableMap = {
         'pinyinSpace': 'はい カフェ モカ'
     },
     '69': {
-        'character': 'このカフェダジャレがなけれ',
+        'character': 'このカフェダジャレがなければなぁ',
         'letter': "You know, if it weren't for all the puns in this café...",
         'pinyin': 'このかふぇだじゃれがなければなぁ',
         'definition': 'この カフェ ダジャレ が なければ なぁ',
@@ -591,10 +591,10 @@ const allSyllableMap = {
         'pinyinSpace': 'えー と ホール かかり やれます か'
     },
     '83': {
-        'character': 'はいホールなら任せて',
+        'character': 'はいホールなら任せてください',
         'letter': 'Yes! You can leave the holes to me!',
         'pinyin': 'はいほーるならまかせてください',
-        'definition': 'はい ホール なら 任せてください',
+        'definition': 'はい ホール なら 任せて ください',
         'pinyinSpace': 'はい ホール なら まかせて ください'
     },
     '84': {
@@ -871,7 +871,7 @@ const allSyllableMap = {
         'pinyinSpace': 'そんなに ありません'
     },
     '123': {
-        'character': '',
+        'character': '発表します',
         'letter': 'Announcement.',
         'pinyin': 'はっぴょうします',
         'definition': '発表します',
