@@ -199,7 +199,7 @@ class View {
             audioSvgPath2.setAttribute("d", "M10 16.5l6-4.5-6-4.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z");
             audioSvg.append(audioSvgPath1, audioSvgPath2);
             */
-            
+
             // Create audio icon
             let audioSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             //audioSvg.classList.add("audio-icon");
@@ -216,11 +216,11 @@ class View {
             audioSvgPath1.setAttribute("fill", "none");
             audioSvgPath1.setAttribute("stroke", "none");
             let audioSvgPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            audioSvgPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
+            audioSvgPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8");
             let audioSvgPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            audioSvgPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
+            audioSvgPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14");
             let audioSvgPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            audioSvgPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
+            audioSvgPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5");
             audioSvg.append(audioSvgPath1, audioSvgPath2, audioSvgPath3, audioSvgPath4);
 
             // Clone generic translate icon
@@ -327,7 +327,7 @@ class View {
             // Create definition popover content
             this.definitionCloseButton = this.createElement("div", "definition-popover-close");
             this.definitionCloseButton.append(this.definitionCloseSvg);
-           
+
             // Append All Popovers
             this.app.append(this.popoverBackground, this.welcomeContainer, this.congratulationsContainer, this.definitionPopover);
 
@@ -408,9 +408,6 @@ class View {
 
 
                 // If definition exists
-
-
-                /* ISSUES WITH CHARACTERS DISAPPEARING TO BE FIXED! */
 
                 if (allSyllableMap[card].definition) {
 
@@ -670,14 +667,14 @@ class View {
 
     showDefinition(spanArray) {
 
-      
+
         console.log(spanArray);
 
         spanArray.forEach(span => {
             span.addEventListener("click", (event) => {
                 this.definitionPopover.innerHTML = "";
                 this.definitionPopover.append(this.definitionCloseButton);
-                
+
                 let word = span.innerHTML;
                 this.definitionPopover.style.bottom = "0%";
 
@@ -687,101 +684,85 @@ class View {
                     let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
                     let definitionPopoverPinyin = this.createElement("div", "definition-popover-pinyin");
                     let definitionCta = this.createElement("div", "definition-cta");
-                    
 
                     definitionCta.innerHTML = "Add to SRS";
                     definitionCta.classList.add("purple-background");
+                    if (item.definition.length == 0) definitionCta.style.display = "none";
+
+                    definitionPopoverPinyin.innerHTML = item.kana;
+                    definitionPopoverEnglish.innerHTML = item.definition.join(',');
+
+                    definitionCta.id = "cta-" + span.id;
+
+                    // If item is a compound or a verb
+                    if (item.type) {
+
+                        console.log('is verb or compound');
+                        definitionPopoverTarget.innerHTML = item.kanji;
+
+                        let definitionType = this.createElement("div", "definition-type");
+                        definitionType.innerHTML = item.type;
+
+                        this.definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionType, definitionPopoverEnglish, definitionCta);
+
+                        definitionCta.addEventListener("click", (ev) => {
+                            let kanji = item.kanji;
+                            console.log(kanji);
+                            let savedWords = JSON.parse(localStorage.getItem(languageTitle.toLowerCase() + "SavedWords")) || {};
+
+                            //alert(ev.target.id);
+                            if (ev.target.id == "cta-" + span.id) {
+
+                                if (!savedWords[kanji]) {
+                                    let definitionObj = {
+                                        'kana': item.kana,
+                                        'definition': item.definition
+                                    }
+                                    savedWords[kanji] = definitionObj;
+
+                                    this._commitSavedWords(savedWords);
+                                    console.log(savedWords);
+                                    alert('saved in your library!')
+
+                                } else {
+                                    alert('already in your library!')
+                                }
+                            }
+                            this.definitionPopover.style.bottom = "-100%";
+                        });
+                    }
 
                     // If word is NOT a verb
-                    if(!item.type){
-                      definitionPopoverTarget.innerHTML = word;
-                      definitionPopoverPinyin.innerHTML = item.kana;
-                      definitionPopoverEnglish.innerHTML = item.definition.join(',');
-                      definitionCta.id = "cta-" + span.id;
-                      this.definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionPopoverEnglish, definitionCta);
-                    
-                      definitionCta.addEventListener("click", (ev) => {
-
-                        let savedWords = JSON.parse(localStorage.getItem(languageTitle.toLowerCase() + "SavedWords")) || {};
-
-                        //alert(ev.target.id);
-                        if (ev.target.id == "cta-" + span.id) {
-                            if (!savedWords[word]) {
-                                let definitionObj = { 'kana': item.kana, 'definition': item.definition }
-                                
-                                // If there are more than 1 definitions
-                                if(dictionary[word].length > 1){
-                                  savedWords[word + (i+1)] = definitionObj;  
-                                }
-                                else {
-                                  savedWords[word] = definitionObj;
-                                }
-
-                                this._commitSavedWords(savedWords);
-                                console.log(savedWords);
-                                alert('saved in your library!')
-                            }
-                            else {
-                              alert('already in your library!')
-                            }
-                        }
-                        this.definitionPopover.style.bottom = "-100%";
-                      });
-
-                    }
-
-                    // If item is a verb
                     else {
-                      console.log('is verb');
-                      definitionPopoverTarget.innerHTML = item.kanji;
-                      definitionPopoverPinyin.innerHTML = item.kana;
-                      definitionPopoverEnglish.innerHTML = item.definition.join(',');
 
-                      let definitionType = this.createElement("div", "definition-type");
-                      if(item.type != "compound") definitionType.innerHTML = item.type;
-                    
-                      definitionCta.id = "cta-" + span.id; 
-                      this.definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionType, definitionPopoverEnglish, definitionCta);
+                        definitionPopoverTarget.innerHTML = word;
 
-                      definitionCta.addEventListener("click", (ev) => {
-                        let kanji = item.kanji;
-                        console.log(kanji);
+                        this.definitionPopover.append(definitionPopoverTarget, definitionPopoverPinyin, definitionPopoverEnglish, definitionCta);
+                        definitionCta.addEventListener("click", (ev) => {
+
                         let savedWords = JSON.parse(localStorage.getItem(languageTitle.toLowerCase() + "SavedWords")) || {};
 
+                            //alert(ev.target.id);
+                            if (ev.target.id == "cta-" + span.id) {
+                                if (!savedWords[word]) {
+                                    let definitionObj = {
+                                        'kana': item.kana,
+                                        'definition': item.definition
+                                    }
 
-                        //alert(ev.target.id);
-                        if (ev.target.id == "cta-" + span.id) {
-                          
-                            if (!savedWords[kanji]) {
-                                let definitionObj = { 'kana': item.kana, 'definition': item.definition }
-                                
-                                // If there are more than 1 definitions
-                                if(dictionary[word].length > 1){
-                                  savedWords[word + (i+1)] = definitionObj;  
+                                    savedWords[word] = definitionObj;
+                                    this._commitSavedWords(savedWords);
+                                    console.log(savedWords);
+                                    alert('saved in your library!')
+                                } else {
+                                    alert('already in your library!')
                                 }
-                                else {
-                                  savedWords[kanji] = definitionObj;
-                                }
-                                
-                                this._commitSavedWords(savedWords);
-                                console.log(savedWords);
-                                alert('saved in your library!')
                             }
-                            else {
-                              alert('already in your library!')
-                            }
-                        }
-                        this.definitionPopover.style.bottom = "-100%";
-                      });
-
+                            this.definitionPopover.style.bottom = "-100%";
+                        });
                     }
-
-
-      
                 })
             });
-
-
 
             this.definitionCloseButton.addEventListener("click", (event) => {
                 this.definitionPopover.style.bottom = "-100%";

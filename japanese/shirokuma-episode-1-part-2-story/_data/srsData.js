@@ -85,8 +85,8 @@ const allSyllableMap =  {
         'character': 'どうすれば出前してくれるの？',
         'letter': 'How can I get a delivery?',
         'pinyin': 'どうすればでまえしてくれるの？',
-        'definition': 'どう すれば 出前してくれる の',
-        'pinyinSpace': 'どう すれば　でまえ して くれる　の ？'
+        'definition': 'どうすれば 出前してくれる の',
+        'pinyinSpace': 'どうすれば　でまえしてくれる　の ？'
     },
     '10':
     {
@@ -109,8 +109,8 @@ const allSyllableMap =  {
         'character': '今仕事探してたの',
         'letter': "I'm looking for a job right now.",
         'pinyin': 'いましごとさがしてたの',
-        'definition': '今 仕事探 て たの',
-        'pinyinSpace': 'いま　しごとさがし　て　たの'
+        'definition': '今 仕事探てた の',
+        'pinyinSpace': 'いま　しごと さがしてた の'
     },
     '13':
     {
@@ -149,7 +149,7 @@ const allSyllableMap =  {
         'character': '何しますか？',
         'letter': 'What can I do for you?',
         'pinyin': 'なにしますか？',
-        'definition': ' します か',
+        'definition': 'なに します か ?',
         'pinyinSpace': 'なに　します　か ？'
     },
     '18':
@@ -157,7 +157,7 @@ const allSyllableMap =  {
         'character': 'ペンギンさん、何にする？',
         'letter': 'What can I get you, Penguin?',
         'pinyin': 'ぺんぎんさん、なににする？',
-        'definition': 'ペンギン さん 何 に する',
+        'definition': 'ペンギン さん 何 に する ?',
         'pinyinSpace': 'ペンギン　 、 なに　に　する ？'
     },
     '19':
@@ -244,9 +244,9 @@ const allSyllableMap =  {
     {
         'character': 'あ、君バイト探してたよね',
         'letter': 'Oh, you were looking for a part-time job.',
-        'pinyin': 'あ、きみ',
+        'pinyin': 'あ、きみバイトさがしてたよね',
         'definition': 'あ 君 バイト 探してた よね',
-        'pinyinSpace': 'あ 、 きみ/くん　バイト　さがしてた　よね'
+        'pinyinSpace': 'あ、きみ　バイト さがしてた　よね'
     },
     '30':
     {
@@ -260,13 +260,13 @@ const allSyllableMap =  {
     {
         'character': 'マグロ船船員大募集',
         'letter': 'Tuna Boat Crew Wanted!',
-        'pinyin': 'まぐろせんせ',
+        'pinyin': 'マグロふねせんいんだいぼしゅう',
         'definition': 'マグロ 船 船員 大募集',
         'pinyinSpace': 'マグロ　ふね　せんいん　だいぼしゅう'
     },
     '32':
     {
-        'character': '',
+        'character': '経験者大歓迎激しく重労働',
         'letter': 'Experienced people are welcome. Intensely hard work.',
         'pinyin': 'けいけんしゃだいかんげい、はげしくじゅうろうどう',
         'definition': '経験者 大歓迎 激しく 重労働',

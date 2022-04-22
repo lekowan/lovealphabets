@@ -167,15 +167,9 @@ const dictionary = {
         'kana': 'し',
         'definition': ["and; besides; moreover; what's more; not only ... but also", 'because; since', 'the thing is; for one thing']
     }],
-    'どう': [{
-        'kana': 'どう',
-        'definition': ['how; in what way; how about']
-    }],
-    'すれば': [{
-        'kanji': '為る',
-        'kana': 'する',
-        'definition': ['to do; to carry out; to perform', 'to cause to become; to make (into); to turn (into)', 'to serve as; to act as; to work as', 'to wear (clothes, a facial expression, etc.)', 'to judge as being; to view as being; to think of as; to treat as; to use as', 'to decide on; to choose', 'to be sensed (of a smell, noise, etc.)', 'to be (in a state, condition, etc.)', 'to be worth; to cost', 'to pass (of time); to elapse', 'to place, or raise, person A to a post or status B', 'to transform A to B; to make A into B; to exchange A for B', 'to make use of A for B; to view A as B; to handle A as if it were B', 'to feel A about B', 'verbalizing suffix (applies to nouns noted in this dictionary with the part of speech "vs")', 'creates a humble verb (after a noun prefixed with "o" or "go")', 'to be just about to; to be just starting to; to try to; to attempt to'],
-        'type': 'Provisional (~eba)  '
+    'どうすれば': [{
+        'kana': 'どうすれば',
+        'definition': ['how']
     }],
     '出前してくれる': [{
         'kanji': '出前',
@@ -485,7 +479,7 @@ const dictionary = {
         'type': 'Non-past  Formal'
     }],
     '先ずは': [{
-        'kana': 'まず\u200b\u200cは',
+        'kana': 'まずは',
         'definition': ['first of all; to begin with; before anything else', 'probably; most likely; almost certainly; virtually', 'more or less (satisfactory); on the whole; reasonably', 'anyway; at any rate; for now (at least); for the time being']
     }],
     'お電話': [{
