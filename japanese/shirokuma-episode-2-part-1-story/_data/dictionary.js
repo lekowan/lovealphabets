@@ -110,8 +110,10 @@ const dictionary = {
         'definition': ['master; expert']
     }],
     'だから': [{
-        'kana': 'だから',
-        'definition': ['be; is', 'did; (have) done', 'please; do']
+        'kanji': 'だ',
+        'kana': 'だ',
+        'definition': ['be; is', 'did; (have) done', 'please; do'],
+        'type': 'compound'
     }],
     'です': [{
         'kana': 'です',
@@ -122,7 +124,7 @@ const dictionary = {
         'definition': ['be; is'],
         'type': 'Non-past  Formal'
     }],
-    '終わったら': [{
+    '終わっ': [{
         'kanji': '終わる',
         'kana': 'おわる',
         'definition': ['to end; to come to an end; to close; to finish'],
@@ -143,6 +145,11 @@ const dictionary = {
         'definition': ['how long?; till when?']
     }],
     '寝てる': [{
+        'kanji': '寝て',
+        'kana': 'ねて',
+        'definition': ['to sleep (lying down)', 'to go to bed; to lie in bed', 'to lie down', 'to sleep (with someone, i.e. have intercourse)', 'to lie flat (e.g. of hair)', 'to lie idle (of funds, stock, etc.)', 'to ferment (of soy sauce, miso, etc.)'],
+        'type': 'compound'
+    }, {
         'kanji': '寝る',
         'kana': 'ねる',
         'definition': ['to sleep (lying down)', 'to go to bed; to lie in bed', 'to lie down', 'to sleep (with someone, i.e. have intercourse)', 'to lie flat (e.g. of hair)', 'to lie idle (of funds, stock, etc.)', 'to ferment (of soy sauce, miso, etc.)'],
@@ -193,7 +200,7 @@ const dictionary = {
         'definition': ['be; is'],
         'type': 'Volitional  Formal'
     }],
-    'ベッド': [{
+    'ベッ': [{
         'kana': 'ベッド',
         'definition': ['bed']
     }],
@@ -228,7 +235,7 @@ const dictionary = {
         'definition': ['recently; lately; these days; nowadays; right now', 'nearest; closest']
     }],
     '運動不足': [{
-        'kana': 'うんどうぶそく',
+        'kana': 'うん',
         'definition': ['lack of physical exercise; insufficient exercise; inactivity']
     }],
     'だ': [{
@@ -256,6 +263,11 @@ const dictionary = {
         'definition': ['shoulder']
     }],
     'もんでくれない': [{
+        'kanji': 'もんで',
+        'kana': 'もんで',
+        'definition': ['to rub; to crumple', 'to massage', 'to argue; to have a heated discussion', 'to train; to coach', 'to jostle; to crowd; to shake; to rock', 'to have various experiences (out in the world)'],
+        'type': 'compound'
+    }, {
         'kanji': '揉む',
         'kana': 'もむ',
         'definition': ['to rub; to crumple', 'to massage', 'to argue; to have a heated discussion', 'to train; to coach', 'to jostle; to crowd; to shake; to rock', 'to have various experiences (out in the world)'],
@@ -306,7 +318,7 @@ const dictionary = {
         'kana': 'わかる',
         'definition': ['to understand; to comprehend; to grasp; to see; to get; to follow', 'to become clear; to be known; to be discovered; to be realized; to be realised; to be found out', 'I know!; I think so too!']
     }],
-    'わ': [{
+    'わかりません': [{
         'kanji': '分かる',
         'kana': 'わかる',
         'definition': ['to understand; to comprehend; to grasp; to see; to get; to follow', 'to become clear; to be known; to be discovered; to be realized; to be realised; to be found out'],
@@ -331,6 +343,11 @@ const dictionary = {
         'definition': ['Mr (junior); master; boy']
     }],
     '揉んでくれる': [{
+        'kanji': '揉んで',
+        'kana': 'もんで',
+        'definition': ['to rub; to crumple', 'to massage', 'to argue; to have a heated discussion', 'to train; to coach', 'to jostle; to crowd; to shake; to rock', 'to have various experiences (out in the world)'],
+        'type': 'compound'
+    }, {
         'kanji': '揉む',
         'kana': 'もむ',
         'definition': ['to rub; to crumple', 'to massage', 'to argue; to have a heated discussion', 'to train; to coach', 'to jostle; to crowd; to shake; to rock', 'to have various experiences (out in the world)'],
@@ -341,8 +358,13 @@ const dictionary = {
         'definition': ['good; excellent; fine; nice; pleasant; agreeable', 'sufficient; enough; ready; prepared', 'profitable (deal, business offer, etc.); beneficial', 'OK; all right; fine; no problem']
     }],
     '刺さってる': [{
+        'kanji': '刺さって',
+        'kana': 'ささって',
+        'definition': ['to stick into (of something with a sharp point); to prick; to pierce; to get stuck (in); to lodge (in)', 'to resonate emotionally; to move'],
+        'type': 'compound'
+    }, {
         'kanji': '刺さる',
-        'kana': 'ささる',
+        'kana': '',
         'definition': ['to stick into (of something with a sharp point); to prick; to pierce; to get stuck (in); to lodge (in)', 'to resonate emotionally; to move'],
         'type': 'Conjunctive (~te)  '
     }],
@@ -351,7 +373,7 @@ const dictionary = {
         'definition': ['welcome']
     }],
     'いらっしゃい': [{
-        'kana': 'いらっ',
+        'kana': 'いらっしゃい',
         'definition': ['come; go; stay', 'welcome']
     }, {
         'kanji': 'いらっしゃる',
@@ -368,6 +390,11 @@ const dictionary = {
         'definition': ['panda']
     }],
     '来てた': [{
+        'kanji': '来て',
+        'kana': 'きて',
+        'definition': ['to come (spatially or temporally); to approach; to arrive', 'to come back; to do ... and come back', 'to come to be; to become; to get; to grow; to continue', 'to come from; to be caused by; to derive from', 'to come to (i.e. "when it comes to spinach ...")'],
+        'type': 'compound'
+    }, {
         'kanji': '来る',
         'kana': 'くる',
         'definition': ['to come (spatially or temporally); to approach; to arrive', 'to come back; to do ... and come back', 'to come to be; to become; to get; to grow; to continue', 'to come from; to be caused by; to derive from', 'to come to (i.e. "when it comes to spinach ...")'],
@@ -408,7 +435,7 @@ const dictionary = {
         'definition': ['large serving; large portion']
     }],
     'ね': [{
-        'kana': 'ね',
+        'kana': '',
         'definition': ["right?; isn't it?; doesn't it?; don't you?; don't you think?", 'hey; say; listen; look; come on', 'you know; you see; I must say; I should think', 'will you?; please', 'so, ...; well, ...; you see, ...; you understand?', "I'm not sure if ...; I have my doubts about whether ..."]
     }],
     'お店': [{
@@ -486,6 +513,11 @@ const dictionary = {
         'definition': ['animal']
     }],
     '来てる': [{
+        'kanji': '来て',
+        'kana': 'きて',
+        'definition': ['to come (spatially or temporally); to approach; to arrive', 'to come back; to do ... and come back', 'to come to be; to become; to get; to grow; to continue', 'to come from; to be caused by; to derive from', 'to come to (i.e. "when it comes to spinach ...")'],
+        'type': 'compound'
+    }, {
         'kanji': '来る',
         'kana': 'くる',
         'definition': ['to come (spatially or temporally); to approach; to arrive', 'to come back; to do ... and come back', 'to come to be; to become; to get; to grow; to continue', 'to come from; to be caused by; to derive from', 'to come to (i.e. "when it comes to spinach ...")'],
@@ -500,8 +532,10 @@ const dictionary = {
         'definition': ['guest; visitor', 'customer; client; shopper; spectator; audience; tourist; sightseer; passenger', 'counter for containers used to entertain guests']
     }],
     'ダラダラしてる': [{
-        'kana': 'ダラダラしてる',
-        'definition': ['in drops; dripping; trickling; streaming; flowing', 'gently (sloping)', 'sluggishly; endlessly; lengthily', 'leisurely; idly; slowly; slovenly']
+        'kanji': 'ダラダラ',
+        'kana': 'ダラダラ',
+        'definition': ['in drops; dripping; trickling; streaming; flowing', 'gently (sloping)', 'sluggishly; endlessly; lengthily', 'leisurely; idly; slowly; slovenly'],
+        'type': 'compound'
     }, {
         'kanji': '為る',
         'kana': 'する',
@@ -513,7 +547,7 @@ const dictionary = {
         'definition': ['particularly; especially; in particular; expressly']
     }],
     '格好よくない': [{
-        'kanji': '格',
+        'kanji': '格好いい',
         'kana': 'かっこいい',
         'definition': ['attractive; good-looking; stylish; cool; smooth; neat; with-it; groovy'],
         'type': 'Non-past Negative '
@@ -523,8 +557,13 @@ const dictionary = {
         'definition': ['to compare; to make a comparison', 'to compete; to vie']
     }],
     'やめてくれない': [{
+        'kanji': 'やめて',
+        'kana': 'やめて',
+        'definition': ['to stop (an activity); to cease; to discontinue; to end; to quit', 'to cancel; to abandon; to give up; to abolish; to abstain; to refrain'],
+        'type': 'compound'
+    }, {
         'kanji': '止める',
-        'kana': 'やめる',
+        'kana': 'や',
         'definition': ['to stop (an activity); to cease; to discontinue; to end; to quit', 'to cancel; to abandon; to give up; to abolish; to abstain; to refrain'],
         'type': 'Conjunctive (~te)  '
     }],
@@ -568,6 +607,11 @@ const dictionary = {
         'definition': ['how; in what way; how about']
     }],
     '出てくる': [{
+        'kanji': '出て',
+        'kana': 'でて',
+        'definition': ['to leave; to exit; to go out; to come out; to get out', 'to leave (on a journey); to depart; to start out; to set out', 'to move forward', 'to come to; to get to; to lead to; to reach', 'to appear; to come out; to emerge; to surface; to come forth; to turn up; to be found; to be detected; to be discovered; to be exposed; to show; to be exhibited; to be on display', 'to appear (in print); to be published; to be announced; to be issued; to be listed; to come out', 'to attend; to participate; to take part; to enter (an event); to play in; to perform', 'to be stated; to be expressed; to come up; to be brought up; to be raised', 'to sell', 'to exceed; to go over', 'to stick out; to protrude', 'to break out; to occur; to start; to originate', 'to be produced', 'to come from; to be derived from', 'to be given; to get; to receive; to be offered; to be provided; to be presented; to be submitted; to be handed in; to be turned in; to be paid', 'to answer (phone, door, etc.); to get', 'to assume (an attitude); to act; to behave', 'to pick up (speed, etc.); to gain', 'to flow (e.g. tears); to run; to bleed', 'to graduate', 'to ejaculate; to cum'],
+        'type': 'compound'
+    }, {
         'kanji': '出る',
         'kana': 'でる',
         'definition': ['to leave; to exit; to go out; to come out; to get out', 'to leave (on a journey); to depart; to start out; to set out', 'to move forward', 'to come to; to get to; to lead to; to reach', 'to appear; to come out; to emerge; to surface; to come forth; to turn up; to be found; to be detected; to be discovered; to be exposed; to show; to be exhibited; to be on display', 'to appear (in print); to be published; to be announced; to be issued; to be listed; to come out', 'to attend; to participate; to take part; to enter (an event); to play in; to perform', 'to be stated; to be expressed; to come up; to be brought up; to be raised', 'to sell', 'to exceed; to go over', 'to stick out; to protrude', 'to break out; to occur; to start; to originate', 'to be produced', 'to come from; to be derived from', 'to be given; to get; to receive; to be offered; to be provided; to be presented; to be submitted; to be handed in; to be turned in; to be paid', 'to answer (phone, door, etc.); to get', 'to assume (an attitude); to act; to behave', 'to pick up (speed, etc.); to gain', 'to flow (e.g. tears); to run; to bleed', 'to graduate', 'to ejaculate; to cum'],
@@ -620,8 +664,10 @@ const dictionary = {
         'definition': ['hey; listen; look; say', 'now, ...; well, ...; I tell you!; you know', 'wow; ooh', "right?; isn't it?; doesn't it?; don't you?; don't you think?", 'indicates な-adjective']
     }],
     'まったりできる': [{
-        'kana': 'まったりできる',
-        'definition': ['rich (taste); full-bodied (flavour, flavor); mellow', 'laid-back (lifestyle); relaxed; comfortable']
+        'kanji': 'まったり',
+        'kana': 'まったり',
+        'definition': ['rich (taste); full-bodied (flavour, flavor); mellow', 'laid-back (lifestyle); relaxed; comfortable', 'to finish ...; to do ... completely'],
+        'type': 'compound'
     }, {
         'kanji': 'まう',
         'kana': 'まう',
@@ -701,7 +747,7 @@ const dictionary = {
         'definition': ['being a fan of; being a supporter of; pushing for', "one's favourite (member of an idol group, character in an anime, player in a team, etc.)"]
     }, {
         'kanji': '推す',
-        'kana': 'お',
+        'kana': 'おす',
         'definition': ['to recommend; to endorse (e.g. a candidate); to nominate; to support; to back', 'to infer (from); to deduce; to gather; to conjecture; to surmise', 'to think (something) through; to ponder deeply'],
         'type': 'Continuative (~i)  '
     }],
@@ -740,7 +786,7 @@ const dictionary = {
         'definition': ['recommendation; advice; suggestion; encouragement']
     }],
     '日替わり': [{
-        'kana': 'ひがわり',
+        'kana': 'ひがわ',
         'definition': ['changing every day']
     }],
     'ランチ': [{
@@ -803,6 +849,11 @@ const dictionary = {
         'definition': ['only; nothing but']
     }],
     'おいてないじゃ': [{
+        'kanji': 'おいて',
+        'kana': 'おいて',
+        'definition': ['to put; to place', 'to leave (behind)', 'to establish (an organization, a facility, a position, etc.); to set up', 'to appoint (someone to a certain position); to hire; to employ', "to place (one's trust, one's faith, etc.); to bear (in mind, etc.)", 'to put down a tool (e.g. a pen) hence stopping what one is doing with that tool', "to take in (boarders, etc.); to provide lodging in one's house", 'to separate spatially or temporally', 'to do something in advance', 'to leave something in a certain state; to keep something in a certain state'],
+        'type': 'compound'
+    }, {
         'kanji': '置く',
         'kana': 'おく',
         'definition': ['to put; to place', 'to leave (behind)', 'to establish (an organization, a facility, a position, etc.); to set up', 'to appoint (someone to a certain position); to hire; to employ', "to place (one's trust, one's faith, etc.); to bear (in mind, etc.)", 'to put down a tool (e.g. a pen) hence stopping what one is doing with that tool', "to take in (boarders, etc.); to provide lodging in one's house", 'to separate spatially or temporally', 'to do something in advance', 'to leave something in a certain state; to keep something in a certain state'],
@@ -813,7 +864,7 @@ const dictionary = {
         'definition': ['(rocky) beach; seashore']
     }],
     '好き': [{
-        'kana': 'すき',
+        'kana': 'す',
         'definition': ["liking; being fond of; to one's liking; to one's taste; preferred; favourite", 'liking (romantically); being in love with; beloved', 'faddism; eccentricity', 'as one likes; as it suits one', 'lecherous; lustful; salacious']
     }, {
         'kanji': '好く',
@@ -822,10 +873,10 @@ const dictionary = {
         'type': 'Continuative (~i)  '
     }],
     '皆': [{
-        'kana': 'みんな',
+        'kana': 'みん',
         'definition': ['everyone; everybody; all', 'everything; all']
     }],
-    'きっ': [{
+    'きっと': [{
         'kana': 'きっと',
         'definition': ['surely; undoubtedly; almost certainly; most likely (e.g. 90 percent)', 'sternly; severely', 'having no slack; rigid; stiff; tight', 'suddenly; abruptly; instantly']
     }],
@@ -833,16 +884,26 @@ const dictionary = {
         'kana': 'なまざかな',
         'definition': ['raw fish; uncooked fish; fresh fish']
     }, {
-        'kana': 'せいぎょ',
+        'kana': 'せい',
         'definition': ['live fish', 'fresh fish']
     }],
     'おいてない': [{
+        'kanji': 'おいて',
+        'kana': 'おいて',
+        'definition': ['to put; to place', 'to leave (behind)', 'to establish (an organization, a facility, a position, etc.); to set up', 'to appoint (someone to a certain position); to hire; to employ', "to place (one's trust, one's faith, etc.); to bear (in mind, etc.)", 'to put down a tool (e.g. a pen) hence stopping what one is doing with that tool', "to take in (boarders, etc.); to provide lodging in one's house", 'to separate spatially or temporally', 'to do something in advance', 'to leave something in a certain state; to keep something in a certain state'],
+        'type': 'compound'
+    }, {
         'kanji': '置く',
         'kana': 'おく',
         'definition': ['to put; to place', 'to leave (behind)', 'to establish (an organization, a facility, a position, etc.); to set up', 'to appoint (someone to a certain position); to hire; to employ', "to place (one's trust, one's faith, etc.); to bear (in mind, etc.)", 'to put down a tool (e.g. a pen) hence stopping what one is doing with that tool', "to take in (boarders, etc.); to provide lodging in one's house", 'to separate spatially or temporally', 'to do something in advance', 'to leave something in a certain state; to keep something in a certain state'],
         'type': 'Conjunctive (~te)  '
     }],
     'おいてないでしょう': [{
+        'kanji': 'おいて',
+        'kana': 'おいて',
+        'definition': ['to put; to place', 'to leave (behind)', 'to establish (an organization, a facility, a position, etc.); to set up', 'to appoint (someone to a certain position); to hire; to employ', "to place (one's trust, one's faith, etc.); to bear (in mind, etc.)", 'to put down a tool (e.g. a pen) hence stopping what one is doing with that tool', "to take in (boarders, etc.); to provide lodging in one's house", 'to separate spatially or temporally', 'to do something in advance', 'to leave something in a certain state; to keep something in a certain state'],
+        'type': 'compound'
+    }, {
         'kanji': '置く',
         'kana': 'おく',
         'definition': ['to put; to place', 'to leave (behind)', 'to establish (an organization, a facility, a position, etc.); to set up', 'to appoint (someone to a certain position); to hire; to employ', "to place (one's trust, one's faith, etc.); to bear (in mind, etc.)", 'to put down a tool (e.g. a pen) hence stopping what one is doing with that tool', "to take in (boarders, etc.); to provide lodging in one's house", 'to separate spatially or temporally', 'to do something in advance', 'to leave something in a certain state; to keep something in a certain state'],
@@ -905,7 +966,7 @@ const dictionary = {
         'kana': 'だよね',
         'definition': ["it is, isn't it?; I know, right?; innit?"]
     }],
-    'だいたい': [{
+    '': [{
         'kana': 'だいたい',
         'definition': ['outline; main points; gist; substance; essence', 'generally; on the whole; mostly; almost; nearly; approximately; roughly; about', 'general; rough', 'in the first place; first and foremost; from the start; to begin with']
     }],
@@ -947,6 +1008,11 @@ const dictionary = {
         'definition': ['llama (Lama glama)']
     }],
     '来てくれる': [{
+        'kanji': '来て',
+        'kana': 'きて',
+        'definition': ['to come (spatially or temporally); to approach; to arrive', 'to come back; to do ... and come back', 'to come to be; to become; to get; to grow; to continue', 'to come from; to be caused by; to derive from', 'to come to (i.e. "when it comes to spinach ...")'],
+        'type': 'compound'
+    }, {
         'kanji': '来る',
         'kana': 'くる',
         'definition': ['to come (spatially or temporally); to approach; to arrive', 'to come back; to do ... and come back', 'to come to be; to become; to get; to grow; to continue', 'to come from; to be caused by; to derive from', 'to come to (i.e. "when it comes to spinach ...")'],
@@ -961,8 +1027,13 @@ const dictionary = {
         'definition': ['belly; abdomen; stomach']
     }],
     '痛くなっちゃう': [{
+        'kanji': '痛く',
+        'kana': 'いたく',
+        'definition': ['painful; sore', 'cringy; embarrassing', 'exceeding'],
+        'type': 'compound'
+    }, {
         'kanji': '痛い',
-        'kana': 'いた',
+        'kana': 'いたい',
         'definition': ['painful; sore', 'cringy; embarrassing', 'exceeding'],
         'type': 'Adverbial  '
     }],
@@ -980,12 +1051,12 @@ const dictionary = {
     }],
     '出したら': [{
         'kanji': '出す',
-        'kana': 'だ',
+        'kana': 'だす',
         'definition': ['to take out; to get out', 'to put out; to reveal; to show', 'to submit (e.g. thesis); to turn in', 'to publish; to make public', 'to send (e.g. letter)', 'to produce (a sound); to start (fire)', 'to serve (food)', '... out (e.g. to jump out, to carry out)', 'to begin ...; to start to ...; to burst into ...'],
         'type': 'Conditional (~tara)  '
     }],
     'ほら': [{
-        'kana': '',
+        'kana': 'ほら',
         'definition': ['look!; look out!; hey!; look at me!; there you are!']
     }],
     'パスタ': [{
@@ -1011,6 +1082,11 @@ const dictionary = {
         'type': 'Volitional  '
     }],
     'みたい': [{
+        'kanji': 'み',
+        'kana': 'み',
+        'definition': ['to see; to look; to watch; to view; to observe', 'to examine; to look over; to assess; to check; to judge', 'to look after; to attend to; to take care of; to keep an eye on', 'to experience; to meet with (misfortune, success, etc.)', 'to try ...; to have a go at ...; to give ... a try', 'to see (that) ...; to find (that) ...'],
+        'type': 'compound'
+    }, {
         'kanji': '見る',
         'kana': 'みる',
         'definition': ['to see; to look; to watch; to view; to observe', 'to examine; to look over; to assess; to check; to judge', 'to look after; to attend to; to take care of; to keep an eye on', 'to experience; to meet with (misfortune, success, etc.)', 'to try ...; to have a go at ...; to give ... a try', 'to see (that) ...; to find (that) ...'],
@@ -1054,7 +1130,7 @@ const dictionary = {
         'type': 'Potential  Formal'
     }],
     'どうしますか': [{
-        'kana': 'どうしますか',
+        'kana': 'どうします',
         'definition': ['what would (you) do?; what to do about it']
     }],
     'ダメ': [{
@@ -1066,7 +1142,7 @@ const dictionary = {
         'definition': ["that's the way it is; yes", 'is that so?; is it?']
     }],
     'いやいや': [{
-        'kana': 'いや',
+        'kana': 'いやいや',
         'definition': ['no!; no no!; no, not at all']
     }],
     '和風': [{
@@ -1082,7 +1158,7 @@ const dictionary = {
         'definition': ['alcohol', '(alcohol-based) hand sanitizer']
     }],
     '中心': [{
-        'kana': 'ちゅう',
+        'kana': 'ちゅうしん',
         'definition': ['center; centre; middle; heart; core; focus; pivot; emphasis; balance', '-centered; -centred; -focused; -oriented; centered on; focused on']
     }],
     'から': [{
@@ -1111,7 +1187,7 @@ const dictionary = {
         'kana': 'すしや',
         'definition': ['sushi shop; sushi restaurant; sushi bar']
     }],
-    '四季': [{
+    '': [{
         'kana': 'しき',
         'definition': ['the four seasons']
     }],
@@ -1130,7 +1206,7 @@ const dictionary = {
         'definition': ['to sell'],
         'type': 'Continuative (~i)  '
     }],
-    '': [{
+    '新鮮': [{
         'kana': 'しんせん',
         'definition': ['fresh']
     }],
@@ -1196,8 +1272,10 @@ const dictionary = {
         'definition': ['water tank; cistern', 'fish tank; aquarium']
     }],
     'では': [{
-        'kana': 'では',
-        'definition': ['at; in', 'at; when', 'by; with', 'and then; so', 'and; then', "let me tell you; don't you know"]
+        'kanji': 'で',
+        'kana': 'で',
+        'definition': ['at; in', 'at; when', 'by; with', 'and then; so', 'and; then', "let me tell you; don't you know", 'be; is'],
+        'type': 'compound'
     }, {
         'kanji': 'だ',
         'kana': 'だ',
@@ -1209,13 +1287,18 @@ const dictionary = {
         'definition': ['fish']
     }],
     '泳いでいて': [{
+        'kanji': '泳いで',
+        'kana': 'およいで',
+        'definition': ['to swim', 'to struggle through (a crowd)', "to make one's way through the world; to get along (in life)", "to totter; to lose one's balance"],
+        'type': 'compound'
+    }, {
         'kanji': '泳ぐ',
         'kana': 'およぐ',
         'definition': ['to swim', 'to struggle through (a crowd)', "to make one's way through the world; to get along (in life)", "to totter; to lose one's balance"],
         'type': 'Conjunctive (~te)  '
     }],
     'お客さん': [{
-        'kana': '',
+        'kana': 'おきゃくさん',
         'definition': ['guest; visitor', 'customer; client; shopper; spectator; audience; tourist; sightseer; passenger']
     }],
     '自分': [{
@@ -1240,6 +1323,11 @@ const dictionary = {
         'definition': ['nonexistent; not being (there)', 'unowned; not had; unpossessed', 'unique', "not; impossible; won't happen", 'not', 'to not be; to have not']
     }],
     'っぽさ': [{
+        'kanji': 'っぽ',
+        'kana': 'っぽ',
+        'definition': ['-ish; -like'],
+        'type': 'compound'
+    }, {
         'kanji': 'っぽい',
         'kana': 'っぽい',
         'definition': ['-ish; -like'],
@@ -1257,10 +1345,20 @@ const dictionary = {
         'type': 'Conjunctive (~te)  '
     }],
     '入ってない': [{
+        'kanji': '入って',
+        'kana': 'はいって',
+        'definition': ['to enter; to go into', 'to break into', 'to join; to enroll', 'to contain; to hold; to accommodate', 'to have (an income of)', 'to get turned on; to start functioning; to start working', 'to get; to obtain; to receive; to score'],
+        'type': 'compound'
+    }, {
         'kanji': '入る',
         'kana': 'はいる',
         'definition': ['to enter; to go into', 'to break into', 'to join; to enroll', 'to contain; to hold; to accommodate', 'to have (an income of)', 'to get turned on; to start functioning; to start working', 'to get; to obtain; to receive; to score'],
         'type': 'Conjunctive (~te)  '
+    }, {
+        'kanji': '入って',
+        'kana': 'いって',
+        'definition': ['to get in; to go in; to come in; to flow into; to set; to set in'],
+        'type': 'compound'
     }, {
         'kanji': '入る',
         'kana': 'いる',
@@ -1308,7 +1406,7 @@ const dictionary = {
         'definition': ['until (a time); till; to; up to', 'to (a place or person); as far as', 'to (an extent); up to; so far as; even', 'only; merely']
     }],
     '仕入れ': [{
-        'kana': 'しい',
+        'kana': 'しいれ',
         'definition': ['stocking; buying up']
     }, {
         'kanji': '仕入れる',
@@ -1325,12 +1423,22 @@ const dictionary = {
         'definition': ['to leave nothing undone; to give good service; to attend to everything; to see to something properly', "to be on someone's tracks (e.g. police); to catch up with; to close in on"]
     }],
     'やめちゃえば': [{
+        'kanji': 'やめて',
+        'kana': 'やめて',
+        'definition': ['to stop (an activity); to cease; to discontinue; to end; to quit', 'to cancel; to abandon; to give up; to abolish; to abstain; to refrain'],
+        'type': 'compound'
+    }, {
         'kanji': '止める',
         'kana': 'やめる',
         'definition': ['to stop (an activity); to cease; to discontinue; to end; to quit', 'to cancel; to abandon; to give up; to abolish; to abstain; to refrain'],
         'type': 'Conjunctive (~te)  '
     }],
     '言ってる': [{
+        'kanji': '言って',
+        'kana': 'いって',
+        'definition': ['to say; to utter; to declare', 'to name; to call', 'to go (e.g. "the alarm went ping"); to make a noise'],
+        'type': 'compound'
+    }, {
         'kanji': '言う',
         'kana': 'いう',
         'definition': ['to say; to utter; to declare', 'to name; to call', 'to go (e.g. "the alarm went ping"); to make a noise'],
@@ -1349,7 +1457,7 @@ const dictionary = {
         'kana': 'しや',
         'definition': ['field of vision; view', "one's outlook (e.g. on life); one's horizons"]
     }],
-    'しょうか': [{
+    'しょう': [{
         'kana': 'しょうか',
         'definition': ['digestion (of food)', 'digestion (of information); assimilation; thorough understanding', 'consumption; absorption; using up; meeting (e.g. a quota); completion', "losing one's form and turning into something else"]
     }, {
@@ -1373,7 +1481,7 @@ const dictionary = {
         'definition': ['to be (of animate objects); to exist', 'to stay', 'to be ...-ing; to have been ...-ing']
     }],
     'なんです': [{
-        'kana': 'なんです',
+        'kana': '',
         'definition': ['it is assuredly that ...; can say with confidence that ...']
     }],
     '運べる': [{
@@ -1391,7 +1499,7 @@ const dictionary = {
         'definition': ['depending on', 'as soon as; immediately after; upon', 'as (e.g. "as one is told", "as one wishes"); whatever (e.g. "whatever is at hand")', 'order; program; programme; precedence', 'circumstances; course of events; state of things', 'reason']
     }],
     'として': [{
-        'kana': 'とし',
+        'kana': 'として',
         'definition': ['as (i.e. in the role of); for (i.e. from the viewpoint of)', 'apart from... (used to change the topic)', 'even (e.g. "not even a single person")', 'thinking that...; trying to...']
     }, {
         'kanji': 'とする',
@@ -1414,8 +1522,10 @@ const dictionary = {
         'type': 'Alternative (~tari)  '
     }],
     '毛繕いしたり': [{
-        'kana': 'けづくろい したり',
-        'definition': ['grooming oneself (esp. animals); mutual grooming (e.g. monkeys); social grooming; personal grooming']
+        'kanji': '毛繕い',
+        'kana': 'けづくろい',
+        'definition': ['grooming oneself (esp. animals); mutual grooming (e.g. monkeys); social grooming; personal grooming'],
+        'type': 'compound'
     }, {
         'kanji': '為る',
         'kana': 'する',
@@ -1427,10 +1537,20 @@ const dictionary = {
         'definition': ['freely; at liberty; at will; as one likes']
     }],
     'かわいがっていい': [{
+        'kanji': 'かわいがって',
+        'kana': 'かわいがって',
+        'definition': ["to be affectionate to; to treat tenderly; to dote on; to show one's love (for); to cherish", 'to show favouritism to; to be partial to', 'to fondle; to caress; to pet', 'to be tough on; to be rough with; to torment; to train harshly'],
+        'type': 'compound'
+    }, {
         'kanji': '可愛がる',
         'kana': 'かわいがる',
         'definition': ["to be affectionate to; to treat tenderly; to dote on; to show one's love (for); to cherish", 'to show favouritism to; to be partial to', 'to fondle; to caress; to pet', 'to be tough on; to be rough with; to torment; to train harshly'],
         'type': 'Conjunctive (~te)  '
+    }, {
+        'kanji': 'かわい',
+        'kana': 'かわい',
+        'definition': ['cute; adorable; charming; lovely; pretty', 'dear; precious; darling; pet', 'innocent; childlike; childish; lovable', 'dainty; little; tiny'],
+        'type': 'compound'
     }, {
         'kanji': '可愛い',
         'kana': 'かわいい',
@@ -1453,15 +1573,17 @@ const dictionary = {
         'definition': ['what?!; what did you say?!', 'why?; what for?; for what reason?', 'anyone; anything']
     }],
     '毛繕いできる': [{
-        'kana': 'けづくろい できる',
-        'definition': ['grooming oneself (esp. animals); mutual grooming (e.g. monkeys); social grooming; personal grooming']
+        'kanji': '毛繕い',
+        'kana': 'けづくろい',
+        'definition': ['grooming oneself (esp. animals); mutual grooming (e.g. monkeys); social grooming; personal grooming'],
+        'type': 'compound'
     }, {
         'kanji': '為る',
         'kana': 'する',
         'definition': [],
         'type': 'Potential  '
     }],
-    'すごくないです': [{
+    'すごくない': [{
         'kanji': '凄い',
         'kana': 'すごい',
         'definition': ['terrible; dreadful', 'amazing (e.g. of strength); great (e.g. of skills); wonderful; terrific', 'to a great extent; vast (in numbers)'],
@@ -1571,6 +1693,11 @@ const dictionary = {
     }],
     'ちょ': [],
     '聞いてください': [{
+        'kanji': '聞いて',
+        'kana': 'きいて',
+        'definition': ['to hear', 'to listen (e.g. to music)', 'to ask; to enquire; to query', 'to hear about; to hear of; to learn of', 'to follow (advice, order, etc.); to obey; to listen to; to comply with', 'to hear (e.g. a plea); to grant (a request); to accept (e.g. an argument); to give consideration to', 'to smell (esp. incense); to sample (a fragrance)', 'to taste (alcohol); to try'],
+        'type': 'compound'
+    }, {
         'kanji': '聞く',
         'kana': 'きく',
         'definition': ['to hear', 'to listen (e.g. to music)', 'to ask; to enquire; to query', 'to hear about; to hear of; to learn of', 'to follow (advice, order, etc.); to obey; to listen to; to comply with', 'to hear (e.g. a plea); to grant (a request); to accept (e.g. an argument); to give consideration to', 'to smell (esp. incense); to sample (a fragrance)', 'to taste (alcohol); to try'],
