@@ -1,7 +1,7 @@
 // Exercise Type (character, vocabulary )
-const shirokumaEpisode3Part1StoryChartType = "vocabulary";
+const shirokumaEpisode3StoryChartType = "vocabulary";
 
-const shirokumaEpisode3Part1StoryMap =  {
+const shirokumaEpisode3StoryMap =  {
     "1": {
         "character": "しろくまカフェへようこそ",
         "letter": "Welcome to Shirokuma Cafe",
@@ -764,4 +764,4 @@ const shirokumaEpisode3Part1StoryMap =  {
     },
 }
 
-const shirokumaEpisode3Part1StoryChartData = [{ subtitle: "", "content": shirokumaEpisode3Part1StoryMap }]
+const shirokumaEpisode3StoryChartData = [{ subtitle: "", "content": shirokumaEpisode3StoryMap }]

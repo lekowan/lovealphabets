@@ -66,7 +66,7 @@ const allSyllableMap =  {
         'pinyinSpace': 'きょう どうぶつえん やすみ な ん だ から ねかせて'
     },
     '8': {
-        'character': 'みんなとっ',
+        'character': 'みんなとっくに起きて太極拳やって朝ごはん食べてるわよ',
         'letter': "Everyone's already up, doing tai chi and eating breakfast.",
         'pinyin': 'みんなとっくにおきてたいきょくけんやってあさごはんたべてるわよ',
         'definition': 'みんな とっくに 起きて 太極拳 やって 朝ごはん 食べてる わよ',
@@ -94,9 +94,9 @@ const allSyllableMap =  {
         'pinyinSpace': 'おつかれ です か'
     },
     '12': {
-        'character': '最近運動不足だか',
+        'character': '最近運動不足だから肩こちゃって',
         'letter': "I haven't been getting enough exercise lately, so my shoulders are stiff.",
-        'pinyin': 'さいきんうんどうぶそくだからか',
+        'pinyin': 'さいきんうんどうぶそくだからかたこちゃって',
         'definition': '最近 運動不足 だから 肩 こちゃって',
         'pinyinSpace': 'さいきん うんどうぶそく だ から かた こちゃって'
     },
@@ -216,7 +216,7 @@ const allSyllableMap =  {
         'character': '白熊君のお店今日も人いっぱいだね',
         'letter': 'Your store is full of people today, Polar Bear!',
         'pinyin': 'しろくまくんのおみせきょうもひといっぱいだね',
-        'definition': '白熊 君 の お店 今日 も 人  だ ね',
+        'definition': '白熊 君 の お店 今日 も 人 いっぱい だ ね',
         'pinyinSpace': 'しろくま/はぐま きみ/くん の おみせ きょう も じん/ひと/にん いっぱい だ ね'
     },
     '30': {
@@ -241,7 +241,7 @@ const allSyllableMap =  {
         'pinyinSpace': 'そうだね'
     },
     '33': {
-        'character': 'おしゃれな女',
+        'character': 'おしゃれな女の子がいっぱいだね',
         'letter': 'Lots of fashionable girls.',
         'pinyin': 'おしゃれなおんなのこがいっぱいだね',
         'definition': 'おしゃれ な 女の子 が いっぱい だ ね',
@@ -257,7 +257,7 @@ const allSyllableMap =  {
     '35': {
         'character': '珍しい動物も来てるよね',
         'letter': "I've seen some rare animals here.",
-        'pinyin': 'めずらしいどうぶつもらいてるよね',
+        'pinyin': 'めずらしいどうぶつもきてるよね',
         'definition': '珍しい 動物 も 来てる よね',
         'pinyinSpace': 'めずらしい どうぶつ も きてる よね'
     },
@@ -269,7 +269,7 @@ const allSyllableMap =  {
         'pinyinSpace': 'そうだね'
     },
     '37': {
-        'character': '',
+        'character': 'カフェやってる白熊 君って格好よくない',
         'letter': "Isn't it cool to be a polar bear running a café?",
         'pinyin': 'かふぇやってるしろくまくんってかっこよくない',
         'definition': 'カフェ やってる 白熊 君 って 格好よくない',
@@ -293,15 +293,15 @@ const allSyllableMap =  {
         'character': 'とくには格好よくないね',
         'letter': 'Not particularly good-looking.',
         'pinyin': 'とくにはかっこよくないね',
-        'definition': 'とくに は 格 ね',
+        'definition': 'とくに は 格好よくない ね',
         'pinyinSpace': 'とくに は かっこよくない ね'
     },
     '41': {
         'character': '僕と比べるのはやめてくれない',
         'letter': 'Can you stop comparing yourself to me?',
         'pinyin': 'ぼくとくらべるのはやめてくれない',
-        'definition': '僕 と 比べる の は やめてくれ',
-        'pinyinSpace': 'ぼく と くらべる の は やめて くれない'
+        'definition': '僕 と 比べる の は やめて くれない',
+        'pinyinSpace': 'ぼく と くらべる の は やめてくれない'
     },
     '42': {
         'character': 'あ白熊君カフェモカ頂戴',
@@ -353,7 +353,7 @@ const allSyllableMap =  {
         'pinyinSpace': 'ふつうに やって よね'
     },
     '49': {
-        'character': 'どう',
+        'character': 'どうぞごゆっくり',
         'letter': 'Please, take your time.',
         'pinyin': 'どうぞごゆっくり',
         'definition': 'どうぞ ごゆっくり',
@@ -362,7 +362,7 @@ const allSyllableMap =  {
     '50': {
         'character': '笹子さんちょっと出てくるね',
         'letter': "Sasago, I'm going out for a bit.",
-        'pinyin': 'ささごさ',
+        'pinyin': 'ささこさんちょっとでてくるね',
         'definition': '笹 子 さん ちょっと 出てくる ね',
         'pinyinSpace': 'ささ こ さん ちょっと でてくる ね'
     },

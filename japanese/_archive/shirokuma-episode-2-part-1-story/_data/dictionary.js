@@ -124,7 +124,7 @@ const dictionary = {
         'definition': ['be; is'],
         'type': 'Non-past  Formal'
     }],
-    '終わっ': [{
+    'おわったら': [{
         'kanji': '終わる',
         'kana': 'おわる',
         'definition': ['to end; to come to an end; to close; to finish'],
@@ -200,7 +200,7 @@ const dictionary = {
         'definition': ['be; is'],
         'type': 'Volitional  Formal'
     }],
-    'ベッ': [{
+    'ベッド': [{
         'kana': 'ベッド',
         'definition': ['bed']
     }],

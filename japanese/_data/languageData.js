@@ -6,6 +6,7 @@ const language = "ja-JP";
 const activateSpeech = true;
 
 const languageContent = [
+/*
 {
       "chartTitle": "Shirokuma SRS",
       "chartName": "shirokuma-srs",
@@ -61,30 +62,20 @@ const languageContent = [
       "localStorageKey": "japanese" + "Episode2Part2" + "Story",
       "chartType": shirokumaEpisode2Part2StoryChartType
 },
-/*
-{
-      "chartTitle": "Shirokuma / Episode 3 / Part 1 / Story",
-      "chartName": "shirokuma-episode-3-part-1-story-map",
-      "chartData": shirokumaEpisode3Part1StoryChartData,
-      "title": "Shirokuma Episode 3 Part 1",
-      "sub": "Memorize all words from Shirokuma Episode 3 Part 1",
-      "icon": "ペ",
-      "url": "shirokuma-episode-3-part-1-story",
-      "localStorageKey": "japanese" + "Episode3Part1" + "Story",
-      "chartType": shirokumaEpisode3Part1StoryChartType
-},
-{
-      "chartTitle": "Shirokuma / Episode 3 / Part 2 / Story",
-      "chartName": "shirokuma-episode-3-part-2-story-map",
-      "chartData": shirokumaEpisode3Part2StoryChartData,
-      "title": "Shirokuma Episode 3 Part 2",
-      "sub": "Memorize all words from Shirokuma Episode 3 Part 2",
-      "icon": "ペ",
-      "url": "shirokuma-episode-3-part-2-story",
-      "localStorageKey": "japanese" + "Episode3Part2" + "Story",
-      "chartType": shirokumaEpisode3Part2StoryChartType
-},
 */
+
+{
+      "chartTitle": "Shirokuma / Episode 3 / Story",
+      "chartName": "shirokuma-episode-3-story-map",
+      "chartData": shirokumaEpisode3StoryChartData,
+      "title": "Shirokuma Episode 3",
+      "sub": "Memorize all words from Shirokuma Episode 3",
+      "icon": "ペ",
+      "url": "shirokuma-episode-3-story",
+      "localStorageKey": "japanese" + "Episode3" + "Story",
+      "chartType": shirokumaEpisode3StoryChartType
+},
+
 
 
 
