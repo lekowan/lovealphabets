@@ -764,4 +764,4 @@ const shirokumaEpisode5StoryMap =  {
     },
 }
 
-const shirokumaEpisode4StoryChartData = [{ subtitle: "", "content": shirokumaEpisode5StoryMap }]
+const shirokumaEpisode5StoryChartData = [{ subtitle: "", "content": shirokumaEpisode5StoryMap }]
