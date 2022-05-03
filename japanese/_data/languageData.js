@@ -90,7 +90,17 @@ const languageContent = [
       "chartType": shirokumaEpisode4StoryChartType
 },
 
-
+{
+      "chartTitle": "Shirokuma / Episode 5 / Story",
+      "chartName": "shirokuma-episode-5-story-map",
+      "chartData": shirokumaEpisode5StoryChartData,
+      "title": "Shirokuma Episode 5",
+      "sub": "Memorize all words from Shirokuma Episode 5",
+      "icon": "ペ",
+      "url": "shirokuma-episode-5-story",
+      "localStorageKey": "japanese" + "Episode5" + "Story",
+      "chartType": shirokumaEpisode5StoryChartType
+},
 
 
 
