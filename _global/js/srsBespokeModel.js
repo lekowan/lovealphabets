@@ -7,7 +7,7 @@ class Model {
 
         // Declare today's date, start of day and end of day
         const now = new Date();
-        //const now = new Date("2022/04/16"); /* for testing only - replaces previous line */
+        //const now = new Date("2022/05/04"); /* for testing only - replaces previous line */
         const todaysDate = now.toLocaleDateString("en-GB");
 
         let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
@@ -15,7 +15,7 @@ class Model {
 
         // Get data from  localStorage
         //let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
-        let _number = 1000;
+        let _number = 5;
         let _data = JSON.parse(localStorage.getItem(localStorageKey + "Data"));
         let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
 
