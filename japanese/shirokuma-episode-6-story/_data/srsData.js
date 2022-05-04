@@ -1,5 +1,5 @@
 // Configuration
-const localStorageKey = "japanese" + "Episode5" + "Story";
+const localStorageKey = "japanese" + "Episode6" + "Story";
 const languageTitle = "Japanese";
 const srsTitle = "Shirokuma Cafe Ep6 Story";
 
