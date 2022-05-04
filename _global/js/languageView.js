@@ -105,12 +105,14 @@ class View {
       let languageCta = this.createElement("button", "language-cta");
       languageCta.innerHTML = "LAUNCH SRS";
 
-      let languageViewChart = this.createElement("button", "language-view-chart-cta");
-      languageViewChart.innerHTML = "PREVIEW";
-      languageViewChart.id = item.chartName;
+      if(item.chartName){
+        var languageViewChart = this.createElement("button", "language-view-chart-cta");
+        languageViewChart.innerHTML = "PREVIEW";
+        languageViewChart.id = item.chartName;
+        // Push View Chart CTAs into array so they can be accessed later
+        this.languageViewCtaArray.push(languageViewChart);
+      }
 
-      // Push View Chart CTAs into array so they can be accessed later
-      this.languageViewCtaArray.push(languageViewChart);
 
       // Create "reset SRS data" icon
       this.svgClear = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -185,7 +187,15 @@ class View {
 
       languageHeading.append(languageHeadingTitle, languageStatus);
       homeLanguageCard.append(homeLanguageIcon);
-      languageButtonsBar.append(languageCta, languageViewChart, languageInfo, languageReset);
+
+      if(item.chartName){
+        languageButtonsBar.append(languageCta, languageViewChart, languageInfo, languageReset);
+      }
+
+      else {
+        languageButtonsBar.append(languageCta, languageInfo, languageReset);
+      }
+
       homeLanguage.append(homeLanguageCard, languageHeading, languageSubHeading, languageButtonsBar);
       this.home.append(homeLanguage);
 
@@ -413,9 +423,12 @@ class View {
             bottom.innerHTML = charMap[item].letter;
             charCard.append(top, middle, bottom);
 
+            /*
             if(_data[item].status == 'hidden'){
               charCard.classList.add('grey');
             }
+            */
+             
             characterColumn.append(charCard);
             n++;
           }
