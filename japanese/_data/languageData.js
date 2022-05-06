@@ -6,6 +6,17 @@ const language = "ja-JP";
 const activateSpeech = true;
 
 const languageContent = [
+{
+      "chartTitle": "Japanese / Katakana",
+      "chartName": "katakana-map",
+      "chartData": japaneseKatakanaChartData,
+      "title": "Katakana",
+      "sub": "Memorize all Katakana",
+      "icon": "ペ",
+      "url": "katakana",
+      "localStorageKey": "japanese" + "Katakana" + "Srs",
+      //"chartType": shirokumaEpisode6StoryChartType
+},
 
 {
       "chartTitle": "Shirokuma SRS",
@@ -18,6 +29,8 @@ const languageContent = [
       "localStorageKey": "japanese",
       "chartType": ''
 },
+
+
 
 /*
 {
@@ -126,6 +139,17 @@ const languageContent = [
       //"chartType": shirokumaEpisode6StoryChartType
 },
 
+{
+      "chartTitle": "Shirokuma / Episode 8 / Story",
+      //"chartName": "shirokuma-episode-5-story-map",
+      //"chartData": shirokumaEpisode5StoryChartData,
+      "title": "Shirokuma Episode 8",
+      "sub": "Memorize all words from Shirokuma Episode 8",
+      "icon": "ペ",
+      "url": "shirokuma-episode-8-story",
+      "localStorageKey": "japanese" + "Episode8" + "Story",
+      //"chartType": shirokumaEpisode6StoryChartType
+},
 
 /*
 {

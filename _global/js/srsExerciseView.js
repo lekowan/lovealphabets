@@ -768,7 +768,11 @@ class View {
 
         // If speechSynthesis in user's browser
         if (activateSpeech && "speechSynthesis" in window) {
-            let audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
+            let audioWord;
+            
+            if(languageTitle == "Japanese") audioWord = new SpeechSynthesisUtterance(word);
+            else audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
+            
             audioWord.lang = language;
             window.speechSynthesis.speak(audioWord);
         }

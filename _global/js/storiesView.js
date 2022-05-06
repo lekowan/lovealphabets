@@ -356,9 +356,6 @@ class View {
 
     addNextCard(cardsSet, rightAnswers, wrongAnswers) {
 
-        console.log(rightAnswers);
-        console.log(wrongAnswers);
-
         cardsSet.forEach((card, id) => {
 
             if (card != undefined) {
@@ -667,9 +664,6 @@ class View {
 
     showDefinition(spanArray) {
 
-
-        console.log(spanArray);
-
         spanArray.forEach(span => {
             span.addEventListener("click", (event) => {
                 this.definitionPopover.innerHTML = "";
@@ -697,7 +691,6 @@ class View {
                     // If item is a compound or a verb
                     if (item.type) {
 
-                        console.log('is verb or compound');
                         definitionPopoverTarget.innerHTML = item.kanji;
 
                         let definitionType = this.createElement("div", "definition-type");
@@ -707,7 +700,7 @@ class View {
 
                         definitionCta.addEventListener("click", (ev) => {
                             let kanji = item.kanji;
-                            console.log(kanji);
+                            
                             let savedWords = JSON.parse(localStorage.getItem(languageTitle.toLowerCase() + "SavedWords")) || {};
 
                             //alert(ev.target.id);
@@ -721,7 +714,6 @@ class View {
                                     savedWords[kanji] = definitionObj;
 
                                     this._commitSavedWords(savedWords);
-                                    console.log(savedWords);
                                     alert('saved in your library!')
 
                                 } else {
@@ -752,7 +744,6 @@ class View {
 
                                     savedWords[word] = definitionObj;
                                     this._commitSavedWords(savedWords);
-                                    console.log(savedWords);
                                     alert('saved in your library!')
                                 } else {
                                     alert('already in your library!')
@@ -771,16 +762,13 @@ class View {
     }
 
     _commitSavedWords(data) {
-        console.log(data);
         localStorage.setItem(languageTitle.toLowerCase() + "SavedWords", JSON.stringify(data));
     }
 
     displayBadIcon(id) {
         let slide = document.getElementById(id);
-        console.log(slide);
         let word = slide.getElementsByClassName("word")[0];
-        console.log(word);
-
+    
         // If GOOD icon is showing, remove it
         //if(word.getElementsByClassName("right-answer").length > 0){
         //  word.getElementsByClassName("right-answer")[0].remove();
@@ -894,7 +882,6 @@ class View {
                 let noSpaceItemCollection = item.getElementsByClassName("definition");
                 let noSpaceItemArray = [...noSpaceItemCollection];
 
-                //console.log(noSpaceItemArray);
                 this.showDefinition(noSpaceItemArray);
 
             });
@@ -905,7 +892,6 @@ class View {
             this._pinyinElement.forEach((item, number) => {
 
                 item.innerHTML = this.pinyinWordNoSpaceArrray[number];
-                console.log(item.innerHTML);
 
             })
 
@@ -929,8 +915,7 @@ class View {
             this._pinyinElement.forEach((item, number) => {
 
                 item.innerHTML = this.pinyinWordSpaceArrray[number];
-                //console.log(item.innerHTML);
-
+    
             })
         }
 
