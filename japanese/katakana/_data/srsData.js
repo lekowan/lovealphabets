@@ -7,7 +7,7 @@ const srsTitle = "Katakana";
 
 // Speech Synthesis
 const language = "ja-JP";
-const activateSpeech = true;
+const activateSpeech = false;
 
 // Exercise Type (character, vocabulary )
 //const exerciseType = "vocabulary";
