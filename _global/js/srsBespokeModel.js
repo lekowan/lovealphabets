@@ -45,6 +45,8 @@ class Model {
 
             console.log(allSyllableMap);
 
+            alert(Object.keys(allSyllableMap).length);
+
             Object.keys(allSyllableMap).forEach(item => {
                 if (typeof _data[item] == 'undefined') {
                     _data[item] = {}
