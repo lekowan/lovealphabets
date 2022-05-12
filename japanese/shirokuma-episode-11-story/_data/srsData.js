@@ -1,7 +1,7 @@
 // Configuration
-const localStorageKey = "japanese" + "Episode10" + "Story";
+const localStorageKey = "japanese" + "Episode11" + "Story";
 const languageTitle = "Japanese";
-const srsTitle = "Shirokuma Cafe Ep10 Story";
+const srsTitle = "Shirokuma Cafe Ep11 Story";
 
 // Speech Synthesis
 const language = "ja-JP";
@@ -13,7 +13,7 @@ const loadergradientBackground = "purple-loader-background";
 // Exercise Type (character, vocabulary )
 const exerciseType = "vocabulary";
 
-const welcomeIntro = "In this spaced-repetition practice (SRS), you will study Japanese expressions from Shirokuma Episode 10. \n \n After your first session, you will also revise learned characters from previous sessions";
+const welcomeIntro = "In this spaced-repetition practice (SRS), you will study Japanese expressions from Shirokuma Episode 11. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 
 function getCharacter(n) {

@@ -713,7 +713,7 @@ article.home-language:nth-child(1) {
 }
 
 .home-language-icon {
-  font-size: 25px;
+  font-size: 18px;
   width: 100%;
   font-weight: 700;
   padding: 0;
@@ -1813,7 +1813,7 @@ article.home-language:nth-child(7n + 7) .language-cta {
   }
 
   .home-language-icon {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .language-heading {
