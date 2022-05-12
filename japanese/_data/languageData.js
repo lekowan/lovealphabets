@@ -12,7 +12,7 @@ const languageContent = [
       "chartData": japaneseKatakanaChartData,
       "title": "Katakana",
       "sub": "Memorize all Katakana",
-      "icon": "ペ",
+      "icon": "カタカナ",
       "url": "katakana",
       "localStorageKey": "japanese" + "Katakana" + "Srs",
       //"chartType": shirokumaEpisode6StoryChartType
@@ -24,7 +24,7 @@ const languageContent = [
       "chartData": '',
       "title": "Shirokuma SRS",
       "sub": "Memorize all words from Shirokuma Cafe",
-      "icon": "ペ",
+      "icon": "シロクマ",
       "url": "shirokuma-srs",
       "localStorageKey": "japanese",
       "chartType": ''
@@ -85,7 +85,7 @@ const languageContent = [
       //"chartData": shirokumaEpisode3StoryChartData,
       "title": "Shirokuma Episode 3",
       "sub": "Memorize all words from Shirokuma Episode 3",
-      "icon": "ペ",
+      "icon": "3話目",
       "url": "shirokuma-episode-3-story",
       "localStorageKey": "japanese" + "Episode3" + "Story",
       //"chartType": shirokumaEpisode3StoryChartType
@@ -97,7 +97,7 @@ const languageContent = [
       //"chartData": shirokumaEpisode4StoryChartData,
       "title": "Shirokuma Episode 4",
       "sub": "Memorize all words from Shirokuma Episode 4",
-      "icon": "ペ",
+      "icon": "4話目",
       "url": "shirokuma-episode-4-story",
       "localStorageKey": "japanese" + "Episode4" + "Story",
       //"chartType": shirokumaEpisode4StoryChartType
@@ -109,7 +109,7 @@ const languageContent = [
       //"chartData": shirokumaEpisode5StoryChartData,
       "title": "Shirokuma Episode 5",
       "sub": "Memorize all words from Shirokuma Episode 5",
-      "icon": "ペ",
+      "icon": "5話目",
       "url": "shirokuma-episode-5-story",
       "localStorageKey": "japanese" + "Episode5" + "Story",
       //"chartType": shirokumaEpisode5StoryChartType
@@ -121,7 +121,7 @@ const languageContent = [
       //"chartData": shirokumaEpisode5StoryChartData,
       "title": "Shirokuma Episode 6",
       "sub": "Memorize all words from Shirokuma Episode 6",
-      "icon": "ペ",
+      "icon": "6話目",
       "url": "shirokuma-episode-6-story",
       "localStorageKey": "japanese" + "Episode6" + "Story",
       //"chartType": shirokumaEpisode6StoryChartType
@@ -133,7 +133,7 @@ const languageContent = [
       //"chartData": shirokumaEpisode5StoryChartData,
       "title": "Shirokuma Episode 7",
       "sub": "Memorize all words from Shirokuma Episode 7",
-      "icon": "ペ",
+      "icon": "7話目",
       "url": "shirokuma-episode-7-story",
       "localStorageKey": "japanese" + "Episode7" + "Story",
       //"chartType": shirokumaEpisode6StoryChartType
@@ -145,7 +145,7 @@ const languageContent = [
       //"chartData": shirokumaEpisode5StoryChartData,
       "title": "Shirokuma Episode 8",
       "sub": "Memorize all words from Shirokuma Episode 8",
-      "icon": "ペ",
+      "icon": "8話目",
       "url": "shirokuma-episode-8-story",
       "localStorageKey": "japanese" + "Episode8" + "Story",
       //"chartType": shirokumaEpisode6StoryChartType
@@ -157,7 +157,7 @@ const languageContent = [
       //"chartData": shirokumaEpisode5StoryChartData,
       "title": "Shirokuma Episode 9",
       "sub": "Memorize all words from Shirokuma Episode 9",
-      "icon": "ペ",
+      "icon": "9話目",
       "url": "shirokuma-episode-9-story",
       "localStorageKey": "japanese" + "Episode9" + "Story",
       //"chartType": shirokumaEpisode6StoryChartType
@@ -169,11 +169,24 @@ const languageContent = [
       //"chartData": shirokumaEpisode5StoryChartData,
       "title": "Shirokuma Episode 10",
       "sub": "Memorize all words from Shirokuma Episode 10",
-      "icon": "ペ",
+      "icon": "10話目",
       "url": "shirokuma-episode-10-story",
       "localStorageKey": "japanese" + "Episode10" + "Story",
       //"chartType": shirokumaEpisode6StoryChartType
 },
+
+{
+      "chartTitle": "Shirokuma / Episode 11 / Story",
+      //"chartName": "shirokuma-episode-5-story-map",
+      //"chartData": shirokumaEpisode5StoryChartData,
+      "title": "Shirokuma Episode 11",
+      "sub": "Memorize all words from Shirokuma Episode 11",
+      "icon": "11話目",
+      "url": "shirokuma-episode-11-story",
+      "localStorageKey": "japanese" + "Episode11" + "Story",
+      //"chartType": shirokumaEpisode6StoryChartType
+},
+
 /*
 {
       "chartTitle": "Shirokuma / Episode 1 / Part 1",
