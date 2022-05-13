@@ -187,6 +187,18 @@ const languageContent = [
       //"chartType": shirokumaEpisode6StoryChartType
 },
 
+{
+      "chartTitle": "Shirokuma / Episode 12 / Story",
+      //"chartName": "shirokuma-episode-5-story-map",
+      //"chartData": shirokumaEpisode5StoryChartData,
+      "title": "Shirokuma Episode 12",
+      "sub": "Memorize all words from Shirokuma Episode 12",
+      "icon": "12話目",
+      "url": "shirokuma-episode-12-story",
+      "localStorageKey": "japanese" + "Episode12" + "Story",
+      //"chartType": shirokumaEpisode6StoryChartType
+},
+
 /*
 {
       "chartTitle": "Shirokuma / Episode 1 / Part 1",
