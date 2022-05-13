@@ -15,7 +15,7 @@ class Model {
 
         // Get data from  localStorage
         //let _number = JSON.parse(localStorage.getItem(localStorageKey + "Number"));
-        let _number = 5;
+        let _number = 8;
         let _data = JSON.parse(localStorage.getItem(localStorageKey + "Data"));
         let _progress = JSON.parse(localStorage.getItem(localStorageKey + "Progress"));
 
