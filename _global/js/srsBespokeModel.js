@@ -45,7 +45,7 @@ class Model {
 
             console.log(allSyllableMap);
 
-            alert(Object.keys(allSyllableMap).length);
+            alert('total number of items: ' + Object.keys(allSyllableMap).length);
 
             Object.keys(allSyllableMap).forEach(item => {
                 if (typeof _data[item] == 'undefined') {
@@ -81,6 +81,8 @@ class Model {
                 }
             }
         }
+
+        alert('total number of new items: ' + this.newItemsArray.length);
 
         //this.number = _number ? _number : this.newItemsArray.length;
         this.number = _number;
