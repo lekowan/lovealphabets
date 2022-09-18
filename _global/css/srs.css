@@ -699,6 +699,7 @@ p.target-language, p.english, p.pinyin-title {
     margin: 0;
     font-size: 12px;
     text-transform: uppercase;
+    color: #7e7989;
 }
 
 p.pinyin-title {

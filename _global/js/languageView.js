@@ -37,7 +37,7 @@ class View {
     this.languageMenuList = this.createElement("ul", "menu-list");
 
     //const languageList = ["amharic", "arabic", "armenian", "bengali", "cherokee", "georgian", "greek", "hindi", "inuktitut", "japanese", "korean", "mandarin", "norwegian", "russian", "tibetan"];
-    const languageList = ["korean", "mandarin", "norwegian", "japanese","russian" ];
+    const languageList = ["cree", "korean", "mandarin", "norwegian", "japanese","russian" ];
 
 
     languageList.forEach((item) => {

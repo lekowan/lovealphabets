@@ -96,14 +96,14 @@ class View {
     });
 
     // If language is Mandarin
-      if(language == "zh-CN" || language == "ja-JP" ){
+      if(language == "zh-CN" || language == "ja-JP" || language == "cr-PL" ){
         // Create pinyin button
         this.pinyinButton = this.createElement("div", "pinyin-button");
         
         if(language == "zh-CN") this.pinyinButton.textContent = "pinyin";
-        else this.pinyinButton.textContent = "kana";
+        else if(language == "ja-JP") this.pinyinButton.textContent = "kana";
+        else if(language == "cr-PL") this.pinyinButton.textContent = "SRO";
 
-        console.log(language);
         this.showPinyin = true;
 
         this.pinyinButton.addEventListener("click", (event) => {
@@ -530,7 +530,8 @@ class View {
 
         this.pinyinTitle = this.createElement("p", "pinyin-title");
         if(language == "zh-CN") this.pinyinTitle.textContent = "pinyin"; 
-        else this.pinyinTitle.textContent = "hiragana";
+        else if(language == "ja-JP" ) this.pinyinTitle.textContent = "hiragana";
+        else if(language == "cr-PL" ) this.pinyinTitle.textContent = "Standard Roman Orthography";
 
         if(this.showPinyin){
           this.pinyinTitle.style.display = "inline";
