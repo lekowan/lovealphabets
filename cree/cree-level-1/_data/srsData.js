@@ -24,1254 +24,1599 @@ const welcomeIntro = "In this spaced-repetition practice (SRS), you will study n
 
 const allSyllableMap = {
     "1": {
-        "character": "ᓀᐦᐃᔭᐍᐏᐣ",
-        "letter": "Cree language",
-        "pinyin": "nēhiyawēwin (P)"
+        "character": "ᑖᓂᓯ",
+        "letter": "hello, how are you.",
+        "pinyin": "tânisi"
     },
     "2": {
-        "character": "ᐋᐦᐊ",
-        "letter": "yes",
-        "pinyin": "āha (P)"
+        "character": "ᓇᒨᔭ",
+        "letter": "no",
+        "pinyin": "namôya"
     },
     "3": {
-        "character": "ᓂᔭ",
-        "letter": "me/I",
-        "pinyin": "niya (Pr)"
+        "character": "ᓇᒨᔭ ᓈᓂᑕᐤ",
+        "letter": "fine",
+        "pinyin": "namôya nânitaw"
     },
     "4": {
-        "character": "ᓀᐦᐃᔭᐍ",
-        "letter": "speak Cree",
-        "pinyin": "nēhiyawē (VAI)"
+        "character": "ᓈᓂᑕᐤ",
+        "letter": "about",
+        "pinyin": "nânitaw"
     },
     "5": {
-        "character": "ᓀᐦᐃᔭᐤ",
-        "letter": "Cree person",
-        "pinyin": "nēhiyaw (NA)"
+        "character": "ᑭᔭ",
+        "letter": "you",
+        "pinyin": "kiya"
     },
     "6": {
-        "character": "ᓃᑭ",
-        "letter": "my home",
-        "pinyin": "nīki (NI)"
+        "character": "ᒫᑲ",
+        "letter": "but",
+        "pinyin": "mâka"
     },
     "7": {
-        "character": "ᓂᔮᐠ",
-        "letter": "go",
-        "pinyin": "niyāk (P-pl)"
+        "character": "ᑭᔭ ᒫᑲ᙮",
+        "letter": "How about you?",
+        "pinyin": "kiya mâka."
     },
     "8": {
-        "character": "ᐁᐦᐊ",
-        "letter": "yes",
-        "pinyin": "ēha (P)"
+        "character": "ᐯᔭᑿᐣ",
+        "letter": "the same",
+        "pinyin": "pêyakwan"
     },
     "9": {
-        "character": "ᓂᔮ",
-        "letter": "go",
-        "pinyin": "niyā (P-sg)"
+        "character": "ᓂᑎᓯᔨᐦᑳᓱᐣ",
+        "letter": "my name is",
+        "pinyin": "nitisiyihkâson"
     },
     "10": {
-        "character": "ᐃᓯᔨᐦᑳᓱ",
-        "letter": "be named/called",
-        "pinyin": "isiyihkāso (VAI)"
+        "character": "ᑭᑎᓯᔨᐦᑳᓱᐣ",
+        "letter": "your name is",
+        "pinyin": "kitisiyihkâson"
     },
     "11": {
-        "character": "ᓅᐦᑌ",
-        "letter": "to want",
-        "pinyin": "nōhtē- (Pv)"
+        "character": "ᐅᐦᒋ",
+        "letter": "from",
+        "pinyin": "ohci"
     },
     "12": {
-        "character": "ᐑᐦᐅᐏᐣ",
-        "letter": "name",
-        "pinyin": "wīhowin (NI)"
+        "character": "ᓂᔭ",
+        "letter": "I/me",
+        "pinyin": "niya"
     },
     "13": {
-        "character": "ᐏᔭ",
-        "letter": "him/her",
-        "pinyin": "wiya (Pr)"
+        "character": "ᑖᓂᑌ",
+        "letter": "where",
+        "pinyin": "tânitê"
     },
     "14": {
-        "character": "ᐁᑿ",
-        "letter": "and/now",
-        "pinyin": "ēkwa (P)"
+        "character": "ᒣᒁᐨ",
+        "letter": "now",
+        "pinyin": "mêkwâc"
     },
     "15": {
-        "character": "ᐊᔮ",
-        "letter": "be",
-        "pinyin": "ayā (VAI)"
+        "character": "ᓂᐑᑭᐣ",
+        "letter": "I live/reside",
+        "pinyin": "niwîkin"
     },
     "16": {
-        "character": "ᐯ",
-        "letter": "come [action coming towards speaker]",
-        "pinyin": "pē- (Pv)"
+        "character": "ᐁᑯᑕ",
+        "letter": "there",
+        "pinyin": "êkota"
     },
     "17": {
-        "character": "ᐯᒋ",
-        "letter": "come [action coming towards speaker]",
-        "pinyin": "pēci- (Pv)"
+        "character": "ᑭᐑᑭᐣ",
+        "letter": "you live",
+        "pinyin": "kiwîkin"
     },
     "18": {
-        "character": "ᒦᑭᐚᒼ",
-        "letter": "home",
-        "pinyin": "mīkiwām (NI)"
+        "character": "ᒦᓇ",
+        "letter": "also/too",
+        "pinyin": "mîna"
     },
     "19": {
-        "character": "ᐊᔮ",
-        "letter": "have it",
-        "pinyin": "ayā (VTI-2)"
+        "character": "ᓃᐢᑕ",
+        "letter": "me too",
+        "pinyin": "nîsta"
     },
     "20": {
-        "character": "ᐊᔨᓯᔨᓂᐤ",
-        "letter": "person",
-        "pinyin": "ayisiyiniw (NA)"
+        "character": "ᑮᐢᑕ",
+        "letter": "you too",
+        "pinyin": "kîsta"
     },
     "21": {
-        "character": "ᐊᔭᒥ",
-        "letter": "talk",
-        "pinyin": "ayami (VAI)"
+        "character": "ᐅᑭᐢᑭᓌᐦᐊᒫᑫᐤ",
+        "letter": "a teacher",
+        "pinyin": "okiskinwahamâkêw"
     },
     "22": {
-        "character": "ᐸᒥᓇᐘᓱ",
-        "letter": "cook/prepare a meal",
-        "pinyin": "paminawaso (VAI)"
+        "character": "ᐅᑭᐢᑭᓌᐦᐊᒫᑲᐣ",
+        "letter": "a student",
+        "pinyin": "okiskinwahamâkan"
     },
     "23": {
-        "character": "ᓂᐹ",
-        "letter": "sleep",
-        "pinyin": "nipā (VAI)"
+        "character": "ᑲᔭᐦᑌ",
+        "letter": "originally",
+        "pinyin": "kayahtê"
     },
     "24": {
-        "character": "ᓂᑳᐏᐩ",
-        "letter": "my mother",
-        "pinyin": "nikāwiy (NA)"
+        "character": "ᐅᒧᓲᒥᒫᐤ",
+        "letter": "a grandfather",
+        "pinyin": "omosômimâw"
     },
     "25": {
-        "character": "ᓂᒫᒫ",
-        "letter": "my mother",
-        "pinyin": "nimāmā (NA)"
+        "character": "ᐅᐦᑯᒥᒫᐤ",
+        "letter": "a grandmother",
+        "pinyin": "ohkomimâw"
     },
     "26": {
-        "character": "ᑰᐦᑖᐏᐩ",
-        "letter": "your father",
-        "pinyin": "kōhtāwiy (NA)"
+        "character": "ᐅᑳᐑᒫᐤ",
+        "letter": "a mother",
+        "pinyin": "okâwîmâw"
     },
     "27": {
-        "character": "ᓅᐦᑖᐏᐩ",
-        "letter": "my father",
-        "pinyin": "nōhtāwiy (NA)"
+        "character": "ᐅᐦᑖᐑᒫᐤ",
+        "letter": "a father",
+        "pinyin": "ohtâwîmâw"
     },
     "28": {
-        "character": "ᑭᒐᐚᓯᒥᐢ",
-        "letter": "child, your",
-        "pinyin": "kicawāsimis (NA)"
+        "character": "ᐅᑯᓯᓯᒫᐤ",
+        "letter": "a son",
+        "pinyin": "okosisimâw"
     },
     "29": {
-        "character": "ᑭᒐᐚᓯᒥᓴᐠ",
-        "letter": "children, your",
-        "pinyin": "kicawāsimisak (NA)"
+        "character": "ᐅᑖᓂᓯᒫᐤ",
+        "letter": "a daughter",
+        "pinyin": "otânisimâw"
     },
     "30": {
-        "character": "ᒦᒋ",
-        "letter": "eat",
-        "pinyin": "mīci (VTI-3)"
+        "character": "ᐅᒥᓯᒫᐤ",
+        "letter": "an older sister",
+        "pinyin": "omisimâw"
     },
     "31": {
-        "character": "ᒦᒋᐏᐣ",
-        "letter": "food",
-        "pinyin": "mīciwin (NI)"
+        "character": "ᐅᐢᑌᓯᒫᐤ",
+        "letter": "an older brother",
+        "pinyin": "ostêsimâw"
     },
     "32": {
-        "character": "ᒦᒋᓱ",
-        "letter": "eat",
-        "pinyin": "mīciso (VAI)"
+        "character": "ᐅᓰᒥᒫᐤ",
+        "letter": "a younger sibling",
+        "pinyin": "osîmimâw"
     },
     "33": {
-        "character": "ᒦᒋᓱᐏᓈᐦᑎᐠ",
-        "letter": "table",
-        "pinyin": "mīcisowināhtik (NI)"
+        "character": "ᐊᐚᓯᐢ",
+        "letter": "a child",
+        "pinyin": "awâsis"
     },
     "34": {
-        "character": "ᓂᒥᐢ",
-        "letter": "my older sister",
-        "pinyin": "nimis (NA)"
+        "character": "ᒥᑖᐢ",
+        "letter": "a pair of pants",
+        "pinyin": "mitâs"
     },
     "35": {
-        "character": "ᓂᒧᓲᒼ",
-        "letter": "my grandfather(s)",
-        "pinyin": "nimosōm(ak) (NA)"
+        "character": "ᐚᐱᑿᓂᐩ",
+        "letter": "a flower",
+        "pinyin": "wâpikwaniy"
     },
     "36": {
-        "character": "ᓂᓈᐯᒼ/ᓂᐑᑭᒫᑲᐣ",
-        "letter": "my man/my husband",
-        "pinyin": "nināpēm/niwīkimākan (NA)"
+        "character": "ᐊᓯᑲᐣ",
+        "letter": "a sock",
+        "pinyin": "asikan"
     },
     "37": {
-        "character": "ᓂᑯᓯᐢ",
-        "letter": "my son",
-        "pinyin": "nikosis (NA)"
+        "character": "ᒪᐢᑯᓯᐩ",
+        "letter": "a piece of grass",
+        "pinyin": "maskosiy"
     },
     "38": {
-        "character": "ᑭᑖᓂᐢ",
-        "letter": "your daughter",
-        "pinyin": "kitānis (NA)"
+        "character": "ᐊᐢᑎᐢ",
+        "letter": "a mitt/glove",
+        "pinyin": "astis"
     },
     "39": {
-        "character": "ᓂᑑᑌᒼ",
-        "letter": "my friend(s)",
-        "pinyin": "nitōtēm(ak) (NA)"
+        "character": "ᓃᐱᐩ",
+        "letter": "a leaf",
+        "pinyin": "nîpiy"
     },
     "40": {
-        "character": "ᐁᑳ",
-        "letter": "don’t",
-        "pinyin": "ēkā (P)"
+        "character": "ᑖᐱᐢᑳᑲᐣ",
+        "letter": "a scarf/tie",
+        "pinyin": "tâpiskâkan"
     },
     "41": {
-        "character": "ᐁᑳᐏᔭ",
-        "letter": "don’t",
-        "pinyin": "ēkāwiya (P)"
+        "character": "ᒪᐢᑭᐦᑭᐩ",
+        "letter": "medicine",
+        "pinyin": "maskihkiy"
     },
     "42": {
-        "character": "ᑳᑮᓯᑳᐠ",
-        "letter": "today",
-        "pinyin": "kā-kīsikāk (vP)"
+        "character": "ᒪᐢᑲᓯᐩ",
+        "letter": "a finger/toe-nail",
+        "pinyin": "maskasiy"
     },
     "43": {
-        "character": "ᓂᑳ",
-        "letter": "Mom [vocative only]",
-        "pinyin": "nikā (NA)"
+        "character": "ᒣᐢᑕᑲᐩ",
+        "letter": "a hair",
+        "pinyin": "mêstakay"
     },
     "44": {
-        "character": "ᓂᐚᐦᑰᒫᑲᐣ",
-        "letter": "my relative",
-        "pinyin": "niwāhkōmākan (NA)"
+        "character": "ᐅᐢᑇᑲᐣ",
+        "letter": "a pipe",
+        "pinyin": "ospwâkan"
     },
     "45": {
-        "character": "ᓂᐑᐦᐅᐏᐣ",
-        "letter": "my name",
-        "pinyin": "niwīhowin (NI)"
+        "character": "ᒦᐱᐟ",
+        "letter": "a tooth",
+        "pinyin": "mîpit"
     },
     "46": {
-        "character": "ᓂᒐᐚᓯᒥᐢ",
-        "letter": "my child(ren)",
-        "pinyin": "nicawāsimis(ak) (NA)"
+        "character": "ᐊᓯᓂᐩ",
+        "letter": "a rock/stone",
+        "pinyin": "asiniy"
     },
     "47": {
-        "character": "ᒥᔪ",
-        "letter": "good/nice/well",
-        "pinyin": "miyo- (Pv/Pn)"
+        "character": "ᒥᐢᑮᓯᐠ",
+        "letter": "an eye",
+        "pinyin": "miskîsik"
     },
     "48": {
-        "character": "ᒥᔪᒪᐦᒋᐦ",
-        "letter": "feel well",
-        "pinyin": "miyomahciho (VAI)"
+        "character": "ᐁᒥᐦᒁᐣ",
+        "letter": "a spoon",
+        "pinyin": "êmihkwân"
     },
     "49": {
-        "character": "ᐊᐢᑭᐩ",
-        "letter": "earth/land",
-        "pinyin": "askiy (NI)"
+        "character": "ᒥᓯᐟ",
+        "letter": "a foot",
+        "pinyin": "misit"
     },
     "50": {
-        "character": "ᓀᐦᐃᔭᐤᒪᐏᒧᐢᒋᑫᐏᐣ",
-        "letter": "Cree ceremony",
-        "pinyin": "nēhiyaw-mawimoscikēwin (NI)"
+        "character": "ᐊᐢᑭᕽ",
+        "letter": "a pail",
+        "pinyin": "askihk"
     },
     "51": {
-        "character": "ᐃᐢᑵᐤ",
-        "letter": "woman",
-        "pinyin": "iskwēw (NA)"
+        "character": "ᒥᐢᑳᐟ",
+        "letter": "a leg",
+        "pinyin": "miskât"
     },
     "52": {
-        "character": "ᓈᐯᐤ",
-        "letter": "man",
-        "pinyin": "nāpēw (NA)"
+        "character": "ᐊᐳᐩ",
+        "letter": "a paddle",
+        "pinyin": "apoy"
     },
     "53": {
-        "character": "ᐃᐢᐸᔨᑭ",
-        "letter": "to be",
-        "pinyin": "ispayiki (vP)"
+        "character": "ᒥᐢᑎᒁᐣ",
+        "letter": "a head",
+        "pinyin": "mistikwân"
     },
     "54": {
-        "character": "ᐅᐢᑭᓃᑭᐢᑵᐤ",
-        "letter": "young woman [adolescent]",
-        "pinyin": "oskinīkiskwēw (NA)"
+        "character": "ᐋᐦᒑᐱᐩ",
+        "letter": "a bow",
+        "pinyin": "âhcâpiy"
     },
     "55": {
-        "character": "ᐅᐢᑭᓃᑭᐤ",
-        "letter": "young man [adolescent]",
-        "pinyin": "oskinīkiw (NA)"
+        "character": "ᒥᑑᐣ",
+        "letter": "a mouth",
+        "pinyin": "mitôn"
     },
     "56": {
-        "character": "ᐚᐸᐦᑭ",
-        "letter": "tomorrow",
-        "pinyin": "wāpahki (vP)"
+        "character": "ᐊᑲᐢᐠ",
+        "letter": "an arrow",
+        "pinyin": "akask"
     },
     "57": {
-        "character": "ᑖᓀᐦᑭ",
-        "letter": "why?",
-        "pinyin": "tānēhki (Pr)"
+        "character": "ᒥᐦᑕᐘᑲᐩ",
+        "letter": "an ear",
+        "pinyin": "mihtawakay"
     },
     "58": {
-        "character": "ᐚᐢᑲᐦᐃᑲᐣ",
-        "letter": "house",
-        "pinyin": "wāskahikan (NI)"
+        "character": "ᓭᐦᑫᐸᔩᐢ",
+        "letter": "a car",
+        "pinyin": "sêhkêpayîs"
     },
     "59": {
-        "character": "ᑖᓂᓯ",
-        "letter": "how/how are you?",
-        "pinyin": "tānisi (Pr)"
+        "character": "ᒥᒋᐦᒋᐩ",
+        "letter": "a hand",
+        "pinyin": "micihciy"
     },
     "60": {
-        "character": "ᑖᓂᐢᐲᕽ",
-        "letter": "when?",
-        "pinyin": "tānispīhk (Pr)"
+        "character": "ᓲᒥᓂᐢ",
+        "letter": "a raisin",
+        "pinyin": "sôminis"
     },
     "61": {
-        "character": "ᑮᓯᑳᐏᐲᓯᒼ",
-        "letter": "sun",
-        "pinyin": "kīsikāwi-pīsim (NA)"
+        "character": "ᒥᑌᐦᐃᒥᐣ",
+        "letter": "a strawberry",
+        "pinyin": "mitêhimin"
     },
     "62": {
-        "character": "ᑭᓯᓈᐤ",
-        "letter": "it is cold",
-        "pinyin": "kisināw (VII-1)"
+        "character": "ᐊᔫᐢᑲᐣ",
+        "letter": "a raspberry",
+        "pinyin": "ayôskan"
     },
     "63": {
-        "character": "ᒥᒋᐦᒋᐩ",
-        "letter": "hand",
-        "pinyin": "micihciy (NI)"
+        "character": "ᐃᔨᓂᒥᐣ",
+        "letter": "a blueberry",
+        "pinyin": "iyinimin"
     },
     "64": {
-        "character": "ᒥᓴᑎᒼ/ᒥᐢᑕᑎᒼ",
-        "letter": "horse",
-        "pinyin": "misatim/mistatim (NA)"
+        "character": "ᐅᐢᑳᑖᐢᐠ",
+        "letter": "a carrot",
+        "pinyin": "oskâtâsk"
     },
     "65": {
-        "character": "ᒥᔭᐤ",
-        "letter": "body",
-        "pinyin": "miyaw (NI)"
+        "character": "ᑕᑿᐦᐃᒥᐣ",
+        "letter": "a chokecherry",
+        "pinyin": "takwahimin"
     },
     "66": {
-        "character": "ᐊᔨᐚᐠ",
-        "letter": "more",
-        "pinyin": "ayiwāk (P)"
+        "character": "ᐏᐦᑭᐦᑲᓯᑲᐣ",
+        "letter": "a cake",
+        "pinyin": "wihkihkasikan"
     },
     "67": {
-        "character": "ᑫᐦᑌᐊᔭᐠ",
-        "letter": "Elders",
-        "pinyin": "kēhtē-ayak (NA)"
+        "character": "ᐏᐦᑿᐢᑿ",
+        "letter": "sweetgrass (pl)",
+        "pinyin": "wihkwaskwa"
     },
     "68": {
-        "character": "ᓈᐯᓯᐢ",
-        "letter": "boy",
-        "pinyin": "nāpēsis (NA)"
+        "character": "ᐊᐘ",
+        "letter": "this (AN)",
+        "pinyin": "awa"
     },
     "69": {
-        "character": "ᓃᐢᑕ",
-        "letter": "me too/also",
-        "pinyin": "nīsta (Pr)"
+        "character": "ᐆᒪ",
+        "letter": "this (IN)",
+        "pinyin": "ôma"
     },
     "70": {
-        "character": "ᐊᓯᒋ",
-        "letter": "with",
-        "pinyin": "asici (P)"
+        "character": "ᐊᓇ",
+        "letter": "that (AN)",
+        "pinyin": "ana"
     },
     "71": {
-        "character": "ᐃᑘ",
-        "letter": "say it",
-        "pinyin": "itwē (VTI-3)"
+        "character": "ᐊᓂᒪ",
+        "letter": "that (IN)",
+        "pinyin": "anima"
     },
     "72": {
-        "character": "ᐃᔨᓂᐤ",
-        "letter": "First Nations person/Indian person",
-        "pinyin": "iyiniw (NA)"
+        "character": "ᓈᐦᐊ",
+        "letter": "that (over there) (AN)",
+        "pinyin": "nâha"
     },
     "73": {
-        "character": "ᑖᓂᑌ",
-        "letter": "where?",
-        "pinyin": "tānitē (Pr)"
+        "character": "ᓀᒪ",
+        "letter": "that (over there) (IN)",
+        "pinyin": "nêma"
     },
     "74": {
-        "character": "ᐃᑑᑕ",
-        "letter": "do it",
-        "pinyin": "itōta (VTI-1)"
+        "character": "ᐆᑭ",
+        "letter": "these (AN)",
+        "pinyin": "ôki"
     },
     "75": {
-        "character": "ᑖᓂᐚ",
-        "letter": "where is he/she?",
-        "pinyin": "tāniwā (Pr-A/sg)"
+        "character": "ᐆᐦᐃ",
+        "letter": "these (IN)",
+        "pinyin": "Ôhi"
     },
     "76": {
-        "character": "ᐃᑕᒪᐦᒋᐦ",
-        "letter": "feel [as in health]",
-        "pinyin": "itamahciho (VAI)"
+        "character": "ᐊᓂᑭ",
+        "letter": "those (AN)",
+        "pinyin": "aniki"
     },
     "77": {
-        "character": "ᑖᓂᔨᑯᕽ/ᑖᓂᒪᔨᑯᕽ",
-        "letter": "how much? [quantity]",
-        "pinyin": "tāniyikohk/tānimayikohk (Pr)"
+        "character": "ᐊᓂᐦᐃ",
+        "letter": "those (IN)",
+        "pinyin": "anihi"
     },
     "78": {
-        "character": "ᑎᐱᐢᑳᑭ",
-        "letter": "tonight",
-        "pinyin": "tipiskāki (vP)"
+        "character": "ᓀᑭ",
+        "letter": "those (over there) (AN)",
+        "pinyin": "nêki"
     },
     "79": {
-        "character": "ᑎᐱᐢᑳᐏᐲᓯᒼ",
-        "letter": "moon",
-        "pinyin": "tipiskāwi-pīsim (NA)"
+        "character": "ᓀᐦᐃ",
+        "letter": "those (over there) (IN)",
+        "pinyin": "nêhi"
     },
     "80": {
-        "character": "ᐚᐸᐦᑕ",
-        "letter": "see it",
-        "pinyin": "wāpahta (VTI-1)"
+        "character": "ᑖᓂᐚ",
+        "letter": "where (AN)",
+        "pinyin": "tâniwâ"
     },
     "81": {
-        "character": "ᐅᑳᐏᔭ",
-        "letter": "his/her mother",
-        "pinyin": "okāwiya (NA)"
+        "character": "ᑖᓂᐍ",
+        "letter": "where (IN)",
+        "pinyin": "tâniwê"
     },
     "82": {
-        "character": "ᓅᑐᑵᐤ",
-        "letter": "an old lady",
-        "pinyin": "nōtokwēw (NA)"
+        "character": "ᑖᓂᐍᐦᑳᐠ",
+        "letter": "where (for plural nouns) (AN)",
+        "pinyin": "tâniwêhkâk"
     },
     "83": {
-        "character": "ᐊᒑᐦᑯᐢ",
-        "letter": "star",
-        "pinyin": "acāhkos (NA)"
+        "character": "ᑖᓂᐍᐦᐋ",
+        "letter": "where (for plural nouns) (IN)",
+        "pinyin": "tâniwêhâ"
     },
     "84": {
-        "character": "ᐋᐦᑯᓯ",
-        "letter": "be sick",
-        "pinyin": "āhkosi (VAI)"
+        "character": "ᑖᓇ",
+        "letter": "which (AN)",
+        "pinyin": "tâna"
     },
     "85": {
-        "character": "ᒣᐢᑲᓇᐤ",
-        "letter": "road",
-        "pinyin": "mēskanaw (NI)"
+        "character": "ᑖᓂᒪ",
+        "letter": "which (IN)",
+        "pinyin": "tânima"
     },
     "86": {
-        "character": "ᒣᑕᐍ",
-        "letter": "play",
-        "pinyin": "mētawē (VAI)"
+        "character": "ᑖᓂᑭ",
+        "letter": "which (for plural nouns) (AN)",
+        "pinyin": "tâniki"
     },
     "87": {
-        "character": "ᒌᐦᑫᔨᐦᑕ",
-        "letter": "like it",
-        "pinyin": "cīhkēyihta (VTI-1)"
+        "character": "ᑖᓂᐦᐃ",
+        "letter": "which (for plural nouns) (IN)",
+        "pinyin": "tânihi"
     },
     "88": {
-        "character": "ᒌᐦᑫᔨᒼ",
-        "letter": "like him/her",
-        "pinyin": "cīhkēyim (VTA-1)"
+        "character": "ᑮᒁᐩ",
+        "letter": "what (IN)",
+        "pinyin": "kîkwây"
     },
     "89": {
-        "character": "ᓃᑳᓂᕽ",
-        "letter": "in the future",
-        "pinyin": "nīkānihk (P)"
+        "character": "ᑮᒁᔭ",
+        "letter": "what (plural) (IN)",
+        "pinyin": "kîkwâya"
     },
     "90": {
-        "character": "ᓂᑕᐍᔨᐦᑕ",
-        "letter": "want it",
-        "pinyin": "nitawēyihta (VTI-1)"
+        "character": "ᐊᐑᓇ",
+        "letter": "who (AN)",
+        "pinyin": "awîna"
     },
     "91": {
-        "character": "ᓂᑕᐍᔨᒼ",
-        "letter": "want it/him/her",
-        "pinyin": "nitawēyim (VTA-1)"
+        "character": "ᐊᐑᓂᑭ",
+        "letter": "who (plural) (AN)",
+        "pinyin": "awîniki"
     },
     "92": {
-        "character": "ᐊᐱᓰᓯᓯ",
-        "letter": "little, (be)",
-        "pinyin": "apisīsisi (VAI)"
+        "character": "ᑫᑯ",
+        "letter": "which/what kind",
+        "pinyin": "kêko"
     },
     "93": {
-        "character": "ᐋᐦᑯᓯᐏᑲᒥᐠ",
-        "letter": "hospital",
-        "pinyin": "āhkosiwikamik (NI)"
+        "character": "ᓂᐹ",
+        "letter": "sleep",
+        "pinyin": "nipâ"
     },
     "94": {
-        "character": "ᐋᐱᐦᑕᐤ",
-        "letter": "half",
-        "pinyin": "āpihtaw (P)"
+        "character": "ᐘᓂᐢᑳ",
+        "letter": "wake/get up",
+        "pinyin": "waniskâ"
     },
     "95": {
-        "character": "ᐋᐦᑯᓯᐏᐣ",
-        "letter": "sickness",
-        "pinyin": "āhkosiwin (NI)"
+        "character": "ᑳᑮᓯᒧ",
+        "letter": "pray (traditionally)",
+        "pinyin": "kâkîsimo"
     },
     "96": {
-        "character": "ᐊᓄᐦᐨ ᑳᑮᓯᑳᐠ",
-        "letter": "today",
-        "pinyin": "anohc kā-kīsikāk (vP)"
+        "character": "ᑭᐢᑖᐱᑌᐦ",
+        "letter": "brush teeth",
+        "pinyin": "kistâpitêho"
     },
     "97": {
-        "character": "ᐊᓄᐦᐨ",
-        "letter": "today, now",
-        "pinyin": "anohc (P)"
+        "character": "ᑳᓯᐦᑵ",
+        "letter": "wash face",
+        "pinyin": "kâsihkwê"
     },
     "98": {
-        "character": "ᓅᐦᑯᒼ",
-        "letter": "my grandmother(s)",
-        "pinyin": "nōhkom(ak) (NA)"
+        "character": "ᓰᑲᐦ",
+        "letter": "comb hair",
+        "pinyin": "sîkaho"
     },
     "99": {
-        "character": "ᓅᐦᑌᐦᑲᑌ",
-        "letter": "hungry, (be)",
-        "pinyin": "nōhtēhkatē (VAI)"
+        "character": "ᐳᐢᑕᔭᐏᓂᓭ",
+        "letter": "dress",
+        "pinyin": "postayawinisê"
     },
     "100": {
-        "character": "ᒪᒌ",
-        "letter": "was it not, wasn’t it",
-        "pinyin": "macī (P)"
-    },
-    "101": {
-        "character": "ᒫᒥᑐᓀᔨᐦᑕ",
-        "letter": "think about it",
-        "pinyin": "māmitonēyihta (VTI-1)"
-    },
-    "102": {
-        "character": "ᒋᐸᐦᐃᑲᓂᐢ",
-        "letter": "minute",
-        "pinyin": "cipahikanis (NI)"
-    },
-    "103": {
-        "character": "ᐅᑭᒫᐦᑳᐣ",
-        "letter": "chief",
-        "pinyin": "okimāhkān (NA)"
-    },
-    "104": {
-        "character": "ᐅᐢᑳᔨᐏ",
-        "letter": "young, (be)",
-        "pinyin": "oskāyiwi (VAI)"
-    },
-    "105": {
-        "character": "ᓅᐦᑌᐦᑿᓯ",
-        "letter": "sleepy, (be)",
-        "pinyin": "nōhtēhkwasi (VAI)"
-    },
-    "106": {
-        "character": "ᐋᑲᔮᓰᒧᐏᐣ",
-        "letter": "English",
-        "pinyin": "ākayāsīmowin (NI)"
-    },
-    "107": {
-        "character": "ᐅᓵᒼ",
-        "letter": "because",
-        "pinyin": "osām (Cj)"
-    },
-    "108": {
-        "character": "ᐋᑲᔮᓰᒧ",
-        "letter": "speak English",
-        "pinyin": "ākayāsīmo (VAI)"
-    },
-    "109": {
-        "character": "ᐋᑲᔭᓰᒧᑐᑕᐤ",
-        "letter": "speak English to him/her",
-        "pinyin": "ākayasīmototaw (VTA-2)"
-    },
-    "110": {
-        "character": "ᐊᑭᐦᑖᓱᓇ",
-        "letter": "numbers",
-        "pinyin": "akihtāsona (NI)"
-    },
-    "111": {
-        "character": "ᐋᐱᐦᑖᑮᓯᑳᐤ",
-        "letter": "midday/noon",
-        "pinyin": "āpihtā-kīsikāw (vP)"
-    },
-    "112": {
-        "character": "ᐋᐱᐦᑖᑎᐱᐢᑳᐤ",
-        "letter": "midnight",
-        "pinyin": "āpihtā-tipiskāw (vP)"
-    },
-    "113": {
-        "character": "ᐊᐱ",
-        "letter": "sit/be at home",
-        "pinyin": "api (VAI)"
-    },
-    "114": {
-        "character": "ᐊᐢᑭᑇᐏ",
-        "letter": "potato",
-        "pinyin": "askipwāwi (NI)"
-    },
-    "115": {
-        "character": "ᐊᐢᑮᐏᐣ",
-        "letter": "year",
-        "pinyin": "askīwin (NI)"
-    },
-    "116": {
-        "character": "ᐋᐢᑕᒼ",
-        "letter": "come here",
-        "pinyin": "āstam [Imperative only]"
-    },
-    "117": {
-        "character": "ᓇᒼ ᐋᐏᔭᐠ",
-        "letter": "nobody",
-        "pinyin": "nam āwiyak (Pr)"
-    },
-    "118": {
-        "character": "ᓇᒪ ᑮᑿᐩ",
-        "letter": "nothing",
-        "pinyin": "nama kīkway (Pr)"
-    },
-    "119": {
-        "character": "ᓂᐱᐩ",
-        "letter": "water",
-        "pinyin": "nipiy (NI)"
-    },
-    "120": {
-        "character": "ᑲᐢᑭᐦᑖ",
-        "letter": "be able to do it",
-        "pinyin": "kaskihtā (VTI-2)"
-    },
-    "121": {
-        "character": "ᐅᓰᐦᑖ",
-        "letter": "make it",
-        "pinyin": "osīhtā (VTI-2)"
-    },
-    "122": {
-        "character": "ᐋᐢᑕᒼ ᐆᑕ",
-        "letter": "Come here",
-        "pinyin": "āstam ōta (Ph)"
-    },
-    "123": {
-        "character": "ᒥᔪᐢᐸᑿᐣ",
-        "letter": "it tastes nice",
-        "pinyin": "miyospakwan (VII-2)"
-    },
-    "124": {
-        "character": "ᐅᓰᐦᑕᒪᐤ",
-        "letter": "make it for him/her",
-        "pinyin": "osīhtamaw (VTA-2)"
-    },
-    "125": {
-        "character": "ᐋᐢᑕᒼ!",
-        "letter": "Come!",
-        "pinyin": "āstam! (P)"
-    },
-    "126": {
-        "character": "ᐊᑐᐢᑫ",
-        "letter": "work",
-        "pinyin": "atoskē (VAI)"
-    },
-    "127": {
-        "character": "ᐊᑐᐢᑲᐤ",
-        "letter": "work for him/her",
-        "pinyin": "atoskaw (VTA-2)"
-    },
-    "128": {
-        "character": "ᐊᑖᐍᐏᑲᒥᐠ",
-        "letter": "store",
-        "pinyin": "atāwēwikamik (NI)"
-    },
-    "129": {
-        "character": "ᐊᐚᓯᐢ",
-        "letter": "child",
-        "pinyin": "awāsis (NA)"
-    },
-    "130": {
-        "character": "ᐊᐚᓯᓴᐠ",
-        "letter": "children",
-        "pinyin": "awāsisak (NA)"
-    },
-    "131": {
-        "character": "ᐁᑿ ᒦᓇ",
-        "letter": "also",
-        "pinyin": "ēkwa mīna (Ph)"
-    },
-    "132": {
-        "character": "ᐃᐢᑯᑌᐓᑖᐹᓈᐢᐠ",
-        "letter": "train",
-        "pinyin": "iskotēwotāpānāsk (NA)"
-    },
-    "133": {
-        "character": "ᐁᑿᔨᑯᕽ",
-        "letter": "that much",
-        "pinyin": "ēkwayikohk (P)"
-    },
-    "134": {
-        "character": "ᑭᐦᐨᐆᑌᓇᐤ",
-        "letter": "city",
-        "pinyin": "kihc-ōtēnaw (NI)"
-    },
-    "135": {
-        "character": "ᐊᐏᔭᐠ",
-        "letter": "someone",
-        "pinyin": "awiyak (Pr)"
-    },
-    "136": {
-        "character": "ᑖᓂᒪᔨᑯᕽ/ᑖᓂᔨᑯᕽ",
-        "letter": "how much? [quantity]",
-        "pinyin": "tānimayikohk/tāniyikohk (Pr)"
-    },
-    "137": {
-        "character": "ᑖᓂᐢ ᐄᓯ",
-        "letter": "how (in what way?)",
-        "pinyin": "tānis īsi (Pr)"
-    },
-    "138": {
-        "character": "ᑖᓂᑕᐦᑐ",
-        "letter": "how many? [number]",
-        "pinyin": "tānitahto (Pr)"
-    },
-    "139": {
-        "character": "ᑖᓂᑕᐦᑤᐤ",
-        "letter": "how many times?",
-        "pinyin": "tānitahtwāw (Pr)"
-    },
-    "140": {
-        "character": "ᑖᓂᑐᐘᕽ",
-        "letter": "what kind?",
-        "pinyin": "tānitowahk (Pr)"
-    },
-    "141": {
-        "character": "ᑖᓂᐍ",
-        "letter": "where is it?",
-        "pinyin": "tāniwē (Pr-I/sg)"
-    },
-    "142": {
-        "character": "ᑖᓂᐍᐦᐋ",
-        "letter": "where are they?",
-        "pinyin": "tāniwēhā (Pr-I/pl)"
-    },
-    "143": {
-        "character": "ᐆᐦᐃ",
-        "letter": "these",
-        "pinyin": "ōhi (Pr-I/pl)"
-    },
-    "144": {
-        "character": "ᐹᒷᔦᐢ",
-        "letter": "before",
-        "pinyin": "pāmwayēs (Cj)"
-    },
-    "145": {
-        "character": "ᑭᐦᒋ",
-        "letter": "big/large/great",
-        "pinyin": "kihci- (Pv/Pn)"
-    },
-    "146": {
-        "character": "ᐊᐏᔭᑲᐠ",
-        "letter": "some people",
-        "pinyin": "awiyakak (Pr)"
-    },
-    "147": {
-        "character": "ᑭᐦᒋᑭᐢᑭᓌᐦᐊᒫᑐᐏᑲᒥᐠ",
-        "letter": "university",
-        "pinyin": "kihci-kiskinwahamātowikamik (NI)"
-    },
-    "148": {
-        "character": "ᑮᑭᓭᑊ",
-        "letter": "this morning",
-        "pinyin": "kīkisēp (P)"
-    },
-    "149": {
-        "character": "ᑮᑭᓭᐹᔮᐤ",
-        "letter": "morning",
-        "pinyin": "kīkisēpāyāw (NI)"
-    },
-    "150": {
-        "character": "ᑮᒁᐩ?",
-        "letter": "what?",
-        "pinyin": "kīkwāy? (Pr)"
-    },
-    "151": {
-        "character": "ᓵᑭᐦ",
-        "letter": "love him/her",
-        "pinyin": "sākih (VTA-1)"
-    },
-    "152": {
-        "character": "ᓵᑭᐦᐃᑐᐏᐣ",
-        "letter": "love",
-        "pinyin": "sākihitowin (NI)"
-    },
-    "153": {
-        "character": "ᓵᑭᐦᑖ",
-        "letter": "love it",
-        "pinyin": "sākihtā (VTI-2)"
-    },
-    "154": {
-        "character": "ᓴᐍᔨᒼ",
-        "letter": "love him/her",
-        "pinyin": "sawēyim (VTA-1)"
-    },
-    "155": {
-        "character": "ᓰᐱᐩ",
-        "letter": "river",
-        "pinyin": "sīpiy (NI)"
-    },
-    "156": {
-        "character": "ᒧᐤ",
-        "letter": "eat it",
-        "pinyin": "mow (VTA-1)"
-    },
-    "157": {
-        "character": "ᐱᒥᓇᐘᓱ",
-        "letter": "cook a meal",
-        "pinyin": "piminawaso (VAI)"
-    },
-    "158": {
-        "character": "ᓲᓂᔮᐤ",
-        "letter": "money",
-        "pinyin": "sōniyāw (NA)"
-    },
-    "159": {
-        "character": "ᒥᐢᑕᑭᐦᑌᐤ",
-        "letter": "it is expensive",
-        "pinyin": "mistakihtēw (VII-2)"
-    },
-    "160": {
-        "character": "ᒥᓵᐤ",
-        "letter": "it is large/big",
-        "pinyin": "misāw (VII-2)"
-    },
-    "161": {
-        "character": "ᒥᐢᑕᑭᓱ",
-        "letter": "expensive, (be)",
-        "pinyin": "mistakiso (VAI)"
-    },
-    "162": {
-        "character": "ᒥᔪᓈᑯᓯ",
-        "letter": "be beautiful",
-        "pinyin": "miyonākosi (VAI)"
-    },
-    "163": {
-        "character": "ᒥᔪᓈᑿᐣ",
-        "letter": "it is beautiful",
-        "pinyin": "miyonākwan (VII)"
-    },
-    "164": {
-        "character": "ᒥᔪᓯ",
-        "letter": "be nice",
-        "pinyin": "miyosi (VAI)"
-    },
-    "165": {
-        "character": "ᒥᔪᓯᓯ",
-        "letter": "be nice",
-        "pinyin": "miyosisi (VAI)"
-    },
-    "166": {
-        "character": "ᑯᑕᐠ",
-        "letter": "other/another",
-        "pinyin": "kotak (Pr)"
-    },
-    "167": {
-        "character": "ᒥᐦᒉᐟ",
-        "letter": "many, lots",
-        "pinyin": "mihcēt (P)"
-    },
-    "168": {
-        "character": "ᑭᒥᐢ",
-        "letter": "your (sg.) older sister",
-        "pinyin": "kimis (NA)"
-    },
-    "169": {
-        "character": "ᑳᑭᑫ/ᑖᐱᑕᐏ",
-        "letter": "always",
-        "pinyin": "kākikē/tāpitawi (P)"
-    },
-    "170": {
-        "character": "ᐱᒧᐦᑌᐦ",
-        "letter": "travel",
-        "pinyin": "pimohtēho (VAI)"
-    },
-    "171": {
-        "character": "ᐱᓯᐢᑭᐤ",
-        "letter": "animal",
-        "pinyin": "pisiskiw (NA)"
-    },
-    "172": {
-        "character": "ᑭᓄᓭᐤ",
-        "letter": "fish [generic term]",
-        "pinyin": "kinosēw (NA)"
-    },
-    "173": {
-        "character": "ᑮᓯᑳᔮᐢᑌᐤ",
-        "letter": "it is moonlight",
-        "pinyin": "kīsikāyāstēw (VII-1)"
-    },
-    "174": {
-        "character": "ᑭᓵᐢᑌᐤ",
-        "letter": "it is hot [weather]",
-        "pinyin": "kisāstēw (VII-1)"
-    },
-    "175": {
-        "character": "ᑮᓯᑳᐤ",
-        "letter": "it is day, it is daylight",
-        "pinyin": "kīsikāw (VII-1)"
-    },
-    "176": {
-        "character": "ᑭᓯᑌᐤ",
-        "letter": "it is hot [temperature]",
-        "pinyin": "kisitēw (VII-1)"
-    },
-    "177": {
-        "character": "ᑭᓯᐚᓯ",
-        "letter": "angry, (be)",
-        "pinyin": "kisiwāsi (VAI)"
-    },
-    "178": {
-        "character": "ᑮᓱᐍᔮᐤ",
-        "letter": "it is warm weather",
-        "pinyin": "kīsowēyāw (VII-1)"
-    },
-    "179": {
         "character": "ᑮᓯᑌᐳ",
         "letter": "cook",
-        "pinyin": "kīsitēpo (VAI)"
+        "pinyin": "kîsitêpo"
     },
-    "180": {
-        "character": "ᑲ/ᑕ",
-        "letter": "future tense markers",
-        "pinyin": "ka-/ta- (Pv)"
+    "101": {
+        "character": "ᐊᐱ",
+        "letter": "sit/be at home",
+        "pinyin": "api"
     },
-    "181": {
-        "character": "ᓅᐦᒑᐑᐢ",
-        "letter": "my uncle [father’s brother]",
-        "pinyin": "nōhcāwīs (NA)"
+    "102": {
+        "character": "ᒦᒋᓱ",
+        "letter": "eat",
+        "pinyin": "mîciso"
     },
-    "182": {
-        "character": "ᐅᓯᐯᐦᐊ",
-        "letter": "write it",
-        "pinyin": "osipēha (VTI-1)"
+    "103": {
+        "character": "ᒥᓂᐦᑵ",
+        "letter": "drink",
+        "pinyin": "minihkwê"
     },
-    "183": {
-        "character": "ᐅᓰᐦ",
-        "letter": "make it",
-        "pinyin": "osīh (VTA-1)"
+    "104": {
+        "character": "ᐸᓯᑰ",
+        "letter": "get up/stand up",
+        "pinyin": "pasikô"
     },
-    "184": {
-        "character": "ᐯᐦ",
-        "letter": "wait",
-        "pinyin": "pēho (VAI)"
+    "105": {
+        "character": "ᐘᔭᐑ",
+        "letter": "go out",
+        "pinyin": "wayawî"
     },
-    "185": {
-        "character": "ᐯᐦᑕ",
-        "letter": "hear it",
-        "pinyin": "pēhta (VTI-1)"
-    },
-    "186": {
+    "106": {
         "character": "ᐱᒧᐦᑌ",
         "letter": "walk",
-        "pinyin": "pimohtē (VAI)"
+        "pinyin": "pimohtê"
     },
-    "187": {
-        "character": "ᑭᑐᐦᒋᑫ",
-        "letter": "make music",
-        "pinyin": "kitohcikē (VAI)"
+    "107": {
+        "character": "ᐴᓯ",
+        "letter": "get on board",
+        "pinyin": "pôsi"
     },
-    "188": {
-        "character": "ᓂᐑᑭᒫᑲᐣ",
-        "letter": "my wife/husband",
-        "pinyin": "niwīkimākan (NA)"
+    "108": {
+        "character": "ᐱᒥᐸᔨ",
+        "letter": "drive",
+        "pinyin": "pimipayi"
     },
-    "189": {
-        "character": "ᐱᒥᐸᐦᑖ",
-        "letter": "run",
-        "pinyin": "pimipahtā (VAI)"
+    "109": {
+        "character": "ᑲᐹ",
+        "letter": "get out",
+        "pinyin": "kapâ"
     },
-    "190": {
-        "character": "ᑮᐍ",
-        "letter": "go home",
-        "pinyin": "kīwē (VAI)"
+    "110": {
+        "character": "ᐊᑐᐢᑫ",
+        "letter": "work",
+        "pinyin": "atoskê"
     },
-    "191": {
-        "character": "ᑰᓇ",
-        "letter": "snow",
-        "pinyin": "kōna (NA)"
+    "111": {
+        "character": "ᒪᓯᓇᐦᐃᑫ",
+        "letter": "write",
+        "pinyin": "masinahikê"
     },
-    "192": {
-        "character": "ᒥᔪᐢᑲᒥᐣ",
-        "letter": "it is spring",
-        "pinyin": "miyoskamin (VII-1)"
-    },
-    "193": {
-        "character": "ᒥᔪᐢᐸᑯᓯᐤ",
-        "letter": "it tastes nice",
-        "pinyin": "miyospakosiw (VAI)"
-    },
-    "194": {
-        "character": "ᓀᐦᐃᔮᓈᕽ",
-        "letter": "Cree country/region",
-        "pinyin": "nēhiyānāhk (P)"
-    },
-    "195": {
-        "character": "ᓂᐦᑎᐩ/ᒪᐢᑭᐦᑮᐚᐳᐩ",
-        "letter": "tea",
-        "pinyin": "nihtiy/maskihkīwāpoy (NI)"
-    },
-    "196": {
-        "character": "ᓂᑲᒧ",
-        "letter": "sing",
-        "pinyin": "nikamo (VAI)"
-    },
-    "197": {
-        "character": "ᓂᑲᒧᐢᑭ",
-        "letter": "sing [habitually]",
-        "pinyin": "nikamoski (VAI)"
-    },
-    "198": {
-        "character": "ᐋᒋᒧ",
-        "letter": "tell a story/inform",
-        "pinyin": "ācimo (VAI)"
-    },
-    "199": {
-        "character": "ᐋᒋᒧᐢᑕᐤ",
-        "letter": "tell him/her a story/inform him/her",
-        "pinyin": "ācimostaw (VTA-2)"
-    },
-    "200": {
-        "character": "ᐊᐘ",
-        "letter": "this one",
-        "pinyin": "awa (Pr-A/sg)"
-    },
-    "201": {
-        "character": "ᐊᓇ",
-        "letter": "that one",
-        "pinyin": "ana (Pr-A/sg)"
-    },
-    "202": {
-        "character": "ᐊᓂᐦᐃ",
-        "letter": "those ones",
-        "pinyin": "anihi (Pr-I/pl)"
-    },
-    "203": {
-        "character": "ᐊᓂᑭ",
-        "letter": "those ones",
-        "pinyin": "aniki (Pr-A/pl)"
-    },
-    "204": {
-        "character": "ᐊᓂᒪ",
-        "letter": "that one",
-        "pinyin": "anima (Pr-I/sg)"
-    },
-    "205": {
-        "character": "ᐊᐢᑭᑇᐘ",
-        "letter": "potatoes",
-        "pinyin": "askipwāwa (NI)"
-    },
-    "206": {
+    "112": {
         "character": "ᐊᔭᒥᐦᒋᑫ",
         "letter": "read",
-        "pinyin": "ayamihcikē (VAI)"
+        "pinyin": "ayamihcikê"
     },
-    "207": {
-        "character": "ᐊᑖᐍ",
-        "letter": "buy",
-        "pinyin": "atāwē (VAI)"
+    "113": {
+        "character": "ᓃᒥᐦᐃᑐ",
+        "letter": "dance",
+        "pinyin": "nîmihito"
     },
-    "208": {
-        "character": "ᐃᐢᑵᓯᓵᐳᐩ",
-        "letter": "beer",
-        "pinyin": "iskwēsisāpoy (NI)"
+    "114": {
+        "character": "ᓂᑲᒧ",
+        "letter": "sing",
+        "pinyin": "nikamo"
     },
-    "209": {
-        "character": "ᐃᐢᐲᐦᑎᓰ",
-        "letter": "reach a certain age [he is  years old]",
-        "pinyin": "ispīhtisī (VAI)"
+    "115": {
+        "character": "ᒫᑐ",
+        "letter": "cry",
+        "pinyin": "mâto"
     },
-    "210": {
-        "character": "ᐃᑕᐦᑐᐱᐳᓀ",
-        "letter": "be a certain age [he is_  years old]",
-        "pinyin": "itahtopiponē (VAI)"
-    },
-    "211": {
-        "character": "ᐃᑕᑭᐦᑌᐤ",
-        "letter": "cost [so much]",
-        "pinyin": "itakihtēw (VII-2)"
-    },
-    "212": {
-        "character": "ᐃᑕᑭᓱ",
-        "letter": "cost [so much]",
-        "pinyin": "itakiso (VAI)"
-    },
-    "213": {
-        "character": "ᑲᐦᑭᔭᐤ",
-        "letter": "all",
-        "pinyin": "kahkiyaw (P)"
-    },
-    "214": {
-        "character": "ᑲᐦᑭᔭᐤ ᐊᐏᔭᐠ",
-        "letter": "all (everybody)",
-        "pinyin": "kahkiyaw awiyak (Pr)"
-    },
-    "215": {
-        "character": "ᑭᐦᐨᐆᑭᓂᐩ",
-        "letter": "tomato",
-        "pinyin": "kihc-ōkiniy (NA)"
-    },
-    "216": {
-        "character": "ᑲᐦᑭᔭᐤ ᑮᑿᐩ",
-        "letter": "all (everything)",
-        "pinyin": "kahkiyaw kīkway (Pr)"
-    },
-    "217": {
-        "character": "ᑭᑳᐑᐢ",
-        "letter": "your (sg.) aunt (mother’s sister)",
-        "pinyin": "kikāwīs (NA)"
-    },
-    "218": {
-        "character": "ᑮᑭ",
-        "letter": "your home",
-        "pinyin": "kīki (NI)"
-    },
-    "219": {
-        "character": "ᓂᐢᑕᒼ",
-        "letter": "first",
-        "pinyin": "nistam (P)"
-    },
-    "220": {
-        "character": "ᓃᐢᑕᓈᐣ",
-        "letter": "us too/also",
-        "pinyin": "nīstanān (Pr)"
-    },
-    "221": {
-        "character": "ᓂᐢᑌᐢ",
-        "letter": "my older brother",
-        "pinyin": "nistēs (NA)"
-    },
-    "222": {
-        "character": "ᓂᑖᓂᐢ",
-        "letter": "my daughter",
-        "pinyin": "nitānis (NA)"
-    },
-    "223": {
-        "character": "ᓃᑎᓵᐣ",
-        "letter": "my sibling(s)",
-        "pinyin": "nītisān(ak) (NA)"
-    },
-    "224": {
-        "character": "ᓂᑎᐢᑵᒼ",
-        "letter": "my woman/my wife",
-        "pinyin": "nitiskwēm (NA)"
-    },
-    "225": {
-        "character": "ᓂᑐᐦᑕ",
-        "letter": "listen to it",
-        "pinyin": "nitohta (VTI-1)"
-    },
-    "226": {
-        "character": "ᓂᑐᐦᑕᐤ",
-        "letter": "listen to him/her/it",
-        "pinyin": "nitohtaw (VTA-2)"
-    },
-    "227": {
-        "character": "ᐋᒋᑳᐢᑌᐱᒋᑲᐣ",
-        "letter": "a movie",
-        "pinyin": "ācikāstēpicikan (NI)"
-    },
-    "228": {
-        "character": "ᐋᒋᒧᐘᓯᓇᐦᐃᑲᐣ",
-        "letter": "newspaper",
-        "pinyin": "ācimowasinahikan (NI)"
-    },
-    "229": {
-        "character": "ᐋᒋᒧᐏᐣ",
-        "letter": "story/news",
-        "pinyin": "ācimowin (NI)"
-    },
-    "230": {
-        "character": "ᑕᐦᑭᓀ",
-        "letter": "always",
-        "pinyin": "tahkinē (vP)"
-    },
-    "231": {
-        "character": "ᐳᐢᑕᔨᐏᓂᓭ",
-        "letter": "put on clothes",
-        "pinyin": "postayiwinisē (VAI)"
-    },
-    "232": {
-        "character": "ᐱᐦᑲᐦᑌᐚᐳᐩ",
-        "letter": "coffee",
-        "pinyin": "pihkahtēwāpoy (NI)"
-    },
-    "233": {
-        "character": "ᐱᒋᒁᐢ",
-        "letter": "apple",
-        "pinyin": "picikwās (NA)"
-    },
-    "234": {
-        "character": "ᐃᑕᑯᒋᓂ",
-        "letter": "travel to",
-        "pinyin": "itakocini (VAI) (irreg)"
-    },
-    "235": {
-        "character": "ᐸᑲᐦᐊᑐᐍ",
-        "letter": "play ball",
-        "pinyin": "pakahatowē (VAI)"
-    },
-    "236": {
-        "character": "ᐃᐢᒁᐦᑌᒼ",
-        "letter": "door",
-        "pinyin": "iskwāhtēm (NI)"
-    },
-    "237": {
+    "116": {
         "character": "ᐹᐦᐱ",
         "letter": "laugh",
-        "pinyin": "pāhpi (VAI)"
+        "pinyin": "pâhpi"
     },
-    "238": {
-        "character": "ᐊᐘᓯᐢᐲᕽ",
-        "letter": "before then",
-        "pinyin": "awasispīhk (P)"
+    "117": {
+        "character": "ᓭᓵᐑ",
+        "letter": "exercise",
+        "pinyin": "sêsâwî"
     },
-    "239": {
-        "character": "ᐁᑯᑌ",
-        "letter": "over there",
-        "pinyin": "ēkotē (P)"
+    "118": {
+        "character": "ᐱᒥᐸᐦᑖ",
+        "letter": "run",
+        "pinyin": "pimipahtâ"
     },
-    "240": {
-        "character": "ᐊᑖᐍᐢᑕᒪᐤ",
-        "letter": "buy it for him/her",
-        "pinyin": "atāwēstamaw (VTA-2)"
+    "119": {
+        "character": "ᑮᐍ",
+        "letter": "go home",
+        "pinyin": "kîwê"
     },
-    "241": {
-        "character": "ᐋᒨᓰᓯᐹᐢᑿᐟ",
-        "letter": "honey",
-        "pinyin": "āmōsīsipāskwat (NI)"
+    "120": {
+        "character": "ᐱᐦᑐᑵ",
+        "letter": "enter",
+        "pinyin": "pihtokwê"
     },
-    "242": {
-        "character": "ᐋᒧᐤ",
-        "letter": "bee",
-        "pinyin": "āmow (NA)"
+    "121": {
+        "character": "ᓄᐦᑌᑲᑌ",
+        "letter": "be hungry",
+        "pinyin": "nohtêkatê"
     },
-    "243": {
-        "character": "ᑲᑵᒋᐦᑫᒧᐏᓇ",
-        "letter": "questions",
-        "pinyin": "kakwēcihkēmowina (NI)"
+    "122": {
+        "character": "ᑭᓰᐯᑭᔮᑲᓀ",
+        "letter": "wash dishes",
+        "pinyin": "kisîpêkiyâkanê"
     },
-    "244": {
+    "123": {
+        "character": "ᑳᓰᔮᑲᓀ",
+        "letter": "dry dishes",
+        "pinyin": "kâsîyâkanê"
+    },
+    "124": {
+        "character": "ᓄᐦᑌᑿᓯ",
+        "letter": "be sleepy",
+        "pinyin": "nohtêkwasi"
+    },
+    "125": {
+        "character": "ᑫᑕᔭᐏᓂᓭ",
+        "letter": "undress",
+        "pinyin": "kêtayawinisê"
+    },
+    "126": {
+        "character": "ᑲᐏᓯᒧ",
+        "letter": "lay down",
+        "pinyin": "kawisimo"
+    },
+    "127": {
+        "character": "ᒪᑘᐦᒁᒥ",
+        "letter": "snore",
+        "pinyin": "matwêhkwâmi"
+    },
+    "128": {
+        "character": "ᐅᑖᕽ ᐃᐢᐸᔨᐤ",
+        "letter": "last week",
+        "pinyin": "otâhk ispayiw"
+    },
+    "129": {
+        "character": "ᑯᑕᐠ ᐃᐢᐸᔨᑭ",
+        "letter": "next week",
+        "pinyin": "kotak ispayiki"
+    },
+    "130": {
+        "character": "ᐯᔭᐠ ᐃᐢᐸᔨᐤ",
+        "letter": "one week",
+        "pinyin": "pêyak ispayiw"
+    },
+    "131": {
+        "character": "ᐊᓄᐦᐨ ᑳᐃᐢᐸᔨᐠ",
+        "letter": "this week",
+        "pinyin": "anohc kâ-ispayik"
+    },
+    "132": {
+        "character": "ᐚᐸᐦᑭ",
+        "letter": "tomorrow",
+        "pinyin": "wâpahki"
+    },
+    "133": {
+        "character": "ᐊᐘᓯᐚᐸᐦᑭ",
+        "letter": "day after tomorrow",
+        "pinyin": "awasi-wâpahki"
+    },
+    "134": {
+        "character": "ᐅᑖᑯᓰᕽ",
+        "letter": "yesterday",
+        "pinyin": "otâkosîhk"
+    },
+    "135": {
+        "character": "ᐊᐘᓯᑖᑯᓰᕽ",
+        "letter": "day before yesterday",
+        "pinyin": "awasi-tâkosîhk"
+    },
+    "136": {
+        "character": "ᑎᐱᐢᑯᕽ",
+        "letter": "last night",
+        "pinyin": "tipiskohk"
+    },
+    "137": {
+        "character": "ᐊᐘᓯᑎᐱᐢᑯᕽ",
+        "letter": "night before last night",
+        "pinyin": "awasi-tipiskohk"
+    },
+    "138": {
+        "character": "ᑎᐱᐢᑳᑭ",
+        "letter": "tonight",
+        "pinyin": "tipiskâki"
+    },
+    "139": {
+        "character": "ᐊᐢᑮᐏᐣ",
+        "letter": "year",
+        "pinyin": "askîwin"
+    },
+    "140": {
+        "character": "ᐊᓄᐦᐨ ᑳᐊᐢᑮᐏᐠ",
+        "letter": "this year",
+        "pinyin": "anohc kâ-askîwik"
+    },
+    "141": {
+        "character": "ᐅᑖᕽ ᐊᐢᑮᐏᐣ",
+        "letter": "last year",
+        "pinyin": "otâhk askîwin"
+    },
+    "142": {
+        "character": "ᑯᑕᐠ ᐊᐢᑮᐏᑭ",
+        "letter": "next year",
+        "pinyin": "kotak askîwiki"
+    },
+    "143": {
+        "character": "ᐏᔮᐢ",
+        "letter": "meat",
+        "pinyin": "wiyâs"
+    },
+    "144": {
+        "character": "ᒧᐢᑐᓱᐏᔮᐢ",
+        "letter": "beef",
+        "pinyin": "mostosowiyâs"
+    },
+    "145": {
+        "character": "ᑯᐦᑰᓯᐏᔮᐢ",
+        "letter": "pork/ham",
+        "pinyin": "kohkôsiwiyâs"
+    },
+    "146": {
+        "character": "ᑯᐦᑰᓯᐑᔨᐣ",
+        "letter": "bacon",
+        "pinyin": "kohkôsiwîyin"
+    },
+    "147": {
+        "character": "ᑯᐦᑰᓱᑇᒼ",
+        "letter": "ham",
+        "pinyin": "kohkôsopwâm"
+    },
+    "148": {
+        "character": "ᒨᓱᐏᔮᐢ",
+        "letter": "moose meat",
+        "pinyin": "môsowiyâs"
+    },
+    "149": {
+        "character": "ᐊᑎᐦᑯᐏᔮᐢ",
+        "letter": "caribou meat",
+        "pinyin": "atihkowiyâs"
+    },
+    "150": {
+        "character": "ᓯᑯᐱᒋᑲᓂᐏᔮᐢ",
+        "letter": "ground meat",
+        "pinyin": "sikopicikaniwiyâs"
+    },
+    "151": {
+        "character": "ᒥᑌᐦ",
+        "letter": "heart",
+        "pinyin": "mitêh"
+    },
+    "152": {
+        "character": "ᐑᓂᐩ",
+        "letter": "bone marrow",
+        "pinyin": "wîniy"
+    },
+    "153": {
+        "character": "ᒥᑌᔭᓂᐩ",
+        "letter": "tongue",
+        "pinyin": "mitêyaniy"
+    },
+    "154": {
+        "character": "ᒥᒐᑭᓰᓴ",
+        "letter": "sausages",
+        "pinyin": "micakisîsa"
+    },
+    "155": {
+        "character": "ᐱᒥᐦᑳᐣ",
+        "letter": "pemmican",
+        "pinyin": "pimihkân"
+    },
+    "156": {
+        "character": "ᑲᐦᑫᐘᐠ",
+        "letter": "dried meat",
+        "pinyin": "kahkêwak"
+    },
+    "157": {
+        "character": "ᐸᐢᒁᒧᐢᑐᓱᐏᔮᐢ",
+        "letter": "buffalo meat",
+        "pinyin": "paskwâmostosowiyâs"
+    },
+    "158": {
+        "character": "ᐸᐦᑲᐦᐋᐦᒁᓄᐏᔮᐢ",
+        "letter": "chicken meat",
+        "pinyin": "pahkahâhkwânowiyâs"
+    },
+    "159": {
+        "character": "ᐊᒥᐢᑯᐏᔮᐢ",
+        "letter": "beaver meat",
+        "pinyin": "amiskowiyâs"
+    },
+    "160": {
+        "character": "ᒫᔭᑎᐦᑯᐏᔮᐢ",
+        "letter": "mutton",
+        "pinyin": "mâyatihkowiyâs"
+    },
+    "161": {
+        "character": "ᒦᓂᐢ",
+        "letter": "berry",
+        "pinyin": "mînis"
+    },
+    "162": {
+        "character": "ᐃᔨᓂᒥᓇ",
+        "letter": "blueberries",
+        "pinyin": "iyinimina"
+    },
+    "163": {
+        "character": "ᐑᓴᑮᒥᓇ",
+        "letter": "cranberries",
+        "pinyin": "wîsakîmina"
+    },
+    "164": {
+        "character": "ᒪᐢᑫᑰᒥᓇ",
+        "letter": "cranberries",
+        "pinyin": "maskêkômina"
+    },
+    "165": {
+        "character": "ᓃᐱᒥᓈᓇ",
+        "letter": "cranberries",
+        "pinyin": "nîpiminâna"
+    },
+    "166": {
+        "character": "ᑕᑿᐦᐃᒥᓈᓇ",
+        "letter": "choke-cherries",
+        "pinyin": "takwahiminâna"
+    },
+    "167": {
+        "character": "ᒥᑌᐦᐃᒥᓇ",
+        "letter": "strawberries",
+        "pinyin": "mitêhimina"
+    },
+    "168": {
+        "character": "ᒥᓵᐢᑲᑑᒥᓇ",
+        "letter": "Saskatoon berries",
+        "pinyin": "misâskatômina"
+    },
+    "169": {
+        "character": "ᐅᑎᓰᐦᑳᐣ",
+        "letter": "turnip",
+        "pinyin": "otisîhkân"
+    },
+    "170": {
+        "character": "ᑳᒥᐦᑿᐢᒁᐦᑭ",
+        "letter": "beets",
+        "pinyin": "kâ-mihkwaskwâhki"
+    },
+    "171": {
+        "character": "ᓃᐱᔭ",
+        "letter": "lettuce/salad",
+        "pinyin": "nîpiya"
+    },
+    "172": {
+        "character": "ᓇᐸᑖᑿ",
+        "letter": "potatoes",
+        "pinyin": "napatâkwa"
+    },
+    "173": {
+        "character": "ᑭᐢᒋᑳᓇ",
+        "letter": "potatoes",
+        "pinyin": "kiscikâna"
+    },
+    "174": {
+        "character": "ᐊᐢᑭᑇᐘ",
+        "letter": "potatoes",
+        "pinyin": "askipwâwa"
+    },
+    "175": {
+        "character": "ᐑᔨᐦᑎᐦᑊ",
+        "letter": "brain",
+        "pinyin": "wîyihtihp"
+    },
+    "176": {
+        "character": "ᑐᐦᑑᓵᐴᐏᐱᒥᐩ",
+        "letter": "butter",
+        "pinyin": "tohtôsâpôwipimiy"
+    },
+    "177": {
+        "character": "ᐱᒥᐩ",
+        "letter": "oil/lard/grease",
+        "pinyin": "pimiy"
+    },
+    "178": {
+        "character": "ᒪᓂᐦᐃᑲᐣ",
+        "letter": "cream",
+        "pinyin": "manihikan"
+    },
+    "179": {
+        "character": "ᑐᐦᑑᓵᐳᐩ",
+        "letter": "milk",
+        "pinyin": "tohtôsâpoy"
+    },
+    "180": {
+        "character": "ᐚᐏ",
+        "letter": "egg",
+        "pinyin": "wâwi"
+    },
+    "181": {
+        "character": "ᐃᐢᑵᓯᓵᐳᐩ",
+        "letter": "beer",
+        "pinyin": "iskwêsisâpoy"
+    },
+    "182": {
+        "character": "ᐃᐢᑯᑌᐚᐳᐩ",
+        "letter": "liquor",
+        "pinyin": "iskotêwâpoy"
+    },
+    "183": {
+        "character": "ᓂᐦᑎᐩ",
+        "letter": "tea",
+        "pinyin": "nihtiy"
+    },
+    "184": {
+        "character": "ᒪᐢᑭᐦᑮᐚᐳᐩ",
+        "letter": "herb-tea",
+        "pinyin": "maskihkîwâpoy"
+    },
+    "185": {
+        "character": "ᐱᐦᑲᑌᐚᐳᐩ",
+        "letter": "coffee",
+        "pinyin": "pihkatêwâpoy"
+    },
+    "186": {
+        "character": "ᓰᐚᐳᐩ",
+        "letter": "pop",
+        "pinyin": "sîwâpoy"
+    },
+    "187": {
+        "character": "ᑭᓵᐢᑌᐚᐳᐩ",
+        "letter": "Kool-Aid",
+        "pinyin": "kisâstêwâpoy"
+    },
+    "188": {
+        "character": "ᓲᒥᓈᐳᐩ",
+        "letter": "wine",
+        "pinyin": "sôminâpoy"
+    },
+    "189": {
+        "character": "ᒦᒋᒫᐳᐩ",
+        "letter": "soup",
+        "pinyin": "mîcimâpoy"
+    },
+    "190": {
+        "character": "ᐅᓵᐚᐳᐩ",
+        "letter": "orange juice",
+        "pinyin": "osâwâpoy"
+    },
+    "191": {
+        "character": "ᓰᐏᓅᐢ/ᓰᐚᐢ",
+        "letter": "candy",
+        "pinyin": "sîwinôs/sîwâs"
+    },
+    "192": {
         "character": "ᐋᒨᒣᔨ",
         "letter": "honey",
-        "pinyin": "āmōmēyi (NI)"
+        "pinyin": "âmômêyi"
+    },
+    "193": {
+        "character": "ᐋᒨᓰᓯᐹᐢᑿᐟ",
+        "letter": "honey",
+        "pinyin": "âmôsîsipâskwat"
+    },
+    "194": {
+        "character": "ᓰᓯᐹᐢᑿᐟ",
+        "letter": "maple sugar",
+        "pinyin": "sîsipâskwat"
+    },
+    "195": {
+        "character": "ᐯᐢᑯᒥᓇ",
+        "letter": "pepper",
+        "pinyin": "pêskomina"
+    },
+    "196": {
+        "character": "ᐑᓴᑲᐟ",
+        "letter": "pepper",
+        "pinyin": "wîsakat"
+    },
+    "197": {
+        "character": "ᐊᐢᑮᐏᓰᐏᐦᑖᑲᐣ",
+        "letter": "pepper",
+        "pinyin": "askîwisîwihtâkan"
+    },
+    "198": {
+        "character": "ᓰᐏᐦᑖᑲᐣ",
+        "letter": "salt",
+        "pinyin": "sîwihtâkan"
+    },
+    "199": {
+        "character": "ᓰᐏᓂᑲᐣ",
+        "letter": "sugar",
+        "pinyin": "sîwinikan"
+    },
+    "200": {
+        "character": "ᐏᐦᑎᑰᐏᒦᒋᐏᐣ",
+        "letter": "popcorn",
+        "pinyin": "wihtikôwimîciwin"
+    },
+    "201": {
+        "character": "ᒦᒋᐏᐣ",
+        "letter": "food",
+        "pinyin": "mîciwin"
+    },
+    "202": {
+        "character": "ᐅᐦᐱᐦᑲᓯᑲᐣ",
+        "letter": "yeast",
+        "pinyin": "ohpihkasikan"
+    },
+    "203": {
+        "character": "ᐏᐦᑫᐢ",
+        "letter": "muskrat-root",
+        "pinyin": "wihkês"
+    },
+    "204": {
+        "character": "ᐏᐦᑲᐢᑿ",
+        "letter": "sweet-grass",
+        "pinyin": "wihkaskwa"
+    },
+    "205": {
+        "character": "ᐸᐢᒁᐏᐦᑲᐢᑿ",
+        "letter": "sage",
+        "pinyin": "paskwâwihkaskwa"
+    },
+    "206": {
+        "character": "ᒪᐢᑭᐦᑭᐩ",
+        "letter": "medicine",
+        "pinyin": "maskihkiy"
+    },
+    "207": {
+        "character": "ᐊᐱᐢᑖᒉᑯᐢ",
+        "letter": "antelope",
+        "pinyin": "apistâcêkos"
+    },
+    "208": {
+        "character": "ᒨᔁ",
+        "letter": "moose",
+        "pinyin": "môswa"
+    },
+    "209": {
+        "character": "ᐚᐚᐢᑫᓯᐤ",
+        "letter": "elk",
+        "pinyin": "wâwâskêsiw"
+    },
+    "210": {
+        "character": "ᒫᔭᑎᕽ",
+        "letter": "sheep",
+        "pinyin": "mâyatihk"
+    },
+    "211": {
+        "character": "ᐚᐳᐢ",
+        "letter": "rabbit",
+        "pinyin": "wâpos"
+    },
+    "212": {
+        "character": "ᐊᐱᓯᒨᓱᐢ",
+        "letter": "deer",
+        "pinyin": "apisimôsos"
+    },
+    "213": {
+        "character": "ᓰᓰᑊ",
+        "letter": "duck",
+        "pinyin": "sîsîp"
+    },
+    "214": {
+        "character": "ᓂᐢᑲ",
+        "letter": "goose",
+        "pinyin": "niska"
+    },
+    "215": {
+        "character": "ᐊᑎᕽ",
+        "letter": "caribou",
+        "pinyin": "atihk"
+    },
+    "216": {
+        "character": "ᒪᐢᑿ",
+        "letter": "bear",
+        "pinyin": "maskwa"
+    },
+    "217": {
+        "character": "ᒹᑿ",
+        "letter": "loon",
+        "pinyin": "mwâkwa"
+    },
+    "218": {
+        "character": "ᐊᓂᑿᒑᐢᐠ",
+        "letter": "gopher/squirrel",
+        "pinyin": "anikwacâsk"
+    },
+    "219": {
+        "character": "ᐸᐦᑲᐦᐋᐦᒁᐣ",
+        "letter": "chicken",
+        "pinyin": "pahkahâhkwân"
+    },
+    "220": {
+        "character": "ᐸᐢᒁᒧᐢᑐᐢ",
+        "letter": "buffalo",
+        "pinyin": "paskwâmostos"
+    },
+    "221": {
+        "character": "ᐱᐦᐁᐤ",
+        "letter": "grouse",
+        "pinyin": "pihêw"
+    },
+    "222": {
+        "character": "ᐸᐢᐸᐢᑭᐤ",
+        "letter": "birch grouse",
+        "pinyin": "paspaskiw"
+    },
+    "223": {
+        "character": "ᒥᓯᐦᐁᐤ",
+        "letter": "turkey",
+        "pinyin": "misihêw"
+    },
+    "224": {
+        "character": "ᐊᒥᐢᐠ",
+        "letter": "beaver",
+        "pinyin": "amisk"
+    },
+    "225": {
+        "character": "ᑭᓄᓭᐤ",
+        "letter": "fish",
+        "pinyin": "kinosêw"
+    },
+    "226": {
+        "character": "ᐅᑳᐤ",
+        "letter": "pickerel",
+        "pinyin": "okâw"
+    },
+    "227": {
+        "character": "ᐊᑎᐦᑲᒣᐠ",
+        "letter": "white-fish",
+        "pinyin": "atihkamêk"
+    },
+    "228": {
+        "character": "ᐃᔨᓂᑭᓄᓭᐤ",
+        "letter": "jack-fish",
+        "pinyin": "iyinikinosêw"
+    },
+    "229": {
+        "character": "ᒥᓂᐩ",
+        "letter": "Mariah fish",
+        "pinyin": "miniy"
+    },
+    "230": {
+        "character": "ᐅᑑᓇᐱᐩ",
+        "letter": "tullabee",
+        "pinyin": "otônapiy"
+    },
+    "231": {
+        "character": "ᓇᒣᐤ",
+        "letter": "sturgeon",
+        "pinyin": "namêw"
+    },
+    "232": {
+        "character": "ᓇᒣᑯᐢ",
+        "letter": "trout",
+        "pinyin": "namêkos"
+    },
+    "233": {
+        "character": "ᓇᒣᐱᐣ",
+        "letter": "sucker",
+        "pinyin": "namêpin"
+    },
+    "234": {
+        "character": "ᒪᓅᒥᓇᐠ",
+        "letter": "rice",
+        "pinyin": "manôminak"
+    },
+    "235": {
+        "character": "ᒪᐢᑯᓰᒥᓇ",
+        "letter": "wild rice",
+        "pinyin": "maskosîmina"
+    },
+    "236": {
+        "character": "ᐆᒌᒋᓴᐠ",
+        "letter": "rice",
+        "pinyin": "ôcîcisak"
+    },
+    "237": {
+        "character": "ᐚᐱᓅᒥᓇᐠ",
+        "letter": "rice",
+        "pinyin": "wâpinôminak"
+    },
+    "238": {
+        "character": "ᒪᐦᑖᒥᐣ",
+        "letter": "corn",
+        "pinyin": "mahtâmin"
+    },
+    "239": {
+        "character": "ᐅᐢᑳᑖᐢᐠ",
+        "letter": "carrot",
+        "pinyin": "oskâtâsk"
+    },
+    "240": {
+        "character": "ᒪᐢᑭᒧᒋᓴᐠ",
+        "letter": "beans",
+        "pinyin": "maskimocisak"
+    },
+    "241": {
+        "character": "ᐏᐦᒉᑲᐢᑯᓰᐢ",
+        "letter": "onion",
+        "pinyin": "wihcêkaskosîs"
+    },
+    "242": {
+        "character": "ᑭᐦᒎᑭᓂᐩ",
+        "letter": "tomato",
+        "pinyin": "kihcôkiniy"
+    },
+    "243": {
+        "character": "ᐅᑭᓂᔭᐠ",
+        "letter": "wild rose-hips",
+        "pinyin": "okiniyak"
+    },
+    "244": {
+        "character": "ᓵᐴᒥᓇᐠ",
+        "letter": "gooseberries",
+        "pinyin": "sâpôminak"
     },
     "245": {
-        "character": "ᐊᑳᒥᑎᐸᐦᐊᐢᑳᐣ / ᑭᐦᒋᒨᐦᑯᒫᓂᓈᕽ",
-        "letter": "United States",
-        "pinyin": "akāmi-tipahaskān (NI)/ kihcimōhkomānināhk (P)"
+        "character": "ᐊᔫᐢᑲᓇᐠ",
+        "letter": "raspberries",
+        "pinyin": "ayôskanak"
     },
     "246": {
-        "character": "ᐋᐦᑿᑭᐦᑌᐤ",
-        "letter": "it is expensive",
-        "pinyin": "āhkwakihtēw (VII-2)"
+        "character": "ᓲᒥᓂᓴᐠ",
+        "letter": "raisins",
+        "pinyin": "sôminisak"
     },
     "247": {
-        "character": "ᐋᐦᑿᑭᓱ",
-        "letter": "(be) expensive",
-        "pinyin": "āhkwakiso (VAI)"
+        "character": "ᐱᒋᒁᐢ",
+        "letter": "apple",
+        "pinyin": "picikwâs"
     },
     "248": {
-        "character": "ᐊᒋᔭᐤ",
-        "letter": "awhile (for)",
-        "pinyin": "aciyaw (P)"
+        "character": "ᐚᑳᐢ",
+        "letter": "banana",
+        "pinyin": "wâkâs"
     },
     "249": {
-        "character": "ᒨᒋᑭᐦᑖ",
-        "letter": "have fun",
-        "pinyin": "mōcikihtā (VAI)"
+        "character": "ᐅᓵᐚᐢ",
+        "letter": "orange",
+        "pinyin": "osâwâs"
     },
     "250": {
-        "character": "ᓂᑐᒼ",
-        "letter": "invite him/her",
-        "pinyin": "nitom (VTA-1)"
+        "character": "ᐸᑳᐣ",
+        "letter": "nut",
+        "pinyin": "pakân"
+    },
+    "251": {
+        "character": "ᐱᐦᑲᓯᑲᐣ",
+        "letter": "toast",
+        "pinyin": "pihkasikan"
+    },
+    "252": {
+        "character": "ᐋᓅᒥᐣ",
+        "letter": "oatmeal",
+        "pinyin": "ânômin"
+    },
+    "253": {
+        "character": "ᐸᐦᑵᓯᑲᐣ",
+        "letter": "bannock",
+        "pinyin": "pahkwêsikan"
+    },
+    "254": {
+        "character": "ᐲᓷᐦᑲᓯᑲᐣ",
+        "letter": "bread",
+        "pinyin": "pîswêhkasikan"
+    },
+    "255": {
+        "character": "ᐲᓷᐦᑲᓯᑲᓂᓴᐠ",
+        "letter": "buns",
+        "pinyin": "pîswêhkasikanisak"
+    },
+    "256": {
+        "character": "ᓰᐏᐦᑲᓯᑲᐣ",
+        "letter": "cake",
+        "pinyin": "sîwihkasikan"
+    },
+    "257": {
+        "character": "ᐏᐦᑭᐦᑲᓯᑲᐣ",
+        "letter": "cake",
+        "pinyin": "wihkihkasikan"
+    },
+    "258": {
+        "character": "ᓰᐏᐦᑲᓯᑲᓇᐠ",
+        "letter": "baked goods",
+        "pinyin": "sîwihkasikanak"
+    },
+    "259": {
+        "character": "ᓰᐏᓂᑲᐣ",
+        "letter": "sugar",
+        "pinyin": "sîwinikan"
+    },
+    "260": {
+        "character": "ᔩᐘᐦᐃᑲᓇᐠ",
+        "letter": "ground meat/fish",
+        "pinyin": "yîwahikanak"
+    },
+    "261": {
+        "character": "ᒥᐢᑿᒥᐩ",
+        "letter": "ice",
+        "pinyin": "miskwamiy"
+    },
+    "262": {
+        "character": "ᓇᒦᐢᒌᑯᐢ",
+        "letter": "dried fillets",
+        "pinyin": "namîscîkos"
+    },
+    "263": {
+        "character": "ᒧᐦᑯᒫᐣ",
+        "letter": "knife (NI)",
+        "pinyin": "mohkomân"
+    },
+    "264": {
+        "character": "ᒌᐢᑕᐦᐋᓭᐳᐣ",
+        "letter": "fork (NI)",
+        "pinyin": "cîstahâsêpon"
+    },
+    "265": {
+        "character": "ᐁᒥᐦᒁᐣ",
+        "letter": "spoon(NA)",
+        "pinyin": "êmihkwân"
+    },
+    "266": {
+        "character": "ᐅᔮᑲᐣ",
+        "letter": "plate (NI)",
+        "pinyin": "oyâkan"
+    },
+    "267": {
+        "character": "ᒥᓂᐦᒁᒋᑲᐣ",
+        "letter": "cup (NI)",
+        "pinyin": "minihkwâcikan"
+    },
+    "268": {
+        "character": "ᐊᐢᑭᕽ",
+        "letter": "pail (NA)",
+        "pinyin": "askihk"
+    },
+    "269": {
+        "character": "ᓰᓰᐸᐢᑭᕽ",
+        "letter": "kettle (NA)",
+        "pinyin": "sîsîpaskihk"
+    },
+    "270": {
+        "character": "ᓵᓵᐱᐢᑭᓯᑲᐣ",
+        "letter": "frying-pan (NA)",
+        "pinyin": "sâsâpiskisikan"
+    },
+    "271": {
+        "character": "ᓵᓭᐢᑭᐦᒁᐣ",
+        "letter": "frying-pan (NA)",
+        "pinyin": "sâsêskihkwân"
+    },
+    "272": {
+        "character": "ᑯᒐᐚᑲᓂᐢ",
+        "letter": "match (NI)",
+        "pinyin": "kocawâkanis"
+    },
+    "273": {
+        "character": "ᐊᑯᒋᑲᐣ",
+        "letter": "cupboard (NI)",
+        "pinyin": "akocikan"
+    },
+    "274": {
+        "character": "ᑯᑕᐚᓈᐱᐢᐠ",
+        "letter": "stove (NI)",
+        "pinyin": "kotawânâpisk"
+    },
+    "275": {
+        "character": "ᑫᓯᐢᑲᐏᐦᑲᓯᑲᐣ",
+        "letter": "micro-wave (NI)",
+        "pinyin": "kêsiskawihkasikan"
+    },
+    "276": {
+        "character": "ᓭᑯᐍᐱᓈᐱᐢᐠ",
+        "letter": "oven (NI)",
+        "pinyin": "sêkowêpinâpisk"
+    },
+    "277": {
+        "character": "ᐊᐦᑿᒋᑲᐣ",
+        "letter": "freezer (NI)",
+        "pinyin": "ahkwacikan"
+    },
+    "278": {
+        "character": "ᑕᐦᑲᐢᒋᑲᐣ",
+        "letter": "fridge (NI)",
+        "pinyin": "tahkascikan"
+    },
+    "279": {
+        "character": "ᑭᓭᐲᓯᒼ",
+        "letter": "January.",
+        "pinyin": "kisêpîsim"
+    },
+    "280": {
+        "character": "ᒥᑭᓯᐏᐲᓯᒼ",
+        "letter": "February",
+        "pinyin": "mikisiwipîsim"
+    },
+    "281": {
+        "character": "ᓂᐢᑭᐲᓯᒼ",
+        "letter": "March",
+        "pinyin": "niskipîsim"
+    },
+    "282": {
+        "character": "ᐊᔩᑭᐲᓯᒼ",
+        "letter": "April",
+        "pinyin": "ayîkipîsim"
+    },
+    "283": {
+        "character": "ᓵᑭᐸᑳᐏᐲᓯᒼ",
+        "letter": "May",
+        "pinyin": "sâkipakâwipîsim"
+    },
+    "284": {
+        "character": "ᐹᐢᑳᐏᐦᐅᐏᐲᓯᒼ",
+        "letter": "June",
+        "pinyin": "pâskâwihowipîsim"
+    },
+    "285": {
+        "character": "ᐸᐢᑯᐏᐲᓯᒼ",
+        "letter": "July",
+        "pinyin": "paskowipîsim"
+    },
+    "286": {
+        "character": "ᐅᐦᐸᐦᐅᐏᐲᓯᒼ",
+        "letter": "August",
+        "pinyin": "ohpahowipîsim"
+    },
+    "287": {
+        "character": "ᓅᒋᐦᐃᑐᐏᐲᓯᒼ",
+        "letter": "September",
+        "pinyin": "nôcihitowipîsim"
+    },
+    "288": {
+        "character": "ᑕᒁᑭᐲᓯᒼ",
+        "letter": "September",
+        "pinyin": "takwâkipîsim"
+    },
+    "289": {
+        "character": "ᐱᓈᐢᑯᐏᐲᓯᒼ",
+        "letter": "October",
+        "pinyin": "pinâskowipîsim"
+    },
+    "290": {
+        "character": "ᐃᐦᑯᐲᐏᐲᓯᒼ",
+        "letter": "November",
+        "pinyin": "ihkopîwipîsim"
+    },
+    "291": {
+        "character": "ᐸᐚᒐᑭᓇᓰᓯᐲᓯᒼ",
+        "letter": "December",
+        "pinyin": "pawâcakinasîsipîsim"
+    },
+    "292": {
+        "character": "ᐯᔭᐠ",
+        "letter": "1",
+        "pinyin": "pêyak"
+    },
+    "293": {
+        "character": "ᓃᓱ",
+        "letter": "2",
+        "pinyin": "nîso"
+    },
+    "294": {
+        "character": "ᓂᐢᑐ",
+        "letter": "3",
+        "pinyin": "nisto"
+    },
+    "295": {
+        "character": "ᓀᐓ",
+        "letter": "4",
+        "pinyin": "nêwo"
+    },
+    "296": {
+        "character": "ᓂᔮᓇᐣ",
+        "letter": "5",
+        "pinyin": "niyânan"
+    },
+    "297": {
+        "character": "ᓂᑯᑤᓯᐠ",
+        "letter": "6",
+        "pinyin": "nikotwâsik"
+    },
+    "298": {
+        "character": "ᑌᐸᑯᐦᑊ",
+        "letter": "7",
+        "pinyin": "têpakohp"
+    },
+    "299": {
+        "character": "ᐊᔦᓈᓀᐤ",
+        "letter": "8",
+        "pinyin": "ayênânêw"
+    },
+    "300": {
+        "character": "ᑫᑳᒥᑖᑕᐦᐟ*",
+        "letter": "9",
+        "pinyin": "kêkâ-mitâtaht*"
+    },
+    "301": {
+        "character": "ᒥᑖᑕᐦᐟ",
+        "letter": "10",
+        "pinyin": "mitâtaht"
+    },
+    "302": {
+        "character": "ᐯᔭᑯᓵᑊ",
+        "letter": "11",
+        "pinyin": "pêyakosâp"
+    },
+    "303": {
+        "character": "ᓃᓱᓵᑊ",
+        "letter": "12",
+        "pinyin": "nîsosâp"
+    },
+    "304": {
+        "character": "ᓂᐢᑐᓵᑊ",
+        "letter": "13",
+        "pinyin": "nistosâp"
+    },
+    "305": {
+        "character": "ᓀᐓᓵᑊ",
+        "letter": "14",
+        "pinyin": "nêwosâp"
+    },
+    "306": {
+        "character": "ᓂᔮᓇᓄᓵᑊ",
+        "letter": "15",
+        "pinyin": "niyânanosâp"
+    },
+    "307": {
+        "character": "ᓂᑯᑤᐢ(ᐃᐠ)ᐅᓵᑊ",
+        "letter": "16",
+        "pinyin": "nikotwâs(ik)osâp"
+    },
+    "308": {
+        "character": "ᑌᐸᑯᐦᐳᓵᑊ",
+        "letter": "17",
+        "pinyin": "têpakohposâp"
+    },
+    "309": {
+        "character": "ᐊᔦᓈᓀᐓᓵᑊ",
+        "letter": "18",
+        "pinyin": "ayênânêwosâp"
+    },
+    "310": {
+        "character": "ᑫᑳᒥᑖᑕᐦᑐᓵᑊ",
+        "letter": "19",
+        "pinyin": "kêkâ-mitâtahtosâp"
+    },
+    "311": {
+        "character": "ᓃᐢ(ᐅᒼ)ᐃᑕᓇᐤ",
+        "letter": "20",
+        "pinyin": "nîs(om)itanaw"
+    },
+    "312": {
+        "character": "ᓂᐢᑐᒥᑕᓇᐤ",
+        "letter": "30",
+        "pinyin": "nistomitanaw"
+    },
+    "313": {
+        "character": "ᓀ(ᐓ)ᒥᑕᓇᐤ",
+        "letter": "40",
+        "pinyin": "nê(wo)mitanaw"
+    },
+    "314": {
+        "character": "ᓂᔮᓇᓄᒥᑕᓇᐤ",
+        "letter": "50",
+        "pinyin": "niyânanomitanaw"
+    },
+    "315": {
+        "character": "ᓂᑯᑤᓯᑯᒥᑕᓇᐤ",
+        "letter": "60",
+        "pinyin": "nikotwâsikomitanaw"
+    },
+    "316": {
+        "character": "ᑌᐸᑯᐦᐳᒥᑕᓇᐤ",
+        "letter": "70",
+        "pinyin": "têpakohpomitanaw"
+    },
+    "317": {
+        "character": "ᐊᔦᓈᓀ(ᐓ)ᒥᑕᓇᐤ",
+        "letter": "80",
+        "pinyin": "ayênânê(wo)mitanaw"
+    },
+    "318": {
+        "character": "ᑫᑳᒥᑖᑕᐦᑐᒥᑕᓇᐤ",
+        "letter": "90",
+        "pinyin": "kêkâ-mitâtahtomitanaw"
+    },
+    "319": {
+        "character": "ᒥᑖᑕᐦᑐᒥᑕᓇᐤ",
+        "letter": "100",
+        "pinyin": "mitâtahtomitanaw"
     }
 }
 
