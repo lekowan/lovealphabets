@@ -602,7 +602,8 @@ class View {
 
 
       this.svgAudio.addEventListener("click", (event) => {
-        this.playAudio(audioValue);
+        console.log(audioValue.kana);
+        this.playAudio(audioValue.kana);
       });
 
       let nextCardSlide = this.createElement("div", "slide");
