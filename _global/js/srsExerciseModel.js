@@ -72,6 +72,7 @@ class Model {
         this.showSettings = false;
         this.goodAnswer = 0;
         this.totalItems = 0;
+        this.isLocalAudio;
 
         // Local storage Progress
         let timeStamp = "";
@@ -245,6 +246,44 @@ class Model {
         return this.tracker;
     }
 
+    /*
+    get initialAudioValue(){
+        if (this.allNewCards[0] != undefined) { 
+            let id = this.allNewCards[0];
+            console.log('nice');
+            return allSyllableMap[id].character
+        }
+    }
+    */
+
+    get audioValue() {
+
+        let id = this.allNewCards[this.trackerValue];
+
+        if(!this.typeOfAudio){    
+            console.log('get audioValue: ' + allSyllableMap[id].character); 
+            return allSyllableMap[id].character;
+        }
+        else {
+         return allSyllableMap[id].audio;   
+        }
+    }
+
+    get typeOfAudio() {
+        let id = this.allNewCards[this.trackerValue];
+        
+        console.log('get typeOfAudio: ' + allSyllableMap[id].audio != undefined); 
+
+        return allSyllableMap[id].audio != undefined;            
+    }
+
+    playAudioValue(){
+        this.onAudioPlayed(this.audioValue, this.typeOfAudio);
+    }
+
+    bindOnAudioPlayed(callback) {
+        this.onAudioPlayed = callback;
+    }
 
     /*
       get showNewItemsPopoverValue() {
@@ -412,14 +451,14 @@ class Model {
 
                 // add next card
                 this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
-
+                this.onAudioPlayed(this.audioValue, this.typeOfAudio);
             }
         }
         // If end of array is NOT reached
         else {
             // add next card
             this.onCardAdded(this.nextCard, this.newAnswer,this.isWordNew);
-
+            this.onAudioPlayed(this.audioValue, this.typeOfAudio);
         }
     }
 
@@ -452,11 +491,6 @@ class Model {
         alert("removed!");
     }
 
-    // Initiate audio
-    playAudio(url) {
-        new Audio(url).play();
-    }
-
     incrementTracker() {
         this.tracker++;
         this.onTrackerChanged(this.trackerValue);
@@ -479,7 +513,6 @@ class Model {
     bindOnProgressIncremented(callback) {
         this.onProgressStartChanged = callback;
     }
-
 
     removeRevisionItem() {
         this.revisionItemsTracker--;
