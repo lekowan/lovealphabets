@@ -741,8 +741,11 @@ class View {
       for(let audio of svgAudioCtaArray){
         audio.element.addEventListener("click", (event) => {
           
-          // Play audio on click
-          this.playSpeech(audio.word); 
+          // If speechSynthesis in user's browser
+          if (activateSpeech && "speechSynthesis" in window) {
+            // Play audio on click
+            this.playSpeech(audio.word); 
+          }
 
           // Add key frame animation
           audio.element.classList.add("audio-icon-animation-small");
@@ -766,17 +769,14 @@ class View {
     playSpeech(string) {
         console.log(string);
         let word = string;
-
-        // If speechSynthesis in user's browser
-        if (activateSpeech && "speechSynthesis" in window) {
-            let audioWord;
+        let audioWord;
             
-            if(languageTitle == "Japanese") audioWord = new SpeechSynthesisUtterance(word);
-            else audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
-            
-            audioWord.lang = language;
-            window.speechSynthesis.speak(audioWord);
-        }
+        if(languageTitle == "Japanese") audioWord = new SpeechSynthesisUtterance(word);
+        else audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
+        
+        audioWord.lang = language;
+        window.speechSynthesis.speak(audioWord);
+        
     }
 
 
