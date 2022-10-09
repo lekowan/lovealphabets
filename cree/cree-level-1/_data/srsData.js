@@ -62,7 +62,7 @@ const allSyllableMap = {
     "7": {
         "character": "ᑭᔭ ᒫᑲ᙮",
         "letter": "How about you?",
-        "pinyin": "kiya mâka.",
+        "pinyin": "kiya mâka",
         "audio": "../_audio/7.m4a"
     },
     "8": {
@@ -235,8 +235,8 @@ const allSyllableMap = {
     },
     "36": {
         "character": "ᐊᓯᑲᐣ",
-        "letter": "a sock",
-        "pinyin": "asikan",
+        "letter": "socks",
+        "pinyin": "asikanak",
         "audio": "../_audio/36.m4a"
     },
     "37": {
@@ -277,8 +277,8 @@ const allSyllableMap = {
     },
     "43": {
         "character": "ᒣᐢᑕᑲᐩ",
-        "letter": "a hair",
-        "pinyin": "mêstakay",
+        "letter": "hair",
+        "pinyin": "mêstakaya",
         "audio": "../_audio/43.m4a"
     },
     "44": {
