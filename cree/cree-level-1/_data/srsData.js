@@ -577,211 +577,211 @@ const allSyllableMap = {
     },
     "93": {
         "character": "ᓂᐹ",
-        "letter": "sleep",
+        "letter": "to sleep",
         "pinyin": "nipâ",
         "audio": "../_audio/93.m4a"
     },
     "94": {
         "character": "ᐘᓂᐢᑳ",
-        "letter": "wake/get up",
+        "letter": "to wake/get up",
         "pinyin": "waniskâ",
         "audio": "../_audio/94.m4a"
     },
     "95": {
         "character": "ᑳᑮᓯᒧ",
-        "letter": "pray (traditionally)",
+        "letter": "to pray (traditionally)",
         "pinyin": "kâkîsimo",
         "audio": "../_audio/95.m4a"
     },
     "96": {
         "character": "ᑭᐢᑖᐱᑌᐦ",
-        "letter": "brush teeth",
+        "letter": "to brush teeth",
         "pinyin": "kistâpitêho",
         "audio": "../_audio/96.m4a"
     },
     "97": {
         "character": "ᑳᓯᐦᑵ",
-        "letter": "wash face",
+        "letter": "to wash face",
         "pinyin": "kâsihkwê",
         "audio": "../_audio/97.m4a"
     },
     "98": {
         "character": "ᓰᑲᐦ",
-        "letter": "comb hair",
+        "letter": "to comb hair",
         "pinyin": "sîkaho",
         "audio": "../_audio/98.m4a"
     },
     "99": {
         "character": "ᐳᐢᑕᔭᐏᓂᓭ",
-        "letter": "dress",
+        "letter": "to dress",
         "pinyin": "postayawinisê",
         "audio": "../_audio/99.m4a"
     },
     "100": {
         "character": "ᑮᓯᑌᐳ",
-        "letter": "cook",
+        "letter": "to cook",
         "pinyin": "kîsitêpo",
         "audio": "../_audio/100.m4a"
     },
     "101": {
         "character": "ᐊᐱ",
-        "letter": "sit/be at home",
+        "letter": "to sit/be at home",
         "pinyin": "api",
         "audio": "../_audio/101.m4a"
     },
     "102": {
         "character": "ᒦᒋᓱ",
-        "letter": "eat",
+        "letter": "to eat",
         "pinyin": "mîciso",
         "audio": "../_audio/102.m4a"
     },
     "103": {
         "character": "ᒥᓂᐦᑵ",
-        "letter": "drink",
+        "letter": "to drink",
         "pinyin": "minihkwê",
         "audio": "../_audio/103.m4a"
     },
     "104": {
         "character": "ᐸᓯᑰ",
-        "letter": "get up/stand up",
+        "letter": "to get up/stand up",
         "pinyin": "pasikô",
         "audio": "../_audio/104.m4a"
     },
     "105": {
         "character": "ᐘᔭᐑ",
-        "letter": "go out",
+        "letter": "to go out",
         "pinyin": "wayawî",
         "audio": "../_audio/105.m4a"
     },
     "106": {
         "character": "ᐱᒧᐦᑌ",
-        "letter": "walk",
+        "letter": "to walk",
         "pinyin": "pimohtê",
         "audio": "../_audio/106.m4a"
     },
     "107": {
         "character": "ᐴᓯ",
-        "letter": "get on board",
+        "letter": "to get on board",
         "pinyin": "pôsi",
         "audio": "../_audio/107.m4a"
     },
     "108": {
         "character": "ᐱᒥᐸᔨ",
-        "letter": "drive",
+        "letter": "to drive",
         "pinyin": "pimipayi",
         "audio": "../_audio/108.m4a"
     },
     "109": {
         "character": "ᑲᐹ",
-        "letter": "get out",
+        "letter": "to get out",
         "pinyin": "kapâ",
         "audio": "../_audio/109.m4a"
     },
     "110": {
         "character": "ᐊᑐᐢᑫ",
-        "letter": "work",
+        "letter": "to work",
         "pinyin": "atoskê",
         "audio": "../_audio/110.m4a"
     },
     "111": {
         "character": "ᒪᓯᓇᐦᐃᑫ",
-        "letter": "write",
+        "letter": "to write",
         "pinyin": "masinahikê",
         "audio": "../_audio/111.m4a"
     },
     "112": {
         "character": "ᐊᔭᒥᐦᒋᑫ",
-        "letter": "read",
+        "letter": "to read",
         "pinyin": "ayamihcikê",
         "audio": "../_audio/112.m4a"
     },
     "113": {
         "character": "ᓃᒥᐦᐃᑐ",
-        "letter": "dance",
+        "letter": "to dance",
         "pinyin": "nîmihito",
         "audio": "../_audio/113.m4a"
     },
     "114": {
         "character": "ᓂᑲᒧ",
-        "letter": "sing",
+        "letter": "to sing",
         "pinyin": "nikamo",
         "audio": "../_audio/114.m4a"
     },
     "115": {
         "character": "ᒫᑐ",
-        "letter": "cry",
+        "letter": "to cry",
         "pinyin": "mâto",
         "audio": "../_audio/115.m4a"
     },
     "116": {
         "character": "ᐹᐦᐱ",
-        "letter": "laugh",
+        "letter": "to laugh",
         "pinyin": "pâhpi",
         "audio": "../_audio/116.m4a"
     },
     "117": {
         "character": "ᓭᓵᐑ",
-        "letter": "exercise",
+        "letter": "to exercise",
         "pinyin": "sêsâwî",
         "audio": "../_audio/117.m4a"
     },
     "118": {
         "character": "ᐱᒥᐸᐦᑖ",
-        "letter": "run",
+        "letter": "to run",
         "pinyin": "pimipahtâ",
         "audio": "../_audio/118.m4a"
     },
     "119": {
         "character": "ᑮᐍ",
-        "letter": "go home",
+        "letter": "to go home",
         "pinyin": "kîwê",
         "audio": "../_audio/119.m4a"
     },
     "120": {
         "character": "ᐱᐦᑐᑵ",
-        "letter": "enter",
+        "letter": "to enter",
         "pinyin": "pihtokwê",
         "audio": "../_audio/120.m4a"
     },
     "121": {
         "character": "ᓄᐦᑌᑲᑌ",
-        "letter": "be hungry",
+        "letter": "to be hungry",
         "pinyin": "nohtêkatê",
         "audio": "../_audio/121.m4a"
     },
     "122": {
         "character": "ᑭᓰᐯᑭᔮᑲᓀ",
-        "letter": "wash dishes",
+        "letter": "to wash dishes",
         "pinyin": "kisîpêkiyâkanê",
         "audio": "../_audio/122.m4a"
     },
     "123": {
         "character": "ᑳᓰᔮᑲᓀ",
-        "letter": "dry dishes",
+        "letter": "to dry dishes",
         "pinyin": "kâsîyâkanê",
         "audio": "../_audio/123.m4a"
     },
     "124": {
         "character": "ᓄᐦᑌᑿᓯ",
-        "letter": "be sleepy",
+        "letter": "to be sleepy",
         "pinyin": "nohtêkwasi",
         "audio": "../_audio/124.m4a"
     },
     "125": {
         "character": "ᑫᑕᔭᐏᓂᓭ",
-        "letter": "undress",
+        "letter": "to undress",
         "pinyin": "kêtayawinisê",
         "audio": "../_audio/125.m4a"
     },
     "126": {
         "character": "ᑲᐏᓯᒧ",
-        "letter": "lay down",
+        "letter": "to lay down",
         "pinyin": "kawisimo",
         "audio": "../_audio/126.m4a"
     },
     "127": {
         "character": "ᒪᑘᐦᒁᒥ",
-        "letter": "snore",
+        "letter": "to snore",
         "pinyin": "matwêhkwâmi",
         "audio": "../_audio/127.m4a"
     },

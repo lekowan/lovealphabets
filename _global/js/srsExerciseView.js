@@ -895,7 +895,10 @@ class View {
       this.englishLanguage.style.display = 'inline';
       this.nextCardWordSeparator.style.display = "block";
 
-      if(this.pinyin) this.pinyin.style.display = "inline";
+      if(this.pinyin){
+        this.pinyin.style.display = "inline";
+        this.pinyinTitle.style.display = "inline";
+      }
     }
   }
 
