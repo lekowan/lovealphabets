@@ -13,12 +13,16 @@ class Controller {
         this.view.bindShowChart(this.handleDisplayChart);
 
 
-        // Display new settings popover        
-        this.model.bindOnShowNewSettingsChanged(this.onShowNewSettingsChanged);
-        this.view.bindShowNewSettings(this.handleDisplayNewItemsPopover);
+        // Display reset popover        
+        //this.model.bindOnShowResetChanged(this.onShowResetChanged);
+        this.view.bindShowReset(this.handleDisplayReset);
 
         // Display Menu        
         this.view.bindShowMenu(this.handleDisplayMenu);
+
+        // Display Settings Menu        
+        this.model.bindOnSettingsMenuProcessed(this.onSettingsMenuProcessed)
+        this.view.bindShowSettingsMenu(this.handleDisplaySettingsMenu);
 
         // Change number in array
         this.model.bindOnNumberChanged(this.onNumberChanged);
@@ -43,15 +47,32 @@ class Controller {
         this.model.showNewItemsPopover(boolean, localStorageKey);
     }
 
-    onShowNewSettingsChanged = (boolean) => {
-        this.view.displayNewSettings(boolean);
-        this.view.addNewSettingsPopover();
+    handleDisplayChart = (boolean) => {
+        // this.model.showChart(boolean, chart);
     }
 
+    // Handle reset Popover visibility
+    handleDisplayReset = (localStorageKey) => {
+        this.model.processReset(localStorageKey);
+    }
 
-    // Handle Congratulations Popover visibility
+    onShowResetChanged = (boolean) => {
+        this.view.displayReset(boolean);
+        //this.view.addResetPopover();
+    }
+
+    // Handle Display Menu
     handleDisplayMenu = (boolean) => {
         this.view.displayMenu(boolean);
+    }
+
+    // Handle Settings menus
+    handleDisplaySettingsMenu = (boolean, id) => {
+        this.model.processSettingsMenu(boolean, id);
+    }
+
+    onSettingsMenuProcessed = (boolean, id) => {
+        this.view.displaySettingsMenu(boolean, id);
     }
 
     // Change number in array handlers

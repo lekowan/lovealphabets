@@ -26,8 +26,30 @@ class Model {
         this.onShowChartChanged(boolean, chartData,chartTitle,chartType, chartLocalStorageKey);
     }
 
+    processReset(localStorageKey){
+            console.log(localStorageKey);
+            localStorage.removeItem(localStorageKey + "Number");
+            localStorage.removeItem(localStorageKey + "Data");
+            localStorage.removeItem(localStorageKey + "Progress");
+            localStorage.removeItem(localStorageKey + "NextDate");
+            localStorage.removeItem(localStorageKey + "SavedWords");
+            localStorage.removeItem(localStorageKey + "WrongAnswers");
+            localStorage.removeItem(localStorageKey + "RightAnswers");
+            console.log(localStorage);
+            alert('done');
+    }
+
     bindOnShowChartChanged(callback) {
         this.onShowChartChanged = callback;
+    }
+
+    processSettingsMenu(boolean, id){
+        console.log(id);
+        this.onSettingsMenuProcessed(boolean, id);   
+    }
+
+    bindOnSettingsMenuProcessed(callback) {
+        this.onSettingsMenuProcessed = callback;
     }
 
 
