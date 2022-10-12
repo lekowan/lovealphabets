@@ -40,7 +40,10 @@ class Controller {
     */
 
     // Display initial word + answer
-    if (!this.model.showWelcome) this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
+    if (!this.model.showWelcome){ 
+      this.onNextCardAdded(this.model.initialWord, this.model.initialAnswer);
+      this.onPlay(this.model.audioValue, this.model.typeOfAudio)
+    }
 
     // Display total card count = progress end value
     //this.onProgressIncremented(this.model.initialWord, this.model.initialAnswer)
@@ -102,7 +105,21 @@ class Controller {
     // Process remove card
     this.view.bindRemoveCard(this.handleRemoveCard);
 
+    // Play audio
+    //this.onAudioPlayed(this.model.initialAudioValue, true);
+    this.model.bindOnAudioPlayed(this.onAudioPlayed);
+    this.view.bindPlayAudio(this.handlePlayAudio);
+
   } // End of constructor
+
+  // Play Audio
+  handlePlayAudio = () => {
+    this.model.playAudioValue();
+  };
+
+  onAudioPlayed = (word, isLocalAudio) => {
+    this.view.playAudio(word, isLocalAudio);
+  };
 
   // Change number in array handlers
   handleChangeNumber = (number) => {
@@ -201,6 +218,10 @@ class Controller {
     this.view.displayAnswer(answer);
     //this.view.bindPlayAudio();
   };
+
+  onPlay = (word, isLocalAudio) => {
+    this.view.playAudio(word, isLocalAudio);  
+  }
 
 
   // Display total number of items = progress end value
