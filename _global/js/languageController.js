@@ -47,10 +47,6 @@ class Controller {
         this.model.showNewItemsPopover(boolean, localStorageKey);
     }
 
-    handleDisplayChart = (boolean) => {
-        // this.model.showChart(boolean, chart);
-    }
-
     // Handle reset Popover visibility
     handleDisplayReset = (localStorageKey) => {
         this.model.processReset(localStorageKey);

@@ -116,10 +116,26 @@ class View {
                 }
 
                 // Edit icon
+                this.svgSettings = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                this.svgSettings.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+                this.svgSettings.setAttribute("height", "48px");
+                this.svgSettings.setAttribute("viewBox", "0 0 48 48");
+                this.svgSettings.setAttribute("width", "48px");
+                //this.svgSettings.setAttribute("fill", "#210c57");
+
+                this.svgSettingsPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                this.svgSettingsPath.setAttribute("d", "M24 40q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7T24 40Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7T24 8q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Z");
+                //this.svgSettingsPath.setAttribute("fill", "none");
+
+                this.svgSettings.append(this.svgSettingsPath);
+
                 this.showSettingsMenu = false;
-                this.languageSettings = this.createElement("div", "language-menu");
+                this.languageSettings = this.createElement("div", "language-settings");
                 this.languageSettingsUnderline = this.createElement("div", "underline-nav");
-                this.languageSettingsUnderline.textContent = "Edit";
+                //this.languageSettingsUnderline.textContent = "Edit";
+                
+                this.languageSettingsUnderline.append(this.svgSettings);
+
                 // this.languageMenuUnderlineArrow = this.createElement("span", "menu-arrow");
                 //    this.languageMenuUnderlineArrow.innerHTML = "&nbsp;&nbsp;&#9662";
                 this.languageSettingsToolTip = this.createElement("div", "tooltiptext");
@@ -145,7 +161,6 @@ class View {
                 this.languageSettings.append(this.languageSettingsUnderline, this.languageSettingsToolTip);
 
                 let languageSettings = this.languageSettings;
-                //let languageSettingsToolTip = this.languageSettingsToolTip;
                 languageSettings.id = item.localStorageKey + "settings";
                 this.languageSettingsCtaArray.push(languageSettings);
 
