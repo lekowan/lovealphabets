@@ -1,17 +1,17 @@
 // Configuration
-const localStorageKey = "japanese" + "Katakana" + "Srs";
+const localStorageKey = "japanese" + "Hiragana" + "Srs";
 const languageTitle = "Japanese";
 
 // Display level
-const srsTitle = "Katakana";
+const srsTitle = "Hiragana";
 
 // Speech Synthesis
 const language = "ja-JP";
-const activateSpeech = false;
+const activateSpeech = true;
 
 // Exercise Type (character, vocabulary )
 //const exerciseType = "vocabulary";
-const welcomeIntro = "In this spaced-repetition practice (SRS), you will study Katakana characters. \n \n After your first session, you will also revise learned characters from previous sessions";
+const welcomeIntro = "In this spaced-repetition practice (SRS), you will study Hiragana characters. \n \n After your first session, you will also revise learned characters from previous sessions";
 
 // Gradient
 const gradientBackground = "pink-background";
@@ -25,419 +25,419 @@ const exerciseType = "character";
 
 const allSyllableMap = {
   1: {
-    character: "ア",
+    character: "あ",
     letter: "a"
   },
   2: {
-    character: "イ",
+    character: "い",
     letter: "i"
   },
   3: {
-    character: "ウ",
+    character: "う",
     letter: "u"
   },
   4: {
-    character: "エ",
+    character: "え",
     letter: "e"
   },
   5: {
-    character: "オ",
+    character: "お",
     letter: "o"
   },
   6: {
-    character: "カ",
+    character: "か",
     letter: "ka"
   },
   7: {
-    character: "キ",
+    character: "き",
     letter: "ki"
   },
   8: {
-    character: "ク",
+    character: "く",
     letter: "ku"
   },
   9: {
-    character: "ケ",
+    character: "け",
     letter: "ke"
   },
   10: {
-    character: "コ",
+    character: "こ",
     letter: "ko"
   },
   11: {
-    character: "サ",
+    character: "さ",
     letter: "sa"
   },
   12: {
-    character: "シ",
+    character: "し",
     letter: "shi"
   },
   13: {
-    character: "ス",
+    character: "す",
     letter: "su"
   },
   14: {
-    character: "セ",
+    character: "せ",
     letter: "se"
   },
   15: {
-    character: "ソ",
+    character: "そ",
     letter: "so"
   },
   16: {
-    character: "タ",
+    character: "た",
     letter: "ta"
   },
   17: {
-    character: "チ",
+    character: "ち",
     letter: "chi"
   },
   18: {
-    character: "ツ",
+    character: "つ",
     letter: "tsu"
   },
   19: {
-    character: "テ",
+    character: "て",
     letter: "te"
   },
   20: {
-    character: "ト",
+    character: "と",
     letter: "to"
   },
   21: {
-    character: "ナ",
+    character: "な",
     letter: "na"
   },
   22: {
-    character: "ニ",
+    character: "に",
     letter: "ni"
   },
   23: {
-    character: "ヌ",
+    character: "ぬ",
     letter: "nu"
   },
   24: {
-    character: "ネ",
+    character: "ね",
     letter: "ne"
   },
   25: {
-    character: "ノ",
+    character: "の",
     letter: "no"
   },
   26: {
-    character: "ハ",
+    character: "は",
     letter: "ha"
   },
   27: {
-    character: "ヒ",
+    character: "ひ",
     letter: "hi"
   },
   28: {
-    character: "フ",
+    character: "ふ",
     letter: "fu"
   },
   29: {
-    character: "ヘ",
+    character: "へ",
     letter: "he"
   },
   30: {
-    character: "ホ",
+    character: "ほ",
     letter: "ho"
   },
   31: {
-    character: "マ",
+    character: "ま",
     letter: "ma"
   },
   32: {
-    character: "ミ",
+    character: "み",
     letter: "mi"
   },
   33: {
-    character: "ム",
+    character: "む",
     letter: "mu"
   },
   34: {
-    character: "メ",
+    character: "め",
     letter: "me"
   },
   35: {
-    character: "モ",
+    character: "も",
     letter: "mo"
   },
   36: {
-    character: "ヤ",
+    character: "や",
     letter: "ya"
   },
   37: {
-    character: "ユ",
+    character: "ゆ",
     letter: "yu"
   },
   38: {
-    character: "ヨ",
+    character: "よ",
     letter: "yo"
   },
   39: {
-    character: "ラ",
+    character: "ら",
     letter: "ra"
   },
   40: {
-    character: "リ",
+    character: "り",
     letter: "ri"
   },
   41: {
-    character: "ル",
+    character: "る",
     letter: "ru"
   },
   42: {
-    character: "レ",
+    character: "れ",
     letter: "re"
   },
   43: {
-    character: "ロ",
+    character: "ろ",
     letter: "ro"
   },
   44: {
-    character: "ワ",
+    character: "わ",
     letter: "wa"
   },
   45: {
-    character: "ヲ",
+    character: "を",
     letter: "wo"
   },
   46: {
-    character: "ン",
+    character: "ん",
     letter: "n"
   },
   47: {
-    character: "ガ",
+    character: "が",
     letter: "ga"
   },
   48: {
-    character: "ギ",
+    character: "ぎ",
     letter: "gi"
   },
   49: {
-    character: "グ",
+    character: "ぐ",
     letter: "gu"
   },
   50: {
-    character: "ゲ",
+    character: "げ",
     letter: "ge"
   },
   51: {
-    character: "ゴ",
+    character: "ご",
     letter: "go"
   },
   52: {
-    character: "ザ",
+    character: "ざ",
     letter: "za"
   },
   53: {
-    character: "ジ",
+    character: "じ",
     letter: "ji"
   },
   54: {
-    character: "ズ",
+    character: "ず",
     letter: "zu"
   },
   55: {
-    character: "ゼ",
+    character: "ぜ",
     letter: "ze"
   },
   56: {
-    character: "ゾ",
+    character: "ぞ",
     letter: "zo"
   },
   57: {
-    character: "ダ",
+    character: "だ",
     letter: "da"
   },
   58: {
-    character: "ヂ",
+    character: "ぢ",
     letter: "ji"
   },
   59: {
-    character: "ヅ",
+    character: "づ",
     letter: "zu"
   },
   60: {
-    character: "デ",
+    character: "で",
     letter: "de"
   },
   61: {
-    character: "ド",
+    character: "ど",
     letter: "do"
   },
   62: {
-    character: "バ",
+    character: "ば",
     letter: "ba"
   },
   63: {
-    character: "ビ",
+    character: "び",
     letter: "bi"
   },
   64: {
-    character: "ブ",
+    character: "ぶ",
     letter: "bu"
   },
   65: {
-    character: "ベ",
+    character: "べ",
     letter: "be"
   },
   66: {
-    character: "ボ",
+    character: "ぼ",
     letter: "bo"
   },
   67: {
-    character: "パ",
+    character: "ぱ",
     letter: "pa"
   },
   68: {
-    character: "ピ",
+    character: "ぴ",
     letter: "pi"
   },
   69: {
-    character: "プ",
+    character: "ぷ",
     letter: "pu"
   },
   70: {
-    character: "ペ",
+    character: "ぺ",
     letter: "pe"
   },
   71: {
-    character: "ポ",
+    character: "ぽ",
     letter: "po"
   },
   72: {
-    character: "キャ",
+    character: "きゃ",
     letter: "kya"
   },
   73: {
-    character: "キュ",
+    character: "きゅ",
     letter: "kyu"
   },
   74: {
-    character: "キョ",
+    character: "きょ",
     letter: "kyo"
   },
   75: {
-    character: "シャ",
+    character: "しゃ",
     letter: "sha"
   },
   76: {
-    character: "シュ",
+    character: "しゅ",
     letter: "shu"
   },
   77: {
-    character: "ショ",
+    character: "しょ",
     letter: "sho"
   },
   78: {
-    character: "チャ",
+    character: "ちゃ",
     letter: "cha"
   },
   79: {
-    character: "チュ",
+    character: "ちゅ",
     letter: "chu"
   },
   80: {
-    character: "チョ",
+    character: "ちょ",
     letter: "cho"
   },
   81: {
-    character: "ニャ",
+    character: "にゃ",
     letter: "nya"
   },
   82: {
-    character: "ニュ",
+    character: "にゅ",
     letter: "nyu"
   },
   83: {
-    character: "ニョ",
+    character: "にょ",
     letter: "nyo"
   },
   84: {
-    character: "ヒャ",
+    character: "ひゃ",
     letter: "hya"
   },
   85: {
-    character: "ヒュ",
+    character: "ひゅ",
     letter: "hyu"
   },
   86: {
-    character: "ヒョ",
+    character: "ひょ",
     letter: "hyo"
   },
   87: {
-    character: "ミャ",
+    character: "みゃ",
     letter: "mya"
   },
   88: {
-    character: "ミュ",
+    character: "みゅ",
     letter: "myu"
   },
   89: {
-    character: "ミョ",
+    character: "みょ",
     letter: "myo"
   },
   90: {
-    character: "リャ",
+    character: "りゃ",
     letter: "rya"
   },
   91: {
-    character: "リュ",
+    character: "りゅ",
     letter: "ryu"
   },
   92: {
-    character: "リョ",
+    character: "りょ",
     letter: "ryo"
   },
   93: {
-    character: "ギャ",
+    character: "ぎゃ",
     letter: "gya"
   },
   94: {
-    character: "ギュ",
+    character: "ぎゅ",
     letter: "gyu"
   },
   95: {
-    character: "ギョ",
+    character: "ぎょ",
     letter: "gyo"
   },
   96: {
-    character: "ジャ",
+    character: "じゃ",
     letter: "ja"
   },
   97: {
-    character: "ジュ",
+    character: "じゅ",
     letter: "ju"
   },
   98: {
-    character: "ジョ",
+    character: "じょ",
     letter: "jo"
   },
   99: {
-    character: "ビャ",
+    character: "びゃ",
     letter: "bya"
   },
   100: {
-    character: "ビュ",
+    character: "びゅ",
     letter: "byu"
   },
   101: {
-    character: "ビョ",
+    character: "びょ",
     letter: "byo"
   },
   102: {
-    character: "ピャ",
+    character: "ぴゃ",
     letter: "pya"
   },
   103: {
-    character: "ピュ",
+    character: "ぴゅ",
     letter: "pyu"
   },
   104: {
-    character: "ピョ",
+    character: "ぴょ",
     letter: "pyo"
   }
 };
