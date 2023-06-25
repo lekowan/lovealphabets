@@ -3,7 +3,7 @@ const languageSub = "日本語";
 
 // Speech Synthesis
 const language = "ja-JP";
-const activateSpeech = false;
+const activateSpeech = true;
 
 const languageContent = [
   {
@@ -26,5 +26,16 @@ const languageContent = [
     icon: "カ",
     url: "katakana",
     localStorageKey: "japanese" + "Katakana" + "Srs"
+  },
+
+  {
+    chartTitle: "Japanese / Vocabulary",
+    chartName: "vocabulary-map",
+    chartData: japaneseVocabChartData,
+    title: "Vocabulary",
+    sub: "Memorize the 2,000 most frequent Japanese words",
+    icon: "日",
+    url: "vocab",
+    localStorageKey: "japanese2000VocabularySrs"
   }
 ];
