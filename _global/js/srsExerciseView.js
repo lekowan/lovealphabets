@@ -18,7 +18,6 @@ class View {
     this.mainHeading = this.createElement("div", "main-heading");
     this.mainHeading.innerHTML = srsTitle;
 
-
     // Create header
     this.progress = this.createElement("div", "progress");
     // this.header.classList.add("pink-background");
@@ -31,7 +30,7 @@ class View {
 
     this.start.innerHTML = "0";
     this.inner = this.createElement("div", "inner");
-    this.bar = this.createElement("span", "bar")
+    this.bar = this.createElement("span", "bar");
     this.bar.classList.add("purple");
     this.bar.classList.add("purple-cta");
     this.bar.id = "bar";
@@ -61,7 +60,7 @@ class View {
 
     // <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d=""/></svg>
 
-     // Clone generic SVG button
+    // Clone generic SVG button
     this.moreButtonSvg = moreButtonSvg.cloneNode(true);
 
     this.moreButton = this.createElement("div", "more-button");
@@ -96,23 +95,23 @@ class View {
     });
 
     // If language is Mandarin
-      if(language == "zh-CN" || language == "ja-JP" || language == "cr-PL" ){
-        // Create pinyin button
-        this.pinyinButton = this.createElement("div", "pinyin-button");
-        
-        if(language == "zh-CN") this.pinyinButton.textContent = "pinyin";
-        else if(language == "ja-JP") this.pinyinButton.textContent = "kana";
-        else if(language == "cr-PL") this.pinyinButton.textContent = "SRO";
+    if (language == "zh-CN" || language == "ja-JP" || language == "cr-PL") {
+      // Create pinyin button
+      this.pinyinButton = this.createElement("div", "pinyin-button");
 
-        this.showPinyin = true;
+      if (language == "zh-CN") this.pinyinButton.textContent = "pinyin";
+      else if (language == "ja-JP") this.pinyinButton.textContent = "kana";
+      else if (language == "cr-PL") this.pinyinButton.textContent = "SRO";
 
-        this.pinyinButton.addEventListener("click", (event) => {
-          this.displayPinyin();
-        });
+      this.showPinyin = true;
+
+      this.pinyinButton.addEventListener("click", (event) => {
+        this.displayPinyin();
+      });
     }
 
     // If language is Mandarin, append pinyin button
-    if(this.showPinyin){
+    if (this.showPinyin) {
       this.progress.append(this.progressBar, this.pinyinButton, this.moreButton);
     }
 
@@ -163,14 +162,12 @@ class View {
     // Create word div
     //this.answer = this.createElement("p", "word-translation");
     //this.answer.style.opacity = 0;
- 
+
     // Append the title, form, and todo list to the content div
     this.content.append(this.header, this.progress, this.bodyContent, this.buttonArea);
 
     // Append content div to app
     this.app.append(this.content);
-
-
 
     // Create settings button
     this.settings = this.createElement("div", "settings");
@@ -409,7 +406,6 @@ class View {
     this.srsResetButtonContainer.append(this.srsResetYes, this.srsResetNo);
     this.srsResetContainer.append(this.srsResetContent, this.srsResetButtonContainer);
 
-
     // Append All Popovers
     this.app.append(this.popoverBackground, this.todayContainer, this.newItemsContainer, this.welcomeContainer, this.congratulationsContainer, this.srsResetContainer);
 
@@ -420,38 +416,36 @@ class View {
 
     // Play audio on button press
 
-      // Create audio icon
-      
-      this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      this.svgAudio.classList.add("audio-icon");
-      this.svgAudio.id = "audio-icon-" + this.count;
-      this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
-      this.svgAudio.setAttribute("height", "20px");
-      this.svgAudio.setAttribute("viewBox", "0 0 24 24");
-      this.svgAudio.setAttribute("width", "20px");
-      this.svgAudio.setAttribute("fill", "none");
-      this.svgAudio.setAttribute("stroke", "#18093e");
-      this.svgAudio.setAttribute("stroke-width", "2");
+    // Create audio icon
 
-      this.svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
-      this.svgAudioPath1.setAttribute("fill", "none");
-      this.svgAudioPath1.setAttribute("stroke", "none");
+    this.svgAudio = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    this.svgAudio.classList.add("audio-icon");
+    this.svgAudio.id = "audio-icon-" + this.count;
+    this.svgAudio.setAttribute("xmlns", "https://www.w3.org/2000/svg");
+    this.svgAudio.setAttribute("height", "20px");
+    this.svgAudio.setAttribute("viewBox", "0 0 24 24");
+    this.svgAudio.setAttribute("width", "20px");
+    this.svgAudio.setAttribute("fill", "none");
+    this.svgAudio.setAttribute("stroke", "#18093e");
+    this.svgAudio.setAttribute("stroke-width", "2");
 
-      this.svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8" );
+    this.svgAudioPath1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath1.setAttribute("d", "M0 0h24v24H0z");
+    this.svgAudioPath1.setAttribute("fill", "none");
+    this.svgAudioPath1.setAttribute("stroke", "none");
 
-      this.svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14" );
+    this.svgAudioPath2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath2.setAttribute("d", "M15 8a5 5 0 0 1 0 8");
 
-      this.svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      this.svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" );
+    this.svgAudioPath3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath3.setAttribute("d", "M17.7 5a9 9 0 0 1 0 14");
 
-      this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
+    this.svgAudioPath4 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    this.svgAudioPath4.setAttribute("d", "M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5");
 
-      this.content.append(this.svgAudio);
-      
+    this.svgAudio.append(this.svgAudioPath1, this.svgAudioPath2, this.svgAudioPath3, this.svgAudioPath4);
 
+    this.content.append(this.svgAudio);
   } // End of constructor
 
   //
@@ -463,17 +457,15 @@ class View {
 
   $ = (n) => document.querySelector(n);
 
-
   // Display Pinyin
 
-  displayPinyin(){
-    if(this.showPinyin){
+  displayPinyin() {
+    if (this.showPinyin) {
       this.pinyinTitle.style.display = "none";
       this.pinyin.style.display = "none";
       this.pinyinButton.classList.add("hidden");
       //this.pinyinButton.textContent = "pinyin";
-    }
-    else {
+    } else {
       this.pinyinTitle.style.display = "inline";
       this.pinyin.style.display = "inline";
       this.pinyinButton.classList.remove("hidden");
@@ -484,14 +476,12 @@ class View {
 
   // Generate Today's Items cards and add into Today's Item popover
   addTodaysCards(array) {
-
     this.todayContent.innerHTML = "";
-    
-    if (exerciseType == "character" || exerciseType == undefined ) {
+
+    if (exerciseType == "character" || exerciseType == undefined) {
       this.todayWelcomeCharacter = this.createElement("div", "welcome-character");
 
       array.forEach((item) => {
-
         let card = this.createElement("div", "today-character-card");
         let cardTop = this.createElement("div", "top");
         cardTop.innerHTML = item.original();
@@ -499,18 +489,13 @@ class View {
         cardBottom.innerHTML = item.romanize();
         card.append(cardTop, cardBottom);
         this.todayWelcomeCharacter.append(card);
-        
       });
 
-    this.todayContent.append(this.todayWelcomeCharacter);
-
-    }
-
-    else if (exerciseType == "vocabulary" || exerciseType == "vocabularyEnglish" ) {
-     this.todayWelcomeVocab = this.createElement("div", "welcome-vocab");
+      this.todayContent.append(this.todayWelcomeCharacter);
+    } else if (exerciseType == "vocabulary" || exerciseType == "vocabularyEnglish") {
+      this.todayWelcomeVocab = this.createElement("div", "welcome-vocab");
 
       array.forEach((item) => {
-
         let card = this.createElement("div", "today-vocab-card");
         let cardTop = this.createElement("div", "top-vocab");
         cardTop.innerHTML = item.original();
@@ -518,16 +503,14 @@ class View {
         cardBottom.innerHTML = item.romanize();
         card.append(cardTop, cardBottom);
         this.todayWelcomeVocab.append(card);
-
       });
 
-    this.todayContent.append(this.todayWelcomeVocab);
+      this.todayContent.append(this.todayWelcomeVocab);
     }
-
   }
 
   addNextCard(card, isNew) {
-    if(card != undefined){
+    if (card != undefined) {
       let nextCard;
       let nextCardWordOriginal;
       //let nextCardWordTranslation;
@@ -549,70 +532,64 @@ class View {
       this.englishLanguage.innerHTML = "English";
       this.englishLanguage.style.display = "none";
 
-      if(isNew){
+      if (isNew) {
         newIcon = this.createElement("div", "new-icon");
         newIcon.textContent = "new";
         this.nextCard.append(newIcon);
-      } 
+      }
 
       let nextCardOriginalContainer = this.createElement("div", "original-container");
 
-      if(allSyllableMap[card].pinyin){
+      if (allSyllableMap[card].pinyin) {
         this.pinyin = this.createElement("p", "pinyin");
         this.pinyin.textContent = allSyllableMap[card].pinyin;
         nextCardWordOriginal.innerHTML = allSyllableMap[card].character;
 
         this.pinyinTitle = this.createElement("p", "pinyin-title");
-        if(language == "zh-CN") this.pinyinTitle.textContent = "pinyin"; 
-        else if(language == "ja-JP" ) this.pinyinTitle.textContent = "hiragana";
-        else if(language == "cr-PL" ) this.pinyinTitle.textContent = "Standard Roman Orthography";
+        if (language == "zh-CN") this.pinyinTitle.textContent = "pinyin";
+        else if (language == "ja-JP") this.pinyinTitle.textContent = "hiragana";
+        else if (language == "cr-PL") this.pinyinTitle.textContent = "Standard Roman Orthography";
 
-        if(this.showPinyin){
+        if (this.showPinyin) {
           this.pinyinTitle.style.display = "inline";
           this.pinyin.style.display = "inline";
-        }
-
-        else {
+        } else {
           this.pinyinTitle.style.display = "none";
-          this.pinyin.style.display = "none"; 
+          this.pinyin.style.display = "none";
         }
 
         this.pinyinIcon = this.createElement("p", "pinyin-icon");
         this.pinyinIcon.textContent = "show pinyin";
 
-        nextCardOriginalContainer.append(this.targetLanguage, nextCardWordOriginal, this.pinyinTitle, this.pinyin)
-      }
-
-      else {
-        nextCardWordOriginal.textContent = allSyllableMap[card].character; 
+        nextCardOriginalContainer.append(this.targetLanguage, nextCardWordOriginal, this.pinyinTitle, this.pinyin);
+      } else {
+        nextCardWordOriginal.textContent = allSyllableMap[card].character;
         nextCardOriginalContainer.append(this.targetLanguage, nextCardWordOriginal);
       }
-      
+
       //nextCardOriginalContainer.append(nextCardWordOriginal, this.cardIcon)
 
       this.nextCard.append(nextCardOriginalContainer, this.englishLanguage, this.answer);
-      
+
       let svgAudioCtaArray = [];
 
       let stringDefined = nextCardWordOriginal.innerHTML;
       console.log(stringDefined);
 
       // If definition exists
-      if(allSyllableMap[card].definition){
-
-        // Parse defined words and add span tags around them 
-        allSyllableMap[card].definition.forEach(word => {
-          let newWord = '<span>' + word.target + '</span>';
+      if (allSyllableMap[card].definition) {
+        // Parse defined words and add span tags around them
+        allSyllableMap[card].definition.forEach((word) => {
+          let newWord = "<span>" + word.target + "</span>";
           stringDefined = stringDefined.replace(word.target, newWord);
-        })
+        });
 
         nextCardWordOriginal.innerHTML = stringDefined;
 
         // Collect all span tags from string
         // Convert into array
-        let spanCollection = nextCardWordOriginal.getElementsByTagName('span');
+        let spanCollection = nextCardWordOriginal.getElementsByTagName("span");
         let spanArray = [...spanCollection];
-
 
         // Create popover element
         let definitionPopover = this.createElement("div", "definition-popover");
@@ -620,11 +597,9 @@ class View {
 
         // Go through all span tags and assign event listeners and populate
         spanArray.forEach((span, number) => {
-
           span.addEventListener("click", (event) => {
-
             // Reset popover content
-            definitionPopover.innerHTML = '';
+            definitionPopover.innerHTML = "";
 
             // Anchor position of popover
             definitionPopover.style.bottom = "0";
@@ -644,7 +619,6 @@ class View {
             closeSvgPath2.setAttribute("d", closePath2d); //Set path's data
             closeSvg.append(closeSvgPath1, closeSvgPath2);
 
-
             // Clone original close button
             let definitionPopoverCloseButtonSvg = this.createElement("div", "definition-popover-close");
             definitionPopoverCloseButtonSvg.append(closeSvg);
@@ -652,35 +626,30 @@ class View {
             // On click reset position
             definitionPopoverCloseButtonSvg.addEventListener("click", (event) => {
               definitionPopover.style.bottom = "-40%";
-             })
+            });
 
-            // 
+            //
             let definitionPopoverTarget = this.createElement("div", "definition-popover-target");
 
-            if(allSyllableMap[card].definition[number].infinitive){
+            if (allSyllableMap[card].definition[number].infinitive) {
               definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].infinitive;
-            }
-            else {
-              definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].target; 
+            } else {
+              definitionPopoverTarget.innerHTML = allSyllableMap[card].definition[number].target;
             }
 
             let definitionPopoverEnglish = this.createElement("div", "definition-popover-english");
-             definitionPopoverEnglish.innerHTML = allSyllableMap[card].definition[number].english;
+            definitionPopoverEnglish.innerHTML = allSyllableMap[card].definition[number].english;
 
-
-            if(allSyllableMap[card].definition[number].pinyin){
+            if (allSyllableMap[card].definition[number].pinyin) {
               let definitionPopoverPinyin = this.createElement("div", "definition-popover-pinyin");
               definitionPopoverPinyin.innerHTML = allSyllableMap[card].definition[number].pinyin;
 
               definitionPopover.append(definitionPopoverPinyin, definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
+            } else {
+              definitionPopover.append(definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg);
             }
-            else {
-              definitionPopover.append(definitionPopoverTarget, definitionPopoverEnglish, definitionPopoverCloseButtonSvg); 
-            }                     
-             
-
           });
-        })
+        });
       }
 
       /*
@@ -721,39 +690,32 @@ class View {
 
       } */
 
-      
       let nextCardSlide = this.createElement("div", "slide");
       nextCardSlide.append(this.nextCard);
       this.slides.append(nextCardSlide);
 
-
       // Add event listeners to audio icons of each example
-      for(let audio of svgAudioCtaArray){
+      for (let audio of svgAudioCtaArray) {
         audio.element.addEventListener("click", (event) => {
-          
           // If speechSynthesis in user's browser
           if (activateSpeech && "speechSynthesis" in window) {
             // Play audio on click
-            this.playSpeech(audio.word); 
+            this.playSpeech(audio.word);
           }
 
           // Add key frame animation
           audio.element.classList.add("audio-icon-animation-small");
 
           // Remove key frame animation
-          setTimeout(function() {
-              audio.element.classList.remove("audio-icon-animation-small");
+          setTimeout(function () {
+            audio.element.classList.remove("audio-icon-animation-small");
           }, 500);
-               
-        }) 
+        });
       }
-      
-
     }
 
     this.count++;
   }
-
 
   bindDisplayNextCard(handler) {
     this.badButton.addEventListener("click", (event) => {
@@ -844,7 +806,6 @@ class View {
     this.revisionItemsCounter.innerHTML = "REVISION: " + item;
   }
 
-
   displayProgressBarStart(start, total) {
     this.start.innerHTML = start;
     this.end.innerHTML = total;
@@ -854,8 +815,8 @@ class View {
     this.bar.style.width = progressVal + "%";
   }
 
-  displayProgressBarEnd(total){
-      this.end.innerHTML = total;
+  displayProgressBarEnd(total) {
+    this.end.innerHTML = total;
   }
 
   displayInitialWord(item) {
@@ -863,7 +824,7 @@ class View {
   }
 
   displayAnswer(item) {
-    if(item != undefined){
+    if (item != undefined) {
       this.answer.innerHTML = item;
     }
   }
@@ -886,16 +847,15 @@ class View {
     if (boolean == false) {
       this.answer.style.opacity = 0;
       this.goodBadButton.style.bottom = "-80px";
-      this.englishLanguage.style.display = 'none';
-
+      this.englishLanguage.style.display = "none";
     } else {
       this.answer.style.opacity = 1;
-      this.nextCard.style.height = "auto";  
+      this.nextCard.style.height = "auto";
       this.goodBadButton.style.bottom = 0;
-      this.englishLanguage.style.display = 'inline';
+      this.englishLanguage.style.display = "inline";
       this.nextCardWordSeparator.style.display = "block";
 
-      if(this.pinyin){
+      if (this.pinyin) {
         this.pinyin.style.display = "inline";
         this.pinyinTitle.style.display = "inline";
       }
@@ -1109,37 +1069,35 @@ class View {
     });
   }
 
-  playAudio(word, isLocalAudio){
-
-    console.log('word: ' + word);
+  playAudio(word, isLocalAudio) {
+    console.log("word: " + word);
     console.log(isLocalAudio);
 
-    if(!isLocalAudio){
-
+    if (!isLocalAudio) {
       // Play audio on click
       let audioWord;
-          
-      if(languageTitle == "Japanese" || languageTitle == "Mandarin") audioWord = new SpeechSynthesisUtterance(word);
+
+      if (languageTitle == "Japanese" || languageTitle == "Mandarin") audioWord = new SpeechSynthesisUtterance(word);
       else audioWord = new SpeechSynthesisUtterance(word.toLowerCase());
-      
+
       audioWord.lang = language;
       window.speechSynthesis.speak(audioWord);
-    }
 
-    else {
-      console.log('local');
+      console.log(audioWord);
+    } else {
+      console.log("local");
       new Audio(word).play();
     }
 
     // Animate audio icon
     let audioIcon = this.svgAudio;
-    
+
     // Add key frame animation
     audioIcon.classList.add("audio-icon-animation");
-    
+
     // Remove key frame animation
-    setTimeout(function() {
-        audioIcon.classList.remove("audio-icon-animation");
+    setTimeout(function () {
+      audioIcon.classList.remove("audio-icon-animation");
     }, 500);
   }
 
@@ -1151,12 +1109,9 @@ class View {
 
   // Autoplay audio
 
-
-
   bindRemoveCard(handler) {
     this.moreButton.addEventListener("click", () => {
       handler();
     });
   }
-    
 }
