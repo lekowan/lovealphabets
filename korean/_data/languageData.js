@@ -62,10 +62,10 @@ const languageContent = [{
         "chartName": "hangugeo-con-angduck-1-map",
         "chartData": hangugeoConAngDuck1ChartData,
         "title": "Hangugeo con AngDuck #1",
-        "sub": "Memorize words and expressions from Hangugeo con AngDuck episode #1",
+        "sub": "Memorize sentences from Hangugeo con AngDuck episode #1",
         "icon": "성함",
         "url": "hangugeo-con-angduck-1",
-        "localStorageKey": "korean" + "HangugeoConAngDuck1" + "Srs",
+        "localStorageKey": "korean" + "HangugeoConAngDuck1Sentences" + "Srs",
         "chartType": hangugeoConAngDuck1ChartType
     },
     /*
